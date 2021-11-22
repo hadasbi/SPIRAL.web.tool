@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>SPIRAL</title>
+{% endblock %}
+
+{% block body %}
+ <center><h1>Run SPIRAL!</h1></center>
+<div class="formdesign">
+    <h2>Step 1/3</h2>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-horizontal">
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.dataset_name.label }}</label>
+                <p><small>This field is optional and is here for your convenience only, in case you plan to run SPIRAL
+                    on several datasets. </small></p>
+                {{ form.dataset_name }}
+            </div>
+
+            <hr>
+
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.email.label }}</label>
+                <p><small>A link to the results page will be sent to this address. </small></p>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <ul class="errors">
+                      {% for error in form.email.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <hr>
+
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.species.label }}</label>
+                {{ form.species }}
+                {% if form.species.errors %}
+                    <ul class="errors">
+                      {% for error in form.species.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <hr>
+
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.samp_name.label }}</label>
+                {{ form.samp_name }}
+                {% if form.samp_name.errors %}
+                    <ul class="errors">
+                      {% for error in form.samp_name.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <hr>
+
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.count_matrix.label }}</label>
+                <p><ul><small>
+                    <li>The file type should be either csv or txt.</li>
+                    <li>Gene names should appear in the first column. To be compatible with GOrilla (for the enrichment
+                      step), the supported formats are: gene symbol (preferred), gene and protein RefSeq, Uniprot,
+                      Unigene and Ensembl.</li>
+                    <li>Sample names should appear in the first row. If your dataset has labels (for example: 'day0',
+                      'day1'...) the labels should appear at the beginning of each sample name, before an underscore.
+                      For example: 'day1_ACGTGTGA'.</li>
+                    <li>If your data has less than 200 cells\spots\samples, SPIRAL will run on the original data. If
+                        your data has more than a 1000 cells\spots\samples, SPIRAL will run in a repcell-mode.
+                        Currently, SPIRAL cannot run on data sets with 200-1000 cells\spots\samples.</li>
+                </small></ul></p>
+                {{ form.count_matrix }}
+                {% if form.count_matrix.errors %}
+                    <ul class="errors">
+                      {% for error in form.count_matrix.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <hr>
+
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.spatial_coors.label }}</label>
+                <p><ul><small>
+                    <li>The field is optional.</li>
+                    <li>The file type should be either csv or txt.</li>
+                    <li>The number of rows should be the same as the number of columns in the count matrix.
+                    <li>There should be two or three columns:
+                        <ul>
+                            <li>First column (optional): Sample names. If the sample names fit the column names in the count
+                    matrix, we will use that. Otherwise, we will assume that the order of rows match the order of
+                    columns in the count matrix. </li>
+                            <li>Second (or first) column: X coordinates.</li>
+                            <li>Third (or second) column: Y coordinates.</li>
+                        </ul>
+                    </li>
+                </small></ul></p>
+                {{ form.spatial_coors }}
+                {% if form.spatial_coors.errors %}
+                    <ul class="errors">
+                      {% for error in form.spatial_coors.errors %}
+                        <li>{{ error }}</li>
+                      {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+                {{ form.csrf_token() }}
+                {{ form.submit(class="btn btn-primary")}} <p><small>This might take a minute. </small></p>
+            </div>
+        </div>
+    </form>
+    </div>
+
+{% endblock %}

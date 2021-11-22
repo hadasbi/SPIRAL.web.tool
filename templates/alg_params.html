@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>SPIRAL</title>
+{% endblock %}
+
+{% block body %}
+  <center><h1>Run SPIRAL!</h1></center>
+  <h2>Step 3/3</h2>
+<form id='alg_params_form' method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-inline">
+            <div class="form-group row-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.num_std_thr.label }}</label>
+                {{ form.num_std_thr }}
+            </div>
+
+            <div class="form-group row-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.mu.label }}</label>
+                {{ form.mu }}
+            </div>
+
+            <div class="form-group row-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.path_len.label }}</label>
+                {{ form.path_len }}
+            </div>
+
+            <div class="form-group row-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.num_iter.label }}</label>
+                {{ form.num_iter }}
+            </div>
+
+            <div class="form-group">
+                {{ form.csrf_token() }}
+                {{ form.submit(class="btn btn-primary")}}
+            </div>
+          </div>
+    </form>
+
+
+{% endblock %}

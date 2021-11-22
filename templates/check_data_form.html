@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>SPIRAL</title>
+{% endblock %}
+
+{% block body %}
+ <center><h1>Run SPIRAL!</h1></center>
+<div class="formdesign">
+    <h2>Concluding step 1/3...</h2>
+    <p>The count matrix was uploaded successfully. We found: </p>
+    <p>{{ num_cells_orig }} {{ samp_name }} and {{ num_genes_orig }} genes.</p>
+    <p>Then we removed {{ samp_name }} and genes with zero reads, and summed up repeating gene names, and were left with:</p>
+    <p>{{ num_cells }} {{ samp_name }} and {{ num_genes }} genes.</p>
+
+    <hr>
+
+    {% if spatial == True %}
+        <div><p>The spatial coordinates were also loaded successfully.</p></div>
+    {% else %}
+        <div><p>No spatial coordinates.</p></div>
+    {% endif %}
+
+    <hr>
+
+    {% if nlabels > 1 %}
+        <div><p>We found {{ nlabels }} labels: {{ label_set }} </p></div>
+    {% else %}
+        <div><p>No labels were found.</p></div>
+    {% endif %}
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="form-vertical">
+          <div class="form-group">
+                {{ form.csrf_token() }}
+                {{ form.keep_going(class="btn btn-primary")}}
+           </div>
+          <div class="form-group">
+                {{ form.csrf_token() }}
+                {{ form.go_back(class="btn btn-primary")}}
+           </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

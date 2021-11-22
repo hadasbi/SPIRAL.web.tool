@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>SPIRAL</title>
+{% endblock %}
+
+{% block body %}
+  <center><h1>Run SPIRAL!</h1></center>
+  <h2>Step 2/3</h2>
+  <figure>
+      <img src={{ vln_plot_file }} align="middle" alt="vln_plot" style="width:70%">
+  </figure>
+
+  <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-horizontal">
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.min_nFeatures.label }}</label>
+                {{ form.min_nFeatures }}
+            </div>
+
+            <div class="form-group col-md-6">
+                {{ form.csrf_token() }}
+                <label for=""> {{ form.max_nFeatures.label }}</label>
+                {{ form.max_nFeatures }}
+            </div>
+            {% if with_mt %}
+                <div class="form-group col-md-6">
+                    {{ form.csrf_token() }}
+                    <label for=""> {{ form.max_mtpercent.label }}</label>
+                    {{ form.max_mtpercent }}
+                </div>
+            {% endif %}
+            <div class="form-group">
+                {{ form.csrf_token() }}
+                {{ form.submit(class="btn btn-primary")}}
+            </div>
+          </div>
+    </form>
+
+
+{% endblock %}

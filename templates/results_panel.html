@@ -1,0 +1,80 @@
+<script>
+  $SCRIPT_ROOT = {{ request.script_root|tojson }};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(function() {
+    $('a#get_struct_figs').bind('click', function() {
+      $.getJSON($SCRIPT_ROOT + '/_pic_names_and_GO_terms', {
+        struct: $('#SelectStruct option:selected').val(),
+        vis_type: $('#SelectVis option:selected').val(),
+        color_type: $('#SelectColors option:selected').val(),
+        data_n: {{ data_n }},
+        /* impute_method: {{ impute_method }} */
+      }, function(data) {
+         $("#structure_layouts").empty();
+        for (let i = 0; i < data.struct_pics.length; i++){
+               /* $("#answer"+i).text(data.struct_pics[i]); */
+               $("#structure_layouts").append("<img src=" + data.struct_pics[i] + " width=350>");
+            }
+
+         $("#gene_list").append("<ul>");
+         for (let i = 0; i < data.gene_list.length; i++){
+               $("#gene_list").append("<li>" + data.gene_list[i]);
+            }
+         $("#gene_list").append("</ul>");
+
+        $("#enriched_GO_terms_process").text(data.GO_terms[0]);
+        $("#enriched_GO_terms_function").text(data.GO_terms[1]);
+        $("#enriched_GO_terms_compartment").text(data.GO_terms[2]);
+      });
+      return false;
+    });
+  });
+</script>
+
+<h1>SPIRAL results panel</h1>
+<p>Structure number: <select id="SelectStruct" name="SelectStruct">
+   {% for item in struct_lst %}
+      <option value="{{ item }}">{{ item }}</option>
+   {% endfor %}
+   </select>
+{% if impute_method != 'no_imputation' %}
+   <p>Visualization type: <select id="SelectVis" name="SelectVis">
+      <option value="repcells">repcells</option>
+      <option value="orig">original data</option>
+      </select>
+{% endif %}
+<p>Colored by: <select id="SelectColors" name="SelectColors">
+   <option value="layers">structure layers</option>
+   <option value="avg_expression">average expression level of the structure genes</option>
+   </select>
+<p><a href=# id=get_struct_figs>Submit</a>
+
+<br>
+
+{# <p><span id=answer1>?</span>
+<p><span id=answer2>?</span>
+<p><span id=answer3>?</span> #}
+
+<p>Genes:</p><div id="gene_list" style="overflow: scroll; width: 300px; height: 200px;">
+</div>
+
+<br>
+
+<p>Enriched GO terms:</p>
+<p>Process: <span id=enriched_GO_terms_process></span>
+<p>Function: <span id=enriched_GO_terms_function></span>
+<p>Compartment: <span id=enriched_GO_terms_compartment></span>
+
+<section id="structure_layouts" class="hidden">
+   <ul class="results-img" alt="placeholder">
+</section>
+
+<td><a href="{{ url_for('download_sigfile', data_n=data_n) }}">Download result table (excel file)</a></td>
+<br>
+<td><a href="{{ url_for('download_structure_layout_zipfile', data_n=data_n) }}">Download all structure layouts (zip file)</a></td>
+<br>
+{% if impute_method != 'no_imputation' %}
+   <td><a href="{{ url_for('download_repcell_partition', data_n=data_n) }}">Download repcell partition layouts (zip file)</a></td>
+{% endif %}
