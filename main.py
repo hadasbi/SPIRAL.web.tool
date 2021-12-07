@@ -42,7 +42,7 @@ ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 app.config['SECRET_KEY'] = 'kncwhgJAVKBJAHFvlv,Klz'
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 
-app.config['SERVER_NAME'] = '132.69.181.166:5000'
+app.config['SERVER_NAME'] = '10.100.102.7:5000'
 
 # SHREK:
 # app.config['SERVER_NAME'] = '132.68.107.4:5000'
