@@ -1,5 +1,20 @@
 <script>
   $SCRIPT_ROOT = {{ request.script_root|tojson }};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -18,63 +33,112 @@
                $("#structure_layouts").append("<img src=" + data.struct_pics[i] + " width=350>");
             }
 
+        $("#gene_list").empty()
          $("#gene_list").append("<ul>");
          for (let i = 0; i < data.gene_list.length; i++){
                $("#gene_list").append("<li>" + data.gene_list[i]);
             }
          $("#gene_list").append("</ul>");
 
-        $("#enriched_GO_terms_process").text(data.GO_terms[0]);
-        $("#enriched_GO_terms_function").text(data.GO_terms[1]);
-        $("#enriched_GO_terms_compartment").text(data.GO_terms[2]);
+         $("#enriched_GO_terms_process").empty()
+         $("#enriched_GO_terms_process").append("<ul>");
+         for (let i = 0; i < data.GO_terms[0].length; i++){
+               $("#enriched_GO_terms_process").append("<li>" + data.GO_terms[0][i]);
+            }
+         $("#enriched_GO_terms_process").append("</ul>");
+
+         $("#enriched_GO_terms_function").empty()
+         $("#enriched_GO_terms_function").append("<ul>");
+         for (let i = 0; i < data.GO_terms[1].length; i++){
+               $("#enriched_GO_terms_function").append("<li>" + data.GO_terms[1][i]);
+            }
+         $("#enriched_GO_terms_function").append("</ul>");
+
+         $("#enriched_GO_terms_compartment").empty()
+         $("#enriched_GO_terms_compartment").append("<ul>");
+         for (let i = 0; i < data.GO_terms[2].length; i++){
+               $("#enriched_GO_terms_compartment").append("<li>" + data.GO_terms[2][i]);
+            }
+         $("#enriched_GO_terms_compartment").append("</ul>");
+
       });
       return false;
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
+{% extends 'base.html' %}
+
+{% block content %}
 <h1>SPIRAL results panel</h1>
+<h2>{{ dataset_name }}</h2>
 <p>Structure number: <select id="SelectStruct" name="SelectStruct">
-   {% for item in struct_lst %}
-      <option value="{{ item }}">{{ item }}</option>
-   {% endfor %}
-   </select>
-{% if impute_method != 'no_imputation' %}
-   <p>Visualization type: <select id="SelectVis" name="SelectVis">
-      <option value="repcells">repcells</option>
-      <option value="orig">original data</option>
-      </select>
-{% endif %}
+    {% for item in struct_lst %}
+    <option value="{{ item }}">{{ item }}</option>
+    {% endfor %}
+</select>
+    {% if impute_method != 'no_imputation' %}
+<p>Visualization type: <select id="SelectVis" name="SelectVis">
+    <option value="repcells">repcells</option>
+    <option value="orig">original data</option>
+</select>
+    {% endif %}
 <p>Colored by: <select id="SelectColors" name="SelectColors">
-   <option value="layers">structure layers</option>
-   <option value="avg_expression">average expression level of the structure genes</option>
-   </select>
+    <option value="layers">structure layers</option>
+    <option value="avg_expression">average expression level of the structure genes</option>
+</select>
 <p><a href=# id=get_struct_figs>Submit</a>
 
-<br>
+    <br>
 
-{# <p><span id=answer1>?</span>
-<p><span id=answer2>?</span>
-<p><span id=answer3>?</span> #}
+<section id="structure_layouts" class="hidden">
+    <ul class="results-img" alt="placeholder">
+</section>
 
-<p>Genes:</p><div id="gene_list" style="overflow: scroll; width: 300px; height: 200px;">
+<h3>Genes:</h3>
+<div id="gene_list" style="overflow: scroll; width: 300px; height: 200px">
 </div>
 
 <br>
 
-<p>Enriched GO terms:</p>
-<p>Process: <span id=enriched_GO_terms_process></span>
-<p>Function: <span id=enriched_GO_terms_function></span>
-<p>Compartment: <span id=enriched_GO_terms_compartment></span>
+<h3>Enriched GO terms:</h3>
 
-<section id="structure_layouts" class="hidden">
-   <ul class="results-img" alt="placeholder">
-</section>
+<p>GO biological process:</p>
+<div id="enriched_GO_terms_process" style="overflow: scroll; width: 900px; height: 200px;">
+</div>
+
+<p>GO molecular function:</p>
+<div id="enriched_GO_terms_function" style="overflow: scroll; width: 900px; height: 200px;">
+</div>
+
+<p>GO cellular component:</p>
+<div id="enriched_GO_terms_compartment" style="overflow: scroll; width: 900px; height: 200px;">
+</div>
+
+<br>
 
 <td><a href="{{ url_for('download_sigfile', data_n=data_n) }}">Download result table (excel file)</a></td>
 <br>
-<td><a href="{{ url_for('download_structure_layout_zipfile', data_n=data_n) }}">Download all structure layouts (zip file)</a></td>
+<td><a href="{{ url_for('download_structure_layout_zipfile', data_n=data_n) }}">Download all structure layouts (zip
+    file)</a></td>
 <br>
 {% if impute_method != 'no_imputation' %}
-   <td><a href="{{ url_for('download_repcell_partition', data_n=data_n) }}">Download repcell partition layouts (zip file)</a></td>
+<td><a href="{{ url_for('download_repcell_partition', data_n=data_n) }}">Download repcell partition layouts (zip
+    file)</a></td>
 {% endif %}
+{% endblock %}

@@ -1,10 +1,12 @@
 import os, io
 from time import sleep
-from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify
+import re
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, SubmitField, SelectField, SelectMultipleField
-from wtforms.validators import DataRequired, Email
+from wtforms import StringField, IntegerField, SubmitField, SelectField, SelectMultipleField, IntegerRangeField, \
+    ValidationError, BooleanField
+from wtforms.validators import DataRequired, Email, NumberRange, EqualTo
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from flask_uploads import UploadSet, configure_uploads, patch_request_class, IMAGES
 from flask_mail import Mail, Message
@@ -42,11 +44,12 @@ ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 app.config['SECRET_KEY'] = 'kncwhgJAVKBJAHFvlv,Klz'
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 
-app.config['SERVER_NAME'] = '10.100.102.7:5000'
+app.config['SERVER_NAME'] = '132.68.108.36:5000'
+# app.config['SERVER_NAME'] = '132.68.108.188:5000'
+# app.config['SERVER_NAME'] = '10.100.102.7:5000'
 
 # SHREK:
 # app.config['SERVER_NAME'] = '132.68.107.4:5000'
-
 
 # app.config['UPLOADED_PHOTOS_DEST'] = ANALYSIS_FOLDER
 
@@ -167,11 +170,15 @@ class LoadData(FlaskForm):
                                                ("DANIO_RERIO", 'Danio rerio (Zebrafish)'),
                                                ("HOMO_SAPIENS", 'Homo sapiens'),
                                                ("MUS_MUSCULUS", 'Mus musculus'),
-                                               ("RATTUS_NORVEGICUS", 'Rattus norvegicus')],
+                                               ("RATTUS_NORVEGICUS", 'Rattus norvegicus'),
+                                               ('other', 'other (GO enrichment analysis will not be performed)'),
+                                               ('synthetic',
+                                                'synthetic (GO enrichment analysis will not be performed)')],
                           validators=[DataRequired()])
     samp_name = SelectField('How are your samples called?',
                             choices=[("samples", 'samples'), ("cells", 'cells'), ("spots", 'spots')],
                             validators=[DataRequired()], default="samples")
+    labels_checkbox = BooleanField(Markup('My data does <strong>not</strong> have labels.'))
     submit = SubmitField('Submit')
 
 
@@ -185,10 +192,45 @@ class CheckFilteringParams(FlaskForm):
     go_back = SubmitField("Go back and change the filtering parameters")
 
 
+class MoreThan(object):
+    """
+    Compares the values of two fields.
+
+    :param fieldname:
+        The name of the other field to compare to.
+    :param message:
+        Error message to raise in case of a validation error. Can be
+        interpolated with `%(other_label)s` and `%(other_name)s` to provide a
+        more helpful error.
+    """
+
+    def __init__(self, fieldname, message=None):
+        self.fieldname = fieldname
+        self.message = message
+
+    def __call__(self, form, field):
+        try:
+            other = form[self.fieldname]
+        except KeyError:
+            raise ValidationError(field.gettext("Invalid field name '%s'.") % self.fieldname)
+        if field.data <= other.data:
+            d = {
+                'other_label': hasattr(other, 'label') and other.label.text or self.fieldname,
+                'other_name': self.fieldname
+            }
+            message = self.message
+            if message is None:
+                message = field.gettext(
+                    'The maximal number of expressed genes has to be larger than the minimal number of expressed genes')
+
+            raise ValidationError(message)
+
+
 class vln_plot_form(FlaskForm):
     min_nFeatures = IntegerField('* Minimal number of expressed genes:', validators=[DataRequired()])
-    max_nFeatures = IntegerField('* Maximal number of expressed genes:', validators=[DataRequired()])
-    max_mtpercent = IntegerField('Maximal percent of mitochondrial gene expression:')
+    max_nFeatures = IntegerField('* Maximal number of expressed genes:',
+                                 validators=[DataRequired(), MoreThan('min_nFeatures')])
+    max_mtpercent = IntegerField('Maximal percent of mitochondrial gene expression:', validators=[NumberRange(1, 100)])
     submit = SubmitField('Submit')
 
 
@@ -200,6 +242,16 @@ class alg_params_form(FlaskForm):
     path_len = SelectField('Path length:', choices=[('3', '3')])
     num_iter = SelectField('Number of iterations:', choices=[('10000', '10000')])
     submit = SubmitField('Submit')
+
+
+def flash_errors(form):
+    """Flashes form errors"""
+    for field, errors in form.errors.items():
+        for error in errors:
+            flash(u"Error in the %s field - %s" % (
+                getattr(form, field).label.text,
+                error
+            ), 'error')
 
 
 ########################################################################################
@@ -269,6 +321,11 @@ def load_data_form():
         with open(os.path.join(data_path, 'samp_name.txt'), 'w') as text_file:
             text_file.write(samp_name)
 
+        # labels_checkbox
+        labels_checkbox = form.labels_checkbox.data
+        with open(os.path.join(data_path, 'labels_checkbox.txt'), 'w') as text_file:
+            text_file.write(str(labels_checkbox))
+
         return redirect(url_for('check_data_form', data_n=data_n, samp_name=samp_name, species=species))
 
         # flash("This field requires a valid email address")
@@ -320,40 +377,33 @@ def violin_plots():
         with_mt = (open(with_mt_filename, "r").read().lower() == 'true')
 
     form = vln_plot_form()
-    if request.method == 'POST' and not form.min_nFeatures.errors and not form.max_nFeatures.errors:
-        ###### WRITE THIS !!!! ###############
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
 
-        # if not check_nFeatures_filtering_values(data_n=data_n,
-        #                                        min_nFeatures=form.min_nFeatures.data,
-        #                                        max_nFeatures=form.max_nFeatures.data):
-        #    flash('NO NO NO')
-        # if not check_mtpercent_filtering_values(data_n=data_n, max_mtpercent=form.max_mtpercent.data):
-        #    flash('NO NO NO')
+            # save min_nFeatures
+            min_nFeatures = form.min_nFeatures.data
+            with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
+                text_file.write(str(min_nFeatures))
 
-        data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+            # save max_nFeatures
+            max_nFeatures = form.max_nFeatures.data
+            with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
+                text_file.write(str(max_nFeatures))
 
-        # save min_nFeatures
-        min_nFeatures = form.min_nFeatures.data
-        with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
-            text_file.write(str(min_nFeatures))
-
-        # save max_nFeatures
-        max_nFeatures = form.max_nFeatures.data
-        with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
-            text_file.write(str(max_nFeatures))
-
-        # save max_mtpercent
-        max_mtpercent = form.max_mtpercent.data
-        if max_mtpercent is not None:
-            with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
-                text_file.write(str(max_mtpercent))
-        print(max_mtpercent)
-        return redirect(url_for('check_data_filtering_params',
-                                data_n=data_n, min_nFeatures=min_nFeatures, species=species,
-                                max_nFeatures=max_nFeatures, max_mtpercent=max_mtpercent,
-                                spatial=spatial, num_cells=num_cells, num_genes=num_genes,
-                                samp_name=samp_name))
-
+            # save max_mtpercent
+            max_mtpercent = form.max_mtpercent.data
+            if max_mtpercent is not None:
+                with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
+                    text_file.write(str(max_mtpercent))
+            print(max_mtpercent)
+            return redirect(url_for('check_data_filtering_params',
+                                    data_n=data_n, min_nFeatures=min_nFeatures, species=species,
+                                    max_nFeatures=max_nFeatures, max_mtpercent=max_mtpercent,
+                                    spatial=spatial, num_cells=num_cells, num_genes=num_genes,
+                                    samp_name=samp_name))
+        else:
+            flash_errors(form)  # doesn't work
     return render_template('violin_plots.html', form=form, vln_plot_file='/static/vln_data' + str(data_n) + '.jpg',
                            with_mt=with_mt)
 
@@ -441,16 +491,18 @@ def run_SPIRAL(analysis_folder, data_n, num_stds_thresh_lst, mu_lst, num_iters_l
 @app.route('/all_done', methods=['POST', 'GET'])
 def all_done():
     print('all_done!!!')
-    data_n = request.args['data_n']
-    return 'All done, wait for an email.'
+    # data_n = request.args['data_n']
+    return render_template('all_done.html')
 
 
 @app.route("/email")
 def email(data_n):
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     recipient_email = open(os.path.join(data_path, 'email.txt'), "r").read()
+    dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
     msg = Message('SPIRAL results are ready for you', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email])
-    msg.body = "Hello, \nThe results link is " + url_for('results_panel', url=data_n_to_url(data_n), _external=True)
+    msg.body = ("Hello, \nSPIRAL finished processing" + (dataset_name != '') * (' ' + dataset_name) + '.' +
+                "\nThe results link is " + url_for('results_panel', url=data_n_to_url(data_n), _external=True))
     mail.send(msg)
     return "Message sent!"
 
@@ -565,12 +617,21 @@ def pic_names_and_GO_terms():
     sigfile = final_sig_filename(data_path, impute_method)
     # sigtable = pd.read_csv(sigfile, index_col=0, sep='\t')
     sigtable = load_excel_with_openpyxl_and_convert_to_pd_DataFrame(sigfile)
-    GO_terms = [sigtable.loc[int(struct), 'proc_GOterms_below_1e-06'],
-                sigtable.loc[int(struct), 'func_GOterms_below_1e-06'],
-                sigtable.loc[int(struct), 'comp_GOterms_below_1e-06']]
+    if ('proc_GOterms_below_1e-06' in list(sigtable)) and ('func_GOterms_below_1e-06' in list(sigtable)) and (
+            'comp_GOterms_below_1e-06' in list(sigtable)):
+        GO_terms = [
+            [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
+                                             sigtable.loc[int(struct), 'proc_GOterms_below_1e-06'])],
+            [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
+                                             sigtable.loc[int(struct), 'func_GOterms_below_1e-06'])],
+            [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
+                                             sigtable.loc[int(struct), 'comp_GOterms_below_1e-06'])]]
+    else:
+        GO_terms = [['Not available'], ['Not available'], ['Not available']]
 
     # get gene list
-    gene_list = sigtable.loc[int(struct), 'genes'].replace("['", "").replace("']", "").replace("\n", "").split("', '")
+    gene_list = sigtable.loc[int(struct), 'genes'].replace("['", "").replace("']", "").replace("\n", "").split(
+        "', '")
     print(gene_list)
     return jsonify(struct_pics=struct_pics, gene_list=gene_list, GO_terms=GO_terms)
 
@@ -600,6 +661,8 @@ def download_repcell_partition(data_n):
 @app.route('/results/<url>')
 def results_panel(url):
     data_n = url_to_data_n(url)
+    data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+    dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
 
     # get structure list
     full_pic_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), 'structure_layouts')
@@ -611,7 +674,8 @@ def results_panel(url):
     # get imputation method
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     impute_method = open(os.path.join(data_path, 'imputation_method.txt'), "r").read()
-    return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst, impute_method=impute_method)
+    return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst, impute_method=impute_method,
+                           dataset_name=dataset_name)
 
 
 def data_n_to_url(data_n):

@@ -20,6 +20,7 @@ from SPIRAL_visualization_funcs import *
 from SPIRAL_enrichment_funcs import *
 from SPIRAL_design_excel import *
 
+
 ####################################################################################################################
 def load_data_first_time(analysis_folder, data_n, median_count_normalization_flag=False, with_log=False):
     print('load_data_first_time!')
@@ -69,7 +70,7 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
 
         # Check that the sample names in spatial_coors fit the sample names in data
         if spatial_coors.shape[0] != data.shape[1]:
-            print(set(list(data))-set(spatial_coors.index))
+            print(set(list(data)) - set(spatial_coors.index))
             print(set(spatial_coors.index) - set(list(data)))
             raise ValueError(
                 'Number of rows in the spatial coordinates file do not fit the number of columns in the count matrix')
@@ -87,8 +88,8 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
 
     ############# Check for duplicated genes names #################################
     print(data.shape)
-    data = data.sum(level=0)
-    data = data.T.sum(level=0).T
+    data = data.groupby(level=0).sum()
+    data = data.T.groupby(level=0).sum().T
     print(data.shape)
 
     ############# median count normalization #######################################
@@ -112,13 +113,14 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
     num_cells, num_genes = data.shape[1], data.shape[0]
 
     ############# check labels #####################################################
-    label_set = set(compute_orig_deffs(data))
+    label_set = set(compute_orig_deffs(data_path, data))
     label_set = sort_labels(label_set)
     nlabels = len(label_set)
     if nlabels == num_cells:
         nlabels = 1
 
     return spatial, num_cells_orig, num_genes_orig, num_cells, num_genes, label_set, nlabels
+
 
 ####################################################################################################################
 def compute_violin_plots(analysis_folder, data_n, static_path, species):
@@ -141,13 +143,13 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species):
     if with_mt:
         summary = pd.concat([nFeatures, mtpercent], axis=1)
         fig, axs = plt.subplots(1, 2, figsize=(10, 5))
-        #fig.suptitle('Violin plots')
+        # fig.suptitle('Violin plots')
         sns.violinplot(y="nFeatures", data=summary, ax=axs[0])
         sns.violinplot(y="mtpercent", data=summary, ax=axs[1])
     else:
         summary = pd.concat([nFeatures], axis=1)
         fig, axs = plt.subplots(1, 1, figsize=(5, 5))
-        #fig.suptitle('Violin plot')
+        # fig.suptitle('Violin plot')
         sns.violinplot(y="nFeatures", data=summary, ax=axs)
 
     # save to file
@@ -186,7 +188,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     real_samp_name = open(os.path.join(data_path, 'samp_name.txt'), "r").read()[:-1]
 
     ######################  set algorithm parameters    #########################
-    #no_iterations = False
+    # no_iterations = False
     use_mp_to_find_structs = True
     errors = []
 
@@ -211,7 +213,12 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     sigtable_filt = None
     sigtable_GO = None
 
-    skip_GO = False
+    if species is None:
+        species = open(os.path.join(data_path, 'species.txt'), "r").read()
+    if species in ['synthetic', 'other']:
+        skip_GO = True
+    else:
+        skip_GO = False
 
     ######################  run pipeline    #####################################
     # Check if data filtering was already performed, if not- perform data filtering
@@ -241,7 +248,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     # check if labels were already saved to file, if not- save labels to file
     origdeffsfile = os.path.join(data_path, 'orig_deffs.txt')
     if not os.path.exists(origdeffsfile):
-        save_orig_deffs_to_file(data=data, data_norm_filt_loc=data_norm_filt_loc, origdeffsfile=origdeffsfile)
+        save_orig_deffs_to_file(data=data, data_path=data_path, data_norm_filt_loc=data_norm_filt_loc,
+                                origdeffsfile=origdeffsfile)
 
     # check if layouts of data already exist (if not, compute them)
     norm_filt_pca_coor_file = os.path.join(data_path, 'norm_filt_PCA_coor' + ('5000' * use_5000) + '.csv')
@@ -255,8 +263,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                             norm_filt_picfile_pca=norm_filt_picfile_pca,
                             norm_filt_picfile_umap=norm_filt_picfile_umap,
                             norm_filt_picfile_spatial=norm_filt_picfile_spatial,
-                            origdeffsfile=origdeffsfile,  spatial_norm_filt_loc=spatial_norm_filt_loc,
-                            data=data, data_norm_filt_loc=data_norm_filt_loc,
+                            origdeffsfile=origdeffsfile, spatial_norm_filt_loc=spatial_norm_filt_loc,
+                            data=data, data_norm_filt_loc=data_norm_filt_loc, data_path=data_path,
                             save_umap=True, save_pca=True, save_spatial=spatial, use_5000=use_5000)
 
     # check if repcell computation was already performed, if not- compute repcells
@@ -284,8 +292,10 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
             num_genes = repcells_data.shape[0]  # number of genes
 
     # check if layouts of inmputed file already exist (if not, compute them)
-    layout_of_imputed_picfile_PCA = os.path.join(data_path, impute_method + '_repcells_PCA' + ('5000' * use_5000) + '.jpg')
-    layout_of_imputed_picfile_UMAP = os.path.join(data_path, impute_method + '_repcells_UMAP' + ('5000' * use_5000) + '.jpg')
+    layout_of_imputed_picfile_PCA = os.path.join(data_path,
+                                                 impute_method + '_repcells_PCA' + ('5000' * use_5000) + '.jpg')
+    layout_of_imputed_picfile_UMAP = os.path.join(data_path,
+                                                  impute_method + '_repcells_UMAP' + ('5000' * use_5000) + '.jpg')
     repcelldeffsfile = os.path.join(data_path, impute_method + '_repcells_deffs.txt')
     stepsfile = os.path.join(data_path, impute_method + '_repcells_steps.txt')
     repcellsumapcoorfile = os.path.join(data_path, impute_method + '_repcells_UMAP' + ('5000' * use_5000) + '.csv')
@@ -299,6 +309,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                    layout_of_imputed_picfile_PCA=layout_of_imputed_picfile_PCA,
                                    layout_of_imputed_picfile_UMAP=layout_of_imputed_picfile_UMAP,
                                    use_5000=use_5000,
+                                   data_path=data_path,
                                    repcellsumapcoorfile=repcellsumapcoorfile,
                                    repcellspcacoorfile=repcellspcacoorfile,
                                    repcelldeffsfile=repcelldeffsfile,
@@ -406,9 +417,10 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                     if not os.path.exists(sigfile):
                         if impute_method != 'no_imputation':
                             evaluate_significance_of_structs(sigfile=sigfile, genetable_file=genetable_file,
-                                                            structs=structs, structs_file=structs_file,
-                                                            counts=repcells_data, counts_file=repcells_data_loc,
-                                                            impute_method=impute_method, real_samp_name=real_samp_name)
+                                                             structs=structs, structs_file=structs_file,
+                                                             counts=repcells_data, counts_file=repcells_data_loc,
+                                                             impute_method=impute_method, real_samp_name=real_samp_name,
+                                                             clustering_file_final=clustering_file_final)
                         else:
                             evaluate_significance_of_structs(sigfile=sigfile, genetable_file=genetable_file,
                                                              structs=structs, structs_file=structs_file,
@@ -429,7 +441,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         sigtable_filt = filter_similar_structures(sigfile=sigfile_merged, significance_table=sigtable_merged,
                                                   sigfile_filt=sigfile_filt, genetable_file=genetable_file,
                                                   data_path=data_path, impute_method=impute_method,
-                                                  real_samp_name=real_samp_name)
+                                                  real_samp_name=real_samp_name, struct_thr=0.8,
+                                                  min_nstructs=3, max_nstructs=50)
 
     # check if a filtered significance table file with GO terms and visualizations already exists (if not, compute it)
     sigfile_GO = os.path.join(data_path, impute_method + '_sigtable_filt_GO.xlsx')
@@ -442,11 +455,11 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         try:
             if not skip_GO:
                 sigtable_GO = add_GO_terms(sigtable=sigtable_filt, sigtable_file=sigfile_filt,
-                                         sigfile_GO=sigfile_GO, sigfile_GO_temp=sigfile_GO_temp,
-                                         genetable_file=genetable_file, data_path=data_path,
-                                         species=species,
-                                         impute_method=impute_method, start_from_scratch=False,
-                                         pvals=[0.000001], struct_thr=0.8, real_samp_name=real_samp_name)
+                                           sigfile_GO=sigfile_GO, sigfile_GO_temp=sigfile_GO_temp,
+                                           genetable_file=genetable_file, data_path=data_path,
+                                           species=species,
+                                           impute_method=impute_method, start_from_scratch=False,
+                                           pvals=[0.000001], real_samp_name=real_samp_name)
             else:
                 copyfile(sigfile_filt, sigfile_GO)
         except ConnectionError as e:
@@ -470,7 +483,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                             repcellsumapcoorfile=repcellsumapcoorfile,
                                             repcellspcacoorfile=repcellspcacoorfile,
                                             repcells_data=(repcells_data if impute_method != 'no_imputation' else None),
-                                            repcells_data_loc=(repcells_data_loc if impute_method != 'no_imputation' else None),
+                                            repcells_data_loc=(
+                                                repcells_data_loc if impute_method != 'no_imputation' else None),
                                             norm_filt_pca_coor_file=norm_filt_pca_coor_file,
                                             repcelldeffsfile=repcelldeffsfile,
                                             origdeffsfile=origdeffsfile,
@@ -481,7 +495,6 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                             clustering_file_final=clustering_file_final,
                                             spatial_norm_filt_loc=spatial_norm_filt_loc,
                                             sigtable=sigtable_GO, sigtable_file=sigfile_GO,
-                                            struct_thr=0.8, min_nstructs=3, max_nstructs=15,
                                             impute_method=impute_method,
                                             save_table=True,
                                             save_network_layouts=True, save_Gnetwork_layouts=True,
@@ -541,12 +554,14 @@ def filter_data(data_path, min_nFeatures, max_nFeatures, max_mtpercent, spatial,
 
     return data
 
+
 ####################################################################################################################
 def save_genetable_to_file(data, genetable_file):
     # table with genes' names and indices
     genetable = pd.Series(index=data.index, data=np.array(range(data.shape[0])))
     with open(genetable_file, 'wb') as fp:
         pickle.dump(genetable, fp, protocol=pickle.HIGHEST_PROTOCOL)
+
 
 ####################################################################################################################
 def renumber_clusters(labels, min_cells_per_cluster):
@@ -560,6 +575,7 @@ def renumber_clusters(labels, min_cells_per_cluster):
     labels = [d[l] for l in labels]
     return labels
 
+
 ####################################################################################################################
 def compute_lost_percent(orig_scRNA_data, min_cells_per_cluster, n_clusters):
     num_cells = orig_scRNA_data.shape[1]  # number of cells
@@ -570,11 +586,12 @@ def compute_lost_percent(orig_scRNA_data, min_cells_per_cluster, n_clusters):
     lost_percent = len([i for i in range(num_cells) if labels[i] in small_clusters]) / num_cells * 100
     return lost_percent
 
+
 ####################################################################################################################
 def binary_search(orig_scRNA_data, minval, maxval, min_cells_per_cluster, max_lost_percent):
     if minval == maxval:
         return minval
-    n_clusters = int(np.ceil((minval+maxval)/2))
+    n_clusters = int(np.ceil((minval + maxval) / 2))
     lost_percent = compute_lost_percent(orig_scRNA_data=orig_scRNA_data, min_cells_per_cluster=min_cells_per_cluster,
                                         n_clusters=n_clusters)
     if lost_percent <= max_lost_percent:
@@ -583,6 +600,7 @@ def binary_search(orig_scRNA_data, minval, maxval, min_cells_per_cluster, max_lo
     else:
         return binary_search(orig_scRNA_data=orig_scRNA_data, minval=minval, maxval=n_clusters - 1,
                              min_cells_per_cluster=min_cells_per_cluster, max_lost_percent=max_lost_percent)
+
 
 ####################################################################################################################
 def find_opt_n_clusters(orig_scRNA_data, min_cells_per_cluster, max_lost_percent=3):
@@ -600,7 +618,7 @@ def find_opt_n_clusters(orig_scRNA_data, min_cells_per_cluster, max_lost_percent
     # find a number t, such that if n_clusters==t then (lost_percent <= max_lost_percent), and if n_clusters==t+10
     # then (lost_percent > max_lost_percent)
     while lost_percent > max_lost_percent:
-        n_clusters = max(n_clusters-10, 2)
+        n_clusters = max(n_clusters - 10, 2)
         lost_percent = compute_lost_percent(orig_scRNA_data=orig_scRNA_data,
                                             min_cells_per_cluster=min_cells_per_cluster,
                                             n_clusters=n_clusters)
@@ -611,10 +629,11 @@ def find_opt_n_clusters(orig_scRNA_data, min_cells_per_cluster, max_lost_percent
     return binary_search(orig_scRNA_data=orig_scRNA_data, minval=n_clusters, maxval=n_clusters + 9,
                          min_cells_per_cluster=min_cells_per_cluster, max_lost_percent=max_lost_percent)
 
+
 ####################################################################################################################
 def compute_repcells(clustering_file_initial, clustering_file_final, data=None, impute_method='agg_wald',
                      min_cells_per_cluster=10, data_norm_filt_loc=None):
-    #impute_method: 'agg_wald' OR 'agg_wald_opt' OR 'no_imputation'
+    # impute_method: 'agg_wald' OR 'agg_wald_opt' OR 'no_imputation'
     # not maintained: 'IaconoClus' OR 'IaconoClus_median' OR 'IaconoClus_dim50' OR 'IaconoClus_dim50_median'
     print('\ncompute_repcells!\n')
 
@@ -637,7 +656,7 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
             n_clusters = find_opt_n_clusters(data, min_cells_per_cluster)
         elif impute_method == 'agg_wald':
             n_clusters = min(100, int(np.round(num_cells / 30)))
-            #n_clusters = min(40, int(np.round(num_cells / 30)))
+            # n_clusters = min(40, int(np.round(num_cells / 30)))
         print('aiming for', n_clusters, 'clusters')
         print('averagely', np.round(num_cells / n_clusters, 2), 'cells per cluster')
 
@@ -686,10 +705,10 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
         clusters.to_csv(clustering_file_final, sep=' ')
     '''
 
+
 ####################################################################################################################
 def create_imputed_file(clustering_file_final, repcells_data_loc,
                         data=None, impute_method='agg_wald', data_norm_filt_loc=None):
-
     print('create_imputed_file!')
 
     if data is None and data_norm_filt_loc is None:
@@ -710,7 +729,8 @@ def create_imputed_file(clustering_file_final, repcells_data_loc,
                                      index=data.index, columns=np.array(range(len(final_cluster_list))))
         for c in final_cluster_list:
             print('cluster', c, '-', len([i for i in clusters.index if clusters.loc[i, 'x'] == c]), 'cells')
-            repcells_data.loc[:, c] = data.iloc[:, [i for i in clusters.index if clusters.loc[i, 'x'] == c]].mean(axis=1)
+            repcells_data.loc[:, c] = data.iloc[:, [i for i in clusters.index if clusters.loc[i, 'x'] == c]].mean(
+                axis=1)
 
         repcells_data = delete_genes_with_zero_reads(repcells_data)
         repcells_data = median_count_normalization(repcells_data)
@@ -723,13 +743,11 @@ def create_imputed_file(clustering_file_final, repcells_data_loc,
     return repcells_data, num_repcells, num_genes
 
 
-
 ####################################################################################################################
 def compute_sets_on_standardized_genes(genetable_file,
                                        genes_in_sets_coo_file, genes_in_sets_csc_file, genes_in_sets_csr_file,
                                        genes_in_sets_row_file, genes_in_sets_col_file,
                                        counts=None, counts_file=None, num_stds_thresh=1):
-
     print('compute_sets_on_standardized_genes!')
 
     if counts is None and counts_file is None:
@@ -744,7 +762,7 @@ def compute_sets_on_standardized_genes(genetable_file,
 
     with open(genetable_file, 'rb') as fp:
         genes_table = pickle.load(fp)
-        
+
     # normalize the original matrix
     print('genes means before standartization:', counts.mean(axis=1)[:5])
     print('genes stds before standartization:', counts.std(axis=1)[:5])
@@ -755,8 +773,8 @@ def compute_sets_on_standardized_genes(genetable_file,
     # intialize the row and column arrays of the filled indices
     num_genes, num_samples = counts.shape[0], counts.shape[1]
     estimated_num_genes_per_set = num_genes
-    genes_in_sets_row = np.empty((int(num_samples*num_samples/2*estimated_num_genes_per_set)))
-    genes_in_sets_col = np.empty((int(num_samples*num_samples/2*estimated_num_genes_per_set)))
+    genes_in_sets_row = np.empty((int(num_samples * num_samples / 2 * estimated_num_genes_per_set)))
+    genes_in_sets_col = np.empty((int(num_samples * num_samples / 2 * estimated_num_genes_per_set)))
 
     start = time()
     step = 20
@@ -766,10 +784,10 @@ def compute_sets_on_standardized_genes(genetable_file,
         for c2 in range(num_samples):
             if c1 != c2:
                 gene_inds = list(genes_table.loc[
-                                     counts.index[(counts.iloc[:, c2]-counts.iloc[:, c1]) > num_stds_thresh]
+                                     counts.index[(counts.iloc[:, c2] - counts.iloc[:, c1]) > num_stds_thresh]
                                  ])
-                genes_in_sets_row[iter_ind:(iter_ind+len(gene_inds))] = gene_inds
-                genes_in_sets_col[iter_ind:(iter_ind+len(gene_inds))] = c1 * num_samples + c2
+                genes_in_sets_row[iter_ind:(iter_ind + len(gene_inds))] = gene_inds
+                genes_in_sets_col[iter_ind:(iter_ind + len(gene_inds))] = c1 * num_samples + c2
                 iter_ind += len(gene_inds)
 
         '''
@@ -802,7 +820,7 @@ def compute_sets_on_standardized_genes(genetable_file,
 
             last_saved_c1 = c1
         '''
-        
+
     genes_in_sets_row = genes_in_sets_row[:iter_ind]
     genes_in_sets_col = genes_in_sets_col[:iter_ind]
 
@@ -813,8 +831,8 @@ def compute_sets_on_standardized_genes(genetable_file,
               separators=(',', ':'), sort_keys=True, indent=4)
 
     genes_in_sets = sparse.coo_matrix((np.ones_like(genes_in_sets_row), (genes_in_sets_row, genes_in_sets_col)),
-                                  shape=(num_genes, num_samples*num_samples))
-    
+                                      shape=(num_genes, num_samples * num_samples))
+
     # save coo_mat to file
     sparse.save_npz(genes_in_sets_coo_file, genes_in_sets)
 
@@ -824,15 +842,16 @@ def compute_sets_on_standardized_genes(genetable_file,
     # save csr_mat to file
     sparse.save_npz(genes_in_sets_csr_file, genes_in_sets.tocsr())
 
-    t = time()-start
+    t = time() - start
 
-    num_sets = num_samples*(num_samples-1)
+    num_sets = num_samples * (num_samples - 1)
 
-    print('it takes', np.round(t/num_sets,2),'seconds for a set')
-    print('it takes', np.round(t,2),'seconds for', num_sets, 'sets')
+    print('it takes', np.round(t / num_sets, 2), 'seconds for a set')
+    print('it takes', np.round(t, 2), 'seconds for', num_sets, 'sets')
 
-    avg_num_of_genes_per_set = np.absolute(genes_in_sets).sum()/num_sets
-    print('avg_num_of_genes_per_set is around', np.round(avg_num_of_genes_per_set,2))
+    avg_num_of_genes_per_set = np.absolute(genes_in_sets).sum() / num_sets
+    print('avg_num_of_genes_per_set is around', np.round(avg_num_of_genes_per_set, 2))
+
 
 ####################################################################################################################
 def make_structure_list_unique(struct_list):
@@ -843,11 +862,12 @@ def make_structure_list_unique(struct_list):
             struct_list_unique.append(s)
     return struct_list_unique
 
+
 ####################################################################################################################
 def find_structures(genes_in_sets_npz_file, structs_file, mu, num_iters=10000, path_len=3,
-                       min_num_genes_in_struct=2, use_mp_to_find_structs=True,
-                       #min_num_sets_in_struct=10,
-                       ):
+                    min_num_genes_in_struct=2, use_mp_to_find_structs=True,
+                    # min_num_sets_in_struct=10,
+                    ):
     print('find_structures!')
 
     genes_in_sets = sparse.load_npz(genes_in_sets_npz_file)
@@ -862,22 +882,23 @@ def find_structures(genes_in_sets_npz_file, structs_file, mu, num_iters=10000, p
         struct_list = []
         for _ in range(num_iters):
             struct_list.append(SPIRAL_mp_funcs.find_submat_around_random_path(mu, genes_in_sets, path_len))
-    
+
     relevant_structs = [s for s in struct_list if len(s[0]) >= min_num_genes_in_struct]
     print(len(relevant_structs), 'relevant structures')
-    
+
     # Remove repeating structures
     relevant_structs = make_structure_list_unique(relevant_structs)
     print(len(relevant_structs), 'relevant structures without repetitions')
-        
+
     write_struct_list_to_file(filename=structs_file, structlist=relevant_structs)
-        
+
     return relevant_structs
 
 
 ####################################################################################################################
 def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg_wald', real_samp_name='sample',
-                                     structs=None, structs_file=None, counts=None, counts_file=None):
+                                     structs=None, structs_file=None, counts=None, counts_file=None,
+                                     clustering_file_final=None):
     print('evaluate_significance_of_structs!')
 
     if structs is None and structs_file is None:
@@ -898,49 +919,55 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
         counts = pd.read_csv(counts_file, index_col=0, sep='\t')
 
     num_samples, num_genes = counts.shape[1], counts.shape[0]
-        
-    normalized_counts = counts.subtract(counts.mean(axis=1), axis=0).divide(counts.std(axis=1),axis=0)
+
+    normalized_counts = counts.subtract(counts.mean(axis=1), axis=0).divide(counts.std(axis=1), axis=0)
     normalized_counts.columns = [str(x) for x in normalized_counts.columns]
 
     if impute_method == 'no_imputation':
         samp_name = real_samp_name
+        cols = ['num_genes', 'num_' + samp_name + 's',
+                'num_genes_in_struct', 'num_' + samp_name + 's_in_struct',
+                'num_' + samp_name + '_pairs', 'num_' + samp_name + '_pairs_in_struct',
+                'log10_corrected_pval', 'structure_average_std', 'genes', samp_name + '_pairs']
+
     else:
         samp_name = 'repcell'
+        cols = ['num_genes', 'num_' + real_samp_name + 's', 'num_' + samp_name + 's',
+                'num_genes_in_struct', 'num_' + real_samp_name + 's_in_struct', 'num_' + samp_name + 's_in_struct',
+                'num_' + samp_name + '_pairs', 'num_' + samp_name + '_pairs_in_struct',
+                'log10_corrected_pval', 'structure_average_std', 'genes', samp_name + '_pairs']
+        cells_to_repcells = pd.read_csv(clustering_file_final, index_col=0, sep=' ')
 
-    significance_table = pd.DataFrame(np.zeros((len(structs), 10)),
-                                      columns=['num_genes',
-                                               'num_' + samp_name + 's',
-                                               'num_' + samp_name + '_pairs',
-                                               'num_genes_in_struct',
-                                               'num_' + samp_name + '_pairs_in_struct',
-                                               'num_' + samp_name + 's_in_struct',
-                                               'log10_corrected_pval',
-                                               'structure_average_std',
-                                               'genes',
-                                               samp_name + '_pairs'])
+    significance_table = pd.DataFrame(np.zeros((len(structs), len(cols))), columns=cols)
     significance_table.loc[:, 'num_genes'] = num_genes
     significance_table.loc[:, 'num_' + samp_name + 's'] = num_samples
-    significance_table.loc[:, 'num_' + samp_name + '_pairs'] = num_samples*(num_samples-1)
+    significance_table.loc[:, 'num_' + samp_name + '_pairs'] = num_samples * (num_samples - 1)
+    if impute_method != 'no_imputation':
+        significance_table.loc[:, 'num_' + real_samp_name + 's'] = len(cells_to_repcells)
 
     for i, s in enumerate(structs):
         print('structure', i, ':\t#rows:', len(s[0]), '\t#cols:', len(s[1]))
 
         genes = list(genes_table[s[0]].index)
-        #print(len(genes), 'genes')
-        #print('genes:', genes)
+        # print(len(genes), 'genes')
+        # print('genes:', genes)
         significance_table.loc[i, 'num_genes_in_struct'] = len(genes)
         significance_table.loc[i, 'genes'] = str(genes)
-            
+
         sample_pairs = [divmod(x, num_samples) for x in s[1]]
-        #print(len(repcell_pairs), 'sets')
-        #print('sets:', sets)
+        # print(len(repcell_pairs), 'sets')
+        # print('sets:', sets)
         significance_table.loc[i, 'num_' + samp_name + '_pairs_in_struct'] = len(sample_pairs)
         significance_table.loc[i, samp_name + '_pairs'] = str(sample_pairs)
 
         # find all the cells that are relevant to this structure:
         samples = list(set([item for sublist in sample_pairs for item in sublist]))
-        #print(len(repcells), 'repcells')
+        # print(len(repcells), 'repcells')
         significance_table.loc[i, 'num_' + samp_name + 's_in_struct'] = len(samples)
+
+        if impute_method != 'no_imputation':
+            significance_table.loc[i, 'num_' + real_samp_name + 's_in_struct'] = len(
+                [i for i in cells_to_repcells.index if cells_to_repcells.loc[i, 'x'] in samples])
 
         curr_normalized_counts = normalized_counts.loc[genes, :]
         curr_normalized_counts = curr_normalized_counts.iloc[:, [c for c in samples]]
@@ -950,37 +977,37 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
         for k, sett in enumerate(sample_pairs):
             curr_B[k, samples.index(sett[0])] = -1
             curr_B[k, samples.index(sett[1])] = 1
-        #print('curr_B.shape:', curr_B.shape)
+        # print('curr_B.shape:', curr_B.shape)
 
         # multiply the normalized matrix by B to get the vector to compare with
         curr_S = np.dot(curr_B, curr_normalized_counts.transpose())
-        #print('curr_S.shape:', curr_S.shape)
-            
+        # print('curr_S.shape:', curr_S.shape)
+
         # covariance matrix of curr_Y (curr_S is a sample of it)
         cov_mat = np.dot(curr_B, curr_B.transpose())
-        #print('cov_mat.shape:', cov_mat.shape)
-        #cov_mat_rank = np.linalg.matrix_rank(cov_mat)
-        #print('cov_mat_rank:', cov_mat_rank)
+        # print('cov_mat.shape:', cov_mat.shape)
+        # cov_mat_rank = np.linalg.matrix_rank(cov_mat)
+        # print('cov_mat_rank:', cov_mat_rank)
 
         # compute structure_average_std
-        avg_vec = (1/len(sample_pairs))*np.ones((len(sample_pairs)))
-        #print('avg_vec.shape:', avg_vec.shape)
+        avg_vec = (1 / len(sample_pairs)) * np.ones((len(sample_pairs)))
+        # print('avg_vec.shape:', avg_vec.shape)
         average_diff_of_gene_std = np.sqrt(np.dot(np.dot(avg_vec.transpose(), cov_mat), avg_vec))
-        #print('average_diff_of_gene_std =', average_diff_of_gene_std)
+        # print('average_diff_of_gene_std =', average_diff_of_gene_std)
         significance_table.loc[i, 'structure_average_std'] = average_diff_of_gene_std
-        
+
         # average the differences for each gene
         average_diff_of_genes = np.dot(avg_vec.transpose(), curr_S)
         if len(average_diff_of_genes) != len(genes):
             print("PROBLEM 1")
 
-        genes_probs_logs = norm.logsf(average_diff_of_genes/average_diff_of_gene_std)/np.log(10)
+        genes_probs_logs = norm.logsf(average_diff_of_genes / average_diff_of_gene_std) / np.log(10)
 
-        #significance_table.loc[i,'log10_pmax_of_genes'] = np.max(genes_probs_logs)
-        #significance_table.loc[i,'log10_pavg_of_genes'] = np.log10(np.mean(np.power(10,genes_probs_logs)))
-        
+        # significance_table.loc[i,'log10_pmax_of_genes'] = np.max(genes_probs_logs)
+        # significance_table.loc[i,'log10_pavg_of_genes'] = np.log10(np.mean(np.power(10,genes_probs_logs)))
+
         log10pval = np.sum(genes_probs_logs)
-        #print('initial probability: 1e', log10pval)
+        # print('initial probability: 1e', log10pval)
 
         # Multiple testing correction
         multestcorr = correct_for_multiple_testing(num_genes, len(genes), num_samples * (num_samples - 1),
@@ -1018,11 +1045,14 @@ def merge_sigtables(sigfile_merged, data_path, impute_method, num_stds_thresh_ls
     sigtable_merged.to_excel(sigfile_merged)
     return sigtable_merged
 
+
 ####################################################################################################################
 def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetable_file, data_path,
+                              struct_thr, min_nstructs, max_nstructs,
                               impute_method='agg_wald', real_samp_name='sample',
-                              log_corrpval_thr=-15, Jaccard_thr_genes=0.75, Jaccard_thr_sample_pairs=0.5):
-
+                              log_corrpval_thr=-15, Jaccard_thr_genes=0.75, Jaccard_thr_sample_pairs=0.5,
+                              # lower_thr=0.4, Jaccard_thr_high_low_repcells=0.5
+                              ):
     print('\nfilter_similar_structures!\n')
 
     if significance_table is None and sigfile is None:
@@ -1042,7 +1072,7 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
     # filter out structures with log_corrpval>log_corrpval_thr
     significance_table_filt = significance_table[significance_table['log10_corrected_pval'] <= log_corrpval_thr]
     print('There are', len(significance_table_filt), 'structures with log10_corrected_pval<', log_corrpval_thr)
-    
+
     if len(significance_table_filt) > 1:
         # Load genes_table
         with open(genetable_file, 'rb') as fp:
@@ -1067,7 +1097,8 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
                                                         mu=mu,
                                                         path_len=path_len,
                                                         num_iters=num_iters)
-                        struct_dict[str(num_std) + '_' + str(mu) + '_' + str(path_len) + '_' + str(num_iters)] = read_struct_list_from_file(structs_file)
+                        struct_dict[str(num_std) + '_' + str(mu) + '_' + str(path_len) + '_' + str(
+                            num_iters)] = read_struct_list_from_file(structs_file)
 
         '''
         # find pairs of similar structures
@@ -1144,7 +1175,6 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
                                   ((pair[0] != removed_struct) and (pair[1] != removed_struct))]
         '''
 
-
         # More efficient way to find pairs of similar structures and remove the lest favorable structure
         # It counts on the fact that the table is sorted by 'structure_average_std'
         start = time()
@@ -1177,10 +1207,10 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
                     genes_j = list(genes_table[structs[significance_table_filt.loc[j, 'old_struct_num']][0]].index)
                 else:  # read the gene list from the excel file
                     genes_j = read_gene_list(significance_table_filt.loc[j, 'genes'])
-                jaccard_i_j = len(set(genes_i).intersection(set(genes_j))) / len(set(genes_i).union(set(genes_j)))
-                if jaccard_i_j >= Jaccard_thr_genes:
+                jaccard_i_j_genes = len(set(genes_i).intersection(set(genes_j))) / len(set(genes_i).union(set(genes_j)))
+                if jaccard_i_j_genes >= Jaccard_thr_genes:
                     similar_to_i.append(j)
-                else: # if not similar by gene sets, let's check similarity by repcell-pair sets
+                else:  # if not similar by gene sets, let's check similarity by repcell-pair sets
                     # consider (i,j) similar if the Jaccard index of sets is above overlap_thresh
                     sets_in_struct_i = significance_table_filt.loc[i, samp_name + '_pairs']
                     sets_in_struct_i = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
@@ -1190,28 +1220,66 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
                     sets_in_struct_j = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
                                         sets_in_struct_j.strip(']').strip('[').split('), (')]
 
-                    jaccard_i_j = len(set(sets_in_struct_i).intersection(set(sets_in_struct_j))) / len(
+                    jaccard_i_j_sets = len(set(sets_in_struct_i).intersection(set(sets_in_struct_j))) / len(
                         set(sets_in_struct_i).union(set(sets_in_struct_j)))
-                    if jaccard_i_j >= Jaccard_thr_sample_pairs:
+                    if jaccard_i_j_sets >= Jaccard_thr_sample_pairs:
                         similar_to_i.append(j)
+                    '''
+                    else: #if not similar by gene sets or sample pairs, let's check similarity by low and high repcells +
+                        # gene set similarity above the lower_thr
+                        high_repcells_in_struct_i = set([s[1] for s in sets_in_struct_i])
+                        high_repcells_in_struct_j = set([s[1] for s in sets_in_struct_j])
+                        jaccard_i_j_high_repcells = len(
+                            high_repcells_in_struct_i.intersection(high_repcells_in_struct_j)) / len(
+                            high_repcells_in_struct_i.union(high_repcells_in_struct_j))
+
+                        low_repcells_in_struct_i = set([s[0] for s in sets_in_struct_i])
+                        low_repcells_in_struct_j = set([s[0] for s in sets_in_struct_j])
+                        jaccard_i_j_low_repcells = len(
+                            low_repcells_in_struct_i.intersection(low_repcells_in_struct_j)) / len(
+                            low_repcells_in_struct_i.union(low_repcells_in_struct_j))
+                        
+                        if (jaccard_i_j_high_repcells >= Jaccard_thr_high_low_repcells) and (
+                                jaccard_i_j_low_repcells >= Jaccard_thr_high_low_repcells) and (
+                                jaccard_i_j_genes >= lower_thr):
+                            similar_to_i.append(j)
+                    '''
 
             inds = [j for j in inds if j not in similar_to_i]
 
     significance_table_filt = significance_table_filt.loc[final_struct_lst, :]
     print('There are', len(significance_table_filt), 'non-overlapping structures')
 
-    print('it took', np.round((time()-start)/60), 'minutes')
+    print(np.round((time() - start) / 60), 'minutes')
 
     significance_table_filt = significance_table_filt.sort_values(by='structure_average_std', ascending=True)
 
+    # decide on the final structure list
+    final_struct_lst = compute_final_struct_list(sigtable=significance_table_filt, struct_thr=struct_thr,
+                                                 min_nstructs=min_nstructs, max_nstructs=max_nstructs)
+    significance_table_filt = significance_table_filt.loc[final_struct_lst, :]
+
     # renumber structures
-    significance_table_filt.index = np.arange(1, 1+len(significance_table_filt))
+    significance_table_filt.index = np.arange(1, 1 + len(significance_table_filt))
 
     if len(significance_table_filt) == 0:
-        print('ERROR! NO STRUCTURES FOUND!')
+        print('NO STRUCTURES FOUND!')
 
     significance_table_filt.to_excel(sigfile_filt)
     return significance_table_filt
+
+
+####################################################################################################################
+def compute_final_struct_list(sigtable, struct_thr, min_nstructs, max_nstructs):
+    # decide on structures to be visualized and GO termed
+    structs_lst = list(sigtable.index[sigtable['structure_average_std'] <= struct_thr])
+    if len(structs_lst) > max_nstructs:
+        structs_lst = list(sigtable.sort_values(by='structure_average_std', ascending=True).index[:max_nstructs])
+    elif len(structs_lst) < min_nstructs:
+        structs_lst = list(
+            sigtable.sort_values(by='structure_average_std', ascending=True).index[:min(min_nstructs, len(sigtable))])
+    return structs_lst
+
 
 ####################################################################################################################
 def zip_structure_layouts(zipfile, picfolder):

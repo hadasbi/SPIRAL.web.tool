@@ -1,7 +1,7 @@
 import os.path
 import pandas as pd
 import numpy as np
-from scipy.stats import kendalltau,spearmanr,pearsonr,norm
+from scipy.stats import kendalltau, spearmanr, pearsonr, norm
 from time import time, sleep
 from datetime import datetime
 import pickle
@@ -10,16 +10,16 @@ import gseapy
 from gseapy.parser import Biomart
 from SPIRAL_basic_funcs import *
 
+
 ####################################################################################################################
 def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species,
                  sigtable=None, sigtable_file=None,
                  impute_method='agg_wald', start_from_scratch=False,
-                 pvals=[0.000001, 0.0000001], struct_thr=0.8, real_samp_name='sample'
-                 #log10_pavg_of_genes_thr=-10
+                 pvals=[0.000001, 0.0000001], real_samp_name='sample'
+                 # log10_pavg_of_genes_thr=-10
                  ):
-
     print('add_GO_terms!')
-    
+
     gorilla_url = 'http://cbl-gorilla.cs.technion.ac.il/'
 
     if species is None:
@@ -39,12 +39,12 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
         samp_name = real_samp_name
     else:
         samp_name = 'repcell'
-    
+
     if len(sigtable) > 0:
         num_samples = int(sigtable.iloc[0, :]['num_' + samp_name + 's'])
         num_genes = int(sigtable.iloc[0, :]['num_genes'])
         print('num_samples:', num_samples, ' num_genes:', num_genes)
-    
+
         # Load genes_table
         with open(genetable_file, 'rb') as fp:
             genes_table = pickle.load(fp)
@@ -52,11 +52,10 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
                                                                                                                   '\n')
     pvals.sort(reverse=True)
 
-    structs_lst = list(set(sigtable.index[sigtable['structure_average_std'] <= struct_thr]).intersection(
-        set(sigtable.index[sigtable['Gorilla_access_time'] == 99999])))
+    structs_lst = sigtable.index[sigtable['Gorilla_access_time'] == 99999]
 
     for i in structs_lst:
-    #for i in list(sigtable.index[sigtable['Gorilla_access_time']==99999]):    
+        # for i in list(sigtable.index[sigtable['Gorilla_access_time']==99999]):
 
         if len(sigtable.loc[i, 'genes']) == 32767:  # The genelist was too long to be written in one excel cell
             structs_file = structs_filename(data_path=data_path, impute_method=impute_method,
@@ -70,34 +69,34 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
             geneslist = read_gene_list(sigtable.loc[i, 'genes'])
 
         target_list = str(geneslist).replace("'", "").replace('[', '').replace(']', '').replace(', ', '\n')
-        #print('target_list:', target_list)
-        
-        #text_file = open("target_list.txt", "w")
-        #text_file.write(target_list)
-        #text_file.close()
+        # print('target_list:', target_list)
 
-        #text_file = open("background_list.txt", "w")
-        #text_file.write(background_list)
-        #text_file.close()
-        
+        # text_file = open("target_list.txt", "w")
+        # text_file.write(target_list)
+        # text_file.close()
+
+        # text_file = open("background_list.txt", "w")
+        # text_file.write(background_list)
+        # text_file.close()
+
         browser = mechanicalsoup.StatefulBrowser()
         browser.open(gorilla_url)
 
-        #print(browser.url)
-        #print(browser.page)
+        # print(browser.url)
+        # print(browser.page)
 
         browser.select_form()
-        
+
         browser["species"] = species
-            
-        #<option value="ARABIDOPSIS_THALIANA">Arabidopsis thaliana</option>
-        #<option value="SACCHAROMYCES_CEREVISIAE">Saccharomyces cerevisiae</option>
-        #<option value="CAENORHABDITIS_ELEGANS">Caenorhabditis elegans</option>
-        #<option value="DROSOPHILA_MELANOGASTER">Drosophila melanogaster</option>
-        #<option value="DANIO_RERIO">Danio rerio (Zebrafish)</option>
-        #<option value="HOMO_SAPIENS" selected="selected">Homo sapiens</option>
-        #<option value="MUS_MUSCULUS">Mus musculus</option>
-        #<option value="RATTUS_NORVEGICUS">Rattus norvegicus</option>
+
+        # <option value="ARABIDOPSIS_THALIANA">Arabidopsis thaliana</option>
+        # <option value="SACCHAROMYCES_CEREVISIAE">Saccharomyces cerevisiae</option>
+        # <option value="CAENORHABDITIS_ELEGANS">Caenorhabditis elegans</option>
+        # <option value="DROSOPHILA_MELANOGASTER">Drosophila melanogaster</option>
+        # <option value="DANIO_RERIO">Danio rerio (Zebrafish)</option>
+        # <option value="HOMO_SAPIENS" selected="selected">Homo sapiens</option>
+        # <option value="MUS_MUSCULUS">Mus musculus</option>
+        # <option value="RATTUS_NORVEGICUS">Rattus norvegicus</option>
 
         browser["run_mode"] = "hg"
         # "hg" for Two unranked lists of genes (target and background lists) 
@@ -108,7 +107,7 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
 
         browser["db"] = "all"
         # "all" OR "proc" (process) OR "func" (function) OR "comp" (component)
-        
+
         print(pvals[0], str('%f' % (pvals[0])))
         browser["pvalue_thresh"] = str('%f' % (pvals[0]))
         browser["analysis_name"] = ""
@@ -123,19 +122,19 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
         # browser.form.print_summary()
 
         response = browser.submit_selected()
-        #time.sleep(30)
-        #browser.get_current_page()
-        #print(response.text)
+        # time.sleep(30)
+        # browser.get_current_page()
+        # print(response.text)
         new_link = browser.get_url()
         print('new_link:', new_link)
-        
+
         sleep(10)
         browser = mechanicalsoup.StatefulBrowser()
         browser.open(new_link)
         new_link2 = browser.get_url()
-        
+
         c = 0
-        while ("GOResults" not in new_link2) and (c<10):
+        while ("GOResults" not in new_link2) and (c < 10):
             sleep(3)
             browser = mechanicalsoup.StatefulBrowser()
             browser.open(new_link)
@@ -143,25 +142,25 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
             c += 1
         if ("GOResults" not in new_link2):
             print('PROBLEM: "GOResults" not in new_link2')
-            
+
         print('new_link2:', new_link2)
-        
+
         ind = [m.start() for m in re.finditer('/', new_link2)][-1]
         for ontology_init, ontology_html in zip(['proc', 'func', 'comp'],
                                                 ['GOResultsPROCESS.html', 'GOResultsFUNCTION.html',
                                                  'GOResultsCOMPONENT.html']):
-            new_link3 = new_link2[:ind+1]+ontology_html
+            new_link3 = new_link2[:ind + 1] + ontology_html
             print('new_link3', ontology_init, ':', new_link3)
-            hyperlink_txt = '=hyperlink("'+new_link3+'","link")'
-            #print(hyperlink_txt)
-            sigtable.loc[i, ontology_init+'_link'] = hyperlink_txt
-            
+            hyperlink_txt = '=hyperlink("' + new_link3 + '","link")'
+            # print(hyperlink_txt)
+            sigtable.loc[i, ontology_init + '_link'] = hyperlink_txt
+
             try:
                 dfs = pd.read_html(new_link3)
                 df = dfs[1]
-                df.columns = df.iloc[0,:]
+                df.columns = df.iloc[0, :]
                 df = df.drop([0])
-                #print(df)
+                # print(df)
                 for pval in pvals:
                     df = df[df['P-value'].astype(float) <= pval]
                     if len(df) > 0:
@@ -169,16 +168,16 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
                             [(a + ':' + b + ' (qval' + str(c) + ')') for a, b, c in
                              zip(df['GO term'], df['Description'], df['FDR q-value'])])
                     else:
-                        sigtable.loc[i, ontology_init+'_GOterms_below_'+str(pval)] = 'NO TERMS'
+                        sigtable.loc[i, ontology_init + '_GOterms_below_' + str(pval)] = 'NO TERMS'
             except ValueError as error:
                 if str(error) == 'No tables found':
                     for pval in pvals:
-                        sigtable.loc[i, ontology_init+'_GOterms_below_'+str(pval)] = 'NO TERMS'
+                        sigtable.loc[i, ontology_init + '_GOterms_below_' + str(pval)] = 'NO TERMS'
                 else:
                     for pval in pvals:
-                        sigtable.loc[i, ontology_init+'_GOterms_below_'+str(pval)] = str(error)
+                        sigtable.loc[i, ontology_init + '_GOterms_below_' + str(pval)] = str(error)
         sigtable.loc[i, 'Gorilla_access_time'] = datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
-        
+
         sigtable.to_excel(sigfile_GO_temp)
 
     sigtable.to_excel(sigfile_GO)
@@ -188,6 +187,5 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
         pass
 
     return sigtable
-
 
 ####################################################################################################################

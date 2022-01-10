@@ -1,21 +1,25 @@
 {% extends 'base.html' %}
 
-{% block head %}
-<title>SPIRAL</title>
-{% endblock %}
-
-{% block body %}
+{% block content %}
 <center><h1>Welcome to SPIRAL</h1></center>
-<p> SPIRAL can do this and that...</p>
+<p>SPIRAL is an algorithm that relies on a Gaussian statistical model to produce a comprehensive overview of significant
+    processes in single cell RNA-seq, spatial transcriptomics or bulk RNA-seq. SPIRAL detects biological processes by
+    identifying the subset of genes involved and the subset of cells, spots or samples. There is no limitation to the
+    number of identified processes.</p>
 
-<form method="POST" action="/run_SPIRAL_step1">
-    <div class="form-row">
-        <div class="form-group">
-            <center>{{ form.submit(class="btn btn-primary")}}</center>
+<div class="container">
+    <form method="POST" action="/run_SPIRAL_step1">
+        <div class="form-row">
+            <div class="form-group">
+                <center>{{ form.submit(class="btn btn-primary")}}</center>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
 
-<h3> How to cite?</h3>
-<p> Name of paper... </p>
+<h3 style="font-size:15px"> How to cite?</h3>
+<p style="font-size:15px">Hadas Biran, Yael Mandel-Gutfreund and Zohar Yakhini. SPIRAL: Significant Process InfeRence
+    Algorithm for single cell
+    RNA-sequencing and spatial transcriptomics. (2022)</p>
+<div style="text-align: right;"><img src="/static/Technion_logo.jpg" width="100" height="40"></div>
 {% endblock %}
