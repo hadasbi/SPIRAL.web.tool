@@ -14,6 +14,8 @@ import itertools
 
 
 ####################################################################################################################
+
+
 def visualize_repcell_partition(clustering_file_final,
                                 norm_filt_umap_coor_file, norm_filt_pca_coor_file,
                                 use_5000,
@@ -22,7 +24,7 @@ def visualize_repcell_partition(clustering_file_final,
                                 spatial_norm_filt_loc=None,
                                 data=None, data_norm_filt_loc=None,
                                 save_umap=True, save_pca=True, save_spatial=True,
-                                use_legend=False, with_title=False,
+                                with_legend=False, with_title=False,
                                 load_orig_umap_from_file=True, load_orig_pca_from_file=True,
                                 with_deffs=False, numerical_shapes=False,
                                 ):
@@ -54,12 +56,13 @@ def visualize_repcell_partition(clustering_file_final,
         cell_definitions_sorted_set = sort_labels(set(cell_definitions_orig))
 
         # shapes
-        if not numerical_shapes:
-            shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1']
-        else:
+        if numerical_shapes:
             shapes = ["$\mathsf{" + str(i) + "}$" for i in cell_definitions_sorted_set]
+            with_legend = False
+        else:
+            shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
 
-    def save_layout(axislabel, cells_to_repcells, coor, picfile, use_legend=False, with_title=False,
+    def save_layout(axislabel, cells_to_repcells, coor, picfile, with_legend=False, with_title=False,
                     with_deffs=False, cell_definitions_sorted_set=None, shapes=None):
         plt.rc('xtick', labelsize=18)
         plt.rc('ytick', labelsize=18)
@@ -91,7 +94,7 @@ def visualize_repcell_partition(clustering_file_final,
         ax.set_xlabel(axislabel + ' 1', fontdict={'fontsize': 22, 'fontweight': 'medium'})
         ax.set_ylabel(axislabel + ' 2', fontdict={'fontsize': 22, 'fontweight': 'medium'})
 
-        if use_legend:
+        if with_legend:
             ax.legend()
         plt.tight_layout()
         plt.savefig(picfile)
@@ -112,7 +115,7 @@ def visualize_repcell_partition(clustering_file_final,
         # save repcell partition
         save_layout(axislabel='UMAP', cells_to_repcells=cells_to_repcells, coor=umap_coor_orig,
                     picfile=repcell_partition_UMAP,
-                    use_legend=use_legend, with_title=with_title,
+                    with_legend=with_legend, with_title=with_title,
                     with_deffs=with_deffs, cell_definitions_sorted_set=cell_definitions_sorted_set, shapes=shapes)
 
     if save_pca:
@@ -130,7 +133,7 @@ def visualize_repcell_partition(clustering_file_final,
         # save repcell partition
         save_layout(axislabel='PC', cells_to_repcells=cells_to_repcells, coor=pca_coor_orig,
                     picfile=repcell_partition_PCA,
-                    use_legend=use_legend, with_title=with_title,
+                    with_legend=with_legend, with_title=with_title,
                     with_deffs=with_deffs, cell_definitions_sorted_set=cell_definitions_sorted_set, shapes=shapes)
 
     if save_spatial:
@@ -141,7 +144,7 @@ def visualize_repcell_partition(clustering_file_final,
         # save repcell partition
         save_layout(axislabel='spatial axis', cells_to_repcells=cells_to_repcells, coor=spatial_coor,
                     picfile=repcell_partition_spatial,
-                    use_legend=use_legend, with_title=with_title,
+                    with_legend=with_legend, with_title=with_title,
                     with_deffs=with_deffs, cell_definitions_sorted_set=cell_definitions_sorted_set, shapes=shapes)
 
 
@@ -267,13 +270,14 @@ def save_simple_layout(axislabel, coors, cell_definitions, cell_definitions_sort
     fig, ax = plt.subplots(figsize=(15, 15))
     for deff in cell_definitions_sorted_set:
         inds = [i for i, d in enumerate(cell_definitions) if d == deff]
-        if with_steps and (steps is not None):
-            im = ax.scatter(coors[inds, 0], coors[inds, 1], c=steps[inds], cmap=plt.cm.jet,
-                            marker=deff_to_shape_dict[deff], label=deff, s=130)
-            im.set_clim(0, 1000 * int(np.ceil(np.max(steps) / 1000)))
-        else:
-            im = ax.scatter(coors[inds, 0], coors[inds, 1],
-                            marker=deff_to_shape_dict[deff], label=deff, s=130)
+        if inds:
+            if with_steps and (steps is not None):
+                im = ax.scatter(coors[inds, 0], coors[inds, 1], c=steps[inds], cmap=plt.cm.jet,
+                                marker=deff_to_shape_dict[deff], label=deff, s=130)
+                im.set_clim(0, 1000 * int(np.ceil(np.max(steps) / 1000)))
+            else:
+                im = ax.scatter(coors[inds, 0], coors[inds, 1],
+                                marker=deff_to_shape_dict[deff], label=deff, s=130)
 
     if with_legend and len(cell_definitions_sorted_set) > 1:
         # Add a legend
@@ -314,7 +318,7 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
                            with_steps=False,
                            save_UMAP=True, save_PCA=True, use_5000=False,
                            load_coor_from_file=True, with_legend=True, with_title=True,
-                           numeric_shapes=False):
+                           numerical_shapes=False):
     print('\nsave_layout_of_imputed!\n')
 
     if repcells_data is None and repcells_data_loc is None:
@@ -325,10 +329,11 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
         repcells_data = pd.read_csv(repcells_data_loc, index_col=0, sep='\t')
 
     # shapes
-    if numeric_shapes:
+    if numerical_shapes:
         shapes = ["$\mathsf{" + str(i) + "}$" for i in [0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]]
+        with_legend = False
     else:
-        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1']
+        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
 
     if use_5000:
         repcells_data = repcells_data.loc[repcells_data.var(axis=1).sort_values(ascending=False)[:5000].index, :]
@@ -442,13 +447,14 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
     print('cell_definitions_orig_sorted_set:', cell_definitions_orig_sorted_set)
 
     # shapes
-    if not numerical_shapes:
-        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1']
-    else:
+    if numerical_shapes:
         shapes = ["$\mathsf{" + str(i) + "}$" for i in cell_definitions_orig_sorted_set]
+        with_legend = False
+    else:
+        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
 
     deff_to_shape_dict = dict(zip(cell_definitions_orig_sorted_set, shapes[:len(set(cell_definitions_orig))]))
-    # print('deff_to_shape_dict:', deff_to_shape_dict)
+    print('deff_to_shape_dict:', deff_to_shape_dict)
 
     ########################################################################################################
     if with_steps:
@@ -865,8 +871,9 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
     if save_UMAPs_repcells or save_PCAs_repcells or save_UMAPs_orig or save_PCAs_orig:
         if numerical_shapes:
             shapes = ["$\mathsf{" + str(i) + "}$" for i in cell_definitions_sorted_set]
+            with_legend = False
         else:
-            shapes = ['o', 's', "^", '*', 'X', 'D', 'P', '1']
+            shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
 
     deff_to_shape_dict = dict(zip(cell_definitions_sorted_set, shapes[:len(set(cell_definitions_orig))]))
     # print('deff_to_shape_dict:', deff_to_shape_dict)

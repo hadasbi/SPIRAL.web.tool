@@ -16,6 +16,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 {% extends 'base.html' %}
@@ -23,7 +41,7 @@
 {% block content %}
 <center><h1>Run SPIRAL!</h1></center>
 <div class="formdesign">
-    <h2>Concluding step 1/3...</h2>
+    <h2>Concluding step 1/3: data loading...</h2>
     <p>The count matrix was uploaded successfully. We found: </p>
     <p>{{ num_cells_orig }} {{ samp_name }} and {{ num_genes_orig }} genes.</p>
     <p>Then we removed {{ samp_name }} and genes with zero reads, and summed up repeating gene names, and were left
@@ -46,19 +64,24 @@
     <div><p>No labels were found.</p></div>
     {% endif %}
 
-    <form method="POST" action="" onsubmit="loading();">
-        {{ form.hidden_tag() }}
-        <div class="form-vertical">
-            <div class="form-group">
-                {{ form.csrf_token() }}
-                {{ form.keep_going(class="btn btn-primary")}}
-            </div>
-            <div class="form-group">
-                {{ form.csrf_token() }}
-                {{ form.go_back(class="btn btn-primary")}}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-11 col-sm-5 col-lg-5 center-block">
+                <form method="POST" action="" onsubmit="loading();">
+                    {{ form.hidden_tag() }}
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            {{ form.csrf_token() }}
+                            {{ form.keep_going(class="btn btn-primary btn-lg")}}
+                            {{ form.csrf_token() }}
+                            {{ form.go_back(class="btn btn-primary btn-lg")}}
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
+    </div>
 </div>
 
 {% endblock %}

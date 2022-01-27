@@ -25,13 +25,15 @@ def get_MTgenes(genelist, species):
     # returns a sublist of mitochondrial genes
     print('get_MTgenes!')
 
+    error = None
+
     if species in ['synthetic', 'other']:
-        return []
+        return [], error
 
     # gene symbols
     if 'ACTB' in genelist or 'GAPDH' in genelist or 'PGK1' in genelist:
         print('Found gene symbols')
-        return [gene for gene in genelist if gene[:3] == 'MT-']
+        return [gene for gene in genelist if gene[:3] == 'MT-'], error
     else:
         if species == "ARABIDOPSIS_THALIANA":
             bm = Biomart(host="plants.ensembl.org")
@@ -70,15 +72,16 @@ def get_MTgenes(genelist, species):
                 sleep(10)
                 count += 1
             if ENSG_symbols_table is None:
-                print("Connection error, coudn't get mitochondrial genes.")
-                return []
+                error = "Due to a connection error with Biomart, SPIRAL could not get a list of mitochondrial genes."
+                print(error)
+                return [], error
             ENSG_symbols_table = ENSG_symbols_table.dropna()
             ENSG_symbols_table = ENSG_symbols_table.loc[
                 [i for i in ENSG_symbols_table.index if ENSG_symbols_table.loc[i, 'ensembl_gene_id'] in genelist]
             ]
             ENSG_symbols_table_MT = ENSG_symbols_table.loc[
                 [i for i in ENSG_symbols_table.index if 'MT-' in ENSG_symbols_table.loc[i, 'external_gene_name']]]
-            return list(set(ENSG_symbols_table_MT.loc[:, 'ensembl_gene_id']))
+            return list(set(ENSG_symbols_table_MT.loc[:, 'ensembl_gene_id'])), error
 
         # unknownk gene ids
         else:
@@ -91,8 +94,9 @@ def get_MTgenes(genelist, species):
                 sleep(10)
                 count += 1
             if ENSG_symbols_table is None:
-                print("Connection error, couldn't get mitochondrial genes.")
-                return []
+                error = "Due to a connection error with Biomart, SPIRAL could not get a list of mitochondrial genes."
+                print(error)
+                return [], error
             ENSG_symbols_table = ENSG_symbols_table.dropna()
             s = int(np.ceil(len(genelist) / 2))
             correct_col = None
@@ -108,9 +112,11 @@ def get_MTgenes(genelist, species):
                 ]
                 ENSG_symbols_table_MT = ENSG_symbols_table.loc[
                     [i for i in ENSG_symbols_table.index if 'MT-' in ENSG_symbols_table.loc[i, 'external_gene_name']]]
-                return list(set(ENSG_symbols_table_MT.loc[:, correct_col]))
-            print('Gene type was not identified.')
-    return []
+                return list(set(ENSG_symbols_table_MT.loc[:, correct_col])), error
+
+    error = 'Gene type was not identified.'
+    print(error)
+    return [], error
 
 
 ####################################################################################################################
@@ -138,6 +144,11 @@ def spatial_norm_filt_loc_name(data_path):
 ####################################################################################################################
 def vln_plot_filename_(static_path, data_n):
     return os.path.join(static_path, 'vln_data' + str(data_n) + '.jpg')
+
+
+####################################################################################################################
+def vln_plot_mt_filename_(static_path, data_n):
+    return os.path.join(static_path, 'vln_mt_data' + str(data_n) + '.jpg')
 
 
 ####################################################################################################################
@@ -322,8 +333,12 @@ def read_struct_list_from_file(filename):
     return structlist
 
 
+def write_gene_list(genelist):
+    return str(genelist).replace("['", "").replace("']", "").replace("', '", ",")
+
+
 def read_gene_list(genelist):
-    return [s.strip("'") for s in genelist.strip('[').strip(']').split(', ')]
+    return genelist.split(",")
 
 
 def validate_folder(file):

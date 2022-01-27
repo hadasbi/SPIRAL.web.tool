@@ -125,32 +125,19 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
 ####################################################################################################################
 def compute_violin_plots(analysis_folder, data_n, static_path, species):
     print('compute_violin_plots!')
-    # Load data (and filter out genes and cells\spots with zero reads)
+    # Load data
     data_path = data_path_name(analysis_folder, data_n)
     data_norm_loc = data_norm_loc_name(data_path)
     data = pd.read_csv(data_norm_loc, index_col=0, sep='\t')
 
     nFeatures = data.astype('bool').sum(axis='index')
-    nFeatures.name = 'nFeatures'
-    # nMTFeatures = scRNA_data.loc[[x for x in scRNA_data.index if 'MT-' in x],:].astype('bool').sum(axis='index')
-    MTgenes = get_MTgenes(list(data.index), species)
-    with_mt = False
-    if MTgenes:
-        with_mt = True
-        mtpercent = np.divide(data.loc[MTgenes, :].sum(), data.sum()) * 100
-        mtpercent.name = 'mtpercent'
+    nFeatures.name = 'number of expressed genes'
 
-    if with_mt:
-        summary = pd.concat([nFeatures, mtpercent], axis=1)
-        fig, axs = plt.subplots(1, 2, figsize=(10, 5))
-        # fig.suptitle('Violin plots')
-        sns.violinplot(y="nFeatures", data=summary, ax=axs[0])
-        sns.violinplot(y="mtpercent", data=summary, ax=axs[1])
-    else:
-        summary = pd.concat([nFeatures], axis=1)
-        fig, axs = plt.subplots(1, 1, figsize=(5, 5))
-        # fig.suptitle('Violin plot')
-        sns.violinplot(y="nFeatures", data=summary, ax=axs)
+    # save violin plot of number of expressed genes
+    summary = pd.concat([nFeatures], axis=1)
+    fig, axs = plt.subplots(1, 1, figsize=(5, 5))
+    axs.set_title("number of expressed genes")
+    sns.violinplot(y="number of expressed genes", data=summary, ax=axs)
 
     # save to file
     vln_plot_filename = vln_plot_filename_(static_path=static_path, data_n=data_n)
@@ -158,12 +145,31 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species):
     plt.savefig(vln_plot_filename)
     plt.close()
 
-    return with_mt
+    # save violin plot of percent of mitochondrial genes
+    MTgenes, error = get_MTgenes(list(data.index), species)
+    with_mt = False
+    if MTgenes:
+        with_mt = True
+        mtpercent = np.divide(data.loc[MTgenes, :].sum(), data.sum()) * 100
+        mtpercent.name = 'mitochondrial percent of reads'
+
+        summary = pd.concat([mtpercent], axis=1)
+        fig, axs = plt.subplots(1, 1, figsize=(5, 5))
+        axs.set_title("mitochondrial percent of reads")
+        sns.violinplot(y="mitochondrial percent of reads", data=summary, ax=axs)
+
+        # save to file
+        vln_plot_mt_filename = vln_plot_mt_filename_(static_path=static_path, data_n=data_n)
+        plt.tight_layout()
+        plt.savefig(vln_plot_mt_filename)
+        plt.close()
+
+    return with_mt, error
 
 
 ####################################################################################################################
 def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
-                        min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
+                        min_nFeatures=None, max_nFeatures=None, max_mtpercent=None, numerical_shapes=False,
                         num_stds_thresh_lst=[0.5, 1], mu_lst=[0.95], num_iters_lst=[10000], path_len_lst=[3]):
     # impute_method options: 'agg_wald', 'IaconoClus_dim50', 'IaconoClus', 'agg_wald_opt'
 
@@ -265,7 +271,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                             norm_filt_picfile_spatial=norm_filt_picfile_spatial,
                             origdeffsfile=origdeffsfile, spatial_norm_filt_loc=spatial_norm_filt_loc,
                             data=data, data_norm_filt_loc=data_norm_filt_loc, data_path=data_path,
-                            save_umap=True, save_pca=True, save_spatial=spatial, use_5000=use_5000)
+                            save_umap=True, save_pca=True, save_spatial=spatial, use_5000=use_5000,
+                            numerical_shapes=numerical_shapes)
 
     # check if repcell computation was already performed, if not- compute repcells
     clustering_file_initial = os.path.join(data_path, impute_method + '_clustering.txt')
@@ -317,7 +324,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                    stepsfile=stepsfile,
                                    with_steps=False,
                                    clustering_file_final=clustering_file_final,
-                                   data_norm_filt_loc=data_norm_filt_loc)
+                                   data_norm_filt_loc=data_norm_filt_loc,
+                                   numerical_shapes=numerical_shapes)
 
     # check if visualizations of the repcell partition already exist (on a UMAP, PCA, spatial layouts).
     # If not, create them.
@@ -342,7 +350,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                         save_umap=True, save_pca=True, save_spatial=spatial,
                                         use_legend=False, with_title=False,
                                         load_orig_umap_from_file=True, load_orig_pca_from_file=True,
-                                        with_deffs=False, numerical_shapes=False)
+                                        with_deffs=False, numerical_shapes=numerical_shapes)
 
             # create a zip file of all repcell partition layouts
             with ZipFile(repcell_partition_zipfile, 'w') as zipObj:
@@ -505,7 +513,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                             save_GUMAPs_repcells=(impute_method != 'no_imputation'),
                                             save_GPCAs_repcells=(impute_method != 'no_imputation'),
                                             save_spatial=spatial, save_Gspatial=spatial,
-                                            with_legend=True, real_samp_name=real_samp_name)
+                                            with_legend=True, real_samp_name=real_samp_name,
+                                            numerical_shapes=numerical_shapes)
 
     # design excel file
     if os.path.exists(sigfile_vis):
@@ -537,7 +546,7 @@ def filter_data(data_path, min_nFeatures, max_nFeatures, max_mtpercent, spatial,
     data = pd.read_csv(data_norm_loc, index_col=0, sep='\t')
     data = data.loc[:, (data.astype(bool).sum() >= min_nFeatures) & (data.astype(bool).sum() <= max_nFeatures)]
     if with_mt:
-        MTgenes = get_MTgenes(list(data.index), species)
+        MTgenes, mt_error = get_MTgenes(list(data.index), species)
         mtpercent = np.divide(data.loc[MTgenes, :].sum(), data.sum()) * 100
         data = data.loc[:, mtpercent <= max_mtpercent]
 
@@ -952,7 +961,7 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
         # print(len(genes), 'genes')
         # print('genes:', genes)
         significance_table.loc[i, 'num_genes_in_struct'] = len(genes)
-        significance_table.loc[i, 'genes'] = str(genes)
+        significance_table.loc[i, 'genes'] = write_gene_list(genes)
 
         sample_pairs = [divmod(x, num_samples) for x in s[1]]
         # print(len(repcell_pairs), 'sets')

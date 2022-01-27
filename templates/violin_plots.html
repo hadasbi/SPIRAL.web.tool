@@ -16,15 +16,40 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 {% extends 'base.html' %}
 
 {% block content %}
 <center><h1>Run SPIRAL!</h1></center>
-<h2>Step 2/3</h2>
-<figure>
-    <img src={{ vln_plot_file }} align="middle" alt="vln_plot" style="width:70%">
-</figure>
+<h2>Step 2/3: data filtering</h2>
+<div class="content_img">
+    <img src={{ vln_plot_file }} align="middle" alt="vln_plot" style="width:25%">
+    <div>Cells with very few expressed genes may be
+        raptured cells, while cells with a lot of expressed genes may be doublets. So, when determining the minimal and
+        maximal thresholds, try to include most of your data and exclude the outliers in both ends.
+    </div>
+</div>
 
 <form method="POST" action="" enctype="multipart/form-data" onsubmit="loading();">
     {{ form.hidden_tag() }}
@@ -47,7 +72,16 @@
             {% endfor %}
         </div>
 
+        <hr>
+
         {% if with_mt %}
+        <div class="content_img">
+            <img src={{ vln_plot_mt_file }} align="middle" alt="vln_plot" style="width:25%">
+            <div>Cells with large percentages of mitochondrial genes are likely to be cells that experienced cell
+                stress, and you might want to exclude them from the analysis.
+            </div>
+        </div>
+
         <div class="form-group col-md-6">
             {{ form.csrf_token() }}
             <label for=""> {{ form.max_mtpercent.label }}</label>
@@ -56,12 +90,19 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </div>
+
+        <hr>
         {% endif %}
+
         <div class="form-group">
             {{ form.csrf_token() }}
             {{ form.submit(class="btn btn-primary")}}
         </div>
     </div>
 </form>
+
+{% if mt_error != 'None' %}
+<p>Note: {{ mt_error }} </p>
+{% endif %}
 
 {% endblock %}

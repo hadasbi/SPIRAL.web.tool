@@ -56,3 +56,36 @@ display: none;
 background: url(/static/Spinner-3s-200px.gif) no-repeat;
 cursor: wait;
 }
+
+/* Parent Container */
+.content_img{
+ position: relative;
+ margin-right: 10px;
+}
+
+/* Child Text Container */
+.content_img div{
+ position: absolute;
+ top: 50;
+ left: 450;
+ background: #7FFFD4;
+ color: black;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear;
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+ cursor: pointer;
+}
+
+.content_img:hover div{
+ width: 400px;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 0.7;
+}

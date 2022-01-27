@@ -22,6 +22,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 {% extends 'base.html' %}
@@ -31,17 +45,17 @@
 <div id="loading"></div>
 <div id="content">
     <div class="formdesign">
-        <h2>Step 1/3</h2>
+        <h2>Step 1/3: data loading</h2>
         <form method="POST" action="" enctype="multipart/form-data" onsubmit="loading();">
             {{ form.hidden_tag() }}
             <div class="form-horizontal">
                 <div class="form-group col-md-6">
                     {{ form.csrf_token() }}
                     <label for=""> {{ form.dataset_name.label }}</label>
+                    {{ form.dataset_name }}
                     <p><small>This field is optional. We recommend that you name your data set, especially if you plan
                         to run
                         SPIRAL on more than one dataset. </small></p>
-                    {{ form.dataset_name }}
                 </div>
 
                 <hr>
@@ -49,8 +63,8 @@
                 <div class="form-group col-md-6">
                     {{ form.csrf_token() }}
                     <label for=""> {{ form.email.label }}</label>
-                    <p><small>A link to the results page will be sent to this address. </small></p>
                     {{ form.email }}
+                    <p><small>A link to the results page will be sent to this address. </small></p>
                     {% if form.email.errors %}
                     <ul class="errors">
                         {% for error in form.email.errors %}
@@ -95,6 +109,7 @@
                 <div class="form-group col-md-6">
                     {{ form.csrf_token() }}
                     <label for=""> {{ form.count_matrix.label }}</label>
+                    {{ form.count_matrix }}
                     <p>
                     <ul><small>
                         <li>The file type should be either csv or txt.</li>
@@ -115,7 +130,6 @@
                         </li>
                     </small></ul>
                     </p>
-                    {{ form.count_matrix }}
                     {% if form.count_matrix.errors %}
                     <ul class="errors">
                         {% for error in form.count_matrix.errors %}
@@ -138,6 +152,7 @@
                 <div class="form-group col-md-6">
                     {{ form.csrf_token() }}
                     <label for=""> {{ form.spatial_coors.label }}</label>
+                    {{ form.spatial_coors }}
                     <p>
                     <ul><small>
                         <li>The field is optional.</li>
@@ -172,7 +187,6 @@
                         </li>
                     </small></ul>
                     </p>
-                    {{ form.spatial_coors }}
                     {% if form.spatial_coors.errors %}
                     <ul class="errors">
                         {% for error in form.spatial_coors.errors %}
@@ -186,7 +200,7 @@
 
                 <div class="form-group">
                     {{ form.csrf_token() }}
-                    {{ form.submit(class="btn btn-primary")}}
+                    {{ form.submit(class="btn btn-primary text-center")}}
                 </div>
 
 

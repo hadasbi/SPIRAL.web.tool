@@ -44,7 +44,7 @@ ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 app.config['SECRET_KEY'] = 'kncwhgJAVKBJAHFvlv,Klz'
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 
-app.config['SERVER_NAME'] = '132.68.108.36:5000'
+app.config['SERVER_NAME'] = '132.68.108.32:5000'
 # app.config['SERVER_NAME'] = '132.68.108.188:5000'
 # app.config['SERVER_NAME'] = '10.100.102.7:5000'
 
@@ -154,31 +154,31 @@ class HomePage(FlaskForm):
 
 
 class LoadData(FlaskForm):
-    dataset_name = StringField('Name of dataset:')
-    email = StringField('* E-mail address:', validators=[DataRequired(),
-                                                         Email("This field requires a valid email address")])
-    count_matrix = FileField('* Gene expression matrix:',
+    dataset_name = StringField('Name of dataset: ')
+    email = StringField('E-mail address: ', validators=[DataRequired(),
+                                                        Email("This field requires a valid email address")])
+    count_matrix = FileField('Gene expression matrix: ',
                              validators=[FileRequired(), FileAllowed(tables, 'csv or txt files only!')]
                              )
-    spatial_coors = FileField('Spatial coordinates:',
+    spatial_coors = FileField('Spatial coordinates: ',
                               validators=[FileAllowed(tables, 'csv or txt files only!')]
                               )
-    species = SelectField('Species:', choices=[("ARABIDOPSIS_THALIANA", 'Arabidopsis thaliana'),
-                                               ("SACCHAROMYCES_CEREVISIAE", 'Saccharomyces cerevisiae'),
-                                               ("CAENORHABDITIS_ELEGANS", 'Caenorhabditis elegans'),
-                                               ("DROSOPHILA_MELANOGASTER", 'Drosophila melanogaster'),
-                                               ("DANIO_RERIO", 'Danio rerio (Zebrafish)'),
-                                               ("HOMO_SAPIENS", 'Homo sapiens'),
-                                               ("MUS_MUSCULUS", 'Mus musculus'),
-                                               ("RATTUS_NORVEGICUS", 'Rattus norvegicus'),
-                                               ('other', 'other (GO enrichment analysis will not be performed)'),
-                                               ('synthetic',
-                                                'synthetic (GO enrichment analysis will not be performed)')],
-                          validators=[DataRequired()])
-    samp_name = SelectField('How are your samples called?',
+    species = SelectField('Species: ', choices=[("ARABIDOPSIS_THALIANA", 'Arabidopsis thaliana'),
+                                                ("SACCHAROMYCES_CEREVISIAE", 'Saccharomyces cerevisiae'),
+                                                ("CAENORHABDITIS_ELEGANS", 'Caenorhabditis elegans'),
+                                                ("DROSOPHILA_MELANOGASTER", 'Drosophila melanogaster'),
+                                                ("DANIO_RERIO", 'Danio rerio (Zebrafish)'),
+                                                ("HOMO_SAPIENS", 'Homo sapiens'),
+                                                ("MUS_MUSCULUS", 'Mus musculus'),
+                                                ("RATTUS_NORVEGICUS", 'Rattus norvegicus'),
+                                                ('other', 'other (GO enrichment analysis will not be performed)'),
+                                                ('synthetic',
+                                                 'synthetic (GO enrichment analysis will not be performed)')],
+                          default=("HOMO_SAPIENS", 'Homo sapiens'), validators=[DataRequired()])
+    samp_name = SelectField('How are your samples called? ',
                             choices=[("samples", 'samples'), ("cells", 'cells'), ("spots", 'spots')],
                             validators=[DataRequired()], default="samples")
-    labels_checkbox = BooleanField(Markup('My data does <strong>not</strong> have labels.'))
+    labels_checkbox = BooleanField(Markup('My data does <strong>not</strong> have labels. '))
     submit = SubmitField('Submit')
 
 
@@ -227,20 +227,23 @@ class MoreThan(object):
 
 
 class vln_plot_form(FlaskForm):
-    min_nFeatures = IntegerField('* Minimal number of expressed genes:', validators=[DataRequired()])
-    max_nFeatures = IntegerField('* Maximal number of expressed genes:',
+    min_nFeatures = IntegerField('Minimal number of expressed genes: ', validators=[DataRequired()])
+    max_nFeatures = IntegerField('Maximal number of expressed genes: ',
                                  validators=[DataRequired(), MoreThan('min_nFeatures')])
-    max_mtpercent = IntegerField('Maximal percent of mitochondrial gene expression:', validators=[NumberRange(1, 100)])
+    max_mtpercent = IntegerField('Maximal percent of mitochondrial gene expression: ', default=100,
+                                 validators=[NumberRange(1, 100)])
     submit = SubmitField('Submit')
 
 
 class alg_params_form(FlaskForm):
-    num_std_thr = SelectMultipleField('\u03B1:',
-                                      choices=[('0.5', '0.5'), ('0.75', '0.75'), ('1', '1'), ('1.25', '1.25'),
-                                               ('1.5', '1.5')])
-    mu = SelectMultipleField('\u03bc:', choices=[('0.9', '0.9'), ('0.95', '0.95')])
-    path_len = SelectField('Path length:', choices=[('3', '3')])
-    num_iter = SelectField('Number of iterations:', choices=[('10000', '10000')])
+    fill_default_vals = BooleanField('Fill recommended values')
+    num_std_thr = SelectMultipleField(
+        'Number of standard deviations threshold \u03B1: ',
+        choices=[('0.5', '0.5'), ('0.75', '0.75'), ('1', '1'), ('1.25', '1.25'),
+                 ('1.5', '1.5')])
+    mu = SelectMultipleField('Density parameter \u03bc: ', choices=[('0.9', '0.9'), ('0.95', '0.95')])
+    path_len = SelectField('Path length L: ', choices=[('3', '3')])
+    num_iter = SelectField('Number of iterations T: ', choices=[('10000', '10000')])
     submit = SubmitField('Submit')
 
 
@@ -367,14 +370,21 @@ def violin_plots():
 
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     vln_plot_filename = vln_plot_filename_(static_path=app._static_folder, data_n=data_n)
+    vln_plot_mt_filename = vln_plot_mt_filename_(static_path=app._static_folder, data_n=data_n)
     with_mt_filename = os.path.join(data_path, 'with_mt.txt')
+    mt_error_filename = os.path.join(data_path, 'mt_error.txt')
     if not os.path.exists(vln_plot_filename) or not os.path.exists(with_mt_filename):
-        with_mt = compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path=app._static_folder,
-                                       species=species)
+        with_mt, mt_error = compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n,
+                                                 static_path=app._static_folder,
+                                                 species=species)
+        mt_error = str(mt_error)
         with open(with_mt_filename, 'w') as text_file:
             text_file.write(str(with_mt))
+        with open(mt_error_filename, 'w') as text_file:
+            text_file.write(str(mt_error))
     else:
         with_mt = (open(with_mt_filename, "r").read().lower() == 'true')
+        mt_error = open(mt_error_filename, "r").read()
 
     form = vln_plot_form()
     if request.method == 'POST':
@@ -405,7 +415,8 @@ def violin_plots():
         else:
             flash_errors(form)  # doesn't work
     return render_template('violin_plots.html', form=form, vln_plot_file='/static/vln_data' + str(data_n) + '.jpg',
-                           with_mt=with_mt)
+                           vln_plot_mt_file='/static/vln_mt_data' + str(data_n) + '.jpg',
+                           with_mt=with_mt, mt_error=mt_error)
 
 
 @app.route('/run_SPIRAL_step2.5', methods=['POST', 'GET'])
@@ -464,7 +475,7 @@ def alg_params():
     print('alg_params!!!')
     data_n = request.args['data_n']
     form = alg_params_form()
-    if form.validate_on_submit():
+    if form.validate_on_submit() and form.submit.data:
         num_stds_thresh_lst = [float(s) for s in form.num_std_thr.data]
         mu_lst = [float(s) for s in form.mu.data]
         path_len_lst = [int(form.path_len.data)]
