@@ -44,7 +44,7 @@ ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 app.config['SECRET_KEY'] = 'kncwhgJAVKBJAHFvlv,Klz'
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 
-app.config['SERVER_NAME'] = '132.68.108.32:5000'
+app.config['SERVER_NAME'] = '10.100.102.7:5000'
 # app.config['SERVER_NAME'] = '132.68.108.188:5000'
 # app.config['SERVER_NAME'] = '10.100.102.7:5000'
 
@@ -68,65 +68,6 @@ configure_uploads(app, (tables))
 
 patch_request_class(app, 1024 * 1024 * 1024)
 
-'''
-##########################  test   ###########################################
-class NameForm(FlaskForm):
-    name = StringField('Which actor is your favorite?', validators=[DataRequired()])
-    pic = FileField('Table of actor:',
-                    validators=[FileRequired(), FileAllowed(tables,  'csv or txt files only!')]
-                    )
-#    pic = FileField('Picture of actor:',
-#                    validators=[FileRequired(), FileAllowed(photos, 'images only!')]
-#                    )
-    submit = SubmitField('Submit')
-
-@app.route('/test', methods=['GET', 'POST'])
-def test():
-    # you must tell the variable 'form' what you named the class, above
-    # 'form' is the variable name used in this template: index.html
-    form = NameForm(request.form)
-    print('form.errors:', form.errors)
-    print('form.pic.errors:', form.pic.errors)
-    print(form.validate_on_submit())
-
-    #if form.validate_on_submit():
-    if request.method == 'POST' and 'pic' in request.files:
-        print('Hello')
-        # create a folder for the new dataset
-        #new_n = dataset_number(UPLOADS_FOLDER)
-        #data_prefix = os.path.join(UPLOADS_FOLDER, 'data' + str(new_n) + '_')
-        #print(data_prefix)
-
-        #analysis_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(new_n))
-        #os.mkdir(analysis_path)
-
-        new_n = dataset_number(ANALYSIS_FOLDER)
-        data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(new_n))
-        print(data_path)
-        os.mkdir(data_path)
-
-        # save e-mail
-        #with open(data_prefix + 'name_of_actor.txt', 'w') as text_file:
-        #    text_file.write(form.name.data)
-        with open(os.path.join(data_path, 'name_of_actor.txt'), 'w') as text_file:
-            text_file.write(form.name.data)
-
-
-        #uploaded_file = request.files['pic']
-        #print(uploaded_file)
-        #if uploaded_file:
-        #    print(uploaded_file.filename)
-        #    uploaded_file.save(os.path.join(data_path, 'file.png'),)
-
-
-        filename = tables.save(storage=request.files['pic'], folder='data' + str(new_n), name='count_matrix.')
-        #filename = photos.save(storage=request.files['pic'], folder='data' + str(new_n), name='pic.')
-        print(filename)
-
-        return redirect(url_for('home'))
-    return render_template('test.html', form=form)
-'''
-
 
 #############################   forms   ################################################
 def dataset_number(path):
@@ -137,14 +78,6 @@ def dataset_number(path):
         new_n = max([int(d[4:]) for d in existing_folders]) + 1
     else:
         new_n = 1
-    '''
-    onlyfiles = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
-    prefixes = set([s[:s.find('_')] for s in onlyfiles])
-    if prefixes:
-        new_n = max([int(p[4:]) for p in prefixes]) + 1
-    else:
-        new_n = 1
-    '''
     print(new_n)
     return new_n
 
@@ -519,52 +452,6 @@ def email(data_n):
 
 
 #################### results panel ##########################################################################
-'''
-@app.route('/callback', methods=['POST', 'GET'])
-def cb():
-    return gm(request.args.get('data'))
-
-@app.route('/results')
-def results():
-    return render_template('results_panel.html', img_data=gm())
-
-
-def gm(country='Israel', data_n=48):
-    #df = pd.DataFrame(px.data.gapminder())
-    #fig = px.line(df[df['country'] == country], x="year", y="gdpPercap")
-    #print(type(fig))
-
-    #graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
-    #print(type(graphJSON))
-    #print(graphJSON)
-    #return graphJSON
-
-    if country == 'Israel':
-        picfile = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), 'structure_layouts', 'struct_33_Gnet.jpg')
-    elif country == 'Germany':
-        picfile = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), 'structure_layouts', 'struct_33_Gspatial.jpg')
-
-    #data = {}
-    #with open(picfile, mode='rb') as file:
-    #    img = file.read()
-    #data['img'] = base64.encodebytes(img).decode('utf-8')
-    #imgJSON = json.dumps(data)
-    #print(type(imgJSON))
-    #return imgJSON
-
-    im = Image.open(picfile)
-    data = io.BytesIO()
-    im.save(data, "JPEG")
-    encoded_img_data = base64.b64encode(data.getvalue())
-    return encoded_img_data.decode('utf-8')
-
-@app.route('/results')
-def results():
-    return render_template('results_panel.html', data_n='48')
-'''
-
-
-############################################################################################################
 @app.route('/_pic_names_and_GO_terms')
 def pic_names_and_GO_terms():
     # get file names of the wanted figures
@@ -630,6 +517,15 @@ def pic_names_and_GO_terms():
     sigtable = load_excel_with_openpyxl_and_convert_to_pd_DataFrame(sigfile)
     if ('proc_GOterms_below_1e-06' in list(sigtable)) and ('func_GOterms_below_1e-06' in list(sigtable)) and (
             'comp_GOterms_below_1e-06' in list(sigtable)):
+        GO_terms = []
+        for col in ['proc_GOterms_below_1e-06', 'func_GOterms_below_1e-06', 'comp_GOterms_below_1e-06']:
+            if sigtable.loc[int(struct), col] == 'NO TERMS':
+                GO_terms.append('NO TERMS')
+            else:
+                GO_terms.append([m.group(0) for m in
+                                 re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
+                                             sigtable.loc[int(struct), col])])
+        '''        
         GO_terms = [
             [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
                                              sigtable.loc[int(struct), 'proc_GOterms_below_1e-06'])],
@@ -637,12 +533,12 @@ def pic_names_and_GO_terms():
                                              sigtable.loc[int(struct), 'func_GOterms_below_1e-06'])],
             [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
                                              sigtable.loc[int(struct), 'comp_GOterms_below_1e-06'])]]
+        '''
     else:
         GO_terms = [['Not available'], ['Not available'], ['Not available']]
 
     # get gene list
-    gene_list = sigtable.loc[int(struct), 'genes'].replace("['", "").replace("']", "").replace("\n", "").split(
-        "', '")
+    gene_list = read_gene_list(sigtable.loc[int(struct), 'genes'])
     print(gene_list)
     return jsonify(struct_pics=struct_pics, gene_list=gene_list, GO_terms=GO_terms)
 
@@ -682,11 +578,14 @@ def results_panel(url):
     struct_lst = list(set([int(file[:file.find('_')]) for file in pic_suffs]))
     struct_lst = [str(s) for s in struct_lst]
 
+    # get GO_flag
+    GO_flag = (open(os.path.join(data_path, 'GO_flag.txt'), "r").read() == 'True')
+
     # get imputation method
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     impute_method = open(os.path.join(data_path, 'imputation_method.txt'), "r").read()
     return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst, impute_method=impute_method,
-                           dataset_name=dataset_name)
+                           dataset_name=dataset_name, GO_flag=GO_flag)
 
 
 def data_n_to_url(data_n):

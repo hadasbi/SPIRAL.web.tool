@@ -13,7 +13,6 @@ from shutil import copyfile
 from requests.exceptions import ConnectionError
 import csv
 from zipfile import ZipFile
-import shutil
 
 from SPIRAL_basic_funcs import *
 from SPIRAL_visualization_funcs import *
@@ -459,6 +458,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     start_from_scratch = False
 
     errors = []
+    GO_flag = True
     while not os.path.exists(sigfile_GO):
         try:
             if not skip_GO:
@@ -470,6 +470,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                            pvals=[0.000001], real_samp_name=real_samp_name)
             else:
                 copyfile(sigfile_filt, sigfile_GO)
+                sigtable_GO = sigtable_filt
+                GO_flag = False
         except ConnectionError as e:
             print(e)
             start_from_scratch = False
@@ -479,8 +481,13 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         except:
             print(sys.exc_info()[0])
             errors.append('data ' + str(data_n) + ': ' + str(sys.exc_info()[0]))
-            shutil.copyfile(sigfile_filt, sigfile_GO)
+            copyfile(sigfile_filt, sigfile_GO)
+            sigtable_GO = sigtable_filt
+            GO_flag = False
     print(errors)
+
+    with open(os.path.join(data_path, 'GO_flag.txt'), 'w') as text_file:
+        text_file.write(str(GO_flag))
 
     # visualize structures
     sigfile_vis = final_sig_filename(data_path, impute_method)
@@ -1109,82 +1116,7 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
                         struct_dict[str(num_std) + '_' + str(mu) + '_' + str(path_len) + '_' + str(
                             num_iters)] = read_struct_list_from_file(structs_file)
 
-        '''
-        # find pairs of similar structures
-        inds = list(significance_table_filt.index)
-        related_structures = []
-        for k, i in enumerate(inds):
-            if (k+1)%100 == 0 or k <= 100:
-                print('\nk=',k,' i=',i)   #k is the serial number of i in inds
-            for t, j in enumerate(inds[k+1:]):
-                #print('t=',t,' t+k+1=',t+k+1,' j=', j)  #t+k+1 is the serial number of j in inds
-                
-                # Add pairs of structures that are similar- in terms of Jaccard index of gene lists above overlap_thresh
-                if len(significance_table_filt.loc[i, 'genes']) == 32767:  #The genelist was too long to be written in one excel cell
-                    
-                    #structs_file = structs_filename(data_path=data_path, impute_method=impute_method,
-                    #                                num_stds_thresh=significance_table_filt.loc[i, 'num_stds_thresh'],
-                    #                                mu=significance_table_filt.loc[i, 'mu'],
-                    #                                path_len=significance_table_filt.loc[i, 'path_len'],
-                    #                                num_iters=significance_table_filt.loc[i, 'num_iters'])
-                    #structs = read_struct_list_from_file(structs_file)
-                    
-                    structs = struct_dict[str(significance_table_filt.loc[i, 'num_stds_thresh']) + '_' +
-                                          str(significance_table_filt.loc[i, 'mu']) + '_' +
-                                          str(significance_table_filt.loc[i, 'path_len']) + '_' +
-                                          str(significance_table_filt.loc[i, 'num_iters'])]
-                    genes_i = list(genes_table[structs[significance_table_filt.loc[i, 'old_struct_num']][0]].index)
-                else:  #read the gene list from the excel file
-                    genes_i = read_gene_list(significance_table_filt.loc[i, 'genes'])
-
-                if len(significance_table_filt.loc[j, 'genes']) == 32767:  #The genelist was too long to be written in one excel cell
-                    
-                    #structs_file = structs_filename(data_path=data_path, impute_method=impute_method,
-                    #                                num_stds_thresh=significance_table_filt.loc[j, 'num_stds_thresh'],
-                    #                                mu=significance_table_filt.loc[j, 'mu'],
-                    #                                path_len=significance_table_filt.loc[j, 'path_len'],
-                    #                                num_iters=significance_table_filt.loc[j, 'num_iters'])
-                    #structs = read_struct_list_from_file(structs_file)
-                    
-                    structs = struct_dict[str(significance_table_filt.loc[j, 'num_stds_thresh']) + '_' +
-                                          str(significance_table_filt.loc[j, 'mu']) + '_' +
-                                          str(significance_table_filt.loc[j, 'path_len']) + '_' +
-                                          str(significance_table_filt.loc[j, 'num_iters'])]
-                    genes_j = list(genes_table[structs[significance_table_filt.loc[j, 'old_struct_num']][0]].index)
-                else:  #read the gene list from the excel file
-                    genes_j = read_gene_list(significance_table_filt.loc[j, 'genes'])
-                jaccard_i_j = len(set(genes_i).intersection(set(genes_j)))/len(set(genes_i).union(set(genes_j)))
-                if jaccard_i_j >= Jaccard_thr_genes:
-                    related_structures.append([i, j])
-                else:
-                    # Add pairs of structures that are similar- in terms of Jaccard index of sets above overlap_thresh
-                    sets_in_struct_i = significance_table_filt.loc[i, samp_name + '_pairs']
-                    sets_in_struct_i = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
-                                        sets_in_struct_i.strip(']').strip('[').split('), (')]
-
-                    sets_in_struct_j = significance_table_filt.loc[j, samp_name + '_pairs']
-                    sets_in_struct_j = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
-                                        sets_in_struct_j.strip(']').strip('[').split('), (')]
-
-                    jaccard_i_j = len(set(sets_in_struct_i).intersection(set(sets_in_struct_j)))/len(
-                        set(sets_in_struct_i).union(set(sets_in_struct_j)))
-                    if jaccard_i_j >= Jaccard_thr_sample_pairs:
-                        related_structures.append([i, j])
-
-        print('related_structures:', related_structures)
-        while related_structures:
-            i, j = related_structures[0]
-            if significance_table_filt.loc[i, 'structure_average_std'] < significance_table_filt.loc[
-                j, 'structure_average_std']:
-                removed_struct = j
-            else:
-                removed_struct = i
-            significance_table_filt = significance_table_filt.drop([removed_struct])
-            related_structures = [pair for pair in related_structures if
-                                  ((pair[0] != removed_struct) and (pair[1] != removed_struct))]
-        '''
-
-        # More efficient way to find pairs of similar structures and remove the lest favorable structure
+        # An efficient way to find pairs of similar structures and remove the least favorable structure
         # It counts on the fact that the table is sorted by 'structure_average_std'
         start = time()
         significance_table_filt = significance_table_filt.sort_values(by='structure_average_std', ascending=True)
@@ -1195,18 +1127,25 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
             final_struct_lst.append(i)
             print(i, len(inds))
             similar_to_i = []
-            for j in inds:
-                # consider (i,j) similar if the Jaccard index of gene lists is above overlap_thresh
-                if len(significance_table_filt.loc[
-                           i, 'genes']) == 32767:  # The genelist was too long to be written in one excel cell
-                    structs = struct_dict[str(significance_table_filt.loc[i, 'num_stds_thresh']) + '_' +
-                                          str(significance_table_filt.loc[i, 'mu']) + '_' +
-                                          str(significance_table_filt.loc[i, 'path_len']) + '_' +
-                                          str(significance_table_filt.loc[i, 'num_iters'])]
-                    genes_i = list(genes_table[structs[significance_table_filt.loc[i, 'old_struct_num']][0]].index)
-                else:  # read the gene list from the excel file
-                    genes_i = read_gene_list(significance_table_filt.loc[i, 'genes'])
 
+            # read i'th gene_list
+            if len(significance_table_filt.loc[
+                       i, 'genes']) == 32767:  # The genelist was too long to be written in one excel cell
+                structs = struct_dict[str(significance_table_filt.loc[i, 'num_stds_thresh']) + '_' +
+                                      str(significance_table_filt.loc[i, 'mu']) + '_' +
+                                      str(significance_table_filt.loc[i, 'path_len']) + '_' +
+                                      str(significance_table_filt.loc[i, 'num_iters'])]
+                genes_i = list(genes_table[structs[significance_table_filt.loc[i, 'old_struct_num']][0]].index)
+            else:  # read the gene list from the excel file
+                genes_i = read_gene_list(significance_table_filt.loc[i, 'genes'])
+
+            # read i'th repcell-pair sets
+            sets_in_struct_i = significance_table_filt.loc[i, samp_name + '_pairs']
+            sets_in_struct_i = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
+                                sets_in_struct_i.strip(']').strip('[').split('), (')]
+
+            for j in inds:
+                # read j'th gene_list
                 if len(significance_table_filt.loc[
                            j, 'genes']) == 32767:  # The genelist was too long to be written in one excel cell
                     structs = struct_dict[str(significance_table_filt.loc[j, 'num_stds_thresh']) + '_' +
@@ -1216,19 +1155,19 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
                     genes_j = list(genes_table[structs[significance_table_filt.loc[j, 'old_struct_num']][0]].index)
                 else:  # read the gene list from the excel file
                     genes_j = read_gene_list(significance_table_filt.loc[j, 'genes'])
+
+                # consider (i,j) similar if the Jaccard index of gene lists is above overlap_thresh
                 jaccard_i_j_genes = len(set(genes_i).intersection(set(genes_j))) / len(set(genes_i).union(set(genes_j)))
                 if jaccard_i_j_genes >= Jaccard_thr_genes:
                     similar_to_i.append(j)
-                else:  # if not similar by gene sets, let's check similarity by repcell-pair sets
-                    # consider (i,j) similar if the Jaccard index of sets is above overlap_thresh
-                    sets_in_struct_i = significance_table_filt.loc[i, samp_name + '_pairs']
-                    sets_in_struct_i = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
-                                        sets_in_struct_i.strip(']').strip('[').split('), (')]
 
+                else:  # if not similar by gene sets, let's check similarity by repcell-pair sets
+                    # read j'th repcell-pair sets
                     sets_in_struct_j = significance_table_filt.loc[j, samp_name + '_pairs']
                     sets_in_struct_j = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
                                         sets_in_struct_j.strip(']').strip('[').split('), (')]
 
+                    # consider (i,j) similar if the Jaccard index of sets is above overlap_thresh
                     jaccard_i_j_sets = len(set(sets_in_struct_i).intersection(set(sets_in_struct_j))) / len(
                         set(sets_in_struct_i).union(set(sets_in_struct_j)))
                     if jaccard_i_j_sets >= Jaccard_thr_sample_pairs:
@@ -1281,6 +1220,11 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
 ####################################################################################################################
 def compute_final_struct_list(sigtable, struct_thr, min_nstructs, max_nstructs):
     # decide on structures to be visualized and GO termed
+    # S is the size of s={all structures}.
+    # M is the size of m={structures with structure_average_std<struct_thr}
+    # if min_nstructs<=M<=max_nstructs, return m.
+    # if M>max_nstructs, return the first max_nstructs.
+    # if M<min_nstructs, then: if min_nstructs<S, return the first min_nstructs. Else, return s.
     structs_lst = list(sigtable.index[sigtable['structure_average_std'] <= struct_thr])
     if len(structs_lst) > max_nstructs:
         structs_lst = list(sigtable.sort_values(by='structure_average_std', ascending=True).index[:max_nstructs])

@@ -16,6 +16,69 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -30,9 +93,11 @@
       }, function(data) {
          $("#structure_layouts").empty();
         for (let i = 0; i < data.struct_pics.length; i++){
-               /* $("#answer"+i).text(data.struct_pics[i]); */
-               $("#structure_layouts").append("<img src=" + data.struct_pics[i] + " width=350>");
+               $("#structure_layouts").append("<img src=" + data.struct_pics[i] + " width=33%>");
             }
+
+        document.getElementById("gene_section").style.display = "block";
+        document.getElementById("layouts_title").style.display = "block";
 
         $("#gene_list").empty()
          $("#gene_list").append("<ul>");
@@ -42,43 +107,42 @@
          $("#gene_list").append("</ul>");
 
          $("#enriched_GO_terms_process").empty()
+         if (data.GO_terms[0] == 'NO TERMS'){
+         $("#enriched_GO_terms_process").append("<p>NO TERMS</p>");
+         } else {
          $("#enriched_GO_terms_process").append("<ul>");
          for (let i = 0; i < data.GO_terms[0].length; i++){
                $("#enriched_GO_terms_process").append("<li>" + data.GO_terms[0][i]);
             }
          $("#enriched_GO_terms_process").append("</ul>");
+         }
 
          $("#enriched_GO_terms_function").empty()
+         if (data.GO_terms[1] == 'NO TERMS'){
+         $("#enriched_GO_terms_function").append("<p>NO TERMS</p>");
+         } else {
          $("#enriched_GO_terms_function").append("<ul>");
          for (let i = 0; i < data.GO_terms[1].length; i++){
                $("#enriched_GO_terms_function").append("<li>" + data.GO_terms[1][i]);
             }
          $("#enriched_GO_terms_function").append("</ul>");
+         }
 
-         $("#enriched_GO_terms_compartment").empty()
-         $("#enriched_GO_terms_compartment").append("<ul>");
+         $("#enriched_GO_terms_component").empty()
+         if (data.GO_terms[2] == 'NO TERMS'){
+         $("#enriched_GO_terms_component").append("<p>NO TERMS</p>");
+         } else {
+         $("#enriched_GO_terms_component").append("<ul>");
          for (let i = 0; i < data.GO_terms[2].length; i++){
-               $("#enriched_GO_terms_compartment").append("<li>" + data.GO_terms[2][i]);
+               $("#enriched_GO_terms_component").append("<li>" + data.GO_terms[2][i]);
             }
-         $("#enriched_GO_terms_compartment").append("</ul>");
+         $("#enriched_GO_terms_component").append("</ul>");
+         }
 
       });
       return false;
     });
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -88,7 +152,7 @@
 
 {% block content %}
 <h1>SPIRAL results panel</h1>
-<h2>{{ dataset_name }}</h2>
+<h2>Data set: {{ dataset_name }}</h2>
 <p>Structure number: <select id="SelectStruct" name="SelectStruct">
     {% for item in struct_lst %}
     <option value="{{ item }}">{{ item }}</option>
@@ -109,39 +173,53 @@
 
     <br>
 
+<div id="layouts_title" style="display: none">
+    <h3>Layouts:</h3>
+</div>
 <section id="structure_layouts" class="hidden">
     <ul class="results-img" alt="placeholder">
 </section>
 
-<h3>Genes:</h3>
-<div id="gene_list" style="overflow: scroll; width: 300px; height: 200px">
+<div id="gene_section" style="display: none">
+    <div style="float:left; width: 30%; height: 650px">
+        <h3>Genes:</h3>
+        <div id="gene_list" style="overflow: scroll; width: 90%; height: 589px">
+        </div>
+    </div>
+
+    {% if GO_flag %}
+    <div style="float:left; width: 70%; height: 650px">
+        <h3>Enriched GO terms:</h3>
+
+        <p><u>GO biological process:</u></p>
+        <div id="enriched_GO_terms_process" style="overflow: scroll; width: 99%; height: 150px;">
+        </div>
+
+        <p><u>GO molecular function:</u></p>
+        <div id="enriched_GO_terms_function" style="overflow: scroll; width: 99%; height: 150px;">
+        </div>
+
+        <p><u>GO cellular component:</u></p>
+        <div id="enriched_GO_terms_component" style="overflow: scroll; width: 99%; height: 150px;">
+        </div>
+
+        {% endif %}
+    </div>
 </div>
 
-<br>
-
-<h3>Enriched GO terms:</h3>
-
-<p>GO biological process:</p>
-<div id="enriched_GO_terms_process" style="overflow: scroll; width: 900px; height: 200px;">
+<div style="clear: left;">
+    <hr>
+    <td><a href="{{ url_for('download_sigfile', data_n=data_n) }}">Download result table (excel
+        file)</a></td>
+    <br>
+    <td><a href="{{ url_for('download_structure_layout_zipfile', data_n=data_n) }}">Download all
+        structure layouts (zip
+        file)</a></td>
+    <br>
+    {% if impute_method != 'no_imputation' %}
+    <td><a href="{{ url_for('download_repcell_partition', data_n=data_n) }}">Download repcell partition
+        layouts (zip
+        file)</a></td>
+    {% endif %}
 </div>
-
-<p>GO molecular function:</p>
-<div id="enriched_GO_terms_function" style="overflow: scroll; width: 900px; height: 200px;">
-</div>
-
-<p>GO cellular component:</p>
-<div id="enriched_GO_terms_compartment" style="overflow: scroll; width: 900px; height: 200px;">
-</div>
-
-<br>
-
-<td><a href="{{ url_for('download_sigfile', data_n=data_n) }}">Download result table (excel file)</a></td>
-<br>
-<td><a href="{{ url_for('download_structure_layout_zipfile', data_n=data_n) }}">Download all structure layouts (zip
-    file)</a></td>
-<br>
-{% if impute_method != 'no_imputation' %}
-<td><a href="{{ url_for('download_repcell_partition', data_n=data_n) }}">Download repcell partition layouts (zip
-    file)</a></td>
-{% endif %}
 {% endblock %}
