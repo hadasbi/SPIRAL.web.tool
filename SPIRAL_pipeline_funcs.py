@@ -347,7 +347,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                         repcell_partition_spatial=repcell_partition_spatial,
                                         data=data, data_norm_filt_loc=data_norm_filt_loc,
                                         save_umap=True, save_pca=True, save_spatial=spatial,
-                                        use_legend=False, with_title=False,
+                                        with_legend=False, with_title=False,
                                         load_orig_umap_from_file=True, load_orig_pca_from_file=True,
                                         with_deffs=False, numerical_shapes=numerical_shapes)
 
@@ -1063,6 +1063,32 @@ def merge_sigtables(sigfile_merged, data_path, impute_method, num_stds_thresh_ls
 
 
 ####################################################################################################################
+def create_dict_of_struct_lsts(data_path, impute_method, sigtable):
+    # create a dictionary of structure lists
+    num_std_lst = list(set(sigtable.loc[:, 'num_stds_thresh']))
+    print(num_std_lst)
+    mu_lst = list(set(sigtable.loc[:, 'mu']))
+    print(mu_lst)
+    path_len_lst = list(set(sigtable.loc[:, 'path_len']))
+    print(path_len_lst)
+    num_iters_lst = list(set(sigtable.loc[:, 'num_iters']))
+    print(num_iters_lst)
+    struct_dict = dict()
+    for num_std in num_std_lst:
+        for mu in mu_lst:
+            for path_len in path_len_lst:
+                for num_iters in num_iters_lst:
+                    structs_file = structs_filename(data_path=data_path, impute_method=impute_method,
+                                                    num_stds_thresh=num_std,
+                                                    mu=mu,
+                                                    path_len=path_len,
+                                                    num_iters=num_iters)
+                    struct_dict[str(num_std) + '_' + str(mu) + '_' + str(path_len) + '_' + str(
+                        num_iters)] = read_struct_list_from_file(structs_file)
+    return struct_dict
+
+
+####################################################################################################################
 def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetable_file, data_path,
                               struct_thr, min_nstructs, max_nstructs,
                               impute_method='agg_wald', real_samp_name='sample',
@@ -1085,6 +1111,14 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
 
     print('Starting with', len(significance_table), 'structures')
 
+    # save Jaccard_thr_genes to file
+    with open(os.path.join(data_path, 'Jaccard_thr_genes.txt'), 'w') as text_file:
+        text_file.write(str(Jaccard_thr_genes))
+
+    # save Jaccard_thr_sample_pairs to file
+    # with open(os.path.join(data_path, 'Jaccard_thr_sample_pairs.txt'), 'w') as text_file:
+    #    text_file.write(str(Jaccard_thr_sample_pairs))
+
     # filter out structures with log_corrpval>log_corrpval_thr
     significance_table_filt = significance_table[significance_table['log10_corrected_pval'] <= log_corrpval_thr]
     print('There are', len(significance_table_filt), 'structures with log10_corrected_pval<', log_corrpval_thr)
@@ -1094,27 +1128,8 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
         with open(genetable_file, 'rb') as fp:
             genes_table = pickle.load(fp)
 
-        # create a dictionary of structure lists
-        num_std_lst = list(set(significance_table_filt.loc[:, 'num_stds_thresh']))
-        print(num_std_lst)
-        mu_lst = list(set(significance_table_filt.loc[:, 'mu']))
-        print(mu_lst)
-        path_len_lst = list(set(significance_table_filt.loc[:, 'path_len']))
-        print(path_len_lst)
-        num_iters_lst = list(set(significance_table_filt.loc[:, 'num_iters']))
-        print(num_iters_lst)
-        struct_dict = dict()
-        for num_std in num_std_lst:
-            for mu in mu_lst:
-                for path_len in path_len_lst:
-                    for num_iters in num_iters_lst:
-                        structs_file = structs_filename(data_path=data_path, impute_method=impute_method,
-                                                        num_stds_thresh=num_std,
-                                                        mu=mu,
-                                                        path_len=path_len,
-                                                        num_iters=num_iters)
-                        struct_dict[str(num_std) + '_' + str(mu) + '_' + str(path_len) + '_' + str(
-                            num_iters)] = read_struct_list_from_file(structs_file)
+        struct_dict = create_dict_of_struct_lsts(data_path=data_path, impute_method=impute_method,
+                                                 sigtable=significance_table_filt)
 
         # An efficient way to find pairs of similar structures and remove the least favorable structure
         # It counts on the fact that the table is sorted by 'structure_average_std'
@@ -1213,6 +1228,10 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
     if len(significance_table_filt) == 0:
         print('NO STRUCTURES FOUND!')
 
+    # save the matrix of all pair-wise Jaccard indices between structures
+    save_Jaccard_mat_genes(sigtable=significance_table_filt, struct_dict=struct_dict, genes_table=genes_table,
+                           data_path=data_path)
+
     significance_table_filt.to_excel(sigfile_filt)
     return significance_table_filt
 
@@ -1235,6 +1254,41 @@ def compute_final_struct_list(sigtable, struct_thr, min_nstructs, max_nstructs):
 
 
 ####################################################################################################################
+def save_Jaccard_mat_genes(sigtable, struct_dict, genes_table, data_path):
+    inds = sigtable.index
+    Jaccard_mat_genes = np.zeros((len(inds), len(inds)))
+    for ii, i in enumerate(inds):
+        # read i'th gene_list
+        if len(sigtable.loc[
+                   i, 'genes']) == 32767:  # The genelist was too long to be written in one excel cell
+            structs = struct_dict[str(sigtable.loc[i, 'num_stds_thresh']) + '_' +
+                                  str(sigtable.loc[i, 'mu']) + '_' +
+                                  str(sigtable.loc[i, 'path_len']) + '_' +
+                                  str(sigtable.loc[i, 'num_iters'])]
+            genes_i = list(genes_table[structs[sigtable.loc[i, 'old_struct_num']][0]].index)
+        else:  # read the gene list from the excel file
+            genes_i = read_gene_list(sigtable.loc[i, 'genes'])
+        for j in inds[ii + 1:]:
+            # read j'th gene_list
+            if len(sigtable.loc[
+                       j, 'genes']) == 32767:  # The genelist was too long to be written in one excel cell
+                structs = struct_dict[str(sigtable.loc[j, 'num_stds_thresh']) + '_' +
+                                      str(sigtable.loc[j, 'mu']) + '_' +
+                                      str(sigtable.loc[j, 'path_len']) + '_' +
+                                      str(sigtable.loc[j, 'num_iters'])]
+                genes_j = list(genes_table[structs[sigtable.loc[j, 'old_struct_num']][0]].index)
+            else:  # read the gene list from the excel file
+                genes_j = read_gene_list(sigtable.loc[j, 'genes'])
+            jaccard_i_j_genes = len(set(genes_i).intersection(set(genes_j))) / len(set(genes_i).union(set(genes_j)))
+            Jaccard_mat_genes[i - 1, j - 1] = jaccard_i_j_genes
+            Jaccard_mat_genes[j - 1, i - 1] = jaccard_i_j_genes
+
+    np.save(os.path.join(data_path, 'Jaccard_mat_genes.npy'), Jaccard_mat_genes)
+
+
+####################################################################################################################
+
+
 def zip_structure_layouts(zipfile, picfolder):
     print('zip_structure_layouts!')
 

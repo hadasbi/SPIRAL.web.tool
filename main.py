@@ -10,11 +10,6 @@ from wtforms.validators import DataRequired, Email, NumberRange, EqualTo
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from flask_uploads import UploadSet, configure_uploads, patch_request_class, IMAGES
 from flask_mail import Mail, Message
-import json
-import pandas as pd
-import plotly
-import plotly.express as px
-import base64
 
 # from SPIRAL_basic_funcs import *
 from SPIRAL_pipeline_funcs import *
@@ -565,6 +560,42 @@ def download_repcell_partition(data_n):
     return send_from_directory(data_path, repcell_partition_zipfile)
 
 
+@app.route('/_filter_struct_lst_for_result_panel')
+def filter_struct_lst_for_result_panel():
+    # produces a list of structures, in which there is no pair of structures with Jaccard index larger than
+    # Jaccard_thr_genes. The function relies on the fact that the structure numbers are
+    # range(1, len(Jaccard_mat_genes) + 1), and that structure i corresponds to row i-1 in Jaccard_mat_genes.
+    print('filter_struct_lst_for_result_panel!!!')
+
+    Jaccard_mat_genes = request.args.get('Jaccard_mat_genes', None, type=str)
+    new_Jaccard_thr_genes = float(request.args.get('new_Jaccard_thr_genes', None, type=str))
+    print(Jaccard_mat_genes, new_Jaccard_thr_genes)
+
+    if new_Jaccard_thr_genes is None:
+        if Jaccard_mat_genes is None:
+            return jsonify(thr_struct_lst=[])
+        else:
+            return jsonify(thr_struct_lst=range(1, len(Jaccard_mat_genes) + 1))
+
+    Jaccard_mat_genes = str_to_lst_of_lsts(Jaccard_mat_genes)
+
+    inds = list(range(1, len(Jaccard_mat_genes) + 1))
+    thr_struct_lst = []
+
+    while inds:
+        i = inds.pop(0)
+        thr_struct_lst.append(i)
+        similar_to_i = []
+
+        for j in inds:
+            if Jaccard_mat_genes[i - 1][j - 1] >= new_Jaccard_thr_genes:
+                similar_to_i.append(j)
+
+        inds = [j for j in inds if j not in similar_to_i]
+
+    return jsonify(thr_struct_lst=thr_struct_lst)
+
+
 @app.route('/results/<url>')
 def results_panel(url):
     data_n = url_to_data_n(url)
@@ -584,24 +615,25 @@ def results_panel(url):
     # get imputation method
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     impute_method = open(os.path.join(data_path, 'imputation_method.txt'), "r").read()
+
+    # get the Jaccard_thr_genes and Jaccard_thr_sample_pairs that were used
+    Jaccard_thr_genes = open(os.path.join(data_path, 'Jaccard_thr_genes.txt'), "r").read()
+    # Jaccard_thr_sample_pairs = open(os.path.join(data_path, 'Jaccard_thr_sample_pairs.txt'), "r").read()
+
+    # get the Jaccard matrix of gene lists
+    Jaccard_mat_genes = np.load(os.path.join(data_path, 'Jaccard_mat_genes.npy'))
+    Jaccard_mat_genes = list_of_lists_to_str([list(l) for l in Jaccard_mat_genes])
+    print(type(Jaccard_mat_genes))
+    print(Jaccard_mat_genes)
+
     return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst, impute_method=impute_method,
-                           dataset_name=dataset_name, GO_flag=GO_flag)
+                           dataset_name=dataset_name, GO_flag=GO_flag, Jaccard_thr_genes=Jaccard_thr_genes,
+                           Jaccard_mat_genes=Jaccard_mat_genes)
 
 
-def data_n_to_url(data_n):
-    sample_string = str(1000000 + int(data_n))
-    sample_string_bytes = sample_string.encode("ascii")
-    base64_bytes = base64.b64encode(sample_string_bytes)
-    base64_string = base64_bytes.decode("ascii")
-    return base64_string
-
-
-def url_to_data_n(url):
-    base64_string = url
-    base64_bytes = base64_string.encode("ascii")
-    sample_string_bytes = base64.b64decode(base64_bytes)
-    sample_string = int(sample_string_bytes.decode("ascii")) - 1000000
-    return sample_string
+@app.route('/test')
+def test():
+    return render_template('test2.html')
 
 
 ############################################################################################################

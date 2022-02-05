@@ -17,6 +17,7 @@ import openpyxl
 from gseapy.parser import Biomart
 import glob
 from time import sleep, time
+import base64
 
 
 #### Data loading and pre-processing #################################################################################
@@ -177,6 +178,23 @@ def pic_folder(data_path):
 def spatial_norm_loc_name(data_path):
     data_loc = os.path.join(data_path, 'spatial_coors_norm.csv')
     return data_loc
+
+
+####################################################################################################################
+def data_n_to_url(data_n):
+    sample_string = str(1000000 + int(data_n))
+    sample_string_bytes = sample_string.encode("ascii")
+    base64_bytes = base64.b64encode(sample_string_bytes)
+    base64_string = base64_bytes.decode("ascii")
+    return base64_string
+
+
+def url_to_data_n(url):
+    base64_string = url
+    base64_bytes = base64_string.encode("ascii")
+    sample_string_bytes = base64.b64decode(base64_bytes)
+    sample_string = int(sample_string_bytes.decode("ascii")) - 1000000
+    return sample_string
 
 
 ####################################################################################################################
@@ -368,6 +386,16 @@ def chooseln(N, k):
 def correct_for_multiple_testing(num_genes, num_rows, num_sets, num_cols):
     # return np.log10(comb(num_genes,num_rows))+np.log10(comb(num_sets,num_cols))
     return ((chooseln(num_genes, num_rows) + chooseln(num_sets, num_cols)) / np.log(10))
+
+
+def list_of_lists_to_str(lst_of_lsts):
+    return str(lst_of_lsts)
+
+
+def str_to_lst_of_lsts(s):
+    temp = [l.split(', ') for l in s.replace('[[', '').replace(']]', '').split('], [')]
+    lst_of_lsts = [[float(s) for s in t] for t in temp]
+    return lst_of_lsts
 
 
 #### data visualization functions ##########################################################################################

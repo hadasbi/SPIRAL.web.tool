@@ -1,89 +1,14 @@
-<script>
-  $SCRIPT_ROOT = {{ request.script_root|tojson }};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }}; </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+        integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY="
+        crossorigin="anonymous"></script>
+<link class="jsbin" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+      rel="stylesheet" type="text/css"/>
+<meta charset=utf-8/>
 <script>
   $(function() {
-    $('a#get_struct_figs').bind('click', function() {
+    $('a#get_struct_figs').on('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_pic_names_and_GO_terms', {
         struct: $('#SelectStruct option:selected').val(),
         vis_type: $('#SelectVis option:selected').val(),
@@ -98,6 +23,7 @@
 
         document.getElementById("gene_section").style.display = "block";
         document.getElementById("layouts_title").style.display = "block";
+        document.getElementById("filter_structs_section").style.display = "block";
 
         $("#gene_list").empty()
          $("#gene_list").append("<ul>");
@@ -146,41 +72,180 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
+<script>
+    $( function() {
+        $( "#Jaccard_genes_range" ).slider({
+          min: 0.0,
+          max: {{ Jaccard_thr_genes }},
+          value: {{ Jaccard_thr_genes }},
+          step: 0.05,
+          change: function( event, ui ) {
+            var slider_val = $(this).slider("value");
+
+            $("#Jaccard_genes_chosen").empty();
+            $("#Jaccard_genes_chosen").append(slider_val);
+
+            $.getJSON($SCRIPT_ROOT + '/_filter_struct_lst_for_result_panel', {
+            Jaccard_mat_genes: {{ Jaccard_mat_genes | tojson }},
+            new_Jaccard_thr_genes: slider_val
+            }, function(data) {
+                $("#SelectStruct").empty();
+                for (let i = 0; i < data.thr_struct_lst.length; i++){
+                    $("#SelectStruct").append("<option value=" + data.thr_struct_lst[i] + ">" + data.thr_struct_lst[i] + "</option>");
+                }
+
+            $("#SelectStruct").css('border', "solid 5px red");
+            $("#see_what_changed").css('display', "inline-block");
+            setTimeout(function(){
+                $("#SelectStruct").css('border', "solid 1px black");
+                $("#see_what_changed").css('display', "none");},
+                2000);
+
+            })
+          }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 {% extends 'base.html' %}
 
 {% block content %}
 <h1>SPIRAL results panel</h1>
 <h2>Data set: {{ dataset_name }}</h2>
-<p>Structure number: <select id="SelectStruct" name="SelectStruct">
-    {% for item in struct_lst %}
-    <option value="{{ item }}">{{ item }}</option>
-    {% endfor %}
-</select>
+<div id="form_section" style="float:left; width: 45%;">
+    <p style="display:inline-block;">Structure number: <select id="SelectStruct" name="SelectStruct">
+        {% for item in struct_lst %}
+        <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select></p>
+    <p id="see_what_changed" style="color: red; display: none;"> &#x2190; see what changed</p>
     {% if impute_method != 'no_imputation' %}
-<p>Visualization type: <select id="SelectVis" name="SelectVis">
-    <option value="repcells">repcells</option>
-    <option value="orig">original data</option>
-</select>
+    <p>Visualization type: <select id="SelectVis" name="SelectVis">
+        <option value="repcells">repcells</option>
+        <option value="orig">original data</option>
+    </select></p>
     {% endif %}
-<p>Colored by: <select id="SelectColors" name="SelectColors">
-    <option value="layers">structure layers</option>
-    <option value="avg_expression">average expression level of the structure genes</option>
-</select>
+    <p>Colored by: <select id="SelectColors" name="SelectColors">
+        <option value="layers">structure layers</option>
+        <option value="avg_expression">average expression level of the structure genes</option>
+    </select></p>
 
-<p><a href=# id=get_struct_figs>Submit</a>
+    <p><a href=# id=get_struct_figs>Submit</a>
+</div>
 
-    <br>
+<div id="filter_structs_section"
+     style="float:left; width: 50%; height: 190px; display: none; border:thin solid #A9A9A9; padding-left: 20px;
+     padding-right: 20px; box-shadow: 0 0 0 10px #f3f5f6 inset; box-sizing: border-box;">
+    <h4>Structure filter panel: adjust the Jaccard index threshold of gene lists</h4>
+    <p>Lower threshold &#x2192; fewer structures, more unique.
+        <br>Higher threshold &#x2192; structures represent all processes in the data, including somewhat overlapping
+        processes.</p>
+    <div data-role="fieldcontain">
+        <p style="display:inline-block;">Jaccard index threshold: &nbsp;&nbsp;</p>
+        <div id="Jaccard_genes_range" style="width: 30%; display:inline-block;"></div>
+        <p style="display:inline-block;">&nbsp;&nbsp;&nbsp;</p>
+        <label id="Jaccard_genes_chosen" style="display:inline-block;">{{ Jaccard_thr_genes }}</label>
+    </div>
+</div>
 
-<div id="layouts_title" style="display: none">
+<br>
+
+<div id="layouts_title" style="display: none; clear: left; margin-top: 20px">
     <h3>Layouts:</h3>
 </div>
 <section id="structure_layouts" class="hidden">
     <ul class="results-img" alt="placeholder">
 </section>
 
-<div id="gene_section" style="display: none">
+<div id="gene_section" style="display: none; padding-buttom: 5px">
     <div style="float:left; width: 30%; height: 650px">
         <h3>Genes:</h3>
         <div id="gene_list" style="overflow: scroll; width: 90%; height: 589px">
@@ -207,7 +272,7 @@
     </div>
 </div>
 
-<div style="clear: left;">
+<div style="clear: left; padding-top: 20px">
     <hr>
     <td><a href="{{ url_for('download_sigfile', data_n=data_n) }}">Download result table (excel
         file)</a></td>
