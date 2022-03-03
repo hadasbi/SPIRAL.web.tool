@@ -62,7 +62,8 @@ def visualize_repcell_partition(clustering_file_final,
         else:
             shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
 
-    def save_layout(axislabel, cells_to_repcells, coor, picfile, with_legend=False, with_title=False,
+    def save_layout(axislabel, cells_to_repcells, coor, picfile, numerical_shapes,
+                    with_legend=False, with_title=False,
                     with_deffs=False, cell_definitions_sorted_set=None, shapes=None):
         plt.rc('xtick', labelsize=18)
         plt.rc('ytick', labelsize=18)
@@ -72,7 +73,8 @@ def visualize_repcell_partition(clustering_file_final,
         fig, ax = plt.subplots(figsize=(15, 15))
         num_repcells = len(set(cells_to_repcells['x']))
         ax.set_prop_cycle('color', np.random.permutation([cm(1. * i / num_repcells) for i in range(num_repcells)]))
-        size = 130
+
+        marker_size = get_marker_size(num_points=num_repcells, numerical_shapes=numerical_shapes)
 
         if with_deffs:
             for deff, shape in zip(cell_definitions_sorted_set, shapes[:len(cell_definitions_sorted_set)]):
@@ -81,12 +83,12 @@ def visualize_repcell_partition(clustering_file_final,
                     inds_repcell = [i for i in cells_to_repcells.index if cells_to_repcells.loc[i, 'x'] == repcell]
                     inds = set(inds_repcell).intersection(set(inds_deff))
                     ax.scatter(coor[inds, 0], coor[inds, 1],
-                               label=str(deff) + ', repcell ' + str(int(repcell)), s=size,
+                               label=str(deff) + ', repcell ' + str(int(repcell)), s=marker_size,
                                marker=shape)
         else:
             for repcell in set(cells_to_repcells['x']):
                 inds = [i for i in cells_to_repcells.index if cells_to_repcells.loc[i, 'x'] == repcell]
-                ax.scatter(coor[inds, 0], coor[inds, 1], label='repcell ' + str(int(repcell)), s=size,
+                ax.scatter(coor[inds, 0], coor[inds, 1], label='repcell ' + str(int(repcell)), s=marker_size,
                            marker="$" + str(int(repcell)) + "$")
 
         if with_title:
@@ -115,7 +117,7 @@ def visualize_repcell_partition(clustering_file_final,
         # save repcell partition
         save_layout(axislabel='UMAP', cells_to_repcells=cells_to_repcells, coor=umap_coor_orig,
                     picfile=repcell_partition_UMAP,
-                    with_legend=with_legend, with_title=with_title,
+                    with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes,
                     with_deffs=with_deffs, cell_definitions_sorted_set=cell_definitions_sorted_set, shapes=shapes)
 
     if save_pca:
@@ -133,7 +135,7 @@ def visualize_repcell_partition(clustering_file_final,
         # save repcell partition
         save_layout(axislabel='PC', cells_to_repcells=cells_to_repcells, coor=pca_coor_orig,
                     picfile=repcell_partition_PCA,
-                    with_legend=with_legend, with_title=with_title,
+                    with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes,
                     with_deffs=with_deffs, cell_definitions_sorted_set=cell_definitions_sorted_set, shapes=shapes)
 
     if save_spatial:
@@ -144,7 +146,7 @@ def visualize_repcell_partition(clustering_file_final,
         # save repcell partition
         save_layout(axislabel='spatial axis', cells_to_repcells=cells_to_repcells, coor=spatial_coor,
                     picfile=repcell_partition_spatial,
-                    with_legend=with_legend, with_title=with_title,
+                    with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes,
                     with_deffs=with_deffs, cell_definitions_sorted_set=cell_definitions_sorted_set, shapes=shapes)
 
 
@@ -170,6 +172,32 @@ def save_orig_deffs_to_file(data, data_path, data_norm_filt_loc, origdeffsfile):
     with open(origdeffsfile, "w") as f:
         for s in orig_deffs:
             f.write(str(s) + "\n")
+
+
+##################################################################################################################
+def decide_on_numerical_shapes(origdeffsfile):
+    # Decide whether to use regular markers or numerical markers in the structures' layouts
+    print('\nloading cell definitions from file...')
+    cell_definitions_orig = []
+    with open(origdeffsfile, "r") as f:
+        for line in f:
+            cell_definitions_orig.append(str(line.strip()))
+
+    # if there are at least 5 different labels, and each label is no longer than 3, then use numerical_shapes.
+    if len(set(cell_definitions_orig)) >= 5 and max([len(d) for d in cell_definitions_orig]) <= 3:
+        return True
+    return False
+
+
+##################################################################################################################
+def get_marker_size(num_points, numerical_shapes):
+    if not numerical_shapes:
+        return 130
+    else:
+        if num_points <= 150:
+            return 500
+        else:
+            return 300
 
 
 ##################################################################################################################
@@ -261,11 +289,14 @@ def compute_deffs_for_imputed(impute_method, repcelldeffsfile, origdeffsfile, cl
 
 ########################################################################################################
 def save_simple_layout(axislabel, coors, cell_definitions, cell_definitions_sorted_set, deff_to_shape_dict,
-                       picfile, steps=None, with_steps=False, with_legend=True, with_title=False, title=''):
+                       picfile, numerical_shapes,
+                       steps=None, with_steps=False, with_legend=True, with_title=False, title=''):
     plt.rc('xtick', labelsize=18)
     plt.rc('ytick', labelsize=18)
 
     cm = plt.get_cmap('gist_rainbow')
+
+    marker_size = get_marker_size(num_points=len(cell_definitions), numerical_shapes=numerical_shapes)
 
     fig, ax = plt.subplots(figsize=(15, 15))
     for deff in cell_definitions_sorted_set:
@@ -273,11 +304,11 @@ def save_simple_layout(axislabel, coors, cell_definitions, cell_definitions_sort
         if inds:
             if with_steps and (steps is not None):
                 im = ax.scatter(coors[inds, 0], coors[inds, 1], c=steps[inds], cmap=plt.cm.jet,
-                                marker=deff_to_shape_dict[deff], label=deff, s=130)
+                                marker=deff_to_shape_dict[deff], label=deff, s=marker_size)
                 im.set_clim(0, 1000 * int(np.ceil(np.max(steps) / 1000)))
             else:
                 im = ax.scatter(coors[inds, 0], coors[inds, 1],
-                                marker=deff_to_shape_dict[deff], label=deff, s=130)
+                                marker=deff_to_shape_dict[deff], label=deff, s=marker_size)
 
     if with_legend and len(cell_definitions_sorted_set) > 1:
         # Add a legend
@@ -328,13 +359,6 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
         print('Loading repcells_data')
         repcells_data = pd.read_csv(repcells_data_loc, index_col=0, sep='\t')
 
-    # shapes
-    if numerical_shapes:
-        shapes = ["$\mathsf{" + str(i) + "}$" for i in [0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]]
-        with_legend = False
-    else:
-        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
-
     if use_5000:
         repcells_data = repcells_data.loc[repcells_data.var(axis=1).sort_values(ascending=False)[:5000].index, :]
 
@@ -370,6 +394,13 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
     # print('cell_definitions:', cell_definitions)
     print('cell_definitions_sorted_set:', repcell_definitions_sorted_set)
 
+    # shapes
+    if numerical_shapes:
+        shapes = ["$\mathsf{" + str(i) + "}$" for i in repcell_definitions_sorted_set]
+        with_legend = False
+    else:
+        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
+
     deff_to_shape_dict = dict(zip(repcell_definitions_sorted_set, shapes[:len(set(repcell_definitions))]))
     # print('deff_to_shape_dict:', deff_to_shape_dict)
 
@@ -389,7 +420,7 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
                            cell_definitions_sorted_set=repcell_definitions_sorted_set,
                            deff_to_shape_dict=deff_to_shape_dict, picfile=layout_of_imputed_picfile_UMAP,
                            steps=step_for_cluster, with_steps=with_steps,
-                           with_legend=with_legend, with_title=with_title)
+                           with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes)
     if save_PCA:
         if load_coor_from_file and os.path.exists(repcellspcacoorfile):
             print('\nloading PCA...')
@@ -406,7 +437,7 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
                            cell_definitions_sorted_set=repcell_definitions_sorted_set,
                            deff_to_shape_dict=deff_to_shape_dict, picfile=layout_of_imputed_picfile_PCA,
                            steps=step_for_cluster, with_steps=with_steps,
-                           with_legend=with_legend, with_title=with_title)
+                           with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes)
 
 
 ####################################################################################################################
@@ -481,7 +512,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
                            cell_definitions_sorted_set=cell_definitions_orig_sorted_set,
                            deff_to_shape_dict=deff_to_shape_dict, picfile=norm_filt_picfile_umap,
                            steps=steps, with_steps=with_steps,
-                           with_legend=with_legend, with_title=with_title)
+                           with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes)
 
     if save_pca:
         if load_coor_from_file and os.path.exists(norm_filt_pca_coor_file):
@@ -499,7 +530,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
                            cell_definitions_sorted_set=cell_definitions_orig_sorted_set,
                            deff_to_shape_dict=deff_to_shape_dict, picfile=norm_filt_picfile_pca,
                            steps=steps, with_steps=with_steps,
-                           with_legend=with_legend, with_title=with_title)
+                           with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes)
 
     if save_spatial:
         print('\nloading spatial coordinates of original data set...')
@@ -510,7 +541,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
                            cell_definitions_sorted_set=cell_definitions_orig_sorted_set,
                            deff_to_shape_dict=deff_to_shape_dict, picfile=norm_filt_picfile_spatial,
                            steps=steps, with_steps=with_steps,
-                           with_legend=with_legend, with_title=with_title)
+                           with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes)
 
 
 ####################################################################################################################
@@ -571,7 +602,7 @@ def cluster_to_levels_based_on_sets_in_struct(all_nodes, sets_in_struct):
 
 ####################################################################################################################
 def save_layout_gradual(cell_table, picfile, data, genelist, cell_definitions_sorted_set, colormap, axislabel,
-                        coor, shapes, title, color_by_log_expression):
+                        coor, shapes, title, color_by_log_expression, numerical_shapes):
     plt.rc('xtick', labelsize=18)
     plt.rc('ytick', labelsize=18)
 
@@ -579,6 +610,8 @@ def save_layout_gradual(cell_table, picfile, data, genelist, cell_definitions_so
     genelist_ = list(set(genelist).intersection(set(data.index)))
     if len(genelist_) < len(genelist):
         print('missing genes:', set(genelist) - set(genelist_))
+
+    marker_size = get_marker_size(num_points=coor.shape[0], numerical_shapes=numerical_shapes)
 
     for deff, shape in zip(cell_definitions_sorted_set, shapes[:len(cell_definitions_sorted_set)]):
         inds = [i for i in cell_table.index if cell_table.loc[i, 'deffs'] == deff]
@@ -589,26 +622,26 @@ def save_layout_gradual(cell_table, picfile, data, genelist, cell_definitions_so
                     h = ax.scatter(coor[inds, 0], coor[inds, 1], cmap=colormap,
                                    vmin=np.log10(data.loc[genelist_, :].mean().min()),
                                    vmax=np.log10(data.loc[genelist_, :].mean().max()),
-                                   s=size,
+                                   s=marker_size,
                                    marker=shape, c=np.log10(data.iloc[:, inds].loc[genelist_, :].mean()))
                 else:
                     h = ax.scatter(coor[inds, 0], coor[inds, 1], cmap=colormap,
                                    vmin=data.loc[genelist_, :].mean().min(),
                                    vmax=data.loc[genelist_, :].mean().max(),
-                                   s=size,
+                                   s=marker_size,
                                    marker=shape, c=data.iloc[:, inds].loc[genelist_, :].mean())
             else:
                 if color_by_log_expression:
                     h = ax.scatter(coor[inds, 0], coor[inds, 1], cmap=colormap,
                                    vmin=np.log10(data.loc[genelist_, :].mean().min()),
                                    vmax=np.log10(data.loc[genelist_, :].mean().max()),
-                                   s=size, label=deff,
+                                   s=marker_size, label=deff,
                                    marker=shape, c=np.log10(data.iloc[:, inds].loc[genelist_, :].mean()))
                 else:
                     h = ax.scatter(coor[inds, 0], coor[inds, 1], cmap=colormap,
                                    vmin=data.loc[genelist_, :].mean().min(),
                                    vmax=data.loc[genelist_, :].mean().max(),
-                                   s=size, label=deff,
+                                   s=marker_size, label=deff,
                                    marker=shape, c=data.iloc[:, inds].loc[genelist_, :].mean())
 
     cbar = plt.colorbar(h)
@@ -627,12 +660,14 @@ def save_layout_gradual(cell_table, picfile, data, genelist, cell_definitions_so
 
 ####################################################################################################################
 def save_struct_layout(cell_table, picfile, cell_definitions_sorted_set, curr_colors,
-                       axislabel, coor, shapes, title, level_desc_dict, size_by_degree=False,
+                       axislabel, coor, shapes, title, level_desc_dict, numerical_shapes, size_by_degree=False,
                        num_arrows_per_cell=None, with_legend=False):
     # cell_table has the columns "levels" and "cell_definitions".
     # Its indices are the indices of the rows in coors that will be visualized.
     plt.rc('xtick', labelsize=18)
     plt.rc('ytick', labelsize=18)
+
+    marker_size = get_marker_size(num_points=coor.shape[0], numerical_shapes=numerical_shapes)
 
     fig, ax = plt.subplots(figsize=(15, 15))
     hs = []
@@ -643,12 +678,11 @@ def save_struct_layout(cell_table, picfile, cell_definitions_sorted_set, curr_co
             inds_deff = [i for i in cell_table.index if cell_table.loc[i, 'deffs'] == deff]
             inds = list(set(inds_level).intersection(set(inds_deff)))
             if inds:
-                size = 130
                 if level == 'not in structure':
                     h = ax.scatter(coor[inds, 0], coor[inds, 1], color=color,
                                    label=(len(cell_definitions_sorted_set) != 1) * (deff + ' - ') + level_desc_dict[
                                        level],
-                                   s=size, marker=shape)
+                                   s=marker_size, marker=shape)
                     hs.append(h)
                     labels.append((len(cell_definitions_sorted_set) != 1) * (deff + ' - ') + level_desc_dict[level])
                 else:
@@ -659,7 +693,7 @@ def save_struct_layout(cell_table, picfile, cell_definitions_sorted_set, curr_co
                             h = ax.scatter(coor[curr_inds, 0], coor[curr_inds, 1], color=color,
                                            label=(len(cell_definitions_sorted_set) != 1) * (deff + ' - ') +
                                                  level_desc_dict[
-                                                     level], s=size + 15 * (num_arrows - 1), marker=shape)
+                                                     level], s=130 + 15 * (num_arrows - 1), marker=shape)
                             if num_arrows == 1:
                                 hs.append(h)
                                 labels.append(
@@ -667,7 +701,7 @@ def save_struct_layout(cell_table, picfile, cell_definitions_sorted_set, curr_co
                     else:
                         h = ax.scatter(coor[inds, 0], coor[inds, 1], color=color,
                                        label=(len(cell_definitions_sorted_set) != 1) * (deff + ' - ') + level_desc_dict[
-                                           level], s=size, marker=shape)
+                                           level], s=marker_size, marker=shape)
                         hs.append(h)
                         labels.append((len(cell_definitions_sorted_set) != 1) * (deff + ' - ') + level_desc_dict[level])
 
@@ -933,6 +967,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
         if impute_method == 'no_imputation':
             title = ('Algorithm parameters: ' + r'$\alpha$' + '=' + str(sigtable.loc[i, 'num_stds_thresh']) + ', '
                      + r'$\mu$' + '=' + str(sigtable.loc[i, 'mu']) +
+                     'L=' + str(sigtable.loc[i, 'path_len']) +
+                     'T=' + str(sigtable.loc[i, 'num_iters']) +
                      '\nStructure scores: p-value=1E' + str(p) +
                      ', ' + r'$\widetilde{\sigma}$' + '=' + str(
                         np.around(sigtable.loc[i, 'structure_average_std'], 2)) +
@@ -943,6 +979,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
         else:
             title = ('Algorithm parameters: ' + r'$\alpha$' + '=' + str(sigtable.loc[i, 'num_stds_thresh']) + ', '
                      + r'$\mu$' + '=' + str(sigtable.loc[i, 'mu']) +
+                     'L=' + str(sigtable.loc[i, 'path_len']) +
+                     'T=' + str(sigtable.loc[i, 'num_iters']) +
                      '\nStructure scores: p-value=1E' + str(p) +
                      ', ' + r'$\widetilde{\sigma}$' + '=' + str(
                         np.around(sigtable.loc[i, 'structure_average_std'], 2)) +
@@ -1223,7 +1261,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                    cell_definitions_sorted_set=cell_definitions_sorted_set,
                                    curr_colors=curr_colors, axislabel='UMAP', coor=umap_coor, shapes=shapes,
                                    title=title, level_desc_dict=level_desc_dict,
-                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend)
+                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend,
+                                   numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1241,7 +1280,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                    cell_definitions_sorted_set=cell_definitions_sorted_set,
                                    curr_colors=curr_colors, axislabel='PC', coor=pca_coor, shapes=shapes,
                                    title=title, level_desc_dict=level_desc_dict,
-                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend)
+                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend,
+                                   numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1264,7 +1304,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                    cell_definitions_sorted_set=cell_definitions_sorted_set,
                                    curr_colors=curr_colors, axislabel='UMAP', coor=umap_coor_orig, shapes=shapes,
                                    title=title, level_desc_dict=level_desc_dict,
-                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend)
+                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend,
+                                   numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1287,7 +1328,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                    cell_definitions_sorted_set=cell_definitions_sorted_set,
                                    curr_colors=curr_colors, axislabel='PC', coor=pca_coor_orig, shapes=shapes,
                                    title=title, level_desc_dict=level_desc_dict,
-                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend)
+                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend,
+                                   numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1310,7 +1352,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                    cell_definitions_sorted_set=cell_definitions_sorted_set,
                                    curr_colors=curr_colors, axislabel='spatial axis', coor=spatial_coor, shapes=shapes,
                                    title=title, level_desc_dict=level_desc_dict,
-                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend)
+                                   size_by_degree=False, num_arrows_per_cell=None, with_legend=with_legend,
+                                   numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1330,7 +1373,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                 save_layout_gradual(cell_table=repcell_table, picfile=picfile, data=repcells_data,
                                     genelist=genelist, cell_definitions_sorted_set=cell_definitions_sorted_set,
                                     colormap=colormap, axislabel='UMAP', coor=umap_coor, shapes=shapes, title=title,
-                                    color_by_log_expression=color_by_log_expression)
+                                    color_by_log_expression=color_by_log_expression,
+                                    numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1347,7 +1391,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                 save_layout_gradual(cell_table=repcell_table, picfile=picfile, data=repcells_data,
                                     genelist=genelist, cell_definitions_sorted_set=cell_definitions_sorted_set,
                                     colormap=colormap, axislabel='PC', coor=pca_coor, shapes=shapes, title=title,
-                                    color_by_log_expression=color_by_log_expression)
+                                    color_by_log_expression=color_by_log_expression,
+                                    numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1369,7 +1414,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                     data=data, genelist=genelist,
                                     cell_definitions_sorted_set=cell_definitions_sorted_set, colormap=colormap,
                                     axislabel='UMAP', coor=umap_coor_orig, shapes=shapes, title=title,
-                                    color_by_log_expression=color_by_log_expression)
+                                    color_by_log_expression=color_by_log_expression,
+                                    numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1391,7 +1437,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                 save_layout_gradual(cell_table=table, picfile=picfile, data=data,
                                     genelist=genelist, cell_definitions_sorted_set=cell_definitions_sorted_set,
                                     colormap=colormap, axislabel='PC', coor=pca_coor_orig, shapes=shapes, title=title,
-                                    color_by_log_expression=color_by_log_expression)
+                                    color_by_log_expression=color_by_log_expression,
+                                    numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable
@@ -1413,7 +1460,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                     data=data, genelist=genelist,
                                     cell_definitions_sorted_set=cell_definitions_sorted_set, colormap=colormap,
                                     axislabel='spatial axis', coor=spatial_coor, shapes=shapes, title=title,
-                                    color_by_log_expression=color_by_log_expression)
+                                    color_by_log_expression=color_by_log_expression,
+                                    numerical_shapes=numerical_shapes)
 
                 if with_links_in_sigtable:
                     # add a hyperlink to the pic file in sigtable

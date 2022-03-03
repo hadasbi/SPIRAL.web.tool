@@ -11,17 +11,14 @@ from flask_wtf.file import FileField, FileRequired, FileAllowed
 from flask_uploads import UploadSet, configure_uploads, patch_request_class, IMAGES
 from flask_mail import Mail, Message
 
-# from SPIRAL_basic_funcs import *
 from SPIRAL_pipeline_funcs import *
-# from SPIRAL_visualization_funcs import *
-# from SPIRAL_enrichment_funcs import *
-# from SPIRAL_design_excel import *
 
 from threading import Thread
 
-# UPLOADS_FOLDER = 'D:/Nextcloud/SPIRAL/uploads/'
-
 app = Flask(__name__)
+
+app.config['SERVER_NAME'] = '132.68.108.27:5000'
+# app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
@@ -39,27 +36,11 @@ ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 app.config['SECRET_KEY'] = 'kncwhgJAVKBJAHFvlv,Klz'
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 
-app.config['SERVER_NAME'] = '10.100.102.7:5000'
-# app.config['SERVER_NAME'] = '132.68.108.188:5000'
-# app.config['SERVER_NAME'] = '10.100.102.7:5000'
-
-# SHREK:
-# app.config['SERVER_NAME'] = '132.68.107.4:5000'
-
-# app.config['UPLOADED_PHOTOS_DEST'] = ANALYSIS_FOLDER
-
-# app._static_folder = 'D:/Nextcloud/SPIRAL/code/static'
-# app.config['UPLOAD_FOLDER'] = 'D:/Nextcloud/SPIRAL/uploads/'
-# app.debug = True
-
 # Flask-Bootstrap requires this line
 Bootstrap(app)
 
 tables = UploadSet(name='tables', extensions=('txt', 'csv'))
 configure_uploads(app, (tables))
-
-# photos = UploadSet('photos', IMAGES)
-# configure_uploads(app, (photos))
 
 patch_request_class(app, 1024 * 1024 * 1024)
 
@@ -78,7 +59,9 @@ def dataset_number(path):
 
 
 class HomePage(FlaskForm):
-    submit = SubmitField('Run SPIRAL')
+    style = {
+        'style': 'background-color: #008B8B; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    submit = SubmitField('Run SPIRAL on my data set', render_kw=style)
 
 
 class LoadData(FlaskForm):
@@ -106,18 +89,28 @@ class LoadData(FlaskForm):
     samp_name = SelectField('How are your samples called? ',
                             choices=[("samples", 'samples'), ("cells", 'cells'), ("spots", 'spots')],
                             validators=[DataRequired()], default="samples")
-    labels_checkbox = BooleanField(Markup('My data does <strong>not</strong> have labels. '))
-    submit = SubmitField('Submit')
+    labels_checkbox = BooleanField(Markup('My data set does <strong>not</strong> have labels. '))
+    submit_style = {
+        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    submit = SubmitField('Submit', render_kw=submit_style)
 
 
 class CheckData(FlaskForm):
-    keep_going = SubmitField("Sounds about right, let's proceed")
-    go_back = SubmitField("Go back and reload files")
+    keep_going_style = {
+        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    keep_going = SubmitField("Sounds about right, let's proceed", render_kw=keep_going_style)
+    go_back_style = {
+        'style': 'background-color: #800000; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    go_back = SubmitField("Go back and reload files", render_kw=go_back_style)
 
 
 class CheckFilteringParams(FlaskForm):
-    keep_going = SubmitField("Sounds good, next step please")
-    go_back = SubmitField("Go back and change the filtering parameters")
+    keep_going_style = {
+        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    keep_going = SubmitField("Sounds good, next step please", render_kw=keep_going_style)
+    go_back_style = {
+        'style': 'background-color: #800000; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    go_back = SubmitField("Go back and change the filtering parameters", render_kw=go_back_style)
 
 
 class MoreThan(object):
@@ -160,7 +153,9 @@ class vln_plot_form(FlaskForm):
                                  validators=[DataRequired(), MoreThan('min_nFeatures')])
     max_mtpercent = IntegerField('Maximal percent of mitochondrial gene expression: ', default=100,
                                  validators=[NumberRange(1, 100)])
-    submit = SubmitField('Submit')
+    submit_style = {
+        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    submit = SubmitField('Submit', render_kw=submit_style)
 
 
 class alg_params_form(FlaskForm):
@@ -172,7 +167,9 @@ class alg_params_form(FlaskForm):
     mu = SelectMultipleField('Density parameter \u03bc: ', choices=[('0.9', '0.9'), ('0.95', '0.95')])
     path_len = SelectField('Path length L: ', choices=[('3', '3')])
     num_iter = SelectField('Number of iterations T: ', choices=[('10000', '10000')])
-    submit = SubmitField('Submit')
+    submit_style = {
+        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    submit = SubmitField('Submit', render_kw=submit_style)
 
 
 def flash_errors(form):
@@ -200,9 +197,18 @@ def get_vln_route(filename):
 def home():
     print('home!!!')
     form = HomePage()
+    Zhang2019_link = '/results/' + data_n_to_url(1)
+    Wagner2018_link = '/results/' + data_n_to_url(3)
+    MouseSP2_link = '/results/' + data_n_to_url(2)
+    normal_prostate_link = '/results/' + data_n_to_url(5)
+    yaellab_differentiation_link = '/results/' + data_n_to_url(4)
+    bulk_mouse_Bcells_link = '/results/' + data_n_to_url(6)
     if form.validate_on_submit():
         return redirect(url_for('load_data_form'))
-    return render_template('index.html', form=form)
+    return render_template('index.html', form=form, Zhang2019_link=Zhang2019_link, Wagner2018_link=Wagner2018_link,
+                           MouseSP2_link=MouseSP2_link, normal_prostate_link=normal_prostate_link,
+                           yaellab_differentiation_link=yaellab_differentiation_link,
+                           bulk_mouse_Bcells_link=bulk_mouse_Bcells_link)
 
 
 @app.route('/run_SPIRAL_step1', methods=['POST', 'GET'])
@@ -261,6 +267,20 @@ def load_data_form():
 
         # flash("This field requires a valid email address")
     return render_template('load_data_form.html', form=form)
+
+
+@app.route('/results/download_count_matrix_<data_n>', methods=['GET', 'POST'])
+def download_count_matrix(data_n):
+    data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+    count_matrix_file = 'counts.csv'
+    return send_from_directory(data_path, count_matrix_file)
+
+
+@app.route('/results/download_spatial_coors_<data_n>', methods=['GET', 'POST'])
+def download_spatial_coors(data_n):
+    data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+    spatial_coors_file = 'spatial_coors.csv'
+    return send_from_directory(data_path, spatial_coors_file)
 
 
 @app.route('/run_SPIRAL_step1.5', methods=['POST', 'GET'])
@@ -567,17 +587,19 @@ def filter_struct_lst_for_result_panel():
     # range(1, len(Jaccard_mat_genes) + 1), and that structure i corresponds to row i-1 in Jaccard_mat_genes.
     print('filter_struct_lst_for_result_panel!!!')
 
-    Jaccard_mat_genes = request.args.get('Jaccard_mat_genes', None, type=str)
+    data_n = request.args.get('data_n', None, type=str)
     new_Jaccard_thr_genes = float(request.args.get('new_Jaccard_thr_genes', None, type=str))
-    print(Jaccard_mat_genes, new_Jaccard_thr_genes)
+    print(data_n, new_Jaccard_thr_genes)
+
+    data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+    # get the Jaccard matrix of gene lists
+    Jaccard_mat_genes = np.load(os.path.join(data_path, 'Jaccard_mat_genes.npy'))
 
     if new_Jaccard_thr_genes is None:
         if Jaccard_mat_genes is None:
             return jsonify(thr_struct_lst=[])
         else:
             return jsonify(thr_struct_lst=range(1, len(Jaccard_mat_genes) + 1))
-
-    Jaccard_mat_genes = str_to_lst_of_lsts(Jaccard_mat_genes)
 
     inds = list(range(1, len(Jaccard_mat_genes) + 1))
     thr_struct_lst = []
@@ -620,20 +642,8 @@ def results_panel(url):
     Jaccard_thr_genes = open(os.path.join(data_path, 'Jaccard_thr_genes.txt'), "r").read()
     # Jaccard_thr_sample_pairs = open(os.path.join(data_path, 'Jaccard_thr_sample_pairs.txt'), "r").read()
 
-    # get the Jaccard matrix of gene lists
-    Jaccard_mat_genes = np.load(os.path.join(data_path, 'Jaccard_mat_genes.npy'))
-    Jaccard_mat_genes = list_of_lists_to_str([list(l) for l in Jaccard_mat_genes])
-    print(type(Jaccard_mat_genes))
-    print(Jaccard_mat_genes)
-
     return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst, impute_method=impute_method,
-                           dataset_name=dataset_name, GO_flag=GO_flag, Jaccard_thr_genes=Jaccard_thr_genes,
-                           Jaccard_mat_genes=Jaccard_mat_genes)
-
-
-@app.route('/test')
-def test():
-    return render_template('test2.html')
+                           dataset_name=dataset_name, GO_flag=GO_flag, Jaccard_thr_genes=Jaccard_thr_genes)
 
 
 ############################################################################################################
