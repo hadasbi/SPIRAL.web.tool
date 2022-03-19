@@ -17,7 +17,7 @@ from threading import Thread
 
 app = Flask(__name__)
 
-app.config['SERVER_NAME'] = '132.68.108.27:5000'
+app.config['SERVER_NAME'] = '10.100.102.7:5000'
 # app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -33,7 +33,7 @@ app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
 ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 
 # Flask-WTF requires an encryption key - the string can be anything
-app.config['SECRET_KEY'] = 'kncwhgJAVKBJAHFvlv,Klz'
+app.config['SECRET_KEY'] = open('./Flask-WTF_encription_key.txt', 'r').read()
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 
 # Flask-Bootstrap requires this line
