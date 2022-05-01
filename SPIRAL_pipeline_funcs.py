@@ -1,3 +1,5 @@
+#!/home/yaellab/SPIRAL/bin/python3.8
+
 import sys
 import os.path
 import seaborn as sns
@@ -145,7 +147,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species):
     plt.close()
 
     # save violin plot of percent of mitochondrial genes
-    MTgenes, error = get_MTgenes(list(data.index), species)
+    MTgenes, error = get_MTgenes(data_path, list(data.index), species)
     with_mt = False
     if MTgenes:
         with_mt = True
@@ -371,7 +373,6 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
             save_genetable_to_file(data=data, genetable_file=genetable_file)
 
     for num_stds_thresh in num_stds_thresh_lst:
-        print('num_stds_thresh =', num_stds_thresh)
         genes_in_sets_coo_file = os.path.join(data_path,
                                               impute_method + '_std_' + str(num_stds_thresh) + '_genes_in_sets_COO.npz')
         genes_in_sets_csc_file = os.path.join(data_path,
@@ -404,9 +405,6 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                                    num_stds_thresh=num_stds_thresh)
 
         for mu in mu_lst:
-            print('num_stds_thresh =', num_stds_thresh)
-            print('mu =', mu)
-
             for path_len in path_len_lst:
                 for num_iters in num_iters_lst:
                     # check if a structures file already exists (if not, compute it)
@@ -547,17 +545,14 @@ def filter_data(data_path, min_nFeatures, max_nFeatures, max_mtpercent, spatial,
     if max_nFeatures is None:
         max_nFeatures = int(open(os.path.join(data_path, 'max_nFeatures.txt'), "r").read())
 
-    with_mt = False
-    if (max_mtpercent is not None) or (os.path.exists(os.path.join(data_path, 'max_mtpercent.txt'))):
-        with_mt = True
-        if max_mtpercent is None:
-            max_mtpercent = int(open(os.path.join(data_path, 'max_mtpercent.txt'), "r").read())
+    with_mt = (open(with_mt_filename_(data_path), "r").read().lower() == 'true')
 
     ##### Filter the data set ######################################################
     data = pd.read_csv(data_norm_loc, index_col=0, sep='\t')
     data = data.loc[:, (data.astype(bool).sum() >= min_nFeatures) & (data.astype(bool).sum() <= max_nFeatures)]
     if with_mt:
-        MTgenes, mt_error = get_MTgenes(list(data.index), species)
+        max_mtpercent = int(open(os.path.join(data_path, 'max_mtpercent.txt'), "r").read())
+        MTgenes, mt_error = get_MTgenes(data_path, list(data.index), species)
         mtpercent = np.divide(data.loc[MTgenes, :].sum(), data.sum()) * 100
         data = data.loc[:, mtpercent <= max_mtpercent]
 
@@ -678,7 +673,7 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
             n_clusters = min(100, int(np.round(num_cells / 30)))
             # n_clusters = min(40, int(np.round(num_cells / 30)))
         print('aiming for', n_clusters, 'clusters')
-        print('averagely', np.round(num_cells / n_clusters, 2), 'cells per cluster')
+        print('averagely', np.round(num_cells / n_clusters, 1), 'cells per cluster')
 
         clustering = AgglomerativeClustering(linkage='ward', n_clusters=n_clusters).fit(data.transpose())
         labels = renumber_clusters(list(clustering.labels_), min_cells_per_cluster)
@@ -784,11 +779,7 @@ def compute_sets_on_standardized_genes(genetable_file,
         genes_table = pickle.load(fp)
 
     # normalize the original matrix
-    print('genes means before standartization:', counts.mean(axis=1)[:5])
-    print('genes stds before standartization:', counts.std(axis=1)[:5])
     counts = counts.subtract(counts.mean(axis=1), axis=0).divide(counts.std(axis=1), axis=0)
-    print('genes means after standartization:', counts.mean(axis=1)[:5])
-    print('genes stds after standartization:', counts.std(axis=1)[:5])
 
     # intialize the row and column arrays of the filled indices
     num_genes, num_samples = counts.shape[0], counts.shape[1]
@@ -866,11 +857,7 @@ def compute_sets_on_standardized_genes(genetable_file,
 
     num_sets = num_samples * (num_samples - 1)
 
-    print('it takes', np.round(t / num_sets, 2), 'seconds for a set')
-    print('it takes', np.round(t, 2), 'seconds for', num_sets, 'sets')
-
     avg_num_of_genes_per_set = np.absolute(genes_in_sets).sum() / num_sets
-    print('avg_num_of_genes_per_set is around', np.round(avg_num_of_genes_per_set, 2))
 
 
 ####################################################################################################################
@@ -891,7 +878,6 @@ def find_structures(genes_in_sets_npz_file, structs_file, mu, num_iters=10000, p
     print('find_structures!')
 
     genes_in_sets = sparse.load_npz(genes_in_sets_npz_file)
-    print(type(genes_in_sets), genes_in_sets.shape)
 
     # start with a random path
     if use_mp_to_find_structs:
@@ -966,23 +952,18 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
         significance_table.loc[:, 'num_' + real_samp_name + 's'] = len(cells_to_repcells)
 
     for i, s in enumerate(structs):
-        print('structure', i, ':\t#rows:', len(s[0]), '\t#cols:', len(s[1]))
+        # print('structure', i, ':\t#rows:', len(s[0]), '\t#cols:', len(s[1]))
 
         genes = list(genes_table[s[0]].index)
-        # print(len(genes), 'genes')
-        # print('genes:', genes)
         significance_table.loc[i, 'num_genes_in_struct'] = len(genes)
         significance_table.loc[i, 'genes'] = write_gene_list(genes)
 
         sample_pairs = [divmod(x, num_samples) for x in s[1]]
-        # print(len(repcell_pairs), 'sets')
-        # print('sets:', sets)
         significance_table.loc[i, 'num_' + samp_name + '_pairs_in_struct'] = len(sample_pairs)
         significance_table.loc[i, samp_name + '_pairs'] = str(sample_pairs)
 
         # find all the cells that are relevant to this structure:
         samples = list(set([item for sublist in sample_pairs for item in sublist]))
-        # print(len(repcells), 'repcells')
         significance_table.loc[i, 'num_' + samp_name + 's_in_struct'] = len(samples)
 
         if impute_method != 'no_imputation':
@@ -997,23 +978,16 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
         for k, sett in enumerate(sample_pairs):
             curr_B[k, samples.index(sett[0])] = -1
             curr_B[k, samples.index(sett[1])] = 1
-        # print('curr_B.shape:', curr_B.shape)
 
         # multiply the normalized matrix by B to get the vector to compare with
         curr_S = np.dot(curr_B, curr_normalized_counts.transpose())
-        # print('curr_S.shape:', curr_S.shape)
 
         # covariance matrix of curr_Y (curr_S is a sample of it)
         cov_mat = np.dot(curr_B, curr_B.transpose())
-        # print('cov_mat.shape:', cov_mat.shape)
-        # cov_mat_rank = np.linalg.matrix_rank(cov_mat)
-        # print('cov_mat_rank:', cov_mat_rank)
 
         # compute structure_average_std
         avg_vec = (1 / len(sample_pairs)) * np.ones((len(sample_pairs)))
-        # print('avg_vec.shape:', avg_vec.shape)
         average_diff_of_gene_std = np.sqrt(np.dot(np.dot(avg_vec.transpose(), cov_mat), avg_vec))
-        # print('average_diff_of_gene_std =', average_diff_of_gene_std)
         significance_table.loc[i, 'structure_average_std'] = average_diff_of_gene_std
 
         # average the differences for each gene
@@ -1022,9 +996,6 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
             print("PROBLEM 1")
 
         genes_probs_logs = norm.logsf(average_diff_of_genes / average_diff_of_gene_std) / np.log(10)
-
-        # significance_table.loc[i,'log10_pmax_of_genes'] = np.max(genes_probs_logs)
-        # significance_table.loc[i,'log10_pavg_of_genes'] = np.log10(np.mean(np.power(10,genes_probs_logs)))
 
         log10pval = np.sum(genes_probs_logs)
         # print('initial probability: 1e', log10pval)
@@ -1070,13 +1041,9 @@ def merge_sigtables(sigfile_merged, data_path, impute_method, num_stds_thresh_ls
 def create_dict_of_struct_lsts(data_path, impute_method, sigtable):
     # create a dictionary of structure lists
     num_std_lst = list(set(sigtable.loc[:, 'num_stds_thresh']))
-    print(num_std_lst)
     mu_lst = list(set(sigtable.loc[:, 'mu']))
-    print(mu_lst)
     path_len_lst = list(set(sigtable.loc[:, 'path_len']))
-    print(path_len_lst)
     num_iters_lst = list(set(sigtable.loc[:, 'num_iters']))
-    print(num_iters_lst)
     struct_dict = dict()
     for num_std in num_std_lst:
         for mu in mu_lst:
@@ -1141,14 +1108,12 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
 
     # An efficient way to find pairs of similar structures and remove the least favorable structure
     # It counts on the fact that the table is sorted by 'structure_average_std'
-    start = time()
     significance_table_filt = significance_table_filt.sort_values(by='structure_average_std', ascending=True)
     inds = list(significance_table_filt.index)
     final_struct_lst = []
     while inds:
         i = inds.pop(0)
         final_struct_lst.append(i)
-        print(i, len(inds))
         similar_to_i = []
 
         # read i'th gene_list
@@ -1220,8 +1185,6 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
 
     significance_table_filt = significance_table_filt.loc[final_struct_lst, :]
     print('There are', len(significance_table_filt), 'non-overlapping structures')
-
-    print(np.round((time() - start) / 60), 'minutes')
 
     significance_table_filt = significance_table_filt.sort_values(by='structure_average_std', ascending=True)
 

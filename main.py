@@ -1,6 +1,7 @@
 import os, io
 from time import sleep
 import re
+import urllib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
@@ -17,7 +18,7 @@ from threading import Thread
 
 app = Flask(__name__)
 
-app.config['SERVER_NAME'] = '10.100.102.7:5000'
+app.config['SERVER_NAME'] = '132.69.236.102:5000'
 # app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -49,12 +50,10 @@ patch_request_class(app, 1024 * 1024 * 1024)
 def dataset_number(path):
     existing_folders = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
     existing_folders = [d for d in existing_folders if d[:4] == 'data' and len(d) > 4]
-    print(existing_folders)
     if existing_folders:
         new_n = max([int(d[4:]) for d in existing_folders]) + 1
     else:
         new_n = 1
-    print(new_n)
     return new_n
 
 
@@ -215,19 +214,11 @@ def home():
 def load_data_form():
     print('load_data_form!!!')
     form = LoadData(request.form)
-    print('hi')
-    print('form.errors:', form.errors)
-    print('form.email.errors:', form.email.errors)
-    print('form.validate_on_submit():', form.validate_on_submit())
 
     if request.method == 'POST' and 'count_matrix' in request.files and not form.email.errors:
-        print('Hi')
-        print(form.errors)
-
         # create a folder for the new dataset
         data_n = dataset_number(ANALYSIS_FOLDER)
         data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
-        print(data_path)
         os.mkdir(data_path)
 
         # save dataset_name
@@ -240,13 +231,11 @@ def load_data_form():
             text_file.write(form.email.data)
 
         filename = tables.save(storage=request.files['count_matrix'], folder='data' + str(data_n), name='counts.')
-        print(filename)
 
         # if 'spatial_coors' in request.files:
         if request.files['spatial_coors'].filename:
             filename = tables.save(storage=request.files['spatial_coors'], folder='data' + str(data_n),
                                    name='spatial_coors.')
-            print(filename)
 
         # save species
         species = form.species.data
@@ -319,13 +308,12 @@ def violin_plots():
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     vln_plot_filename = vln_plot_filename_(static_path=app._static_folder, data_n=data_n)
     vln_plot_mt_filename = vln_plot_mt_filename_(static_path=app._static_folder, data_n=data_n)
-    with_mt_filename = os.path.join(data_path, 'with_mt.txt')
+    with_mt_filename = with_mt_filename_(data_path)
     mt_error_filename = os.path.join(data_path, 'mt_error.txt')
     if not os.path.exists(vln_plot_filename) or not os.path.exists(with_mt_filename):
         with_mt, mt_error = compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n,
                                                  static_path=app._static_folder,
                                                  species=species)
-        mt_error = str(mt_error)
         with open(with_mt_filename, 'w') as text_file:
             text_file.write(str(with_mt))
         with open(mt_error_filename, 'w') as text_file:
@@ -354,7 +342,6 @@ def violin_plots():
             if max_mtpercent is not None:
                 with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
                     text_file.write(str(max_mtpercent))
-            print(max_mtpercent)
             return redirect(url_for('check_data_filtering_params',
                                     data_n=data_n, min_nFeatures=min_nFeatures, species=species,
                                     max_nFeatures=max_nFeatures, max_mtpercent=max_mtpercent,
@@ -456,12 +443,15 @@ def all_done():
 
 @app.route("/email")
 def email(data_n):
+    # send an email to user and a (bcc) copy to self
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     recipient_email = open(os.path.join(data_path, 'email.txt'), "r").read()
     dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
-    msg = Message('SPIRAL results are ready for you', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email])
+    msg = Message('SPIRAL results are ready', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email],
+                  bcc=['SPIRAL.web.tool@gmail.com'])
     msg.body = ("Hello, \nSPIRAL finished processing" + (dataset_name != '') * (' ' + dataset_name) + '.' +
-                "\nThe results link is " + url_for('results_panel', url=data_n_to_url(data_n), _external=True))
+                "\nThe results link is " + urllib.parse.unquote(
+                url_for('results_panel', url=data_n_to_url(data_n), _external=True, _scheme='https')))
     mail.send(msg)
     return "Message sent!"
 
@@ -478,7 +468,6 @@ def pic_names_and_GO_terms():
 
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     pic_path = pic_folder(data_path)
-    print(pic_path)
 
     spatial = False
     if [file for file in os.listdir(pic_path) if file.endswith("_spatial.jpg")]:
@@ -520,15 +509,11 @@ def pic_names_and_GO_terms():
                                'struct_' + struct + '_orig_UMAP.jpg']
                 if spatial:
                     struct_pics.append('struct_' + struct + '_spatial.jpg')
-    # pic_path = '/static/analysis/data' + data_n + '/structure_layouts/'
 
     struct_pics = ['/' + os.path.join(pic_path, file).replace('\\', '/') for file in struct_pics]
-    print(struct_pics)
 
     # get GO enrichment terms
-    # impute_method = request.args.get('impute_method', 'no_impute_method', type=str)
     sigfile = final_sig_filename(data_path, impute_method)
-    # sigtable = pd.read_csv(sigfile, index_col=0, sep='\t')
     sigtable = load_excel_with_openpyxl_and_convert_to_pd_DataFrame(sigfile)
     if ('proc_GOterms_below_1e-06' in list(sigtable)) and ('func_GOterms_below_1e-06' in list(sigtable)) and (
             'comp_GOterms_below_1e-06' in list(sigtable)):
@@ -554,7 +539,6 @@ def pic_names_and_GO_terms():
 
     # get gene list
     gene_list = read_gene_list(sigtable.loc[int(struct), 'genes'])
-    print(gene_list)
     return jsonify(struct_pics=struct_pics, gene_list=gene_list, GO_terms=GO_terms)
 
 
@@ -589,7 +573,6 @@ def filter_struct_lst_for_result_panel():
 
     data_n = request.args.get('data_n', None, type=str)
     new_Jaccard_thr_genes = float(request.args.get('new_Jaccard_thr_genes', None, type=str))
-    print(data_n, new_Jaccard_thr_genes)
 
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     # get the Jaccard matrix of gene lists

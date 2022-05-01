@@ -1,3 +1,5 @@
+#!/home/yaellab/SPIRAL/bin/python3.8
+
 import os.path
 import pandas as pd
 import numpy as np
@@ -14,8 +16,6 @@ import itertools
 
 
 ####################################################################################################################
-
-
 def visualize_repcell_partition(clustering_file_final,
                                 norm_filt_umap_coor_file, norm_filt_pca_coor_file,
                                 use_5000,
@@ -46,7 +46,7 @@ def visualize_repcell_partition(clustering_file_final,
     cell_definitions_sorted_set = None
     shapes = None
     if with_deffs:
-        print('\nloading cell labels and cell definitions from file...')
+        print('loading cell labels and cell definitions from file...')
         cell_definitions_orig = []
         with open(origdeffsfile, "r") as f:
             for line in f:
@@ -107,10 +107,10 @@ def visualize_repcell_partition(clustering_file_final,
     if save_umap:
         # get coordinates
         if load_orig_umap_from_file and os.path.exists(norm_filt_umap_coor_file):
-            print('\nloading UMAP of original data set...')
+            print('loading UMAP of original data set...')
             umap_coor_orig = loadtxt(norm_filt_umap_coor_file, delimiter=',')
         else:
-            print('\ncomputing UMAP of original data set...')
+            print('computing UMAP of original data set...')
             umap_coor_orig = umap.UMAP(random_state=42).fit_transform(data.transpose())
             savetxt(norm_filt_umap_coor_file, umap_coor_orig, delimiter=',')
 
@@ -123,10 +123,10 @@ def visualize_repcell_partition(clustering_file_final,
     if save_pca:
         # get coordinates
         if load_orig_pca_from_file and os.path.exists(norm_filt_pca_coor_file):
-            print('\nloading PCA of original data set...')
+            print('loading PCA of original data set...')
             pca_coor_orig = loadtxt(norm_filt_pca_coor_file, delimiter=',')
         else:
-            print('\ncomputing PCA of original data set...')
+            print('computing PCA of original data set...')
             pca = PCA(n_components=2)
             datamatrix = normalize(data.transpose())
             pca_coor_orig = pca.fit_transform(datamatrix)
@@ -140,7 +140,7 @@ def visualize_repcell_partition(clustering_file_final,
 
     if save_spatial:
         # get coordinates
-        print('\nloading spatial coordinates of data set...')
+        print('loading spatial coordinates of data set...')
         spatial_coor = loadtxt(spatial_norm_filt_loc, delimiter=',')
 
         # save repcell partition
@@ -177,7 +177,7 @@ def save_orig_deffs_to_file(data, data_path, data_norm_filt_loc, origdeffsfile):
 ##################################################################################################################
 def decide_on_numerical_shapes(origdeffsfile):
     # Decide whether to use regular markers or numerical markers in the structures' layouts
-    print('\nloading cell definitions from file...')
+    print('loading cell definitions from file...')
     cell_definitions_orig = []
     with open(origdeffsfile, "r") as f:
         for line in f:
@@ -205,7 +205,7 @@ def compute_deffs_for_imputed(impute_method, repcelldeffsfile, origdeffsfile, cl
                               data_path,
                               repcells_data=None, repcells_data_loc=None, stepsfile=None, with_steps=False,
                               data=None, data_norm_filt_loc=None):
-    print('\ncompute_deffs_for_imputed!')
+    print('compute_deffs_for_imputed!')
 
     if stepsfile == None:
         with_steps = False
@@ -350,7 +350,7 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
                            save_UMAP=True, save_PCA=True, use_5000=False,
                            load_coor_from_file=True, with_legend=True, with_title=True,
                            numerical_shapes=False):
-    print('\nsave_layout_of_imputed!\n')
+    print('save_layout_of_imputed!')
 
     if repcells_data is None and repcells_data_loc is None:
         print('No repcells_data path and no repcells_data argument.')
@@ -408,10 +408,10 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
     # umap and PCA
     if save_UMAP:
         if load_coor_from_file and os.path.exists(repcellsumapcoorfile):
-            print('\nloading UMAP...')
+            print('loading UMAP...')
             coors = loadtxt(repcellsumapcoorfile, delimiter=',')
         else:
-            print('\ncomputing UMAP...')
+            print('computing UMAP...')
             coors = umap.UMAP(random_state=42).fit_transform(repcells_data.transpose())
             savetxt(repcellsumapcoorfile, coors, delimiter=',')
 
@@ -423,10 +423,10 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
                            with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes)
     if save_PCA:
         if load_coor_from_file and os.path.exists(repcellspcacoorfile):
-            print('\nloading PCA...')
+            print('loading PCA...')
             coors = loadtxt(repcellspcacoorfile, delimiter=',')
         else:
-            print('\ncomputing PCA...')
+            print('computing PCA...')
             pca = PCA(n_components=2)
             datamatrix = normalize(repcells_data.transpose())
             coors = pca.fit_transform(datamatrix)
@@ -450,7 +450,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
                         use_5000=False, numerical_shapes=False,
                         with_steps=False, stepsfile=None,
                         load_coor_from_file=True, with_legend=True, with_title=True):
-    print('\nsave_layout_of_orig!\n')
+    print('save_layout_of_orig!')
     if data is None and data_norm_filt_loc is None:
         print('No data path and no data argument.')
 
@@ -467,7 +467,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
         save_orig_deffs_to_file(data=data, data_path=data_path, data_norm_filt_loc=data_norm_filt_loc,
                                 origdeffsfile=origdeffsfile)
 
-    print('\nloading cell labels and cell definitions from file...')
+    print('loading cell labels and cell definitions from file...')
     cell_definitions_orig = []
     with open(origdeffsfile, "r") as f:
         for line in f:
@@ -500,10 +500,10 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
 
     if save_umap:
         if load_coor_from_file and os.path.exists(norm_filt_umap_coor_file):
-            print('\nloading UMAP of original data set...')
+            print('loading UMAP of original data set...')
             coors = loadtxt(norm_filt_umap_coor_file, delimiter=',')
         else:
-            print('\ncomputing UMAP of original data set...')
+            print('computing UMAP of original data set...')
             coors = umap.UMAP(random_state=42).fit_transform(data.transpose())
             savetxt(norm_filt_umap_coor_file, coors, delimiter=',')
 
@@ -516,10 +516,10 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
 
     if save_pca:
         if load_coor_from_file and os.path.exists(norm_filt_pca_coor_file):
-            print('\nloading PCA of original data set...')
+            print('loading PCA of original data set...')
             coors = loadtxt(norm_filt_pca_coor_file, delimiter=',')
         else:
-            print('\ncomputing PCA of original data set...')
+            print('computing PCA of original data set...')
             pca = PCA(n_components=2)
             datamatrix = normalize(data.transpose())
             coors = pca.fit_transform(datamatrix)
@@ -533,7 +533,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
                            with_legend=with_legend, with_title=with_title, numerical_shapes=numerical_shapes)
 
     if save_spatial:
-        print('\nloading spatial coordinates of original data set...')
+        print('loading spatial coordinates of original data set...')
         coors = loadtxt(spatial_norm_filt_loc, delimiter=',')
 
         print('Saving PCA layout')
@@ -810,36 +810,36 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
     # umap and PCA coordinates
     if save_UMAPs_repcells:
         if os.path.exists(repcellsumapcoorfile):
-            print('\nloading UMAP...')
+            print('loading UMAP...')
             umap_coor = loadtxt(repcellsumapcoorfile, delimiter=',')
         else:
-            print('\ncomputing UMAP...')
+            print('computing UMAP...')
             umap_coor = umap.UMAP(random_state=42).fit_transform(repcells_data.transpose())
             savetxt(repcellsumapcoorfile, umap_coor, delimiter=',')
     if save_PCAs_repcells:
         if os.path.exists(repcellspcacoorfile):
-            print('\nloading PCA...')
+            print('loading PCA...')
             pca_coor = loadtxt(repcellspcacoorfile, delimiter=',')
         else:
-            print('\ncomputing PCA...')
+            print('computing PCA...')
             pca = PCA(n_components=2)
             datamatrix = normalize(repcells_data.transpose())
             pca_coor = pca.fit_transform(datamatrix)
             savetxt(repcellspcacoorfile, pca_coor, delimiter=',')
     if save_UMAPs_orig:
         if os.path.exists(norm_filt_umap_coor_file):
-            print('\nloading UMAP of original data set...')
+            print('loading UMAP of original data set...')
             umap_coor_orig = loadtxt(norm_filt_umap_coor_file, delimiter=',')
         else:
-            print('\ncomputing UMAP of original data set...')
+            print('computing UMAP of original data set...')
             umap_coor_orig = umap.UMAP(random_state=42).fit_transform(data.transpose())
             savetxt(norm_filt_umap_coor_file, umap_coor_orig, delimiter=',')
     if save_PCAs_orig:
         if os.path.exists(norm_filt_pca_coor_file):
-            print('\nloading PCA of original data set...')
+            print('loading PCA of original data set...')
             pca_coor_orig = loadtxt(norm_filt_pca_coor_file, delimiter=',')
         else:
-            print('\ncomputing PCA of original data set...')
+            print('computing PCA of original data set...')
             pca = PCA(n_components=2)
             datamatrix = normalize(data.transpose())
             pca_coor_orig = pca.fit_transform(datamatrix)
@@ -872,7 +872,7 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                   repcells_data_loc=repcells_data_loc, data_norm_filt_loc=data_norm_filt_loc,
                                   data_path=data_path)
 
-    print('\nloading cell definitions from file...')
+    print('loading cell definitions from file...')
 
     if save_UMAPs_orig or save_PCAs_orig or save_spatial or save_Gspatial or save_GUMAPs_orig or save_GPCAs_orig:
         cell_definitions_orig = []
@@ -923,7 +923,7 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
 
     for i in sigtable.index:
         # For every structure, save a figure and a link to the figure
-        print('\nstructure index:', i)
+        print('structure ' + str(i))
         sets_in_struct = sigtable.loc[i, samp_name + '_pairs']
         # print(sets_in_struct)
         sets_in_struct = [tuple(list(map(int, s.strip(')').strip('(').split(', ')))) for s in
@@ -965,9 +965,9 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
 
         ################################## title ##############################################
         if impute_method == 'no_imputation':
-            title = ('Algorithm parameters: ' + r'$\alpha$' + '=' + str(sigtable.loc[i, 'num_stds_thresh']) + ', '
-                     + r'$\mu$' + '=' + str(sigtable.loc[i, 'mu']) +
-                     'L=' + str(sigtable.loc[i, 'path_len']) +
+            title = ('Algorithm parameters: ' + r'$\alpha$' + '=' + str(sigtable.loc[i, 'num_stds_thresh']) + ', ' +
+                     r'$\mu$' + '=' + str(sigtable.loc[i, 'mu']) + ', ' +
+                     'L=' + str(sigtable.loc[i, 'path_len']) + ', ' +
                      'T=' + str(sigtable.loc[i, 'num_iters']) +
                      '\nStructure scores: p-value=1E' + str(p) +
                      ', ' + r'$\widetilde{\sigma}$' + '=' + str(
@@ -977,9 +977,9 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                      ' genes, ' + str(int(sigtable.loc[i, 'num_' + samp_name + 's_in_struct'])) + '/' +
                      str(sigtable.loc[i, 'num_' + samp_name + 's']) + ' ' + samp_name + 's')
         else:
-            title = ('Algorithm parameters: ' + r'$\alpha$' + '=' + str(sigtable.loc[i, 'num_stds_thresh']) + ', '
-                     + r'$\mu$' + '=' + str(sigtable.loc[i, 'mu']) +
-                     'L=' + str(sigtable.loc[i, 'path_len']) +
+            title = ('Algorithm parameters: ' + r'$\alpha$' + '=' + str(sigtable.loc[i, 'num_stds_thresh']) + ', ' +
+                     r'$\mu$' + '=' + str(sigtable.loc[i, 'mu']) + ', ' +
+                     'L=' + str(sigtable.loc[i, 'path_len']) + ', ' +
                      'T=' + str(sigtable.loc[i, 'num_iters']) +
                      '\nStructure scores: p-value=1E' + str(p) +
                      ', ' + r'$\widetilde{\sigma}$' + '=' + str(
@@ -1055,7 +1055,7 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                     for deff, shape in zip(cell_definitions_sorted_set, shapes[:len(set(deffs))]):
                         inds_deff = np.where(np.array(deffs) == deff)[0]
                         nodelist = list(set(inds_deff).intersection(set(G.nodes)))
-                        # print('\nnode_shape', shape)
+                        # print('node_shape', shape)
                         # print('node_color:',[node_level_dict[node] for node in nodelist])
                         nx.draw_networkx_nodes(G, pos, nodelist=nodelist,
                                                node_size=700 + np.array(
@@ -1113,7 +1113,7 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                     for deff, shape in zip(cell_definitions_sorted_set, shapes[:len(set(deffs))]):
                         inds_deff = np.where(np.array(deffs) == deff)[0]
                         nodelist = list(set(inds_deff).intersection(set(G.nodes)))
-                        # print('\nnode_shape', shape)
+                        # print('node_shape', shape)
                         # print('node_color:',[node_level_dict[node] for node in nodelist])
                         nx.draw_networkx_nodes(G, pos, nodelist=nodelist,
                                                node_size=700 + np.array(
@@ -1157,7 +1157,6 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
             print('Computing and saving UMAP\PCA\spatial layout')
 
             levels = np.array([node_level_name_dict[n] for n in range(curr_data.shape[1])])
-            print('len(levels):', len(levels))
 
             if (save_UMAPs_orig or save_PCAs_orig or save_spatial) and impute_method != 'no_imputation':
                 # Compute levels_orig
@@ -1169,7 +1168,6 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                 levels_orig = [node_level_name_dict[int(cells_to_repcells.loc[i, 'x'])] for i in
                                cells_to_repcells.index]
                 cells_to_repcells['levels'] = levels_orig
-                print('len(levels_orig):', len(levels_orig))
 
             # umap.plot.points(mapper, labels=np.array(levels), color_key_cmap='Paired')
             level_desc_dict = dict()

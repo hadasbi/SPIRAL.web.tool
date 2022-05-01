@@ -1,3 +1,5 @@
+#!/home/yaellab/SPIRAL/bin/python3.8
+
 import os.path
 import pandas as pd
 import numpy as np
@@ -43,7 +45,7 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
     if len(sigtable) > 0:
         num_samples = int(sigtable.iloc[0, :]['num_' + samp_name + 's'])
         num_genes = int(sigtable.iloc[0, :]['num_genes'])
-        print('num_samples:', num_samples, ' num_genes:', num_genes)
+        # print('num_samples:', num_samples, ' num_genes:', num_genes)
 
         # Load genes_table
         with open(genetable_file, 'rb') as fp:
@@ -108,7 +110,7 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
         browser["db"] = "all"
         # "all" OR "proc" (process) OR "func" (function) OR "comp" (component)
 
-        print(pvals[0], str('%f' % (pvals[0])))
+        # print(pvals[0], str('%f' % (pvals[0])))
         browser["pvalue_thresh"] = str('%f' % (pvals[0]))
         browser["analysis_name"] = ""
         browser["user_email"] = ""
@@ -126,7 +128,7 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
         # browser.get_current_page()
         # print(response.text)
         new_link = browser.get_url()
-        print('new_link:', new_link)
+        # print('new_link:', new_link)
 
         sleep(10)
         browser = mechanicalsoup.StatefulBrowser()
@@ -143,14 +145,14 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
         if ("GOResults" not in new_link2):
             print('PROBLEM: "GOResults" not in new_link2')
 
-        print('new_link2:', new_link2)
+        # print('new_link2:', new_link2)
 
         ind = [m.start() for m in re.finditer('/', new_link2)][-1]
         for ontology_init, ontology_html in zip(['proc', 'func', 'comp'],
                                                 ['GOResultsPROCESS.html', 'GOResultsFUNCTION.html',
                                                  'GOResultsCOMPONENT.html']):
             new_link3 = new_link2[:ind + 1] + ontology_html
-            print('new_link3', ontology_init, ':', new_link3)
+            # print('new_link3', ontology_init, ':', new_link3)
             hyperlink_txt = '=hyperlink("' + new_link3 + '","link")'
             # print(hyperlink_txt)
             sigtable.loc[i, ontology_init + '_link'] = hyperlink_txt

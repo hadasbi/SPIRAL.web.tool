@@ -2,7 +2,7 @@ from SPIRAL_pipeline_funcs import *
 
 ANALYSIS_FOLDER = './static/analysis'
 if __name__ == '__main__':
-    for data_n in [3]:
+    for data_n in [2]:
         if os.path.isdir(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))):
             print('\n\n\n\n\n\n\n', data_n)
             if data_n in [3, 4, 6]:
