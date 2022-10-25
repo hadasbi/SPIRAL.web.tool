@@ -110,8 +110,7 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
         browser["db"] = "all"
         # "all" OR "proc" (process) OR "func" (function) OR "comp" (component)
 
-        # print(pvals[0], str('%f' % (pvals[0])))
-        browser["pvalue_thresh"] = str('%f' % (pvals[0]))
+        browser["pvalue_thresh"] = "0.001"
         browser["analysis_name"] = ""
         browser["user_email"] = ""
 
