@@ -65,8 +65,7 @@ class HomePage(FlaskForm):
 
 class LoadData(FlaskForm):
     dataset_name = StringField('Name of dataset: ')
-    email = StringField('E-mail address: ', validators=[DataRequired(),
-                                                        Email("This field requires a valid email address")])
+    email = StringField('E-mail address: ', validators=[Email("Please enter a valid email address")])
     count_matrix = FileField('Gene expression matrix: ',
                              validators=[FileRequired(), FileAllowed(tables, 'csv or txt files only!')]
                              )
@@ -422,7 +421,7 @@ def alg_params():
                                 'analysis_folder': ANALYSIS_FOLDER, 'data_n': data_n})
         thread.start()
 
-        return redirect(url_for('all_done', data_n=data_n))
+        return redirect(url_for('results_panel', url=data_n_to_url(data_n)))
     return render_template('alg_params.html', form=form)
 
 
@@ -434,26 +433,21 @@ def run_SPIRAL(analysis_folder, data_n, num_stds_thresh_lst, mu_lst, num_iters_l
         email(data_n=data_n)
 
 
-@app.route('/all_done', methods=['POST', 'GET'])
-def all_done():
-    print('all_done!!!')
-    # data_n = request.args['data_n']
-    return render_template('all_done.html')
-
-
 @app.route("/email")
 def email(data_n):
     # send an email to user and a (bcc) copy to self
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     recipient_email = open(os.path.join(data_path, 'email.txt'), "r").read()
-    dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
-    msg = Message('SPIRAL results are ready', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email],
-                  bcc=['SPIRAL.web.tool@gmail.com'])
-    msg.body = ("Hello, \nSPIRAL finished processing" + (dataset_name != '') * (' ' + dataset_name) + '.' +
-                "\nThe results link is " + urllib.parse.unquote(
-                url_for('results_panel', url=data_n_to_url(data_n), _external=True, _scheme='https')))
-    mail.send(msg)
-    return "Message sent!"
+    if recipient_email:
+        dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
+        msg = Message('SPIRAL results are ready', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email],
+                      bcc=['SPIRAL.web.tool@gmail.com'])
+        msg.body = ("Hello, \nSPIRAL finished processing" + (dataset_name != '') * (' ' + dataset_name) + '.' +
+                    "\nThe results link is " + urllib.parse.unquote(
+                    url_for('results_panel', url=data_n_to_url(data_n), _external=True, _scheme='https')))
+        mail.send(msg)
+        return "Message sent!"
+    return "no email address"
 
 
 #################### results panel ##########################################################################
@@ -605,28 +599,40 @@ def filter_struct_lst_for_result_panel():
 def results_panel(url):
     data_n = url_to_data_n(url)
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+
+    if not os.path.exists(data_path):
+        return render_template('cant_find_data.html')
+
     dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
-
-    # get structure list
     full_pic_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), 'structure_layouts')
-    pic_suffs = [file[file.find('_') + 1:] for file in os.listdir(full_pic_path) if
-                 file.endswith(".jpg") and 'struct' in file]
-    struct_lst = list(set([int(file[:file.find('_')]) for file in pic_suffs]))
-    struct_lst = [str(s) for s in struct_lst]
+    GO_flag_path = os.path.join(data_path, 'GO_flag.txt')
+    imputation_method_path = os.path.join(data_path, 'imputation_method.txt')
+    Jaccard_thr_genes_path = os.path.join(data_path, 'Jaccard_thr_genes.txt')
 
-    # get GO_flag
-    GO_flag = (open(os.path.join(data_path, 'GO_flag.txt'), "r").read() == 'True')
+    if os.path.exists(full_pic_path) and os.path.exists(GO_flag_path) and os.path.exists(
+            imputation_method_path) and os.path.exists(Jaccard_thr_genes_path):
+        # get structure list
+        pic_suffs = [file[file.find('_') + 1:] for file in os.listdir(full_pic_path) if
+                     file.endswith(".jpg") and 'struct' in file]
+        struct_lst = list(set([int(file[:file.find('_')]) for file in pic_suffs]))
+        struct_lst = [str(s) for s in struct_lst]
 
-    # get imputation method
-    data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
-    impute_method = open(os.path.join(data_path, 'imputation_method.txt'), "r").read()
+        # get GO_flag
+        GO_flag = (open(GO_flag_path, "r").read() == 'True')
 
-    # get the Jaccard_thr_genes and Jaccard_thr_sample_pairs that were used
-    Jaccard_thr_genes = open(os.path.join(data_path, 'Jaccard_thr_genes.txt'), "r").read()
-    # Jaccard_thr_sample_pairs = open(os.path.join(data_path, 'Jaccard_thr_sample_pairs.txt'), "r").read()
+        # get imputation method
+        impute_method = open(imputation_method_path, "r").read()
 
-    return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst, impute_method=impute_method,
-                           dataset_name=dataset_name, GO_flag=GO_flag, Jaccard_thr_genes=Jaccard_thr_genes)
+        # get the Jaccard_thr_genes and Jaccard_thr_sample_pairs that were used
+        Jaccard_thr_genes = open(Jaccard_thr_genes_path, "r").read()
+        # Jaccard_thr_sample_pairs = open(os.path.join(data_path, 'Jaccard_thr_sample_pairs.txt'), "r").read()
+
+        if os.path.exists(final_sig_filename(data_path, impute_method)):
+            return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst,
+                                   impute_method=impute_method,
+                                   dataset_name=dataset_name, GO_flag=GO_flag, Jaccard_thr_genes=Jaccard_thr_genes)
+
+    return render_template('all_done.html')
 
 
 ############################################################################################################

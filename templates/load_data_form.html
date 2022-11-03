@@ -47,6 +47,7 @@
 
 
 
+
 </script>
 
 {% extends 'base.html' %}
@@ -75,7 +76,8 @@
                     {{ form.csrf_token() }}
                     <label for=""> {{ form.email.label }}</label>
                     {{ form.email }}
-                    <p><small>A link to the results page will be sent to this address. </small></p>
+                    <p><small>This field is optional. If filled, a link to the results page will be sent to this
+                        address. </small></p>
                     {% if form.email.errors %}
                     <ul class="errors">
                         {% for error in form.email.errors %}
