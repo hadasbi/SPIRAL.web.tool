@@ -38,8 +38,8 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
     # Check size of count matrix
     num_cells_orig, num_genes_orig = data.shape[1], data.shape[0]
 
-    if num_cells_orig > 200 and num_cells_orig < 1000:
-        raise ValueError('Number of spots\cells\samples in count matrix is in the range 200-1000.')
+    # if num_cells_orig > 200 and num_cells_orig < 1000:
+    #    raise ValueError('Number of spots\cells\samples in count matrix is in the range 200-1000.')
 
     ############## Load spatial coordinates (if exist) #############################
     spatial = False
@@ -443,6 +443,9 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                           impute_method=impute_method, num_stds_thresh_lst=num_stds_thresh_lst,
                                           mu_lst=mu_lst, path_len_lst=path_len_lst, num_iters_lst=num_iters_lst)
 
+    if sigtable_merged.empty:
+        return 'No_structures'
+
     # check if a filtered significance table file already exists (if not, compute it)
     sigfile_filt = os.path.join(data_path, impute_method + '_sigtable_filt.xlsx')
 
@@ -453,8 +456,12 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                                   real_samp_name=real_samp_name, struct_thr=0.8,
                                                   min_nstructs=3, max_nstructs=50)
 
+    if sigtable_filt is None:
+        return 'No_structures'
+
     # check if a filtered significance table file with GO terms and visualizations already exists (if not, compute it)
     sigfile_GO = os.path.join(data_path, impute_method + '_sigtable_filt_GO.xlsx')
+
     sigfile_GO_temp = sigfile_GO[:-5] + '_temp.xlsx'
     stopflag = False
     start_from_scratch = False
@@ -499,7 +506,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         sigtable_vis = visualize_structures(sigfile_vis=sigfile_vis, genetable_file=genetable_file,
                                             repcellsumapcoorfile=repcellsumapcoorfile,
                                             repcellspcacoorfile=repcellspcacoorfile,
-                                            repcells_data=(repcells_data if impute_method != 'no_imputation' else None),
+                                            repcells_data=(
+                                                repcells_data if impute_method != 'no_imputation' else None),
                                             repcells_data_loc=(
                                                 repcells_data_loc if impute_method != 'no_imputation' else None),
                                             norm_filt_pca_coor_file=norm_filt_pca_coor_file,
@@ -532,6 +540,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     # create a zip file of all structure layouts
     layouts_zipfile = os.path.join(data_path, 'structure_layouts.zip')
     zip_all_files_in_folder(zipfile=layouts_zipfile, folder=picfolder)
+    return 'Success'
 
 
 ####################################################################################################################
@@ -670,8 +679,11 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
         if impute_method == 'agg_wald_opt':
             n_clusters = find_opt_n_clusters(data, min_cells_per_cluster)
         elif impute_method == 'agg_wald':
-            n_clusters = min(100, int(np.round(num_cells / 30)))
-            # n_clusters = min(40, int(np.round(num_cells / 30)))
+            if num_cells >= 1000:
+                n_clusters = min(100, int(np.round(num_cells / 30)))
+            else:
+                n_clusters = int(np.round(num_cells / 20))
+                min_cells_per_cluster = 5
         print('aiming for', n_clusters, 'clusters')
         print('averagely', np.round(num_cells / n_clusters, 1), 'cells per cluster')
 
@@ -1027,12 +1039,13 @@ def merge_sigtables(sigfile_merged, data_path, impute_method, num_stds_thresh_ls
                                            num_stds_thresh=num_stds_thresh, mu=mu,
                                            path_len=path_len, num_iters=num_iters)
                     sigtable = pd.read_excel(sigfile, index_col=0, engine='openpyxl')
-                    sigtable.loc[:, 'old_struct_num'] = sigtable.index
-                    sigtable.loc[:, 'num_stds_thresh'] = num_stds_thresh
-                    sigtable.loc[:, 'mu'] = mu
-                    sigtable.loc[:, 'path_len'] = path_len
-                    sigtable.loc[:, 'num_iters'] = num_iters
-                    sigtable_merged = pd.concat([sigtable_merged, sigtable], ignore_index=True)
+                    if not sigtable.empty:
+                        sigtable.loc[:, 'old_struct_num'] = sigtable.index
+                        sigtable.loc[:, 'num_stds_thresh'] = num_stds_thresh
+                        sigtable.loc[:, 'mu'] = mu
+                        sigtable.loc[:, 'path_len'] = path_len
+                        sigtable.loc[:, 'num_iters'] = num_iters
+                        sigtable_merged = pd.concat([sigtable_merged, sigtable], ignore_index=True)
     sigtable_merged.to_excel(sigfile_merged)
     return sigtable_merged
 
@@ -1096,7 +1109,7 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
 
     if len(significance_table_filt) == 0:
         print('NO STRUCTURES FOUND!')
-        return significance_table_filt
+        return None
 
     #### if there are any structures with log10_corrected_pval<log_corrpval_thr: #####
     # Load genes_table

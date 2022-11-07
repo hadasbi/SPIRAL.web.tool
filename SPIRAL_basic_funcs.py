@@ -212,6 +212,11 @@ def spatial_norm_loc_name(data_path):
 
 
 ####################################################################################################################
+def outcome_path(data_path):
+    return os.path.join(data_path, 'outcome.txt')
+
+
+####################################################################################################################
 def data_n_to_url(data_n):
     sample_string = str(1000000 + int(data_n))
     sample_string_bytes = sample_string.encode("ascii")

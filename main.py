@@ -426,25 +426,36 @@ def alg_params():
 
 
 def run_SPIRAL(analysis_folder, data_n, num_stds_thresh_lst, mu_lst, num_iters_lst, path_len_lst):
-    run_SPIRAL_pipeline(analysis_folder=analysis_folder, data_n=data_n,
-                        num_stds_thresh_lst=num_stds_thresh_lst, mu_lst=mu_lst,
-                        num_iters_lst=num_iters_lst, path_len_lst=path_len_lst)
+    outcome = run_SPIRAL_pipeline(analysis_folder=analysis_folder, data_n=data_n,
+                                  num_stds_thresh_lst=num_stds_thresh_lst, mu_lst=mu_lst,
+                                  num_iters_lst=num_iters_lst, path_len_lst=path_len_lst)
+    data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+    with open(outcome_path(data_path), 'w') as text_file:
+        text_file.write(str(outcome))
     with app.app_context():
-        email(data_n=data_n)
+        email(data_n=data_n, outcome=outcome)
 
 
 @app.route("/email")
-def email(data_n):
+def email(data_n, outcome):
     # send an email to user and a (bcc) copy to self
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     recipient_email = open(os.path.join(data_path, 'email.txt'), "r").read()
     if recipient_email:
         dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
-        msg = Message('SPIRAL results are ready', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email],
-                      bcc=['SPIRAL.web.tool@gmail.com'])
-        msg.body = ("Hello, \nSPIRAL finished processing" + (dataset_name != '') * (' ' + dataset_name) + '.' +
-                    "\nThe results link is " + urllib.parse.unquote(
-                    url_for('results_panel', url=data_n_to_url(data_n), _external=True, _scheme='https')))
+        if outcome == 'Success':
+            msg = Message('SPIRAL results are ready', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email],
+                          bcc=['SPIRAL.web.tool@gmail.com'])
+            msg.body = ("Hello, \nSPIRAL finished processing" + (dataset_name != '') * (' ' + dataset_name) + '.' +
+                        "\nThe results link is " + urllib.parse.unquote(
+                        url_for('results_panel', url=data_n_to_url(data_n), _external=True, _scheme='https')))
+        elif outcome == 'No_structures':
+            msg = Message('SPIRAL results', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email],
+                          bcc=['SPIRAL.web.tool@gmail.com'])
+            msg.body = ("Hello, \nUnfortunately SPIRAL was not able to find any structures in" + (
+                    dataset_name != '') * (
+                                ' ' + dataset_name) +
+                        '. You might want to check again the format of the data you uploaded. Also, we encourage you to contact us with any questions.')
         mail.send(msg)
         return "Message sent!"
     return "no email address"
@@ -609,28 +620,32 @@ def results_panel(url):
     imputation_method_path = os.path.join(data_path, 'imputation_method.txt')
     Jaccard_thr_genes_path = os.path.join(data_path, 'Jaccard_thr_genes.txt')
 
-    if os.path.exists(full_pic_path) and os.path.exists(GO_flag_path) and os.path.exists(
-            imputation_method_path) and os.path.exists(Jaccard_thr_genes_path):
-        # get structure list
-        pic_suffs = [file[file.find('_') + 1:] for file in os.listdir(full_pic_path) if
-                     file.endswith(".jpg") and 'struct' in file]
-        struct_lst = list(set([int(file[:file.find('_')]) for file in pic_suffs]))
-        struct_lst = [str(s) for s in struct_lst]
+    if os.path.exists(outcome_path(data_path)):
+        outcome = open(outcome_path(data_path), "r").read()
+        print('outcome:', outcome)
+        if outcome == 'Success':
+            # get structure list
+            pic_suffs = [file[file.find('_') + 1:] for file in os.listdir(full_pic_path) if
+                         file.endswith(".jpg") and 'struct' in file]
+            struct_lst = list(set([int(file[:file.find('_')]) for file in pic_suffs]))
+            struct_lst = [str(s) for s in struct_lst]
 
-        # get GO_flag
-        GO_flag = (open(GO_flag_path, "r").read() == 'True')
+            # get GO_flag
+            GO_flag = (open(GO_flag_path, "r").read() == 'True')
 
-        # get imputation method
-        impute_method = open(imputation_method_path, "r").read()
+            # get imputation method
+            impute_method = open(imputation_method_path, "r").read()
 
-        # get the Jaccard_thr_genes and Jaccard_thr_sample_pairs that were used
-        Jaccard_thr_genes = open(Jaccard_thr_genes_path, "r").read()
-        # Jaccard_thr_sample_pairs = open(os.path.join(data_path, 'Jaccard_thr_sample_pairs.txt'), "r").read()
+            # get the Jaccard_thr_genes and Jaccard_thr_sample_pairs that were used
+            Jaccard_thr_genes = open(Jaccard_thr_genes_path, "r").read()
+            # Jaccard_thr_sample_pairs = open(os.path.join(data_path, 'Jaccard_thr_sample_pairs.txt'), "r").read()
 
-        if os.path.exists(final_sig_filename(data_path, impute_method)):
             return render_template('results_panel.html', data_n=data_n, struct_lst=struct_lst,
                                    impute_method=impute_method,
                                    dataset_name=dataset_name, GO_flag=GO_flag, Jaccard_thr_genes=Jaccard_thr_genes)
+
+        elif outcome == 'No_structures':
+            return render_template('no_structures.html')
 
     return render_template('all_done.html')
 
