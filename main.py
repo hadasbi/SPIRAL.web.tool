@@ -377,19 +377,15 @@ def check_data_filtering_params():
 
     num_genes_filename = os.path.join(data_path, 'num_genes.txt')
     num_cells_filename = os.path.join(data_path, 'num_cells.txt')
-    if not os.path.exists(num_genes_filename) or not os.path.exists(num_cells_filename):
-        data = filter_data(data_path=data_path, min_nFeatures=min_nFeatures, max_nFeatures=max_nFeatures,
-                           max_mtpercent=max_mtpercent, spatial=spatial, species=species,
-                           data_norm_loc=data_norm_loc, spatial_norm_loc=spatial_norm_loc,
-                           data_norm_filt_loc=data_norm_filt_loc, spatial_norm_filt_loc=spatial_norm_filt_loc)
-        num_genes, num_cells = data.shape[0], data.shape[1]
-        with open(num_genes_filename, 'w') as text_file:
-            text_file.write(str(num_genes))
-        with open(num_cells_filename, 'w') as text_file:
-            text_file.write(str(num_cells))
-    else:
-        num_genes = open(num_genes_filename, "r").read()
-        num_cells = open(num_cells_filename, "r").read()
+    data = filter_data(data_path=data_path, min_nFeatures=min_nFeatures, max_nFeatures=max_nFeatures,
+                       max_mtpercent=max_mtpercent, spatial=spatial, species=species,
+                       data_norm_loc=data_norm_loc, spatial_norm_loc=spatial_norm_loc,
+                       data_norm_filt_loc=data_norm_filt_loc, spatial_norm_filt_loc=spatial_norm_filt_loc)
+    num_genes, num_cells = data.shape[0], data.shape[1]
+    with open(num_genes_filename, 'w') as text_file:
+        text_file.write(str(num_genes))
+    with open(num_cells_filename, 'w') as text_file:
+        text_file.write(str(num_cells))
 
     form = CheckFilteringParams(request.form)
     if form.validate_on_submit():
