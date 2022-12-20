@@ -1,19 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  function fill_vals(){
-  var clicked = document.getElementById('fill_default_vals').checked
-  if (clicked){
-  document.getElementById('num_std_thr').value = '0.5';
-  document.getElementById('mu').value = '0.95';
-  document.getElementById('path_len').value = '3';
-  document.getElementById('num_iter').value = '10000';
-  } };
-
-
-
-
-
-</script>
+<script type="text/javascript" src="../static/js/alg_params.js"></script>
+<link rel="stylesheet" href="../static/css/alg_params.css">
 
 {% extends 'base.html' %}
 
@@ -21,12 +8,13 @@
 <center><h1>Run SPIRAL!</h1></center>
 <h2>Step 3/3: algorithm parameters</h2>
 <form id='alg_params_form' method="POST" action="" enctype="multipart/form-data">
+    <buttton type="button" id="fill_default_vals">Fill recommended values</buttton>
+
     {{ form.hidden_tag() }}
     <div class="form-inline">
 
         <div class="form-group">
             {{ form.csrf_token() }}
-            <p>Fill recommended values: {{ form.fill_default_vals(onclick="fill_vals()")}} </p>
         </div>
 
         <div class="form-group row-md-6">
