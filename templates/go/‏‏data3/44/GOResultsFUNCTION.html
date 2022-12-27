@@ -1,0 +1,994 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='532,651,641,699' HREF='#0004175' ALT=''>
+<AREA SHAPE='RECT' COORDS='597,763,707,826' HREF='#0004298' ALT=''>
+<AREA SHAPE='RECT' COORDS='252,1003,383,1083' HREF='#0000987' ALT=''>
+<AREA SHAPE='RECT' COORDS='165,1131,296,1229' HREF='#0000978' ALT=''>
+<AREA SHAPE='RECT' COORDS='545,367,628,415' HREF='#0008233' ALT=''>
+<AREA SHAPE='RECT' COORDS='537,489,636,586' HREF='#0070011' ALT=''>
+<AREA SHAPE='RECT' COORDS='253,367,347,415' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='116,506,223,569' HREF='#0001067' ALT=''>
+<AREA SHAPE='RECT' COORDS='253,513,347,561' HREF='#0003677' ALT=''>
+<AREA SHAPE='RECT' COORDS='140,229,223,277' HREF='#0003682' ALT=''>
+<AREA SHAPE='RECT' COORDS='83,875,205,955' HREF='#0001012' ALT=''>
+<AREA SHAPE='RECT' COORDS='60,1003,228,1083' HREF='#0000977' ALT=''>
+<AREA SHAPE='RECT' COORDS='677,497,784,577' HREF='#0003755' ALT=''>
+<AREA SHAPE='RECT' COORDS='497,229,580,277' HREF='#0016787' ALT=''>
+<AREA SHAPE='RECT' COORDS='81,102,177,165' HREF='#0140110' ALT=''>
+<AREA SHAPE='RECT' COORDS='17,222,116,285' HREF='#0003700' ALT=''>
+<AREA SHAPE='RECT' COORDS='665,643,772,706' HREF='#0070003' ALT=''>
+<AREA SHAPE='RECT' COORDS='248,763,379,826' HREF='#1990837' ALT=''>
+<AREA SHAPE='RECT' COORDS='229,875,397,955' HREF='#0000976' ALT=''>
+<AREA SHAPE='RECT' COORDS='116,635,212,715' HREF='#0044212' ALT=''>
+<AREA SHAPE='RECT' COORDS='247,222,353,285' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='300,5,186,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='264,109,336,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='553,109,628,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='236,651,367,699' HREF='#0043565' ALT=''>
+<AREA SHAPE='RECT' COORDS='391,651,508,699' HREF='#0003690' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,342,128,439' HREF='#0000981' ALT=''>
+<AREA SHAPE='RECT' COORDS='377,222,473,285' HREF='#1901363' ALT=''>
+<AREA SHAPE='RECT' COORDS='705,359,791,422' HREF='#0016859' ALT=''>
+<AREA SHAPE='RECT' COORDS='604,213,681,293' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='705,229,791,277' HREF='#0016853' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0140110&amp;view=details' target="_blank">GO:0140110</a><a name=0140110></a></td>
+<td>transcription regulator activity</td>
+<td  align=center>5.77E-7</td>
+<td  align=center>1.92E-3</td>
+<td  align=center>2.37 (17542,1502,182,37)</td>
+<td>
+<a id="ctrl_elements_GO:0140110" href="javascript:toggle('elements_GO:0140110')">[+] Show genes</a><br>
+<div id="elements_GO:0140110" style="display:none"> <font size=1>
+jdp2  -  jun dimerization protein 2<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+hsbp1a  -  heat shock factor binding protein 1a<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+klf6a  -  kruppel-like factor 6a<br>
+junba  -  jun b proto-oncogene a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+mycn  -  v-myc myelocytomatosis viral related oncogene, neuroblastoma derived (avian)<br>
+zfhx4  -  zinc finger homeobox 4<br>
+cited4a  -  cbp/p300-interacting transactivator, with glu/asp-rich carboxy-terminal domain, 4a<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+zmiz1a  -  zinc finger, miz-type containing 1a<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+irf2bp2a  -  interferon regulatory factor 2 binding protein 2a<br>
+kmt2cb  -  lysine (k)-specific methyltransferase 2cb<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+etv6  -  ets variant gene 6 (tel oncogene)<br>
+mdm4  -  transformed 3t3 cell double minute 4 homolog (mouse)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+irf2bpl  -  interferon regulatory factor 2 binding protein-like<br>
+klf11b  -  kruppel-like factor 11b<br>
+tshz1  -  teashirt family zinc finger 1<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+tada2a  -  transcriptional adaptor 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003677&amp;view=details' target="_blank">GO:0003677</a><a name=0003677></a></td>
+<td>DNA binding</td>
+<td  align=center>8.41E-7</td>
+<td  align=center>1.4E-3</td>
+<td  align=center>2.18 (17542,1858,182,42)</td>
+<td>
+<a id="ctrl_elements_GO:0003677" href="javascript:toggle('elements_GO:0003677')">[+] Show genes</a><br>
+<div id="elements_GO:0003677" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+hist2h2l  -  histone 2, h2, like<br>
+phc2b  -  polyhomeotic-like 2b<br>
+h2afy2  -  h2a histone family, member y2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+tefa  -  thyrotroph embryonic factor a<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+mycn  -  v-myc myelocytomatosis viral related oncogene, neuroblastoma derived (avian)<br>
+zfhx4  -  zinc finger homeobox 4<br>
+arid1b  -  at rich interactive domain 1b (swi1-like)<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+irf9  -  interferon regulatory factor 9<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+cxxc5a  -  cxxc finger 5a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+tcf12  -  transcription factor 12<br>
+tdp1  -  tyrosyl-dna phosphodiesterase 1<br>
+etv6  -  ets variant gene 6 (tel oncogene)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+klf11b  -  kruppel-like factor 11b<br>
+xrcc5  -  x-ray repair complementing defective repair in chinese hamster cells 5<br>
+tshz1  -  teashirt family zinc finger 1<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+per1b  -  period homolog 1b (drosophila)<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000978&amp;view=details' target="_blank">GO:0000978</a><a name=0000978></a></td>
+<td>RNA polymerase II proximal promoter sequence-specific DNA binding</td>
+<td  align=center>6.38E-6</td>
+<td  align=center>7.08E-3</td>
+<td  align=center>2.69 (17542,897,182,25)</td>
+<td>
+<a id="ctrl_elements_GO:0000978" href="javascript:toggle('elements_GO:0000978')">[+] Show genes</a><br>
+<div id="elements_GO:0000978" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000987&amp;view=details' target="_blank">GO:0000987</a><a name=0000987></a></td>
+<td>proximal promoter sequence-specific DNA binding</td>
+<td  align=center>7.88E-6</td>
+<td  align=center>6.55E-3</td>
+<td  align=center>2.65 (17542,908,182,25)</td>
+<td>
+<a id="ctrl_elements_GO:0000987" href="javascript:toggle('elements_GO:0000987')">[+] Show genes</a><br>
+<div id="elements_GO:0000987" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003676&amp;view=details' target="_blank">GO:0003676</a><a name=0003676></a></td>
+<td>nucleic acid binding</td>
+<td  align=center>8.89E-6</td>
+<td  align=center>5.92E-3</td>
+<td  align=center>1.81 (17542,2775,182,52)</td>
+<td>
+<a id="ctrl_elements_GO:0003676" href="javascript:toggle('elements_GO:0003676')">[+] Show genes</a><br>
+<div id="elements_GO:0003676" style="display:none"> <font size=1>
+jdp2  -  jun dimerization protein 2<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+eef1a1l2  -  eukaryotic translation elongation factor 1 alpha 1, like 2<br>
+hist2h2l  -  histone 2, h2, like<br>
+h2afy2  -  h2a histone family, member y2<br>
+eif4ebp2  -  eukaryotic translation initiation factor 4e binding protein 2<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+mycn  -  v-myc myelocytomatosis viral related oncogene, neuroblastoma derived (avian)<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+lsm4  -  lsm4 homolog, u6 small nuclear rna associated (s. cerevisiae)<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+tshz1  -  teashirt family zinc finger 1<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+gpatch8  -  g patch domain containing 8<br>
+eif2b2  -  eukaryotic translation initiation factor 2b, subunit 2 beta<br>
+mrps7  -  mitochondrial ribosomal protein s7<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+phc2b  -  polyhomeotic-like 2b<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+klf6a  -  kruppel-like factor 6a<br>
+junba  -  jun b proto-oncogene a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+arid1b  -  at rich interactive domain 1b (swi1-like)<br>
+irf9  -  interferon regulatory factor 9<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+aars  -  alanyl-trna synthetase<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+cxxc5a  -  cxxc finger 5a<br>
+tcf12  -  transcription factor 12<br>
+tdp1  -  tyrosyl-dna phosphodiesterase 1<br>
+etv6  -  ets variant gene 6 (tel oncogene)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+eef2k  -  elongation factor-2 kinase<br>
+xrcc5  -  x-ray repair complementing defective repair in chinese hamster cells 5<br>
+klf11b  -  kruppel-like factor 11b<br>
+eef1db  -  elongation factor-1, delta, b<br>
+jun  -  jun proto-oncogene<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003700&amp;view=details' target="_blank">GO:0003700</a><a name=0003700></a></td>
+<td>DNA-binding transcription factor activity</td>
+<td  align=center>1.05E-5</td>
+<td  align=center>5.83E-3</td>
+<td  align=center>2.34 (17542,1234,182,30)</td>
+<td>
+<a id="ctrl_elements_GO:0003700" href="javascript:toggle('elements_GO:0003700')">[+] Show genes</a><br>
+<div id="elements_GO:0003700" style="display:none"> <font size=1>
+jdp2  -  jun dimerization protein 2<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+klf6a  -  kruppel-like factor 6a<br>
+junba  -  jun b proto-oncogene a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+mycn  -  v-myc myelocytomatosis viral related oncogene, neuroblastoma derived (avian)<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+etv6  -  ets variant gene 6 (tel oncogene)<br>
+mdm4  -  transformed 3t3 cell double minute 4 homolog (mouse)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+klf11b  -  kruppel-like factor 11b<br>
+tshz1  -  teashirt family zinc finger 1<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043565&amp;view=details' target="_blank">GO:0043565</a><a name=0043565></a></td>
+<td>sequence-specific DNA binding</td>
+<td  align=center>1.11E-5</td>
+<td  align=center>5.28E-3</td>
+<td  align=center>2.29 (17542,1302,182,31)</td>
+<td>
+<a id="ctrl_elements_GO:0043565" href="javascript:toggle('elements_GO:0043565')">[+] Show genes</a><br>
+<div id="elements_GO:0043565" style="display:none"> <font size=1>
+jdp2  -  jun dimerization protein 2<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+klf6a  -  kruppel-like factor 6a<br>
+junba  -  jun b proto-oncogene a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+cxxc5a  -  cxxc finger 5a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+etv6  -  ets variant gene 6 (tel oncogene)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+xrcc5  -  x-ray repair complementing defective repair in chinese hamster cells 5<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003690&amp;view=details' target="_blank">GO:0003690</a><a name=0003690></a></td>
+<td>double-stranded DNA binding</td>
+<td  align=center>1.7E-5</td>
+<td  align=center>7.05E-3</td>
+<td  align=center>2.29 (17542,1265,182,30)</td>
+<td>
+<a id="ctrl_elements_GO:0003690" href="javascript:toggle('elements_GO:0003690')">[+] Show genes</a><br>
+<div id="elements_GO:0003690" style="display:none"> <font size=1>
+jdp2  -  jun dimerization protein 2<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+tdp1  -  tyrosyl-dna phosphodiesterase 1<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+xrcc5  -  x-ray repair complementing defective repair in chinese hamster cells 5<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000981&amp;view=details' target="_blank">GO:0000981</a><a name=0000981></a></td>
+<td>DNA-binding transcription factor activity, RNA polymerase II-specific</td>
+<td  align=center>1.74E-5</td>
+<td  align=center>6.42E-3</td>
+<td  align=center>2.37 (17542,1138,182,28)</td>
+<td>
+<a id="ctrl_elements_GO:0000981" href="javascript:toggle('elements_GO:0000981')">[+] Show genes</a><br>
+<div id="elements_GO:0000981" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+mdm4  -  transformed 3t3 cell double minute 4 homolog (mouse)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+klf11b  -  kruppel-like factor 11b<br>
+tshz1  -  teashirt family zinc finger 1<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000976&amp;view=details' target="_blank">GO:0000976</a><a name=0000976></a></td>
+<td>transcription regulatory region sequence-specific DNA binding</td>
+<td  align=center>2.91E-5</td>
+<td  align=center>9.68E-3</td>
+<td  align=center>2.30 (17542,1171,182,28)</td>
+<td>
+<a id="ctrl_elements_GO:0000976" href="javascript:toggle('elements_GO:0000976')">[+] Show genes</a><br>
+<div id="elements_GO:0000976" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001067&amp;view=details' target="_blank">GO:0001067</a><a name=0001067></a></td>
+<td>regulatory region nucleic acid binding</td>
+<td  align=center>2.95E-5</td>
+<td  align=center>8.93E-3</td>
+<td  align=center>2.30 (17542,1172,182,28)</td>
+<td>
+<a id="ctrl_elements_GO:0001067" href="javascript:toggle('elements_GO:0001067')">[+] Show genes</a><br>
+<div id="elements_GO:0001067" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044212&amp;view=details' target="_blank">GO:0044212</a><a name=0044212></a></td>
+<td>transcription regulatory region DNA binding</td>
+<td  align=center>2.95E-5</td>
+<td  align=center>8.19E-3</td>
+<td  align=center>2.30 (17542,1172,182,28)</td>
+<td>
+<a id="ctrl_elements_GO:0044212" href="javascript:toggle('elements_GO:0044212')">[+] Show genes</a><br>
+<div id="elements_GO:0044212" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990837&amp;view=details' target="_blank">GO:1990837</a><a name=1990837></a></td>
+<td>sequence-specific double-stranded DNA binding</td>
+<td  align=center>5.05E-5</td>
+<td  align=center>1.29E-2</td>
+<td  align=center>2.23 (17542,1208,182,28)</td>
+<td>
+<a id="ctrl_elements_GO:1990837" href="javascript:toggle('elements_GO:1990837')">[+] Show genes</a><br>
+<div id="elements_GO:1990837" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000977&amp;view=details' target="_blank">GO:0000977</a><a name=0000977></a></td>
+<td>RNA polymerase II regulatory region sequence-specific DNA binding</td>
+<td  align=center>9.98E-5</td>
+<td  align=center>2.37E-2</td>
+<td  align=center>2.23 (17542,1124,182,26)</td>
+<td>
+<a id="ctrl_elements_GO:0000977" href="javascript:toggle('elements_GO:0000977')">[+] Show genes</a><br>
+<div id="elements_GO:0000977" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001012&amp;view=details' target="_blank">GO:0001012</a><a name=0001012></a></td>
+<td>RNA polymerase II regulatory region DNA binding</td>
+<td  align=center>9.98E-5</td>
+<td  align=center>2.21E-2</td>
+<td  align=center>2.23 (17542,1124,182,26)</td>
+<td>
+<a id="ctrl_elements_GO:0001012" href="javascript:toggle('elements_GO:0001012')">[+] Show genes</a><br>
+<div id="elements_GO:0001012" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+tefa  -  thyrotroph embryonic factor a<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irf9  -  interferon regulatory factor 9<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+klf11b  -  kruppel-like factor 11b<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+fosl2  -  fos-like antigen 2<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901363&amp;view=details' target="_blank">GO:1901363</a><a name=1901363></a></td>
+<td>heterocyclic compound binding</td>
+<td  align=center>2.29E-4</td>
+<td  align=center>4.76E-2</td>
+<td  align=center>1.45 (17542,4802,182,72)</td>
+<td>
+<a id="ctrl_elements_GO:1901363" href="javascript:toggle('elements_GO:1901363')">[+] Show genes</a><br>
+<div id="elements_GO:1901363" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+rock2a  -  rho-associated, coiled-coil containing protein kinase 2a<br>
+jdp2  -  jun dimerization protein 2<br>
+eef1a1l2  -  eukaryotic translation elongation factor 1 alpha 1, like 2<br>
+hist2h2l  -  histone 2, h2, like<br>
+h2afy2  -  h2a histone family, member y2<br>
+eif4ebp2  -  eukaryotic translation initiation factor 4e binding protein 2<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+mycn  -  v-myc myelocytomatosis viral related oncogene, neuroblastoma derived (avian)<br>
+nme3  -  non-metastatic cells 3, protein expressed in<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+hsp90ab1  -  heat shock protein 90, alpha (cytosolic), class b member 1<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+zgc:63587  -  zgc:63587<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+lsm4  -  lsm4 homolog, u6 small nuclear rna associated (s. cerevisiae)<br>
+jak1  -  janus kinase 1<br>
+psmc2  -  proteasome (prosome, macropain) 26s subunit, atpase 2<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+pim1  -  pim-1 oncogene<br>
+tshz1  -  teashirt family zinc finger 1<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+gpatch8  -  g patch domain containing 8<br>
+gpr157  -  g protein-coupled receptor 157<br>
+eif2b2  -  eukaryotic translation initiation factor 2b, subunit 2 beta<br>
+fosl2  -  fos-like antigen 2<br>
+mrps7  -  mitochondrial ribosomal protein s7<br>
+hk1  -  hexokinase 1<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+phc2b  -  polyhomeotic-like 2b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+tefa  -  thyrotroph embryonic factor a<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+rnd3a  -  rho family gtpase 3a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+im:7152756  -  im:7152756<br>
+arl4cb  -  adp-ribosylation factor-like 4cb<br>
+cct6a  -  chaperonin containing tcp1, subunit 6a (zeta 1)<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+arid1b  -  at rich interactive domain 1b (swi1-like)<br>
+epha7  -  eph receptor a7<br>
+idh3a  -  isocitrate dehydrogenase 3 (nad+) alpha<br>
+irf9  -  interferon regulatory factor 9<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+aars  -  alanyl-trna synthetase<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+cxxc5a  -  cxxc finger 5a<br>
+tcf12  -  transcription factor 12<br>
+tdp1  -  tyrosyl-dna phosphodiesterase 1<br>
+etv6  -  ets variant gene 6 (tel oncogene)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+eef2k  -  elongation factor-2 kinase<br>
+klf11b  -  kruppel-like factor 11b<br>
+xrcc5  -  x-ray repair complementing defective repair in chinese hamster cells 5<br>
+eef1db  -  elongation factor-1, delta, b<br>
+jun  -  jun proto-oncogene<br>
+zgc:86598  -  zgc:86598<br>
+wu:fc13c02  -  wu:fc13c02<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+sik2b  -  salt-inducible kinase 2b<br>
+fgfr2  -  fibroblast growth factor receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097159&amp;view=details' target="_blank">GO:0097159</a><a name=0097159></a></td>
+<td>organic cyclic compound binding</td>
+<td  align=center>3.26E-4</td>
+<td  align=center>6.39E-2</td>
+<td  align=center>1.43 (17542,4855,182,72)</td>
+<td>
+<a id="ctrl_elements_GO:0097159" href="javascript:toggle('elements_GO:0097159')">[+] Show genes</a><br>
+<div id="elements_GO:0097159" style="display:none"> <font size=1>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+rock2a  -  rho-associated, coiled-coil containing protein kinase 2a<br>
+jdp2  -  jun dimerization protein 2<br>
+eef1a1l2  -  eukaryotic translation elongation factor 1 alpha 1, like 2<br>
+hist2h2l  -  histone 2, h2, like<br>
+h2afy2  -  h2a histone family, member y2<br>
+eif4ebp2  -  eukaryotic translation initiation factor 4e binding protein 2<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+cebpg  -  ccaat/enhancer binding protein (c/ebp), gamma<br>
+mycn  -  v-myc myelocytomatosis viral related oncogene, neuroblastoma derived (avian)<br>
+nme3  -  non-metastatic cells 3, protein expressed in<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+hsp90ab1  -  heat shock protein 90, alpha (cytosolic), class b member 1<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+zgc:63587  -  zgc:63587<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+lsm4  -  lsm4 homolog, u6 small nuclear rna associated (s. cerevisiae)<br>
+jak1  -  janus kinase 1<br>
+psmc2  -  proteasome (prosome, macropain) 26s subunit, atpase 2<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+hivep1  -  human immunodeficiency virus type i enhancer binding protein 1<br>
+maff  -  v-maf musculoaponeurotic fibrosarcoma oncogene homolog f (avian)<br>
+pim1  -  pim-1 oncogene<br>
+tshz1  -  teashirt family zinc finger 1<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+gpatch8  -  g patch domain containing 8<br>
+gpr157  -  g protein-coupled receptor 157<br>
+eif2b2  -  eukaryotic translation initiation factor 2b, subunit 2 beta<br>
+fosl2  -  fos-like antigen 2<br>
+mrps7  -  mitochondrial ribosomal protein s7<br>
+hk1  -  hexokinase 1<br>
+foxp4  -  forkhead box p4<br>
+her6  -  hairy-related 6<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+phc2b  -  polyhomeotic-like 2b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+tefa  -  thyrotroph embryonic factor a<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+rnd3a  -  rho family gtpase 3a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+im:7152756  -  im:7152756<br>
+arl4cb  -  adp-ribosylation factor-like 4cb<br>
+cct6a  -  chaperonin containing tcp1, subunit 6a (zeta 1)<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+arid1b  -  at rich interactive domain 1b (swi1-like)<br>
+epha7  -  eph receptor a7<br>
+idh3a  -  isocitrate dehydrogenase 3 (nad+) alpha<br>
+irf9  -  interferon regulatory factor 9<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+aars  -  alanyl-trna synthetase<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+cxxc5a  -  cxxc finger 5a<br>
+tcf12  -  transcription factor 12<br>
+tdp1  -  tyrosyl-dna phosphodiesterase 1<br>
+etv6  -  ets variant gene 6 (tel oncogene)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+eef2k  -  elongation factor-2 kinase<br>
+klf11b  -  kruppel-like factor 11b<br>
+xrcc5  -  x-ray repair complementing defective repair in chinese hamster cells 5<br>
+eef1db  -  elongation factor-1, delta, b<br>
+jun  -  jun proto-oncogene<br>
+zgc:86598  -  zgc:86598<br>
+wu:fc13c02  -  wu:fc13c02<br>
+klf11a  -  kruppel-like factor 11a<br>
+her9  -  hairy-related 9<br>
+per1b  -  period homolog 1b (drosophila)<br>
+sik2b  -  salt-inducible kinase 2b<br>
+fgfr2  -  fibroblast growth factor receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004298&amp;view=details' target="_blank">GO:0004298</a><a name=0004298></a></td>
+<td>threonine-type endopeptidase activity</td>
+<td  align=center>4.56E-4</td>
+<td  align=center>8.43E-2</td>
+<td  align=center>19.28 (17542,15,182,3)</td>
+<td>
+<a id="ctrl_elements_GO:0004298" href="javascript:toggle('elements_GO:0004298')">[+] Show genes</a><br>
+<div id="elements_GO:0004298" style="display:none"> <font size=1>
+psmb6  -  proteasome (prosome, macropain) subunit, beta type, 6<br>
+psmb2  -  proteasome (prosome, macropain) subunit, beta type, 2<br>
+psmb7  -  proteasome (prosome, macropain) subunit, beta type, 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070003&amp;view=details' target="_blank">GO:0070003</a><a name=0070003></a></td>
+<td>threonine-type peptidase activity</td>
+<td  align=center>4.56E-4</td>
+<td  align=center>7.98E-2</td>
+<td  align=center>19.28 (17542,15,182,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070003" href="javascript:toggle('elements_GO:0070003')">[+] Show genes</a><br>
+<div id="elements_GO:0070003" style="display:none"> <font size=1>
+psmb6  -  proteasome (prosome, macropain) subunit, beta type, 6<br>
+psmb2  -  proteasome (prosome, macropain) subunit, beta type, 2<br>
+psmb7  -  proteasome (prosome, macropain) subunit, beta type, 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003682&amp;view=details' target="_blank">GO:0003682</a><a name=0003682></a></td>
+<td>chromatin binding</td>
+<td  align=center>5.11E-4</td>
+<td  align=center>8.51E-2</td>
+<td  align=center>3.93 (17542,221,182,9)</td>
+<td>
+<a id="ctrl_elements_GO:0003682" href="javascript:toggle('elements_GO:0003682')">[+] Show genes</a><br>
+<div id="elements_GO:0003682" style="display:none"> <font size=1>
+bmi1b  -  b lymphoma mo-mlv insertion region 1b<br>
+bahcc1  -  bah domain and coiled-coil containing 1<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+phc2b  -  polyhomeotic-like 2b<br>
+h2afy2  -  h2a histone family, member y2<br>
+klf6a  -  kruppel-like factor 6a<br>
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br>
+arid1b  -  at rich interactive domain 1b (swi1-like)<br>
+tada2a  -  transcriptional adaptor 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003755&amp;view=details' target="_blank">GO:0003755</a><a name=0003755></a></td>
+<td>peptidyl-prolyl cis-trans isomerase activity</td>
+<td  align=center>6.28E-4</td>
+<td  align=center>9.95E-2</td>
+<td  align=center>10.15 (17542,38,182,4)</td>
+<td>
+<a id="ctrl_elements_GO:0003755" href="javascript:toggle('elements_GO:0003755')">[+] Show genes</a><br>
+<div id="elements_GO:0003755" style="display:none"> <font size=1>
+ppid  -  peptidylprolyl isomerase d<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+fkbp1aa  -  fk506 binding protein 1aa<br>
+pin1  -  protein (peptidyl-prolyl cis/trans isomerase) nima-interacting 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016859&amp;view=details' target="_blank">GO:0016859</a><a name=0016859></a></td>
+<td>cis-trans isomerase activity</td>
+<td  align=center>9.22E-4</td>
+<td  align=center>1.39E-1</td>
+<td  align=center>9.18 (17542,42,182,4)</td>
+<td>
+<a id="ctrl_elements_GO:0016859" href="javascript:toggle('elements_GO:0016859')">[+] Show genes</a><br>
+<div id="elements_GO:0016859" style="display:none"> <font size=1>
+ppid  -  peptidylprolyl isomerase d<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+fkbp1aa  -  fk506 binding protein 1aa<br>
+pin1  -  protein (peptidyl-prolyl cis/trans isomerase) nima-interacting 1<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24198 genes out of 30325 gene terms entered by the user.<br> 24198 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>297 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3327 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,1248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='760,543,851,591' HREF='#0030120' ALT=''>
+<AREA SHAPE='RECT' COORDS='751,689,852,737' HREF='#0030127' ALT=''>
+<AREA SHAPE='RECT' COORDS='261,543,360,591' HREF='#0042611' ALT=''>
+<AREA SHAPE='RECT' COORDS='265,682,356,745' HREF='#0042612' ALT=''>
+<AREA SHAPE='RECT' COORDS='875,543,1027,591' HREF='#0098791' ALT=''>
+<AREA SHAPE='RECT' COORDS='876,689,977,737' HREF='#0031985' ALT=''>
+<AREA SHAPE='RECT' COORDS='1283,837,1408,899' HREF='#0012507' ALT=''>
+<AREA SHAPE='RECT' COORDS='1431,413,1556,461' HREF='#0012506' ALT=''>
+<AREA SHAPE='RECT' COORDS='1420,543,1545,591' HREF='#0030659' ALT=''>
+<AREA SHAPE='RECT' COORDS='1569,543,1641,591' HREF='#0005775' ALT=''>
+<AREA SHAPE='RECT' COORDS='1572,689,1657,737' HREF='#0043202' ALT=''>
+<AREA SHAPE='RECT' COORDS='1745,406,1884,469' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='1801,543,1900,591' HREF='#0005783' ALT=''>
+<AREA SHAPE='RECT' COORDS='1665,543,1777,591' HREF='#0005794' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,535,101,598' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='61,665,173,762' HREF='#0030176' ALT=''>
+<AREA SHAPE='RECT' COORDS='1251,197,1328,245' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='1343,301,1425,349' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='1449,301,1527,349' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='1057,294,1148,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='629,527,736,607' HREF='#0044322' ALT=''>
+<AREA SHAPE='RECT' COORDS='1144,197,1227,245' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='384,535,483,598' HREF='#0005789' ALT=''>
+<AREA SHAPE='RECT' COORDS='1276,543,1396,591' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='1292,689,1399,737' HREF='#0030662' ALT=''>
+<AREA SHAPE='RECT' COORDS='507,535,605,598' HREF='#0070971' ALT=''>
+<AREA SHAPE='RECT' COORDS='827,101,955,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='479,301,593,349' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='1001,689,1119,737' HREF='#0000139' ALT=''>
+<AREA SHAPE='RECT' COORDS='321,413,455,461' HREF='#0098797' ALT=''>
+<AREA SHAPE='RECT' COORDS='824,844,912,892' HREF='#0000138' ALT=''>
+<AREA SHAPE='RECT' COORDS='1631,406,1721,469' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='671,413,756,461' HREF='#0030117' ALT=''>
+<AREA SHAPE='RECT' COORDS='780,413,897,461' HREF='#0031984' ALT=''>
+<AREA SHAPE='RECT' COORDS='1423,689,1548,737' HREF='#0030658' ALT=''>
+<AREA SHAPE='RECT' COORDS='548,406,647,469' HREF='#0044432' ALT=''>
+<AREA SHAPE='RECT' COORDS='125,518,237,615' HREF='#0031227' ALT=''>
+<AREA SHAPE='RECT' COORDS='1164,535,1252,598' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='1143,689,1268,737' HREF='#0030660' ALT=''>
+<AREA SHAPE='RECT' COORDS='47,811,188,925' HREF='#0071556' ALT=''>
+<AREA SHAPE='RECT' COORDS='321,301,455,349' HREF='#0044459' ALT=''>
+<AREA SHAPE='RECT' COORDS='1223,301,1319,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='921,413,1039,461' HREF='#0044431' ALT=''>
+<AREA SHAPE='RECT' COORDS='1233,413,1305,461' HREF='#0044437' ALT=''>
+<AREA SHAPE='RECT' COORDS='1063,413,1159,461' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='1363,101,1504,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='1632,197,1707,245' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1624,301,1715,349' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='1743,301,1881,349' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='936,844,1035,892' HREF='#0005797' ALT=''>
+<AREA SHAPE='RECT' COORDS='345,197,431,245' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='133,406,229,469' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='1212,5,1095,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='1103,101,1175,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='1352,197,1443,245' HREF='#0044424' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details' target="_blank">GO:0031224</a><a name=0031224></a></td>
+<td>intrinsic component of membrane</td>
+<td  align=center>1.5E-14</td>
+<td  align=center>2.58E-11</td>
+<td  align=center>2.19 (8795,1693,206,87)</td>
+<td>
+<a id="ctrl_elements_GO:0031224" href="javascript:toggle('elements_GO:0031224')">[+] Show genes</a><br>
+<div id="elements_GO:0031224" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+DST  -  dystonin<br>
+GPR155  -  g protein-coupled receptor 155<br>
+CLEC2D  -  c-type lectin domain family 2, member d<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+TVP23C  -  trans-golgi network vesicle protein 23 homolog c (s. cerevisiae)<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+FNDC3B  -  fibronectin type iii domain containing 3b<br>
+SURF1  -  surfeit 1<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+SLC35A5  -  solute carrier family 35, member a5<br>
+KCNN3  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 3<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+ITM2B  -  integral membrane protein 2b<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+CD79A  -  cd79a molecule, immunoglobulin-associated alpha<br>
+SELPLG  -  selectin p ligand<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+XBP1  -  x-box binding protein 1<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+MFSD8  -  major facilitator superfamily domain containing 8<br>
+BTN3A1  -  butyrophilin, subfamily 3, member a1<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+STX5  -  syntaxin 5<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+CYB561D2  -  cytochrome b561 family, member d2<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+CEACAM21  -  carcinoembryonic antigen-related cell adhesion molecule 21<br>
+APOL1  -  apolipoprotein l, 1<br>
+ACP2  -  acid phosphatase 2, lysosomal<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+IL10RA  -  interleukin 10 receptor, alpha<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
+YIPF1  -  yip1 domain family, member 1<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+VAMP5  -  vesicle-associated membrane protein 5<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+TMEM184B  -  transmembrane protein 184b<br>
+HS2ST1  -  heparan sulfate 2-o-sulfotransferase 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+RNF149  -  ring finger protein 149<br>
+TVP23B  -  trans-golgi network vesicle protein 23 homolog b (s. cerevisiae)<br>
+XKR6  -  xk, kell blood group complex subunit-related family, member 6<br>
+RNF103  -  ring finger protein 103<br>
+TAPBPL  -  tap binding protein-like<br>
+YIPF3  -  yip1 domain family, member 3<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+TMEM59  -  transmembrane protein 59<br>
+TMEM66  -  transmembrane protein 66<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+SLC2A11  -  solute carrier family 2 (facilitated glucose transporter), member 11<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+ATRAID  -  all-trans retinoic acid-induced differentiation factor<br>
+DNAJC4  -  dnaj (hsp40) homolog, subfamily c, member 4<br>
+C1GALT1C1  -  c1galt1-specific chaperone 1<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+PKHD1L1  -  polycystic kidney and hepatic disease 1 (autosomal recessive)-like 1<br>
+MGAT3  -  mannosyl (beta-1,4-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase<br>
+TMEM140  -  transmembrane protein 140<br>
+ABHD3  -  abhydrolase domain containing 3<br>
+YIPF2  -  yip1 domain family, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details' target="_blank">GO:0016021</a><a name=0016021></a></td>
+<td>integral component of membrane</td>
+<td  align=center>4.64E-14</td>
+<td  align=center>3.99E-11</td>
+<td  align=center>2.19 (8795,1660,206,85)</td>
+<td>
+<a id="ctrl_elements_GO:0016021" href="javascript:toggle('elements_GO:0016021')">[+] Show genes</a><br>
+<div id="elements_GO:0016021" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+DST  -  dystonin<br>
+GPR155  -  g protein-coupled receptor 155<br>
+CLEC2D  -  c-type lectin domain family 2, member d<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+TVP23C  -  trans-golgi network vesicle protein 23 homolog c (s. cerevisiae)<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+FNDC3B  -  fibronectin type iii domain containing 3b<br>
+SURF1  -  surfeit 1<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+SLC35A5  -  solute carrier family 35, member a5<br>
+KCNN3  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 3<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+ITM2B  -  integral membrane protein 2b<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+CD79A  -  cd79a molecule, immunoglobulin-associated alpha<br>
+SELPLG  -  selectin p ligand<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+XBP1  -  x-box binding protein 1<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+MFSD8  -  major facilitator superfamily domain containing 8<br>
+BTN3A1  -  butyrophilin, subfamily 3, member a1<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+STX5  -  syntaxin 5<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+CYB561D2  -  cytochrome b561 family, member d2<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+CEACAM21  -  carcinoembryonic antigen-related cell adhesion molecule 21<br>
+ACP2  -  acid phosphatase 2, lysosomal<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+IL10RA  -  interleukin 10 receptor, alpha<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
+YIPF1  -  yip1 domain family, member 1<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+VAMP5  -  vesicle-associated membrane protein 5<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+TMEM184B  -  transmembrane protein 184b<br>
+HS2ST1  -  heparan sulfate 2-o-sulfotransferase 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+RNF149  -  ring finger protein 149<br>
+TVP23B  -  trans-golgi network vesicle protein 23 homolog b (s. cerevisiae)<br>
+XKR6  -  xk, kell blood group complex subunit-related family, member 6<br>
+RNF103  -  ring finger protein 103<br>
+TAPBPL  -  tap binding protein-like<br>
+YIPF3  -  yip1 domain family, member 3<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+TMEM59  -  transmembrane protein 59<br>
+TMEM66  -  transmembrane protein 66<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+SLC2A11  -  solute carrier family 2 (facilitated glucose transporter), member 11<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+ATRAID  -  all-trans retinoic acid-induced differentiation factor<br>
+DNAJC4  -  dnaj (hsp40) homolog, subfamily c, member 4<br>
+C1GALT1C1  -  c1galt1-specific chaperone 1<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+PKHD1L1  -  polycystic kidney and hepatic disease 1 (autosomal recessive)-like 1<br>
+MGAT3  -  mannosyl (beta-1,4-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase<br>
+TMEM140  -  transmembrane protein 140<br>
+ABHD3  -  abhydrolase domain containing 3<br>
+YIPF2  -  yip1 domain family, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
+<td>membrane part</td>
+<td  align=center>8.4E-12</td>
+<td  align=center>4.82E-9</td>
+<td  align=center>1.78 (8795,2524,206,105)</td>
+<td>
+<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
+<div id="elements_GO:0044425" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+GPR155  -  g protein-coupled receptor 155<br>
+CLEC2D  -  c-type lectin domain family 2, member d<br>
+SYNRG  -  synergin, gamma<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+TVP23C  -  trans-golgi network vesicle protein 23 homolog c (s. cerevisiae)<br>
+FNDC3B  -  fibronectin type iii domain containing 3b<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+SELPLG  -  selectin p ligand<br>
+CD79A  -  cd79a molecule, immunoglobulin-associated alpha<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+CEACAM21  -  carcinoembryonic antigen-related cell adhesion molecule 21<br>
+APOL1  -  apolipoprotein l, 1<br>
+ACP2  -  acid phosphatase 2, lysosomal<br>
+ARF4  -  adp-ribosylation factor 4<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+IL10RA  -  interleukin 10 receptor, alpha<br>
+OSBPL2  -  oxysterol binding protein-like 2<br>
+YIPF1  -  yip1 domain family, member 1<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CCPG1  -  cell cycle progression 1<br>
+CTSA  -  cathepsin a<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+RNF149  -  ring finger protein 149<br>
+TVP23B  -  trans-golgi network vesicle protein 23 homolog b (s. cerevisiae)<br>
+XKR6  -  xk, kell blood group complex subunit-related family, member 6<br>
+RNF103  -  ring finger protein 103<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+TAPBPL  -  tap binding protein-like<br>
+CDC42SE2  -  cdc42 small effector 2<br>
+VPS36  -  vacuolar protein sorting 36 homolog (s. cerevisiae)<br>
+TMEM59  -  transmembrane protein 59<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+SLC2A11  -  solute carrier family 2 (facilitated glucose transporter), member 11<br>
+ATRAID  -  all-trans retinoic acid-induced differentiation factor<br>
+DNAJC4  -  dnaj (hsp40) homolog, subfamily c, member 4<br>
+PKHD1L1  -  polycystic kidney and hepatic disease 1 (autosomal recessive)-like 1<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MGAT3  -  mannosyl (beta-1,4-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase<br>
+YIPF2  -  yip1 domain family, member 2<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+ERC1  -  elks/rab6-interacting/cast family member 1<br>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+SURF1  -  surfeit 1<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+SLC35A5  -  solute carrier family 35, member a5<br>
+KCNN3  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 3<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+XBP1  -  x-box binding protein 1<br>
+ITM2B  -  integral membrane protein 2b<br>
+MFSD8  -  major facilitator superfamily domain containing 8<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+BTN3A1  -  butyrophilin, subfamily 3, member a1<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+STX5  -  syntaxin 5<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+CYB561D2  -  cytochrome b561 family, member d2<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+CTSB  -  cathepsin b<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
+IFIT5  -  interferon-induced protein with tetratricopeptide repeats 5<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+VAMP5  -  vesicle-associated membrane protein 5<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+TMEM184B  -  transmembrane protein 184b<br>
+HS2ST1  -  heparan sulfate 2-o-sulfotransferase 1<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+YIPF3  -  yip1 domain family, member 3<br>
+B2M  -  beta-2-microglobulin<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+TMEM66  -  transmembrane protein 66<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+C1GALT1C1  -  c1galt1-specific chaperone 1<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+TMEM140  -  transmembrane protein 140<br>
+ABHD3  -  abhydrolase domain containing 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044431&amp;view=details' target="_blank">GO:0044431</a><a name=0044431></a></td>
+<td>Golgi apparatus part</td>
+<td  align=center>8.45E-11</td>
+<td  align=center>3.64E-8</td>
+<td  align=center>3.04 (8795,576,206,41)</td>
+<td>
+<a id="ctrl_elements_GO:0044431" href="javascript:toggle('elements_GO:0044431')">[+] Show genes</a><br>
+<div id="elements_GO:0044431" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ERC1  -  elks/rab6-interacting/cast family member 1<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+HS2ST1  -  heparan sulfate 2-o-sulfotransferase 1<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+TVP23B  -  trans-golgi network vesicle protein 23 homolog b (s. cerevisiae)<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+SYNRG  -  synergin, gamma<br>
+TAPBPL  -  tap binding protein-like<br>
+RAB30  -  rab30, member ras oncogene family<br>
+GOLGA4  -  golgin a4<br>
+B2M  -  beta-2-microglobulin<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+TVP23C  -  trans-golgi network vesicle protein 23 homolog c (s. cerevisiae)<br>
+TMEM59  -  transmembrane protein 59<br>
+SLC35A5  -  solute carrier family 35, member a5<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+ITM2B  -  integral membrane protein 2b<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+STX5  -  syntaxin 5<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+ACBD3  -  acyl-coa binding domain containing 3<br>
+C1GALT1C1  -  c1galt1-specific chaperone 1<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MGAT3  -  mannosyl (beta-1,4-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase<br>
+YIPF1  -  yip1 domain family, member 1<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+YIPF2  -  yip1 domain family, member 2<br>
+SH3GLB1  -  sh3-domain grb2-like endophilin b1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000139&amp;view=details' target="_blank">GO:0000139</a><a name=0000139></a></td>
+<td>Golgi membrane</td>
+<td  align=center>9.53E-10</td>
+<td  align=center>3.28E-7</td>
+<td  align=center>3.23 (8795,450,206,34)</td>
+<td>
+<a id="ctrl_elements_GO:0000139" href="javascript:toggle('elements_GO:0000139')">[+] Show genes</a><br>
+<div id="elements_GO:0000139" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ERC1  -  elks/rab6-interacting/cast family member 1<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+HS2ST1  -  heparan sulfate 2-o-sulfotransferase 1<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+TAPBPL  -  tap binding protein-like<br>
+RAB30  -  rab30, member ras oncogene family<br>
+GOLGA4  -  golgin a4<br>
+B2M  -  beta-2-microglobulin<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+TMEM59  -  transmembrane protein 59<br>
+ITM2B  -  integral membrane protein 2b<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+STX5  -  syntaxin 5<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+ACBD3  -  acyl-coa binding domain containing 3<br>
+C1GALT1C1  -  c1galt1-specific chaperone 1<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MGAT3  -  mannosyl (beta-1,4-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+SH3GLB1  -  sh3-domain grb2-like endophilin b1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0012507&amp;view=details' target="_blank">GO:0012507</a><a name=0012507></a></td>
+<td>ER to Golgi transport vesicle membrane</td>
+<td  align=center>2.38E-8</td>
+<td  align=center>6.82E-6</td>
+<td  align=center>10.41 (8795,41,206,10)</td>
+<td>
+<a id="ctrl_elements_GO:0012507" href="javascript:toggle('elements_GO:0012507')">[+] Show genes</a><br>
+<div id="elements_GO:0012507" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+STX5  -  syntaxin 5<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+B2M  -  beta-2-microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030662&amp;view=details' target="_blank">GO:0030662</a><a name=0030662></a></td>
+<td>coated vesicle membrane</td>
+<td  align=center>2.53E-8</td>
+<td  align=center>6.21E-6</td>
+<td  align=center>7.12 (8795,78,206,13)</td>
+<td>
+<a id="ctrl_elements_GO:0030662" href="javascript:toggle('elements_GO:0030662')">[+] Show genes</a><br>
+<div id="elements_GO:0030662" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+B2M  -  beta-2-microglobulin<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030660&amp;view=details' target="_blank">GO:0030660</a><a name=0030660></a></td>
+<td>Golgi-associated vesicle membrane</td>
+<td  align=center>3.53E-8</td>
+<td  align=center>7.6E-6</td>
+<td  align=center>8.70 (8795,54,206,11)</td>
+<td>
+<a id="ctrl_elements_GO:0030660" href="javascript:toggle('elements_GO:0030660')">[+] Show genes</a><br>
+<div id="elements_GO:0030660" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+STX5  -  syntaxin 5<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+ITM2B  -  integral membrane protein 2b<br>
+B2M  -  beta-2-microglobulin<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042612&amp;view=details' target="_blank">GO:0042612</a><a name=0042612></a></td>
+<td>MHC class I protein complex</td>
+<td  align=center>1.36E-7</td>
+<td  align=center>2.6E-5</td>
+<td  align=center>30.50 (8795,7,206,5)</td>
+<td>
+<a id="ctrl_elements_GO:0042612" href="javascript:toggle('elements_GO:0042612')">[+] Show genes</a><br>
+<div id="elements_GO:0042612" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+B2M  -  beta-2-microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details' target="_blank">GO:0044432</a><a name=0044432></a></td>
+<td>endoplasmic reticulum part</td>
+<td  align=center>1.74E-7</td>
+<td  align=center>2.99E-5</td>
+<td  align=center>2.31 (8795,776,206,42)</td>
+<td>
+<a id="ctrl_elements_GO:0044432" href="javascript:toggle('elements_GO:0044432')">[+] Show genes</a><br>
+<div id="elements_GO:0044432" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+RNF103  -  ring finger protein 103<br>
+TAPBPL  -  tap binding protein-like<br>
+B2M  -  beta-2-microglobulin<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+TMEM66  -  transmembrane protein 66<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+XBP1  -  x-box binding protein 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+STX5  -  syntaxin 5<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+CYB561D2  -  cytochrome b561 family, member d2<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+PRKCSH  -  protein kinase c substrate 80k-h<br>
+APOL1  -  apolipoprotein l, 1<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030658&amp;view=details' target="_blank">GO:0030658</a><a name=0030658></a></td>
+<td>transport vesicle membrane</td>
+<td  align=center>8.9E-7</td>
+<td  align=center>1.39E-4</td>
+<td  align=center>6.43 (8795,73,206,11)</td>
+<td>
+<a id="ctrl_elements_GO:0030658" href="javascript:toggle('elements_GO:0030658')">[+] Show genes</a><br>
+<div id="elements_GO:0030658" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+STX5  -  syntaxin 5<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+B2M  -  beta-2-microglobulin<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005783&amp;view=details' target="_blank">GO:0005783</a><a name=0005783></a></td>
+<td>endoplasmic reticulum</td>
+<td  align=center>5.35E-6</td>
+<td  align=center>7.67E-4</td>
+<td  align=center>2.26 (8795,643,206,34)</td>
+<td>
+<a id="ctrl_elements_GO:0005783" href="javascript:toggle('elements_GO:0005783')">[+] Show genes</a><br>
+<div id="elements_GO:0005783" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+CTSA  -  cathepsin a<br>
+CLEC2D  -  c-type lectin domain family 2, member d<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+RNF103  -  ring finger protein 103<br>
+FBXW7  -  f-box and wd repeat domain containing 7, e3 ubiquitin protein ligase<br>
+SDF2  -  stromal cell-derived factor 2<br>
+TAPBPL  -  tap binding protein-like<br>
+SQSTM1  -  sequestosome 1<br>
+CPEB4  -  cytoplasmic polyadenylation element binding protein 4<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+TMEM66  -  transmembrane protein 66<br>
+HM13  -  histocompatibility (minor) 13<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+XBP1  -  x-box binding protein 1<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+SRP68  -  signal recognition particle 68kda<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+CYB561D2  -  cytochrome b561 family, member d2<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PRKCSH  -  protein kinase c substrate 80k-h<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005789&amp;view=details' target="_blank">GO:0005789</a><a name=0005789></a></td>
+<td>endoplasmic reticulum membrane</td>
+<td  align=center>1.85E-5</td>
+<td  align=center>2.45E-3</td>
+<td  align=center>2.23 (8795,593,206,31)</td>
+<td>
+<a id="ctrl_elements_GO:0005789" href="javascript:toggle('elements_GO:0005789')">[+] Show genes</a><br>
+<div id="elements_GO:0005789" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+RNF103  -  ring finger protein 103<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+TAPBPL  -  tap binding protein-like<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+HM13  -  histocompatibility (minor) 13<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+XBP1  -  x-box binding protein 1<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+STX5  -  syntaxin 5<br>
+CYB561D2  -  cytochrome b561 family, member d2<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005797&amp;view=details' target="_blank">GO:0005797</a><a name=0005797></a></td>
+<td>Golgi medial cisterna</td>
+<td  align=center>3.36E-5</td>
+<td  align=center>4.13E-3</td>
+<td  align=center>18.98 (8795,9,206,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005797" href="javascript:toggle('elements_GO:0005797')">[+] Show genes</a><br>
+<div id="elements_GO:0005797" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+TMEM59  -  transmembrane protein 59<br>
+YIPF1  -  yip1 domain family, member 1<br>
+YIPF2  -  yip1 domain family, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details' target="_blank">GO:0098588</a><a name=0098588></a></td>
+<td>bounding membrane of organelle</td>
+<td  align=center>3.48E-5</td>
+<td  align=center>3.99E-3</td>
+<td  align=center>1.78 (8795,1150,206,48)</td>
+<td>
+<a id="ctrl_elements_GO:0098588" href="javascript:toggle('elements_GO:0098588')">[+] Show genes</a><br>
+<div id="elements_GO:0098588" style="display:none"> <font size=1>
+ERC1  -  elks/rab6-interacting/cast family member 1<br>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+HS2ST1  -  heparan sulfate 2-o-sulfotransferase 1<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+PSAP  -  prosaposin<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+TAPBPL  -  tap binding protein-like<br>
+RAB30  -  rab30, member ras oncogene family<br>
+VPS36  -  vacuolar protein sorting 36 homolog (s. cerevisiae)<br>
+B2M  -  beta-2-microglobulin<br>
+GOLGA4  -  golgin a4<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+TMEM59  -  transmembrane protein 59<br>
+PRCP  -  prolylcarboxypeptidase (angiotensinase c)<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+ITM2B  -  integral membrane protein 2b<br>
+MFSD8  -  major facilitator superfamily domain containing 8<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+STX5  -  syntaxin 5<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+ACBD3  -  acyl-coa binding domain containing 3<br>
+ATRAID  -  all-trans retinoic acid-induced differentiation factor<br>
+ACP2  -  acid phosphatase 2, lysosomal<br>
+C1GALT1C1  -  c1galt1-specific chaperone 1<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MGAT3  -  mannosyl (beta-1,4-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase<br>
+IRF7  -  interferon regulatory factor 7<br>
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
+YIPF1  -  yip1 domain family, member 1<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+YIPF2  -  yip1 domain family, member 2<br>
+SH3GLB1  -  sh3-domain grb2-like endophilin b1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042611&amp;view=details' target="_blank">GO:0042611</a><a name=0042611></a></td>
+<td>MHC protein complex</td>
+<td  align=center>5.97E-5</td>
+<td  align=center>6.43E-3</td>
+<td  align=center>11.24 (8795,19,206,5)</td>
+<td>
+<a id="ctrl_elements_GO:0042611" href="javascript:toggle('elements_GO:0042611')">[+] Show genes</a><br>
+<div id="elements_GO:0042611" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+B2M  -  beta-2-microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030176&amp;view=details' target="_blank">GO:0030176</a><a name=0030176></a></td>
+<td>integral component of endoplasmic reticulum membrane</td>
+<td  align=center>6.95E-5</td>
+<td  align=center>7.04E-3</td>
+<td  align=center>4.12 (8795,114,206,11)</td>
+<td>
+<a id="ctrl_elements_GO:0030176" href="javascript:toggle('elements_GO:0030176')">[+] Show genes</a><br>
+<div id="elements_GO:0030176" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+TMEM66  -  transmembrane protein 66<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
+<td>membrane</td>
+<td  align=center>8.5E-5</td>
+<td  align=center>8.12E-3</td>
+<td  align=center>1.31 (8795,3755,206,115)</td>
+<td>
+<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
+<div id="elements_GO:0016020" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+CLEC2D  -  c-type lectin domain family 2, member d<br>
+PSAP  -  prosaposin<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+SDF2  -  stromal cell-derived factor 2<br>
+RAB30  -  rab30, member ras oncogene family<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+PNOC  -  prepronociceptin<br>
+PBXIP1  -  pre-b-cell leukemia homeobox interacting protein 1<br>
+CD79A  -  cd79a molecule, immunoglobulin-associated alpha<br>
+SELPLG  -  selectin p ligand<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+ACBD3  -  acyl-coa binding domain containing 3<br>
+STK17B  -  serine/threonine kinase 17b<br>
+ACP2  -  acid phosphatase 2, lysosomal<br>
+ARF4  -  adp-ribosylation factor 4<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+IL10RA  -  interleukin 10 receptor, alpha<br>
+OSBPL2  -  oxysterol binding protein-like 2<br>
+YIPF1  -  yip1 domain family, member 1<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CCPG1  -  cell cycle progression 1<br>
+CTSA  -  cathepsin a<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+RNF149  -  ring finger protein 149<br>
+XKR6  -  xk, kell blood group complex subunit-related family, member 6<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ETNK1  -  ethanolamine kinase 1<br>
+RNF103  -  ring finger protein 103<br>
+TAPBPL  -  tap binding protein-like<br>
+CDC42SE2  -  cdc42 small effector 2<br>
+VPS36  -  vacuolar protein sorting 36 homolog (s. cerevisiae)<br>
+TMEM59  -  transmembrane protein 59<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+KMT2E  -  lysine (k)-specific methyltransferase 2e<br>
+SLC2A11  -  solute carrier family 2 (facilitated glucose transporter), member 11<br>
+ATRAID  -  all-trans retinoic acid-induced differentiation factor<br>
+DNAJC4  -  dnaj (hsp40) homolog, subfamily c, member 4<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+IRF7  -  interferon regulatory factor 7<br>
+MGAT3  -  mannosyl (beta-1,4-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase<br>
+YIPF2  -  yip1 domain family, member 2<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+ERC1  -  elks/rab6-interacting/cast family member 1<br>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+PCMTD1  -  protein-l-isoaspartate (d-aspartate) o-methyltransferase domain containing 1<br>
+MED17  -  mediator complex subunit 17<br>
+IFI35  -  interferon-induced protein 35<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+GOLGA4  -  golgin a4<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+PRCP  -  prolylcarboxypeptidase (angiotensinase c)<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+KCNN3  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 3<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+ITM2B  -  integral membrane protein 2b<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+XBP1  -  x-box binding protein 1<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+MFSD8  -  major facilitator superfamily domain containing 8<br>
+SDE2  -  sde2 telomere maintenance homolog (s. pombe)<br>
+BTN3A1  -  butyrophilin, subfamily 3, member a1<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+NFX1  -  nuclear transcription factor, x-box binding 1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+CYB561D2  -  cytochrome b561 family, member d2<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+CTSB  -  cathepsin b<br>
+GSTK1  -  glutathione s-transferase kappa 1<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
+IFIT5  -  interferon-induced protein with tetratricopeptide repeats 5<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+VAMP5  -  vesicle-associated membrane protein 5<br>
+SH3GLB1  -  sh3-domain grb2-like endophilin b1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+HS2ST1  -  heparan sulfate 2-o-sulfotransferase 1<br>
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+B2M  -  beta-2-microglobulin<br>
+YIPF3  -  yip1 domain family, member 3<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+CORO1B  -  coronin, actin binding protein, 1b<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+C2orf88  -  chromosome 2 open reading frame 88<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARID4A  -  at rich interactive domain 4a (rbp1-like)<br>
+C1GALT1C1  -  c1galt1-specific chaperone 1<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+ABHD3  -  abhydrolase domain containing 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031227&amp;view=details' target="_blank">GO:0031227</a><a name=0031227></a></td>
+<td>intrinsic component of endoplasmic reticulum membrane</td>
+<td  align=center>8.82E-5</td>
+<td  align=center>7.99E-3</td>
+<td  align=center>4.01 (8795,117,206,11)</td>
+<td>
+<a id="ctrl_elements_GO:0031227" href="javascript:toggle('elements_GO:0031227')">[+] Show genes</a><br>
+<div id="elements_GO:0031227" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+SEC62  -  sec62 homolog (s. cerevisiae)<br>
+TMEM66  -  transmembrane protein 66<br>
+TMCO1  -  transmembrane and coiled-coil domains 1<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070971&amp;view=details' target="_blank">GO:0070971</a><a name=0070971></a></td>
+<td>endoplasmic reticulum exit site</td>
+<td  align=center>1.01E-4</td>
+<td  align=center>8.66E-3</td>
+<td  align=center>10.17 (8795,21,206,5)</td>
+<td>
+<a id="ctrl_elements_GO:0070971" href="javascript:toggle('elements_GO:0070971')">[+] Show genes</a><br>
+<div id="elements_GO:0070971" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043202&amp;view=details' target="_blank">GO:0043202</a><a name=0043202></a></td>
+<td>lysosomal lumen</td>
+<td  align=center>1.14E-4</td>
+<td  align=center>9.33E-3</td>
+<td  align=center>6.23 (8795,48,206,7)</td>
+<td>
+<a id="ctrl_elements_GO:0043202" href="javascript:toggle('elements_GO:0043202')">[+] Show genes</a><br>
+<div id="elements_GO:0043202" style="display:none"> <font size=1>
+SCARB2  -  scavenger receptor class b, member 2<br>
+CTSA  -  cathepsin a<br>
+CTSB  -  cathepsin b<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+CTSS  -  cathepsin s<br>
+ACP2  -  acid phosphatase 2, lysosomal<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071556&amp;view=details' target="_blank">GO:0071556</a><a name=0071556></a></td>
+<td>integral component of lumenal side of endoplasmic reticulum membrane</td>
+<td  align=center>1.28E-4</td>
+<td  align=center>9.99E-3</td>
+<td  align=center>9.70 (8795,22,206,5)</td>
+<td>
+<a id="ctrl_elements_GO:0071556" href="javascript:toggle('elements_GO:0071556')">[+] Show genes</a><br>
+<div id="elements_GO:0071556" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+HM13  -  histocompatibility (minor) 13<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030120&amp;view=details' target="_blank">GO:0030120</a><a name=0030120></a></td>
+<td>vesicle coat</td>
+<td  align=center>1.41E-4</td>
+<td  align=center>1.06E-2</td>
+<td  align=center>7.32 (8795,35,206,6)</td>
+<td>
+<a id="ctrl_elements_GO:0030120" href="javascript:toggle('elements_GO:0030120')">[+] Show genes</a><br>
+<div id="elements_GO:0030120" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+SYNRG  -  synergin, gamma<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044322&amp;view=details' target="_blank">GO:0044322</a><a name=0044322></a></td>
+<td>endoplasmic reticulum quality control compartment</td>
+<td  align=center>1.99E-4</td>
+<td  align=center>1.42E-2</td>
+<td  align=center>8.89 (8795,24,206,5)</td>
+<td>
+<a id="ctrl_elements_GO:0044322" href="javascript:toggle('elements_GO:0044322')">[+] Show genes</a><br>
+<div id="elements_GO:0044322" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+RNF103  -  ring finger protein 103<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005794&amp;view=details' target="_blank">GO:0005794</a><a name=0005794></a></td>
+<td>Golgi apparatus</td>
+<td  align=center>2.23E-4</td>
+<td  align=center>1.54E-2</td>
+<td  align=center>2.04 (8795,585,206,28)</td>
+<td>
+<a id="ctrl_elements_GO:0005794" href="javascript:toggle('elements_GO:0005794')">[+] Show genes</a><br>
+<div id="elements_GO:0005794" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+SEC14L1  -  sec14-like 1 (s. cerevisiae)<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+FBXW7  -  f-box and wd repeat domain containing 7, e3 ubiquitin protein ligase<br>
+SYNRG  -  synergin, gamma<br>
+GOLGA4  -  golgin a4<br>
+YIPF3  -  yip1 domain family, member 3<br>
+B2M  -  beta-2-microglobulin<br>
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
+ITM2B  -  integral membrane protein 2b<br>
+SDE2  -  sde2 telomere maintenance homolog (s. pombe)<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+STX5  -  syntaxin 5<br>
+HLA-C  -  major histocompatibility complex, class i, c<br>
+HLA-B  -  major histocompatibility complex, class i, b<br>
+ACBD3  -  acyl-coa binding domain containing 3<br>
+ARF4  -  adp-ribosylation factor 4<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+YIPF1  -  yip1 domain family, member 1<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+VAMP5  -  vesicle-associated membrane protein 5<br>
+YIPF2  -  yip1 domain family, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030127&amp;view=details' target="_blank">GO:0030127</a><a name=0030127></a></td>
+<td>COPII vesicle coat</td>
+<td  align=center>2.43E-4</td>
+<td  align=center>1.61E-2</td>
+<td  align=center>12.20 (8795,14,206,4)</td>
+<td>
+<a id="ctrl_elements_GO:0030127" href="javascript:toggle('elements_GO:0030127')">[+] Show genes</a><br>
+<div id="elements_GO:0030127" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031985&amp;view=details' target="_blank">GO:0031985</a><a name=0031985></a></td>
+<td>Golgi cisterna</td>
+<td  align=center>2.96E-4</td>
+<td  align=center>1.88E-2</td>
+<td  align=center>8.21 (8795,26,206,5)</td>
+<td>
+<a id="ctrl_elements_GO:0031985" href="javascript:toggle('elements_GO:0031985')">[+] Show genes</a><br>
+<div id="elements_GO:0031985" style="display:none"> <font size=1>
+HLA-A  -  major histocompatibility complex, class i, a<br>
+TMEM59  -  transmembrane protein 59<br>
+YIPF1  -  yip1 domain family, member 1<br>
+RAB30  -  rab30, member ras oncogene family<br>
+YIPF2  -  yip1 domain family, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030117&amp;view=details' target="_blank">GO:0030117</a><a name=0030117></a></td>
+<td>membrane coat</td>
+<td  align=center>5.84E-4</td>
+<td  align=center>3.59E-2</td>
+<td  align=center>5.69 (8795,45,206,6)</td>
+<td>
+<a id="ctrl_elements_GO:0030117" href="javascript:toggle('elements_GO:0030117')">[+] Show genes</a><br>
+<div id="elements_GO:0030117" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+COPG1  -  coatomer protein complex, subunit gamma 1<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+SYNRG  -  synergin, gamma<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000138&amp;view=details' target="_blank">GO:0000138</a><a name=0000138></a></td>
+<td>Golgi trans cisterna</td>
+<td  align=center>9.58E-4</td>
+<td  align=center>5.69E-2</td>
+<td  align=center>14.23 (8795,9,206,3)</td>
+<td>
+<a id="ctrl_elements_GO:0000138" href="javascript:toggle('elements_GO:0000138')">[+] Show genes</a><br>
+<div id="elements_GO:0000138" style="display:none"> <font size=1>
+TMEM59  -  transmembrane protein 59<br>
+YIPF1  -  yip1 domain family, member 1<br>
+YIPF2  -  yip1 domain family, member 2<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9241 genes out of 9692 gene terms entered by the user.<br> 9241 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>213 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

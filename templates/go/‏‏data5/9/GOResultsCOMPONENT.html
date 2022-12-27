@@ -1,0 +1,877 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='593,811,735,925' HREF='#0071556' ALT=''>
+<AREA SHAPE='RECT' COORDS='1836,413,1932,461' HREF='#1903561' ALT=''>
+<AREA SHAPE='RECT' COORDS='1836,543,1932,591' HREF='#0070062' ALT=''>
+<AREA SHAPE='RECT' COORDS='1505,294,1641,357' HREF='#0062023' ALT=''>
+<AREA SHAPE='RECT' COORDS='72,689,173,737' HREF='#0034774' ALT=''>
+<AREA SHAPE='RECT' COORDS='72,837,173,899' HREF='#0031093' ALT=''>
+<AREA SHAPE='RECT' COORDS='403,294,493,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='613,406,712,469' HREF='#0044432' ALT=''>
+<AREA SHAPE='RECT' COORDS='493,413,589,461' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='1232,197,1347,245' HREF='#0099081' ALT=''>
+<AREA SHAPE='RECT' COORDS='1220,301,1335,349' HREF='#0099512' ALT=''>
+<AREA SHAPE='RECT' COORDS='736,406,832,469' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='741,535,837,598' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='605,518,717,615' HREF='#0031227' ALT=''>
+<AREA SHAPE='RECT' COORDS='224,101,365,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='91,301,168,349' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='881,101,1009,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='845,197,960,245' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='984,197,1059,245' HREF='#0005581' ALT=''>
+<AREA SHAPE='RECT' COORDS='608,665,720,762' HREF='#0030176' ALT=''>
+<AREA SHAPE='RECT' COORDS='836,301,969,349' HREF='#0098797' ALT=''>
+<AREA SHAPE='RECT' COORDS='73,543,172,591' HREF='#0060205' ALT=''>
+<AREA SHAPE='RECT' COORDS='1645,197,1741,245' HREF='#0005615' ALT=''>
+<AREA SHAPE='RECT' COORDS='344,413,469,461' HREF='#0012506' ALT=''>
+<AREA SHAPE='RECT' COORDS='452,543,577,591' HREF='#0030659' ALT=''>
+<AREA SHAPE='RECT' COORDS='1083,197,1208,245' HREF='#0044420' ALT=''>
+<AREA SHAPE='RECT' COORDS='1144,413,1232,461' HREF='#0071953' ALT=''>
+<AREA SHAPE='RECT' COORDS='1016,294,1091,357' HREF='#0005583' ALT=''>
+<AREA SHAPE='RECT' COORDS='456,689,563,737' HREF='#0030662' ALT=''>
+<AREA SHAPE='RECT' COORDS='307,689,432,737' HREF='#0030666' ALT=''>
+<AREA SHAPE='RECT' COORDS='1112,101,1227,149' HREF='#0099080' ALT=''>
+<AREA SHAPE='RECT' COORDS='676,101,748,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='688,197,821,245' HREF='#0044459' ALT=''>
+<AREA SHAPE='RECT' COORDS='513,197,604,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='1765,197,1861,245' HREF='#0043230' ALT=''>
+<AREA SHAPE='RECT' COORDS='425,844,551,892' HREF='#0030665' ALT=''>
+<AREA SHAPE='RECT' COORDS='375,974,500,1037' HREF='#0030669' ALT=''>
+<AREA SHAPE='RECT' COORDS='1371,197,1501,245' HREF='#0072562' ALT=''>
+<AREA SHAPE='RECT' COORDS='128,406,219,469' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,413,104,461' HREF='#0031983' ALT=''>
+<AREA SHAPE='RECT' COORDS='1901,301,1973,349' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='1525,197,1621,245' HREF='#0031012' ALT=''>
+<AREA SHAPE='RECT' COORDS='517,301,613,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='861,535,952,598' HREF='#0042613' ALT=''>
+<AREA SHAPE='RECT' COORDS='772,101,857,149' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='1008,413,1099,461' HREF='#0005584' ALT=''>
+<AREA SHAPE='RECT' COORDS='857,413,956,461' HREF='#0042611' ALT=''>
+<AREA SHAPE='RECT' COORDS='296,301,379,349' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='340,535,428,598' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='880,5,763,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='296,197,379,245' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='405,197,483,245' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='1455,101,1551,149' HREF='#0044421' ALT=''>
+<AREA SHAPE='RECT' COORDS='1708,101,1783,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1807,101,1903,149' HREF='#0005576' ALT=''>
+<AREA SHAPE='RECT' COORDS='1885,197,2024,245' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='196,543,316,591' HREF='#0098805' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0062023&amp;view=details' target="_blank">GO:0062023</a><a name=0062023></a></td>
+<td>collagen-containing extracellular matrix</td>
+<td  align=center>2.23E-29</td>
+<td  align=center>4.3E-26</td>
+<td  align=center>15.73 (15353,369,82,31)</td>
+<td>
+<a id="ctrl_elements_GO:0062023" href="javascript:toggle('elements_GO:0062023')">[+] Show genes</a><br>
+<div id="elements_GO:0062023" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+A2M  -  alpha-2-macroglobulin<br>
+AEBP1  -  ae binding protein 1<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+ELN  -  elastin<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+CPA3  -  carboxypeptidase a3 (mast cell)<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+DCN  -  decorin<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+FBLN1  -  fibulin 1<br>
+BGN  -  biglycan<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+SULF1  -  sulfatase 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+MATN2  -  matrilin 2<br>
+TGM2  -  transglutaminase 2<br>
+C1QA  -  complement component 1, q subcomponent, a chain<br>
+S100A6  -  s100 calcium binding protein a6<br>
+C1QC  -  complement component 1, q subcomponent, c chain<br>
+EMILIN2  -  elastin microfibril interfacer 2<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+PODN  -  podocan<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031012&amp;view=details' target="_blank">GO:0031012</a><a name=0031012></a></td>
+<td>extracellular matrix</td>
+<td  align=center>1.28E-25</td>
+<td  align=center>1.24E-22</td>
+<td  align=center>11.87 (15353,489,82,31)</td>
+<td>
+<a id="ctrl_elements_GO:0031012" href="javascript:toggle('elements_GO:0031012')">[+] Show genes</a><br>
+<div id="elements_GO:0031012" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+A2M  -  alpha-2-macroglobulin<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+AEBP1  -  ae binding protein 1<br>
+ELN  -  elastin<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+CPA3  -  carboxypeptidase a3 (mast cell)<br>
+FBLN5  -  fibulin 5<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+DCN  -  decorin<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+FBLN1  -  fibulin 1<br>
+BGN  -  biglycan<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+S100A4  -  s100 calcium binding protein a4<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+SULF1  -  sulfatase 1<br>
+MATN2  -  matrilin 2<br>
+TGM2  -  transglutaminase 2<br>
+S100A6  -  s100 calcium binding protein a6<br>
+C1QA  -  complement component 1, q subcomponent, a chain<br>
+C1QC  -  complement component 1, q subcomponent, c chain<br>
+EMILIN2  -  elastin microfibril interfacer 2<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+PODN  -  podocan<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005576&amp;view=details' target="_blank">GO:0005576</a><a name=0005576></a></td>
+<td>extracellular region</td>
+<td  align=center>5.39E-21</td>
+<td  align=center>3.47E-18</td>
+<td  align=center>5.29 (15353,1452,82,41)</td>
+<td>
+<a id="ctrl_elements_GO:0005576" href="javascript:toggle('elements_GO:0005576')">[+] Show genes</a><br>
+<div id="elements_GO:0005576" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+A2M  -  alpha-2-macroglobulin<br>
+MASP1  -  mannan-binding lectin serine peptidase 1 (c4/c2 activating component of ra-reactive factor)<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+AEBP1  -  ae binding protein 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+ELN  -  elastin<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br>
+CPA3  -  carboxypeptidase a3 (mast cell)<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+CYB5R3  -  cytochrome b5 reductase 3<br>
+FBLN1  -  fibulin 1<br>
+EPHA3  -  eph receptor a3<br>
+BGN  -  biglycan<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+S100A4  -  s100 calcium binding protein a4<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+S100A6  -  s100 calcium binding protein a6<br>
+C1QA  -  complement component 1, q subcomponent, a chain<br>
+C1QC  -  complement component 1, q subcomponent, c chain<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+EMILIN2  -  elastin microfibril interfacer 2<br>
+C1S  -  complement component 1, s subcomponent<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+PLTP  -  phospholipid transfer protein<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CFH  -  complement factor h<br>
+CD163  -  cd163 molecule<br>
+C7  -  complement component 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044421&amp;view=details' target="_blank">GO:0044421</a><a name=0044421></a></td>
+<td>extracellular region part</td>
+<td  align=center>6.27E-21</td>
+<td  align=center>3.02E-18</td>
+<td  align=center>3.54 (15353,2856,82,54)</td>
+<td>
+<a id="ctrl_elements_GO:0044421" href="javascript:toggle('elements_GO:0044421')">[+] Show genes</a><br>
+<div id="elements_GO:0044421" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+MASP1  -  mannan-binding lectin serine peptidase 1 (c4/c2 activating component of ra-reactive factor)<br>
+AEBP1  -  ae binding protein 1<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+ELN  -  elastin<br>
+CTGF  -  connective tissue growth factor<br>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+CPA3  -  carboxypeptidase a3 (mast cell)<br>
+FRZB  -  frizzled-related protein<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+DCN  -  decorin<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+DPYSL2  -  dihydropyrimidinase-like 2<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+FBLN1  -  fibulin 1<br>
+BGN  -  biglycan<br>
+MATN2  -  matrilin 2<br>
+EMILIN2  -  elastin microfibril interfacer 2<br>
+PLTP  -  phospholipid transfer protein<br>
+CFH  -  complement factor h<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+ARHGDIB  -  rho gdp dissociation inhibitor (gdi) beta<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+C1QTNF1  -  c1q and tumor necrosis factor related protein 1<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+SULF1  -  sulfatase 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+C1QA  -  complement component 1, q subcomponent, a chain<br>
+S100A6  -  s100 calcium binding protein a6<br>
+TGM2  -  transglutaminase 2<br>
+C1QC  -  complement component 1, q subcomponent, c chain<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+C1S  -  complement component 1, s subcomponent<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+C7  -  complement component 7<br>
+PODN  -  podocan<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005615&amp;view=details' target="_blank">GO:0005615</a><a name=0005615></a></td>
+<td>extracellular space</td>
+<td  align=center>1.24E-18</td>
+<td  align=center>4.79E-16</td>
+<td  align=center>5.49 (15353,1228,82,36)</td>
+<td>
+<a id="ctrl_elements_GO:0005615" href="javascript:toggle('elements_GO:0005615')">[+] Show genes</a><br>
+<div id="elements_GO:0005615" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+A2M  -  alpha-2-macroglobulin<br>
+MASP1  -  mannan-binding lectin serine peptidase 1 (c4/c2 activating component of ra-reactive factor)<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+AEBP1  -  ae binding protein 1<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+FRZB  -  frizzled-related protein<br>
+CPA3  -  carboxypeptidase a3 (mast cell)<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+DCN  -  decorin<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+FBLN1  -  fibulin 1<br>
+BGN  -  biglycan<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+C1QTNF1  -  c1q and tumor necrosis factor related protein 1<br>
+SULF1  -  sulfatase 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+C1QC  -  complement component 1, q subcomponent, c chain<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+C1S  -  complement component 1, s subcomponent<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+PLTP  -  phospholipid transfer protein<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CFH  -  complement factor h<br>
+PODN  -  podocan<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044420&amp;view=details' target="_blank">GO:0044420</a><a name=0044420></a></td>
+<td>extracellular matrix component</td>
+<td  align=center>3.41E-10</td>
+<td  align=center>1.09E-7</td>
+<td  align=center>28.26 (15353,53,82,8)</td>
+<td>
+<a id="ctrl_elements_GO:0044420" href="javascript:toggle('elements_GO:0044420')">[+] Show genes</a><br>
+<div id="elements_GO:0044420" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+ELN  -  elastin<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+FBLN1  -  fibulin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070062&amp;view=details' target="_blank">GO:0070062</a><a name=0070062></a></td>
+<td>extracellular exosome</td>
+<td  align=center>7.03E-10</td>
+<td  align=center>1.94E-7</td>
+<td  align=center>3.27 (15353,1776,82,31)</td>
+<td>
+<a id="ctrl_elements_GO:0070062" href="javascript:toggle('elements_GO:0070062')">[+] Show genes</a><br>
+<div id="elements_GO:0070062" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+AEBP1  -  ae binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+ARHGDIB  -  rho gdp dissociation inhibitor (gdi) beta<br>
+DPYSL2  -  dihydropyrimidinase-like 2<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+FBLN1  -  fibulin 1<br>
+BGN  -  biglycan<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+S100A6  -  s100 calcium binding protein a6<br>
+TGM2  -  transglutaminase 2<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CFH  -  complement factor h<br>
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+C7  -  complement component 7<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043230&amp;view=details' target="_blank">GO:0043230</a><a name=0043230></a></td>
+<td>extracellular organelle</td>
+<td  align=center>8.9E-10</td>
+<td  align=center>2.15E-7</td>
+<td  align=center>3.24 (15353,1793,82,31)</td>
+<td>
+<a id="ctrl_elements_GO:0043230" href="javascript:toggle('elements_GO:0043230')">[+] Show genes</a><br>
+<div id="elements_GO:0043230" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+AEBP1  -  ae binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+ARHGDIB  -  rho gdp dissociation inhibitor (gdi) beta<br>
+DPYSL2  -  dihydropyrimidinase-like 2<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+FBLN1  -  fibulin 1<br>
+BGN  -  biglycan<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+S100A6  -  s100 calcium binding protein a6<br>
+TGM2  -  transglutaminase 2<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CFH  -  complement factor h<br>
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+C7  -  complement component 7<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903561&amp;view=details' target="_blank">GO:1903561</a><a name=1903561></a></td>
+<td>extracellular vesicle</td>
+<td  align=center>8.9E-10</td>
+<td  align=center>1.91E-7</td>
+<td  align=center>3.24 (15353,1793,82,31)</td>
+<td>
+<a id="ctrl_elements_GO:1903561" href="javascript:toggle('elements_GO:1903561')">[+] Show genes</a><br>
+<div id="elements_GO:1903561" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+AEBP1  -  ae binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+ARHGDIB  -  rho gdp dissociation inhibitor (gdi) beta<br>
+DPYSL2  -  dihydropyrimidinase-like 2<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+FBLN1  -  fibulin 1<br>
+BGN  -  biglycan<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+S100A6  -  s100 calcium binding protein a6<br>
+TGM2  -  transglutaminase 2<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CFH  -  complement factor h<br>
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+C7  -  complement component 7<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071953&amp;view=details' target="_blank">GO:0071953</a><a name=0071953></a></td>
+<td>elastic fiber</td>
+<td  align=center>3.76E-9</td>
+<td  align=center>7.26E-7</td>
+<td  align=center>149.79 (15353,5,82,4)</td>
+<td>
+<a id="ctrl_elements_GO:0071953" href="javascript:toggle('elements_GO:0071953')">[+] Show genes</a><br>
+<div id="elements_GO:0071953" style="display:none"> <font size=1>
+FBLN5  -  fibulin 5<br>
+ELN  -  elastin<br>
+FBLN1  -  fibulin 1<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005581&amp;view=details' target="_blank">GO:0005581</a><a name=0005581></a></td>
+<td>collagen trimer</td>
+<td  align=center>9.92E-9</td>
+<td  align=center>1.74E-6</td>
+<td  align=center>18.72 (15353,80,82,8)</td>
+<td>
+<a id="ctrl_elements_GO:0005581" href="javascript:toggle('elements_GO:0005581')">[+] Show genes</a><br>
+<div id="elements_GO:0005581" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+C1QTNF1  -  c1q and tumor necrosis factor related protein 1<br>
+DCN  -  decorin<br>
+C1QA  -  complement component 1, q subcomponent, a chain<br>
+C1QC  -  complement component 1, q subcomponent, c chain<br>
+EMILIN2  -  elastin microfibril interfacer 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details' target="_blank">GO:0031982</a><a name=0031982></a></td>
+<td>vesicle</td>
+<td  align=center>6.28E-8</td>
+<td  align=center>1.01E-5</td>
+<td  align=center>2.42 (15353,2791,82,36)</td>
+<td>
+<a id="ctrl_elements_GO:0031982" href="javascript:toggle('elements_GO:0031982')">[+] Show genes</a><br>
+<div id="elements_GO:0031982" style="display:none"> <font size=1>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+A2M  -  alpha-2-macroglobulin<br>
+AEBP1  -  ae binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+CPA3  -  carboxypeptidase a3 (mast cell)<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LTBP3  -  latent transforming growth factor beta binding protein 3<br>
+ARHGDIB  -  rho gdp dissociation inhibitor (gdi) beta<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+DPYSL2  -  dihydropyrimidinase-like 2<br>
+FBLN1  -  fibulin 1<br>
+SLA  -  src-like-adaptor<br>
+BGN  -  biglycan<br>
+EPHA3  -  eph receptor a3<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+S100A6  -  s100 calcium binding protein a6<br>
+TGM2  -  transglutaminase 2<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CFH  -  complement factor h<br>
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+C7  -  complement component 7<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031093&amp;view=details' target="_blank">GO:0031093</a><a name=0031093></a></td>
+<td>platelet alpha granule lumen</td>
+<td  align=center>5.06E-7</td>
+<td  align=center>7.5E-5</td>
+<td  align=center>20.06 (15353,56,82,6)</td>
+<td>
+<a id="ctrl_elements_GO:0031093" href="javascript:toggle('elements_GO:0031093')">[+] Show genes</a><br>
+<div id="elements_GO:0031093" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072562&amp;view=details' target="_blank">GO:0072562</a><a name=0072562></a></td>
+<td>blood microparticle</td>
+<td  align=center>1.29E-5</td>
+<td  align=center>1.78E-3</td>
+<td  align=center>11.58 (15353,97,82,6)</td>
+<td>
+<a id="ctrl_elements_GO:0072562" href="javascript:toggle('elements_GO:0072562')">[+] Show genes</a><br>
+<div id="elements_GO:0072562" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+CFH  -  complement factor h<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+C1QC  -  complement component 1, q subcomponent, c chain<br>
+C1R  -  complement component 1, r subcomponent<br>
+C1S  -  complement component 1, s subcomponent<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005584&amp;view=details' target="_blank">GO:0005584</a><a name=0005584></a></td>
+<td>collagen type I trimer</td>
+<td  align=center>2.82E-5</td>
+<td  align=center>3.62E-3</td>
+<td  align=center>187.23 (15353,2,82,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005584" href="javascript:toggle('elements_GO:0005584')">[+] Show genes</a><br>
+<div id="elements_GO:0005584" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005583&amp;view=details' target="_blank">GO:0005583</a><a name=0005583></a></td>
+<td>fibrillar collagen trimer</td>
+<td  align=center>3.12E-5</td>
+<td  align=center>3.76E-3</td>
+<td  align=center>46.81 (15353,12,82,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005583" href="javascript:toggle('elements_GO:0005583')">[+] Show genes</a><br>
+<div id="elements_GO:0005583" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042613&amp;view=details' target="_blank">GO:0042613</a><a name=0042613></a></td>
+<td>MHC class II protein complex</td>
+<td  align=center>5.12E-5</td>
+<td  align=center>5.81E-3</td>
+<td  align=center>40.12 (15353,14,82,3)</td>
+<td>
+<a id="ctrl_elements_GO:0042613" href="javascript:toggle('elements_GO:0042613')">[+] Show genes</a><br>
+<div id="elements_GO:0042613" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034774&amp;view=details' target="_blank">GO:0034774</a><a name=0034774></a></td>
+<td>secretory granule lumen</td>
+<td  align=center>1.2E-4</td>
+<td  align=center>1.28E-2</td>
+<td  align=center>5.37 (15353,279,82,8)</td>
+<td>
+<a id="ctrl_elements_GO:0034774" href="javascript:toggle('elements_GO:0034774')">[+] Show genes</a><br>
+<div id="elements_GO:0034774" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+CYB5R3  -  cytochrome b5 reductase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060205&amp;view=details' target="_blank">GO:0060205</a><a name=0060205></a></td>
+<td>cytoplasmic vesicle lumen</td>
+<td  align=center>1.72E-4</td>
+<td  align=center>1.74E-2</td>
+<td  align=center>5.09 (15353,294,82,8)</td>
+<td>
+<a id="ctrl_elements_GO:0060205" href="javascript:toggle('elements_GO:0060205')">[+] Show genes</a><br>
+<div id="elements_GO:0060205" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+CYB5R3  -  cytochrome b5 reductase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031983&amp;view=details' target="_blank">GO:0031983</a><a name=0031983></a></td>
+<td>vesicle lumen</td>
+<td  align=center>1.76E-4</td>
+<td  align=center>1.69E-2</td>
+<td  align=center>5.08 (15353,295,82,8)</td>
+<td>
+<a id="ctrl_elements_GO:0031983" href="javascript:toggle('elements_GO:0031983')">[+] Show genes</a><br>
+<div id="elements_GO:0031983" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+CYB5R3  -  cytochrome b5 reductase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042611&amp;view=details' target="_blank">GO:0042611</a><a name=0042611></a></td>
+<td>MHC protein complex</td>
+<td  align=center>1.82E-4</td>
+<td  align=center>1.67E-2</td>
+<td  align=center>26.75 (15353,21,82,3)</td>
+<td>
+<a id="ctrl_elements_GO:0042611" href="javascript:toggle('elements_GO:0042611')">[+] Show genes</a><br>
+<div id="elements_GO:0042611" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071556&amp;view=details' target="_blank">GO:0071556</a><a name=0071556></a></td>
+<td>integral component of lumenal side of endoplasmic reticulum membrane</td>
+<td  align=center>3.1E-4</td>
+<td  align=center>2.72E-2</td>
+<td  align=center>22.47 (15353,25,82,3)</td>
+<td>
+<a id="ctrl_elements_GO:0071556" href="javascript:toggle('elements_GO:0071556')">[+] Show genes</a><br>
+<div id="elements_GO:0071556" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043233&amp;view=details' target="_blank">GO:0043233</a><a name=0043233></a></td>
+<td>organelle lumen</td>
+<td  align=center>5.81E-4</td>
+<td  align=center>4.87E-2</td>
+<td  align=center>2.58 (15353,1089,82,15)</td>
+<td>
+<a id="ctrl_elements_GO:0043233" href="javascript:toggle('elements_GO:0043233')">[+] Show genes</a><br>
+<div id="elements_GO:0043233" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+BGN  -  biglycan<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+DCN  -  decorin<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+CYB5R3  -  cytochrome b5 reductase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070013&amp;view=details' target="_blank">GO:0070013</a><a name=0070013></a></td>
+<td>intracellular organelle lumen</td>
+<td  align=center>5.81E-4</td>
+<td  align=center>4.67E-2</td>
+<td  align=center>2.58 (15353,1089,82,15)</td>
+<td>
+<a id="ctrl_elements_GO:0070013" href="javascript:toggle('elements_GO:0070013')">[+] Show genes</a><br>
+<div id="elements_GO:0070013" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+BGN  -  biglycan<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+DCN  -  decorin<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+CYB5R3  -  cytochrome b5 reductase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031974&amp;view=details' target="_blank">GO:0031974</a><a name=0031974></a></td>
+<td>membrane-enclosed lumen</td>
+<td  align=center>5.81E-4</td>
+<td  align=center>4.48E-2</td>
+<td  align=center>2.58 (15353,1089,82,15)</td>
+<td>
+<a id="ctrl_elements_GO:0031974" href="javascript:toggle('elements_GO:0031974')">[+] Show genes</a><br>
+<div id="elements_GO:0031974" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+BGN  -  biglycan<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+TMSB4X  -  thymosin beta 4, x-linked<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ISLR  -  immunoglobulin superfamily containing leucine-rich repeat<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+DCN  -  decorin<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+CYB5R3  -  cytochrome b5 reductase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030669&amp;view=details' target="_blank">GO:0030669</a><a name=0030669></a></td>
+<td>clathrin-coated endocytic vesicle membrane</td>
+<td  align=center>5.93E-4</td>
+<td  align=center>4.39E-2</td>
+<td  align=center>18.12 (15353,31,82,3)</td>
+<td>
+<a id="ctrl_elements_GO:0030669" href="javascript:toggle('elements_GO:0030669')">[+] Show genes</a><br>
+<div id="elements_GO:0030669" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 15811 genes out of 16566 gene terms entered by the user.<br> 15811 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>90 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 15721 genes.<br>Only 15353 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1928 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

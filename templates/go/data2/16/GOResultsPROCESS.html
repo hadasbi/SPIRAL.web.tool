@@ -1,0 +1,2987 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='413,385,515,465' HREF='#1901135' ALT=''>
+<AREA SHAPE='RECT' COORDS='459,541,568,603' HREF='#1903509' ALT=''>
+<AREA SHAPE='RECT' COORDS='333,532,435,612' HREF='#1901137' ALT=''>
+<AREA SHAPE='RECT' COORDS='896,1419,1035,1482' HREF='#0006682' ALT=''>
+<AREA SHAPE='RECT' COORDS='5532,548,5617,596' HREF='#0034097' ALT=''>
+<AREA SHAPE='RECT' COORDS='5428,679,5519,759' HREF='#0071345' ALT=''>
+<AREA SHAPE='RECT' COORDS='5543,695,5641,743' HREF='#1990868' ALT=''>
+<AREA SHAPE='RECT' COORDS='795,255,923,303' HREF='#0044238' ALT=''>
+<AREA SHAPE='RECT' COORDS='699,825,787,905' HREF='#0006520' ALT=''>
+<AREA SHAPE='RECT' COORDS='693,401,803,449' HREF='#0006629' ALT=''>
+<AREA SHAPE='RECT' COORDS='1316,989,1399,1051' HREF='#0006672' ALT=''>
+<AREA SHAPE='RECT' COORDS='1289,1143,1385,1206' HREF='#0046513' ALT=''>
+<AREA SHAPE='RECT' COORDS='1129,1143,1255,1206' HREF='#0006677' ALT=''>
+<AREA SHAPE='RECT' COORDS='4960,532,5069,612' HREF='#2000026' ALT=''>
+<AREA SHAPE='RECT' COORDS='4705,687,4847,750' HREF='#0051960' ALT=''>
+<AREA SHAPE='RECT' COORDS='2280,532,2413,612' HREF='#0120036' ALT=''>
+<AREA SHAPE='RECT' COORDS='2284,695,2409,743' HREF='#0031175' ALT=''>
+<AREA SHAPE='RECT' COORDS='5293,247,5389,310' HREF='#0065009' ALT=''>
+<AREA SHAPE='RECT' COORDS='5299,394,5387,457' HREF='#0050790' ALT=''>
+<AREA SHAPE='RECT' COORDS='3771,980,3877,1060' HREF='#0032273' ALT=''>
+<AREA SHAPE='RECT' COORDS='2691,255,2797,303' HREF='#0007272' ALT=''>
+<AREA SHAPE='RECT' COORDS='2676,401,2812,449' HREF='#0008366' ALT=''>
+<AREA SHAPE='RECT' COORDS='2835,548,2965,596' HREF='#0007165' ALT=''>
+<AREA SHAPE='RECT' COORDS='2875,679,2965,759' HREF='#0007166' ALT=''>
+<AREA SHAPE='RECT' COORDS='2720,695,2851,743' HREF='#0035556' ALT=''>
+<AREA SHAPE='RECT' COORDS='3592,1273,3685,1370' HREF='#0010977' ALT=''>
+<AREA SHAPE='RECT' COORDS='2048,548,2141,596' HREF='#0034329' ALT=''>
+<AREA SHAPE='RECT' COORDS='2057,687,2135,750' HREF='#0007043' ALT=''>
+<AREA SHAPE='RECT' COORDS='1083,1290,1208,1353' HREF='#0046476' ALT=''>
+<AREA SHAPE='RECT' COORDS='4960,385,5069,465' HREF='#0051239' ALT=''>
+<AREA SHAPE='RECT' COORDS='5092,670,5201,767' HREF='#0051240' ALT=''>
+<AREA SHAPE='RECT' COORDS='4032,523,4141,621' HREF='#0051241' ALT=''>
+<AREA SHAPE='RECT' COORDS='5144,541,5227,603' HREF='#0044057' ALT=''>
+<AREA SHAPE='RECT' COORDS='693,541,803,603' HREF='#0044255' ALT=''>
+<AREA SHAPE='RECT' COORDS='643,687,752,750' HREF='#0006643' ALT=''>
+<AREA SHAPE='RECT' COORDS='167,989,249,1051' HREF='#0006631' ALT=''>
+<AREA SHAPE='RECT' COORDS='896,1290,1035,1353' HREF='#0006681' ALT=''>
+<AREA SHAPE='RECT' COORDS='5089,825,5204,905' HREF='#0031646' ALT=''>
+<AREA SHAPE='RECT' COORDS='4728,989,4829,1051' HREF='#0031643' ALT=''>
+<AREA SHAPE='RECT' COORDS='2888,825,3008,905' HREF='#0007167' ALT=''>
+<AREA SHAPE='RECT' COORDS='2896,971,3013,1069' HREF='#0007169' ALT=''>
+<AREA SHAPE='RECT' COORDS='2571,996,2701,1044' HREF='#0007265' ALT=''>
+<AREA SHAPE='RECT' COORDS='6301,695,6435,743' HREF='#1990778' ALT=''>
+<AREA SHAPE='RECT' COORDS='6223,834,6356,897' HREF='#0072659' ALT=''>
+<AREA SHAPE='RECT' COORDS='2500,101,2599,181' HREF='#0071840' ALT=''>
+<AREA SHAPE='RECT' COORDS='2419,247,2509,310' HREF='#0016043' ALT=''>
+<AREA SHAPE='RECT' COORDS='4147,834,4277,897' HREF='#0010721' ALT=''>
+<AREA SHAPE='RECT' COORDS='3991,989,4103,1051' HREF='#0050768' ALT=''>
+<AREA SHAPE='RECT' COORDS='944,834,1037,897' HREF='#0006665' ALT=''>
+<AREA SHAPE='RECT' COORDS='863,989,988,1051' HREF='#0006687' ALT=''>
+<AREA SHAPE='RECT' COORDS='1012,989,1108,1051' HREF='#0030148' ALT=''>
+<AREA SHAPE='RECT' COORDS='811,825,920,905' HREF='#1901566' ALT=''>
+<AREA SHAPE='RECT' COORDS='753,1126,849,1223' HREF='#0042398' ALT=''>
+<AREA SHAPE='RECT' COORDS='559,980,655,1060' HREF='#0008652' ALT=''>
+<AREA SHAPE='RECT' COORDS='5411,385,5504,465' HREF='#0070887' ALT=''>
+<AREA SHAPE='RECT' COORDS='5425,532,5508,612' HREF='#0071310' ALT=''>
+<AREA SHAPE='RECT' COORDS='1611,401,1752,449' HREF='#0048731' ALT=''>
+<AREA SHAPE='RECT' COORDS='1661,541,1779,603' HREF='#0007422' ALT=''>
+<AREA SHAPE='RECT' COORDS='2165,541,2256,603' HREF='#0045216' ALT=''>
+<AREA SHAPE='RECT' COORDS='2560,541,2699,603' HREF='#0032291' ALT=''>
+<AREA SHAPE='RECT' COORDS='2723,548,2811,596' HREF='#0042552' ALT=''>
+<AREA SHAPE='RECT' COORDS='4129,687,4265,750' HREF='#0045596' ALT=''>
+<AREA SHAPE='RECT' COORDS='445,695,568,743' HREF='#0008610' ALT=''>
+<AREA SHAPE='RECT' COORDS='160,1143,256,1206' HREF='#0006633' ALT=''>
+<AREA SHAPE='RECT' COORDS='552,834,675,897' HREF='#0046467' ALT=''>
+<AREA SHAPE='RECT' COORDS='5289,687,5404,750' HREF='#0031644' ALT=''>
+<AREA SHAPE='RECT' COORDS='5301,541,5397,603' HREF='#0051336' ALT=''>
+<AREA SHAPE='RECT' COORDS='147,834,269,897' HREF='#0046394' ALT=''>
+<AREA SHAPE='RECT' COORDS='20,989,143,1051' HREF='#0072330' ALT=''>
+<AREA SHAPE='RECT' COORDS='5483,834,5581,897' HREF='#1990869' ALT=''>
+<AREA SHAPE='RECT' COORDS='3657,687,3788,750' HREF='#0043254' ALT=''>
+<AREA SHAPE='RECT' COORDS='3827,825,3957,905' HREF='#0031334' ALT=''>
+<AREA SHAPE='RECT' COORDS='3541,834,3648,897' HREF='#0032271' ALT=''>
+<AREA SHAPE='RECT' COORDS='4289,695,4420,743' HREF='#0060284' ALT=''>
+<AREA SHAPE='RECT' COORDS='4301,841,4413,889' HREF='#0050767' ALT=''>
+<AREA SHAPE='RECT' COORDS='4443,834,4573,897' HREF='#0010720' ALT=''>
+<AREA SHAPE='RECT' COORDS='277,394,389,457' HREF='#0044283' ALT=''>
+<AREA SHAPE='RECT' COORDS='213,541,309,603' HREF='#0016053' ALT=''>
+<AREA SHAPE='RECT' COORDS='4467,385,4560,465' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='4472,532,4555,612' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='4629,532,4752,612' HREF='#0051094' ALT=''>
+<AREA SHAPE='RECT' COORDS='3917,523,4008,621' HREF='#0044089' ALT=''>
+<AREA SHAPE='RECT' COORDS='1183,996,1292,1044' HREF='#0017144' ALT=''>
+<AREA SHAPE='RECT' COORDS='1023,1143,1105,1206' HREF='#0006600' ALT=''>
+<AREA SHAPE='RECT' COORDS='1863,834,1945,897' HREF='#0030913' ALT=''>
+<AREA SHAPE='RECT' COORDS='4036,385,4129,465' HREF='#0048519' ALT=''>
+<AREA SHAPE='RECT' COORDS='4165,532,4288,612' HREF='#0051093' ALT=''>
+<AREA SHAPE='RECT' COORDS='3760,532,3843,612' HREF='#0048523' ALT=''>
+<AREA SHAPE='RECT' COORDS='3672,825,3803,905' HREF='#1903828' ALT=''>
+<AREA SHAPE='RECT' COORDS='4781,825,4923,905' HREF='#0051962' ALT=''>
+<AREA SHAPE='RECT' COORDS='2284,841,2409,889' HREF='#0061564' ALT=''>
+<AREA SHAPE='RECT' COORDS='4452,989,4564,1051' HREF='#0050769' ALT=''>
+<AREA SHAPE='RECT' COORDS='6040,255,6147,303' HREF='#0051234' ALT=''>
+<AREA SHAPE='RECT' COORDS='6057,401,6129,449' HREF='#0006810' ALT=''>
+<AREA SHAPE='RECT' COORDS='3917,385,4008,465' HREF='#0044087' ALT=''>
+<AREA SHAPE='RECT' COORDS='2708,117,2780,165' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='1916,247,2023,310' HREF='#0048869' ALT=''>
+<AREA SHAPE='RECT' COORDS='5413,247,5499,310' HREF='#0051716' ALT=''>
+<AREA SHAPE='RECT' COORDS='1024,247,1107,310' HREF='#0044237' ALT=''>
+<AREA SHAPE='RECT' COORDS='5824,117,5896,165' HREF='#0023052' ALT=''>
+<AREA SHAPE='RECT' COORDS='5824,247,5917,310' HREF='#0035637' ALT=''>
+<AREA SHAPE='RECT' COORDS='3981,825,4123,905' HREF='#0051961' ALT=''>
+<AREA SHAPE='RECT' COORDS='4444,687,4580,750' HREF='#0045597' ALT=''>
+<AREA SHAPE='RECT' COORDS='3913,670,4004,767' HREF='#0051130' ALT=''>
+<AREA SHAPE='RECT' COORDS='5685,401,5800,449' HREF='#0003012' ALT=''>
+<AREA SHAPE='RECT' COORDS='5671,548,5799,596' HREF='#0043500' ALT=''>
+<AREA SHAPE='RECT' COORDS='4457,1143,4559,1206' HREF='#0014015' ALT=''>
+<AREA SHAPE='RECT' COORDS='4463,1281,4561,1361' HREF='#0045687' ALT=''>
+<AREA SHAPE='RECT' COORDS='6280,255,6395,303' HREF='#0033036' ALT=''>
+<AREA SHAPE='RECT' COORDS='6360,401,6491,449' HREF='#0008104' ALT=''>
+<AREA SHAPE='RECT' COORDS='6221,394,6336,457' HREF='#0070727' ALT=''>
+<AREA SHAPE='RECT' COORDS='3543,670,3633,767' HREF='#0051129' ALT=''>
+<AREA SHAPE='RECT' COORDS='3197,825,3317,905' HREF='#0031345' ALT=''>
+<AREA SHAPE='RECT' COORDS='753,1290,849,1353' HREF='#0006601' ALT=''>
+<AREA SHAPE='RECT' COORDS='4307,996,4408,1044' HREF='#0014013' ALT=''>
+<AREA SHAPE='RECT' COORDS='4064,1135,4195,1215' HREF='#0070445' ALT=''>
+<AREA SHAPE='RECT' COORDS='4219,1143,4307,1206' HREF='#0060251' ALT=''>
+<AREA SHAPE='RECT' COORDS='4331,1143,4429,1206' HREF='#0045685' ALT=''>
+<AREA SHAPE='RECT' COORDS='4127,989,4225,1051' HREF='#0045664' ALT=''>
+<AREA SHAPE='RECT' COORDS='6171,255,6256,303' HREF='#0051641' ALT=''>
+<AREA SHAPE='RECT' COORDS='5824,401,5941,449' HREF='#0050877' ALT=''>
+<AREA SHAPE='RECT' COORDS='5825,548,5940,596' HREF='#0019226' ALT=''>
+<AREA SHAPE='RECT' COORDS='3595,532,3685,612' HREF='#0051128' ALT=''>
+<AREA SHAPE='RECT' COORDS='4921,695,5068,743' HREF='#0022604' ALT=''>
+<AREA SHAPE='RECT' COORDS='3128,687,3248,750' HREF='#0031344' ALT=''>
+<AREA SHAPE='RECT' COORDS='4827,532,4936,612' HREF='#0022603' ALT=''>
+<AREA SHAPE='RECT' COORDS='2999,401,3097,449' HREF='#0040012' ALT=''>
+<AREA SHAPE='RECT' COORDS='3003,695,3104,743' HREF='#2000145' ALT=''>
+<AREA SHAPE='RECT' COORDS='3592,1135,3685,1215' HREF='#0010975' ALT=''>
+<AREA SHAPE='RECT' COORDS='2563,695,2696,743' HREF='#0022010' ALT=''>
+<AREA SHAPE='RECT' COORDS='4308,1290,4439,1353' HREF='#0048713' ALT=''>
+<AREA SHAPE='RECT' COORDS='3340,963,3439,1077' HREF='#0120035' ALT=''>
+<AREA SHAPE='RECT' COORDS='1788,247,1881,310' HREF='#0048856' ALT=''>
+<AREA SHAPE='RECT' COORDS='1776,401,1893,449' HREF='#0048468' ALT=''>
+<AREA SHAPE='RECT' COORDS='2179,401,2269,449' HREF='#0061024' ALT=''>
+<AREA SHAPE='RECT' COORDS='1917,401,2040,449' HREF='#0030154' ALT=''>
+<AREA SHAPE='RECT' COORDS='4960,841,5053,889' HREF='#0008360' ALT=''>
+<AREA SHAPE='RECT' COORDS='3392,841,3517,889' HREF='#0042127' ALT=''>
+<AREA SHAPE='RECT' COORDS='3497,980,3609,1060' HREF='#2000177' ALT=''>
+<AREA SHAPE='RECT' COORDS='1925,548,2024,596' HREF='#0010001' ALT=''>
+<AREA SHAPE='RECT' COORDS='5469,117,5555,165' HREF='#0050896' ALT=''>
+<AREA SHAPE='RECT' COORDS='5523,255,5611,303' HREF='#0042221' ALT=''>
+<AREA SHAPE='RECT' COORDS='873,1143,999,1206' HREF='#0006688' ALT=''>
+<AREA SHAPE='RECT' COORDS='3680,394,3763,457' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='3149,532,3240,612' HREF='#0051270' ALT=''>
+<AREA SHAPE='RECT' COORDS='3424,541,3571,603' HREF='#0032886' ALT=''>
+<AREA SHAPE='RECT' COORDS='4656,841,4757,889' HREF='#0031641' ALT=''>
+<AREA SHAPE='RECT' COORDS='4312,548,4448,596' HREF='#0045595' ALT=''>
+<AREA SHAPE='RECT' COORDS='59,548,189,596' HREF='#0043436' ALT=''>
+<AREA SHAPE='RECT' COORDS='80,687,189,750' HREF='#0019752' ALT=''>
+<AREA SHAPE='RECT' COORDS='1803,548,1896,596' HREF='#0021782' ALT=''>
+<AREA SHAPE='RECT' COORDS='3032,841,3144,889' HREF='#0030334' ALT=''>
+<AREA SHAPE='RECT' COORDS='2755,1126,2843,1223' HREF='#0038116' ALT=''>
+<AREA SHAPE='RECT' COORDS='6375,548,6476,596' HREF='#0045176' ALT=''>
+<AREA SHAPE='RECT' COORDS='439,989,535,1051' HREF='#0009247' ALT=''>
+<AREA SHAPE='RECT' COORDS='1515,523,1637,621' HREF='#0010927' ALT=''>
+<AREA SHAPE='RECT' COORDS='1524,695,1644,743' HREF='#0032288' ALT=''>
+<AREA SHAPE='RECT' COORDS='932,679,1041,759' HREF='#1901564' ALT=''>
+<AREA SHAPE='RECT' COORDS='1061,817,1149,914' HREF='#0006575' ALT=''>
+<AREA SHAPE='RECT' COORDS='6111,117,6196,165' HREF='#0051179' ALT=''>
+<AREA SHAPE='RECT' COORDS='2541,401,2632,449' HREF='#0006996' ALT=''>
+<AREA SHAPE='RECT' COORDS='2437,548,2536,596' HREF='#0007010' ALT=''>
+<AREA SHAPE='RECT' COORDS='1775,695,1892,743' HREF='#0014003' ALT=''>
+<AREA SHAPE='RECT' COORDS='6500,548,6633,596' HREF='#0099612' ALT=''>
+<AREA SHAPE='RECT' COORDS='6220,548,6351,596' HREF='#0034613' ALT=''>
+<AREA SHAPE='RECT' COORDS='679,989,788,1051' HREF='#1901605' ALT=''>
+<AREA SHAPE='RECT' COORDS='539,394,669,457' HREF='#1901576' ALT=''>
+<AREA SHAPE='RECT' COORDS='2733,834,2864,897' HREF='#0019221' ALT=''>
+<AREA SHAPE='RECT' COORDS='1171,239,1256,319' HREF='#0006807' ALT=''>
+<AREA SHAPE='RECT' COORDS='1253,377,1339,474' HREF='#0034641' ALT=''>
+<AREA SHAPE='RECT' COORDS='5975,695,6065,743' HREF='#0006897' ALT=''>
+<AREA SHAPE='RECT' COORDS='979,394,1075,457' HREF='#0044249' ALT=''>
+<AREA SHAPE='RECT' COORDS='1251,523,1347,621' HREF='#0044271' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,834,123,897' HREF='#0032787' ALT=''>
+<AREA SHAPE='RECT' COORDS='439,1143,535,1206' HREF='#0019375' ALT=''>
+<AREA SHAPE='RECT' COORDS='817,117,900,165' HREF='#0008152' ALT=''>
+<AREA SHAPE='RECT' COORDS='277,247,389,310' HREF='#0044281' ALT=''>
+<AREA SHAPE='RECT' COORDS='520,247,651,310' HREF='#0071704' ALT=''>
+<AREA SHAPE='RECT' COORDS='675,255,771,303' HREF='#0009058' ALT=''>
+<AREA SHAPE='RECT' COORDS='3941,1135,4040,1215' HREF='#0045665' ALT=''>
+<AREA SHAPE='RECT' COORDS='5183,117,5263,165' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='4036,247,4129,310' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='5176,247,5269,310' HREF='#0065008' ALT=''>
+<AREA SHAPE='RECT' COORDS='445,834,528,897' HREF='#0006664' ALT=''>
+<AREA SHAPE='RECT' COORDS='1916,695,2033,743' HREF='#0048709' ALT=''>
+<AREA SHAPE='RECT' COORDS='5964,548,6049,596' HREF='#0098657' ALT=''>
+<AREA SHAPE='RECT' COORDS='1316,695,1449,743' HREF='#0043604' ALT=''>
+<AREA SHAPE='RECT' COORDS='607,1143,729,1206' HREF='#1901607' ALT=''>
+<AREA SHAPE='RECT' COORDS='157,394,253,457' HREF='#0006082' ALT=''>
+<AREA SHAPE='RECT' COORDS='6144,695,6277,743' HREF='#0072657' ALT=''>
+<AREA SHAPE='RECT' COORDS='2905,1273,3004,1370' HREF='#0007173' ALT=''>
+<AREA SHAPE='RECT' COORDS='324,989,415,1051' HREF='#0019374' ALT=''>
+<AREA SHAPE='RECT' COORDS='6073,548,6196,596' HREF='#0016192' ALT=''>
+<AREA SHAPE='RECT' COORDS='5685,255,5800,303' HREF='#0003008' ALT=''>
+<AREA SHAPE='RECT' COORDS='1371,541,1491,603' HREF='#0043603' ALT=''>
+<AREA SHAPE='RECT' COORDS='2725,989,2872,1051' HREF='#0070098' ALT=''>
+<AREA SHAPE='RECT' COORDS='5528,394,5611,457' HREF='#0010033' ALT=''>
+<AREA SHAPE='RECT' COORDS='2064,394,2155,457' HREF='#0022607' ALT=''>
+<AREA SHAPE='RECT' COORDS='5696,110,5789,173' HREF='#0032501' ALT=''>
+<AREA SHAPE='RECT' COORDS='3272,687,3403,750' HREF='#1903827' ALT=''>
+<AREA SHAPE='RECT' COORDS='3211,401,3312,449' HREF='#0032879' ALT=''>
+<AREA SHAPE='RECT' COORDS='4607,394,4729,457' HREF='#0050793' ALT=''>
+<AREA SHAPE='RECT' COORDS='3264,541,3349,603' HREF='#0032880' ALT=''>
+<AREA SHAPE='RECT' COORDS='3040,541,3125,603' HREF='#0060341' ALT=''>
+<AREA SHAPE='RECT' COORDS='5223,5,5110,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='1849,117,1956,165' HREF='#0032502' ALT=''>
+<AREA SHAPE='RECT' COORDS='5680,695,5789,743' HREF='#0014889' ALT=''>
+<AREA SHAPE='RECT' COORDS='1577,230,1700,327' HREF='#0048646' ALT=''>
+<AREA SHAPE='RECT' COORDS='2575,834,2705,897' HREF='#0007264' ALT=''>
+<AREA SHAPE='RECT' COORDS='2411,401,2517,449' HREF='#0030030' ALT=''>
+<AREA SHAPE='RECT' COORDS='2293,401,2387,449' HREF='#0034330' ALT=''>
+<AREA SHAPE='RECT' COORDS='4172,1290,4284,1353' HREF='#0010624' ALT=''>
+<AREA SHAPE='RECT' COORDS='6485,679,6619,759' HREF='#0002175' ALT=''>
+<AREA SHAPE='RECT' COORDS='2896,1151,3013,1199' HREF='#0038127' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008366&amp;view=details' target="_blank">GO:0008366</a><a name=0008366></a></td>
+<td>axon ensheathment</td>
+<td  align=center>2.19E-18</td>
+<td  align=center>3.34E-14</td>
+<td  align=center>13.61 (16689,87,296,21)</td>
+<td>
+<a id="ctrl_elements_GO:0008366" href="javascript:toggle('elements_GO:0008366')">[+] Show genes</a><br>
+<div id="elements_GO:0008366" style="display:none"> <font size=1>
+Cldn11  -  claudin 11<br>
+Bcas1  -  breast carcinoma amplified sequence 1<br>
+Mbp  -  myelin basic protein<br>
+Qk  -  quaking<br>
+Itgb4  -  integrin beta 4<br>
+Pllp  -  plasma membrane proteolipid<br>
+Mal  -  myelin and lymphocyte protein, t cell differentiation protein<br>
+Nfasc  -  neurofascin<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+Jam3  -  junction adhesion molecule 3<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Mag  -  myelin-associated glycoprotein<br>
+Myrf  -  myelin regulatory factor<br>
+Tspan2  -  tetraspanin 2<br>
+Gjc3  -  gap junction protein, gamma 3<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007272&amp;view=details' target="_blank">GO:0007272</a><a name=0007272></a></td>
+<td>ensheathment of neurons</td>
+<td  align=center>2.19E-18</td>
+<td  align=center>1.67E-14</td>
+<td  align=center>13.61 (16689,87,296,21)</td>
+<td>
+<a id="ctrl_elements_GO:0007272" href="javascript:toggle('elements_GO:0007272')">[+] Show genes</a><br>
+<div id="elements_GO:0007272" style="display:none"> <font size=1>
+Cldn11  -  claudin 11<br>
+Bcas1  -  breast carcinoma amplified sequence 1<br>
+Mbp  -  myelin basic protein<br>
+Qk  -  quaking<br>
+Itgb4  -  integrin beta 4<br>
+Pllp  -  plasma membrane proteolipid<br>
+Mal  -  myelin and lymphocyte protein, t cell differentiation protein<br>
+Nfasc  -  neurofascin<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Jam3  -  junction adhesion molecule 3<br>
+Mag  -  myelin-associated glycoprotein<br>
+Myrf  -  myelin regulatory factor<br>
+Tspan2  -  tetraspanin 2<br>
+Gjc3  -  gap junction protein, gamma 3<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042552&amp;view=details' target="_blank">GO:0042552</a><a name=0042552></a></td>
+<td>myelination</td>
+<td  align=center>2.49E-17</td>
+<td  align=center>1.26E-13</td>
+<td  align=center>13.27 (16689,85,296,20)</td>
+<td>
+<a id="ctrl_elements_GO:0042552" href="javascript:toggle('elements_GO:0042552')">[+] Show genes</a><br>
+<div id="elements_GO:0042552" style="display:none"> <font size=1>
+Bcas1  -  breast carcinoma amplified sequence 1<br>
+Mbp  -  myelin basic protein<br>
+Qk  -  quaking<br>
+Pllp  -  plasma membrane proteolipid<br>
+Itgb4  -  integrin beta 4<br>
+Mal  -  myelin and lymphocyte protein, t cell differentiation protein<br>
+Nfasc  -  neurofascin<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Jam3  -  junction adhesion molecule 3<br>
+Mag  -  myelin-associated glycoprotein<br>
+Myrf  -  myelin regulatory factor<br>
+Tspan2  -  tetraspanin 2<br>
+Gjc3  -  gap junction protein, gamma 3<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010001&amp;view=details' target="_blank">GO:0010001</a><a name=0010001></a></td>
+<td>glial cell differentiation</td>
+<td  align=center>4.83E-9</td>
+<td  align=center>1.84E-5</td>
+<td  align=center>8.33 (16689,88,296,13)</td>
+<td>
+<a id="ctrl_elements_GO:0010001" href="javascript:toggle('elements_GO:0010001')">[+] Show genes</a><br>
+<div id="elements_GO:0010001" style="display:none"> <font size=1>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Olig1  -  oligodendrocyte transcription factor 1<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Sox10  -  sry-box containing gene 10<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Cnp  -  2',3'-cyclic nucleotide 3' phosphodiesterase<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Myrf  -  myelin regulatory factor<br>
+Tspan2  -  tetraspanin 2<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008610&amp;view=details' target="_blank">GO:0008610</a><a name=0008610></a></td>
+<td>lipid biosynthetic process</td>
+<td  align=center>5.54E-9</td>
+<td  align=center>1.69E-5</td>
+<td  align=center>3.69 (16689,412,296,27)</td>
+<td>
+<a id="ctrl_elements_GO:0008610" href="javascript:toggle('elements_GO:0008610')">[+] Show genes</a><br>
+<div id="elements_GO:0008610" style="display:none"> <font size=1>
+Agpat4  -  1-acylglycerol-3-phosphate o-acyltransferase 4 (lysophosphatidic acid acyltransferase, delta)<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Qk  -  quaking<br>
+Cyp51  -  cytochrome p450, family 51<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Stard3  -  start domain containing 3<br>
+Abhd5  -  abhydrolase domain containing 5<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+Hmgcs1  -  3-hydroxy-3-methylglutaryl-coenzyme a synthase 1<br>
+Sccpdh  -  saccharopine dehydrogenase (putative)<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Cers2  -  ceramide synthase 2<br>
+Tmem189  -  transmembrane protein 189<br>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Cyp27a1  -  cytochrome p450, family 27, subfamily a, polypeptide 1<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Sc5d  -  sterol-c5-desaturase (fungal erg3, delta-5-desaturase) homolog (s. cerevisae)<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048709&amp;view=details' target="_blank">GO:0048709</a><a name=0048709></a></td>
+<td>oligodendrocyte differentiation</td>
+<td  align=center>1.75E-7</td>
+<td  align=center>4.45E-4</td>
+<td  align=center>12.53 (16689,36,296,8)</td>
+<td>
+<a id="ctrl_elements_GO:0048709" href="javascript:toggle('elements_GO:0048709')">[+] Show genes</a><br>
+<div id="elements_GO:0048709" style="display:none"> <font size=1>
+Cnp  -  2',3'-cyclic nucleotide 3' phosphodiesterase<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Olig1  -  oligodendrocyte transcription factor 1<br>
+Myrf  -  myelin regulatory factor<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tspan2  -  tetraspanin 2<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014013&amp;view=details' target="_blank">GO:0014013</a><a name=0014013></a></td>
+<td>regulation of gliogenesis</td>
+<td  align=center>4.63E-7</td>
+<td  align=center>1.01E-3</td>
+<td  align=center>5.26 (16689,150,296,14)</td>
+<td>
+<a id="ctrl_elements_GO:0014013" href="javascript:toggle('elements_GO:0014013')">[+] Show genes</a><br>
+<div id="elements_GO:0014013" style="display:none"> <font size=1>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Tmem98  -  transmembrane protein 98<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Bin1  -  bridging integrator 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Sirt2  -  sirtuin 2<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+Aspa  -  aspartoacylase<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008360&amp;view=details' target="_blank">GO:0008360</a><a name=0008360></a></td>
+<td>regulation of cell shape</td>
+<td  align=center>2.2E-6</td>
+<td  align=center>4.2E-3</td>
+<td  align=center>4.99 (16689,147,296,13)</td>
+<td>
+<a id="ctrl_elements_GO:0008360" href="javascript:toggle('elements_GO:0008360')">[+] Show genes</a><br>
+<div id="elements_GO:0008360" style="display:none"> <font size=1>
+Ermn  -  ermin, erm-like protein<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+S100a13  -  s100 calcium binding protein a13<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Plxnb3  -  plexin b3<br>
+Rhob  -  ras homolog gene family, member b<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Rhou  -  ras homolog gene family, member u<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Rhog  -  ras homolog gene family, member g<br>
+Rdx  -  radixin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031641&amp;view=details' target="_blank">GO:0031641</a><a name=0031641></a></td>
+<td>regulation of myelination</td>
+<td  align=center>6.92E-6</td>
+<td  align=center>1.17E-2</td>
+<td  align=center>7.91 (16689,57,296,8)</td>
+<td>
+<a id="ctrl_elements_GO:0031641" href="javascript:toggle('elements_GO:0031641')">[+] Show genes</a><br>
+<div id="elements_GO:0031641" style="display:none"> <font size=1>
+Trf  -  transferrin<br>
+Mag  -  myelin-associated glycoprotein<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Myrf  -  myelin regulatory factor<br>
+Tmem98  -  transmembrane protein 98<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050767&amp;view=details' target="_blank">GO:0050767</a><a name=0050767></a></td>
+<td>regulation of neurogenesis</td>
+<td  align=center>8.66E-6</td>
+<td  align=center>1.32E-2</td>
+<td  align=center>2.18 (16689,929,296,36)</td>
+<td>
+<a id="ctrl_elements_GO:0050767" href="javascript:toggle('elements_GO:0050767')">[+] Show genes</a><br>
+<div id="elements_GO:0050767" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Rap1a  -  ras-related protein-1a<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Sox10  -  sry-box containing gene 10<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Aspa  -  aspartoacylase<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032291&amp;view=details' target="_blank">GO:0032291</a><a name=0032291></a></td>
+<td>axon ensheathment in central nervous system</td>
+<td  align=center>8.82E-6</td>
+<td  align=center>1.22E-2</td>
+<td  align=center>16.58 (16689,17,296,5)</td>
+<td>
+<a id="ctrl_elements_GO:0032291" href="javascript:toggle('elements_GO:0032291')">[+] Show genes</a><br>
+<div id="elements_GO:0032291" style="display:none"> <font size=1>
+Mag  -  myelin-associated glycoprotein<br>
+Myrf  -  myelin regulatory factor<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022010&amp;view=details' target="_blank">GO:0022010</a><a name=0022010></a></td>
+<td>central nervous system myelination</td>
+<td  align=center>8.82E-6</td>
+<td  align=center>1.12E-2</td>
+<td  align=center>16.58 (16689,17,296,5)</td>
+<td>
+<a id="ctrl_elements_GO:0022010" href="javascript:toggle('elements_GO:0022010')">[+] Show genes</a><br>
+<div id="elements_GO:0022010" style="display:none"> <font size=1>
+Mag  -  myelin-associated glycoprotein<br>
+Myrf  -  myelin regulatory factor<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0021782&amp;view=details' target="_blank">GO:0021782</a><a name=0021782></a></td>
+<td>glial cell development</td>
+<td  align=center>1.02E-5</td>
+<td  align=center>1.2E-2</td>
+<td  align=center>7.52 (16689,60,296,8)</td>
+<td>
+<a id="ctrl_elements_GO:0021782" href="javascript:toggle('elements_GO:0021782')">[+] Show genes</a><br>
+<div id="elements_GO:0021782" style="display:none"> <font size=1>
+Phgdh  -  3-phosphoglycerate dehydrogenase<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Olig1  -  oligodendrocyte transcription factor 1<br>
+Myrf  -  myelin regulatory factor<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Tspan2  -  tetraspanin 2<br>
+Sox10  -  sry-box containing gene 10<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051960&amp;view=details' target="_blank">GO:0051960</a><a name=0051960></a></td>
+<td>regulation of nervous system development</td>
+<td  align=center>1.84E-5</td>
+<td  align=center>2.01E-2</td>
+<td  align=center>2.06 (16689,1041,296,38)</td>
+<td>
+<a id="ctrl_elements_GO:0051960" href="javascript:toggle('elements_GO:0051960')">[+] Show genes</a><br>
+<div id="elements_GO:0051960" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+Myrf  -  myelin regulatory factor<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Rap1a  -  ras-related protein-1a<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Bin1  -  bridging integrator 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Aspa  -  aspartoacylase<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022604&amp;view=details' target="_blank">GO:0022604</a><a name=0022604></a></td>
+<td>regulation of cell morphogenesis</td>
+<td  align=center>2.11E-5</td>
+<td  align=center>2.15E-2</td>
+<td  align=center>2.59 (16689,522,296,24)</td>
+<td>
+<a id="ctrl_elements_GO:0022604" href="javascript:toggle('elements_GO:0022604')">[+] Show genes</a><br>
+<div id="elements_GO:0022604" style="display:none"> <font size=1>
+Ermn  -  ermin, erm-like protein<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+S100a13  -  s100 calcium binding protein a13<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Kif13b  -  kinesin family member 13b<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Plxnb3  -  plexin b3<br>
+Rhob  -  ras homolog gene family, member b<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Rhou  -  ras homolog gene family, member u<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Efnb3  -  ephrin b3<br>
+Mag  -  myelin-associated glycoprotein<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Rhog  -  ras homolog gene family, member g<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Rdx  -  radixin<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060284&amp;view=details' target="_blank">GO:0060284</a><a name=0060284></a></td>
+<td>regulation of cell development</td>
+<td  align=center>2.92E-5</td>
+<td  align=center>2.79E-2</td>
+<td  align=center>2.02 (16689,1063,296,38)</td>
+<td>
+<a id="ctrl_elements_GO:0060284" href="javascript:toggle('elements_GO:0060284')">[+] Show genes</a><br>
+<div id="elements_GO:0060284" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Rap1a  -  ras-related protein-1a<br>
+Grb14  -  growth factor receptor bound protein 14<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Bin1  -  bridging integrator 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Aspa  -  aspartoacylase<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045685&amp;view=details' target="_blank">GO:0045685</a><a name=0045685></a></td>
+<td>regulation of glial cell differentiation</td>
+<td  align=center>3.09E-5</td>
+<td  align=center>2.77E-2</td>
+<td  align=center>5.64 (16689,90,296,9)</td>
+<td>
+<a id="ctrl_elements_GO:0045685" href="javascript:toggle('elements_GO:0045685')">[+] Show genes</a><br>
+<div id="elements_GO:0045685" style="display:none"> <font size=1>
+Qk  -  quaking<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Mag  -  myelin-associated glycoprotein<br>
+Aspa  -  aspartoacylase<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Bin1  -  bridging integrator 1<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014015&amp;view=details' target="_blank">GO:0014015</a><a name=0014015></a></td>
+<td>positive regulation of gliogenesis</td>
+<td  align=center>3.09E-5</td>
+<td  align=center>2.62E-2</td>
+<td  align=center>5.64 (16689,90,296,9)</td>
+<td>
+<a id="ctrl_elements_GO:0014015" href="javascript:toggle('elements_GO:0014015')">[+] Show genes</a><br>
+<div id="elements_GO:0014015" style="display:none"> <font size=1>
+Gjc2  -  gap junction protein, gamma 2<br>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Mag  -  myelin-associated glycoprotein<br>
+Aspa  -  aspartoacylase<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Bin1  -  bridging integrator 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061024&amp;view=details' target="_blank">GO:0061024</a><a name=0061024></a></td>
+<td>membrane organization</td>
+<td  align=center>3.23E-5</td>
+<td  align=center>2.6E-2</td>
+<td  align=center>2.52 (16689,536,296,24)</td>
+<td>
+<a id="ctrl_elements_GO:0061024" href="javascript:toggle('elements_GO:0061024')">[+] Show genes</a><br>
+<div id="elements_GO:0061024" style="display:none"> <font size=1>
+Mbp  -  myelin basic protein<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Gsn  -  gelsolin<br>
+Nfasc  -  neurofascin<br>
+Bnip3l  -  bcl2/adenovirus e1b interacting protein 3-like<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Cnp  -  2',3'-cyclic nucleotide 3' phosphodiesterase<br>
+Reep3  -  receptor accessory protein 3<br>
+Tmem33  -  transmembrane protein 33<br>
+Rftn1  -  raftlin lipid raft linker 1<br>
+Gltp  -  glycolipid transfer protein<br>
+Rhog  -  ras homolog gene family, member g<br>
+Vamp3  -  vesicle-associated membrane protein 3<br>
+Ndrg1  -  n-myc downstream regulated gene 1<br>
+Myrf  -  myelin regulatory factor<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Syngr2  -  synaptogyrin 2<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031643&amp;view=details' target="_blank">GO:0031643</a><a name=0031643></a></td>
+<td>positive regulation of myelination</td>
+<td  align=center>4.39E-5</td>
+<td  align=center>3.35E-2</td>
+<td  align=center>12.26 (16689,23,296,5)</td>
+<td>
+<a id="ctrl_elements_GO:0031643" href="javascript:toggle('elements_GO:0031643')">[+] Show genes</a><br>
+<div id="elements_GO:0031643" style="display:none"> <font size=1>
+Trf  -  transferrin<br>
+Mag  -  myelin-associated glycoprotein<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Myrf  -  myelin regulatory factor<br>
+Sox10  -  sry-box containing gene 10<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050793&amp;view=details' target="_blank">GO:0050793</a><a name=0050793></a></td>
+<td>regulation of developmental process</td>
+<td  align=center>4.88E-5</td>
+<td  align=center>3.55E-2</td>
+<td  align=center>1.57 (16689,2547,296,71)</td>
+<td>
+<a id="ctrl_elements_GO:0050793" href="javascript:toggle('elements_GO:0050793')">[+] Show genes</a><br>
+<div id="elements_GO:0050793" style="display:none"> <font size=1>
+Cd59a  -  cd59a antigen<br>
+Tmbim1  -  transmembrane bax inhibitor motif containing 1<br>
+Ermn  -  ermin, erm-like protein<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Cmtm5  -  cklf-like marvel transmembrane domain containing 5<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Sirt2  -  sirtuin 2<br>
+Sp7  -  sp7 transcription factor 7<br>
+Mag  -  myelin-associated glycoprotein<br>
+Hmgb1  -  high mobility group box 1<br>
+Phlpp1  -  ph domain and leucine rich repeat protein phosphatase 1<br>
+Car2  -  carbonic anhydrase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Rap1a  -  ras-related protein-1a<br>
+Mbp  -  myelin basic protein<br>
+Hmgn2  -  high mobility group nucleosomal binding domain 2<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Tmem98  -  transmembrane protein 98<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkd1  -  naked cuticle 1 homolog (drosophila)<br>
+Rhob  -  ras homolog gene family, member b<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Rhog  -  ras homolog gene family, member g<br>
+Inf2  -  inverted formin, fh2 and wh2 domain containing<br>
+Aspa  -  aspartoacylase<br>
+Gamt  -  guanidinoacetate methyltransferase<br>
+Rassf2  -  ras association (ralgds/af-6) domain family member 2<br>
+Rdx  -  radixin<br>
+Slc12a2  -  solute carrier family 12, member 2<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Qk  -  quaking<br>
+Kif13b  -  kinesin family member 13b<br>
+Ank  -  progressive ankylosis<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Cers2  -  ceramide synthase 2<br>
+Phldb1  -  pleckstrin homology-like domain, family b, member 1<br>
+Myrf  -  myelin regulatory factor<br>
+Ctsk  -  cathepsin k<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Grb14  -  growth factor receptor bound protein 14<br>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+S100a13  -  s100 calcium binding protein a13<br>
+Plekhb1  -  pleckstrin homology domain containing, family b (evectins) member 1<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Rhou  -  ras homolog gene family, member u<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Efnb3  -  ephrin b3<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Tpt1  -  tumor protein, translationally-controlled 1<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031344&amp;view=details' target="_blank">GO:0031344</a><a name=0031344></a></td>
+<td>regulation of cell projection organization</td>
+<td  align=center>5.1E-5</td>
+<td  align=center>3.54E-2</td>
+<td  align=center>2.19 (16689,774,296,30)</td>
+<td>
+<a id="ctrl_elements_GO:0031344" href="javascript:toggle('elements_GO:0031344')">[+] Show genes</a><br>
+<div id="elements_GO:0031344" style="display:none"> <font size=1>
+Ermn  -  ermin, erm-like protein<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Qk  -  quaking<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Rap1a  -  ras-related protein-1a<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Efnb3  -  ephrin b3<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Rhog  -  ras homolog gene family, member g<br>
+Anln  -  anillin, actin binding protein<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Rdx  -  radixin<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002175&amp;view=details' target="_blank">GO:0002175</a><a name=0002175></a></td>
+<td>protein localization to paranode region of axon</td>
+<td  align=center>5.38E-5</td>
+<td  align=center>3.57E-2</td>
+<td  align=center>33.83 (16689,5,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0002175" href="javascript:toggle('elements_GO:0002175')">[+] Show genes</a><br>
+<div id="elements_GO:0002175" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Mal  -  myelin and lymphocyte protein, t cell differentiation protein<br>
+Nfasc  -  neurofascin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006629&amp;view=details' target="_blank">GO:0006629</a><a name=0006629></a></td>
+<td>lipid metabolic process</td>
+<td  align=center>6.18E-5</td>
+<td  align=center>3.93E-2</td>
+<td  align=center>2.04 (16689,939,296,34)</td>
+<td>
+<a id="ctrl_elements_GO:0006629" href="javascript:toggle('elements_GO:0006629')">[+] Show genes</a><br>
+<div id="elements_GO:0006629" style="display:none"> <font size=1>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Agpat4  -  1-acylglycerol-3-phosphate o-acyltransferase 4 (lysophosphatidic acid acyltransferase, delta)<br>
+Qk  -  quaking<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Cyp51  -  cytochrome p450, family 51<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Stard3  -  start domain containing 3<br>
+Abhd5  -  abhydrolase domain containing 5<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+Hmgcs1  -  3-hydroxy-3-methylglutaryl-coenzyme a synthase 1<br>
+Sccpdh  -  saccharopine dehydrogenase (putative)<br>
+Sirt2  -  sirtuin 2<br>
+Apod  -  apolipoprotein d<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Plcl1  -  phospholipase c-like 1<br>
+Cers2  -  ceramide synthase 2<br>
+Tmem189  -  transmembrane protein 189<br>
+Npc2  -  niemann pick type c2<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Enpp6  -  ectonucleotide pyrophosphatase/phosphodiesterase 6<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Cyp27a1  -  cytochrome p450, family 27, subfamily a, polypeptide 1<br>
+Map7  -  microtubule-associated protein 7<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Sc5d  -  sterol-c5-desaturase (fungal erg3, delta-5-desaturase) homolog (s. cerevisae)<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007010&amp;view=details' target="_blank">GO:0007010</a><a name=0007010></a></td>
+<td>cytoskeleton organization</td>
+<td  align=center>6.62E-5</td>
+<td  align=center>4.04E-2</td>
+<td  align=center>2.12 (16689,824,296,31)</td>
+<td>
+<a id="ctrl_elements_GO:0007010" href="javascript:toggle('elements_GO:0007010')">[+] Show genes</a><br>
+<div id="elements_GO:0007010" style="display:none"> <font size=1>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Csrp1  -  cysteine and glycine-rich protein 1<br>
+Gsn  -  gelsolin<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Stmn4  -  stathmin-like 4<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Bfsp2  -  beaded filament structural protein 2, phakinin<br>
+Cnp  -  2',3'-cyclic nucleotide 3' phosphodiesterase<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Pdlim2  -  pdz and lim domain 2<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Tuba1a  -  tubulin, alpha 1a<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Tppp3  -  tubulin polymerization-promoting protein family member 3<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Map7  -  microtubule-associated protein 7<br>
+Actb  -  actin, beta<br>
+Cryab  -  crystallin, alpha b<br>
+Rhob  -  ras homolog gene family, member b<br>
+Mast4  -  microtubule associated serine/threonine kinase family member 4<br>
+Rhou  -  ras homolog gene family, member u<br>
+Sbds  -  shwachman-bodian-diamond syndrome homolog (human)<br>
+Rhog  -  ras homolog gene family, member g<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Inf2  -  inverted formin, fh2 and wh2 domain containing<br>
+Anln  -  anillin, actin binding protein<br>
+Insc  -  inscuteable homolog (drosophila)<br>
+Map6d1  -  map6 domain containing 1<br>
+Rps3  -  ribosomal protein s3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006633&amp;view=details' target="_blank">GO:0006633</a><a name=0006633></a></td>
+<td>fatty acid biosynthetic process</td>
+<td  align=center>7.13E-5</td>
+<td  align=center>4.19E-2</td>
+<td  align=center>5.07 (16689,100,296,9)</td>
+<td>
+<a id="ctrl_elements_GO:0006633" href="javascript:toggle('elements_GO:0006633')">[+] Show genes</a><br>
+<div id="elements_GO:0006633" style="display:none"> <font size=1>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Qk  -  quaking<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010975&amp;view=details' target="_blank">GO:0010975</a><a name=0010975></a></td>
+<td>regulation of neuron projection development</td>
+<td  align=center>7.72E-5</td>
+<td  align=center>4.36E-2</td>
+<td  align=center>2.34 (16689,603,296,25)</td>
+<td>
+<a id="ctrl_elements_GO:0010975" href="javascript:toggle('elements_GO:0010975')">[+] Show genes</a><br>
+<div id="elements_GO:0010975" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Qk  -  quaking<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Rap1a  -  ras-related protein-1a<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010720&amp;view=details' target="_blank">GO:0010720</a><a name=0010720></a></td>
+<td>positive regulation of cell development</td>
+<td  align=center>8.13E-5</td>
+<td  align=center>4.43E-2</td>
+<td  align=center>2.28 (16689,642,296,26)</td>
+<td>
+<a id="ctrl_elements_GO:0010720" href="javascript:toggle('elements_GO:0010720')">[+] Show genes</a><br>
+<div id="elements_GO:0010720" style="display:none"> <font size=1>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Plxnb3  -  plexin b3<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Mag  -  myelin-associated glycoprotein<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Rap1a  -  ras-related protein-1a<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Sox10  -  sry-box containing gene 10<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Bin1  -  bridging integrator 1<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Aspa  -  aspartoacylase<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007264&amp;view=details' target="_blank">GO:0007264</a><a name=0007264></a></td>
+<td>small GTPase mediated signal transduction</td>
+<td  align=center>8.18E-5</td>
+<td  align=center>4.31E-2</td>
+<td  align=center>3.56 (16689,206,296,13)</td>
+<td>
+<a id="ctrl_elements_GO:0007264" href="javascript:toggle('elements_GO:0007264')">[+] Show genes</a><br>
+<div id="elements_GO:0007264" style="display:none"> <font size=1>
+Rap1a  -  ras-related protein-1a<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Rhob  -  ras homolog gene family, member b<br>
+Rasgrp3  -  ras, guanyl releasing protein 3<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Rhou  -  ras homolog gene family, member u<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Rhog  -  ras homolog gene family, member g<br>
+Ralgds  -  ral guanine nucleotide dissociation stimulator<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045176&amp;view=details' target="_blank">GO:0045176</a><a name=0045176></a></td>
+<td>apical protein localization</td>
+<td  align=center>8.44E-5</td>
+<td  align=center>4.29E-2</td>
+<td  align=center>16.11 (16689,14,296,4)</td>
+<td>
+<a id="ctrl_elements_GO:0045176" href="javascript:toggle('elements_GO:0045176')">[+] Show genes</a><br>
+<div id="elements_GO:0045176" style="display:none"> <font size=1>
+Jam3  -  junction adhesion molecule 3<br>
+Insc  -  inscuteable homolog (drosophila)<br>
+Rdx  -  radixin<br>
+Actb  -  actin, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030148&amp;view=details' target="_blank">GO:0030148</a><a name=0030148></a></td>
+<td>sphingolipid biosynthetic process</td>
+<td  align=center>8.54E-5</td>
+<td  align=center>4.2E-2</td>
+<td  align=center>5.64 (16689,80,296,8)</td>
+<td>
+<a id="ctrl_elements_GO:0030148" href="javascript:toggle('elements_GO:0030148')">[+] Show genes</a><br>
+<div id="elements_GO:0030148" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Cers2  -  ceramide synthase 2<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120035&amp;view=details' target="_blank">GO:0120035</a><a name=0120035></a></td>
+<td>regulation of plasma membrane bounded cell projection organization</td>
+<td  align=center>1.01E-4</td>
+<td  align=center>4.81E-2</td>
+<td  align=center>2.14 (16689,765,296,29)</td>
+<td>
+<a id="ctrl_elements_GO:0120035" href="javascript:toggle('elements_GO:0120035')">[+] Show genes</a><br>
+<div id="elements_GO:0120035" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Qk  -  quaking<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Rap1a  -  ras-related protein-1a<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Rhog  -  ras homolog gene family, member g<br>
+Anln  -  anillin, actin binding protein<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Rdx  -  radixin<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044283&amp;view=details' target="_blank">GO:0044283</a><a name=0044283></a></td>
+<td>small molecule biosynthetic process</td>
+<td  align=center>1.01E-4</td>
+<td  align=center>4.69E-2</td>
+<td  align=center>2.52 (16689,469,296,21)</td>
+<td>
+<a id="ctrl_elements_GO:0044283" href="javascript:toggle('elements_GO:0044283')">[+] Show genes</a><br>
+<div id="elements_GO:0044283" style="display:none"> <font size=1>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Cyp51  -  cytochrome p450, family 51<br>
+Qk  -  quaking<br>
+Qdpr  -  quinoid dihydropteridine reductase<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Stard3  -  start domain containing 3<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Cyp27a1  -  cytochrome p450, family 27, subfamily a, polypeptide 1<br>
+Hmgcs1  -  3-hydroxy-3-methylglutaryl-coenzyme a synthase 1<br>
+Cnp  -  2',3'-cyclic nucleotide 3' phosphodiesterase<br>
+Phgdh  -  3-phosphoglycerate dehydrogenase<br>
+Psat1  -  phosphoserine aminotransferase 1<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Gamt  -  guanidinoacetate methyltransferase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Sc5d  -  sterol-c5-desaturase (fungal erg3, delta-5-desaturase) homolog (s. cerevisae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006682&amp;view=details' target="_blank">GO:0006682</a><a name=0006682></a></td>
+<td>galactosylceramide biosynthetic process</td>
+<td  align=center>1.06E-4</td>
+<td  align=center>4.77E-2</td>
+<td  align=center>28.19 (16689,6,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0006682" href="javascript:toggle('elements_GO:0006682')">[+] Show genes</a><br>
+<div id="elements_GO:0006682" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019375&amp;view=details' target="_blank">GO:0019375</a><a name=0019375></a></td>
+<td>galactolipid biosynthetic process</td>
+<td  align=center>1.06E-4</td>
+<td  align=center>4.63E-2</td>
+<td  align=center>28.19 (16689,6,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0019375" href="javascript:toggle('elements_GO:0019375')">[+] Show genes</a><br>
+<div id="elements_GO:0019375" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022603&amp;view=details' target="_blank">GO:0022603</a><a name=0022603></a></td>
+<td>regulation of anatomical structure morphogenesis</td>
+<td  align=center>1.08E-4</td>
+<td  align=center>4.59E-2</td>
+<td  align=center>1.94 (16689,1048,296,36)</td>
+<td>
+<a id="ctrl_elements_GO:0022603" href="javascript:toggle('elements_GO:0022603')">[+] Show genes</a><br>
+<div id="elements_GO:0022603" style="display:none"> <font size=1>
+Cd59a  -  cd59a antigen<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Tmbim1  -  transmembrane bax inhibitor motif containing 1<br>
+Ermn  -  ermin, erm-like protein<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Plxnb3  -  plexin b3<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Mag  -  myelin-associated glycoprotein<br>
+Phldb1  -  pleckstrin homology-like domain, family b, member 1<br>
+Hmgb1  -  high mobility group box 1<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Rap1a  -  ras-related protein-1a<br>
+Mbp  -  myelin basic protein<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+S100a13  -  s100 calcium binding protein a13<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Nkd1  -  naked cuticle 1 homolog (drosophila)<br>
+Rhob  -  ras homolog gene family, member b<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Rhou  -  ras homolog gene family, member u<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Rhog  -  ras homolog gene family, member g<br>
+Inf2  -  inverted formin, fh2 and wh2 domain containing<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Rdx  -  radixin<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Slc12a2  -  solute carrier family 12, member 2<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990868&amp;view=details' target="_blank">GO:1990868</a><a name=1990868></a></td>
+<td>response to chemokine</td>
+<td  align=center>1.13E-4</td>
+<td  align=center>4.68E-2</td>
+<td  align=center>15.04 (16689,15,296,4)</td>
+<td>
+<a id="ctrl_elements_GO:1990868" href="javascript:toggle('elements_GO:1990868')">[+] Show genes</a><br>
+<div id="elements_GO:1990868" style="display:none"> <font size=1>
+Oxsr1  -  oxidative-stress responsive 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+Slc12a2  -  solute carrier family 12, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990869&amp;view=details' target="_blank">GO:1990869</a><a name=1990869></a></td>
+<td>cellular response to chemokine</td>
+<td  align=center>1.13E-4</td>
+<td  align=center>4.56E-2</td>
+<td  align=center>15.04 (16689,15,296,4)</td>
+<td>
+<a id="ctrl_elements_GO:1990869" href="javascript:toggle('elements_GO:1990869')">[+] Show genes</a><br>
+<div id="elements_GO:1990869" style="display:none"> <font size=1>
+Oxsr1  -  oxidative-stress responsive 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Slc12a2  -  solute carrier family 12, member 2<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061564&amp;view=details' target="_blank">GO:0061564</a><a name=0061564></a></td>
+<td>axon development</td>
+<td  align=center>1.42E-4</td>
+<td  align=center>5.56E-2</td>
+<td  align=center>9.72 (16689,29,296,5)</td>
+<td>
+<a id="ctrl_elements_GO:0061564" href="javascript:toggle('elements_GO:0061564')">[+] Show genes</a><br>
+<div id="elements_GO:0061564" style="display:none"> <font size=1>
+Mag  -  myelin-associated glycoprotein<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Tspan2  -  tetraspanin 2<br>
+Ddr1  -  discoidin domain receptor family, member 1<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051962&amp;view=details' target="_blank">GO:0051962</a><a name=0051962></a></td>
+<td>positive regulation of nervous system development</td>
+<td  align=center>1.42E-4</td>
+<td  align=center>5.43E-2</td>
+<td  align=center>2.25 (16689,627,296,25)</td>
+<td>
+<a id="ctrl_elements_GO:0051962" href="javascript:toggle('elements_GO:0051962')">[+] Show genes</a><br>
+<div id="elements_GO:0051962" style="display:none"> <font size=1>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Plxnb3  -  plexin b3<br>
+Mag  -  myelin-associated glycoprotein<br>
+Myrf  -  myelin regulatory factor<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Rap1a  -  ras-related protein-1a<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Sox10  -  sry-box containing gene 10<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Bin1  -  bridging integrator 1<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Aspa  -  aspartoacylase<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014889&amp;view=details' target="_blank">GO:0014889</a><a name=0014889></a></td>
+<td>muscle atrophy</td>
+<td  align=center>1.83E-4</td>
+<td  align=center>6.83E-2</td>
+<td  align=center>24.16 (16689,7,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0014889" href="javascript:toggle('elements_GO:0014889')">[+] Show genes</a><br>
+<div id="elements_GO:0014889" style="display:none"> <font size=1>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Gsn  -  gelsolin<br>
+Fbxo32  -  f-box protein 32<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030913&amp;view=details' target="_blank">GO:0030913</a><a name=0030913></a></td>
+<td>paranodal junction assembly</td>
+<td  align=center>1.83E-4</td>
+<td  align=center>6.66E-2</td>
+<td  align=center>24.16 (16689,7,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0030913" href="javascript:toggle('elements_GO:0030913')">[+] Show genes</a><br>
+<div id="elements_GO:0030913" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Nfasc  -  neurofascin<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046476&amp;view=details' target="_blank">GO:0046476</a><a name=0046476></a></td>
+<td>glycosylceramide biosynthetic process</td>
+<td  align=center>1.83E-4</td>
+<td  align=center>6.51E-2</td>
+<td  align=center>24.16 (16689,7,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0046476" href="javascript:toggle('elements_GO:0046476')">[+] Show genes</a><br>
+<div id="elements_GO:0046476" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050769&amp;view=details' target="_blank">GO:0050769</a><a name=0050769></a></td>
+<td>positive regulation of neurogenesis</td>
+<td  align=center>1.86E-4</td>
+<td  align=center>6.44E-2</td>
+<td  align=center>2.30 (16689,563,296,23)</td>
+<td>
+<a id="ctrl_elements_GO:0050769" href="javascript:toggle('elements_GO:0050769')">[+] Show genes</a><br>
+<div id="elements_GO:0050769" style="display:none"> <font size=1>
+Rap1a  -  ras-related protein-1a<br>
+Qk  -  quaking<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Bin1  -  bridging integrator 1<br>
+Sox10  -  sry-box containing gene 10<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Plxnb3  -  plexin b3<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mag  -  myelin-associated glycoprotein<br>
+Aspa  -  aspartoacylase<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051129&amp;view=details' target="_blank">GO:0051129</a><a name=0051129></a></td>
+<td>negative regulation of cellular component organization</td>
+<td  align=center>1.92E-4</td>
+<td  align=center>6.5E-2</td>
+<td  align=center>2.09 (16689,755,296,28)</td>
+<td>
+<a id="ctrl_elements_GO:0051129" href="javascript:toggle('elements_GO:0051129')">[+] Show genes</a><br>
+<div id="elements_GO:0051129" style="display:none"> <font size=1>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Gsn  -  gelsolin<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Sirt2  -  sirtuin 2<br>
+Plxnb3  -  plexin b3<br>
+Apod  -  apolipoprotein d<br>
+Jam3  -  junction adhesion molecule 3<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+Tmeff2  -  transmembrane protein with egf-like and two follistatin-like domains 2<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Dnajb2  -  dnaj (hsp40) homolog, subfamily b, member 2<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Cryab  -  crystallin, alpha b<br>
+Ankrd13a  -  ankyrin repeat domain 13a<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Map6d1  -  map6 domain containing 1<br>
+Rdx  -  radixin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032288&amp;view=details' target="_blank">GO:0032288</a><a name=0032288></a></td>
+<td>myelin assembly</td>
+<td  align=center>1.92E-4</td>
+<td  align=center>6.38E-2</td>
+<td  align=center>13.27 (16689,17,296,4)</td>
+<td>
+<a id="ctrl_elements_GO:0032288" href="javascript:toggle('elements_GO:0032288')">[+] Show genes</a><br>
+<div id="elements_GO:0032288" style="display:none"> <font size=1>
+Itgb4  -  integrin beta 4<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046467&amp;view=details' target="_blank">GO:0046467</a><a name=0046467></a></td>
+<td>membrane lipid biosynthetic process</td>
+<td  align=center>1.96E-4</td>
+<td  align=center>6.36E-2</td>
+<td  align=center>4.45 (16689,114,296,9)</td>
+<td>
+<a id="ctrl_elements_GO:0046467" href="javascript:toggle('elements_GO:0046467')">[+] Show genes</a><br>
+<div id="elements_GO:0046467" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Cers2  -  ceramide synthase 2<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Sccpdh  -  saccharopine dehydrogenase (putative)<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045664&amp;view=details' target="_blank">GO:0045664</a><a name=0045664></a></td>
+<td>regulation of neuron differentiation</td>
+<td  align=center>2.05E-4</td>
+<td  align=center>6.51E-2</td>
+<td  align=center>2.08 (16689,758,296,28)</td>
+<td>
+<a id="ctrl_elements_GO:0045664" href="javascript:toggle('elements_GO:0045664')">[+] Show genes</a><br>
+<div id="elements_GO:0045664" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Qk  -  quaking<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Kif13b  -  kinesin family member 13b<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Rap1a  -  ras-related protein-1a<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Bin1  -  bridging integrator 1<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046394&amp;view=details' target="_blank">GO:0046394</a><a name=0046394></a></td>
+<td>carboxylic acid biosynthetic process</td>
+<td  align=center>2.09E-4</td>
+<td  align=center>6.5E-2</td>
+<td  align=center>3.07 (16689,257,296,14)</td>
+<td>
+<a id="ctrl_elements_GO:0046394" href="javascript:toggle('elements_GO:0046394')">[+] Show genes</a><br>
+<div id="elements_GO:0046394" style="display:none"> <font size=1>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Qk  -  quaking<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Cyp27a1  -  cytochrome p450, family 27, subfamily a, polypeptide 1<br>
+Phgdh  -  3-phosphoglycerate dehydrogenase<br>
+Psat1  -  phosphoserine aminotransferase 1<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Gamt  -  guanidinoacetate methyltransferase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016053&amp;view=details' target="_blank">GO:0016053</a><a name=0016053></a></td>
+<td>organic acid biosynthetic process</td>
+<td  align=center>2.17E-4</td>
+<td  align=center>6.63E-2</td>
+<td  align=center>3.06 (16689,258,296,14)</td>
+<td>
+<a id="ctrl_elements_GO:0016053" href="javascript:toggle('elements_GO:0016053')">[+] Show genes</a><br>
+<div id="elements_GO:0016053" style="display:none"> <font size=1>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Qk  -  quaking<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Cyp27a1  -  cytochrome p450, family 27, subfamily a, polypeptide 1<br>
+Phgdh  -  3-phosphoglycerate dehydrogenase<br>
+Psat1  -  phosphoserine aminotransferase 1<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Gamt  -  guanidinoacetate methyltransferase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034329&amp;view=details' target="_blank">GO:0034329</a><a name=0034329></a></td>
+<td>cell junction assembly</td>
+<td  align=center>2.37E-4</td>
+<td  align=center>7.09E-2</td>
+<td  align=center>3.94 (16689,143,296,10)</td>
+<td>
+<a id="ctrl_elements_GO:0034329" href="javascript:toggle('elements_GO:0034329')">[+] Show genes</a><br>
+<div id="elements_GO:0034329" style="display:none"> <font size=1>
+Cldn11  -  claudin 11<br>
+Vmp1  -  vacuole membrane protein 1<br>
+Itgb4  -  integrin beta 4<br>
+Jam3  -  junction adhesion molecule 3<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Nfasc  -  neurofascin<br>
+Pkp4  -  plakophilin 4<br>
+Actb  -  actin, beta<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050768&amp;view=details' target="_blank">GO:0050768</a><a name=0050768></a></td>
+<td>negative regulation of neurogenesis</td>
+<td  align=center>2.47E-4</td>
+<td  align=center>7.25E-2</td>
+<td  align=center>2.77 (16689,326,296,16)</td>
+<td>
+<a id="ctrl_elements_GO:0050768" href="javascript:toggle('elements_GO:0050768')">[+] Show genes</a><br>
+<div id="elements_GO:0050768" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Sox10  -  sry-box containing gene 10<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010977&amp;view=details' target="_blank">GO:0010977</a><a name=0010977></a></td>
+<td>negative regulation of neuron projection development</td>
+<td  align=center>2.69E-4</td>
+<td  align=center>7.74E-2</td>
+<td  align=center>3.58 (16689,173,296,11)</td>
+<td>
+<a id="ctrl_elements_GO:0010977" href="javascript:toggle('elements_GO:0010977')">[+] Show genes</a><br>
+<div id="elements_GO:0010977" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Efnb3  -  ephrin b3<br>
+Mag  -  myelin-associated glycoprotein<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Cers2  -  ceramide synthase 2<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048713&amp;view=details' target="_blank">GO:0048713</a><a name=0048713></a></td>
+<td>regulation of oligodendrocyte differentiation</td>
+<td  align=center>2.72E-4</td>
+<td  align=center>7.7E-2</td>
+<td  align=center>6.63 (16689,51,296,6)</td>
+<td>
+<a id="ctrl_elements_GO:0048713" href="javascript:toggle('elements_GO:0048713')">[+] Show genes</a><br>
+<div id="elements_GO:0048713" style="display:none"> <font size=1>
+Qk  -  quaking<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Aspa  -  aspartoacylase<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Sirt2  -  sirtuin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006681&amp;view=details' target="_blank">GO:0006681</a><a name=0006681></a></td>
+<td>galactosylceramide metabolic process</td>
+<td  align=center>2.9E-4</td>
+<td  align=center>8.03E-2</td>
+<td  align=center>21.14 (16689,8,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0006681" href="javascript:toggle('elements_GO:0006681')">[+] Show genes</a><br>
+<div id="elements_GO:0006681" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045687&amp;view=details' target="_blank">GO:0045687</a><a name=0045687></a></td>
+<td>positive regulation of glial cell differentiation</td>
+<td  align=center>3.03E-4</td>
+<td  align=center>8.27E-2</td>
+<td  align=center>6.51 (16689,52,296,6)</td>
+<td>
+<a id="ctrl_elements_GO:0045687" href="javascript:toggle('elements_GO:0045687')">[+] Show genes</a><br>
+<div id="elements_GO:0045687" style="display:none"> <font size=1>
+Qk  -  quaking<br>
+Mag  -  myelin-associated glycoprotein<br>
+Aspa  -  aspartoacylase<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Bin1  -  bridging integrator 1<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006601&amp;view=details' target="_blank">GO:0006601</a><a name=0006601></a></td>
+<td>creatine biosynthetic process</td>
+<td  align=center>3.14E-4</td>
+<td  align=center>8.39E-2</td>
+<td  align=center>56.38 (16689,2,296,2)</td>
+<td>
+<a id="ctrl_elements_GO:0006601" href="javascript:toggle('elements_GO:0006601')">[+] Show genes</a><br>
+<div id="elements_GO:0006601" style="display:none"> <font size=1>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Gamt  -  guanidinoacetate methyltransferase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006600&amp;view=details' target="_blank">GO:0006600</a><a name=0006600></a></td>
+<td>creatine metabolic process</td>
+<td  align=center>3.14E-4</td>
+<td  align=center>8.25E-2</td>
+<td  align=center>56.38 (16689,2,296,2)</td>
+<td>
+<a id="ctrl_elements_GO:0006600" href="javascript:toggle('elements_GO:0006600')">[+] Show genes</a><br>
+<div id="elements_GO:0006600" style="display:none"> <font size=1>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Gamt  -  guanidinoacetate methyltransferase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006665&amp;view=details' target="_blank">GO:0006665</a><a name=0006665></a></td>
+<td>sphingolipid metabolic process</td>
+<td  align=center>3.46E-4</td>
+<td  align=center>8.95E-2</td>
+<td  align=center>4.13 (16689,123,296,9)</td>
+<td>
+<a id="ctrl_elements_GO:0006665" href="javascript:toggle('elements_GO:0006665')">[+] Show genes</a><br>
+<div id="elements_GO:0006665" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Cers2  -  ceramide synthase 2<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Map7  -  microtubule-associated protein 7<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031345&amp;view=details' target="_blank">GO:0031345</a><a name=0031345></a></td>
+<td>negative regulation of cell projection organization</td>
+<td  align=center>3.5E-4</td>
+<td  align=center>8.91E-2</td>
+<td  align=center>3.25 (16689,208,296,12)</td>
+<td>
+<a id="ctrl_elements_GO:0031345" href="javascript:toggle('elements_GO:0031345')">[+] Show genes</a><br>
+<div id="elements_GO:0031345" style="display:none"> <font size=1>
+Plxnb3  -  plexin b3<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mag  -  myelin-associated glycoprotein<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Cers2  -  ceramide synthase 2<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010721&amp;view=details' target="_blank">GO:0010721</a><a name=0010721></a></td>
+<td>negative regulation of cell development</td>
+<td  align=center>3.66E-4</td>
+<td  align=center>9.17E-2</td>
+<td  align=center>2.58 (16689,372,296,17)</td>
+<td>
+<a id="ctrl_elements_GO:0010721" href="javascript:toggle('elements_GO:0010721')">[+] Show genes</a><br>
+<div id="elements_GO:0010721" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Grb14  -  growth factor receptor bound protein 14<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Sox10  -  sry-box containing gene 10<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Sirt2  -  sirtuin 2<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051128&amp;view=details' target="_blank">GO:0051128</a><a name=0051128></a></td>
+<td>regulation of cellular component organization</td>
+<td  align=center>3.68E-4</td>
+<td  align=center>9.05E-2</td>
+<td  align=center>1.50 (16689,2526,296,67)</td>
+<td>
+<a id="ctrl_elements_GO:0051128" href="javascript:toggle('elements_GO:0051128')">[+] Show genes</a><br>
+<div id="elements_GO:0051128" style="display:none"> <font size=1>
+Ermn  -  ermin, erm-like protein<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Gsn  -  gelsolin<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Dusp3  -  dual specificity phosphatase 3 (vaccinia virus phosphatase vh1-related)<br>
+Sirt2  -  sirtuin 2<br>
+Apod  -  apolipoprotein d<br>
+Jam3  -  junction adhesion molecule 3<br>
+Cd81  -  cd81 antigen<br>
+Mag  -  myelin-associated glycoprotein<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Tmeff2  -  transmembrane protein with egf-like and two follistatin-like domains 2<br>
+Rap1a  -  ras-related protein-1a<br>
+Tppp3  -  tubulin polymerization-promoting protein family member 3<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Dnajb2  -  dnaj (hsp40) homolog, subfamily b, member 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Rhob  -  ras homolog gene family, member b<br>
+Ankrd13a  -  ankyrin repeat domain 13a<br>
+Padi2  -  peptidyl arginine deiminase, type ii<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Gnai1  -  guanine nucleotide binding protein (g protein), alpha inhibiting 1<br>
+Inf2  -  inverted formin, fh2 and wh2 domain containing<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Rhog  -  ras homolog gene family, member g<br>
+Anln  -  anillin, actin binding protein<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Map6d1  -  map6 domain containing 1<br>
+Ddr1  -  discoidin domain receptor family, member 1<br>
+Rps3  -  ribosomal protein s3<br>
+Rdx  -  radixin<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Qk  -  quaking<br>
+Bnip3l  -  bcl2/adenovirus e1b interacting protein 3-like<br>
+Stmn4  -  stathmin-like 4<br>
+Kif13b  -  kinesin family member 13b<br>
+Tgfa  -  transforming growth factor alpha<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Tmem33  -  transmembrane protein 33<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Cers2  -  ceramide synthase 2<br>
+Tuba1a  -  tubulin, alpha 1a<br>
+Phldb1  -  pleckstrin homology-like domain, family b, member 1<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+S100a13  -  s100 calcium binding protein a13<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Cryab  -  crystallin, alpha b<br>
+Rhou  -  ras homolog gene family, member u<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Efnb3  -  ephrin b3<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046513&amp;view=details' target="_blank">GO:0046513</a><a name=0046513></a></td>
+<td>ceramide biosynthetic process</td>
+<td  align=center>3.74E-4</td>
+<td  align=center>9.05E-2</td>
+<td  align=center>6.26 (16689,54,296,6)</td>
+<td>
+<a id="ctrl_elements_GO:0046513" href="javascript:toggle('elements_GO:0046513')">[+] Show genes</a><br>
+<div id="elements_GO:0046513" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Cers2  -  ceramide synthase 2<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006897&amp;view=details' target="_blank">GO:0006897</a><a name=0006897></a></td>
+<td>endocytosis</td>
+<td  align=center>4.02E-4</td>
+<td  align=center>9.58E-2</td>
+<td  align=center>2.56 (16689,375,296,17)</td>
+<td>
+<a id="ctrl_elements_GO:0006897" href="javascript:toggle('elements_GO:0006897')">[+] Show genes</a><br>
+<div id="elements_GO:0006897" style="display:none"> <font size=1>
+Fnbp1  -  formin binding protein 1<br>
+Snx1  -  sorting nexin 1<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Ldlrad3  -  low density lipoprotein receptor class a domain containing 3<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Bin1  -  bridging integrator 1<br>
+Eps15  -  epidermal growth factor receptor pathway substrate 15<br>
+Actb  -  actin, beta<br>
+Rhou  -  ras homolog gene family, member u<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Cd81  -  cd81 antigen<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010624&amp;view=details' target="_blank">GO:0010624</a><a name=0010624></a></td>
+<td>regulation of Schwann cell proliferation</td>
+<td  align=center>4.29E-4</td>
+<td  align=center>1.01E-1</td>
+<td  align=center>18.79 (16689,9,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0010624" href="javascript:toggle('elements_GO:0010624')">[+] Show genes</a><br>
+<div id="elements_GO:0010624" style="display:none"> <font size=1>
+Cers2  -  ceramide synthase 2<br>
+Sox10  -  sry-box containing gene 10<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019374&amp;view=details' target="_blank">GO:0019374</a><a name=0019374></a></td>
+<td>galactolipid metabolic process</td>
+<td  align=center>4.29E-4</td>
+<td  align=center>9.91E-2</td>
+<td  align=center>18.79 (16689,9,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0019374" href="javascript:toggle('elements_GO:0019374')">[+] Show genes</a><br>
+<div id="elements_GO:0019374" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051270&amp;view=details' target="_blank">GO:0051270</a><a name=0051270></a></td>
+<td>regulation of cellular component movement</td>
+<td  align=center>4.29E-4</td>
+<td  align=center>9.78E-2</td>
+<td  align=center>1.86 (16689,999,296,33)</td>
+<td>
+<a id="ctrl_elements_GO:0051270" href="javascript:toggle('elements_GO:0051270')">[+] Show genes</a><br>
+<div id="elements_GO:0051270" style="display:none"> <font size=1>
+Dock10  -  dedicator of cytokinesis 10<br>
+Rffl  -  ring finger and fyve like domain containing protein<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Oxsr1  -  oxidative-stress responsive 1<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Lamp1  -  lysosomal-associated membrane protein 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Dusp3  -  dual specificity phosphatase 3 (vaccinia virus phosphatase vh1-related)<br>
+Plxnb3  -  plexin b3<br>
+Apod  -  apolipoprotein d<br>
+Jam3  -  junction adhesion molecule 3<br>
+Cd81  -  cd81 antigen<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Cers2  -  ceramide synthase 2<br>
+Hmgb1  -  high mobility group box 1<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Tmeff2  -  transmembrane protein with egf-like and two follistatin-like domains 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Bin1  -  bridging integrator 1<br>
+Rhob  -  ras homolog gene family, member b<br>
+Padi2  -  peptidyl arginine deiminase, type ii<br>
+Clic4  -  chloride intracellular channel 4 (mitochondrial)<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Rhog  -  ras homolog gene family, member g<br>
+Prr5l  -  proline rich 5 like<br>
+Rdx  -  radixin<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+Tnfaip6  -  tumor necrosis factor alpha induced protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007422&amp;view=details' target="_blank">GO:0007422</a><a name=0007422></a></td>
+<td>peripheral nervous system development</td>
+<td  align=center>4.57E-4</td>
+<td  align=center>1.03E-1</td>
+<td  align=center>10.74 (16689,21,296,4)</td>
+<td>
+<a id="ctrl_elements_GO:0007422" href="javascript:toggle('elements_GO:0007422')">[+] Show genes</a><br>
+<div id="elements_GO:0007422" style="display:none"> <font size=1>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Nfasc  -  neurofascin<br>
+Sox10  -  sry-box containing gene 10<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051239&amp;view=details' target="_blank">GO:0051239</a><a name=0051239></a></td>
+<td>regulation of multicellular organismal process</td>
+<td  align=center>4.88E-4</td>
+<td  align=center>1.08E-1</td>
+<td  align=center>1.43 (16689,3038,296,77)</td>
+<td>
+<a id="ctrl_elements_GO:0051239" href="javascript:toggle('elements_GO:0051239')">[+] Show genes</a><br>
+<div id="elements_GO:0051239" style="display:none"> <font size=1>
+Cd59a  -  cd59a antigen<br>
+Tmbim1  -  transmembrane bax inhibitor motif containing 1<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Cyp51  -  cytochrome p450, family 51<br>
+Trf  -  transferrin<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Frmd8  -  ferm domain containing 8<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Sirt2  -  sirtuin 2<br>
+Apod  -  apolipoprotein d<br>
+Cd81  -  cd81 antigen<br>
+Mag  -  myelin-associated glycoprotein<br>
+Hmgb1  -  high mobility group box 1<br>
+Phlpp1  -  ph domain and leucine rich repeat protein phosphatase 1<br>
+Car2  -  carbonic anhydrase 2<br>
+D16Ertd472e  -  dna segment, chr 16, erato doi 472, expressed<br>
+Rap1a  -  ras-related protein-1a<br>
+Mog  -  myelin oligodendrocyte glycoprotein<br>
+Mbp  -  myelin basic protein<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Tmem98  -  transmembrane protein 98<br>
+Sox10  -  sry-box containing gene 10<br>
+Nkd1  -  naked cuticle 1 homolog (drosophila)<br>
+Rhob  -  ras homolog gene family, member b<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Serpinb1a  -  serine (or cysteine) peptidase inhibitor, clade b, member 1a<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Pex5l  -  peroxisomal biogenesis factor 5-like<br>
+Gamt  -  guanidinoacetate methyltransferase<br>
+Aspa  -  aspartoacylase<br>
+Rassf2  -  ras association (ralgds/af-6) domain family member 2<br>
+Rps3  -  ribosomal protein s3<br>
+Slc12a2  -  solute carrier family 12, member 2<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Qk  -  quaking<br>
+Litaf  -  lps-induced tn factor<br>
+Kif13b  -  kinesin family member 13b<br>
+Ank  -  progressive ankylosis<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Fbxo32  -  f-box protein 32<br>
+Plxnb3  -  plexin b3<br>
+Klk6  -  kallikrein related-peptidase 6<br>
+Otud7b  -  otu domain containing 7b<br>
+Plcl1  -  phospholipase c-like 1<br>
+Enpp4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Cers2  -  ceramide synthase 2<br>
+Phldb1  -  pleckstrin homology-like domain, family b, member 1<br>
+Myrf  -  myelin regulatory factor<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Ctsk  -  cathepsin k<br>
+Igsf11  -  immunoglobulin superfamily, member 11<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Arrdc3  -  arrestin domain containing 3<br>
+Grb14  -  growth factor receptor bound protein 14<br>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Efnb3  -  ephrin b3<br>
+Opalin  -  oligodendrocytic myelin paranodal and inner loop protein<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007265&amp;view=details' target="_blank">GO:0007265</a><a name=0007265></a></td>
+<td>Ras protein signal transduction</td>
+<td  align=center>4.92E-4</td>
+<td  align=center>1.07E-1</td>
+<td  align=center>3.93 (16689,129,296,9)</td>
+<td>
+<a id="ctrl_elements_GO:0007265" href="javascript:toggle('elements_GO:0007265')">[+] Show genes</a><br>
+<div id="elements_GO:0007265" style="display:none"> <font size=1>
+Rap1a  -  ras-related protein-1a<br>
+Rasgrp3  -  ras, guanyl releasing protein 3<br>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Rhou  -  ras homolog gene family, member u<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Rhog  -  ras homolog gene family, member g<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007173&amp;view=details' target="_blank">GO:0007173</a><a name=0007173></a></td>
+<td>epidermal growth factor receptor signaling pathway</td>
+<td  align=center>5.27E-4</td>
+<td  align=center>1.13E-1</td>
+<td  align=center>7.42 (16689,38,296,5)</td>
+<td>
+<a id="ctrl_elements_GO:0007173" href="javascript:toggle('elements_GO:0007173')">[+] Show genes</a><br>
+<div id="elements_GO:0007173" style="display:none"> <font size=1>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rassf2  -  ras association (ralgds/af-6) domain family member 2<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Tgfa  -  transforming growth factor alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051961&amp;view=details' target="_blank">GO:0051961</a><a name=0051961></a></td>
+<td>negative regulation of nervous system development</td>
+<td  align=center>5.75E-4</td>
+<td  align=center>1.22E-1</td>
+<td  align=center>2.56 (16689,352,296,16)</td>
+<td>
+<a id="ctrl_elements_GO:0051961" href="javascript:toggle('elements_GO:0051961')">[+] Show genes</a><br>
+<div id="elements_GO:0051961" style="display:none"> <font size=1>
+Aatk  -  apoptosis-associated tyrosine kinase<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Olig2  -  oligodendrocyte transcription factor 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Sox10  -  sry-box containing gene 10<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Nkx6-2  -  nk6 homeobox 2<br>
+Sirt2  -  sirtuin 2<br>
+Efnb3  -  ephrin b3<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Mag  -  myelin-associated glycoprotein<br>
+Cers2  -  ceramide synthase 2<br>
+Spg20  -  spastic paraplegia 20, spartin (troyer syndrome) homolog (human)<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050790&amp;view=details' target="_blank">GO:0050790</a><a name=0050790></a></td>
+<td>regulation of catalytic activity</td>
+<td  align=center>6.3E-4</td>
+<td  align=center>1.32E-1</td>
+<td  align=center>1.60 (16689,1728,296,49)</td>
+<td>
+<a id="ctrl_elements_GO:0050790" href="javascript:toggle('elements_GO:0050790')">[+] Show genes</a><br>
+<div id="elements_GO:0050790" style="display:none"> <font size=1>
+Dock10  -  dedicator of cytokinesis 10<br>
+Tmbim1  -  transmembrane bax inhibitor motif containing 1<br>
+Trf  -  transferrin<br>
+Gsn  -  gelsolin<br>
+Abhd5  -  abhydrolase domain containing 5<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Dusp3  -  dual specificity phosphatase 3 (vaccinia virus phosphatase vh1-related)<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Cd81  -  cd81 antigen<br>
+Rap1a  -  ras-related protein-1a<br>
+Tbc1d10b  -  tbc1 domain family, member 10b<br>
+Mbp  -  myelin basic protein<br>
+Dnajb2  -  dnaj (hsp40) homolog, subfamily b, member 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Actb  -  actin, beta<br>
+Rasgrp3  -  ras, guanyl releasing protein 3<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Serpinb1a  -  serine (or cysteine) peptidase inhibitor, clade b, member 1a<br>
+Pkp4  -  plakophilin 4<br>
+Rhog  -  ras homolog gene family, member g<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Rassf2  -  ras association (ralgds/af-6) domain family member 2<br>
+Ddr1  -  discoidin domain receptor family, member 1<br>
+Rps3  -  ribosomal protein s3<br>
+Rdx  -  radixin<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Atp1b3  -  atpase, na+/k+ transporting, beta 3 polypeptide<br>
+Rffl  -  ring finger and fyve like domain containing protein<br>
+Tgfa  -  transforming growth factor alpha<br>
+Mapk8ip1  -  mitogen-activated protein kinase 8 interacting protein 1<br>
+Plxnb3  -  plexin b3<br>
+Ubxn1  -  ubx domain protein 1<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br>
+Arrdc3  -  arrestin domain containing 3<br>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Dbndd2  -  dysbindin (dystrobrevin binding protein 1) domain containing 2<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Bin1  -  bridging integrator 1<br>
+Cryab  -  crystallin, alpha b<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Rnf7  -  ring finger protein 7<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Myo1d  -  myosin id<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034330&amp;view=details' target="_blank">GO:0034330</a><a name=0034330></a></td>
+<td>cell junction organization</td>
+<td  align=center>6.5E-4</td>
+<td  align=center>1.34E-1</td>
+<td  align=center>3.23 (16689,192,296,11)</td>
+<td>
+<a id="ctrl_elements_GO:0034330" href="javascript:toggle('elements_GO:0034330')">[+] Show genes</a><br>
+<div id="elements_GO:0034330" style="display:none"> <font size=1>
+Cldn11  -  claudin 11<br>
+Vmp1  -  vacuole membrane protein 1<br>
+Itgb4  -  integrin beta 4<br>
+Jam3  -  junction adhesion molecule 3<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Nfasc  -  neurofascin<br>
+Pkp4  -  plakophilin 4<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Actb  -  actin, beta<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019226&amp;view=details' target="_blank">GO:0019226</a><a name=0019226></a></td>
+<td>transmission of nerve impulse</td>
+<td  align=center>6.58E-4</td>
+<td  align=center>1.34E-1</td>
+<td  align=center>9.81 (16689,23,296,4)</td>
+<td>
+<a id="ctrl_elements_GO:0019226" href="javascript:toggle('elements_GO:0019226')">[+] Show genes</a><br>
+<div id="elements_GO:0019226" style="display:none"> <font size=1>
+Jam3  -  junction adhesion molecule 3<br>
+Mag  -  myelin-associated glycoprotein<br>
+Nfasc  -  neurofascin<br>
+Pmp22  -  peripheral myelin protein 22<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006672&amp;view=details' target="_blank">GO:0006672</a><a name=0006672></a></td>
+<td>ceramide metabolic process</td>
+<td  align=center>6.75E-4</td>
+<td  align=center>1.36E-1</td>
+<td  align=center>4.76 (16689,83,296,7)</td>
+<td>
+<a id="ctrl_elements_GO:0006672" href="javascript:toggle('elements_GO:0006672')">[+] Show genes</a><br>
+<div id="elements_GO:0006672" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Cers2  -  ceramide synthase 2<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032273&amp;view=details' target="_blank">GO:0032273</a><a name=0032273></a></td>
+<td>positive regulation of protein polymerization</td>
+<td  align=center>6.77E-4</td>
+<td  align=center>1.34E-1</td>
+<td  align=center>4.18 (16689,108,296,8)</td>
+<td>
+<a id="ctrl_elements_GO:0032273" href="javascript:toggle('elements_GO:0032273')">[+] Show genes</a><br>
+<div id="elements_GO:0032273" style="display:none"> <font size=1>
+Tppp3  -  tubulin polymerization-promoting protein family member 3<br>
+Gsn  -  gelsolin<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Cdc42ep2  -  cdc42 effector protein (rho gtpase binding) 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Bin1  -  bridging integrator 1<br>
+Rps3  -  ribosomal protein s3<br>
+Rhoa  -  ras homolog gene family, member a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006643&amp;view=details' target="_blank">GO:0006643</a><a name=0006643></a></td>
+<td>membrane lipid metabolic process</td>
+<td  align=center>7.03E-4</td>
+<td  align=center>1.38E-1</td>
+<td  align=center>3.44 (16689,164,296,10)</td>
+<td>
+<a id="ctrl_elements_GO:0006643" href="javascript:toggle('elements_GO:0006643')">[+] Show genes</a><br>
+<div id="elements_GO:0006643" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Cers2  -  ceramide synthase 2<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Map7  -  microtubule-associated protein 7<br>
+Sccpdh  -  saccharopine dehydrogenase (putative)<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044255&amp;view=details' target="_blank">GO:0044255</a><a name=0044255></a></td>
+<td>cellular lipid metabolic process</td>
+<td  align=center>7.32E-4</td>
+<td  align=center>1.41E-1</td>
+<td  align=center>1.98 (16689,740,296,26)</td>
+<td>
+<a id="ctrl_elements_GO:0044255" href="javascript:toggle('elements_GO:0044255')">[+] Show genes</a><br>
+<div id="elements_GO:0044255" style="display:none"> <font size=1>
+Agpat4  -  1-acylglycerol-3-phosphate o-acyltransferase 4 (lysophosphatidic acid acyltransferase, delta)<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Qk  -  quaking<br>
+Scd1  -  stearoyl-coenzyme a desaturase 1<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Abhd5  -  abhydrolase domain containing 5<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Sirt2  -  sirtuin 2<br>
+Gal3st1  -  galactose-3-o-sulfotransferase 1<br>
+Hmgcs1  -  3-hydroxy-3-methylglutaryl-coenzyme a synthase 1<br>
+Sccpdh  -  saccharopine dehydrogenase (putative)<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Cers2  -  ceramide synthase 2<br>
+Tmem189  -  transmembrane protein 189<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Map7  -  microtubule-associated protein 7<br>
+Elovl1  -  elongation of very long chain fatty acids (fen1/elo2, sur4/elo3, yeast)-like 1<br>
+Mboat1  -  membrane bound o-acyltransferase domain containing 1<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Elovl7  -  elovl family member 7, elongation of long chain fatty acids (yeast)<br>
+Fa2h  -  fatty acid 2-hydroxylase<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072659&amp;view=details' target="_blank">GO:0072659</a><a name=0072659></a></td>
+<td>protein localization to plasma membrane</td>
+<td  align=center>7.71E-4</td>
+<td  align=center>1.47E-1</td>
+<td  align=center>3.16 (16689,196,296,11)</td>
+<td>
+<a id="ctrl_elements_GO:0072659" href="javascript:toggle('elements_GO:0072659')">[+] Show genes</a><br>
+<div id="elements_GO:0072659" style="display:none"> <font size=1>
+Rap1a  -  ras-related protein-1a<br>
+Tspan15  -  tetraspanin 15<br>
+Golga7  -  golgi autoantigen, golgin subfamily a, 7<br>
+Atp1b3  -  atpase, na+/k+ transporting, beta 3 polypeptide<br>
+Cd81  -  cd81 antigen<br>
+Nfasc  -  neurofascin<br>
+Vamp3  -  vesicle-associated membrane protein 3<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Map7  -  microtubule-associated protein 7<br>
+Rdx  -  radixin<br>
+Pacs2  -  phosphofurin acidic cluster sorting protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032879&amp;view=details' target="_blank">GO:0032879</a><a name=0032879></a></td>
+<td>regulation of localization</td>
+<td  align=center>7.71E-4</td>
+<td  align=center>1.45E-1</td>
+<td  align=center>1.45 (16689,2643,296,68)</td>
+<td>
+<a id="ctrl_elements_GO:0032879" href="javascript:toggle('elements_GO:0032879')">[+] Show genes</a><br>
+<div id="elements_GO:0032879" style="display:none"> <font size=1>
+Tmbim1  -  transmembrane bax inhibitor motif containing 1<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Cyp51  -  cytochrome p450, family 51<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Trf  -  transferrin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Gsn  -  gelsolin<br>
+Abhd5  -  abhydrolase domain containing 5<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Dusp3  -  dual specificity phosphatase 3 (vaccinia virus phosphatase vh1-related)<br>
+Sirt2  -  sirtuin 2<br>
+Stxbp3a  -  syntaxin binding protein 3a<br>
+Apod  -  apolipoprotein d<br>
+Tm7sf3  -  transmembrane 7 superfamily member 3<br>
+Jam3  -  junction adhesion molecule 3<br>
+Cd81  -  cd81 antigen<br>
+Hmgb1  -  high mobility group box 1<br>
+Car2  -  carbonic anhydrase 2<br>
+Tmeff2  -  transmembrane protein with egf-like and two follistatin-like domains 2<br>
+Rap1a  -  ras-related protein-1a<br>
+Dnajb2  -  dnaj (hsp40) homolog, subfamily b, member 2<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Tmem98  -  transmembrane protein 98<br>
+Actb  -  actin, beta<br>
+Rhob  -  ras homolog gene family, member b<br>
+Ankrd13a  -  ankyrin repeat domain 13a<br>
+Padi2  -  peptidyl arginine deiminase, type ii<br>
+Clic4  -  chloride intracellular channel 4 (mitochondrial)<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Trp53inp2  -  transformation related protein 53 inducible nuclear protein 2<br>
+Gnai1  -  guanine nucleotide binding protein (g protein), alpha inhibiting 1<br>
+Pea15a  -  phosphoprotein enriched in astrocytes 15a<br>
+Pex5l  -  peroxisomal biogenesis factor 5-like<br>
+Rhog  -  ras homolog gene family, member g<br>
+Prr5l  -  proline rich 5 like<br>
+Rdx  -  radixin<br>
+Slc12a2  -  solute carrier family 12, member 2<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Tnfaip6  -  tumor necrosis factor alpha induced protein 6<br>
+Atp1b3  -  atpase, na+/k+ transporting, beta 3 polypeptide<br>
+Rffl  -  ring finger and fyve like domain containing protein<br>
+Bnip3l  -  bcl2/adenovirus e1b interacting protein 3-like<br>
+Oxsr1  -  oxidative-stress responsive 1<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Lamp1  -  lysosomal-associated membrane protein 1<br>
+Plxnb3  -  plexin b3<br>
+Otud7b  -  otu domain containing 7b<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Cers2  -  ceramide synthase 2<br>
+Vamp3  -  vesicle-associated membrane protein 3<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Gstm7  -  glutathione s-transferase, mu 7<br>
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Eps15  -  epidermal growth factor receptor pathway substrate 15<br>
+Cryab  -  crystallin, alpha b<br>
+Gjc2  -  gap junction protein, gamma 2<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Plin3  -  perilipin 3<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Lzts2  -  leucine zipper, putative tumor suppressor 2<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014003&amp;view=details' target="_blank">GO:0014003</a><a name=0014003></a></td>
+<td>oligodendrocyte development</td>
+<td  align=center>7.79E-4</td>
+<td  align=center>1.45E-1</td>
+<td  align=center>9.40 (16689,24,296,4)</td>
+<td>
+<a id="ctrl_elements_GO:0014003" href="javascript:toggle('elements_GO:0014003')">[+] Show genes</a><br>
+<div id="elements_GO:0014003" style="display:none"> <font size=1>
+Tppp  -  tubulin polymerization promoting protein<br>
+Myrf  -  myelin regulatory factor<br>
+Olig1  -  oligodendrocyte transcription factor 1<br>
+Sox10  -  sry-box containing gene 10<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032886&amp;view=details' target="_blank">GO:0032886</a><a name=0032886></a></td>
+<td>regulation of microtubule-based process</td>
+<td  align=center>7.94E-4</td>
+<td  align=center>1.46E-1</td>
+<td  align=center>2.97 (16689,228,296,12)</td>
+<td>
+<a id="ctrl_elements_GO:0032886" href="javascript:toggle('elements_GO:0032886')">[+] Show genes</a><br>
+<div id="elements_GO:0032886" style="display:none"> <font size=1>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Gnai1  -  guanine nucleotide binding protein (g protein), alpha inhibiting 1<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Tppp  -  tubulin polymerization promoting protein<br>
+Phldb1  -  pleckstrin homology-like domain, family b, member 1<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Stmn4  -  stathmin-like 4<br>
+Map6d1  -  map6 domain containing 1<br>
+Lamp1  -  lysosomal-associated membrane protein 1<br>
+Rps3  -  ribosomal protein s3<br>
+Rhoa  -  ras homolog gene family, member a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099612&amp;view=details' target="_blank">GO:0099612</a><a name=0099612></a></td>
+<td>protein localization to axon</td>
+<td  align=center>8.2E-4</td>
+<td  align=center>1.49E-1</td>
+<td  align=center>15.38 (16689,11,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0099612" href="javascript:toggle('elements_GO:0099612')">[+] Show genes</a><br>
+<div id="elements_GO:0099612" style="display:none"> <font size=1>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Mal  -  myelin and lymphocyte protein, t cell differentiation protein<br>
+Nfasc  -  neurofascin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070445&amp;view=details' target="_blank">GO:0070445</a><a name=0070445></a></td>
+<td>regulation of oligodendrocyte progenitor proliferation</td>
+<td  align=center>8.2E-4</td>
+<td  align=center>1.47E-1</td>
+<td  align=center>15.38 (16689,11,296,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070445" href="javascript:toggle('elements_GO:0070445')">[+] Show genes</a><br>
+<div id="elements_GO:0070445" style="display:none"> <font size=1>
+Gjc2  -  gap junction protein, gamma 2<br>
+Trf  -  transferrin<br>
+Sirt2  -  sirtuin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051336&amp;view=details' target="_blank">GO:0051336</a><a name=0051336></a></td>
+<td>regulation of hydrolase activity</td>
+<td  align=center>8.43E-4</td>
+<td  align=center>1.5E-1</td>
+<td  align=center>1.85 (16689,912,296,30)</td>
+<td>
+<a id="ctrl_elements_GO:0051336" href="javascript:toggle('elements_GO:0051336')">[+] Show genes</a><br>
+<div id="elements_GO:0051336" style="display:none"> <font size=1>
+Dock10  -  dedicator of cytokinesis 10<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Atp1b3  -  atpase, na+/k+ transporting, beta 3 polypeptide<br>
+Rffl  -  ring finger and fyve like domain containing protein<br>
+Gsn  -  gelsolin<br>
+Abhd5  -  abhydrolase domain containing 5<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Plxnb3  -  plexin b3<br>
+Ubxn1  -  ubx domain protein 1<br>
+Rap1a  -  ras-related protein-1a<br>
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br>
+Mbp  -  myelin basic protein<br>
+Tbc1d10b  -  tbc1 domain family, member 10b<br>
+Dnajb2  -  dnaj (hsp40) homolog, subfamily b, member 2<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Cryab  -  crystallin, alpha b<br>
+Rasgrp3  -  ras, guanyl releasing protein 3<br>
+Rnf7  -  ring finger protein 7<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Serpinb1a  -  serine (or cysteine) peptidase inhibitor, clade b, member 1a<br>
+Myo1d  -  myosin id<br>
+Pkp4  -  plakophilin 4<br>
+Rhog  -  ras homolog gene family, member g<br>
+Rps3  -  ribosomal protein s3<br>
+Rdx  -  radixin<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903828&amp;view=details' target="_blank">GO:1903828</a><a name=1903828></a></td>
+<td>negative regulation of cellular protein localization</td>
+<td  align=center>8.6E-4</td>
+<td  align=center>1.51E-1</td>
+<td  align=center>4.03 (16689,112,296,8)</td>
+<td>
+<a id="ctrl_elements_GO:1903828" href="javascript:toggle('elements_GO:1903828')">[+] Show genes</a><br>
+<div id="elements_GO:1903828" style="display:none"> <font size=1>
+Ankrd13a  -  ankyrin repeat domain 13a<br>
+Tmbim1  -  transmembrane bax inhibitor motif containing 1<br>
+Apod  -  apolipoprotein d<br>
+Otud7b  -  otu domain containing 7b<br>
+Trp53inp2  -  transformation related protein 53 inducible nuclear protein 2<br>
+Tmem98  -  transmembrane protein 98<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Lzts2  -  leucine zipper, putative tumor suppressor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051179&amp;view=details' target="_blank">GO:0051179</a><a name=0051179></a></td>
+<td>localization</td>
+<td  align=center>8.99E-4</td>
+<td  align=center>1.56E-1</td>
+<td  align=center>1.36 (16689,3652,296,88)</td>
+<td>
+<a id="ctrl_elements_GO:0051179" href="javascript:toggle('elements_GO:0051179')">[+] Show genes</a><br>
+<div id="elements_GO:0051179" style="display:none"> <font size=1>
+Fnbp1  -  formin binding protein 1<br>
+Tmem63a  -  transmembrane protein 63a<br>
+Abca2  -  atp-binding cassette, sub-family a (abc1), member 2<br>
+Trf  -  transferrin<br>
+Stard3  -  start domain containing 3<br>
+Mal  -  myelin and lymphocyte protein, t cell differentiation protein<br>
+Gsn  -  gelsolin<br>
+Fez1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Magt1  -  magnesium transporter 1<br>
+Pacs2  -  phosphofurin acidic cluster sorting protein 2<br>
+Slc48a1  -  solute carrier family 48 (heme transporter), member 1<br>
+Stxbp3a  -  syntaxin binding protein 3a<br>
+Apod  -  apolipoprotein d<br>
+Ugt8a  -  udp galactosyltransferase 8a<br>
+Jam3  -  junction adhesion molecule 3<br>
+Cd81  -  cd81 antigen<br>
+Tmeff1  -  transmembrane protein with egf-like and two follistatin-like domains 1<br>
+Gltp  -  glycolipid transfer protein<br>
+Car2  -  carbonic anhydrase 2<br>
+Npc2  -  niemann pick type c2<br>
+Cpox  -  coproporphyrinogen oxidase<br>
+Fth1  -  ferritin heavy chain 1<br>
+Tspan15  -  tetraspanin 15<br>
+Rap1a  -  ras-related protein-1a<br>
+Tbc1d10b  -  tbc1 domain family, member 10b<br>
+Pllp  -  plasma membrane proteolipid<br>
+Snx1  -  sorting nexin 1<br>
+Sptssa  -  serine palmitoyltransferase, small subunit a<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Ldlrad3  -  low density lipoprotein receptor class a domain containing 3<br>
+Map7  -  microtubule-associated protein 7<br>
+Actb  -  actin, beta<br>
+Ttyh2  -  tweety homolog 2 (drosophila)<br>
+Rhob  -  ras homolog gene family, member b<br>
+Clic4  -  chloride intracellular channel 4 (mitochondrial)<br>
+Scarb2  -  scavenger receptor class b, member 2<br>
+Rftn1  -  raftlin lipid raft linker 1<br>
+Pex5l  -  peroxisomal biogenesis factor 5-like<br>
+Pea15a  -  phosphoprotein enriched in astrocytes 15a<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Slc25a1  -  solute carrier family 25 (mitochondrial carrier, citrate transporter), member 1<br>
+Ddr1  -  discoidin domain receptor family, member 1<br>
+Map6d1  -  map6 domain containing 1<br>
+Rdx  -  radixin<br>
+Slc12a2  -  solute carrier family 12, member 2<br>
+Sh3glb1  -  sh3-domain grb2-like b1 (endophilin)<br>
+Fgfr2  -  fibroblast growth factor receptor 2<br>
+Golga7  -  golgi autoantigen, golgin subfamily a, 7<br>
+Qk  -  quaking<br>
+Atp1b3  -  atpase, na+/k+ transporting, beta 3 polypeptide<br>
+Rffl  -  ring finger and fyve like domain containing protein<br>
+Micu2  -  mitochondrial calcium uptake 2<br>
+Lamp1  -  lysosomal-associated membrane protein 1<br>
+Desi1  -  desumoylating isopeptidase 1<br>
+Ank  -  progressive ankylosis<br>
+Mapk8ip1  -  mitogen-activated protein kinase 8 interacting protein 1<br>
+Gjb1  -  gap junction protein, beta 1<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Vamp3  -  vesicle-associated membrane protein 3<br>
+Nrbp2  -  nuclear receptor binding protein 2<br>
+Slc44a1  -  solute carrier family 44, member 1<br>
+Nipa1  -  non imprinted in prader-willi/angelman syndrome 1 homolog (human)<br>
+Slco3a1  -  solute carrier organic anion transporter family, member 3a1<br>
+Igsf11  -  immunoglobulin superfamily, member 11<br>
+Pmp22  -  peripheral myelin protein 22<br>
+Arrdc3  -  arrestin domain containing 3<br>
+Nfasc  -  neurofascin<br>
+Inppl1  -  inositol polyphosphate phosphatase-like 1<br>
+Pla2g4a  -  phospholipase a2, group iva (cytosolic, calcium-dependent)<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+S100a13  -  s100 calcium binding protein a13<br>
+Bin1  -  bridging integrator 1<br>
+Picalm  -  phosphatidylinositol binding clathrin assembly protein<br>
+Eps15  -  epidermal growth factor receptor pathway substrate 15<br>
+Rhou  -  ras homolog gene family, member u<br>
+Nipal4  -  nipa-like domain containing 4<br>
+Plin3  -  perilipin 3<br>
+Car14  -  carbonic anhydrase 14<br>
+Myo1d  -  myosin id<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Sh3gl3  -  sh3-domain grb2-like 3<br>
+Insc  -  inscuteable homolog (drosophila)<br>
+Zdhhc9  -  zinc finger, dhhc domain containing 9<br>
+Syngr2  -  synaptogyrin 2<br>
+Tfeb  -  transcription factor eb<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000145&amp;view=details' target="_blank">GO:2000145</a><a name=2000145></a></td>
+<td>regulation of cell motility</td>
+<td  align=center>9.04E-4</td>
+<td  align=center>1.55E-1</td>
+<td  align=center>1.85 (16689,916,296,30)</td>
+<td>
+<a id="ctrl_elements_GO:2000145" href="javascript:toggle('elements_GO:2000145')">[+] Show genes</a><br>
+<div id="elements_GO:2000145" style="display:none"> <font size=1>
+Dock10  -  dedicator of cytokinesis 10<br>
+Rffl  -  ring finger and fyve like domain containing protein<br>
+Trf  -  transferrin<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Oxsr1  -  oxidative-stress responsive 1<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Dusp3  -  dual specificity phosphatase 3 (vaccinia virus phosphatase vh1-related)<br>
+Plxnb3  -  plexin b3<br>
+Apod  -  apolipoprotein d<br>
+Jam3  -  junction adhesion molecule 3<br>
+Cd81  -  cd81 antigen<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Cers2  -  ceramide synthase 2<br>
+Hmgb1  -  high mobility group box 1<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Tmeff2  -  transmembrane protein with egf-like and two follistatin-like domains 2<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Rhob  -  ras homolog gene family, member b<br>
+Padi2  -  peptidyl arginine deiminase, type ii<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Clic4  -  chloride intracellular channel 4 (mitochondrial)<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Rhog  -  ras homolog gene family, member g<br>
+Prr5l  -  proline rich 5 like<br>
+Rdx  -  radixin<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+Tnfaip6  -  tumor necrosis factor alpha induced protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0038116&amp;view=details' target="_blank">GO:0038116</a><a name=0038116></a></td>
+<td>chemokine (C-C motif) ligand 21 signaling pathway</td>
+<td  align=center>9.3E-4</td>
+<td  align=center>1.58E-1</td>
+<td  align=center>37.59 (16689,3,296,2)</td>
+<td>
+<a id="ctrl_elements_GO:0038116" href="javascript:toggle('elements_GO:0038116')">[+] Show genes</a><br>
+<div id="elements_GO:0038116" style="display:none"> <font size=1>
+Oxsr1  -  oxidative-stress responsive 1<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0038127&amp;view=details' target="_blank">GO:0038127</a><a name=0038127></a></td>
+<td>ERBB signaling pathway</td>
+<td  align=center>9.41E-4</td>
+<td  align=center>1.58E-1</td>
+<td  align=center>6.56 (16689,43,296,5)</td>
+<td>
+<a id="ctrl_elements_GO:0038127" href="javascript:toggle('elements_GO:0038127')">[+] Show genes</a><br>
+<div id="elements_GO:0038127" style="display:none"> <font size=1>
+Erbb3  -  v-erb-b2 erythroblastic leukemia viral oncogene homolog 3 (avian)<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Rassf2  -  ras association (ralgds/af-6) domain family member 2<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Tgfa  -  transforming growth factor alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030334&amp;view=details' target="_blank">GO:0030334</a><a name=0030334></a></td>
+<td>regulation of cell migration</td>
+<td  align=center>9.66E-4</td>
+<td  align=center>1.6E-1</td>
+<td  align=center>1.86 (16689,878,296,29)</td>
+<td>
+<a id="ctrl_elements_GO:0030334" href="javascript:toggle('elements_GO:0030334')">[+] Show genes</a><br>
+<div id="elements_GO:0030334" style="display:none"> <font size=1>
+Dock10  -  dedicator of cytokinesis 10<br>
+Rffl  -  ring finger and fyve like domain containing protein<br>
+Lpar1  -  lysophosphatidic acid receptor 1<br>
+Abl1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
+Oxsr1  -  oxidative-stress responsive 1<br>
+Plp1  -  proteolipid protein (myelin) 1<br>
+Rhoa  -  ras homolog gene family, member a<br>
+Dusp3  -  dual specificity phosphatase 3 (vaccinia virus phosphatase vh1-related)<br>
+Plxnb3  -  plexin b3<br>
+Apod  -  apolipoprotein d<br>
+Jam3  -  junction adhesion molecule 3<br>
+Cd81  -  cd81 antigen<br>
+Dock1  -  dedicator of cytokinesis 1<br>
+Cers2  -  ceramide synthase 2<br>
+Hmgb1  -  high mobility group box 1<br>
+Gab1  -  growth factor receptor bound protein 2-associated protein 1<br>
+Tmeff2  -  transmembrane protein with egf-like and two follistatin-like domains 2<br>
+Sema6a  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+Rac1  -  ras-related c3 botulinum substrate 1<br>
+Rhob  -  ras homolog gene family, member b<br>
+Padi2  -  peptidyl arginine deiminase, type ii<br>
+Clic4  -  chloride intracellular channel 4 (mitochondrial)<br>
+Gna12  -  guanine nucleotide binding protein, alpha 12<br>
+Sema4d  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+Rhog  -  ras homolog gene family, member g<br>
+Prr5l  -  proline rich 5 like<br>
+Rdx  -  radixin<br>
+Wnk1  -  wnk lysine deficient protein kinase 1<br>
+Tnfaip6  -  tumor necrosis factor alpha induced protein 6<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 18243 genes out of 21255 gene terms entered by the user.<br> 18243 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>316 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 17927 genes.<br>Only 16689 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 15261 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

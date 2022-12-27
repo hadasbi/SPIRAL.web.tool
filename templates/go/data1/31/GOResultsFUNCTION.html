@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='433,343,511,406' HREF='#0005102' ALT=''>
+<AREA SHAPE='RECT' COORDS='288,497,373,545' HREF='#0019863' ALT=''>
+<AREA SHAPE='RECT' COORDS='273,351,388,399' HREF='#0019865' ALT=''>
+<AREA SHAPE='RECT' COORDS='840,326,931,423' HREF='#0016757' ALT=''>
+<AREA SHAPE='RECT' COORDS='639,497,807,545' HREF='#0008194' ALT=''>
+<AREA SHAPE='RECT' COORDS='831,481,940,561' HREF='#0016758' ALT=''>
+<AREA SHAPE='RECT' COORDS='1017,5,904,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='436,109,508,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='980,109,1055,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='1112,102,1197,165' HREF='#0060089' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,221,107,269' HREF='#0030246' ALT=''>
+<AREA SHAPE='RECT' COORDS='61,351,181,399' HREF='#0048029' ALT=''>
+<AREA SHAPE='RECT' COORDS='888,731,1112,794' HREF='#0004653' ALT=''>
+<AREA SHAPE='RECT' COORDS='755,627,965,675' HREF='#0008376' ALT=''>
+<AREA SHAPE='RECT' COORDS='267,221,395,269' HREF='#0044877' ALT=''>
+<AREA SHAPE='RECT' COORDS='848,221,939,269' HREF='#0016740' ALT=''>
+<AREA SHAPE='RECT' COORDS='964,473,1079,570' HREF='#0016864' ALT=''>
+<AREA SHAPE='RECT' COORDS='989,619,1104,682' HREF='#0003756' ALT=''>
+<AREA SHAPE='RECT' COORDS='131,221,243,269' HREF='#0036094' ALT=''>
+<AREA SHAPE='RECT' COORDS='419,221,525,269' HREF='#0005515' ALT=''>
+<AREA SHAPE='RECT' COORDS='549,214,656,277' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='680,221,771,269' HREF='#0008289' ALT=''>
+<AREA SHAPE='RECT' COORDS='975,221,1060,269' HREF='#0016853' ALT=''>
+<AREA SHAPE='RECT' COORDS='1103,481,1180,561' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='516,497,615,545' HREF='#0032934' ALT=''>
+<AREA SHAPE='RECT' COORDS='527,627,604,675' HREF='#0008142' ALT=''>
+<AREA SHAPE='RECT' COORDS='61,497,181,545' HREF='#0005537' ALT=''>
+<AREA SHAPE='RECT' COORDS='960,343,1075,406' HREF='#0016860' ALT=''>
+<AREA SHAPE='RECT' COORDS='549,351,656,399' HREF='#0005496' ALT=''>
+<AREA SHAPE='RECT' COORDS='1149,214,1227,277' HREF='#0038023' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030246&amp;view=details' target="_blank">GO:0030246</a><a name=0030246></a></td>
+<td>carbohydrate binding</td>
+<td  align=center>2.13E-6</td>
+<td  align=center>7.82E-3</td>
+<td  align=center>5.34 (8795,91,217,12)</td>
+<td>
+<a id="ctrl_elements_GO:0030246" href="javascript:toggle('elements_GO:0030246')">[+] Show genes</a><br>
+<div id="elements_GO:0030246" style="display:none"> <font size=1>
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+EMC7  -  er membrane protein complex subunit 7<br>
+BSG  -  basigin (ok blood group)<br>
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+NOMO2  -  nodal modulator 2<br>
+LGALS14  -  lectin, galactoside-binding, soluble, 14<br>
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0038023&amp;view=details' target="_blank">GO:0038023</a><a name=0038023></a></td>
+<td>signaling receptor activity</td>
+<td  align=center>1.15E-4</td>
+<td  align=center>2.12E-1</td>
+<td  align=center>3.06 (8795,199,217,15)</td>
+<td>
+<a id="ctrl_elements_GO:0038023" href="javascript:toggle('elements_GO:0038023')">[+] Show genes</a><br>
+<div id="elements_GO:0038023" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+PLXNB2  -  plexin b2<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+CD48  -  cd48 molecule<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+ITGB7  -  integrin, beta 7<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+BTLA  -  b and t lymphocyte associated<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+FZD3  -  frizzled family receptor 3<br>
+TMEM123  -  transmembrane protein 123<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060089&amp;view=details' target="_blank">GO:0060089</a><a name=0060089></a></td>
+<td>molecular transducer activity</td>
+<td  align=center>1.36E-4</td>
+<td  align=center>1.66E-1</td>
+<td  align=center>2.88 (8795,225,217,16)</td>
+<td>
+<a id="ctrl_elements_GO:0060089" href="javascript:toggle('elements_GO:0060089')">[+] Show genes</a><br>
+<div id="elements_GO:0060089" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+PLXNB2  -  plexin b2<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+CD48  -  cd48 molecule<br>
+CDK14  -  cyclin-dependent kinase 14<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+ITGB7  -  integrin, beta 7<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+BTLA  -  b and t lymphocyte associated<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+FZD3  -  frizzled family receptor 3<br>
+TMEM123  -  transmembrane protein 123<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008142&amp;view=details' target="_blank">GO:0008142</a><a name=0008142></a></td>
+<td>oxysterol binding</td>
+<td  align=center>1.43E-4</td>
+<td  align=center>1.31E-1</td>
+<td  align=center>24.32 (8795,5,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:0008142" href="javascript:toggle('elements_GO:0008142')">[+] Show genes</a><br>
+<div id="elements_GO:0008142" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+INSIG1  -  insulin induced gene 1<br>
+RORA  -  rar-related orphan receptor a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019865&amp;view=details' target="_blank">GO:0019865</a><a name=0019865></a></td>
+<td>immunoglobulin binding</td>
+<td  align=center>1.43E-4</td>
+<td  align=center>1.05E-1</td>
+<td  align=center>24.32 (8795,5,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:0019865" href="javascript:toggle('elements_GO:0019865')">[+] Show genes</a><br>
+<div id="elements_GO:0019865" style="display:none"> <font size=1>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005537&amp;view=details' target="_blank">GO:0005537</a><a name=0005537></a></td>
+<td>mannose binding</td>
+<td  align=center>2.8E-4</td>
+<td  align=center>1.72E-1</td>
+<td  align=center>20.26 (8795,6,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005537" href="javascript:toggle('elements_GO:0005537')">[+] Show genes</a><br>
+<div id="elements_GO:0005537" style="display:none"> <font size=1>
+BSG  -  basigin (ok blood group)<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016864&amp;view=details' target="_blank">GO:0016864</a><a name=0016864></a></td>
+<td>intramolecular oxidoreductase activity, transposing S-S bonds</td>
+<td  align=center>3.97E-4</td>
+<td  align=center>2.08E-1</td>
+<td  align=center>10.81 (8795,15,217,4)</td>
+<td>
+<a id="ctrl_elements_GO:0016864" href="javascript:toggle('elements_GO:0016864')">[+] Show genes</a><br>
+<div id="elements_GO:0016864" style="display:none"> <font size=1>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003756&amp;view=details' target="_blank">GO:0003756</a><a name=0003756></a></td>
+<td>protein disulfide isomerase activity</td>
+<td  align=center>3.97E-4</td>
+<td  align=center>1.82E-1</td>
+<td  align=center>10.81 (8795,15,217,4)</td>
+<td>
+<a id="ctrl_elements_GO:0003756" href="javascript:toggle('elements_GO:0003756')">[+] Show genes</a><br>
+<div id="elements_GO:0003756" style="display:none"> <font size=1>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005102&amp;view=details' target="_blank">GO:0005102</a><a name=0005102></a></td>
+<td>signaling receptor binding</td>
+<td  align=center>5.83E-4</td>
+<td  align=center>2.38E-1</td>
+<td  align=center>1.96 (8795,559,217,27)</td>
+<td>
+<a id="ctrl_elements_GO:0005102" href="javascript:toggle('elements_GO:0005102')">[+] Show genes</a><br>
+<div id="elements_GO:0005102" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+CNIH4  -  cornichon homolog 4 (drosophila)<br>
+ITGB7  -  integrin, beta 7<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+MESDC2  -  mesoderm development candidate 2<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+PEX14  -  peroxisomal biogenesis factor 14<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+NCSTN  -  nicastrin<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+MACC1  -  metastasis associated in colon cancer 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019863&amp;view=details' target="_blank">GO:0019863</a><a name=0019863></a></td>
+<td>IgE binding</td>
+<td  align=center>6.06E-4</td>
+<td  align=center>2.23E-1</td>
+<td  align=center>40.53 (8795,2,217,2)</td>
+<td>
+<a id="ctrl_elements_GO:0019863" href="javascript:toggle('elements_GO:0019863')">[+] Show genes</a><br>
+<div id="elements_GO:0019863" style="display:none"> <font size=1>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008376&amp;view=details' target="_blank">GO:0008376</a><a name=0008376></a></td>
+<td>acetylgalactosaminyltransferase activity</td>
+<td  align=center>6.66E-4</td>
+<td  align=center>2.22E-1</td>
+<td  align=center>9.54 (8795,17,217,4)</td>
+<td>
+<a id="ctrl_elements_GO:0008376" href="javascript:toggle('elements_GO:0008376')">[+] Show genes</a><br>
+<div id="elements_GO:0008376" style="display:none"> <font size=1>
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032934&amp;view=details' target="_blank">GO:0032934</a><a name=0032934></a></td>
+<td>sterol binding</td>
+<td  align=center>7.52E-4</td>
+<td  align=center>2.3E-1</td>
+<td  align=center>6.75 (8795,30,217,5)</td>
+<td>
+<a id="ctrl_elements_GO:0032934" href="javascript:toggle('elements_GO:0032934')">[+] Show genes</a><br>
+<div id="elements_GO:0032934" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+INSIG1  -  insulin induced gene 1<br>
+OSBPL2  -  oxysterol binding protein-like 2<br>
+RORA  -  rar-related orphan receptor a<br>
+STARD4  -  star-related lipid transfer (start) domain containing 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004653&amp;view=details' target="_blank">GO:0004653</a><a name=0004653></a></td>
+<td>polypeptide N-acetylgalactosaminyltransferase activity</td>
+<td  align=center>7.57E-4</td>
+<td  align=center>2.14E-1</td>
+<td  align=center>15.20 (8795,8,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:0004653" href="javascript:toggle('elements_GO:0004653')">[+] Show genes</a><br>
+<div id="elements_GO:0004653" style="display:none"> <font size=1>
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9253 genes out of 9706 gene terms entered by the user.<br> 9253 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>225 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3672 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='141,887,253,967' HREF='#0001937' ALT=''>
+<AREA SHAPE='RECT' COORDS='401,1368,516,1517' HREF='#1903588' ALT=''>
+<AREA SHAPE='RECT' COORDS='1853,325,1955,373' HREF='#0032879' ALT=''>
+<AREA SHAPE='RECT' COORDS='1663,447,1753,527' HREF='#0051270' ALT=''>
+<AREA SHAPE='RECT' COORDS='1980,463,2065,511' HREF='#0051049' ALT=''>
+<AREA SHAPE='RECT' COORDS='1828,463,1956,511' HREF='#1905952' ALT=''>
+<AREA SHAPE='RECT' COORDS='889,731,980,829' HREF='#0048661' ALT=''>
+<AREA SHAPE='RECT' COORDS='591,602,695,665' HREF='#1901342' ALT=''>
+<AREA SHAPE='RECT' COORDS='680,740,784,820' HREF='#1901343' ALT=''>
+<AREA SHAPE='RECT' COORDS='723,903,835,951' HREF='#0045765' ALT=''>
+<AREA SHAPE='RECT' COORDS='2820,455,2913,518' HREF='#0080134' ALT=''>
+<AREA SHAPE='RECT' COORDS='2821,602,2915,665' HREF='#1903034' ALT=''>
+<AREA SHAPE='RECT' COORDS='4031,325,4153,373' HREF='#0006959' ALT=''>
+<AREA SHAPE='RECT' COORDS='3980,609,4105,657' HREF='#0019730' ALT=''>
+<AREA SHAPE='RECT' COORDS='3227,609,3365,657' HREF='#0060562' ALT=''>
+<AREA SHAPE='RECT' COORDS='3177,756,3316,804' HREF='#0061154' ALT=''>
+<AREA SHAPE='RECT' COORDS='1337,585,1428,682' HREF='#0051271' ALT=''>
+<AREA SHAPE='RECT' COORDS='1559,609,1660,657' HREF='#2000145' ALT=''>
+<AREA SHAPE='RECT' COORDS='3592,198,3677,261' HREF='#0051716' ALT=''>
+<AREA SHAPE='RECT' COORDS='3536,455,3613,518' HREF='#0033554' ALT=''>
+<AREA SHAPE='RECT' COORDS='3781,309,3875,389' HREF='#0070887' ALT=''>
+<AREA SHAPE='RECT' COORDS='4024,205,4149,253' HREF='#0006955' ALT=''>
+<AREA SHAPE='RECT' COORDS='1332,749,1433,811' HREF='#2000146' ALT=''>
+<AREA SHAPE='RECT' COORDS='2589,438,2675,535' HREF='#0051171' ALT=''>
+<AREA SHAPE='RECT' COORDS='2579,585,2747,682' HREF='#0019219' ALT=''>
+<AREA SHAPE='RECT' COORDS='2117,447,2213,527' HREF='#0009893' ALT=''>
+<AREA SHAPE='RECT' COORDS='2140,731,2268,829' HREF='#0010604' ALT=''>
+<AREA SHAPE='RECT' COORDS='2445,602,2555,665' HREF='#0009889' ALT=''>
+<AREA SHAPE='RECT' COORDS='2567,740,2695,820' HREF='#0010556' ALT=''>
+<AREA SHAPE='RECT' COORDS='2447,740,2543,820' HREF='#0031326' ALT=''>
+<AREA SHAPE='RECT' COORDS='4347,205,4448,253' HREF='#0006457' ALT=''>
+<AREA SHAPE='RECT' COORDS='4336,325,4448,373' HREF='#0042026' ALT=''>
+<AREA SHAPE='RECT' COORDS='3773,447,3856,527' HREF='#0071310' ALT=''>
+<AREA SHAPE='RECT' COORDS='3728,585,3840,682' HREF='#0035967' ALT=''>
+<AREA SHAPE='RECT' COORDS='3675,318,3757,381' HREF='#0010033' ALT=''>
+<AREA SHAPE='RECT' COORDS='3637,447,3749,527' HREF='#0035966' ALT=''>
+<AREA SHAPE='RECT' COORDS='3943,5,3830,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='2556,101,2636,149' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='3461,101,3568,149' HREF='#0032502' ALT=''>
+<AREA SHAPE='RECT' COORDS='4364,101,4473,149' HREF='#0051704' ALT=''>
+<AREA SHAPE='RECT' COORDS='4203,101,4275,149' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='3756,101,3841,149' HREF='#0050896' ALT=''>
+<AREA SHAPE='RECT' COORDS='4028,101,4145,149' HREF='#0002376' ALT=''>
+<AREA SHAPE='RECT' COORDS='3813,198,3891,261' HREF='#0009607' ALT=''>
+<AREA SHAPE='RECT' COORDS='3900,318,4007,381' HREF='#0043207' ALT=''>
+<AREA SHAPE='RECT' COORDS='3053,325,3203,373' HREF='#0048729' ALT=''>
+<AREA SHAPE='RECT' COORDS='3084,463,3199,511' HREF='#0002009' ALT=''>
+<AREA SHAPE='RECT' COORDS='1857,198,1951,261' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='593,1050,705,1113' HREF='#0016525' ALT=''>
+<AREA SHAPE='RECT' COORDS='664,1213,763,1293' HREF='#1903671' ALT=''>
+<AREA SHAPE='RECT' COORDS='4204,325,4287,373' HREF='#0045321' ALT=''>
+<AREA SHAPE='RECT' COORDS='2985,756,3103,804' HREF='#0061041' ALT=''>
+<AREA SHAPE='RECT' COORDS='2920,895,3037,958' HREF='#0090303' ALT=''>
+<AREA SHAPE='RECT' COORDS='1421,895,1520,958' HREF='#0010632' ALT=''>
+<AREA SHAPE='RECT' COORDS='1268,1050,1369,1113' HREF='#0010594' ALT=''>
+<AREA SHAPE='RECT' COORDS='1145,1041,1244,1121' HREF='#0010633' ALT=''>
+<AREA SHAPE='RECT' COORDS='2429,1222,2544,1285' HREF='#0006355' ALT=''>
+<AREA SHAPE='RECT' COORDS='2416,1403,2557,1483' HREF='#0006357' ALT=''>
+<AREA SHAPE='RECT' COORDS='3485,602,3563,665' HREF='#0034605' ALT=''>
+<AREA SHAPE='RECT' COORDS='1004,463,1140,511' HREF='#0045595' ALT=''>
+<AREA SHAPE='RECT' COORDS='255,602,367,665' HREF='#0050678' ALT=''>
+<AREA SHAPE='RECT' COORDS='411,740,523,820' HREF='#0050679' ALT=''>
+<AREA SHAPE='RECT' COORDS='141,749,253,811' HREF='#0001936' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,740,117,820' HREF='#0050680' ALT=''>
+<AREA SHAPE='RECT' COORDS='277,749,387,811' HREF='#0010837' ALT=''>
+<AREA SHAPE='RECT' COORDS='3227,325,3365,373' HREF='#0035239' ALT=''>
+<AREA SHAPE='RECT' COORDS='952,1213,1061,1293' HREF='#0043535' ALT=''>
+<AREA SHAPE='RECT' COORDS='796,1394,913,1491' HREF='#0090049' ALT=''>
+<AREA SHAPE='RECT' COORDS='952,1394,1061,1491' HREF='#0043537' ALT=''>
+<AREA SHAPE='RECT' COORDS='3080,609,3203,657' HREF='#0003159' ALT=''>
+<AREA SHAPE='RECT' COORDS='2292,756,2423,804' HREF='#0010468' ALT=''>
+<AREA SHAPE='RECT' COORDS='2172,895,2303,958' HREF='#0010628' ALT=''>
+<AREA SHAPE='RECT' COORDS='2939,585,3056,682' HREF='#0002604' ALT=''>
+<AREA SHAPE='RECT' COORDS='1144,1213,1245,1293' HREF='#0010596' ALT=''>
+<AREA SHAPE='RECT' COORDS='3241,198,3351,261' HREF='#0009653' ALT=''>
+<AREA SHAPE='RECT' COORDS='2429,878,2544,975' HREF='#2000112' ALT=''>
+<AREA SHAPE='RECT' COORDS='2568,895,2709,958' HREF='#2001141' ALT=''>
+<AREA SHAPE='RECT' COORDS='2553,1041,2663,1121' HREF='#1903506' ALT=''>
+<AREA SHAPE='RECT' COORDS='2477,447,2560,527' HREF='#0080090' ALT=''>
+<AREA SHAPE='RECT' COORDS='1084,593,1172,673' HREF='#0001818' ALT=''>
+<AREA SHAPE='RECT' COORDS='1137,740,1255,820' HREF='#0032695' ALT=''>
+<AREA SHAPE='RECT' COORDS='796,1565,913,1680' HREF='#0090051' ALT=''>
+<AREA SHAPE='RECT' COORDS='1556,447,1639,527' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='769,602,895,665' HREF='#0008284' ALT=''>
+<AREA SHAPE='RECT' COORDS='3932,463,4055,511' HREF='#0051707' ALT=''>
+<AREA SHAPE='RECT' COORDS='1285,895,1397,958' HREF='#0030336' ALT=''>
+<AREA SHAPE='RECT' COORDS='2719,749,2844,811' HREF='#0051252' ALT=''>
+<AREA SHAPE='RECT' COORDS='1695,749,1796,811' HREF='#0032890' ALT=''>
+<AREA SHAPE='RECT' COORDS='2013,602,2144,665' HREF='#0034762' ALT=''>
+<AREA SHAPE='RECT' COORDS='1883,609,1989,657' HREF='#0043269' ALT=''>
+<AREA SHAPE='RECT' COORDS='1693,609,1808,657' HREF='#0032368' ALT=''>
+<AREA SHAPE='RECT' COORDS='4224,205,4323,253' HREF='#0001775' ALT=''>
+<AREA SHAPE='RECT' COORDS='2043,309,2136,389' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='2701,447,2795,527' HREF='#0048584' ALT=''>
+<AREA SHAPE='RECT' COORDS='1164,447,1247,527' HREF='#0048523' ALT=''>
+<AREA SHAPE='RECT' COORDS='105,602,231,665' HREF='#0008285' ALT=''>
+<AREA SHAPE='RECT' COORDS='588,447,697,527' HREF='#2000026' ALT=''>
+<AREA SHAPE='RECT' COORDS='3701,205,3789,253' HREF='#0042221' ALT=''>
+<AREA SHAPE='RECT' COORDS='3915,198,4000,261' HREF='#0009605' ALT=''>
+<AREA SHAPE='RECT' COORDS='3523,325,3600,373' HREF='#0006950' ALT=''>
+<AREA SHAPE='RECT' COORDS='3424,198,3501,261' HREF='#0009628' ALT=''>
+<AREA SHAPE='RECT' COORDS='391,887,500,967' HREF='#0010838' ALT=''>
+<AREA SHAPE='RECT' COORDS='1271,455,1359,518' HREF='#0001817' ALT=''>
+<AREA SHAPE='RECT' COORDS='1196,602,1313,665' HREF='#0032655' ALT=''>
+<AREA SHAPE='RECT' COORDS='1820,756,1943,804' HREF='#0044070' ALT=''>
+<AREA SHAPE='RECT' COORDS='1816,895,1981,958' HREF='#1903959' ALT=''>
+<AREA SHAPE='RECT' COORDS='1699,895,1792,958' HREF='#2000191' ALT=''>
+<AREA SHAPE='RECT' COORDS='581,318,704,381' HREF='#0050793' ALT=''>
+<AREA SHAPE='RECT' COORDS='547,740,656,820' HREF='#0022603' ALT=''>
+<AREA SHAPE='RECT' COORDS='441,447,564,527' HREF='#0051093' ALT=''>
+<AREA SHAPE='RECT' COORDS='2868,740,2961,820' HREF='#1903036' ALT=''>
+<AREA SHAPE='RECT' COORDS='589,887,699,967' HREF='#2000181' ALT=''>
+<AREA SHAPE='RECT' COORDS='2847,318,2961,381' HREF='#0002682' ALT=''>
+<AREA SHAPE='RECT' COORDS='2939,447,3056,527' HREF='#0002577' ALT=''>
+<AREA SHAPE='RECT' COORDS='1779,1024,1864,1139' HREF='#0010746' ALT=''>
+<AREA SHAPE='RECT' COORDS='3389,318,3499,381' HREF='#0009266' ALT=''>
+<AREA SHAPE='RECT' COORDS='3435,463,3512,511' HREF='#0009408' ALT=''>
+<AREA SHAPE='RECT' COORDS='1508,756,1620,804' HREF='#0030334' ALT=''>
+<AREA SHAPE='RECT' COORDS='2293,593,2421,673' HREF='#0060255' ALT=''>
+<AREA SHAPE='RECT' COORDS='1731,325,1829,373' HREF='#0040012' ALT=''>
+<AREA SHAPE='RECT' COORDS='1383,455,1481,518' HREF='#0040013' ALT=''>
+<AREA SHAPE='RECT' COORDS='919,593,1009,673' HREF='#0048660' ALT=''>
+<AREA SHAPE='RECT' COORDS='401,1187,516,1319' HREF='#1903587' ALT=''>
+<AREA SHAPE='RECT' COORDS='721,463,847,511' HREF='#0042127' ALT=''>
+<AREA SHAPE='RECT' COORDS='3616,602,3704,665' HREF='#0006986' ALT=''>
+<AREA SHAPE='RECT' COORDS='3677,740,3765,820' HREF='#0034620' ALT=''>
+<AREA SHAPE='RECT' COORDS='1556,318,1639,381' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='2237,447,2320,527' HREF='#0031323' ALT=''>
+<AREA SHAPE='RECT' COORDS='729,1050,828,1113' HREF='#1903670' ALT=''>
+<AREA SHAPE='RECT' COORDS='1151,309,1244,389' HREF='#0048519' ALT=''>
+<AREA SHAPE='RECT' COORDS='871,438,980,535' HREF='#0051241' ALT=''>
+<AREA SHAPE='RECT' COORDS='1967,749,2116,811' HREF='#0034765' ALT=''>
+<AREA SHAPE='RECT' COORDS='2309,318,2405,381' HREF='#0019222' ALT=''>
+<AREA SHAPE='RECT' COORDS='1268,309,1377,389' HREF='#0051239' ALT=''>
+<AREA SHAPE='RECT' COORDS='2701,318,2795,381' HREF='#0048583' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034605&amp;view=details' target="_blank">GO:0034605</a><a name=0034605></a></td>
+<td>cellular response to heat</td>
+<td  align=center>1.03E-6</td>
+<td  align=center>1.54E-2</td>
+<td  align=center>51.17 (15889,46,27,4)</td>
+<td>
+<a id="ctrl_elements_GO:0034605" href="javascript:toggle('elements_GO:0034605')">[+] Show genes</a><br>
+<div id="elements_GO:0034605" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+THBS1  -  thrombospondin 1<br>
+IER5  -  immediate early response 5<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903036&amp;view=details' target="_blank">GO:1903036</a><a name=1903036></a></td>
+<td>positive regulation of response to wounding</td>
+<td  align=center>3.68E-6</td>
+<td  align=center>2.76E-2</td>
+<td  align=center>37.36 (15889,63,27,4)</td>
+<td>
+<a id="ctrl_elements_GO:1903036" href="javascript:toggle('elements_GO:1903036')">[+] Show genes</a><br>
+<div id="elements_GO:1903036" style="display:none"> <font size=1>
+REG3A  -  regenerating islet-derived 3 alpha<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903587&amp;view=details' target="_blank">GO:1903587</a><a name=1903587></a></td>
+<td>regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis</td>
+<td  align=center>4.89E-6</td>
+<td  align=center>2.45E-2</td>
+<td  align=center>88.27 (15889,20,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:1903587" href="javascript:toggle('elements_GO:1903587')">[+] Show genes</a><br>
+<div id="elements_GO:1903587" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009408&amp;view=details' target="_blank">GO:0009408</a><a name=0009408></a></td>
+<td>response to heat</td>
+<td  align=center>9.57E-6</td>
+<td  align=center>3.59E-2</td>
+<td  align=center>29.42 (15889,80,27,4)</td>
+<td>
+<a id="ctrl_elements_GO:0009408" href="javascript:toggle('elements_GO:0009408')">[+] Show genes</a><br>
+<div id="elements_GO:0009408" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+THBS1  -  thrombospondin 1<br>
+IER5  -  immediate early response 5<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001937&amp;view=details' target="_blank">GO:0001937</a><a name=0001937></a></td>
+<td>negative regulation of endothelial cell proliferation</td>
+<td  align=center>4.15E-5</td>
+<td  align=center>1.24E-1</td>
+<td  align=center>44.14 (15889,40,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0001937" href="javascript:toggle('elements_GO:0001937')">[+] Show genes</a><br>
+<div id="elements_GO:0001937" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010746&amp;view=details' target="_blank">GO:0010746</a><a name=0010746></a></td>
+<td>regulation of plasma membrane long-chain fatty acid transport</td>
+<td  align=center>4.15E-5</td>
+<td  align=center>1.04E-1</td>
+<td  align=center>196.16 (15889,6,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0010746" href="javascript:toggle('elements_GO:0010746')">[+] Show genes</a><br>
+<div id="elements_GO:0010746" style="display:none"> <font size=1>
+THBS1  -  thrombospondin 1<br>
+ACSL5  -  acyl-coa synthetase long-chain family member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009266&amp;view=details' target="_blank">GO:0009266</a><a name=0009266></a></td>
+<td>response to temperature stimulus</td>
+<td  align=center>7.52E-5</td>
+<td  align=center>1.61E-1</td>
+<td  align=center>17.44 (15889,135,27,4)</td>
+<td>
+<a id="ctrl_elements_GO:0009266" href="javascript:toggle('elements_GO:0009266')">[+] Show genes</a><br>
+<div id="elements_GO:0009266" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+THBS1  -  thrombospondin 1<br>
+IER5  -  immediate early response 5<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903588&amp;view=details' target="_blank">GO:1903588</a><a name=1903588></a></td>
+<td>negative regulation of blood vessel endothelial cell proliferation involved in sprouting angiogenesis</td>
+<td  align=center>7.74E-5</td>
+<td  align=center>1.45E-1</td>
+<td  align=center>147.12 (15889,8,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:1903588" href="javascript:toggle('elements_GO:1903588')">[+] Show genes</a><br>
+<div id="elements_GO:1903588" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002604&amp;view=details' target="_blank">GO:0002604</a><a name=0002604></a></td>
+<td>regulation of dendritic cell antigen processing and presentation</td>
+<td  align=center>9.94E-5</td>
+<td  align=center>1.66E-1</td>
+<td  align=center>130.77 (15889,9,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0002604" href="javascript:toggle('elements_GO:0002604')">[+] Show genes</a><br>
+<div id="elements_GO:0002604" style="display:none"> <font size=1>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+THBS1  -  thrombospondin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0090303&amp;view=details' target="_blank">GO:0090303</a><a name=0090303></a></td>
+<td>positive regulation of wound healing</td>
+<td  align=center>1.02E-4</td>
+<td  align=center>1.54E-1</td>
+<td  align=center>32.69 (15889,54,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0090303" href="javascript:toggle('elements_GO:0090303')">[+] Show genes</a><br>
+<div id="elements_GO:0090303" style="display:none"> <font size=1>
+REG3A  -  regenerating islet-derived 3 alpha<br>
+THBS1  -  thrombospondin 1<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010628&amp;view=details' target="_blank">GO:0010628</a><a name=0010628></a></td>
+<td>positive regulation of gene expression</td>
+<td  align=center>1.07E-4</td>
+<td  align=center>1.46E-1</td>
+<td  align=center>3.52 (15889,1838,27,11)</td>
+<td>
+<a id="ctrl_elements_GO:0010628" href="javascript:toggle('elements_GO:0010628')">[+] Show genes</a><br>
+<div id="elements_GO:0010628" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+FOSB  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+POU3F1  -  pou class 3 homeobox 1<br>
+TCF23  -  transcription factor 23<br>
+IER5  -  immediate early response 5<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010596&amp;view=details' target="_blank">GO:0010596</a><a name=0010596></a></td>
+<td>negative regulation of endothelial cell migration</td>
+<td  align=center>1.2E-4</td>
+<td  align=center>1.5E-1</td>
+<td  align=center>30.97 (15889,57,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0010596" href="javascript:toggle('elements_GO:0010596')">[+] Show genes</a><br>
+<div id="elements_GO:0010596" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006986&amp;view=details' target="_blank">GO:0006986</a><a name=0006986></a></td>
+<td>response to unfolded protein</td>
+<td  align=center>1.4E-4</td>
+<td  align=center>1.62E-1</td>
+<td  align=center>29.42 (15889,60,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0006986" href="javascript:toggle('elements_GO:0006986')">[+] Show genes</a><br>
+<div id="elements_GO:0006986" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+THBS1  -  thrombospondin 1<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903034&amp;view=details' target="_blank">GO:1903034</a><a name=1903034></a></td>
+<td>regulation of response to wounding</td>
+<td  align=center>1.52E-4</td>
+<td  align=center>1.63E-1</td>
+<td  align=center>14.53 (15889,162,27,4)</td>
+<td>
+<a id="ctrl_elements_GO:1903034" href="javascript:toggle('elements_GO:1903034')">[+] Show genes</a><br>
+<div id="elements_GO:1903034" style="display:none"> <font size=1>
+REG3A  -  regenerating islet-derived 3 alpha<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010838&amp;view=details' target="_blank">GO:0010838</a><a name=0010838></a></td>
+<td>positive regulation of keratinocyte proliferation</td>
+<td  align=center>1.82E-4</td>
+<td  align=center>1.82E-1</td>
+<td  align=center>98.08 (15889,12,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0010838" href="javascript:toggle('elements_GO:0010838')">[+] Show genes</a><br>
+<div id="elements_GO:0010838" style="display:none"> <font size=1>
+REG3A  -  regenerating islet-derived 3 alpha<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032695&amp;view=details' target="_blank">GO:0032695</a><a name=0032695></a></td>
+<td>negative regulation of interleukin-12 production</td>
+<td  align=center>1.82E-4</td>
+<td  align=center>1.7E-1</td>
+<td  align=center>98.08 (15889,12,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0032695" href="javascript:toggle('elements_GO:0032695')">[+] Show genes</a><br>
+<div id="elements_GO:0032695" style="display:none"> <font size=1>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003159&amp;view=details' target="_blank">GO:0003159</a><a name=0003159></a></td>
+<td>morphogenesis of an endothelium</td>
+<td  align=center>1.82E-4</td>
+<td  align=center>1.6E-1</td>
+<td  align=center>98.08 (15889,12,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0003159" href="javascript:toggle('elements_GO:0003159')">[+] Show genes</a><br>
+<div id="elements_GO:0003159" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061154&amp;view=details' target="_blank">GO:0061154</a><a name=0061154></a></td>
+<td>endothelial tube morphogenesis</td>
+<td  align=center>1.82E-4</td>
+<td  align=center>1.51E-1</td>
+<td  align=center>98.08 (15889,12,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0061154" href="javascript:toggle('elements_GO:0061154')">[+] Show genes</a><br>
+<div id="elements_GO:0061154" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035966&amp;view=details' target="_blank">GO:0035966</a><a name=0035966></a></td>
+<td>response to topologically incorrect protein</td>
+<td  align=center>1.95E-4</td>
+<td  align=center>1.54E-1</td>
+<td  align=center>26.35 (15889,67,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0035966" href="javascript:toggle('elements_GO:0035966')">[+] Show genes</a><br>
+<div id="elements_GO:0035966" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+THBS1  -  thrombospondin 1<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010633&amp;view=details' target="_blank">GO:0010633</a><a name=0010633></a></td>
+<td>negative regulation of epithelial cell migration</td>
+<td  align=center>2.41E-4</td>
+<td  align=center>1.81E-1</td>
+<td  align=center>24.52 (15889,72,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0010633" href="javascript:toggle('elements_GO:0010633')">[+] Show genes</a><br>
+<div id="elements_GO:0010633" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002577&amp;view=details' target="_blank">GO:0002577</a><a name=0002577></a></td>
+<td>regulation of antigen processing and presentation</td>
+<td  align=center>2.5E-4</td>
+<td  align=center>1.78E-1</td>
+<td  align=center>84.07 (15889,14,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0002577" href="javascript:toggle('elements_GO:0002577')">[+] Show genes</a><br>
+<div id="elements_GO:0002577" style="display:none"> <font size=1>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+THBS1  -  thrombospondin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048661&amp;view=details' target="_blank">GO:0048661</a><a name=0048661></a></td>
+<td>positive regulation of smooth muscle cell proliferation</td>
+<td  align=center>2.72E-4</td>
+<td  align=center>1.86E-1</td>
+<td  align=center>23.54 (15889,75,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0048661" href="javascript:toggle('elements_GO:0048661')">[+] Show genes</a><br>
+<div id="elements_GO:0048661" style="display:none"> <font size=1>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903670&amp;view=details' target="_blank">GO:1903670</a><a name=1903670></a></td>
+<td>regulation of sprouting angiogenesis</td>
+<td  align=center>3.18E-4</td>
+<td  align=center>2.07E-1</td>
+<td  align=center>22.35 (15889,79,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:1903670" href="javascript:toggle('elements_GO:1903670')">[+] Show genes</a><br>
+<div id="elements_GO:1903670" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042026&amp;view=details' target="_blank">GO:0042026</a><a name=0042026></a></td>
+<td>protein refolding</td>
+<td  align=center>3.72E-4</td>
+<td  align=center>2.33E-1</td>
+<td  align=center>69.23 (15889,17,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0042026" href="javascript:toggle('elements_GO:0042026')">[+] Show genes</a><br>
+<div id="elements_GO:0042026" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010604&amp;view=details' target="_blank">GO:0010604</a><a name=0010604></a></td>
+<td>positive regulation of macromolecule metabolic process</td>
+<td  align=center>4.19E-4</td>
+<td  align=center>2.51E-1</td>
+<td  align=center>2.61 (15889,2932,27,13)</td>
+<td>
+<a id="ctrl_elements_GO:0010604" href="javascript:toggle('elements_GO:0010604')">[+] Show genes</a><br>
+<div id="elements_GO:0010604" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+GADD45B  -  growth arrest and dna-damage-inducible, beta<br>
+POU3F1  -  pou class 3 homeobox 1<br>
+TCF23  -  transcription factor 23<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+FOSB  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+IER5  -  immediate early response 5<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019730&amp;view=details' target="_blank">GO:0019730</a><a name=0019730></a></td>
+<td>antimicrobial humoral response</td>
+<td  align=center>4.36E-4</td>
+<td  align=center>2.51E-1</td>
+<td  align=center>20.06 (15889,88,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0019730" href="javascript:toggle('elements_GO:0019730')">[+] Show genes</a><br>
+<div id="elements_GO:0019730" style="display:none"> <font size=1>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+REG3A  -  regenerating islet-derived 3 alpha<br>
+PGLYRP1  -  peptidoglycan recognition protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010632&amp;view=details' target="_blank">GO:0010632</a><a name=0010632></a></td>
+<td>regulation of epithelial cell migration</td>
+<td  align=center>5.06E-4</td>
+<td  align=center>2.81E-1</td>
+<td  align=center>10.60 (15889,222,27,4)</td>
+<td>
+<a id="ctrl_elements_GO:0010632" href="javascript:toggle('elements_GO:0010632')">[+] Show genes</a><br>
+<div id="elements_GO:0010632" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000112&amp;view=details' target="_blank">GO:2000112</a><a name=2000112></a></td>
+<td>regulation of cellular macromolecule biosynthetic process</td>
+<td  align=center>5.11E-4</td>
+<td  align=center>2.73E-1</td>
+<td  align=center>2.41 (15889,3424,27,14)</td>
+<td>
+<a id="ctrl_elements_GO:2000112" href="javascript:toggle('elements_GO:2000112')">[+] Show genes</a><br>
+<div id="elements_GO:2000112" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+POU3F1  -  pou class 3 homeobox 1<br>
+TCF23  -  transcription factor 23<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+FOSB  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+UNCX  -  unc homeobox<br>
+CBX4  -  chromobox homolog 4<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+IER5  -  immediate early response 5<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0090051&amp;view=details' target="_blank">GO:0090051</a><a name=0090051></a></td>
+<td>negative regulation of cell migration involved in sprouting angiogenesis</td>
+<td  align=center>5.18E-4</td>
+<td  align=center>2.68E-1</td>
+<td  align=center>58.85 (15889,20,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0090051" href="javascript:toggle('elements_GO:0090051')">[+] Show genes</a><br>
+<div id="elements_GO:0090051" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010556&amp;view=details' target="_blank">GO:0010556</a><a name=0010556></a></td>
+<td>regulation of macromolecule biosynthetic process</td>
+<td  align=center>5.58E-4</td>
+<td  align=center>2.79E-1</td>
+<td  align=center>2.39 (15889,3452,27,14)</td>
+<td>
+<a id="ctrl_elements_GO:0010556" href="javascript:toggle('elements_GO:0010556')">[+] Show genes</a><br>
+<div id="elements_GO:0010556" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+POU3F1  -  pou class 3 homeobox 1<br>
+TCF23  -  transcription factor 23<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+FOSB  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+UNCX  -  unc homeobox<br>
+CBX4  -  chromobox homolog 4<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+IER5  -  immediate early response 5<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060562&amp;view=details' target="_blank">GO:0060562</a><a name=0060562></a></td>
+<td>epithelial tube morphogenesis</td>
+<td  align=center>5.63E-4</td>
+<td  align=center>2.72E-1</td>
+<td  align=center>18.39 (15889,96,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0060562" href="javascript:toggle('elements_GO:0060562')">[+] Show genes</a><br>
+<div id="elements_GO:0060562" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+MIR21  -  microrna 21<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048584&amp;view=details' target="_blank">GO:0048584</a><a name=0048584></a></td>
+<td>positive regulation of response to stimulus</td>
+<td  align=center>7.29E-4</td>
+<td  align=center>3.42E-1</td>
+<td  align=center>3.09 (15889,1904,27,10)</td>
+<td>
+<a id="ctrl_elements_GO:0048584" href="javascript:toggle('elements_GO:0048584')">[+] Show genes</a><br>
+<div id="elements_GO:0048584" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+REG3A  -  regenerating islet-derived 3 alpha<br>
+THBS1  -  thrombospondin 1<br>
+GADD45B  -  growth arrest and dna-damage-inducible, beta<br>
+MIR21  -  microrna 21<br>
+ARC  -  activity-regulated cytoskeleton-associated protein<br>
+IER5  -  immediate early response 5<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034620&amp;view=details' target="_blank">GO:0034620</a><a name=0034620></a></td>
+<td>cellular response to unfolded protein</td>
+<td  align=center>7.5E-4</td>
+<td  align=center>3.41E-1</td>
+<td  align=center>49.04 (15889,24,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:0034620" href="javascript:toggle('elements_GO:0034620')">[+] Show genes</a><br>
+<div id="elements_GO:0034620" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000191&amp;view=details' target="_blank">GO:2000191</a><a name=2000191></a></td>
+<td>regulation of fatty acid transport</td>
+<td  align=center>7.5E-4</td>
+<td  align=center>3.31E-1</td>
+<td  align=center>49.04 (15889,24,27,2)</td>
+<td>
+<a id="ctrl_elements_GO:2000191" href="javascript:toggle('elements_GO:2000191')">[+] Show genes</a><br>
+<div id="elements_GO:2000191" style="display:none"> <font size=1>
+THBS1  -  thrombospondin 1<br>
+ACSL5  -  acyl-coa synthetase long-chain family member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006357&amp;view=details' target="_blank">GO:0006357</a><a name=0006357></a></td>
+<td>regulation of transcription by RNA polymerase II</td>
+<td  align=center>7.86E-4</td>
+<td  align=center>3.37E-1</td>
+<td  align=center>2.82 (15889,2299,27,11)</td>
+<td>
+<a id="ctrl_elements_GO:0006357" href="javascript:toggle('elements_GO:0006357')">[+] Show genes</a><br>
+<div id="elements_GO:0006357" style="display:none"> <font size=1>
+FOSB  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+UNCX  -  unc homeobox<br>
+CBX4  -  chromobox homolog 4<br>
+MIR21  -  microrna 21<br>
+POU3F1  -  pou class 3 homeobox 1<br>
+TCF23  -  transcription factor 23<br>
+IER5  -  immediate early response 5<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016525&amp;view=details' target="_blank">GO:0016525</a><a name=0016525></a></td>
+<td>negative regulation of angiogenesis</td>
+<td  align=center>8.59E-4</td>
+<td  align=center>3.58E-1</td>
+<td  align=center>15.90 (15889,111,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0016525" href="javascript:toggle('elements_GO:0016525')">[+] Show genes</a><br>
+<div id="elements_GO:0016525" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045595&amp;view=details' target="_blank">GO:0045595</a><a name=0045595></a></td>
+<td>regulation of cell differentiation</td>
+<td  align=center>8.66E-4</td>
+<td  align=center>3.51E-1</td>
+<td  align=center>3.33 (15889,1590,27,9)</td>
+<td>
+<a id="ctrl_elements_GO:0045595" href="javascript:toggle('elements_GO:0045595')">[+] Show genes</a><br>
+<div id="elements_GO:0045595" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+REG3A  -  regenerating islet-derived 3 alpha<br>
+UNCX  -  unc homeobox<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+TCF23  -  transcription factor 23<br>
+ARC  -  activity-regulated cytoskeleton-associated protein<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000181&amp;view=details' target="_blank">GO:2000181</a><a name=2000181></a></td>
+<td>negative regulation of blood vessel morphogenesis</td>
+<td  align=center>9.05E-4</td>
+<td  align=center>3.57E-1</td>
+<td  align=center>15.62 (15889,113,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:2000181" href="javascript:toggle('elements_GO:2000181')">[+] Show genes</a><br>
+<div id="elements_GO:2000181" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045321&amp;view=details' target="_blank">GO:0045321</a><a name=0045321></a></td>
+<td>leukocyte activation</td>
+<td  align=center>9.15E-4</td>
+<td  align=center>3.52E-1</td>
+<td  align=center>5.09 (15889,694,27,6)</td>
+<td>
+<a id="ctrl_elements_GO:0045321" href="javascript:toggle('elements_GO:0045321')">[+] Show genes</a><br>
+<div id="elements_GO:0045321" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+PGLYRP1  -  peptidoglycan recognition protein 1<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+HSPA6  -  heat shock 70kda protein 6 (hsp70b')<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031326&amp;view=details' target="_blank">GO:0031326</a><a name=0031326></a></td>
+<td>regulation of cellular biosynthetic process</td>
+<td  align=center>9.24E-4</td>
+<td  align=center>3.46E-1</td>
+<td  align=center>2.28 (15889,3619,27,14)</td>
+<td>
+<a id="ctrl_elements_GO:0031326" href="javascript:toggle('elements_GO:0031326')">[+] Show genes</a><br>
+<div id="elements_GO:0031326" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+POU3F1  -  pou class 3 homeobox 1<br>
+TCF23  -  transcription factor 23<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+FOSB  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+UNCX  -  unc homeobox<br>
+CBX4  -  chromobox homolog 4<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+IER5  -  immediate early response 5<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050680&amp;view=details' target="_blank">GO:0050680</a><a name=0050680></a></td>
+<td>negative regulation of epithelial cell proliferation</td>
+<td  align=center>9.52E-4</td>
+<td  align=center>3.48E-1</td>
+<td  align=center>15.35 (15889,115,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0050680" href="javascript:toggle('elements_GO:0050680')">[+] Show genes</a><br>
+<div id="elements_GO:0050680" style="display:none"> <font size=1>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048660&amp;view=details' target="_blank">GO:0048660</a><a name=0048660></a></td>
+<td>regulation of smooth muscle cell proliferation</td>
+<td  align=center>9.52E-4</td>
+<td  align=center>3.4E-1</td>
+<td  align=center>15.35 (15889,115,27,3)</td>
+<td>
+<a id="ctrl_elements_GO:0048660" href="javascript:toggle('elements_GO:0048660')">[+] Show genes</a><br>
+<div id="elements_GO:0048660" style="display:none"> <font size=1>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009893&amp;view=details' target="_blank">GO:0009893</a><a name=0009893></a></td>
+<td>positive regulation of metabolic process</td>
+<td  align=center>9.72E-4</td>
+<td  align=center>3.39E-1</td>
+<td  align=center>2.40 (15889,3188,27,13)</td>
+<td>
+<a id="ctrl_elements_GO:0009893" href="javascript:toggle('elements_GO:0009893')">[+] Show genes</a><br>
+<div id="elements_GO:0009893" style="display:none"> <font size=1>
+HSPA1B  -  heat shock 70kda protein 1b<br>
+GADD45B  -  growth arrest and dna-damage-inducible, beta<br>
+POU3F1  -  pou class 3 homeobox 1<br>
+TCF23  -  transcription factor 23<br>
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+FOSB  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+SLC11A1  -  solute carrier family 11 (proton-coupled divalent metal ion transporter), member 1<br>
+DLL4  -  delta-like 4 (drosophila)<br>
+THBS1  -  thrombospondin 1<br>
+MIR21  -  microrna 21<br>
+IER5  -  immediate early response 5<br>
+HBEGF  -  heparin-binding egf-like growth factor<br>
+MAFB  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog b<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<H1 style='color:red'> Note that only 48.27% of the terms you entered were used in the analysis</H1><p>Species used: Homo sapiens</p><p>The system has recognized 18012 genes out of 32917 gene terms entered by the user.<br> 0 genes were recognized by gene symbol and 18012 genes by other gene IDs .<br>29 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 17983 genes.<br>Only 15889 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 14993 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='168,325,259,373' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='144,446,283,509' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='1208,318,1304,381' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='1152,437,1243,517' HREF='#0005887' ALT=''>
+<AREA SHAPE='RECT' COORDS='233,573,305,621' HREF='#0005773' ALT=''>
+<AREA SHAPE='RECT' COORDS='223,677,316,725' HREF='#0000323' ALT=''>
+<AREA SHAPE='RECT' COORDS='400,453,496,501' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='485,573,611,621' HREF='#0030659' ALT=''>
+<AREA SHAPE='RECT' COORDS='139,101,267,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='115,205,187,253' HREF='#0043235' ALT=''>
+<AREA SHAPE='RECT' COORDS='635,566,723,629' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='615,677,743,725' HREF='#0030667' ALT=''>
+<AREA SHAPE='RECT' COORDS='691,773,819,821' HREF='#0070821' ALT=''>
+<AREA SHAPE='RECT' COORDS='539,773,667,821' HREF='#0035579' ALT=''>
+<AREA SHAPE='RECT' COORDS='1111,198,1207,261' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='1093,309,1184,389' HREF='#0031226' ALT=''>
+<AREA SHAPE='RECT' COORDS='669,325,752,373' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='528,453,653,501' HREF='#0012506' ALT=''>
+<AREA SHAPE='RECT' COORDS='211,205,285,253' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,325,144,373' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='961,205,1087,253' HREF='#0098552' ALT=''>
+<AREA SHAPE='RECT' COORDS='960,318,1069,381' HREF='#0009897' ALT=''>
+<AREA SHAPE='RECT' COORDS='747,573,867,621' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='495,101,567,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='517,325,645,373' HREF='#0005886' ALT=''>
+<AREA SHAPE='RECT' COORDS='344,205,435,253' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='804,205,937,253' HREF='#0044459' ALT=''>
+<AREA SHAPE='RECT' COORDS='231,773,308,821' HREF='#0005764' ALT=''>
+<AREA SHAPE='RECT' COORDS='669,205,752,253' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='568,5,451,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='568,205,645,253' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='904,101,989,149' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='827,325,936,373' HREF='#0001772' ALT=''>
+<AREA SHAPE='RECT' COORDS='403,318,493,381' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='283,325,379,373' HREF='#0044444' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005886&amp;view=details' target="_blank">GO:0005886</a><a name=0005886></a></td>
+<td>plasma membrane</td>
+<td  align=center>8.21E-8</td>
+<td  align=center>1.41E-4</td>
+<td  align=center>1.75 (8795,1512,269,81)</td>
+<td>
+<a id="ctrl_elements_GO:0005886" href="javascript:toggle('elements_GO:0005886')">[+] Show genes</a><br>
+<div id="elements_GO:0005886" style="display:none"> <font size=1>
+TMEM63A  -  transmembrane protein 63a<br>
+EXOC7  -  exocyst complex component 7<br>
+S1PR2  -  sphingosine-1-phosphate receptor 2<br>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+CAPN1  -  calpain 1, (mu/i) large subunit<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+ARFGAP2  -  adp-ribosylation factor gtpase activating protein 2<br>
+CD2AP  -  cd2-associated protein<br>
+SLC16A3  -  solute carrier family 16 (monocarboxylate transporter), member 3<br>
+SERINC3  -  serine incorporator 3<br>
+LDLR  -  low density lipoprotein receptor<br>
+USP6NL  -  usp6 n-terminal like<br>
+CYTH2  -  cytohesin 2<br>
+CNOT2  -  ccr4-not transcription complex, subunit 2<br>
+KIAA0922  -  kiaa0922<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+SELL  -  selectin l<br>
+ARL14EP  -  adp-ribosylation factor-like 14 effector protein<br>
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br>
+IGFLR1  -  igf-like family receptor 1<br>
+IL4R  -  interleukin 4 receptor<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+CD53  -  cd53 molecule<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+CD48  -  cd48 molecule<br>
+GPBP1  -  gc-rich promoter binding protein 1<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+STXBP3  -  syntaxin binding protein 3<br>
+TRAF3IP3  -  traf3 interacting protein 3<br>
+IL10RB  -  interleukin 10 receptor, beta<br>
+NCF1  -  neutrophil cytosolic factor 1<br>
+SUSD3  -  sushi domain containing 3<br>
+PAFAH1B2  -  platelet-activating factor acetylhydrolase 1b, catalytic subunit 2 (30kda)<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+VAV1  -  vav 1 guanine nucleotide exchange factor<br>
+TMEM219  -  transmembrane protein 219<br>
+ANTXR2  -  anthrax toxin receptor 2<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+EHD1  -  eh-domain containing 1<br>
+SNX15  -  sorting nexin 15<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+RHOH  -  ras homolog family member h<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+LITAF  -  lipopolysaccharide-induced tnf factor<br>
+UBC  -  ubiquitin c<br>
+CDC42SE2  -  cdc42 small effector 2<br>
+VNN2  -  vanin 2<br>
+GLG1  -  golgi glycoprotein 1<br>
+LY6E  -  lymphocyte antigen 6 complex, locus e<br>
+SLAMF6  -  slam family member 6<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+RASGRP2  -  ras guanyl releasing protein 2 (calcium and dag-regulated)<br>
+MX2  -  myxovirus (influenza virus) resistance 2 (mouse)<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+NPTN  -  neuroplastin<br>
+GPR183  -  g protein-coupled receptor 183<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+FNBP1  -  formin binding protein 1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+CBLB  -  cbl proto-oncogene b, e3 ubiquitin protein ligase<br>
+SERINC1  -  serine incorporator 1<br>
+ADK  -  adenosine kinase<br>
+CAT  -  catalase<br>
+USP15  -  ubiquitin specific peptidase 15<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+RYK  -  receptor-like tyrosine kinase<br>
+PTPN2  -  protein tyrosine phosphatase, non-receptor type 2<br>
+TMC6  -  transmembrane channel-like 6<br>
+RHOBTB2  -  rho-related btb domain containing 2<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+CHMP2B  -  charged multivesicular body protein 2b<br>
+ARL6IP5  -  adp-ribosylation-like factor 6 interacting protein 5<br>
+LAMP3  -  lysosomal-associated membrane protein 3<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035579&amp;view=details' target="_blank">GO:0035579</a><a name=0035579></a></td>
+<td>specific granule membrane</td>
+<td  align=center>3.7E-6</td>
+<td  align=center>3.18E-3</td>
+<td  align=center>6.17 (8795,53,269,10)</td>
+<td>
+<a id="ctrl_elements_GO:0035579" href="javascript:toggle('elements_GO:0035579')">[+] Show genes</a><br>
+<div id="elements_GO:0035579" style="display:none"> <font size=1>
+TMC6  -  transmembrane channel-like 6<br>
+TMEM63A  -  transmembrane protein 63a<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+CD53  -  cd53 molecule<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044459&amp;view=details' target="_blank">GO:0044459</a><a name=0044459></a></td>
+<td>plasma membrane part</td>
+<td  align=center>7.26E-6</td>
+<td  align=center>4.16E-3</td>
+<td  align=center>1.91 (8795,821,269,48)</td>
+<td>
+<a id="ctrl_elements_GO:0044459" href="javascript:toggle('elements_GO:0044459')">[+] Show genes</a><br>
+<div id="elements_GO:0044459" style="display:none"> <font size=1>
+EXOC7  -  exocyst complex component 7<br>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+RHOH  -  ras homolog family member h<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+LITAF  -  lipopolysaccharide-induced tnf factor<br>
+CDC42SE2  -  cdc42 small effector 2<br>
+SLC16A3  -  solute carrier family 16 (monocarboxylate transporter), member 3<br>
+LDLR  -  low density lipoprotein receptor<br>
+RASGRP2  -  ras guanyl releasing protein 2 (calcium and dag-regulated)<br>
+MX2  -  myxovirus (influenza virus) resistance 2 (mouse)<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+SCIMP  -  slp adaptor and csk interacting membrane protein<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+PDCD6IP  -  programmed cell death 6 interacting protein<br>
+NPTN  -  neuroplastin<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+SELL  -  selectin l<br>
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br>
+GPR183  -  g protein-coupled receptor 183<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL4R  -  interleukin 4 receptor<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CD164  -  cd164 molecule, sialomucin<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+BFAR  -  bifunctional apoptosis regulator<br>
+CD53  -  cd53 molecule<br>
+BLK  -  b lymphoid tyrosine kinase<br>
+CD48  -  cd48 molecule<br>
+RYK  -  receptor-like tyrosine kinase<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+STXBP3  -  syntaxin binding protein 3<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TMC6  -  transmembrane channel-like 6<br>
+IL10RB  -  interleukin 10 receptor, beta<br>
+TRBC2  -  t cell receptor beta constant 2<br>
+NCF1  -  neutrophil cytosolic factor 1<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br>
+HMHA1  -  histocompatibility (minor) ha-1<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+EHD1  -  eh-domain containing 1<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+TMEM123  -  transmembrane protein 123<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031226&amp;view=details' target="_blank">GO:0031226</a><a name=0031226></a></td>
+<td>intrinsic component of plasma membrane</td>
+<td  align=center>1.4E-5</td>
+<td  align=center>6.01E-3</td>
+<td  align=center>2.56 (8795,319,269,25)</td>
+<td>
+<a id="ctrl_elements_GO:0031226" href="javascript:toggle('elements_GO:0031226')">[+] Show genes</a><br>
+<div id="elements_GO:0031226" style="display:none"> <font size=1>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+SLC16A3  -  solute carrier family 16 (monocarboxylate transporter), member 3<br>
+LDLR  -  low density lipoprotein receptor<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+NPTN  -  neuroplastin<br>
+SELL  -  selectin l<br>
+GPR183  -  g protein-coupled receptor 183<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL4R  -  interleukin 4 receptor<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CD164  -  cd164 molecule, sialomucin<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+BFAR  -  bifunctional apoptosis regulator<br>
+CD53  -  cd53 molecule<br>
+CD48  -  cd48 molecule<br>
+RYK  -  receptor-like tyrosine kinase<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+TMC6  -  transmembrane channel-like 6<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005887&amp;view=details' target="_blank">GO:0005887</a><a name=0005887></a></td>
+<td>integral component of plasma membrane</td>
+<td  align=center>1.49E-5</td>
+<td  align=center>5.11E-3</td>
+<td  align=center>2.62 (8795,300,269,24)</td>
+<td>
+<a id="ctrl_elements_GO:0005887" href="javascript:toggle('elements_GO:0005887')">[+] Show genes</a><br>
+<div id="elements_GO:0005887" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+IL4R  -  interleukin 4 receptor<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CD164  -  cd164 molecule, sialomucin<br>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+BFAR  -  bifunctional apoptosis regulator<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+CD53  -  cd53 molecule<br>
+RYK  -  receptor-like tyrosine kinase<br>
+SLC16A3  -  solute carrier family 16 (monocarboxylate transporter), member 3<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+TMC6  -  transmembrane channel-like 6<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+LDLR  -  low density lipoprotein receptor<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+NPTN  -  neuroplastin<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+SELL  -  selectin l<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043235&amp;view=details' target="_blank">GO:0043235</a><a name=0043235></a></td>
+<td>receptor complex</td>
+<td  align=center>4.53E-5</td>
+<td  align=center>1.3E-2</td>
+<td  align=center>3.96 (8795,99,269,12)</td>
+<td>
+<a id="ctrl_elements_GO:0043235" href="javascript:toggle('elements_GO:0043235')">[+] Show genes</a><br>
+<div id="elements_GO:0043235" style="display:none"> <font size=1>
+ARNTL  -  aryl hydrocarbon receptor nuclear translocator-like<br>
+IL10RB  -  interleukin 10 receptor, beta<br>
+TRBC2  -  t cell receptor beta constant 2<br>
+PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br>
+IL4R  -  interleukin 4 receptor<br>
+LDLR  -  low density lipoprotein receptor<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+SCIMP  -  slp adaptor and csk interacting membrane protein<br>
+RYK  -  receptor-like tyrosine kinase<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000323&amp;view=details' target="_blank">GO:0000323</a><a name=0000323></a></td>
+<td>lytic vacuole</td>
+<td  align=center>5.26E-5</td>
+<td  align=center>1.29E-2</td>
+<td  align=center>2.99 (8795,186,269,17)</td>
+<td>
+<a id="ctrl_elements_GO:0000323" href="javascript:toggle('elements_GO:0000323')">[+] Show genes</a><br>
+<div id="elements_GO:0000323" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CTSH  -  cathepsin h<br>
+CD164  -  cd164 molecule, sialomucin<br>
+FNBP1  -  formin binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+CAPN1  -  calpain 1, (mu/i) large subunit<br>
+CAT  -  catalase<br>
+BBC3  -  bcl2 binding component 3<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+NCF1  -  neutrophil cytosolic factor 1<br>
+LDLR  -  low density lipoprotein receptor<br>
+CHMP2B  -  charged multivesicular body protein 2b<br>
+UVRAG  -  uv radiation resistance associated<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+CCDC115  -  coiled-coil domain containing 115<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005764&amp;view=details' target="_blank">GO:0005764</a><a name=0005764></a></td>
+<td>lysosome</td>
+<td  align=center>5.26E-5</td>
+<td  align=center>1.13E-2</td>
+<td  align=center>2.99 (8795,186,269,17)</td>
+<td>
+<a id="ctrl_elements_GO:0005764" href="javascript:toggle('elements_GO:0005764')">[+] Show genes</a><br>
+<div id="elements_GO:0005764" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CTSH  -  cathepsin h<br>
+CD164  -  cd164 molecule, sialomucin<br>
+FNBP1  -  formin binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+CAPN1  -  calpain 1, (mu/i) large subunit<br>
+CAT  -  catalase<br>
+BBC3  -  bcl2 binding component 3<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+NCF1  -  neutrophil cytosolic factor 1<br>
+LDLR  -  low density lipoprotein receptor<br>
+CHMP2B  -  charged multivesicular body protein 2b<br>
+UVRAG  -  uv radiation resistance associated<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+CCDC115  -  coiled-coil domain containing 115<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005773&amp;view=details' target="_blank">GO:0005773</a><a name=0005773></a></td>
+<td>vacuole</td>
+<td  align=center>8.65E-5</td>
+<td  align=center>1.65E-2</td>
+<td  align=center>2.68 (8795,232,269,19)</td>
+<td>
+<a id="ctrl_elements_GO:0005773" href="javascript:toggle('elements_GO:0005773')">[+] Show genes</a><br>
+<div id="elements_GO:0005773" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CTSH  -  cathepsin h<br>
+FNBP1  -  formin binding protein 1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+CAPN1  -  calpain 1, (mu/i) large subunit<br>
+BBC3  -  bcl2 binding component 3<br>
+TBC1D17  -  tbc1 domain family, member 17<br>
+CAT  -  catalase<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+NCF1  -  neutrophil cytosolic factor 1<br>
+CHMP2B  -  charged multivesicular body protein 2b<br>
+LDLR  -  low density lipoprotein receptor<br>
+UVRAG  -  uv radiation resistance associated<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+CCDC115  -  coiled-coil domain containing 115<br>
+OPTN  -  optineurin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070821&amp;view=details' target="_blank">GO:0070821</a><a name=0070821></a></td>
+<td>tertiary granule membrane</td>
+<td  align=center>9.03E-5</td>
+<td  align=center>1.55E-2</td>
+<td  align=center>6.36 (8795,36,269,7)</td>
+<td>
+<a id="ctrl_elements_GO:0070821" href="javascript:toggle('elements_GO:0070821')">[+] Show genes</a><br>
+<div id="elements_GO:0070821" style="display:none"> <font size=1>
+TMC6  -  transmembrane channel-like 6<br>
+TMEM63A  -  transmembrane protein 63a<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+CD53  -  cd53 molecule<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044433&amp;view=details' target="_blank">GO:0044433</a><a name=0044433></a></td>
+<td>cytoplasmic vesicle part</td>
+<td  align=center>1.04E-4</td>
+<td  align=center>1.63E-2</td>
+<td  align=center>1.75 (8795,859,269,46)</td>
+<td>
+<a id="ctrl_elements_GO:0044433" href="javascript:toggle('elements_GO:0044433')">[+] Show genes</a><br>
+<div id="elements_GO:0044433" style="display:none"> <font size=1>
+TMEM63A  -  transmembrane protein 63a<br>
+SNX15  -  sorting nexin 15<br>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+CAPN1  -  calpain 1, (mu/i) large subunit<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+LITAF  -  lipopolysaccharide-induced tnf factor<br>
+UBC  -  ubiquitin c<br>
+ALDOC  -  aldolase c, fructose-bisphosphate<br>
+LDLR  -  low density lipoprotein receptor<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+GMFG  -  glia maturation factor, gamma<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+PLEKHO2  -  pleckstrin homology domain containing, family o member 2<br>
+SELL  -  selectin l<br>
+MITD1  -  mit, microtubule interacting and transport, domain containing 1<br>
+CTSH  -  cathepsin h<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CNIH  -  cornichon homolog (drosophila)<br>
+CD164  -  cd164 molecule, sialomucin<br>
+NHLRC3  -  nhl repeat containing 3<br>
+MVP  -  major vault protein<br>
+SNX22  -  sorting nexin 22<br>
+CD53  -  cd53 molecule<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+CAT  -  catalase<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+SNAPIN  -  snap-associated protein<br>
+NECAP2  -  necap endocytosis associated 2<br>
+TMC6  -  transmembrane channel-like 6<br>
+CHMP5  -  charged multivesicular body protein 5<br>
+CHMP2B  -  charged multivesicular body protein 2b<br>
+PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br>
+PAFAH1B2  -  platelet-activating factor acetylhydrolase 1b, catalytic subunit 2 (30kda)<br>
+HMHA1  -  histocompatibility (minor) ha-1<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+ANTXR2  -  anthrax toxin receptor 2<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+LAMP3  -  lysosomal-associated membrane protein 3<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+EHD1  -  eh-domain containing 1<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+OPTN  -  optineurin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001772&amp;view=details' target="_blank">GO:0001772</a><a name=0001772></a></td>
+<td>immunological synapse</td>
+<td  align=center>1.33E-4</td>
+<td  align=center>1.91E-2</td>
+<td  align=center>7.27 (8795,27,269,6)</td>
+<td>
+<a id="ctrl_elements_GO:0001772" href="javascript:toggle('elements_GO:0001772')">[+] Show genes</a><br>
+<div id="elements_GO:0001772" style="display:none"> <font size=1>
+RHOH  -  ras homolog family member h<br>
+SCIMP  -  slp adaptor and csk interacting membrane protein<br>
+CD53  -  cd53 molecule<br>
+NPTN  -  neuroplastin<br>
+PDCD6IP  -  programmed cell death 6 interacting protein<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030667&amp;view=details' target="_blank">GO:0030667</a><a name=0030667></a></td>
+<td>secretory granule membrane</td>
+<td  align=center>4.58E-4</td>
+<td  align=center>6.06E-2</td>
+<td  align=center>2.81 (8795,163,269,14)</td>
+<td>
+<a id="ctrl_elements_GO:0030667" href="javascript:toggle('elements_GO:0030667')">[+] Show genes</a><br>
+<div id="elements_GO:0030667" style="display:none"> <font size=1>
+TMEM63A  -  transmembrane protein 63a<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+CD53  -  cd53 molecule<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+TMC6  -  transmembrane channel-like 6<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+LAMP3  -  lysosomal-associated membrane protein 3<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+SELL  -  selectin l<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009897&amp;view=details' target="_blank">GO:0009897</a><a name=0009897></a></td>
+<td>external side of plasma membrane</td>
+<td  align=center>5.21E-4</td>
+<td  align=center>6.4E-2</td>
+<td  align=center>3.27 (8795,110,269,11)</td>
+<td>
+<a id="ctrl_elements_GO:0009897" href="javascript:toggle('elements_GO:0009897')">[+] Show genes</a><br>
+<div id="elements_GO:0009897" style="display:none"> <font size=1>
+TRBC2  -  t cell receptor beta constant 2<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+LDLR  -  low density lipoprotein receptor<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+TMEM123  -  transmembrane protein 123<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030659&amp;view=details' target="_blank">GO:0030659</a><a name=0030659></a></td>
+<td>cytoplasmic vesicle membrane</td>
+<td  align=center>6.01E-4</td>
+<td  align=center>6.89E-2</td>
+<td  align=center>2.10 (8795,358,269,23)</td>
+<td>
+<a id="ctrl_elements_GO:0030659" href="javascript:toggle('elements_GO:0030659')">[+] Show genes</a><br>
+<div id="elements_GO:0030659" style="display:none"> <font size=1>
+TMEM63A  -  transmembrane protein 63a<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CNIH  -  cornichon homolog (drosophila)<br>
+SNX15  -  sorting nexin 15<br>
+HVCN1  -  hydrogen voltage-gated channel 1<br>
+CD53  -  cd53 molecule<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+SNX22  -  sorting nexin 22<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+UBC  -  ubiquitin c<br>
+SNAPIN  -  snap-associated protein<br>
+TMC6  -  transmembrane channel-like 6<br>
+LDLR  -  low density lipoprotein receptor<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+ADAM8  -  adam metallopeptidase domain 8<br>
+LAMP3  -  lysosomal-associated membrane protein 3<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+DEGS1  -  delta(4)-desaturase, sphingolipid 1<br>
+ITGB2  -  integrin, beta 2 (complement component 3 receptor 3 and 4 subunit)<br>
+SELL  -  selectin l<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9306 genes out of 9765 gene terms entered by the user.<br> 9306 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>278 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,1150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='484,5,367,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='905,101,983,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='171,197,245,245' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='351,101,423,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='531,101,659,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='269,197,360,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='807,294,897,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='168,301,259,349' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='235,560,357,608' HREF='#0030880' ALT=''>
+<AREA SHAPE='RECT' COORDS='432,560,555,608' HREF='#0042575' ALT=''>
+<AREA SHAPE='RECT' COORDS='921,431,1017,479' HREF='#0044430' ALT=''>
+<AREA SHAPE='RECT' COORDS='807,431,897,479' HREF='#0044428' ALT=''>
+<AREA SHAPE='RECT' COORDS='679,431,783,479' HREF='#0044427' ALT=''>
+<AREA SHAPE='RECT' COORDS='488,301,579,349' HREF='#1990234' ALT=''>
+<AREA SHAPE='RECT' COORDS='435,406,589,503' HREF='#0061695' ALT=''>
+<AREA SHAPE='RECT' COORDS='1067,553,1160,615' HREF='#0005875' ALT=''>
+<AREA SHAPE='RECT' COORDS='1003,672,1112,720' HREF='#0070652' ALT=''>
+<AREA SHAPE='RECT' COORDS='664,665,757,727' HREF='#0043625' ALT=''>
+<AREA SHAPE='RECT' COORDS='1147,197,1243,245' HREF='#0032993' ALT=''>
+<AREA SHAPE='RECT' COORDS='1136,665,1251,727' HREF='#0031261' ALT=''>
+<AREA SHAPE='RECT' COORDS='236,665,359,727' HREF='#0000428' ALT=''>
+<AREA SHAPE='RECT' COORDS='609,777,759,839' HREF='#0055029' ALT=''>
+<AREA SHAPE='RECT' COORDS='508,197,583,245' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='1023,784,1129,832' HREF='#0000811' ALT=''>
+<AREA SHAPE='RECT' COORDS='669,889,811,951' HREF='#0005658' ALT=''>
+<AREA SHAPE='RECT' COORDS='56,423,195,486' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='385,672,505,720' HREF='#0005662' ALT=''>
+<AREA SHAPE='RECT' COORDS='89,560,161,608' HREF='#0005634' ALT=''>
+<AREA SHAPE='RECT' COORDS='579,560,699,608' HREF='#0005663' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,301,144,349' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='944,560,1043,608' HREF='#0044451' ALT=''>
+<AREA SHAPE='RECT' COORDS='723,560,869,608' HREF='#0044454' ALT=''>
+<AREA SHAPE='RECT' COORDS='533,665,632,727' HREF='#0008622' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005634&amp;view=details' target="_blank">GO:0005634</a><a name=0005634></a></td>
+<td>nucleus</td>
+<td  align=center>1.93E-21</td>
+<td  align=center>2.62E-18</td>
+<td  align=center>2.86 (17542,3778,120,74)</td>
+<td>
+<a id="ctrl_elements_GO:0005634" href="javascript:toggle('elements_GO:0005634')">[+] Show genes</a><br>
+<div id="elements_GO:0005634" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+pole  -  polymerase (dna directed), epsilon<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+rpa1  -  replication protein a1<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+dbx1b  -  developing brain homeobox 1b<br>
+wu:fb25b09  -  wu:fb25b09<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+her2  -  hairy-related 2<br>
+her4.3  -  hairy-related 4.3<br>
+hat1  -  histone acetyltransferase 1<br>
+unga  -  uracil-dna glycosylase a<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+gins2  -  gins complex subunit 2<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+zic4  -  zic family member 4<br>
+sp8b  -  sp8 transcription factor b<br>
+dclre1b  -  dna cross-link repair 1b<br>
+pcna  -  proliferating cell nuclear antigen<br>
+btg3  -  b-cell translocation gene 3<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+pax5  -  paired box gene 5<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+id1  -  inhibitor of dna binding 1<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+sox21a  -  sry-box containing gene 21a<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044427&amp;view=details' target="_blank">GO:0044427</a><a name=0044427></a></td>
+<td>chromosomal part</td>
+<td  align=center>8.88E-14</td>
+<td  align=center>6.03E-11</td>
+<td  align=center>7.68 (17542,419,120,22)</td>
+<td>
+<a id="ctrl_elements_GO:0044427" href="javascript:toggle('elements_GO:0044427')">[+] Show genes</a><br>
+<div id="elements_GO:0044427" style="display:none"> <font size=1>
+orc4  -  origin recognition complex, subunit 4<br>
+rpa2  -  replication protein a2<br>
+dclre1b  -  dna cross-link repair 1b<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+tinf2  -  terf1 (trf1)-interacting nuclear factor 2<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+pole  -  polymerase (dna directed), epsilon<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+her2  -  hairy-related 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+rpa1  -  replication protein a1<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+gins2  -  gins complex subunit 2<br>
+chtf8  -  ctf8, chromosome transmission fidelity factor 8 homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043231&amp;view=details' target="_blank">GO:0043231</a><a name=0043231></a></td>
+<td>intracellular membrane-bounded organelle</td>
+<td  align=center>1.55E-12</td>
+<td  align=center>7.01E-10</td>
+<td  align=center>1.96 (17542,5743,120,77)</td>
+<td>
+<a id="ctrl_elements_GO:0043231" href="javascript:toggle('elements_GO:0043231')">[+] Show genes</a><br>
+<div id="elements_GO:0043231" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+pole  -  polymerase (dna directed), epsilon<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+rpa1  -  replication protein a1<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+dbx1b  -  developing brain homeobox 1b<br>
+ndst3  -  n-deacetylase/n-sulfotransferase (heparan glucosaminyl) 3<br>
+wu:fb25b09  -  wu:fb25b09<br>
+st8sia2  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 2<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+her2  -  hairy-related 2<br>
+her4.3  -  hairy-related 4.3<br>
+hat1  -  histone acetyltransferase 1<br>
+unga  -  uracil-dna glycosylase a<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+gins2  -  gins complex subunit 2<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+zic4  -  zic family member 4<br>
+sp8b  -  sp8 transcription factor b<br>
+dclre1b  -  dna cross-link repair 1b<br>
+pcna  -  proliferating cell nuclear antigen<br>
+btg3  -  b-cell translocation gene 3<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+pax5  -  paired box gene 5<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+id1  -  inhibitor of dna binding 1<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+nat8l  -  n-acetyltransferase 8-like<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+sox21a  -  sry-box containing gene 21a<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043227&amp;view=details' target="_blank">GO:0043227</a><a name=0043227></a></td>
+<td>membrane-bounded organelle</td>
+<td  align=center>5.21E-12</td>
+<td  align=center>1.77E-9</td>
+<td  align=center>1.88 (17542,6138,120,79)</td>
+<td>
+<a id="ctrl_elements_GO:0043227" href="javascript:toggle('elements_GO:0043227')">[+] Show genes</a><br>
+<div id="elements_GO:0043227" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+pole  -  polymerase (dna directed), epsilon<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+rpa1  -  replication protein a1<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+dbx1b  -  developing brain homeobox 1b<br>
+ndst3  -  n-deacetylase/n-sulfotransferase (heparan glucosaminyl) 3<br>
+wu:fb25b09  -  wu:fb25b09<br>
+st8sia2  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 2<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+her2  -  hairy-related 2<br>
+her4.3  -  hairy-related 4.3<br>
+hat1  -  histone acetyltransferase 1<br>
+unga  -  uracil-dna glycosylase a<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+gins2  -  gins complex subunit 2<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+zic4  -  zic family member 4<br>
+ptprn2  -  protein tyrosine phosphatase, receptor type, n polypeptide 2<br>
+sp8b  -  sp8 transcription factor b<br>
+dclre1b  -  dna cross-link repair 1b<br>
+pcna  -  proliferating cell nuclear antigen<br>
+btg3  -  b-cell translocation gene 3<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+pax5  -  paired box gene 5<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+id1  -  inhibitor of dna binding 1<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+nat8l  -  n-acetyltransferase 8-like<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+sox21a  -  sry-box containing gene 21a<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044454&amp;view=details' target="_blank">GO:0044454</a><a name=0044454></a></td>
+<td>nuclear chromosome part</td>
+<td  align=center>1.4E-11</td>
+<td  align=center>3.81E-9</td>
+<td  align=center>13.48 (17542,141,120,13)</td>
+<td>
+<a id="ctrl_elements_GO:0044454" href="javascript:toggle('elements_GO:0044454')">[+] Show genes</a><br>
+<div id="elements_GO:0044454" style="display:none"> <font size=1>
+orc4  -  origin recognition complex, subunit 4<br>
+rpa2  -  replication protein a2<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+tinf2  -  terf1 (trf1)-interacting nuclear factor 2<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+pole  -  polymerase (dna directed), epsilon<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+rpa1  -  replication protein a1<br>
+gins2  -  gins complex subunit 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043229&amp;view=details' target="_blank">GO:0043229</a><a name=0043229></a></td>
+<td>intracellular organelle</td>
+<td  align=center>2.33E-10</td>
+<td  align=center>5.27E-8</td>
+<td  align=center>1.73 (17542,6846,120,81)</td>
+<td>
+<a id="ctrl_elements_GO:0043229" href="javascript:toggle('elements_GO:0043229')">[+] Show genes</a><br>
+<div id="elements_GO:0043229" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+pole  -  polymerase (dna directed), epsilon<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+rpa1  -  replication protein a1<br>
+ndst3  -  n-deacetylase/n-sulfotransferase (heparan glucosaminyl) 3<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+dbx1b  -  developing brain homeobox 1b<br>
+wu:fb25b09  -  wu:fb25b09<br>
+st8sia2  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 2<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+gfap  -  glial fibrillary acidic protein<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+her2  -  hairy-related 2<br>
+hat1  -  histone acetyltransferase 1<br>
+her4.3  -  hairy-related 4.3<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+unga  -  uracil-dna glycosylase a<br>
+gins2  -  gins complex subunit 2<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+ptprn2  -  protein tyrosine phosphatase, receptor type, n polypeptide 2<br>
+zic4  -  zic family member 4<br>
+sp8b  -  sp8 transcription factor b<br>
+btg3  -  b-cell translocation gene 3<br>
+pcna  -  proliferating cell nuclear antigen<br>
+dclre1b  -  dna cross-link repair 1b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+pax5  -  paired box gene 5<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+id1  -  inhibitor of dna binding 1<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+haus6  -  haus augmin-like complex, subunit 6<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+nat8l  -  n-acetyltransferase 8-like<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+sox21a  -  sry-box containing gene 21a<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043226&amp;view=details' target="_blank">GO:0043226</a><a name=0043226></a></td>
+<td>organelle</td>
+<td  align=center>5.35E-10</td>
+<td  align=center>1.04E-7</td>
+<td  align=center>1.70 (17542,6947,120,81)</td>
+<td>
+<a id="ctrl_elements_GO:0043226" href="javascript:toggle('elements_GO:0043226')">[+] Show genes</a><br>
+<div id="elements_GO:0043226" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+pole  -  polymerase (dna directed), epsilon<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+rpa1  -  replication protein a1<br>
+ndst3  -  n-deacetylase/n-sulfotransferase (heparan glucosaminyl) 3<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+dbx1b  -  developing brain homeobox 1b<br>
+wu:fb25b09  -  wu:fb25b09<br>
+st8sia2  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 2<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+gfap  -  glial fibrillary acidic protein<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+her2  -  hairy-related 2<br>
+hat1  -  histone acetyltransferase 1<br>
+her4.3  -  hairy-related 4.3<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+unga  -  uracil-dna glycosylase a<br>
+gins2  -  gins complex subunit 2<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+ptprn2  -  protein tyrosine phosphatase, receptor type, n polypeptide 2<br>
+zic4  -  zic family member 4<br>
+sp8b  -  sp8 transcription factor b<br>
+btg3  -  b-cell translocation gene 3<br>
+pcna  -  proliferating cell nuclear antigen<br>
+dclre1b  -  dna cross-link repair 1b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+pax5  -  paired box gene 5<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+id1  -  inhibitor of dna binding 1<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+haus6  -  haus augmin-like complex, subunit 6<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+nat8l  -  n-acetyltransferase 8-like<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+sox21a  -  sry-box containing gene 21a<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005663&amp;view=details' target="_blank">GO:0005663</a><a name=0005663></a></td>
+<td>DNA replication factor C complex</td>
+<td  align=center>2.08E-9</td>
+<td  align=center>3.54E-7</td>
+<td  align=center>146.18 (17542,4,120,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005663" href="javascript:toggle('elements_GO:0005663')">[+] Show genes</a><br>
+<div id="elements_GO:0005663" style="display:none"> <font size=1>
+rfc5  -  replication factor c (activator 1) 5<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044424&amp;view=details' target="_blank">GO:0044424</a><a name=0044424></a></td>
+<td>intracellular part</td>
+<td  align=center>2.21E-9</td>
+<td  align=center>3.34E-7</td>
+<td  align=center>1.46 (17542,9815,120,98)</td>
+<td>
+<a id="ctrl_elements_GO:0044424" href="javascript:toggle('elements_GO:0044424')">[+] Show genes</a><br>
+<div id="elements_GO:0044424" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+arhgap12b  -  rho gtpase activating protein 12b<br>
+pole  -  polymerase (dna directed), epsilon<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+dbx1b  -  developing brain homeobox 1b<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+dtx1  -  deltex1<br>
+mibp  -  muscle-specific beta 1 integrin binding protein<br>
+s1pr1  -  sphingosine-1-phosphate receptor 1<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+rrm1  -  ribonucleotide reductase m1 polypeptide<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+her4.3  -  hairy-related 4.3<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+gins2  -  gins complex subunit 2<br>
+sp8b  -  sp8 transcription factor b<br>
+dclre1b  -  dna cross-link repair 1b<br>
+tinf2  -  terf1 (trf1)-interacting nuclear factor 2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+nell2a  -  nel-like 2a<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+dpysl5a  -  dihydropyrimidinase-like 5a<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+id1  -  inhibitor of dna binding 1<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+haus6  -  haus augmin-like complex, subunit 6<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+pax6a  -  paired box gene 6a<br>
+nat8l  -  n-acetyltransferase 8-like<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+sox21a  -  sry-box containing gene 21a<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+magi1a  -  membrane associated guanylate kinase, ww and pdz domain containing 1a<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+eng2b  -  engrailed 2b<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+rpa1  -  replication protein a1<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+ndst3  -  n-deacetylase/n-sulfotransferase (heparan glucosaminyl) 3<br>
+st8sia2  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 2<br>
+wu:fb25b09  -  wu:fb25b09<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+gfap  -  glial fibrillary acidic protein<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+msh6  -  muts homolog 6 (e. coli)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+her2  -  hairy-related 2<br>
+haus4  -  haus augmin-like complex, subunit 4<br>
+hat1  -  histone acetyltransferase 1<br>
+unga  -  uracil-dna glycosylase a<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+zic4  -  zic family member 4<br>
+ptprn2  -  protein tyrosine phosphatase, receptor type, n polypeptide 2<br>
+pcna  -  proliferating cell nuclear antigen<br>
+btg3  -  b-cell translocation gene 3<br>
+gpr98  -  g protein-coupled receptor 98<br>
+pax5  -  paired box gene 5<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+chtf8  -  ctf8, chromosome transmission fidelity factor 8 homolog (s. cerevisiae)<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+dusp8a  -  dual specificity phosphatase 8a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+aaas  -  achalasia, adrenocortical insufficiency, alacrimia<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+unc119b  -  unc-119 homolog b (c. elegans)<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044464&amp;view=details' target="_blank">GO:0044464</a><a name=0044464></a></td>
+<td>cell part</td>
+<td  align=center>1.58E-7</td>
+<td  align=center>2.15E-5</td>
+<td  align=center>1.30 (17542,11912,120,106)</td>
+<td>
+<a id="ctrl_elements_GO:0044464" href="javascript:toggle('elements_GO:0044464')">[+] Show genes</a><br>
+<div id="elements_GO:0044464" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+arhgap12b  -  rho gtpase activating protein 12b<br>
+pole  -  polymerase (dna directed), epsilon<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+dbx1b  -  developing brain homeobox 1b<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+pcdh18a  -  protocadherin 18a<br>
+dtx1  -  deltex1<br>
+mibp  -  muscle-specific beta 1 integrin binding protein<br>
+s1pr1  -  sphingosine-1-phosphate receptor 1<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+rrm1  -  ribonucleotide reductase m1 polypeptide<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+her4.3  -  hairy-related 4.3<br>
+celsr1b  -  cadherin egf lag seven-pass g-type receptor 1b<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+gins2  -  gins complex subunit 2<br>
+slc29a2  -  solute carrier family 29 (nucleoside transporters), member 2<br>
+sp8b  -  sp8 transcription factor b<br>
+dclre1b  -  dna cross-link repair 1b<br>
+cdh7  -  cadherin 7, type 2<br>
+tinf2  -  terf1 (trf1)-interacting nuclear factor 2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+nell2a  -  nel-like 2a<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+dpysl5a  -  dihydropyrimidinase-like 5a<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+id1  -  inhibitor of dna binding 1<br>
+haus6  -  haus augmin-like complex, subunit 6<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+pax6a  -  paired box gene 6a<br>
+nat8l  -  n-acetyltransferase 8-like<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+sox21a  -  sry-box containing gene 21a<br>
+magi1a  -  membrane associated guanylate kinase, ww and pdz domain containing 1a<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+cldn5a  -  claudin 5a<br>
+eng2b  -  engrailed 2b<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+rpa1  -  replication protein a1<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+ndst3  -  n-deacetylase/n-sulfotransferase (heparan glucosaminyl) 3<br>
+wu:fb25b09  -  wu:fb25b09<br>
+st8sia2  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 2<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+gfap  -  glial fibrillary acidic protein<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+msh6  -  muts homolog 6 (e. coli)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+her2  -  hairy-related 2<br>
+haus4  -  haus augmin-like complex, subunit 4<br>
+hat1  -  histone acetyltransferase 1<br>
+unga  -  uracil-dna glycosylase a<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+ptprn2  -  protein tyrosine phosphatase, receptor type, n polypeptide 2<br>
+zic4  -  zic family member 4<br>
+pcna  -  proliferating cell nuclear antigen<br>
+btg3  -  b-cell translocation gene 3<br>
+gpr98  -  g protein-coupled receptor 98<br>
+pax5  -  paired box gene 5<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+chtf8  -  ctf8, chromosome transmission fidelity factor 8 homolog (s. cerevisiae)<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+dusp8a  -  dual specificity phosphatase 8a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+adam10b  -  a disintegrin and metalloprotease domain 10b<br>
+aaas  -  achalasia, adrenocortical insufficiency, alacrimia<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+unc119b  -  unc-119 homolog b (c. elegans)<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+cd82a  -  cd82 antigen, a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042575&amp;view=details' target="_blank">GO:0042575</a><a name=0042575></a></td>
+<td>DNA polymerase complex</td>
+<td  align=center>1.42E-6</td>
+<td  align=center>1.75E-4</td>
+<td  align=center>44.98 (17542,13,120,4)</td>
+<td>
+<a id="ctrl_elements_GO:0042575" href="javascript:toggle('elements_GO:0042575')">[+] Show genes</a><br>
+<div id="elements_GO:0042575" style="display:none"> <font size=1>
+pole  -  polymerase (dna directed), epsilon<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061695&amp;view=details' target="_blank">GO:0061695</a><a name=0061695></a></td>
+<td>transferase complex, transferring phosphorus-containing groups</td>
+<td  align=center>9.87E-5</td>
+<td  align=center>1.12E-2</td>
+<td  align=center>6.56 (17542,156,120,7)</td>
+<td>
+<a id="ctrl_elements_GO:0061695" href="javascript:toggle('elements_GO:0061695')">[+] Show genes</a><br>
+<div id="elements_GO:0061695" style="display:none"> <font size=1>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+pole  -  polymerase (dna directed), epsilon<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005658&amp;view=details' target="_blank">GO:0005658</a><a name=0005658></a></td>
+<td>alpha DNA polymerase:primase complex</td>
+<td  align=center>1.39E-4</td>
+<td  align=center>1.45E-2</td>
+<td  align=center>97.46 (17542,3,120,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005658" href="javascript:toggle('elements_GO:0005658')">[+] Show genes</a><br>
+<div id="elements_GO:0005658" style="display:none"> <font size=1>
+pola2  -  polymerase (dna directed), alpha 2<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044428&amp;view=details' target="_blank">GO:0044428</a><a name=0044428></a></td>
+<td>nuclear part</td>
+<td  align=center>1.55E-4</td>
+<td  align=center>1.51E-2</td>
+<td  align=center>2.39 (17542,1284,120,21)</td>
+<td>
+<a id="ctrl_elements_GO:0044428" href="javascript:toggle('elements_GO:0044428')">[+] Show genes</a><br>
+<div id="elements_GO:0044428" style="display:none"> <font size=1>
+orc4  -  origin recognition complex, subunit 4<br>
+rpa2  -  replication protein a2<br>
+pcna  -  proliferating cell nuclear antigen<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+tinf2  -  terf1 (trf1)-interacting nuclear factor 2<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+msh6  -  muts homolog 6 (e. coli)<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+pole  -  polymerase (dna directed), epsilon<br>
+aaas  -  achalasia, adrenocortical insufficiency, alacrimia<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+rpa1  -  replication protein a1<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+gins2  -  gins complex subunit 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000811&amp;view=details' target="_blank">GO:0000811</a><a name=0000811></a></td>
+<td>GINS complex</td>
+<td  align=center>2.76E-4</td>
+<td  align=center>2.5E-2</td>
+<td  align=center>73.09 (17542,4,120,2)</td>
+<td>
+<a id="ctrl_elements_GO:0000811" href="javascript:toggle('elements_GO:0000811')">[+] Show genes</a><br>
+<div id="elements_GO:0000811" style="display:none"> <font size=1>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+gins2  -  gins complex subunit 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043625&amp;view=details' target="_blank">GO:0043625</a><a name=0043625></a></td>
+<td>delta DNA polymerase complex</td>
+<td  align=center>2.76E-4</td>
+<td  align=center>2.34E-2</td>
+<td  align=center>73.09 (17542,4,120,2)</td>
+<td>
+<a id="ctrl_elements_GO:0043625" href="javascript:toggle('elements_GO:0043625')">[+] Show genes</a><br>
+<div id="elements_GO:0043625" style="display:none"> <font size=1>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008622&amp;view=details' target="_blank">GO:0008622</a><a name=0008622></a></td>
+<td>epsilon DNA polymerase complex</td>
+<td  align=center>2.76E-4</td>
+<td  align=center>2.21E-2</td>
+<td  align=center>73.09 (17542,4,120,2)</td>
+<td>
+<a id="ctrl_elements_GO:0008622" href="javascript:toggle('elements_GO:0008622')">[+] Show genes</a><br>
+<div id="elements_GO:0008622" style="display:none"> <font size=1>
+pole  -  polymerase (dna directed), epsilon<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005662&amp;view=details' target="_blank">GO:0005662</a><a name=0005662></a></td>
+<td>DNA replication factor A complex</td>
+<td  align=center>4.58E-4</td>
+<td  align=center>3.46E-2</td>
+<td  align=center>58.47 (17542,5,120,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005662" href="javascript:toggle('elements_GO:0005662')">[+] Show genes</a><br>
+<div id="elements_GO:0005662" style="display:none"> <font size=1>
+rpa2  -  replication protein a2<br>
+rpa1  -  replication protein a1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005575&amp;view=details' target="_blank">GO:0005575</a><a name=0005575></a></td>
+<td>cellular_component</td>
+<td  align=center>6.42E-4</td>
+<td  align=center>4.59E-2</td>
+<td  align=center>1.10 (17542,15403,120,116)</td>
+<td>
+<a id="ctrl_elements_GO:0005575" href="javascript:toggle('elements_GO:0005575')">[+] Show genes</a><br>
+<div id="elements_GO:0005575" style="display:none"> <font size=1>
+LOC100534909  -  transcription factor hes-5-like<br>
+rpa2  -  replication protein a2<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+rfc2  -  replication factor c (activator 1) 2<br>
+dnmt1  -  dna (cytosine-5-)-methyltransferase 1<br>
+pola1  -  polymerase (dna directed), alpha 1<br>
+sox21b  -  sry-box containing gene 21 b<br>
+mdkb  -  midkine-related growth factor b<br>
+arhgap12b  -  rho gtpase activating protein 12b<br>
+pole  -  polymerase (dna directed), epsilon<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+parp2  -  poly (adp-ribose) polymerase family, member 2<br>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+zic1  -  zic family member 1 (odd-paired homolog, drosophila)<br>
+dbx1b  -  developing brain homeobox 1b<br>
+asf1bb  -  asf1 anti-silencing function 1 homolog bb<br>
+pcdh18a  -  protocadherin 18a<br>
+dtx1  -  deltex1<br>
+mibp  -  muscle-specific beta 1 integrin binding protein<br>
+nasp  -  nuclear autoantigenic sperm protein (histone-binding)<br>
+s1pr1  -  sphingosine-1-phosphate receptor 1<br>
+rfc5  -  replication factor c (activator 1) 5<br>
+rrm1  -  ribonucleotide reductase m1 polypeptide<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+ptpro  -  protein tyrosine phosphatase, receptor type, o<br>
+her4.3  -  hairy-related 4.3<br>
+celsr1b  -  cadherin egf lag seven-pass g-type receptor 1b<br>
+chek1  -  chk1 checkpoint homolog (s. pombe)<br>
+tmem47  -  transmembrane protein 47<br>
+gins2  -  gins complex subunit 2<br>
+slc29a2  -  solute carrier family 29 (nucleoside transporters), member 2<br>
+sp8b  -  sp8 transcription factor b<br>
+dclre1b  -  dna cross-link repair 1b<br>
+cdh7  -  cadherin 7, type 2<br>
+tinf2  -  terf1 (trf1)-interacting nuclear factor 2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+nell2a  -  nel-like 2a<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+tox3  -  tox high mobility group box family member 3<br>
+sox1b  -  sry-box containing gene 1b<br>
+dpysl5a  -  dihydropyrimidinase-like 5a<br>
+wdr76  -  wd repeat domain 76<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+id1  -  inhibitor of dna binding 1<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+haus6  -  haus augmin-like complex, subunit 6<br>
+ildr2  -  immunoglobulin-like domain containing receptor 2<br>
+fen1  -  flap structure-specific endonuclease 1<br>
+pax6a  -  paired box gene 6a<br>
+metrn  -  meteorin, glial cell differentiation regulator<br>
+ntn1b  -  netrin 1b<br>
+nat8l  -  n-acetyltransferase 8-like<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+sox21a  -  sry-box containing gene 21a<br>
+syne2a  -  spectrin repeat containing, nuclear envelope 2a<br>
+magi1a  -  membrane associated guanylate kinase, ww and pdz domain containing 1a<br>
+nap1l1  -  nucleosome assembly protein 1, like 1<br>
+cldn5a  -  claudin 5a<br>
+eng2b  -  engrailed 2b<br>
+ube2t  -  ubiquitin-conjugating enzyme e2t (putative)<br>
+LOC100149066  -  hairy-related 4.2-like<br>
+pold2  -  polymerase (dna directed), delta 2, regulatory subunit<br>
+pola2  -  polymerase (dna directed), alpha 2<br>
+ctnnd2b  -  catenin (cadherin-associated protein), delta 2b<br>
+rpa1  -  replication protein a1<br>
+ndst3  -  n-deacetylase/n-sulfotransferase (heparan glucosaminyl) 3<br>
+rfc4  -  replication factor c (activator 1) 4<br>
+st8sia2  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 2<br>
+wu:fb25b09  -  wu:fb25b09<br>
+polr3glb  -  polymerase (rna) iii (dna directed) polypeptide g like b<br>
+asf1ba  -  asf1 anti-silencing function 1 homolog ba (s. cerevisiae)<br>
+orc4  -  origin recognition complex, subunit 4<br>
+rfc3  -  replication factor c (activator 1) 3<br>
+ankrd49  -  ankyrin repeat domain 49<br>
+gfap  -  glial fibrillary acidic protein<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+mcm4  -  mcm4 minichromosome maintenance deficient 4, mitotin (s. cerevisiae)<br>
+msh6  -  muts homolog 6 (e. coli)<br>
+cspg5a  -  chondroitin sulfate proteoglycan 5a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+nr2e1  -  nuclear receptor subfamily 2, group e, member 1<br>
+her2  -  hairy-related 2<br>
+haus4  -  haus augmin-like complex, subunit 4<br>
+hat1  -  histone acetyltransferase 1<br>
+unga  -  uracil-dna glycosylase a<br>
+uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+zic4  -  zic family member 4<br>
+ptprn2  -  protein tyrosine phosphatase, receptor type, n polypeptide 2<br>
+pcna  -  proliferating cell nuclear antigen<br>
+btg3  -  b-cell translocation gene 3<br>
+gpr98  -  g protein-coupled receptor 98<br>
+pax5  -  paired box gene 5<br>
+pole2  -  polymerase (dna directed), epsilon 2<br>
+pold1  -  polymerase (dna directed), delta 1, catalytic subunit<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+ncapd3  -  non-smc condensin ii complex, subunit d3<br>
+chtf8  -  ctf8, chromosome transmission fidelity factor 8 homolog (s. cerevisiae)<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+mcm2  -  mcm2 minichromosome maintenance deficient 2, mitotin (s. cerevisiae)<br>
+lrrtm1  -  leucine rich repeat transmembrane neuronal 1<br>
+wdhd1  -  wd repeat and hmg-box dna binding protein 1<br>
+dusp8a  -  dual specificity phosphatase 8a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+adam10b  -  a disintegrin and metalloprotease domain 10b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+aaas  -  achalasia, adrenocortical insufficiency, alacrimia<br>
+si:dkeyp-35b8.5  -  si:dkeyp-35b8.5<br>
+unc119b  -  unc-119 homolog b (c. elegans)<br>
+pou3f3a  -  pou class 3 homeobox 3a<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+cd82a  -  cd82 antigen, a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031261&amp;view=details' target="_blank">GO:0031261</a><a name=0031261></a></td>
+<td>DNA replication preinitiation complex</td>
+<td  align=center>6.84E-4</td>
+<td  align=center>4.65E-2</td>
+<td  align=center>48.73 (17542,6,120,2)</td>
+<td>
+<a id="ctrl_elements_GO:0031261" href="javascript:toggle('elements_GO:0031261')">[+] Show genes</a><br>
+<div id="elements_GO:0031261" style="display:none"> <font size=1>
+gins4  -  gins complex subunit 4 (sld5 homolog)<br>
+gins2  -  gins complex subunit 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070652&amp;view=details' target="_blank">GO:0070652</a><a name=0070652></a></td>
+<td>HAUS complex</td>
+<td  align=center>9.53E-4</td>
+<td  align=center>6.17E-2</td>
+<td  align=center>41.77 (17542,7,120,2)</td>
+<td>
+<a id="ctrl_elements_GO:0070652" href="javascript:toggle('elements_GO:0070652')">[+] Show genes</a><br>
+<div id="elements_GO:0070652" style="display:none"> <font size=1>
+haus4  -  haus augmin-like complex, subunit 4<br>
+haus6  -  haus augmin-like complex, subunit 6<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24131 genes out of 30244 gene terms entered by the user.<br> 24131 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>230 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1359 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

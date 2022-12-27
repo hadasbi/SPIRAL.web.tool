@@ -1,0 +1,1024 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='403,495,536,558' HREF='#0061650' ALT=''>
+<AREA SHAPE='RECT' COORDS='555,633,667,695' HREF='#0061631' ALT=''>
+<AREA SHAPE='RECT' COORDS='653,222,760,285' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='703,357,796,405' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='107,469,277,584' HREF='#0016818' ALT=''>
+<AREA SHAPE='RECT' COORDS='117,640,243,688' HREF='#0016462' ALT=''>
+<AREA SHAPE='RECT' COORDS='216,229,299,277' HREF='#0016787' ALT=''>
+<AREA SHAPE='RECT' COORDS='140,341,252,421' HREF='#0016817' ALT=''>
+<AREA SHAPE='RECT' COORDS='284,341,375,421' HREF='#0016788' ALT=''>
+<AREA SHAPE='RECT' COORDS='552,957,677,1005' HREF='#0008408' ALT=''>
+<AREA SHAPE='RECT' COORDS='460,1069,607,1117' HREF='#0000175' ALT=''>
+<AREA SHAPE='RECT' COORDS='301,503,379,551' HREF='#0004518' ALT=''>
+<AREA SHAPE='RECT' COORDS='420,640,519,688' HREF='#0004527' ALT=''>
+<AREA SHAPE='RECT' COORDS='291,640,389,688' HREF='#0004540' ALT=''>
+<AREA SHAPE='RECT' COORDS='324,109,399,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='424,229,515,277' HREF='#0016740' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,487,83,567' HREF='#0140098' ALT=''>
+<AREA SHAPE='RECT' COORDS='323,213,400,293' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='544,102,624,165' HREF='#0005198' ALT=''>
+<AREA SHAPE='RECT' COORDS='539,222,629,285' HREF='#0035804' ALT=''>
+<AREA SHAPE='RECT' COORDS='425,744,577,893' HREF='#0016796' ALT=''>
+<AREA SHAPE='RECT' COORDS='281,795,401,843' HREF='#0004532' ALT=''>
+<AREA SHAPE='RECT' COORDS='376,941,528,1021' HREF='#0016896' ALT=''>
+<AREA SHAPE='RECT' COORDS='81,795,257,843' HREF='#0017111' ALT=''>
+<AREA SHAPE='RECT' COORDS='107,957,181,1005' HREF='#0004386' ALT=''>
+<AREA SHAPE='RECT' COORDS='43,1069,147,1117' HREF='#0003724' ALT=''>
+<AREA SHAPE='RECT' COORDS='560,495,677,558' HREF='#0004842' ALT=''>
+<AREA SHAPE='RECT' COORDS='584,5,470,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='671,109,743,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='403,350,536,413' HREF='#0019787' ALT=''>
+<AREA SHAPE='RECT' COORDS='696,640,803,688' HREF='#0017069' ALT=''>
+<AREA SHAPE='RECT' COORDS='703,503,796,551' HREF='#0003723' ALT=''>
+<AREA SHAPE='RECT' COORDS='784,222,880,285' HREF='#1901363' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003723&amp;view=details' target="_blank">GO:0003723</a><a name=0003723></a></td>
+<td>RNA binding</td>
+<td  align=center>2E-8</td>
+<td  align=center>6.66E-5</td>
+<td  align=center>2.15 (17542,846,580,60)</td>
+<td>
+<a id="ctrl_elements_GO:0003723" href="javascript:toggle('elements_GO:0003723')">[+] Show genes</a><br>
+<div id="elements_GO:0003723" style="display:none"> <font size=1>
+zgc:154068  -  zgc:154068<br>
+atxn2l  -  ataxin 2-like<br>
+pprc1  -  peroxisome proliferator-activated receptor gamma, coactivator-related 1<br>
+npm2  -  nucleoplasmin 2<br>
+larp1  -  la ribonucleoprotein domain family, member 1<br>
+zgc:55733  -  zgc:55733<br>
+dhx38  -  deah (asp-glu-ala-his) box polypeptide 38<br>
+thoc7  -  tho complex 7<br>
+srp54  -  signal recognition particle 54<br>
+rbm15  -  rna binding motif protein 15<br>
+fmr1  -  fragile x mental retardation 1<br>
+ddx43  -  dead (asp-glu-ala-asp) box polypeptide 43<br>
+caprin2  -  caprin family member 2<br>
+eif4g2a  -  eukaryotic translation initiation factor 4, gamma 2a<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+xrn2  -  5'-3' exoribonuclease 2<br>
+c1d  -  c1d nuclear receptor co-repressor<br>
+scaf4a  -  sr-related ctd-associated factor 4a<br>
+org  -  oogenesis-related gene<br>
+zgc:77065  -  zgc:77065<br>
+pl10  -  pl10<br>
+tarbp2  -  tar (hiv) rna binding protein 2<br>
+larp7  -  la ribonucleoprotein domain family, member 7<br>
+msi2b  -  musashi homolog 2b (drosophila)<br>
+sart3  -  squamous cell carcinoma antigen recognised by t cells 3<br>
+tia1  -  cytotoxic granule-associated rna binding protein 1<br>
+api5  -  apoptosis inhibitor 5<br>
+eif4e1b  -  eukaryotic translation initiation factor 4e 1b<br>
+skiv2l2  -  superkiller viralicidic activity 2-like 2<br>
+prpf31  -  prp31 pre-mrna processing factor 31 homolog (yeast)<br>
+hnrnpua  -  heterogeneous nuclear ribonucleoprotein ua<br>
+eif4enif1  -  eukaryotic translation initiation factor 4e nuclear import factor 1<br>
+zcchc8  -  zinc finger, cchc domain containing 8<br>
+nsun2  -  nol1/nop2/sun domain family, member 2<br>
+zgc:103482  -  zgc:103482<br>
+cstf3  -  cleavage stimulation factor, 3' pre-rna, subunit 3<br>
+yth2  -  yth domain family 2<br>
+ddx5  -  dead (asp-glu-ala-asp) box polypeptide 5<br>
+larp6  -  la ribonucleoprotein domain family, member 6<br>
+elavl2  -  elav (embryonic lethal, abnormal vision, drosophila)-like 2 (hu antigen b)<br>
+ncbp2  -  nuclear cap binding protein subunit 2<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+dcps  -  mrna decapping enzyme<br>
+srp68  -  signal recognition particle 68<br>
+snrpc  -  small nuclear ribonucleoprotein polypeptide c<br>
+ddx19  -  dead/h (asp-glu-ala-asp/his) box polypeptide 19 (dbp5 homolog, yeast)<br>
+zgc:153215  -  zgc:153215<br>
+prpf4  -  prp4 pre-mrna processing factor 4 homolog (yeast)<br>
+zc3h7a  -  zinc finger ccch-type containing 7a<br>
+casc3  -  cancer susceptibility candidate 3<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+si:dkey-33c12.4  -  si:dkey-33c12.4<br>
+cpeb1b  -  cytoplasmic polyadenylation element binding protein 1b<br>
+fam172a  -  family with sequence similarity 172, member a<br>
+hnrnpr  -  heterogeneous nuclear ribonucleoprotein r<br>
+LOC556124  -  uncharacterized loc556124<br>
+utp6  -  utp6, small subunit (ssu) processome component, homolog (yeast)<br>
+snip1  -  smad nuclear interacting protein<br>
+patl1  -  protein associated with topoisomerase ii homolog 1 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004532&amp;view=details' target="_blank">GO:0004532</a><a name=0004532></a></td>
+<td>exoribonuclease activity</td>
+<td  align=center>4.61E-6</td>
+<td  align=center>7.67E-3</td>
+<td  align=center>9.62 (17542,22,580,7)</td>
+<td>
+<a id="ctrl_elements_GO:0004532" href="javascript:toggle('elements_GO:0004532')">[+] Show genes</a><br>
+<div id="elements_GO:0004532" style="display:none"> <font size=1>
+xrn2  -  5'-3' exoribonuclease 2<br>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016896&amp;view=details' target="_blank">GO:0016896</a><a name=0016896></a></td>
+<td>exoribonuclease activity, producing 5'-phosphomonoesters</td>
+<td  align=center>4.61E-6</td>
+<td  align=center>5.11E-3</td>
+<td  align=center>9.62 (17542,22,580,7)</td>
+<td>
+<a id="ctrl_elements_GO:0016896" href="javascript:toggle('elements_GO:0016896')">[+] Show genes</a><br>
+<div id="elements_GO:0016896" style="display:none"> <font size=1>
+xrn2  -  5'-3' exoribonuclease 2<br>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0140098&amp;view=details' target="_blank">GO:0140098</a><a name=0140098></a></td>
+<td>catalytic activity, acting on RNA</td>
+<td  align=center>1.39E-5</td>
+<td  align=center>1.15E-2</td>
+<td  align=center>2.66 (17542,273,580,24)</td>
+<td>
+<a id="ctrl_elements_GO:0140098" href="javascript:toggle('elements_GO:0140098')">[+] Show genes</a><br>
+<div id="elements_GO:0140098" style="display:none"> <font size=1>
+tdrd9  -  tudor domain containing 9<br>
+xrn2  -  5'-3' exoribonuclease 2<br>
+ddx19  -  dead/h (asp-glu-ala-asp/his) box polypeptide 19 (dbp5 homolog, yeast)<br>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+dbr1  -  debranching enzyme homolog 1 (s. cerevisiae)<br>
+zgc:77065  -  zgc:77065<br>
+nsun2  -  nol1/nop2/sun domain family, member 2<br>
+mettl2a  -  methyltransferase like 2a<br>
+pl10  -  pl10<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+dhx38  -  deah (asp-glu-ala-his) box polypeptide 38<br>
+rpp21  -  ribonuclease p 21 subunit<br>
+wdr4  -  wd repeat domain 4<br>
+ddx5  -  dead (asp-glu-ala-asp) box polypeptide 5<br>
+ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br>
+mettl5  -  methyltransferase like 5<br>
+ddx43  -  dead (asp-glu-ala-asp) box polypeptide 43<br>
+exosc10  -  exosome component 10<br>
+skiv2l2  -  superkiller viralicidic activity 2-like 2<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+ptrh2  -  peptidyl-trna hydrolase 2<br>
+polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061631&amp;view=details' target="_blank">GO:0061631</a><a name=0061631></a></td>
+<td>ubiquitin conjugating enzyme activity</td>
+<td  align=center>1.82E-5</td>
+<td  align=center>1.21E-2</td>
+<td  align=center>6.72 (17542,36,580,8)</td>
+<td>
+<a id="ctrl_elements_GO:0061631" href="javascript:toggle('elements_GO:0061631')">[+] Show genes</a><br>
+<div id="elements_GO:0061631" style="display:none"> <font size=1>
+ube2h  -  ubiquitin-conjugating enzyme e2h (ubc8 homolog, yeast)<br>
+ube2d2l  -  ubiquitin-conjugating enzyme e2d 2 (ubc4/5 homolog, yeast)<br>
+ube2g1a  -  ubiquitin-conjugating enzyme e2g 1a (ubc7 homolog, yeast)<br>
+ube2q2  -  ubiquitin-conjugating enzyme e2q family member 2<br>
+cdc34a  -  cell division cycle 34 homolog (s. cerevisiae) a<br>
+ube2g1b  -  ubiquitin-conjugating enzyme e2g 1b (ubc7 homolog, yeast)<br>
+ube2na  -  ubiquitin-conjugating enzyme e2na<br>
+ube2kb  -  ubiquitin-conjugating enzyme e2kb (ubc1 homolog, yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0017069&amp;view=details' target="_blank">GO:0017069</a><a name=0017069></a></td>
+<td>snRNA binding</td>
+<td  align=center>2.69E-5</td>
+<td  align=center>1.49E-2</td>
+<td  align=center>7.56 (17542,28,580,7)</td>
+<td>
+<a id="ctrl_elements_GO:0017069" href="javascript:toggle('elements_GO:0017069')">[+] Show genes</a><br>
+<div id="elements_GO:0017069" style="display:none"> <font size=1>
+sart3  -  squamous cell carcinoma antigen recognised by t cells 3<br>
+ncbp2  -  nuclear cap binding protein subunit 2<br>
+prpf4  -  prp4 pre-mrna processing factor 4 homolog (yeast)<br>
+hnrnpua  -  heterogeneous nuclear ribonucleoprotein ua<br>
+prpf31  -  prp31 pre-mrna processing factor 31 homolog (yeast)<br>
+snrpc  -  small nuclear ribonucleoprotein polypeptide c<br>
+larp7  -  la ribonucleoprotein domain family, member 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003676&amp;view=details' target="_blank">GO:0003676</a><a name=0003676></a></td>
+<td>nucleic acid binding</td>
+<td  align=center>3.62E-5</td>
+<td  align=center>1.72E-2</td>
+<td  align=center>1.40 (17542,2775,580,128)</td>
+<td>
+<a id="ctrl_elements_GO:0003676" href="javascript:toggle('elements_GO:0003676')">[+] Show genes</a><br>
+<div id="elements_GO:0003676" style="display:none"> <font size=1>
+larp1  -  la ribonucleoprotein domain family, member 1<br>
+dhx38  -  deah (asp-glu-ala-his) box polypeptide 38<br>
+znf622  -  zinc finger protein 622<br>
+thoc7  -  tho complex 7<br>
+nabp1b  -  nucleic acid binding protein 1b<br>
+rbm15  -  rna binding motif protein 15<br>
+ddx43  -  dead (asp-glu-ala-asp) box polypeptide 43<br>
+l3mbtl2  -  l(3)mbt-like 2 (drosophila)<br>
+irf2a  -  interferon regulatory factor 2a<br>
+polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+sub1b  -  sub1 homolog b (s. cerevisiae)<br>
+foxh1  -  forkhead box h1<br>
+caprin2  -  caprin family member 2<br>
+sall4  -  sal-like 4 (drosophila)<br>
+si:ch211-198a12.6  -  si:ch211-198a12.6<br>
+LOC563918  -  uncharacterized loc563918<br>
+zgc:77065  -  zgc:77065<br>
+pl10  -  pl10<br>
+tarbp2  -  tar (hiv) rna binding protein 2<br>
+larp7  -  la ribonucleoprotein domain family, member 7<br>
+msi2b  -  musashi homolog 2b (drosophila)<br>
+tipin  -  timeless interacting protein<br>
+gtf2e2  -  general transcription factor iie, polypeptide 2, beta<br>
+eif4e1b  -  eukaryotic translation initiation factor 4e 1b<br>
+api5  -  apoptosis inhibitor 5<br>
+prpf31  -  prp31 pre-mrna processing factor 31 homolog (yeast)<br>
+zcchc8  -  zinc finger, cchc domain containing 8<br>
+tdrd9  -  tudor domain containing 9<br>
+rybpa  -  ring1 and yy1 binding protein a<br>
+nsun2  -  nol1/nop2/sun domain family, member 2<br>
+si:ch211-116m6.3  -  si:ch211-116m6.3<br>
+zranb3  -  zinc finger, ran-binding domain containing 3<br>
+yth2  -  yth domain family 2<br>
+ddx5  -  dead (asp-glu-ala-asp) box polypeptide 5<br>
+larp6  -  la ribonucleoprotein domain family, member 6<br>
+elavl2  -  elav (embryonic lethal, abnormal vision, drosophila)-like 2 (hu antigen b)<br>
+cdc5l  -  cdc5 cell division cycle 5-like (s. pombe)<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+dcps  -  mrna decapping enzyme<br>
+srp68  -  signal recognition particle 68<br>
+adnpa  -  activity-dependent neuroprotector homeobox a<br>
+prpf4  -  prp4 pre-mrna processing factor 4 homolog (yeast)<br>
+hmgb3b  -  high-mobility group box 3b<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+si:dkey-33c12.4  -  si:dkey-33c12.4<br>
+paip2b  -  poly(a) binding protein interacting protein 2b<br>
+zgc:174275  -  zgc:174275<br>
+ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br>
+rxrba  -  retinoid x receptor, beta a<br>
+LOC556124  -  uncharacterized loc556124<br>
+fev  -  fev (ets oncogene family)<br>
+sde2  -  sde2 telomere maintenance homolog (s. pombe)<br>
+zgc:92287  -  zgc:92287<br>
+znf395a  -  zinc finger protein 395a<br>
+zgc:66443  -  zgc:66443<br>
+pnkp  -  polynucleotide kinase 3'-phosphatase<br>
+zgc:154068  -  zgc:154068<br>
+atxn2l  -  ataxin 2-like<br>
+pprc1  -  peroxisome proliferator-activated receptor gamma, coactivator-related 1<br>
+chd8  -  chromodomain helicase dna binding protein 8<br>
+npm2  -  nucleoplasmin 2<br>
+zgc:55733  -  zgc:55733<br>
+mcm3l  -  mcm3 minichromosome maintenance deficient 3 (s. cerevisiae), like<br>
+pax7a  -  paired box gene 7a<br>
+tox4  -  tox high mobility group box family member 4<br>
+srp54  -  signal recognition particle 54<br>
+gabpb2a  -  ga repeat binding protein, beta 2a<br>
+zgc:122991  -  zgc:122991<br>
+fmr1  -  fragile x mental retardation 1<br>
+mettl5  -  methyltransferase like 5<br>
+tbx16  -  t-box gene 16<br>
+xpc  -  xeroderma pigmentosum, complementation group c<br>
+si:dkey-57k17.1  -  si:dkey-57k17.1<br>
+si:dkey-253d23.2  -  si:dkey-253d23.2<br>
+zgc:77151  -  zgc:77151<br>
+dr1  -  down-regulator of transcription 1<br>
+acin1b  -  apoptotic chromatin condensation inducer 1b<br>
+eif4g2a  -  eukaryotic translation initiation factor 4, gamma 2a<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+xrn2  -  5'-3' exoribonuclease 2<br>
+c1d  -  c1d nuclear receptor co-repressor<br>
+smad5  -  mad homolog 5 (drosophila)<br>
+scaf4a  -  sr-related ctd-associated factor 4a<br>
+org  -  oogenesis-related gene<br>
+gtf2f2b  -  general transcription factor iif, polypeptide 2b<br>
+cdc6  -  cell division cycle 6 homolog (s. cerevisiae)<br>
+sp3a  -  sp3a transcription factor<br>
+snai1a  -  snail homolog 1a (drosophila)<br>
+sart3  -  squamous cell carcinoma antigen recognised by t cells 3<br>
+tia1  -  cytotoxic granule-associated rna binding protein 1<br>
+skiv2l2  -  superkiller viralicidic activity 2-like 2<br>
+baz2a  -  bromodomain adjacent to zinc finger domain, 2a<br>
+hnrnpua  -  heterogeneous nuclear ribonucleoprotein ua<br>
+eif4enif1  -  eukaryotic translation initiation factor 4e nuclear import factor 1<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pif1  -  pif1 5'-to-3' dna helicase homolog (s. cerevisiae)<br>
+znf326  -  zinc finger protein 326<br>
+klf2b  -  kruppel-like factor 2b<br>
+ctcf  -  ccctc-binding factor (zinc finger protein)<br>
+rela  -  v-rel reticuloendotheliosis viral oncogene homolog a<br>
+zgc:103482  -  zgc:103482<br>
+cstf3  -  cleavage stimulation factor, 3' pre-rna, subunit 3<br>
+si:dkey-20l4.2  -  si:dkey-20l4.2<br>
+top1l  -  topoisomerase (dna) i, like<br>
+zfand5b  -  zinc finger, an1-type domain 5b<br>
+ncbp2  -  nuclear cap binding protein subunit 2<br>
+wu:fd16e03  -  wu:fd16e03<br>
+phc1  -  polyhomeotic homolog 1<br>
+snrpc  -  small nuclear ribonucleoprotein polypeptide c<br>
+zgc:162962  -  zgc:162962<br>
+pou5f3  -  pou domain, class 5, transcription factor 3<br>
+cdt1  -  chromatin licensing and dna replication factor 1<br>
+ddx19  -  dead/h (asp-glu-ala-asp/his) box polypeptide 19 (dbp5 homolog, yeast)<br>
+zgc:153215  -  zgc:153215<br>
+sp1  -  sp1 transcription factor<br>
+kif22  -  kinesin family member 22<br>
+zc3h7a  -  zinc finger ccch-type containing 7a<br>
+casc3  -  cancer susceptibility candidate 3<br>
+cpeb1b  -  cytoplasmic polyadenylation element binding protein 1b<br>
+fam172a  -  family with sequence similarity 172, member a<br>
+hnrnpr  -  heterogeneous nuclear ribonucleoprotein r<br>
+irf6  -  interferon regulatory factor 6<br>
+pias4a  -  protein inhibitor of activated stat, 4a<br>
+utp6  -  utp6, small subunit (ssu) processome component, homolog (yeast)<br>
+snip1  -  smad nuclear interacting protein<br>
+patl1  -  protein associated with topoisomerase ii homolog 1 (yeast)<br>
+thap11  -  thap domain containing 11<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061650&amp;view=details' target="_blank">GO:0061650</a><a name=0061650></a></td>
+<td>ubiquitin-like protein conjugating enzyme activity</td>
+<td  align=center>4.11E-5</td>
+<td  align=center>1.71E-2</td>
+<td  align=center>6.05 (17542,40,580,8)</td>
+<td>
+<a id="ctrl_elements_GO:0061650" href="javascript:toggle('elements_GO:0061650')">[+] Show genes</a><br>
+<div id="elements_GO:0061650" style="display:none"> <font size=1>
+ube2h  -  ubiquitin-conjugating enzyme e2h (ubc8 homolog, yeast)<br>
+ube2d2l  -  ubiquitin-conjugating enzyme e2d 2 (ubc4/5 homolog, yeast)<br>
+ube2g1a  -  ubiquitin-conjugating enzyme e2g 1a (ubc7 homolog, yeast)<br>
+ube2q2  -  ubiquitin-conjugating enzyme e2q family member 2<br>
+cdc34a  -  cell division cycle 34 homolog (s. cerevisiae) a<br>
+ube2g1b  -  ubiquitin-conjugating enzyme e2g 1b (ubc7 homolog, yeast)<br>
+ube2na  -  ubiquitin-conjugating enzyme e2na<br>
+ube2kb  -  ubiquitin-conjugating enzyme e2kb (ubc1 homolog, yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004540&amp;view=details' target="_blank">GO:0004540</a><a name=0004540></a></td>
+<td>ribonuclease activity</td>
+<td  align=center>1.09E-4</td>
+<td  align=center>4.01E-2</td>
+<td  align=center>4.26 (17542,71,580,10)</td>
+<td>
+<a id="ctrl_elements_GO:0004540" href="javascript:toggle('elements_GO:0004540')">[+] Show genes</a><br>
+<div id="elements_GO:0004540" style="display:none"> <font size=1>
+xrn2  -  5'-3' exoribonuclease 2<br>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+dbr1  -  debranching enzyme homolog 1 (s. cerevisiae)<br>
+zgc:77065  -  zgc:77065<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+rpp21  -  ribonuclease p 21 subunit<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016796&amp;view=details' target="_blank">GO:0016796</a><a name=0016796></a></td>
+<td>exonuclease activity, active with either ribo- or deoxyribonucleic acids and producing 5'-phosphomonoesters</td>
+<td  align=center>1.25E-4</td>
+<td  align=center>4.16E-2</td>
+<td  align=center>6.05 (17542,35,580,7)</td>
+<td>
+<a id="ctrl_elements_GO:0016796" href="javascript:toggle('elements_GO:0016796')">[+] Show genes</a><br>
+<div id="elements_GO:0016796" style="display:none"> <font size=1>
+xrn2  -  5'-3' exoribonuclease 2<br>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035804&amp;view=details' target="_blank">GO:0035804</a><a name=0035804></a></td>
+<td>structural constituent of egg coat</td>
+<td  align=center>1.31E-4</td>
+<td  align=center>3.95E-2</td>
+<td  align=center>13.44 (17542,9,580,4)</td>
+<td>
+<a id="ctrl_elements_GO:0035804" href="javascript:toggle('elements_GO:0035804')">[+] Show genes</a><br>
+<div id="elements_GO:0035804" style="display:none"> <font size=1>
+zp3b  -  zona pellucida glycoprotein 3b<br>
+LOC100148225  -  uncharacterized loc100148225<br>
+zgc:171779  -  zgc:171779<br>
+zp3  -  zona pellucida glycoprotein 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000175&amp;view=details' target="_blank">GO:0000175</a><a name=0000175></a></td>
+<td>3'-5'-exoribonuclease activity</td>
+<td  align=center>3.99E-4</td>
+<td  align=center>1.1E-1</td>
+<td  align=center>7.56 (17542,20,580,5)</td>
+<td>
+<a id="ctrl_elements_GO:0000175" href="javascript:toggle('elements_GO:0000175')">[+] Show genes</a><br>
+<div id="elements_GO:0000175" style="display:none"> <font size=1>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004527&amp;view=details' target="_blank">GO:0004527</a><a name=0004527></a></td>
+<td>exonuclease activity</td>
+<td  align=center>4.21E-4</td>
+<td  align=center>1.08E-1</td>
+<td  align=center>4.40 (17542,55,580,8)</td>
+<td>
+<a id="ctrl_elements_GO:0004527" href="javascript:toggle('elements_GO:0004527')">[+] Show genes</a><br>
+<div id="elements_GO:0004527" style="display:none"> <font size=1>
+xrn2  -  5'-3' exoribonuclease 2<br>
+zgc:154068  -  zgc:154068<br>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003724&amp;view=details' target="_blank">GO:0003724</a><a name=0003724></a></td>
+<td>RNA helicase activity</td>
+<td  align=center>4.21E-4</td>
+<td  align=center>1E-1</td>
+<td  align=center>4.40 (17542,55,580,8)</td>
+<td>
+<a id="ctrl_elements_GO:0003724" href="javascript:toggle('elements_GO:0003724')">[+] Show genes</a><br>
+<div id="elements_GO:0003724" style="display:none"> <font size=1>
+ddx5  -  dead (asp-glu-ala-asp) box polypeptide 5<br>
+tdrd9  -  tudor domain containing 9<br>
+ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br>
+ddx19  -  dead/h (asp-glu-ala-asp/his) box polypeptide 19 (dbp5 homolog, yeast)<br>
+ddx43  -  dead (asp-glu-ala-asp) box polypeptide 43<br>
+skiv2l2  -  superkiller viralicidic activity 2-like 2<br>
+pl10  -  pl10<br>
+dhx38  -  deah (asp-glu-ala-his) box polypeptide 38<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901363&amp;view=details' target="_blank">GO:1901363</a><a name=1901363></a></td>
+<td>heterocyclic compound binding</td>
+<td  align=center>4.47E-4</td>
+<td  align=center>9.91E-2</td>
+<td  align=center>1.23 (17542,4802,580,195)</td>
+<td>
+<a id="ctrl_elements_GO:1901363" href="javascript:toggle('elements_GO:1901363')">[+] Show genes</a><br>
+<div id="elements_GO:1901363" style="display:none"> <font size=1>
+prtfdc1  -  phosphoribosyl transferase domain containing 1<br>
+cat  -  catalase<br>
+larp1  -  la ribonucleoprotein domain family, member 1<br>
+znf622  -  zinc finger protein 622<br>
+ckbb  -  creatine kinase, brain b<br>
+rbm15  -  rna binding motif protein 15<br>
+irf2a  -  interferon regulatory factor 2a<br>
+ube2g1b  -  ubiquitin-conjugating enzyme e2g 1b (ubc7 homolog, yeast)<br>
+sub1b  -  sub1 homolog b (s. cerevisiae)<br>
+ube2kb  -  ubiquitin-conjugating enzyme e2kb (ubc1 homolog, yeast)<br>
+caprin2  -  caprin family member 2<br>
+foxh1  -  forkhead box h1<br>
+si:ch211-198a12.6  -  si:ch211-198a12.6<br>
+LOC563918  -  uncharacterized loc563918<br>
+zgc:77065  -  zgc:77065<br>
+pl10  -  pl10<br>
+tarbp2  -  tar (hiv) rna binding protein 2<br>
+larp7  -  la ribonucleoprotein domain family, member 7<br>
+msi2b  -  musashi homolog 2b (drosophila)<br>
+gtf2e2  -  general transcription factor iie, polypeptide 2, beta<br>
+ube2h  -  ubiquitin-conjugating enzyme e2h (ubc8 homolog, yeast)<br>
+pank4  -  pantothenate kinase 4<br>
+api5  -  apoptosis inhibitor 5<br>
+eif4e1b  -  eukaryotic translation initiation factor 4e 1b<br>
+prpf31  -  prp31 pre-mrna processing factor 31 homolog (yeast)<br>
+abat  -  4-aminobutyrate aminotransferase<br>
+nsun2  -  nol1/nop2/sun domain family, member 2<br>
+rybpa  -  ring1 and yy1 binding protein a<br>
+agps  -  alkylglycerone phosphate synthase<br>
+si:ch211-116m6.3  -  si:ch211-116m6.3<br>
+cdc5l  -  cdc5 cell division cycle 5-like (s. pombe)<br>
+exosc10  -  exosome component 10<br>
+srp68  -  signal recognition particle 68<br>
+uba5  -  ubiquitin-like modifier activating enzyme 5<br>
+prpf4  -  prp4 pre-mrna processing factor 4 homolog (yeast)<br>
+hmgb3b  -  high-mobility group box 3b<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+glula  -  glutamate-ammonia ligase (glutamine synthase) a<br>
+ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br>
+kif5ba  -  kinesin family member 5b, a<br>
+sde2  -  sde2 telomere maintenance homolog (s. pombe)<br>
+zgc:92287  -  zgc:92287<br>
+znf395a  -  zinc finger protein 395a<br>
+pik3r4  -  phosphoinositide-3-kinase, regulatory subunit 4<br>
+zgc:66443  -  zgc:66443<br>
+zgc:154068  -  zgc:154068<br>
+npm2  -  nucleoplasmin 2<br>
+zgc:55733  -  zgc:55733<br>
+mcm3l  -  mcm3 minichromosome maintenance deficient 3 (s. cerevisiae), like<br>
+srp54  -  signal recognition particle 54<br>
+fmr1  -  fragile x mental retardation 1<br>
+tbx16  -  t-box gene 16<br>
+gclc  -  glutamate-cysteine ligase, catalytic subunit<br>
+si:dkey-57k17.1  -  si:dkey-57k17.1<br>
+aclya  -  atp citrate lyase a<br>
+ralbb  -  v-ral simian leukemia viral oncogene homolog bb (ras related)<br>
+c1d  -  c1d nuclear receptor co-repressor<br>
+xrn2  -  5'-3' exoribonuclease 2<br>
+scaf4a  -  sr-related ctd-associated factor 4a<br>
+org  -  oogenesis-related gene<br>
+cdc34a  -  cell division cycle 34 homolog (s. cerevisiae) a<br>
+bmp2k  -  bmp2 inducible kinase<br>
+snai1a  -  snail homolog 1a (drosophila)<br>
+baz2a  -  bromodomain adjacent to zinc finger domain, 2a<br>
+hnrnpua  -  heterogeneous nuclear ribonucleoprotein ua<br>
+acsf2  -  acyl-coa synthetase family member 2<br>
+pif1  -  pif1 5'-to-3' dna helicase homolog (s. cerevisiae)<br>
+ube2d2l  -  ubiquitin-conjugating enzyme e2d 2 (ubc4/5 homolog, yeast)<br>
+ctcf  -  ccctc-binding factor (zinc finger protein)<br>
+rela  -  v-rel reticuloendotheliosis viral oncogene homolog a<br>
+zgc:103482  -  zgc:103482<br>
+glulb  -  glutamate-ammonia ligase (glutamine synthase) b<br>
+cstf3  -  cleavage stimulation factor, 3' pre-rna, subunit 3<br>
+si:dkey-20l4.2  -  si:dkey-20l4.2<br>
+tor1  -  torsin family 1<br>
+zfand5b  -  zinc finger, an1-type domain 5b<br>
+ncbp2  -  nuclear cap binding protein subunit 2<br>
+hacl1  -  2-hydroxyacyl-coa lyase 1<br>
+wu:fd16e03  -  wu:fd16e03<br>
+uck2a  -  uridine-cytidine kinase 2a<br>
+phc1  -  polyhomeotic homolog 1<br>
+snrpc  -  small nuclear ribonucleoprotein polypeptide c<br>
+smc4  -  structural maintenance of chromosomes 4<br>
+pou5f3  -  pou domain, class 5, transcription factor 3<br>
+nmnat1  -  nicotinamide nucleotide adenylyltransferase 1<br>
+ddx19  -  dead/h (asp-glu-ala-asp/his) box polypeptide 19 (dbp5 homolog, yeast)<br>
+prkacbb  -  protein kinase, camp-dependent, catalytic, beta b<br>
+sp1  -  sp1 transcription factor<br>
+kif22  -  kinesin family member 22<br>
+pygl  -  phosphorylase, glycogen; liver (hers disease, glycogen storage disease type vi)<br>
+casc3  -  cancer susceptibility candidate 3<br>
+zgc:113162  -  zgc:113162<br>
+fam172a  -  family with sequence similarity 172, member a<br>
+snip1  -  smad nuclear interacting protein<br>
+patl1  -  protein associated with topoisomerase ii homolog 1 (yeast)<br>
+nras  -  neuroblastoma ras viral (v-ras) oncogene homolog<br>
+thap11  -  thap domain containing 11<br>
+wu:fk36e11  -  wu:fk36e11<br>
+gapdh  -  glyceraldehyde-3-phosphate dehydrogenase<br>
+dhx38  -  deah (asp-glu-ala-his) box polypeptide 38<br>
+thoc7  -  tho complex 7<br>
+nabp1b  -  nucleic acid binding protein 1b<br>
+ddx43  -  dead (asp-glu-ala-asp) box polypeptide 43<br>
+aldh18a1  -  aldehyde dehydrogenase 18 family, member a1<br>
+arl5c  -  adp-ribosylation factor-like 5c<br>
+ube2g1a  -  ubiquitin-conjugating enzyme e2g 1a (ubc7 homolog, yeast)<br>
+dstyk  -  dual serine/threonine and tyrosine protein kinase<br>
+l3mbtl2  -  l(3)mbt-like 2 (drosophila)<br>
+polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+sall4  -  sal-like 4 (drosophila)<br>
+abcf2a  -  atp-binding cassette, sub-family f (gcn20), member 2a<br>
+tipin  -  timeless interacting protein<br>
+kifc1  -  kinesin family member c1<br>
+zgc:77650  -  zgc:77650<br>
+hebp2  -  heme binding protein 2<br>
+zcchc8  -  zinc finger, cchc domain containing 8<br>
+tdrd9  -  tudor domain containing 9<br>
+abca5  -  atp-binding cassette, sub-family a (abc1), member 5<br>
+zgc:55558  -  zgc:55558<br>
+zranb3  -  zinc finger, ran-binding domain containing 3<br>
+yth2  -  yth domain family 2<br>
+ddx5  -  dead (asp-glu-ala-asp) box polypeptide 5<br>
+larp6  -  la ribonucleoprotein domain family, member 6<br>
+elavl2  -  elav (embryonic lethal, abnormal vision, drosophila)-like 2 (hu antigen b)<br>
+gnai2b  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2b<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+dcps  -  mrna decapping enzyme<br>
+adnpa  -  activity-dependent neuroprotector homeobox a<br>
+mmaa  -  methylmalonic aciduria (cobalamin deficiency) cbla type<br>
+si:dkey-33c12.4  -  si:dkey-33c12.4<br>
+zgc:153788  -  zgc:153788<br>
+cyp11a1  -  cytochrome p450, subfamily xia, polypeptide 1<br>
+stk38b  -  serine/threonine kinase 38b<br>
+paip2b  -  poly(a) binding protein interacting protein 2b<br>
+zgc:174275  -  zgc:174275<br>
+rxrba  -  retinoid x receptor, beta a<br>
+fev  -  fev (ets oncogene family)<br>
+LOC556124  -  uncharacterized loc556124<br>
+pnkp  -  polynucleotide kinase 3'-phosphatase<br>
+atxn2l  -  ataxin 2-like<br>
+uba3  -  ubiquitin-like modifier activating enzyme 3<br>
+pprc1  -  peroxisome proliferator-activated receptor gamma, coactivator-related 1<br>
+chd8  -  chromodomain helicase dna binding protein 8<br>
+pax7a  -  paired box gene 7a<br>
+tox4  -  tox high mobility group box family member 4<br>
+zgc:122991  -  zgc:122991<br>
+gabpb2a  -  ga repeat binding protein, beta 2a<br>
+rhoq  -  ras homolog gene family, member q<br>
+mettl5  -  methyltransferase like 5<br>
+prpf4bb  -  prp4 pre-mrna processing factor 4 homolog bb<br>
+asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+xpc  -  xeroderma pigmentosum, complementation group c<br>
+si:ch211-63o20.7  -  si:ch211-63o20.7<br>
+tp53rk  -  tp53 regulating kinase<br>
+si:dkey-253d23.2  -  si:dkey-253d23.2<br>
+zgc:77151  -  zgc:77151<br>
+dr1  -  down-regulator of transcription 1<br>
+mapk3  -  mitogen-activated protein kinase 3<br>
+acin1b  -  apoptotic chromatin condensation inducer 1b<br>
+eif4g2a  -  eukaryotic translation initiation factor 4, gamma 2a<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+lsg1  -  large subunit gtpase 1 homolog (s. cerevisiae)<br>
+smad5  -  mad homolog 5 (drosophila)<br>
+im:7147183  -  im:7147183<br>
+gcat  -  glycine c-acetyltransferase<br>
+gpt2  -  glutamic pyruvate transaminase (alanine aminotransferase) 2<br>
+gtf2f2b  -  general transcription factor iif, polypeptide 2b<br>
+cdc6  -  cell division cycle 6 homolog (s. cerevisiae)<br>
+sp3a  -  sp3a transcription factor<br>
+ube2na  -  ubiquitin-conjugating enzyme e2na<br>
+sart3  -  squamous cell carcinoma antigen recognised by t cells 3<br>
+tia1  -  cytotoxic granule-associated rna binding protein 1<br>
+skiv2l2  -  superkiller viralicidic activity 2-like 2<br>
+gnaia  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide a<br>
+eif4enif1  -  eukaryotic translation initiation factor 4e nuclear import factor 1<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+mapkapk2a  -  mitogen-activated protein kinase-activated protein kinase 2a<br>
+klf2b  -  kruppel-like factor 2b<br>
+znf326  -  zinc finger protein 326<br>
+rab11a  -  rab11a, member ras oncogene family<br>
+top1l  -  topoisomerase (dna) i, like<br>
+nkiras1  -  nfkb inhibitor interacting ras-like 1<br>
+ivd  -  isovaleryl coenzyme a dehydrogenase<br>
+rhogc  -  ras homolog gene family, member gc<br>
+zgc:162962  -  zgc:162962<br>
+vrk3  -  vaccinia related kinase 3<br>
+cdt1  -  chromatin licensing and dna replication factor 1<br>
+zgc:153215  -  zgc:153215<br>
+zc3h7a  -  zinc finger ccch-type containing 7a<br>
+cpeb1b  -  cytoplasmic polyadenylation element binding protein 1b<br>
+hnrnpr  -  heterogeneous nuclear ribonucleoprotein r<br>
+slc48a1b  -  solute carrier family 48 (heme transporter), member 1b<br>
+irf6  -  interferon regulatory factor 6<br>
+pias4a  -  protein inhibitor of activated stat, 4a<br>
+utp6  -  utp6, small subunit (ssu) processome component, homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097159&amp;view=details' target="_blank">GO:0097159</a><a name=0097159></a></td>
+<td>organic cyclic compound binding</td>
+<td  align=center>5.9E-4</td>
+<td  align=center>1.23E-1</td>
+<td  align=center>1.22 (17542,4855,580,196)</td>
+<td>
+<a id="ctrl_elements_GO:0097159" href="javascript:toggle('elements_GO:0097159')">[+] Show genes</a><br>
+<div id="elements_GO:0097159" style="display:none"> <font size=1>
+prtfdc1  -  phosphoribosyl transferase domain containing 1<br>
+cat  -  catalase<br>
+larp1  -  la ribonucleoprotein domain family, member 1<br>
+znf622  -  zinc finger protein 622<br>
+ckbb  -  creatine kinase, brain b<br>
+rbm15  -  rna binding motif protein 15<br>
+irf2a  -  interferon regulatory factor 2a<br>
+ube2g1b  -  ubiquitin-conjugating enzyme e2g 1b (ubc7 homolog, yeast)<br>
+sub1b  -  sub1 homolog b (s. cerevisiae)<br>
+ube2kb  -  ubiquitin-conjugating enzyme e2kb (ubc1 homolog, yeast)<br>
+caprin2  -  caprin family member 2<br>
+foxh1  -  forkhead box h1<br>
+si:ch211-198a12.6  -  si:ch211-198a12.6<br>
+LOC563918  -  uncharacterized loc563918<br>
+zgc:77065  -  zgc:77065<br>
+pl10  -  pl10<br>
+tarbp2  -  tar (hiv) rna binding protein 2<br>
+larp7  -  la ribonucleoprotein domain family, member 7<br>
+msi2b  -  musashi homolog 2b (drosophila)<br>
+gtf2e2  -  general transcription factor iie, polypeptide 2, beta<br>
+ube2h  -  ubiquitin-conjugating enzyme e2h (ubc8 homolog, yeast)<br>
+pank4  -  pantothenate kinase 4<br>
+api5  -  apoptosis inhibitor 5<br>
+eif4e1b  -  eukaryotic translation initiation factor 4e 1b<br>
+prpf31  -  prp31 pre-mrna processing factor 31 homolog (yeast)<br>
+abat  -  4-aminobutyrate aminotransferase<br>
+nsun2  -  nol1/nop2/sun domain family, member 2<br>
+rybpa  -  ring1 and yy1 binding protein a<br>
+agps  -  alkylglycerone phosphate synthase<br>
+si:ch211-116m6.3  -  si:ch211-116m6.3<br>
+cdc5l  -  cdc5 cell division cycle 5-like (s. pombe)<br>
+exosc10  -  exosome component 10<br>
+srp68  -  signal recognition particle 68<br>
+uba5  -  ubiquitin-like modifier activating enzyme 5<br>
+prpf4  -  prp4 pre-mrna processing factor 4 homolog (yeast)<br>
+hmgb3b  -  high-mobility group box 3b<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+glula  -  glutamate-ammonia ligase (glutamine synthase) a<br>
+ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br>
+kif5ba  -  kinesin family member 5b, a<br>
+sde2  -  sde2 telomere maintenance homolog (s. pombe)<br>
+zgc:92287  -  zgc:92287<br>
+znf395a  -  zinc finger protein 395a<br>
+pik3r4  -  phosphoinositide-3-kinase, regulatory subunit 4<br>
+zgc:66443  -  zgc:66443<br>
+zgc:154068  -  zgc:154068<br>
+npm2  -  nucleoplasmin 2<br>
+zgc:55733  -  zgc:55733<br>
+mcm3l  -  mcm3 minichromosome maintenance deficient 3 (s. cerevisiae), like<br>
+srp54  -  signal recognition particle 54<br>
+fmr1  -  fragile x mental retardation 1<br>
+tbx16  -  t-box gene 16<br>
+gclc  -  glutamate-cysteine ligase, catalytic subunit<br>
+si:dkey-57k17.1  -  si:dkey-57k17.1<br>
+aclya  -  atp citrate lyase a<br>
+ralbb  -  v-ral simian leukemia viral oncogene homolog bb (ras related)<br>
+c1d  -  c1d nuclear receptor co-repressor<br>
+xrn2  -  5'-3' exoribonuclease 2<br>
+scaf4a  -  sr-related ctd-associated factor 4a<br>
+org  -  oogenesis-related gene<br>
+cdc34a  -  cell division cycle 34 homolog (s. cerevisiae) a<br>
+bmp2k  -  bmp2 inducible kinase<br>
+snai1a  -  snail homolog 1a (drosophila)<br>
+baz2a  -  bromodomain adjacent to zinc finger domain, 2a<br>
+hnrnpua  -  heterogeneous nuclear ribonucleoprotein ua<br>
+acsf2  -  acyl-coa synthetase family member 2<br>
+pif1  -  pif1 5'-to-3' dna helicase homolog (s. cerevisiae)<br>
+ube2d2l  -  ubiquitin-conjugating enzyme e2d 2 (ubc4/5 homolog, yeast)<br>
+ctcf  -  ccctc-binding factor (zinc finger protein)<br>
+rela  -  v-rel reticuloendotheliosis viral oncogene homolog a<br>
+zgc:103482  -  zgc:103482<br>
+glulb  -  glutamate-ammonia ligase (glutamine synthase) b<br>
+cstf3  -  cleavage stimulation factor, 3' pre-rna, subunit 3<br>
+si:dkey-20l4.2  -  si:dkey-20l4.2<br>
+tor1  -  torsin family 1<br>
+zfand5b  -  zinc finger, an1-type domain 5b<br>
+ncbp2  -  nuclear cap binding protein subunit 2<br>
+hacl1  -  2-hydroxyacyl-coa lyase 1<br>
+wu:fd16e03  -  wu:fd16e03<br>
+uck2a  -  uridine-cytidine kinase 2a<br>
+phc1  -  polyhomeotic homolog 1<br>
+snrpc  -  small nuclear ribonucleoprotein polypeptide c<br>
+smc4  -  structural maintenance of chromosomes 4<br>
+pou5f3  -  pou domain, class 5, transcription factor 3<br>
+nmnat1  -  nicotinamide nucleotide adenylyltransferase 1<br>
+ddx19  -  dead/h (asp-glu-ala-asp/his) box polypeptide 19 (dbp5 homolog, yeast)<br>
+prkacbb  -  protein kinase, camp-dependent, catalytic, beta b<br>
+sp1  -  sp1 transcription factor<br>
+kif22  -  kinesin family member 22<br>
+pygl  -  phosphorylase, glycogen; liver (hers disease, glycogen storage disease type vi)<br>
+casc3  -  cancer susceptibility candidate 3<br>
+zgc:113162  -  zgc:113162<br>
+fam172a  -  family with sequence similarity 172, member a<br>
+snip1  -  smad nuclear interacting protein<br>
+patl1  -  protein associated with topoisomerase ii homolog 1 (yeast)<br>
+nras  -  neuroblastoma ras viral (v-ras) oncogene homolog<br>
+thap11  -  thap domain containing 11<br>
+wu:fk36e11  -  wu:fk36e11<br>
+gapdh  -  glyceraldehyde-3-phosphate dehydrogenase<br>
+dhx38  -  deah (asp-glu-ala-his) box polypeptide 38<br>
+thoc7  -  tho complex 7<br>
+nabp1b  -  nucleic acid binding protein 1b<br>
+ddx43  -  dead (asp-glu-ala-asp) box polypeptide 43<br>
+aldh18a1  -  aldehyde dehydrogenase 18 family, member a1<br>
+arl5c  -  adp-ribosylation factor-like 5c<br>
+ube2g1a  -  ubiquitin-conjugating enzyme e2g 1a (ubc7 homolog, yeast)<br>
+dstyk  -  dual serine/threonine and tyrosine protein kinase<br>
+l3mbtl2  -  l(3)mbt-like 2 (drosophila)<br>
+polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+sall4  -  sal-like 4 (drosophila)<br>
+abcf2a  -  atp-binding cassette, sub-family f (gcn20), member 2a<br>
+tipin  -  timeless interacting protein<br>
+kifc1  -  kinesin family member c1<br>
+zgc:77650  -  zgc:77650<br>
+hebp2  -  heme binding protein 2<br>
+zcchc8  -  zinc finger, cchc domain containing 8<br>
+tdrd9  -  tudor domain containing 9<br>
+abca5  -  atp-binding cassette, sub-family a (abc1), member 5<br>
+zgc:55558  -  zgc:55558<br>
+zranb3  -  zinc finger, ran-binding domain containing 3<br>
+yth2  -  yth domain family 2<br>
+ddx5  -  dead (asp-glu-ala-asp) box polypeptide 5<br>
+larp6  -  la ribonucleoprotein domain family, member 6<br>
+elavl2  -  elav (embryonic lethal, abnormal vision, drosophila)-like 2 (hu antigen b)<br>
+gnai2b  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2b<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+dcps  -  mrna decapping enzyme<br>
+adnpa  -  activity-dependent neuroprotector homeobox a<br>
+mmaa  -  methylmalonic aciduria (cobalamin deficiency) cbla type<br>
+si:dkey-33c12.4  -  si:dkey-33c12.4<br>
+zgc:153788  -  zgc:153788<br>
+cyp11a1  -  cytochrome p450, subfamily xia, polypeptide 1<br>
+stk38b  -  serine/threonine kinase 38b<br>
+paip2b  -  poly(a) binding protein interacting protein 2b<br>
+zgc:174275  -  zgc:174275<br>
+rxrba  -  retinoid x receptor, beta a<br>
+LOC556124  -  uncharacterized loc556124<br>
+fev  -  fev (ets oncogene family)<br>
+npc2  -  niemann-pick disease, type c2<br>
+pnkp  -  polynucleotide kinase 3'-phosphatase<br>
+atxn2l  -  ataxin 2-like<br>
+uba3  -  ubiquitin-like modifier activating enzyme 3<br>
+pprc1  -  peroxisome proliferator-activated receptor gamma, coactivator-related 1<br>
+chd8  -  chromodomain helicase dna binding protein 8<br>
+pax7a  -  paired box gene 7a<br>
+tox4  -  tox high mobility group box family member 4<br>
+zgc:122991  -  zgc:122991<br>
+gabpb2a  -  ga repeat binding protein, beta 2a<br>
+rhoq  -  ras homolog gene family, member q<br>
+mettl5  -  methyltransferase like 5<br>
+prpf4bb  -  prp4 pre-mrna processing factor 4 homolog bb<br>
+asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+xpc  -  xeroderma pigmentosum, complementation group c<br>
+si:ch211-63o20.7  -  si:ch211-63o20.7<br>
+tp53rk  -  tp53 regulating kinase<br>
+si:dkey-253d23.2  -  si:dkey-253d23.2<br>
+zgc:77151  -  zgc:77151<br>
+dr1  -  down-regulator of transcription 1<br>
+mapk3  -  mitogen-activated protein kinase 3<br>
+acin1b  -  apoptotic chromatin condensation inducer 1b<br>
+eif4g2a  -  eukaryotic translation initiation factor 4, gamma 2a<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+lsg1  -  large subunit gtpase 1 homolog (s. cerevisiae)<br>
+smad5  -  mad homolog 5 (drosophila)<br>
+im:7147183  -  im:7147183<br>
+gpt2  -  glutamic pyruvate transaminase (alanine aminotransferase) 2<br>
+gcat  -  glycine c-acetyltransferase<br>
+gtf2f2b  -  general transcription factor iif, polypeptide 2b<br>
+cdc6  -  cell division cycle 6 homolog (s. cerevisiae)<br>
+sp3a  -  sp3a transcription factor<br>
+ube2na  -  ubiquitin-conjugating enzyme e2na<br>
+sart3  -  squamous cell carcinoma antigen recognised by t cells 3<br>
+tia1  -  cytotoxic granule-associated rna binding protein 1<br>
+skiv2l2  -  superkiller viralicidic activity 2-like 2<br>
+gnaia  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide a<br>
+eif4enif1  -  eukaryotic translation initiation factor 4e nuclear import factor 1<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+mapkapk2a  -  mitogen-activated protein kinase-activated protein kinase 2a<br>
+klf2b  -  kruppel-like factor 2b<br>
+znf326  -  zinc finger protein 326<br>
+rab11a  -  rab11a, member ras oncogene family<br>
+top1l  -  topoisomerase (dna) i, like<br>
+nkiras1  -  nfkb inhibitor interacting ras-like 1<br>
+ivd  -  isovaleryl coenzyme a dehydrogenase<br>
+rhogc  -  ras homolog gene family, member gc<br>
+zgc:162962  -  zgc:162962<br>
+vrk3  -  vaccinia related kinase 3<br>
+cdt1  -  chromatin licensing and dna replication factor 1<br>
+zgc:153215  -  zgc:153215<br>
+zc3h7a  -  zinc finger ccch-type containing 7a<br>
+cpeb1b  -  cytoplasmic polyadenylation element binding protein 1b<br>
+hnrnpr  -  heterogeneous nuclear ribonucleoprotein r<br>
+slc48a1b  -  solute carrier family 48 (heme transporter), member 1b<br>
+irf6  -  interferon regulatory factor 6<br>
+pias4a  -  protein inhibitor of activated stat, 4a<br>
+utp6  -  utp6, small subunit (ssu) processome component, homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004518&amp;view=details' target="_blank">GO:0004518</a><a name=0004518></a></td>
+<td>nuclease activity</td>
+<td  align=center>6.22E-4</td>
+<td  align=center>1.22E-1</td>
+<td  align=center>2.87 (17542,137,580,13)</td>
+<td>
+<a id="ctrl_elements_GO:0004518" href="javascript:toggle('elements_GO:0004518')">[+] Show genes</a><br>
+<div id="elements_GO:0004518" style="display:none"> <font size=1>
+xrn2  -  5'-3' exoribonuclease 2<br>
+zgc:154068  -  zgc:154068<br>
+cnot6  -  ccr4-not transcription complex, subunit 6<br>
+zgc:77065  -  zgc:77065<br>
+dbr1  -  debranching enzyme homolog 1 (s. cerevisiae)<br>
+xrn1  -  5'-3' exoribonuclease 1<br>
+rpp21  -  ribonuclease p 21 subunit<br>
+zranb3  -  zinc finger, ran-binding domain containing 3<br>
+tatdn2  -  tatd dnase domain containing 2<br>
+exosc10  -  exosome component 10<br>
+angel2  -  angel homolog 2 (drosophila)<br>
+cnot8  -  ccr4-not transcription complex, subunit 8<br>
+pan3  -  pan3 poly(a) specific ribonuclease subunit homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004386&amp;view=details' target="_blank">GO:0004386</a><a name=0004386></a></td>
+<td>helicase activity</td>
+<td  align=center>6.24E-4</td>
+<td  align=center>1.15E-1</td>
+<td  align=center>3.02 (17542,120,580,12)</td>
+<td>
+<a id="ctrl_elements_GO:0004386" href="javascript:toggle('elements_GO:0004386')">[+] Show genes</a><br>
+<div id="elements_GO:0004386" style="display:none"> <font size=1>
+pif1  -  pif1 5'-to-3' dna helicase homolog (s. cerevisiae)<br>
+ddx5  -  dead (asp-glu-ala-asp) box polypeptide 5<br>
+tdrd9  -  tudor domain containing 9<br>
+ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br>
+ddx19  -  dead/h (asp-glu-ala-asp/his) box polypeptide 19 (dbp5 homolog, yeast)<br>
+ddx43  -  dead (asp-glu-ala-asp) box polypeptide 43<br>
+chd8  -  chromodomain helicase dna binding protein 8<br>
+skiv2l2  -  superkiller viralicidic activity 2-like 2<br>
+pl10  -  pl10<br>
+mcm3l  -  mcm3 minichromosome maintenance deficient 3 (s. cerevisiae), like<br>
+dhx38  -  deah (asp-glu-ala-his) box polypeptide 38<br>
+gtf2f2b  -  general transcription factor iif, polypeptide 2b<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24651 genes out of 30808 gene terms entered by the user.<br> 24651 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>750 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3327 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>
