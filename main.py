@@ -396,6 +396,8 @@ def check_data_filtering_params():
         if form.keep_going.data:
             return redirect(url_for('alg_params', data_n=data_n))
         elif form.go_back.data:
+            os.remove(num_genes_filename)
+            os.remove(num_cells_filename)
             return redirect(url_for('violin_plots', data_n=data_n, spatial=spatial, species=species,
                                     num_cells=num_cells_orig2, num_genes=num_genes_orig2, samp_name=samp_name))
 
