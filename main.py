@@ -608,6 +608,21 @@ def filter_struct_lst_for_result_panel():
     return jsonify(thr_struct_lst=thr_struct_lst)
 
 
+@app.route('/results/<url>/<struct>/<go_file>')
+def go_webpage(url, struct, go_file):
+    data_n = url_to_data_n(url)
+    struct_path = 'go/data' + str(data_n) + '/' + struct
+
+    if go_file == 'GOResultsPROCESS':
+        return render_template(struct_path + '/GOResultsPROCESS.html')
+    if go_file == 'GOResultsFUNCTION':
+        return render_template(struct_path + '/GOResultsFUNCTION.html')
+    if go_file == 'GOResultsCOMPONENT':
+        return render_template(struct_path + '/GOResultsCOMPONENT.html')
+
+    return render_template('cant_find_data.html')
+
+
 @app.route('/results/<url>')
 def results_panel(url):
     data_n = url_to_data_n(url)

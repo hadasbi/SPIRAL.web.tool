@@ -1,0 +1,1216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='104,575,211,623' HREF='#0022836' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,712,115,760' HREF='#0022832' ALT=''>
+<AREA SHAPE='RECT' COORDS='139,712,248,760' HREF='#0022839' ALT=''>
+<AREA SHAPE='RECT' COORDS='272,712,381,760' HREF='#0022834' ALT=''>
+<AREA SHAPE='RECT' COORDS='1141,221,1259,269' HREF='#0042562' ALT=''>
+<AREA SHAPE='RECT' COORDS='1067,333,1184,381' HREF='#0070324' ALT=''>
+<AREA SHAPE='RECT' COORDS='488,567,637,630' HREF='#0008509' ALT=''>
+<AREA SHAPE='RECT' COORDS='585,696,735,776' HREF='#0015103' ALT=''>
+<AREA SHAPE='RECT' COORDS='769,696,924,776' HREF='#0022890' ALT=''>
+<AREA SHAPE='RECT' COORDS='363,840,472,888' HREF='#0005261' ALT=''>
+<AREA SHAPE='RECT' COORDS='912,824,1027,904' HREF='#0046873' ALT=''>
+<AREA SHAPE='RECT' COORDS='1593,445,1692,493' HREF='#0005543' ALT=''>
+<AREA SHAPE='RECT' COORDS='1576,567,1709,630' HREF='#0005544' ALT=''>
+<AREA SHAPE='RECT' COORDS='837,567,992,630' HREF='#0008324' ALT=''>
+<AREA SHAPE='RECT' COORDS='316,326,479,389' HREF='#0022803' ALT=''>
+<AREA SHAPE='RECT' COORDS='295,445,404,493' HREF='#0015267' ALT=''>
+<AREA SHAPE='RECT' COORDS='765,840,888,888' HREF='#0022835' ALT=''>
+<AREA SHAPE='RECT' COORDS='740,1123,863,1186' HREF='#0022824' ALT=''>
+<AREA SHAPE='RECT' COORDS='117,833,219,895' HREF='#0005244' ALT=''>
+<AREA SHAPE='RECT' COORDS='1473,221,1556,269' HREF='#0043167' ALT=''>
+<AREA SHAPE='RECT' COORDS='1555,333,1653,381' HREF='#0043168' ALT=''>
+<AREA SHAPE='RECT' COORDS='1215,445,1311,493' HREF='#0030165' ALT=''>
+<AREA SHAPE='RECT' COORDS='1276,5,1162,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='1349,109,1421,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='869,109,957,157' HREF='#0005215' ALT=''>
+<AREA SHAPE='RECT' COORDS='1125,102,1211,165' HREF='#0060089' ALT=''>
+<AREA SHAPE='RECT' COORDS='1595,102,1677,165' HREF='#0098772' ALT=''>
+<AREA SHAPE='RECT' COORDS='405,712,496,760' HREF='#0005216' ALT=''>
+<AREA SHAPE='RECT' COORDS='496,840,603,888' HREF='#0005253' ALT=''>
+<AREA SHAPE='RECT' COORDS='243,833,339,895' HREF='#0015276' ALT=''>
+<AREA SHAPE='RECT' COORDS='1751,567,1857,630' HREF='#0004860' ALT=''>
+<AREA SHAPE='RECT' COORDS='1724,705,1884,767' HREF='#0030291' ALT=''>
+<AREA SHAPE='RECT' COORDS='627,824,741,904' HREF='#0015108' ALT=''>
+<AREA SHAPE='RECT' COORDS='628,968,737,1016' HREF='#0005254' ALT=''>
+<AREA SHAPE='RECT' COORDS='496,961,603,1023' HREF='#0099095' ALT=''>
+<AREA SHAPE='RECT' COORDS='969,705,1089,767' HREF='#0030594' ALT=''>
+<AREA SHAPE='RECT' COORDS='961,952,1081,1032' HREF='#0098960' ALT=''>
+<AREA SHAPE='RECT' COORDS='661,550,813,647' HREF='#0015318' ALT=''>
+<AREA SHAPE='RECT' COORDS='1015,214,1092,277' HREF='#0038023' ALT=''>
+<AREA SHAPE='RECT' COORDS='1864,445,1976,493' HREF='#0019210' ALT=''>
+<AREA SHAPE='RECT' COORDS='243,1106,339,1203' HREF='#0005237' ALT=''>
+<AREA SHAPE='RECT' COORDS='1451,438,1533,501' HREF='#0035254' ALT=''>
+<AREA SHAPE='RECT' COORDS='912,1080,1032,1229' HREF='#0099529' ALT=''>
+<AREA SHAPE='RECT' COORDS='759,1277,881,1427' HREF='#1904315' ALT=''>
+<AREA SHAPE='RECT' COORDS='632,1312,733,1392' HREF='#0022852' ALT=''>
+<AREA SHAPE='RECT' COORDS='1600,221,1691,269' HREF='#0008289' ALT=''>
+<AREA SHAPE='RECT' COORDS='1332,221,1439,269' HREF='#0005515' ALT=''>
+<AREA SHAPE='RECT' COORDS='597,214,712,277' HREF='#0022857' ALT=''>
+<AREA SHAPE='RECT' COORDS='495,438,631,501' HREF='#0015075' ALT=''>
+<AREA SHAPE='RECT' COORDS='285,575,413,623' HREF='#0022838' ALT=''>
+<AREA SHAPE='RECT' COORDS='1341,333,1429,381' HREF='#0005516' ALT=''>
+<AREA SHAPE='RECT' COORDS='1208,326,1317,389' HREF='#0019904' ALT=''>
+<AREA SHAPE='RECT' COORDS='1728,333,1845,381' HREF='#0019207' ALT=''>
+<AREA SHAPE='RECT' COORDS='1733,438,1840,501' HREF='#0019887' ALT=''>
+<AREA SHAPE='RECT' COORDS='1741,824,1867,904' HREF='#0004862' ALT=''>
+<AREA SHAPE='RECT' COORDS='1724,221,1849,269' HREF='#0030234' ALT=''>
+<AREA SHAPE='RECT' COORDS='363,961,472,1023' HREF='#0022843' ALT=''>
+<AREA SHAPE='RECT' COORDS='1869,333,1989,381' HREF='#0004857' ALT=''>
+<AREA SHAPE='RECT' COORDS='1453,326,1531,389' HREF='#0005102' ALT=''>
+<AREA SHAPE='RECT' COORDS='243,952,339,1032' HREF='#0005230' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035254&amp;view=details' target="_blank">GO:0035254</a><a name=0035254></a></td>
+<td>glutamate receptor binding</td>
+<td  align=center>3.34E-7</td>
+<td  align=center>1.5E-3</td>
+<td  align=center>7.13 (16689,66,390,11)</td>
+<td>
+<a id="ctrl_elements_GO:0035254" href="javascript:toggle('elements_GO:0035254')">[+] Show genes</a><br>
+<div id="elements_GO:0035254" style="display:none"> <font size=1>
+Prnp  -  prion protein<br>
+Akap5  -  a kinase (prka) anchor protein 5<br>
+Esr1  -  estrogen receptor 1 (alpha)<br>
+Dlg3  -  discs, large homolog 3 (drosophila)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Neto1  -  neuropilin (nrp) and tolloid (tll)-like 1<br>
+Shisa7  -  shisa homolog 7 (xenopus laevis)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098960&amp;view=details' target="_blank">GO:0098960</a><a name=0098960></a></td>
+<td>postsynaptic neurotransmitter receptor activity</td>
+<td  align=center>3.98E-6</td>
+<td  align=center>8.94E-3</td>
+<td  align=center>7.13 (16689,54,390,9)</td>
+<td>
+<a id="ctrl_elements_GO:0098960" href="javascript:toggle('elements_GO:0098960')">[+] Show genes</a><br>
+<div id="elements_GO:0098960" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Chrm1  -  cholinergic receptor, muscarinic 1, cns<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Grm5  -  glutamate receptor, metabotropic 5<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030594&amp;view=details' target="_blank">GO:0030594</a><a name=0030594></a></td>
+<td>neurotransmitter receptor activity</td>
+<td  align=center>7.84E-6</td>
+<td  align=center>1.18E-2</td>
+<td  align=center>5.23 (16689,90,390,11)</td>
+<td>
+<a id="ctrl_elements_GO:0030594" href="javascript:toggle('elements_GO:0030594')">[+] Show genes</a><br>
+<div id="elements_GO:0030594" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Chrm1  -  cholinergic receptor, muscarinic 1, cns<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Htr2a  -  5-hydroxytryptamine (serotonin) receptor 2a<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Grm5  -  glutamate receptor, metabotropic 5<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022839&amp;view=details' target="_blank">GO:0022839</a><a name=0022839></a></td>
+<td>ion gated channel activity</td>
+<td  align=center>1.25E-5</td>
+<td  align=center>1.4E-2</td>
+<td  align=center>3.01 (16689,284,390,20)</td>
+<td>
+<a id="ctrl_elements_GO:0022839" href="javascript:toggle('elements_GO:0022839')">[+] Show genes</a><br>
+<div id="elements_GO:0022839" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022836&amp;view=details' target="_blank">GO:0022836</a><a name=0022836></a></td>
+<td>gated channel activity</td>
+<td  align=center>2.27E-5</td>
+<td  align=center>2.05E-2</td>
+<td  align=center>2.89 (16689,296,390,20)</td>
+<td>
+<a id="ctrl_elements_GO:0022836" href="javascript:toggle('elements_GO:0022836')">[+] Show genes</a><br>
+<div id="elements_GO:0022836" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099529&amp;view=details' target="_blank">GO:0099529</a><a name=0099529></a></td>
+<td>neurotransmitter receptor activity involved in regulation of postsynaptic membrane potential</td>
+<td  align=center>2.53E-5</td>
+<td  align=center>1.9E-2</td>
+<td  align=center>6.58 (16689,52,390,8)</td>
+<td>
+<a id="ctrl_elements_GO:0099529" href="javascript:toggle('elements_GO:0099529')">[+] Show genes</a><br>
+<div id="elements_GO:0099529" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Chrm1  -  cholinergic receptor, muscarinic 1, cns<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022824&amp;view=details' target="_blank">GO:0022824</a><a name=0022824></a></td>
+<td>transmitter-gated ion channel activity</td>
+<td  align=center>3.36E-5</td>
+<td  align=center>2.16E-2</td>
+<td  align=center>6.34 (16689,54,390,8)</td>
+<td>
+<a id="ctrl_elements_GO:0022824" href="javascript:toggle('elements_GO:0022824')">[+] Show genes</a><br>
+<div id="elements_GO:0022824" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022835&amp;view=details' target="_blank">GO:0022835</a><a name=0022835></a></td>
+<td>transmitter-gated channel activity</td>
+<td  align=center>3.36E-5</td>
+<td  align=center>1.89E-2</td>
+<td  align=center>6.34 (16689,54,390,8)</td>
+<td>
+<a id="ctrl_elements_GO:0022835" href="javascript:toggle('elements_GO:0022835')">[+] Show genes</a><br>
+<div id="elements_GO:0022835" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019904&amp;view=details' target="_blank">GO:0019904</a><a name=0019904></a></td>
+<td>protein domain specific binding</td>
+<td  align=center>3.5E-5</td>
+<td  align=center>1.75E-2</td>
+<td  align=center>2.03 (16689,779,390,37)</td>
+<td>
+<a id="ctrl_elements_GO:0019904" href="javascript:toggle('elements_GO:0019904')">[+] Show genes</a><br>
+<div id="elements_GO:0019904" style="display:none"> <font size=1>
+Abi2  -  abl-interactor 2<br>
+Lin7b  -  lin-7 homolog b (c. elegans)<br>
+Snca  -  synuclein, alpha<br>
+Actn1  -  actinin, alpha 1<br>
+Cadm1  -  cell adhesion molecule 1<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Ywhab  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, beta polypeptide<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Hpcal4  -  hippocalcin-like 4<br>
+Akap5  -  a kinase (prka) anchor protein 5<br>
+Nlgn1  -  neuroligin 1<br>
+Dynll1  -  dynein light chain lc8-type 1<br>
+Prkce  -  protein kinase c, epsilon<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Ppp1r9a  -  protein phosphatase 1, regulatory (inhibitor) subunit 9a<br>
+Synj1  -  synaptojanin 1<br>
+Arhgap1  -  rho gtpase activating protein 1<br>
+Thra  -  thyroid hormone receptor alpha<br>
+Pde2a  -  phosphodiesterase 2a, cgmp-stimulated<br>
+Syngr3  -  synaptogyrin 3<br>
+Dlg3  -  discs, large homolog 3 (drosophila)<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Erc2  -  elks/rab6-interacting/cast family member 2<br>
+Pak3  -  p21 protein (cdc42/rac)-activated kinase 3<br>
+Wbp11  -  ww domain binding protein 11<br>
+Sorbs2  -  sorbin and sh3 domain containing 2<br>
+Basp1  -  brain abundant, membrane attached signal protein 1<br>
+Hap1  -  huntingtin-associated protein 1<br>
+Cacybp  -  calcyclin binding protein<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Acvr2a  -  activin receptor iia<br>
+Arhgap6  -  rho gtpase activating protein 6<br>
+Twist2  -  twist basic helix-loop-helix transcription factor 2<br>
+Prkar2b  -  protein kinase, camp dependent regulatory, type ii beta<br>
+Egr2  -  early growth response 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005216&amp;view=details' target="_blank">GO:0005216</a><a name=0005216></a></td>
+<td>ion channel activity</td>
+<td  align=center>3.84E-5</td>
+<td  align=center>1.73E-2</td>
+<td  align=center>2.63 (16689,358,390,22)</td>
+<td>
+<a id="ctrl_elements_GO:0005216" href="javascript:toggle('elements_GO:0005216')">[+] Show genes</a><br>
+<div id="elements_GO:0005216" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022838&amp;view=details' target="_blank">GO:0022838</a><a name=0022838></a></td>
+<td>substrate-specific channel activity</td>
+<td  align=center>5.57E-5</td>
+<td  align=center>2.27E-2</td>
+<td  align=center>2.57 (16689,367,390,22)</td>
+<td>
+<a id="ctrl_elements_GO:0022838" href="javascript:toggle('elements_GO:0022838')">[+] Show genes</a><br>
+<div id="elements_GO:0022838" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060089&amp;view=details' target="_blank">GO:0060089</a><a name=0060089></a></td>
+<td>molecular transducer activity</td>
+<td  align=center>5.57E-5</td>
+<td  align=center>2.09E-2</td>
+<td  align=center>1.91 (16689,920,390,41)</td>
+<td>
+<a id="ctrl_elements_GO:0060089" href="javascript:toggle('elements_GO:0060089')">[+] Show genes</a><br>
+<div id="elements_GO:0060089" style="display:none"> <font size=1>
+Prnp  -  prion protein<br>
+Slc22a17  -  solute carrier family 22 (organic cation transporter), member 17<br>
+Trhr  -  thyrotropin releasing hormone receptor<br>
+Cdkl2  -  cyclin-dependent kinase-like 2 (cdc2-related kinase)<br>
+Mas1  -  mas1 oncogene<br>
+Cdk17  -  cyclin-dependent kinase 17<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Gpr27  -  g protein-coupled receptor 27<br>
+Prkacb  -  protein kinase, camp dependent, catalytic, beta<br>
+Plxna2  -  plexin a2<br>
+Nlgn1  -  neuroligin 1<br>
+Nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+Oxtr  -  oxytocin receptor<br>
+Ltk  -  leukocyte tyrosine kinase<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gpr39  -  g protein-coupled receptor 39<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Gpr26  -  g protein-coupled receptor 26<br>
+Thrb  -  thyroid hormone receptor beta<br>
+Thra  -  thyroid hormone receptor alpha<br>
+Cdkl4  -  cyclin-dependent kinase-like 4<br>
+Chrm1  -  cholinergic receptor, muscarinic 1, cns<br>
+Unc5a  -  unc-5 homolog a (c. elegans)<br>
+Htr2a  -  5-hydroxytryptamine (serotonin) receptor 2a<br>
+Npy2r  -  neuropeptide y receptor y2<br>
+Unc5d  -  unc-5 homolog d (c. elegans)<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Gpr101  -  g protein-coupled receptor 101<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Mchr1  -  melanin-concentrating hormone receptor 1<br>
+Gpr83  -  g protein-coupled receptor 83<br>
+Esr1  -  estrogen receptor 1 (alpha)<br>
+Plxnc1  -  plexin c1<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Acvr2a  -  activin receptor iia<br>
+Grm5  -  glutamate receptor, metabotropic 5<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Nptxr  -  neuronal pentraxin receptor<br>
+Gpr1  -  g protein-coupled receptor 1<br>
+Rxrg  -  retinoid x receptor gamma<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015318&amp;view=details' target="_blank">GO:0015318</a><a name=0015318></a></td>
+<td>inorganic molecular entity transmembrane transporter activity</td>
+<td  align=center>6.61E-5</td>
+<td  align=center>2.28E-2</td>
+<td  align=center>2.04 (16689,712,390,34)</td>
+<td>
+<a id="ctrl_elements_GO:0015318" href="javascript:toggle('elements_GO:0015318')">[+] Show genes</a><br>
+<div id="elements_GO:0015318" style="display:none"> <font size=1>
+Slc25a14  -  solute carrier family 25 (mitochondrial carrier, brain), member 14<br>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Slc7a14  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 14<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Slc7a4  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 4<br>
+Slc30a3  -  solute carrier family 30 (zinc transporter), member 3<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Atp6v1d  -  atpase, h+ transporting, lysosomal v1 subunit d<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp6v1c2  -  atpase, h+ transporting, lysosomal v1 subunit c2<br>
+Gpm6a  -  glycoprotein m6a<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Atp6v1a  -  atpase, h+ transporting, lysosomal v1 subunit a<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030165&amp;view=details' target="_blank">GO:0030165</a><a name=0030165></a></td>
+<td>PDZ domain binding</td>
+<td  align=center>6.79E-5</td>
+<td  align=center>2.18E-2</td>
+<td  align=center>4.17 (16689,113,390,11)</td>
+<td>
+<a id="ctrl_elements_GO:0030165" href="javascript:toggle('elements_GO:0030165')">[+] Show genes</a><br>
+<div id="elements_GO:0030165" style="display:none"> <font size=1>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Acvr2a  -  activin receptor iia<br>
+Nlgn1  -  neuroligin 1<br>
+Dlg3  -  discs, large homolog 3 (drosophila)<br>
+Lin7b  -  lin-7 homolog b (c. elegans)<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Erc2  -  elks/rab6-interacting/cast family member 2<br>
+Cadm1  -  cell adhesion molecule 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099095&amp;view=details' target="_blank">GO:0099095</a><a name=0099095></a></td>
+<td>ligand-gated anion channel activity</td>
+<td  align=center>7.88E-5</td>
+<td  align=center>2.36E-2</td>
+<td  align=center>10.70 (16689,20,390,5)</td>
+<td>
+<a id="ctrl_elements_GO:0099095" href="javascript:toggle('elements_GO:0099095')">[+] Show genes</a><br>
+<div id="elements_GO:0099095" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005230&amp;view=details' target="_blank">GO:0005230</a><a name=0005230></a></td>
+<td>extracellular ligand-gated ion channel activity</td>
+<td  align=center>1.17E-4</td>
+<td  align=center>3.28E-2</td>
+<td  align=center>5.35 (16689,64,390,8)</td>
+<td>
+<a id="ctrl_elements_GO:0005230" href="javascript:toggle('elements_GO:0005230')">[+] Show genes</a><br>
+<div id="elements_GO:0005230" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904315&amp;view=details' target="_blank">GO:1904315</a><a name=1904315></a></td>
+<td>transmitter-gated ion channel activity involved in regulation of postsynaptic membrane potential</td>
+<td  align=center>1.33E-4</td>
+<td  align=center>3.51E-2</td>
+<td  align=center>6.11 (16689,49,390,7)</td>
+<td>
+<a id="ctrl_elements_GO:1904315" href="javascript:toggle('elements_GO:1904315')">[+] Show genes</a><br>
+<div id="elements_GO:1904315" style="display:none"> <font size=1>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046873&amp;view=details' target="_blank">GO:0046873</a><a name=0046873></a></td>
+<td>metal ion transmembrane transporter activity</td>
+<td  align=center>1.62E-4</td>
+<td  align=center>4.04E-2</td>
+<td  align=center>2.38 (16689,395,390,22)</td>
+<td>
+<a id="ctrl_elements_GO:0046873" href="javascript:toggle('elements_GO:0046873')">[+] Show genes</a><br>
+<div id="elements_GO:0046873" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Slc30a3  -  solute carrier family 30 (zinc transporter), member 3<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022803&amp;view=details' target="_blank">GO:0022803</a><a name=0022803></a></td>
+<td>passive transmembrane transporter activity</td>
+<td  align=center>1.93E-4</td>
+<td  align=center>4.57E-2</td>
+<td  align=center>2.35 (16689,400,390,22)</td>
+<td>
+<a id="ctrl_elements_GO:0022803" href="javascript:toggle('elements_GO:0022803')">[+] Show genes</a><br>
+<div id="elements_GO:0022803" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015267&amp;view=details' target="_blank">GO:0015267</a><a name=0015267></a></td>
+<td>channel activity</td>
+<td  align=center>1.93E-4</td>
+<td  align=center>4.34E-2</td>
+<td  align=center>2.35 (16689,400,390,22)</td>
+<td>
+<a id="ctrl_elements_GO:0015267" href="javascript:toggle('elements_GO:0015267')">[+] Show genes</a><br>
+<div id="elements_GO:0015267" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005544&amp;view=details' target="_blank">GO:0005544</a><a name=0005544></a></td>
+<td>calcium-dependent phospholipid binding</td>
+<td  align=center>1.95E-4</td>
+<td  align=center>4.17E-2</td>
+<td  align=center>5.76 (16689,52,390,7)</td>
+<td>
+<a id="ctrl_elements_GO:0005544" href="javascript:toggle('elements_GO:0005544')">[+] Show genes</a><br>
+<div id="elements_GO:0005544" style="display:none"> <font size=1>
+Doc2a  -  double c2, alpha<br>
+Cpne5  -  copine v<br>
+Cpne7  -  copine vii<br>
+Cpne6  -  copine vi<br>
+Syt5  -  synaptotagmin v<br>
+Syt17  -  synaptotagmin xvii<br>
+Esyt3  -  extended synaptotagmin-like protein 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022890&amp;view=details' target="_blank">GO:0022890</a><a name=0022890></a></td>
+<td>inorganic cation transmembrane transporter activity</td>
+<td  align=center>2.11E-4</td>
+<td  align=center>4.31E-2</td>
+<td  align=center>2.16 (16689,516,390,26)</td>
+<td>
+<a id="ctrl_elements_GO:0022890" href="javascript:toggle('elements_GO:0022890')">[+] Show genes</a><br>
+<div id="elements_GO:0022890" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Slc30a3  -  solute carrier family 30 (zinc transporter), member 3<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Atp6v1d  -  atpase, h+ transporting, lysosomal v1 subunit d<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp6v1c2  -  atpase, h+ transporting, lysosomal v1 subunit c2<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Atp6v1a  -  atpase, h+ transporting, lysosomal v1 subunit a<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022843&amp;view=details' target="_blank">GO:0022843</a><a name=0022843></a></td>
+<td>voltage-gated cation channel activity</td>
+<td  align=center>2.23E-4</td>
+<td  align=center>4.36E-2</td>
+<td  align=center>3.65 (16689,129,390,11)</td>
+<td>
+<a id="ctrl_elements_GO:0022843" href="javascript:toggle('elements_GO:0022843')">[+] Show genes</a><br>
+<div id="elements_GO:0022843" style="display:none"> <font size=1>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015075&amp;view=details' target="_blank">GO:0015075</a><a name=0015075></a></td>
+<td>ion transmembrane transporter activity</td>
+<td  align=center>2.34E-4</td>
+<td  align=center>4.39E-2</td>
+<td  align=center>1.91 (16689,761,390,34)</td>
+<td>
+<a id="ctrl_elements_GO:0015075" href="javascript:toggle('elements_GO:0015075')">[+] Show genes</a><br>
+<div id="elements_GO:0015075" style="display:none"> <font size=1>
+Slc25a14  -  solute carrier family 25 (mitochondrial carrier, brain), member 14<br>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Slc7a14  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 14<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Slc7a4  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 4<br>
+Slc30a3  -  solute carrier family 30 (zinc transporter), member 3<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Atp6v1d  -  atpase, h+ transporting, lysosomal v1 subunit d<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp6v1c2  -  atpase, h+ transporting, lysosomal v1 subunit c2<br>
+Gpm6a  -  glycoprotein m6a<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Atp6v1a  -  atpase, h+ transporting, lysosomal v1 subunit a<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022832&amp;view=details' target="_blank">GO:0022832</a><a name=0022832></a></td>
+<td>voltage-gated channel activity</td>
+<td  align=center>2.74E-4</td>
+<td  align=center>4.93E-2</td>
+<td  align=center>3.14 (16689,177,390,13)</td>
+<td>
+<a id="ctrl_elements_GO:0022832" href="javascript:toggle('elements_GO:0022832')">[+] Show genes</a><br>
+<div id="elements_GO:0022832" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005244&amp;view=details' target="_blank">GO:0005244</a><a name=0005244></a></td>
+<td>voltage-gated ion channel activity</td>
+<td  align=center>2.74E-4</td>
+<td  align=center>4.74E-2</td>
+<td  align=center>3.14 (16689,177,390,13)</td>
+<td>
+<a id="ctrl_elements_GO:0005244" href="javascript:toggle('elements_GO:0005244')">[+] Show genes</a><br>
+<div id="elements_GO:0005244" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005516&amp;view=details' target="_blank">GO:0005516</a><a name=0005516></a></td>
+<td>calmodulin binding</td>
+<td  align=center>3.4E-4</td>
+<td  align=center>5.67E-2</td>
+<td  align=center>3.07 (16689,181,390,13)</td>
+<td>
+<a id="ctrl_elements_GO:0005516" href="javascript:toggle('elements_GO:0005516')">[+] Show genes</a><br>
+<div id="elements_GO:0005516" style="display:none"> <font size=1>
+Wfs1  -  wolfram syndrome 1 homolog (human)<br>
+Rasgrf2  -  ras protein-specific guanine nucleotide-releasing factor 2<br>
+Camkv  -  cam kinase-like vesicle-associated<br>
+Fbxl2  -  f-box and leucine-rich repeat protein 2<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Akap5  -  a kinase (prka) anchor protein 5<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Pde1a  -  phosphodiesterase 1a, calmodulin-dependent<br>
+Myh7  -  myosin, heavy polypeptide 7, cardiac muscle, beta<br>
+Pnck  -  pregnancy upregulated non-ubiquitously expressed cam kinase<br>
+Gap43  -  growth associated protein 43<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0038023&amp;view=details' target="_blank">GO:0038023</a><a name=0038023></a></td>
+<td>signaling receptor activity</td>
+<td  align=center>3.97E-4</td>
+<td  align=center>6.37E-2</td>
+<td  align=center>1.80 (16689,879,390,37)</td>
+<td>
+<a id="ctrl_elements_GO:0038023" href="javascript:toggle('elements_GO:0038023')">[+] Show genes</a><br>
+<div id="elements_GO:0038023" style="display:none"> <font size=1>
+Prnp  -  prion protein<br>
+Slc22a17  -  solute carrier family 22 (organic cation transporter), member 17<br>
+Trhr  -  thyrotropin releasing hormone receptor<br>
+Mas1  -  mas1 oncogene<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Gpr27  -  g protein-coupled receptor 27<br>
+Plxna2  -  plexin a2<br>
+Nlgn1  -  neuroligin 1<br>
+Nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+Oxtr  -  oxytocin receptor<br>
+Ltk  -  leukocyte tyrosine kinase<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gpr39  -  g protein-coupled receptor 39<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Gpr26  -  g protein-coupled receptor 26<br>
+Thrb  -  thyroid hormone receptor beta<br>
+Thra  -  thyroid hormone receptor alpha<br>
+Chrm1  -  cholinergic receptor, muscarinic 1, cns<br>
+Unc5a  -  unc-5 homolog a (c. elegans)<br>
+Htr2a  -  5-hydroxytryptamine (serotonin) receptor 2a<br>
+Unc5d  -  unc-5 homolog d (c. elegans)<br>
+Npy2r  -  neuropeptide y receptor y2<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Gpr101  -  g protein-coupled receptor 101<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Mchr1  -  melanin-concentrating hormone receptor 1<br>
+Gpr83  -  g protein-coupled receptor 83<br>
+Esr1  -  estrogen receptor 1 (alpha)<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Acvr2a  -  activin receptor iia<br>
+Plxnc1  -  plexin c1<br>
+Grm5  -  glutamate receptor, metabotropic 5<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Nptxr  -  neuronal pentraxin receptor<br>
+Gpr1  -  g protein-coupled receptor 1<br>
+Rxrg  -  retinoid x receptor gamma<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005261&amp;view=details' target="_blank">GO:0005261</a><a name=0005261></a></td>
+<td>cation channel activity</td>
+<td  align=center>4.07E-4</td>
+<td  align=center>6.31E-2</td>
+<td  align=center>2.55 (16689,285,390,17)</td>
+<td>
+<a id="ctrl_elements_GO:0005261" href="javascript:toggle('elements_GO:0005261')">[+] Show genes</a><br>
+<div id="elements_GO:0005261" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gpm6a  -  glycoprotein m6a<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070324&amp;view=details' target="_blank">GO:0070324</a><a name=0070324></a></td>
+<td>thyroid hormone binding</td>
+<td  align=center>4.13E-4</td>
+<td  align=center>6.19E-2</td>
+<td  align=center>18.34 (16689,7,390,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070324" href="javascript:toggle('elements_GO:0070324')">[+] Show genes</a><br>
+<div id="elements_GO:0070324" style="display:none"> <font size=1>
+Thrb  -  thyroid hormone receptor beta<br>
+Thra  -  thyroid hormone receptor alpha<br>
+Crym  -  crystallin, mu<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005237&amp;view=details' target="_blank">GO:0005237</a><a name=0005237></a></td>
+<td>inhibitory extracellular ligand-gated ion channel activity</td>
+<td  align=center>4.28E-4</td>
+<td  align=center>6.2E-2</td>
+<td  align=center>10.70 (16689,16,390,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005237" href="javascript:toggle('elements_GO:0005237')">[+] Show genes</a><br>
+<div id="elements_GO:0005237" style="display:none"> <font size=1>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042562&amp;view=details' target="_blank">GO:0042562</a><a name=0042562></a></td>
+<td>hormone binding</td>
+<td  align=center>4.42E-4</td>
+<td  align=center>6.21E-2</td>
+<td  align=center>3.97 (16689,97,390,9)</td>
+<td>
+<a id="ctrl_elements_GO:0042562" href="javascript:toggle('elements_GO:0042562')">[+] Show genes</a><br>
+<div id="elements_GO:0042562" style="display:none"> <font size=1>
+Thrb  -  thyroid hormone receptor beta<br>
+Thra  -  thyroid hormone receptor alpha<br>
+Esr1  -  estrogen receptor 1 (alpha)<br>
+Crhbp  -  corticotropin releasing hormone binding protein<br>
+Cdh13  -  cadherin 13<br>
+Oxtr  -  oxytocin receptor<br>
+Crym  -  crystallin, mu<br>
+C2cd2l  -  c2 calcium-dependent domain containing 2-like<br>
+Mchr1  -  melanin-concentrating hormone receptor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022857&amp;view=details' target="_blank">GO:0022857</a><a name=0022857></a></td>
+<td>transmembrane transporter activity</td>
+<td  align=center>4.48E-4</td>
+<td  align=center>6.1E-2</td>
+<td  align=center>1.77 (16689,917,390,38)</td>
+<td>
+<a id="ctrl_elements_GO:0022857" href="javascript:toggle('elements_GO:0022857')">[+] Show genes</a><br>
+<div id="elements_GO:0022857" style="display:none"> <font size=1>
+Slc22a17  -  solute carrier family 22 (organic cation transporter), member 17<br>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Slc25a14  -  solute carrier family 25 (mitochondrial carrier, brain), member 14<br>
+Slc7a14  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 14<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Sec61a2  -  sec61, alpha subunit 2 (s. cerevisiae)<br>
+Slc7a4  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 4<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Slc30a3  -  solute carrier family 30 (zinc transporter), member 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Atp6v1d  -  atpase, h+ transporting, lysosomal v1 subunit d<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Atp6v1c2  -  atpase, h+ transporting, lysosomal v1 subunit c2<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Sidt1  -  sid1 transmembrane family, member 1<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Atp6v1a  -  atpase, h+ transporting, lysosomal v1 subunit a<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022852&amp;view=details' target="_blank">GO:0022852</a><a name=0022852></a></td>
+<td>glycine-gated chloride ion channel activity</td>
+<td  align=center>5.45E-4</td>
+<td  align=center>7.2E-2</td>
+<td  align=center>42.79 (16689,2,390,2)</td>
+<td>
+<a id="ctrl_elements_GO:0022852" href="javascript:toggle('elements_GO:0022852')">[+] Show genes</a><br>
+<div id="elements_GO:0022852" style="display:none"> <font size=1>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005215&amp;view=details' target="_blank">GO:0005215</a><a name=0005215></a></td>
+<td>transporter activity</td>
+<td  align=center>6.24E-4</td>
+<td  align=center>8.01E-2</td>
+<td  align=center>1.71 (16689,999,390,40)</td>
+<td>
+<a id="ctrl_elements_GO:0005215" href="javascript:toggle('elements_GO:0005215')">[+] Show genes</a><br>
+<div id="elements_GO:0005215" style="display:none"> <font size=1>
+Slc22a17  -  solute carrier family 22 (organic cation transporter), member 17<br>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Slc25a14  -  solute carrier family 25 (mitochondrial carrier, brain), member 14<br>
+Slc7a14  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 14<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Gabrb3  -  gamma-aminobutyric acid (gaba) a receptor, subunit beta 3<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Sec61a2  -  sec61, alpha subunit 2 (s. cerevisiae)<br>
+Tnfaip8l3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br>
+Slc7a4  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 4<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Slc30a3  -  solute carrier family 30 (zinc transporter), member 3<br>
+Gabra2  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 2<br>
+Gabra3  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 3<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Atp6v1d  -  atpase, h+ transporting, lysosomal v1 subunit d<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Glra3  -  glycine receptor, alpha 3 subunit<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+C2cd2l  -  c2 calcium-dependent domain containing 2-like<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Atp6v1c2  -  atpase, h+ transporting, lysosomal v1 subunit c2<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Sidt1  -  sid1 transmembrane family, member 1<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Atp6v1a  -  atpase, h+ transporting, lysosomal v1 subunit a<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004862&amp;view=details' target="_blank">GO:0004862</a><a name=0004862></a></td>
+<td>cAMP-dependent protein kinase inhibitor activity</td>
+<td  align=center>6.5E-4</td>
+<td  align=center>8.12E-2</td>
+<td  align=center>16.05 (16689,8,390,3)</td>
+<td>
+<a id="ctrl_elements_GO:0004862" href="javascript:toggle('elements_GO:0004862')">[+] Show genes</a><br>
+<div id="elements_GO:0004862" style="display:none"> <font size=1>
+Pkig  -  protein kinase inhibitor, gamma<br>
+Prkar1b  -  protein kinase, camp dependent regulatory, type i beta<br>
+Prkar2b  -  protein kinase, camp dependent regulatory, type ii beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008324&amp;view=details' target="_blank">GO:0008324</a><a name=0008324></a></td>
+<td>cation transmembrane transporter activity</td>
+<td  align=center>8.28E-4</td>
+<td  align=center>1.01E-1</td>
+<td  align=center>1.97 (16689,565,390,26)</td>
+<td>
+<a id="ctrl_elements_GO:0008324" href="javascript:toggle('elements_GO:0008324')">[+] Show genes</a><br>
+<div id="elements_GO:0008324" style="display:none"> <font size=1>
+Kcng1  -  potassium voltage-gated channel, subfamily g, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Atp2b4  -  atpase, ca++ transporting, plasma membrane 4<br>
+Slc8a1  -  solute carrier family 8 (sodium/calcium exchanger), member 1<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Slc30a3  -  solute carrier family 30 (zinc transporter), member 3<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Atp6v1d  -  atpase, h+ transporting, lysosomal v1 subunit d<br>
+Trpc7  -  transient receptor potential cation channel, subfamily c, member 7<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnh3  -  potassium voltage-gated channel, subfamily h (eag-related), member 3<br>
+Cacna2d1  -  calcium channel, voltage-dependent, alpha2/delta subunit 1<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp6v1c2  -  atpase, h+ transporting, lysosomal v1 subunit c2<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Kcnj4  -  potassium inwardly-rectifying channel, subfamily j, member 4<br>
+Grik5  -  glutamate receptor, ionotropic, kainate 5 (gamma 2)<br>
+Cacnb1  -  calcium channel, voltage-dependent, beta 1 subunit<br>
+Scn3a  -  sodium channel, voltage-gated, type iii, alpha<br>
+Atp6v1a  -  atpase, h+ transporting, lysosomal v1 subunit a<br>
+Cacnb3  -  calcium channel, voltage-dependent, beta 3 subunit<br>
+Kcnip2  -  kv channel-interacting protein 2<br>
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br>
+Grin2b  -  glutamate receptor, ionotropic, nmda2b (epsilon 2)<br>
+Scn3b  -  sodium channel, voltage-gated, type iii, beta<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 18342 genes out of 21372 gene terms entered by the user.<br> 18342 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>415 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 17927 genes.<br>Only 16689 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 4496 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,2623 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='407,109,479,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='13,334,115,397' HREF='#0097367' ALT=''>
+<AREA SHAPE='RECT' COORDS='652,221,780,269' HREF='#0044877' ALT=''>
+<AREA SHAPE='RECT' COORDS='264,214,371,277' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='515,221,597,269' HREF='#0043167' ALT=''>
+<AREA SHAPE='RECT' COORDS='141,341,253,389' HREF='#0036094' ALT=''>
+<AREA SHAPE='RECT' COORDS='395,214,491,277' HREF='#1901363' ALT=''>
+<AREA SHAPE='RECT' COORDS='155,469,240,517' HREF='#0000166' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,589,112,637' HREF='#0032553' ALT=''>
+<AREA SHAPE='RECT' COORDS='136,589,259,637' HREF='#0017076' ALT=''>
+<AREA SHAPE='RECT' COORDS='451,462,597,525' HREF='#0035639' ALT=''>
+<AREA SHAPE='RECT' COORDS='1091,214,1181,277' HREF='#0003735' ALT=''>
+<AREA SHAPE='RECT' COORDS='945,5,832,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='847,102,929,165' HREF='#0098772' ALT=''>
+<AREA SHAPE='RECT' COORDS='965,109,1040,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='1089,102,1169,165' HREF='#0005198' ALT=''>
+<AREA SHAPE='RECT' COORDS='579,589,677,637' HREF='#0019843' ALT=''>
+<AREA SHAPE='RECT' COORDS='571,694,685,757' HREF='#0070180' ALT=''>
+<AREA SHAPE='RECT' COORDS='665,341,788,389' HREF='#0043021' ALT=''>
+<AREA SHAPE='RECT' COORDS='819,221,944,269' HREF='#0030234' ALT=''>
+<AREA SHAPE='RECT' COORDS='277,334,365,397' HREF='#1901265' ALT=''>
+<AREA SHAPE='RECT' COORDS='389,341,483,389' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='965,453,1083,533' HREF='#0055105' ALT=''>
+<AREA SHAPE='RECT' COORDS='992,582,1101,645' HREF='#1990948' ALT=''>
+<AREA SHAPE='RECT' COORDS='507,341,605,389' HREF='#0043168' ALT=''>
+<AREA SHAPE='RECT' COORDS='968,221,1067,269' HREF='#0016874' ALT=''>
+<AREA SHAPE='RECT' COORDS='328,805,443,853' HREF='#0003688' ALT=''>
+<AREA SHAPE='RECT' COORDS='621,469,715,517' HREF='#0003723' ALT=''>
+<AREA SHAPE='RECT' COORDS='333,469,427,517' HREF='#0003677' ALT=''>
+<AREA SHAPE='RECT' COORDS='88,701,232,749' HREF='#0032555' ALT=''>
+<AREA SHAPE='RECT' COORDS='840,589,968,637' HREF='#1990446' ALT=''>
+<AREA SHAPE='RECT' COORDS='823,325,940,405' HREF='#0055106' ALT=''>
+<AREA SHAPE='RECT' COORDS='964,341,1084,389' HREF='#0004857' ALT=''>
+<AREA SHAPE='RECT' COORDS='320,694,451,757' HREF='#1990837' ALT=''>
+<AREA SHAPE='RECT' COORDS='701,589,816,637' HREF='#0030515' ALT=''>
+<AREA SHAPE='RECT' COORDS='771,469,877,517' HREF='#0070990' ALT=''>
+<AREA SHAPE='RECT' COORDS='283,589,413,637' HREF='#0043565' ALT=''>
+<AREA SHAPE='RECT' COORDS='437,589,555,637' HREF='#0003690' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003735&amp;view=details' target="_blank">GO:0003735</a><a name=0003735></a></td>
+<td>structural constituent of ribosome</td>
+<td  align=center>9.14E-33</td>
+<td  align=center>4.14E-29</td>
+<td  align=center>7.66 (15889,134,805,52)</td>
+<td>
+<a id="ctrl_elements_GO:0003735" href="javascript:toggle('elements_GO:0003735')">[+] Show genes</a><br>
+<div id="elements_GO:0003735" style="display:none"> <font size=1>
+RPL24  -  ribosomal protein l24<br>
+RPL22  -  ribosomal protein l22<br>
+RPL19  -  ribosomal protein l19<br>
+RPL18  -  ribosomal protein l18<br>
+RPL15  -  ribosomal protein l15<br>
+RPL12  -  ribosomal protein l12<br>
+RPL11  -  ribosomal protein l11<br>
+RPL10  -  ribosomal protein l10<br>
+RPL5  -  ribosomal protein l5<br>
+RPS4X  -  ribosomal protein s4, x-linked<br>
+RPL35  -  ribosomal protein l35<br>
+RPS5  -  ribosomal protein s5<br>
+RPS3  -  ribosomal protein s3<br>
+RPLP1  -  ribosomal protein, large, p1<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+MRPS2  -  mitochondrial ribosomal protein s2<br>
+RPL37A  -  ribosomal protein l37a<br>
+RPL38  -  ribosomal protein l38<br>
+RPL34  -  ribosomal protein l34<br>
+RPL35A  -  ribosomal protein l35a<br>
+RPL37  -  ribosomal protein l37<br>
+RPL29  -  ribosomal protein l29<br>
+RPL31  -  ribosomal protein l31<br>
+RPL32  -  ribosomal protein l32<br>
+RPL36  -  ribosomal protein l36<br>
+RPL30  -  ribosomal protein l30<br>
+RPS24  -  ribosomal protein s24<br>
+RPS23  -  ribosomal protein s23<br>
+RPS21  -  ribosomal protein s21<br>
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
+RPS27A  -  ribosomal protein s27a<br>
+MRPL30  -  mitochondrial ribosomal protein l30<br>
+RPS16  -  ribosomal protein s16<br>
+RPL14  -  ribosomal protein l14<br>
+RPS19  -  ribosomal protein s19<br>
+MRPS25  -  mitochondrial ribosomal protein s25<br>
+RPS10  -  ribosomal protein s10<br>
+MRPS9  -  mitochondrial ribosomal protein s9<br>
+RPS14  -  ribosomal protein s14<br>
+MRPL42  -  mitochondrial ribosomal protein l42<br>
+MRPS30  -  mitochondrial ribosomal protein s30<br>
+RPS15  -  ribosomal protein s15<br>
+RPS12  -  ribosomal protein s12<br>
+RPS6  -  ribosomal protein s6<br>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+RPS7  -  ribosomal protein s7<br>
+MRPL34  -  mitochondrial ribosomal protein l34<br>
+MRPL10  -  mitochondrial ribosomal protein l10<br>
+RPL39L  -  ribosomal protein l39-like<br>
+MRPS34  -  mitochondrial ribosomal protein s34<br>
+RPL10A  -  ribosomal protein l10a<br>
+RPS29  -  ribosomal protein s29<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003723&amp;view=details' target="_blank">GO:0003723</a><a name=0003723></a></td>
+<td>RNA binding</td>
+<td  align=center>8.58E-16</td>
+<td  align=center>1.94E-12</td>
+<td  align=center>1.94 (15889,1492,805,147)</td>
+<td>
+<a id="ctrl_elements_GO:0003723" href="javascript:toggle('elements_GO:0003723')">[+] Show genes</a><br>
+<div id="elements_GO:0003723" style="display:none"> <font size=1>
+EXOSC5  -  exosome component 5<br>
+EXOSC9  -  exosome component 9<br>
+MKRN1  -  makorin ring finger protein 1<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+NCL  -  nucleolin<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+SOGA2  -  soga family member 2<br>
+CEBPZ  -  ccaat/enhancer binding protein (c/ebp), zeta<br>
+SIN3A  -  sin3 transcription regulator family member a<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+DTD1  -  d-tyrosyl-trna deacylase 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+SCG3  -  secretogranin iii<br>
+IMPDH2  -  imp (inosine 5'-monophosphate) dehydrogenase 2<br>
+BTF3  -  basic transcription factor 3<br>
+ENO1  -  enolase 1, (alpha)<br>
+THUMPD3  -  thump domain containing 3<br>
+KNOP1  -  lysine-rich nucleolar protein 1<br>
+MIF4GD  -  mif4g domain containing<br>
+RPL35  -  ribosomal protein l35<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+FKBP4  -  fk506 binding protein 4, 59kda<br>
+FKBP3  -  fk506 binding protein 3, 25kda<br>
+LSM2  -  lsm2 homolog, u6 small nuclear rna associated (s. cerevisiae)<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+ESRP1  -  epithelial splicing regulatory protein 1<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+PDCD11  -  programmed cell death 11<br>
+RPL36  -  ribosomal protein l36<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+CNOT1  -  ccr4-not transcription complex, subunit 1<br>
+RBPMS2  -  rna binding protein with multiple splicing 2<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+LRRC47  -  leucine rich repeat containing 47<br>
+SNRPD2  -  small nuclear ribonucleoprotein d2 polypeptide 16.5kda<br>
+DCP2  -  decapping mrna 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+JAKMIP1  -  janus kinase and microtubule interacting protein 1<br>
+SNRPA  -  small nuclear ribonucleoprotein polypeptide a<br>
+SLIRP  -  sra stem-loop interacting rna binding protein<br>
+SNRPB  -  small nuclear ribonucleoprotein polypeptides b and b1<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PSIP1  -  pc4 and sfrs1 interacting protein 1<br>
+MRPS30  -  mitochondrial ribosomal protein s30<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+CPSF2  -  cleavage and polyadenylation specific factor 2, 100kda<br>
+DARS  -  aspartyl-trna synthetase<br>
+XPO5  -  exportin 5<br>
+HRSP12  -  heat-responsive protein 12<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+RNASET2  -  ribonuclease t2<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+HEATR1  -  heat repeat containing 1<br>
+LIN28B  -  lin-28 homolog b (c. elegans)<br>
+NUDT5  -  nudix (nucleoside diphosphate linked moiety x)-type motif 5<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+YBX2  -  y box binding protein 2<br>
+HDAC2  -  histone deacetylase 2<br>
+USO1  -  uso1 vesicle transport factor<br>
+YBX1  -  y box binding protein 1<br>
+RCC2  -  regulator of chromosome condensation 2<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+SERBP1  -  serpine1 mrna binding protein 1<br>
+RPL24  -  ribosomal protein l24<br>
+RPL22  -  ribosomal protein l22<br>
+RPL19  -  ribosomal protein l19<br>
+RPL18  -  ribosomal protein l18<br>
+RPL15  -  ribosomal protein l15<br>
+RPL12  -  ribosomal protein l12<br>
+KDM2B  -  lysine (k)-specific demethylase 2b<br>
+RPL11  -  ribosomal protein l11<br>
+RPL10  -  ribosomal protein l10<br>
+NOVA2  -  neuro-oncological ventral antigen 2<br>
+RPL5  -  ribosomal protein l5<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+TRIM71  -  tripartite motif containing 71, e3 ubiquitin protein ligase<br>
+AGO1  -  argonaute risc catalytic component 1<br>
+NUDT1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br>
+RPS4X  -  ribosomal protein s4, x-linked<br>
+L1TD1  -  line-1 type transposase domain containing 1<br>
+RPS5  -  ribosomal protein s5<br>
+STRBP  -  spermatid perinuclear rna binding protein<br>
+USP10  -  ubiquitin specific peptidase 10<br>
+RPS3  -  ribosomal protein s3<br>
+IPO5  -  importin 5<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+RPL37A  -  ribosomal protein l37a<br>
+RPL38  -  ribosomal protein l38<br>
+APOBEC3H  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3h<br>
+RPL34  -  ribosomal protein l34<br>
+RPL35A  -  ribosomal protein l35a<br>
+RPL37  -  ribosomal protein l37<br>
+DIDO1  -  death inducer-obliterator 1<br>
+RPL29  -  ribosomal protein l29<br>
+RPL31  -  ribosomal protein l31<br>
+RPL32  -  ribosomal protein l32<br>
+PRRC2A  -  proline-rich coiled-coil 2a<br>
+RPL30  -  ribosomal protein l30<br>
+PPP1CC  -  protein phosphatase 1, catalytic subunit, gamma isozyme<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+RPS24  -  ribosomal protein s24<br>
+RPS23  -  ribosomal protein s23<br>
+RPS21  -  ribosomal protein s21<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+BARD1  -  brca1 associated ring domain 1<br>
+RAN  -  ran, member ras oncogene family<br>
+RPS27A  -  ribosomal protein s27a<br>
+TDRKH  -  tudor and kh domain containing<br>
+LTA4H  -  leukotriene a4 hydrolase<br>
+FBL  -  fibrillarin<br>
+NPM3  -  nucleophosmin/nucleoplasmin 3<br>
+RPL14  -  ribosomal protein l14<br>
+RPS16  -  ribosomal protein s16<br>
+TERT  -  telomerase reverse transcriptase<br>
+RPS19  -  ribosomal protein s19<br>
+RPS10  -  ribosomal protein s10<br>
+CLNS1A  -  chloride channel, nucleotide-sensitive, 1a<br>
+MIR296  -  microrna 296<br>
+MRPL42  -  mitochondrial ribosomal protein l42<br>
+MRPS9  -  mitochondrial ribosomal protein s9<br>
+RPS14  -  ribosomal protein s14<br>
+RPS15  -  ribosomal protein s15<br>
+RPS12  -  ribosomal protein s12<br>
+RBFOX3  -  rna binding protein, fox-1 homolog (c. elegans) 3<br>
+RPS6  -  ribosomal protein s6<br>
+NHP2  -  nhp2 ribonucleoprotein<br>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+RPS7  -  ribosomal protein s7<br>
+IMP3  -  imp3, u3 small nucleolar ribonucleoprotein, homolog (yeast)<br>
+MRPL10  -  mitochondrial ribosomal protein l10<br>
+TRDMT1  -  trna aspartic acid methyltransferase 1<br>
+PRDM14  -  pr domain containing 14<br>
+STAU2  -  staufen double-stranded rna binding protein 2<br>
+LARP7  -  la ribonucleoprotein domain family, member 7<br>
+RPL10A  -  ribosomal protein l10a<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+RRP12  -  ribosomal rna processing 12 homolog (s. cerevisiae)<br>
+ZFR2  -  zinc finger rna binding protein 2<br>
+SLC25A5  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 5<br>
+MYEF2  -  myelin expression factor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097159&amp;view=details' target="_blank">GO:0097159</a><a name=0097159></a></td>
+<td>organic cyclic compound binding</td>
+<td  align=center>1.12E-10</td>
+<td  align=center>1.69E-7</td>
+<td  align=center>1.32 (15889,5201,805,348)</td>
+<td>
+<a id="ctrl_elements_GO:0097159" href="javascript:toggle('elements_GO:0097159')">[+] Show genes</a><br>
+<div id="elements_GO:0097159" style="display:none"> <font size=1>
+EXOSC5  -  exosome component 5<br>
+EXOSC9  -  exosome component 9<br>
+MKRN1  -  makorin ring finger protein 1<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+TRIM24  -  tripartite motif containing 24<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+NCL  -  nucleolin<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+CDT1  -  chromatin licensing and dna replication factor 1<br>
+CEBPZ  -  ccaat/enhancer binding protein (c/ebp), zeta<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DTD1  -  d-tyrosyl-trna deacylase 1<br>
+SPIB  -  spi-b transcription factor (spi-1/pu.1 related)<br>
+RET  -  ret proto-oncogene<br>
+SCG3  -  secretogranin iii<br>
+REST  -  re1-silencing transcription factor<br>
+BTF3  -  basic transcription factor 3<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+ENO1  -  enolase 1, (alpha)<br>
+KNOP1  -  lysine-rich nucleolar protein 1<br>
+SP4  -  sp4 transcription factor<br>
+CYP2S1  -  cytochrome p450, family 2, subfamily s, polypeptide 1<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+MYO10  -  myosin x<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+PLK1  -  polo-like kinase 1<br>
+HPRT1  -  hypoxanthine phosphoribosyltransferase 1<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+PROM1  -  prominin 1<br>
+LSM2  -  lsm2 homolog, u6 small nuclear rna associated (s. cerevisiae)<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+NACA  -  nascent polypeptide-associated complex alpha subunit<br>
+ESRP1  -  epithelial splicing regulatory protein 1<br>
+ORC3  -  origin recognition complex, subunit 3<br>
+GTPBP1  -  gtp binding protein 1<br>
+RND2  -  rho family gtpase 2<br>
+CREBL2  -  camp responsive element binding protein-like 2<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+DSCC1  -  dna replication and sister chromatid cohesion 1<br>
+PDCD11  -  programmed cell death 11<br>
+CNOT1  -  ccr4-not transcription complex, subunit 1<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+SNRPD2  -  small nuclear ribonucleoprotein d2 polypeptide 16.5kda<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+ZNF814  -  zinc finger protein 814<br>
+SNRPA  -  small nuclear ribonucleoprotein polypeptide a<br>
+RNF138  -  ring finger protein 138, e3 ubiquitin protein ligase<br>
+SLIRP  -  sra stem-loop interacting rna binding protein<br>
+SNRPB  -  small nuclear ribonucleoprotein polypeptides b and b1<br>
+GLI1  -  gli family zinc finger 1<br>
+ZNF589  -  zinc finger protein 589<br>
+HTR3A  -  5-hydroxytryptamine (serotonin) receptor 3a, ionotropic<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+MRPS30  -  mitochondrial ribosomal protein s30<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+HRSP12  -  heat-responsive protein 12<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+RORA  -  rar-related orphan receptor a<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+FOXH1  -  forkhead box h1<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+POU2F1  -  pou class 2 homeobox 1<br>
+TIMELESS  -  timeless circadian clock<br>
+NANOG  -  nanog homeobox<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+LDHD  -  lactate dehydrogenase d<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+ADRA2A  -  adrenoceptor alpha 2a<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+RPL24  -  ribosomal protein l24<br>
+OGDHL  -  oxoglutarate dehydrogenase-like<br>
+SYN2  -  synapsin ii<br>
+POLR1B  -  polymerase (rna) i polypeptide b, 128kda<br>
+RPL22  -  ribosomal protein l22<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+RPL19  -  ribosomal protein l19<br>
+RPL18  -  ribosomal protein l18<br>
+RPL15  -  ribosomal protein l15<br>
+RPL12  -  ribosomal protein l12<br>
+KDM2B  -  lysine (k)-specific demethylase 2b<br>
+RPL11  -  ribosomal protein l11<br>
+KIF5A  -  kinesin family member 5a<br>
+RPL10  -  ribosomal protein l10<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+RPL5  -  ribosomal protein l5<br>
+CTBP2  -  c-terminal binding protein 2<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+NR5A2  -  nuclear receptor subfamily 5, group a, member 2<br>
+BPTF  -  bromodomain phd finger transcription factor<br>
+RPA3  -  replication protein a3, 14kda<br>
+AGO1  -  argonaute risc catalytic component 1<br>
+NUDT1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br>
+ZBTB3  -  zinc finger and btb domain containing 3<br>
+RPS4X  -  ribosomal protein s4, x-linked<br>
+CALB1  -  calbindin 1, 28kda<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+RPS5  -  ribosomal protein s5<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+ETV4  -  ets variant 4<br>
+RPS3  -  ribosomal protein s3<br>
+IPO5  -  importin 5<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+CBX2  -  chromobox homolog 2<br>
+RPL37A  -  ribosomal protein l37a<br>
+RPL38  -  ribosomal protein l38<br>
+ALDH1B1  -  aldehyde dehydrogenase 1 family, member b1<br>
+APOBEC3H  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3h<br>
+RPL34  -  ribosomal protein l34<br>
+RPL35A  -  ribosomal protein l35a<br>
+RPL37  -  ribosomal protein l37<br>
+DIDO1  -  death inducer-obliterator 1<br>
+ZNF770  -  zinc finger protein 770<br>
+RPL29  -  ribosomal protein l29<br>
+RPL31  -  ribosomal protein l31<br>
+RPL32  -  ribosomal protein l32<br>
+PRRC2A  -  proline-rich coiled-coil 2a<br>
+TGIF2  -  tgfb-induced factor homeobox 2<br>
+RPL30  -  ribosomal protein l30<br>
+PPP1CC  -  protein phosphatase 1, catalytic subunit, gamma isozyme<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+BCL6B  -  b-cell cll/lymphoma 6, member b<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+RPS24  -  ribosomal protein s24<br>
+RPS23  -  ribosomal protein s23<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+RPS21  -  ribosomal protein s21<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+KLF15  -  kruppel-like factor 15<br>
+RPS27A  -  ribosomal protein s27a<br>
+TDRKH  -  tudor and kh domain containing<br>
+FBL  -  fibrillarin<br>
+NPM3  -  nucleophosmin/nucleoplasmin 3<br>
+JARID2  -  jumonji, at rich interactive domain 2<br>
+RPS16  -  ribosomal protein s16<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+RPS19  -  ribosomal protein s19<br>
+RPS10  -  ribosomal protein s10<br>
+MIR296  -  microrna 296<br>
+MRPS9  -  mitochondrial ribosomal protein s9<br>
+RPS14  -  ribosomal protein s14<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+MRPL42  -  mitochondrial ribosomal protein l42<br>
+RPS15  -  ribosomal protein s15<br>
+RPS12  -  ribosomal protein s12<br>
+PRKX  -  protein kinase, x-linked<br>
+SALL4  -  sal-like 4 (drosophila)<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+ETV1  -  ets variant 1<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+RPS6  -  ribosomal protein s6<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+RPS7  -  ribosomal protein s7<br>
+NHP2  -  nhp2 ribonucleoprotein<br>
+PHF20  -  phd finger protein 20<br>
+FOXA3  -  forkhead box a3<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+MRPL10  -  mitochondrial ribosomal protein l10<br>
+METTL5  -  methyltransferase like 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+OSBPL6  -  oxysterol binding protein-like 6<br>
+RRP12  -  ribosomal rna processing 12 homolog (s. cerevisiae)<br>
+GAPDH  -  glyceraldehyde-3-phosphate dehydrogenase<br>
+ZFR2  -  zinc finger rna binding protein 2<br>
+PRKCG  -  protein kinase c, gamma<br>
+HMGA1  -  high mobility group at-hook 1<br>
+LHX6  -  lim homeobox 6<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+KIF2C  -  kinesin family member 2c<br>
+SLC25A5  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 5<br>
+ZSCAN10  -  zinc finger and scan domain containing 10<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+NKX1-2  -  nk1 homeobox 2<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+SOGA2  -  soga family member 2<br>
+TOX3  -  tox high mobility group box family member 3<br>
+NLRX1  -  nlr family member x1<br>
+SIN3A  -  sin3 transcription regulator family member a<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+SET  -  set nuclear oncogene<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+IMPDH2  -  imp (inosine 5'-monophosphate) dehydrogenase 2<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+THUMPD3  -  thump domain containing 3<br>
+MARC1  -  mitochondrial amidoxime reducing component 1<br>
+MIF4GD  -  mif4g domain containing<br>
+CYCS  -  cytochrome c, somatic<br>
+RPL35  -  ribosomal protein l35<br>
+ZNF134  -  zinc finger protein 134<br>
+ZNF766  -  zinc finger protein 766<br>
+AR  -  androgen receptor<br>
+FKBP4  -  fk506 binding protein 4, 59kda<br>
+FKBP3  -  fk506 binding protein 3, 25kda<br>
+MND1  -  meiotic nuclear divisions 1 homolog (s. cerevisiae)<br>
+ZNF121  -  zinc finger protein 121<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+CHEK2  -  checkpoint kinase 2<br>
+ZNF551  -  zinc finger protein 551<br>
+ZNF532  -  zinc finger protein 532<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+ZNF90  -  zinc finger protein 90<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+FKBP1B  -  fk506 binding protein 1b, 12.6 kda<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+MAFA  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog a<br>
+RPL36  -  ribosomal protein l36<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+POLR3K  -  polymerase (rna) iii (dna directed) polypeptide k, 12.3 kda<br>
+RBPMS2  -  rna binding protein with multiple splicing 2<br>
+LRRC47  -  leucine rich repeat containing 47<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+DCP2  -  decapping mrna 2<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+PTCH1  -  patched 1<br>
+NTHL1  -  nth endonuclease iii-like 1 (e. coli)<br>
+JAKMIP1  -  janus kinase and microtubule interacting protein 1<br>
+ZNF678  -  zinc finger protein 678<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PSIP1  -  pc4 and sfrs1 interacting protein 1<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+WDHD1  -  wd repeat and hmg-box dna binding protein 1<br>
+SOX21  -  sry (sex determining region y)-box 21<br>
+CDX4  -  caudal type homeobox 4<br>
+CPSF2  -  cleavage and polyadenylation specific factor 2, 100kda<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+CUX2  -  cut-like homeobox 2<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+OLIG3  -  oligodendrocyte transcription factor 3<br>
+DARS  -  aspartyl-trna synthetase<br>
+ZFP42  -  zfp42 zinc finger protein<br>
+XPO5  -  exportin 5<br>
+RNASET2  -  ribonuclease t2<br>
+HEATR1  -  heat repeat containing 1<br>
+LIN28B  -  lin-28 homolog b (c. elegans)<br>
+NUDT5  -  nudix (nucleoside diphosphate linked moiety x)-type motif 5<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+MTA3  -  metastasis associated 1 family, member 3<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+KLF7  -  kruppel-like factor 7 (ubiquitous)<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+HDAC2  -  histone deacetylase 2<br>
+USO1  -  uso1 vesicle transport factor<br>
+MYO5C  -  myosin vc<br>
+YBX1  -  y box binding protein 1<br>
+RCC2  -  regulator of chromosome condensation 2<br>
+SALL2  -  sal-like 2 (drosophila)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+TCEA1  -  transcription elongation factor a (sii), 1<br>
+NQO2  -  nad(p)h dehydrogenase, quinone 2<br>
+SERBP1  -  serpine1 mrna binding protein 1<br>
+ZNF398  -  zinc finger protein 398<br>
+DRD4  -  dopamine receptor d4<br>
+RTBDN  -  retbindin<br>
+NOS1  -  nitric oxide synthase 1 (neuronal)<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+NOVA2  -  neuro-oncological ventral antigen 2<br>
+SLC16A1  -  solute carrier family 16 (monocarboxylate transporter), member 1<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+ZNF581  -  zinc finger protein 581<br>
+TRIM71  -  tripartite motif containing 71, e3 ubiquitin protein ligase<br>
+FOXN3  -  forkhead box n3<br>
+L1TD1  -  line-1 type transposase domain containing 1<br>
+STRBP  -  spermatid perinuclear rna binding protein<br>
+TOX  -  thymocyte selection-associated high mobility group box<br>
+USP10  -  ubiquitin specific peptidase 10<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+ZIC5  -  zic family member 5<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+BARD1  -  brca1 associated ring domain 1<br>
+CTPS2  -  ctp synthase 2<br>
+LTA4H  -  leukotriene a4 hydrolase<br>
+RPL14  -  ribosomal protein l14<br>
+OARD1  -  o-acyl-adp-ribose deacylase 1<br>
+ZNF721  -  zinc finger protein 721<br>
+TERT  -  telomerase reverse transcriptase<br>
+CLNS1A  -  chloride channel, nucleotide-sensitive, 1a<br>
+TFDP2  -  transcription factor dp-2 (e2f dimerization partner 2)<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+RBFOX3  -  rna binding protein, fox-1 homolog (c. elegans) 3<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+FOXB1  -  forkhead box b1<br>
+VRTN  -  vertebrae development associated<br>
+IMP3  -  imp3, u3 small nucleolar ribonucleoprotein, homolog (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+TRDMT1  -  trna aspartic acid methyltransferase 1<br>
+PRDM14  -  pr domain containing 14<br>
+ZIC2  -  zic family member 2<br>
+ZIC3  -  zic family member 3<br>
+STAU2  -  staufen double-stranded rna binding protein 2<br>
+LARP7  -  la ribonucleoprotein domain family, member 7<br>
+RPL10A  -  ribosomal protein l10a<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+CKB  -  creatine kinase, brain<br>
+MYEF2  -  myelin expression factor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901363&amp;view=details' target="_blank">GO:1901363</a><a name=1901363></a></td>
+<td>heterocyclic compound binding</td>
+<td  align=center>5.02E-10</td>
+<td  align=center>5.68E-7</td>
+<td  align=center>1.31 (15889,5130,805,341)</td>
+<td>
+<a id="ctrl_elements_GO:1901363" href="javascript:toggle('elements_GO:1901363')">[+] Show genes</a><br>
+<div id="elements_GO:1901363" style="display:none"> <font size=1>
+EXOSC5  -  exosome component 5<br>
+EXOSC9  -  exosome component 9<br>
+MKRN1  -  makorin ring finger protein 1<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+TRIM24  -  tripartite motif containing 24<br>
+NCL  -  nucleolin<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+CDT1  -  chromatin licensing and dna replication factor 1<br>
+CEBPZ  -  ccaat/enhancer binding protein (c/ebp), zeta<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DTD1  -  d-tyrosyl-trna deacylase 1<br>
+SPIB  -  spi-b transcription factor (spi-1/pu.1 related)<br>
+SCG3  -  secretogranin iii<br>
+RET  -  ret proto-oncogene<br>
+REST  -  re1-silencing transcription factor<br>
+BTF3  -  basic transcription factor 3<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+ENO1  -  enolase 1, (alpha)<br>
+KNOP1  -  lysine-rich nucleolar protein 1<br>
+SP4  -  sp4 transcription factor<br>
+CYP2S1  -  cytochrome p450, family 2, subfamily s, polypeptide 1<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+MYO10  -  myosin x<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+PLK1  -  polo-like kinase 1<br>
+HPRT1  -  hypoxanthine phosphoribosyltransferase 1<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+LSM2  -  lsm2 homolog, u6 small nuclear rna associated (s. cerevisiae)<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+NACA  -  nascent polypeptide-associated complex alpha subunit<br>
+ESRP1  -  epithelial splicing regulatory protein 1<br>
+ORC3  -  origin recognition complex, subunit 3<br>
+GTPBP1  -  gtp binding protein 1<br>
+RND2  -  rho family gtpase 2<br>
+CREBL2  -  camp responsive element binding protein-like 2<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+DSCC1  -  dna replication and sister chromatid cohesion 1<br>
+PDCD11  -  programmed cell death 11<br>
+CNOT1  -  ccr4-not transcription complex, subunit 1<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+SNRPD2  -  small nuclear ribonucleoprotein d2 polypeptide 16.5kda<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+ZNF814  -  zinc finger protein 814<br>
+SNRPA  -  small nuclear ribonucleoprotein polypeptide a<br>
+RNF138  -  ring finger protein 138, e3 ubiquitin protein ligase<br>
+SLIRP  -  sra stem-loop interacting rna binding protein<br>
+SNRPB  -  small nuclear ribonucleoprotein polypeptides b and b1<br>
+GLI1  -  gli family zinc finger 1<br>
+ZNF589  -  zinc finger protein 589<br>
+HTR3A  -  5-hydroxytryptamine (serotonin) receptor 3a, ionotropic<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+MRPS30  -  mitochondrial ribosomal protein s30<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+HRSP12  -  heat-responsive protein 12<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+RORA  -  rar-related orphan receptor a<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+FOXH1  -  forkhead box h1<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+POU2F1  -  pou class 2 homeobox 1<br>
+TIMELESS  -  timeless circadian clock<br>
+NANOG  -  nanog homeobox<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+LDHD  -  lactate dehydrogenase d<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+RPL24  -  ribosomal protein l24<br>
+OGDHL  -  oxoglutarate dehydrogenase-like<br>
+SYN2  -  synapsin ii<br>
+POLR1B  -  polymerase (rna) i polypeptide b, 128kda<br>
+RPL22  -  ribosomal protein l22<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+RPL19  -  ribosomal protein l19<br>
+RPL18  -  ribosomal protein l18<br>
+RPL15  -  ribosomal protein l15<br>
+RPL12  -  ribosomal protein l12<br>
+KDM2B  -  lysine (k)-specific demethylase 2b<br>
+RPL11  -  ribosomal protein l11<br>
+KIF5A  -  kinesin family member 5a<br>
+RPL10  -  ribosomal protein l10<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+RPL5  -  ribosomal protein l5<br>
+CTBP2  -  c-terminal binding protein 2<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+NR5A2  -  nuclear receptor subfamily 5, group a, member 2<br>
+BPTF  -  bromodomain phd finger transcription factor<br>
+RPA3  -  replication protein a3, 14kda<br>
+AGO1  -  argonaute risc catalytic component 1<br>
+NUDT1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br>
+ZBTB3  -  zinc finger and btb domain containing 3<br>
+RPS4X  -  ribosomal protein s4, x-linked<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+RPS5  -  ribosomal protein s5<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+ETV4  -  ets variant 4<br>
+RPS3  -  ribosomal protein s3<br>
+IPO5  -  importin 5<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+CBX2  -  chromobox homolog 2<br>
+RPL37A  -  ribosomal protein l37a<br>
+RPL38  -  ribosomal protein l38<br>
+APOBEC3H  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3h<br>
+ALDH1B1  -  aldehyde dehydrogenase 1 family, member b1<br>
+RPL34  -  ribosomal protein l34<br>
+RPL35A  -  ribosomal protein l35a<br>
+RPL37  -  ribosomal protein l37<br>
+DIDO1  -  death inducer-obliterator 1<br>
+ZNF770  -  zinc finger protein 770<br>
+RPL29  -  ribosomal protein l29<br>
+RPL31  -  ribosomal protein l31<br>
+RPL32  -  ribosomal protein l32<br>
+PRRC2A  -  proline-rich coiled-coil 2a<br>
+TGIF2  -  tgfb-induced factor homeobox 2<br>
+RPL30  -  ribosomal protein l30<br>
+PPP1CC  -  protein phosphatase 1, catalytic subunit, gamma isozyme<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+BCL6B  -  b-cell cll/lymphoma 6, member b<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+RPS24  -  ribosomal protein s24<br>
+RPS23  -  ribosomal protein s23<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+RPS21  -  ribosomal protein s21<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+KLF15  -  kruppel-like factor 15<br>
+RPS27A  -  ribosomal protein s27a<br>
+TDRKH  -  tudor and kh domain containing<br>
+FBL  -  fibrillarin<br>
+NPM3  -  nucleophosmin/nucleoplasmin 3<br>
+JARID2  -  jumonji, at rich interactive domain 2<br>
+RPS16  -  ribosomal protein s16<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+RPS19  -  ribosomal protein s19<br>
+RPS10  -  ribosomal protein s10<br>
+MIR296  -  microrna 296<br>
+MRPS9  -  mitochondrial ribosomal protein s9<br>
+RPS14  -  ribosomal protein s14<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+MRPL42  -  mitochondrial ribosomal protein l42<br>
+RPS15  -  ribosomal protein s15<br>
+RPS12  -  ribosomal protein s12<br>
+PRKX  -  protein kinase, x-linked<br>
+SALL4  -  sal-like 4 (drosophila)<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+ETV1  -  ets variant 1<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+RPS6  -  ribosomal protein s6<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+RPS7  -  ribosomal protein s7<br>
+NHP2  -  nhp2 ribonucleoprotein<br>
+PHF20  -  phd finger protein 20<br>
+FOXA3  -  forkhead box a3<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+MRPL10  -  mitochondrial ribosomal protein l10<br>
+METTL5  -  methyltransferase like 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+RRP12  -  ribosomal rna processing 12 homolog (s. cerevisiae)<br>
+GAPDH  -  glyceraldehyde-3-phosphate dehydrogenase<br>
+ZFR2  -  zinc finger rna binding protein 2<br>
+PRKCG  -  protein kinase c, gamma<br>
+HMGA1  -  high mobility group at-hook 1<br>
+LHX6  -  lim homeobox 6<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+KIF2C  -  kinesin family member 2c<br>
+SLC25A5  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 5<br>
+ZSCAN10  -  zinc finger and scan domain containing 10<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+NKX1-2  -  nk1 homeobox 2<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+SOGA2  -  soga family member 2<br>
+TOX3  -  tox high mobility group box family member 3<br>
+NLRX1  -  nlr family member x1<br>
+SIN3A  -  sin3 transcription regulator family member a<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+SET  -  set nuclear oncogene<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+IMPDH2  -  imp (inosine 5'-monophosphate) dehydrogenase 2<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+THUMPD3  -  thump domain containing 3<br>
+MARC1  -  mitochondrial amidoxime reducing component 1<br>
+MIF4GD  -  mif4g domain containing<br>
+CYCS  -  cytochrome c, somatic<br>
+RPL35  -  ribosomal protein l35<br>
+ZNF134  -  zinc finger protein 134<br>
+ZNF766  -  zinc finger protein 766<br>
+AR  -  androgen receptor<br>
+FKBP4  -  fk506 binding protein 4, 59kda<br>
+FKBP3  -  fk506 binding protein 3, 25kda<br>
+MND1  -  meiotic nuclear divisions 1 homolog (s. cerevisiae)<br>
+ZNF121  -  zinc finger protein 121<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+CHEK2  -  checkpoint kinase 2<br>
+ZNF551  -  zinc finger protein 551<br>
+ZNF532  -  zinc finger protein 532<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+ZNF90  -  zinc finger protein 90<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+FKBP1B  -  fk506 binding protein 1b, 12.6 kda<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+MAFA  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog a<br>
+RPL36  -  ribosomal protein l36<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+POLR3K  -  polymerase (rna) iii (dna directed) polypeptide k, 12.3 kda<br>
+RBPMS2  -  rna binding protein with multiple splicing 2<br>
+LRRC47  -  leucine rich repeat containing 47<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+DCP2  -  decapping mrna 2<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+NTHL1  -  nth endonuclease iii-like 1 (e. coli)<br>
+JAKMIP1  -  janus kinase and microtubule interacting protein 1<br>
+ZNF678  -  zinc finger protein 678<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PSIP1  -  pc4 and sfrs1 interacting protein 1<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+WDHD1  -  wd repeat and hmg-box dna binding protein 1<br>
+SOX21  -  sry (sex determining region y)-box 21<br>
+CDX4  -  caudal type homeobox 4<br>
+CPSF2  -  cleavage and polyadenylation specific factor 2, 100kda<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+CUX2  -  cut-like homeobox 2<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+OLIG3  -  oligodendrocyte transcription factor 3<br>
+DARS  -  aspartyl-trna synthetase<br>
+ZFP42  -  zfp42 zinc finger protein<br>
+XPO5  -  exportin 5<br>
+RNASET2  -  ribonuclease t2<br>
+HEATR1  -  heat repeat containing 1<br>
+LIN28B  -  lin-28 homolog b (c. elegans)<br>
+NUDT5  -  nudix (nucleoside diphosphate linked moiety x)-type motif 5<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+MTA3  -  metastasis associated 1 family, member 3<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+KLF7  -  kruppel-like factor 7 (ubiquitous)<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+HDAC2  -  histone deacetylase 2<br>
+USO1  -  uso1 vesicle transport factor<br>
+MYO5C  -  myosin vc<br>
+YBX1  -  y box binding protein 1<br>
+RCC2  -  regulator of chromosome condensation 2<br>
+SALL2  -  sal-like 2 (drosophila)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+TCEA1  -  transcription elongation factor a (sii), 1<br>
+NQO2  -  nad(p)h dehydrogenase, quinone 2<br>
+SERBP1  -  serpine1 mrna binding protein 1<br>
+ZNF398  -  zinc finger protein 398<br>
+RTBDN  -  retbindin<br>
+NOS1  -  nitric oxide synthase 1 (neuronal)<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+NOVA2  -  neuro-oncological ventral antigen 2<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+ZNF581  -  zinc finger protein 581<br>
+TRIM71  -  tripartite motif containing 71, e3 ubiquitin protein ligase<br>
+FOXN3  -  forkhead box n3<br>
+L1TD1  -  line-1 type transposase domain containing 1<br>
+STRBP  -  spermatid perinuclear rna binding protein<br>
+TOX  -  thymocyte selection-associated high mobility group box<br>
+USP10  -  ubiquitin specific peptidase 10<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+ZIC5  -  zic family member 5<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+BARD1  -  brca1 associated ring domain 1<br>
+CTPS2  -  ctp synthase 2<br>
+LTA4H  -  leukotriene a4 hydrolase<br>
+RPL14  -  ribosomal protein l14<br>
+OARD1  -  o-acyl-adp-ribose deacylase 1<br>
+ZNF721  -  zinc finger protein 721<br>
+TERT  -  telomerase reverse transcriptase<br>
+CLNS1A  -  chloride channel, nucleotide-sensitive, 1a<br>
+TFDP2  -  transcription factor dp-2 (e2f dimerization partner 2)<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+RBFOX3  -  rna binding protein, fox-1 homolog (c. elegans) 3<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+FOXB1  -  forkhead box b1<br>
+VRTN  -  vertebrae development associated<br>
+IMP3  -  imp3, u3 small nucleolar ribonucleoprotein, homolog (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+TRDMT1  -  trna aspartic acid methyltransferase 1<br>
+PRDM14  -  pr domain containing 14<br>
+ZIC2  -  zic family member 2<br>
+ZIC3  -  zic family member 3<br>
+STAU2  -  staufen double-stranded rna binding protein 2<br>
+LARP7  -  la ribonucleoprotein domain family, member 7<br>
+RPL10A  -  ribosomal protein l10a<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+RHOT1  -  ras homolog family member t1<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+CKB  -  creatine kinase, brain<br>
+MYEF2  -  myelin expression factor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005198&amp;view=details' target="_blank">GO:0005198</a><a name=0005198></a></td>
+<td>structural molecule activity</td>
+<td  align=center>1.3E-9</td>
+<td  align=center>1.17E-6</td>
+<td  align=center>2.20 (15889,593,805,66)</td>
+<td>
+<a id="ctrl_elements_GO:0005198" href="javascript:toggle('elements_GO:0005198')">[+] Show genes</a><br>
+<div id="elements_GO:0005198" style="display:none"> <font size=1>
+RPL24  -  ribosomal protein l24<br>
+RPL22  -  ribosomal protein l22<br>
+RPL19  -  ribosomal protein l19<br>
+RPL18  -  ribosomal protein l18<br>
+CD2AP  -  cd2-associated protein<br>
+RPL15  -  ribosomal protein l15<br>
+RPL12  -  ribosomal protein l12<br>
+RPL11  -  ribosomal protein l11<br>
+RPL10  -  ribosomal protein l10<br>
+INA  -  internexin neuronal intermediate filament protein, alpha<br>
+CTBP2  -  c-terminal binding protein 2<br>
+RPL5  -  ribosomal protein l5<br>
+RPS4X  -  ribosomal protein s4, x-linked<br>
+RPL35  -  ribosomal protein l35<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+RPS5  -  ribosomal protein s5<br>
+SAV1  -  salvador homolog 1 (drosophila)<br>
+PLP1  -  proteolipid protein 1<br>
+RPS3  -  ribosomal protein s3<br>
+RPLP1  -  ribosomal protein, large, p1<br>
+BICD1  -  bicaudal d homolog 1 (drosophila)<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+MRPS2  -  mitochondrial ribosomal protein s2<br>
+RPL37A  -  ribosomal protein l37a<br>
+RPL38  -  ribosomal protein l38<br>
+RPL34  -  ribosomal protein l34<br>
+RPL35A  -  ribosomal protein l35a<br>
+RPL37  -  ribosomal protein l37<br>
+RPL29  -  ribosomal protein l29<br>
+RPL31  -  ribosomal protein l31<br>
+RPL32  -  ribosomal protein l32<br>
+RPL36  -  ribosomal protein l36<br>
+RPL30  -  ribosomal protein l30<br>
+RPS24  -  ribosomal protein s24<br>
+RPS23  -  ribosomal protein s23<br>
+RPS21  -  ribosomal protein s21<br>
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
+RPS27A  -  ribosomal protein s27a<br>
+MRPL30  -  mitochondrial ribosomal protein l30<br>
+RPL14  -  ribosomal protein l14<br>
+RPS16  -  ribosomal protein s16<br>
+RPS19  -  ribosomal protein s19<br>
+MRPS25  -  mitochondrial ribosomal protein s25<br>
+RPS10  -  ribosomal protein s10<br>
+MRPL42  -  mitochondrial ribosomal protein l42<br>
+RPS14  -  ribosomal protein s14<br>
+MRPS9  -  mitochondrial ribosomal protein s9<br>
+RPS15  -  ribosomal protein s15<br>
+MRPS30  -  mitochondrial ribosomal protein s30<br>
+RPS12  -  ribosomal protein s12<br>
+RPS6  -  ribosomal protein s6<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+RPS7  -  ribosomal protein s7<br>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+MRPL34  -  mitochondrial ribosomal protein l34<br>
+ADD2  -  adducin 2 (beta)<br>
+MRPL10  -  mitochondrial ribosomal protein l10<br>
+COL9A1  -  collagen, type ix, alpha 1<br>
+RPL39L  -  ribosomal protein l39-like<br>
+MRPS34  -  mitochondrial ribosomal protein s34<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+NDC1  -  ndc1 transmembrane nucleoporin<br>
+RPL10A  -  ribosomal protein l10a<br>
+PTPN11  -  protein tyrosine phosphatase, non-receptor type 11<br>
+HMGA1  -  high mobility group at-hook 1<br>
+RPS29  -  ribosomal protein s29<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003676&amp;view=details' target="_blank">GO:0003676</a><a name=0003676></a></td>
+<td>nucleic acid binding</td>
+<td  align=center>9.85E-9</td>
+<td  align=center>7.43E-6</td>
+<td  align=center>1.38 (15889,3439,805,241)</td>
+<td>
+<a id="ctrl_elements_GO:0003676" href="javascript:toggle('elements_GO:0003676')">[+] Show genes</a><br>
+<div id="elements_GO:0003676" style="display:none"> <font size=1>
+EXOSC9  -  exosome component 9<br>
+EXOSC5  -  exosome component 5<br>
+MKRN1  -  makorin ring finger protein 1<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+TRIM24  -  tripartite motif containing 24<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+NCL  -  nucleolin<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+CDT1  -  chromatin licensing and dna replication factor 1<br>
+CEBPZ  -  ccaat/enhancer binding protein (c/ebp), zeta<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DTD1  -  d-tyrosyl-trna deacylase 1<br>
+SPIB  -  spi-b transcription factor (spi-1/pu.1 related)<br>
+SCG3  -  secretogranin iii<br>
+REST  -  re1-silencing transcription factor<br>
+BTF3  -  basic transcription factor 3<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+ENO1  -  enolase 1, (alpha)<br>
+KNOP1  -  lysine-rich nucleolar protein 1<br>
+SP4  -  sp4 transcription factor<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+LSM2  -  lsm2 homolog, u6 small nuclear rna associated (s. cerevisiae)<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+NACA  -  nascent polypeptide-associated complex alpha subunit<br>
+ESRP1  -  epithelial splicing regulatory protein 1<br>
+ORC3  -  origin recognition complex, subunit 3<br>
+GTPBP1  -  gtp binding protein 1<br>
+CREBL2  -  camp responsive element binding protein-like 2<br>
+DSCC1  -  dna replication and sister chromatid cohesion 1<br>
+PDCD11  -  programmed cell death 11<br>
+CNOT1  -  ccr4-not transcription complex, subunit 1<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+SNRPD2  -  small nuclear ribonucleoprotein d2 polypeptide 16.5kda<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+ZNF814  -  zinc finger protein 814<br>
+SNRPA  -  small nuclear ribonucleoprotein polypeptide a<br>
+RNF138  -  ring finger protein 138, e3 ubiquitin protein ligase<br>
+SLIRP  -  sra stem-loop interacting rna binding protein<br>
+SNRPB  -  small nuclear ribonucleoprotein polypeptides b and b1<br>
+ZNF589  -  zinc finger protein 589<br>
+GLI1  -  gli family zinc finger 1<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+MRPS30  -  mitochondrial ribosomal protein s30<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+HRSP12  -  heat-responsive protein 12<br>
+RORA  -  rar-related orphan receptor a<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+FOXH1  -  forkhead box h1<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+POU2F1  -  pou class 2 homeobox 1<br>
+TIMELESS  -  timeless circadian clock<br>
+NANOG  -  nanog homeobox<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+RPL24  -  ribosomal protein l24<br>
+POLR1B  -  polymerase (rna) i polypeptide b, 128kda<br>
+RPL22  -  ribosomal protein l22<br>
+RPL19  -  ribosomal protein l19<br>
+RPL18  -  ribosomal protein l18<br>
+RPL15  -  ribosomal protein l15<br>
+KDM2B  -  lysine (k)-specific demethylase 2b<br>
+RPL12  -  ribosomal protein l12<br>
+RPL11  -  ribosomal protein l11<br>
+RPL10  -  ribosomal protein l10<br>
+RPL5  -  ribosomal protein l5<br>
+NR5A2  -  nuclear receptor subfamily 5, group a, member 2<br>
+BPTF  -  bromodomain phd finger transcription factor<br>
+AGO1  -  argonaute risc catalytic component 1<br>
+RPA3  -  replication protein a3, 14kda<br>
+NUDT1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br>
+ZBTB3  -  zinc finger and btb domain containing 3<br>
+RPS4X  -  ribosomal protein s4, x-linked<br>
+RPS5  -  ribosomal protein s5<br>
+ETV4  -  ets variant 4<br>
+IPO5  -  importin 5<br>
+RPS3  -  ribosomal protein s3<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+CBX2  -  chromobox homolog 2<br>
+RPL37A  -  ribosomal protein l37a<br>
+RPL38  -  ribosomal protein l38<br>
+APOBEC3H  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3h<br>
+RPL34  -  ribosomal protein l34<br>
+RPL35A  -  ribosomal protein l35a<br>
+DIDO1  -  death inducer-obliterator 1<br>
+RPL37  -  ribosomal protein l37<br>
+ZNF770  -  zinc finger protein 770<br>
+RPL29  -  ribosomal protein l29<br>
+RPL31  -  ribosomal protein l31<br>
+RPL32  -  ribosomal protein l32<br>
+PRRC2A  -  proline-rich coiled-coil 2a<br>
+RPL30  -  ribosomal protein l30<br>
+TGIF2  -  tgfb-induced factor homeobox 2<br>
+PPP1CC  -  protein phosphatase 1, catalytic subunit, gamma isozyme<br>
+BCL6B  -  b-cell cll/lymphoma 6, member b<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+RPS24  -  ribosomal protein s24<br>
+RPS23  -  ribosomal protein s23<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+RPS21  -  ribosomal protein s21<br>
+KLF15  -  kruppel-like factor 15<br>
+RPS27A  -  ribosomal protein s27a<br>
+TDRKH  -  tudor and kh domain containing<br>
+FBL  -  fibrillarin<br>
+NPM3  -  nucleophosmin/nucleoplasmin 3<br>
+JARID2  -  jumonji, at rich interactive domain 2<br>
+RPS16  -  ribosomal protein s16<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+RPS19  -  ribosomal protein s19<br>
+RPS10  -  ribosomal protein s10<br>
+MIR296  -  microrna 296<br>
+MRPS9  -  mitochondrial ribosomal protein s9<br>
+MRPL42  -  mitochondrial ribosomal protein l42<br>
+RPS14  -  ribosomal protein s14<br>
+RPS15  -  ribosomal protein s15<br>
+RPS12  -  ribosomal protein s12<br>
+SALL4  -  sal-like 4 (drosophila)<br>
+ETV1  -  ets variant 1<br>
+RPS6  -  ribosomal protein s6<br>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+NHP2  -  nhp2 ribonucleoprotein<br>
+RPS7  -  ribosomal protein s7<br>
+PHF20  -  phd finger protein 20<br>
+FOXA3  -  forkhead box a3<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+MRPL10  -  mitochondrial ribosomal protein l10<br>
+METTL5  -  methyltransferase like 5<br>
+RRP12  -  ribosomal rna processing 12 homolog (s. cerevisiae)<br>
+ZFR2  -  zinc finger rna binding protein 2<br>
+HMGA1  -  high mobility group at-hook 1<br>
+LHX6  -  lim homeobox 6<br>
+KIF2C  -  kinesin family member 2c<br>
+SLC25A5  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 5<br>
+ZSCAN10  -  zinc finger and scan domain containing 10<br>
+NKX1-2  -  nk1 homeobox 2<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+TOX3  -  tox high mobility group box family member 3<br>
+SOGA2  -  soga family member 2<br>
+SIN3A  -  sin3 transcription regulator family member a<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+SET  -  set nuclear oncogene<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+IMPDH2  -  imp (inosine 5'-monophosphate) dehydrogenase 2<br>
+THUMPD3  -  thump domain containing 3<br>
+MIF4GD  -  mif4g domain containing<br>
+RPL35  -  ribosomal protein l35<br>
+ZNF134  -  zinc finger protein 134<br>
+ZNF766  -  zinc finger protein 766<br>
+AR  -  androgen receptor<br>
+FKBP4  -  fk506 binding protein 4, 59kda<br>
+FKBP3  -  fk506 binding protein 3, 25kda<br>
+MND1  -  meiotic nuclear divisions 1 homolog (s. cerevisiae)<br>
+ZNF121  -  zinc finger protein 121<br>
+ZNF551  -  zinc finger protein 551<br>
+ZNF532  -  zinc finger protein 532<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+ZNF90  -  zinc finger protein 90<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+MAFA  -  v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog a<br>
+RPL36  -  ribosomal protein l36<br>
+POLR3K  -  polymerase (rna) iii (dna directed) polypeptide k, 12.3 kda<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+RBPMS2  -  rna binding protein with multiple splicing 2<br>
+LRRC47  -  leucine rich repeat containing 47<br>
+DCP2  -  decapping mrna 2<br>
+JAKMIP1  -  janus kinase and microtubule interacting protein 1<br>
+NTHL1  -  nth endonuclease iii-like 1 (e. coli)<br>
+ZNF678  -  zinc finger protein 678<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PSIP1  -  pc4 and sfrs1 interacting protein 1<br>
+WDHD1  -  wd repeat and hmg-box dna binding protein 1<br>
+SOX21  -  sry (sex determining region y)-box 21<br>
+CDX4  -  caudal type homeobox 4<br>
+CPSF2  -  cleavage and polyadenylation specific factor 2, 100kda<br>
+CUX2  -  cut-like homeobox 2<br>
+OLIG3  -  oligodendrocyte transcription factor 3<br>
+DARS  -  aspartyl-trna synthetase<br>
+ZFP42  -  zfp42 zinc finger protein<br>
+XPO5  -  exportin 5<br>
+RNASET2  -  ribonuclease t2<br>
+HEATR1  -  heat repeat containing 1<br>
+LIN28B  -  lin-28 homolog b (c. elegans)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+NUDT5  -  nudix (nucleoside diphosphate linked moiety x)-type motif 5<br>
+MTA3  -  metastasis associated 1 family, member 3<br>
+KLF7  -  kruppel-like factor 7 (ubiquitous)<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+YBX2  -  y box binding protein 2<br>
+HDAC2  -  histone deacetylase 2<br>
+USO1  -  uso1 vesicle transport factor<br>
+YBX1  -  y box binding protein 1<br>
+RCC2  -  regulator of chromosome condensation 2<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+SALL2  -  sal-like 2 (drosophila)<br>
+TCEA1  -  transcription elongation factor a (sii), 1<br>
+SERBP1  -  serpine1 mrna binding protein 1<br>
+ZNF398  -  zinc finger protein 398<br>
+NOVA2  -  neuro-oncological ventral antigen 2<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+ZNF581  -  zinc finger protein 581<br>
+TRIM71  -  tripartite motif containing 71, e3 ubiquitin protein ligase<br>
+FOXN3  -  forkhead box n3<br>
+L1TD1  -  line-1 type transposase domain containing 1<br>
+STRBP  -  spermatid perinuclear rna binding protein<br>
+TOX  -  thymocyte selection-associated high mobility group box<br>
+USP10  -  ubiquitin specific peptidase 10<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+ZIC5  -  zic family member 5<br>
+BARD1  -  brca1 associated ring domain 1<br>
+RAN  -  ran, member ras oncogene family<br>
+LTA4H  -  leukotriene a4 hydrolase<br>
+RPL14  -  ribosomal protein l14<br>
+ZNF721  -  zinc finger protein 721<br>
+TERT  -  telomerase reverse transcriptase<br>
+CLNS1A  -  chloride channel, nucleotide-sensitive, 1a<br>
+TFDP2  -  transcription factor dp-2 (e2f dimerization partner 2)<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+RBFOX3  -  rna binding protein, fox-1 homolog (c. elegans) 3<br>
+FOXB1  -  forkhead box b1<br>
+VRTN  -  vertebrae development associated<br>
+IMP3  -  imp3, u3 small nucleolar ribonucleoprotein, homolog (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+TRDMT1  -  trna aspartic acid methyltransferase 1<br>
+PRDM14  -  pr domain containing 14<br>
+ZIC2  -  zic family member 2<br>
+ZIC3  -  zic family member 3<br>
+STAU2  -  staufen double-stranded rna binding protein 2<br>
+LARP7  -  la ribonucleoprotein domain family, member 7<br>
+RPL10A  -  ribosomal protein l10a<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+MYEF2  -  myelin expression factor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019843&amp;view=details' target="_blank">GO:0019843</a><a name=0019843></a></td>
+<td>rRNA binding</td>
+<td  align=center>1.47E-7</td>
+<td  align=center>9.51E-5</td>
+<td  align=center>5.42 (15889,51,805,14)</td>
+<td>
+<a id="ctrl_elements_GO:0019843" href="javascript:toggle('elements_GO:0019843')">[+] Show genes</a><br>
+<div id="elements_GO:0019843" style="display:none"> <font size=1>
+IMP3  -  imp3, u3 small nucleolar ribonucleoprotein, homolog (yeast)<br>
+RPS4X  -  ribosomal protein s4, x-linked<br>
+RPS5  -  ribosomal protein s5<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+RPS3  -  ribosomal protein s3<br>
+RPL12  -  ribosomal protein l12<br>
+KDM2B  -  lysine (k)-specific demethylase 2b<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+RPL11  -  ribosomal protein l11<br>
+RPS14  -  ribosomal protein s14<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+RPL5  -  ribosomal protein l5<br>
+RPL37  -  ribosomal protein l37<br>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0017076&amp;view=details' target="_blank">GO:0017076</a><a name=0017076></a></td>
+<td>purine nucleotide binding</td>
+<td  align=center>6.86E-5</td>
+<td  align=center>3.88E-2</td>
+<td  align=center>1.40 (15889,1688,805,120)</td>
+<td>
+<a id="ctrl_elements_GO:0017076" href="javascript:toggle('elements_GO:0017076')">[+] Show genes</a><br>
+<div id="elements_GO:0017076" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+RET  -  ret proto-oncogene<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+PLK1  -  polo-like kinase 1<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+RND2  -  rho family gtpase 2<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+SYN2  -  synapsin ii<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+PRKX  -  protein kinase, x-linked<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+CKB  -  creatine kinase, brain<br>
+KIF2C  -  kinesin family member 2c<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003688&amp;view=details' target="_blank">GO:0003688</a><a name=0003688></a></td>
+<td>DNA replication origin binding</td>
+<td  align=center>1E-4</td>
+<td  align=center>5.04E-2</td>
+<td  align=center>6.01 (15889,23,805,7)</td>
+<td>
+<a id="ctrl_elements_GO:0003688" href="javascript:toggle('elements_GO:0003688')">[+] Show genes</a><br>
+<div id="elements_GO:0003688" style="display:none"> <font size=1>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+ORC3  -  origin recognition complex, subunit 3<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097367&amp;view=details' target="_blank">GO:0097367</a><a name=0097367></a></td>
+<td>carbohydrate derivative binding</td>
+<td  align=center>1E-4</td>
+<td  align=center>4.54E-2</td>
+<td  align=center>1.36 (15889,1978,805,136)</td>
+<td>
+<a id="ctrl_elements_GO:0097367" href="javascript:toggle('elements_GO:0097367')">[+] Show genes</a><br>
+<div id="elements_GO:0097367" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+FIBCD1  -  fibrinogen c domain containing 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+RET  -  ret proto-oncogene<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+PLK1  -  polo-like kinase 1<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+RND2  -  rho family gtpase 2<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+CD200  -  cd200 molecule<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+BMP7  -  bone morphogenetic protein 7<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+PTCH1  -  patched 1<br>
+FGF2  -  fibroblast growth factor 2 (basic)<br>
+FGF4  -  fibroblast growth factor 4<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+SYN2  -  synapsin ii<br>
+POLR1B  -  polymerase (rna) i polypeptide b, 128kda<br>
+RPL22  -  ribosomal protein l22<br>
+NOS1  -  nitric oxide synthase 1 (neuronal)<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+PPT1  -  palmitoyl-protein thioesterase 1<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+RPL29  -  ribosomal protein l29<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+STK24  -  serine/threonine kinase 24<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+OARD1  -  o-acyl-adp-ribose deacylase 1<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+PRKX  -  protein kinase, x-linked<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+PODXL2  -  podocalyxin-like 2<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+BCAN  -  brevican<br>
+THBS4  -  thrombospondin 4<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+GAP43  -  growth associated protein 43<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+HMMR  -  hyaluronan-mediated motility receptor (rhamm)<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+CKB  -  creatine kinase, brain<br>
+KIF2C  -  kinesin family member 2c<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032553&amp;view=details' target="_blank">GO:0032553</a><a name=0032553></a></td>
+<td>ribonucleotide binding</td>
+<td  align=center>1.03E-4</td>
+<td  align=center>4.22E-2</td>
+<td  align=center>1.39 (15889,1687,805,119)</td>
+<td>
+<a id="ctrl_elements_GO:0032553" href="javascript:toggle('elements_GO:0032553')">[+] Show genes</a><br>
+<div id="elements_GO:0032553" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+RET  -  ret proto-oncogene<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+PLK1  -  polo-like kinase 1<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+RND2  -  rho family gtpase 2<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+SYN2  -  synapsin ii<br>
+NOS1  -  nitric oxide synthase 1 (neuronal)<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+PRKX  -  protein kinase, x-linked<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+CKB  -  creatine kinase, brain<br>
+KIF2C  -  kinesin family member 2c<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000166&amp;view=details' target="_blank">GO:0000166</a><a name=0000166></a></td>
+<td>nucleotide binding</td>
+<td  align=center>1.06E-4</td>
+<td  align=center>4E-2</td>
+<td  align=center>1.37 (15889,1894,805,131)</td>
+<td>
+<a id="ctrl_elements_GO:0000166" href="javascript:toggle('elements_GO:0000166')">[+] Show genes</a><br>
+<div id="elements_GO:0000166" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+RET  -  ret proto-oncogene<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+IMPDH2  -  imp (inosine 5'-monophosphate) dehydrogenase 2<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+PLK1  -  polo-like kinase 1<br>
+HPRT1  -  hypoxanthine phosphoribosyltransferase 1<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+FKBP1B  -  fk506 binding protein 1b, 12.6 kda<br>
+RND2  -  rho family gtpase 2<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+LDHD  -  lactate dehydrogenase d<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+NQO2  -  nad(p)h dehydrogenase, quinone 2<br>
+SYN2  -  synapsin ii<br>
+NOS1  -  nitric oxide synthase 1 (neuronal)<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+CTBP2  -  c-terminal binding protein 2<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+ALDH1B1  -  aldehyde dehydrogenase 1 family, member b1<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+PRKX  -  protein kinase, x-linked<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+GAPDH  -  glyceraldehyde-3-phosphate dehydrogenase<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+CKB  -  creatine kinase, brain<br>
+KIF2C  -  kinesin family member 2c<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901265&amp;view=details' target="_blank">GO:1901265</a><a name=1901265></a></td>
+<td>nucleoside phosphate binding</td>
+<td  align=center>1.09E-4</td>
+<td  align=center>3.78E-2</td>
+<td  align=center>1.36 (15889,1895,805,131)</td>
+<td>
+<a id="ctrl_elements_GO:1901265" href="javascript:toggle('elements_GO:1901265')">[+] Show genes</a><br>
+<div id="elements_GO:1901265" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+RET  -  ret proto-oncogene<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+IMPDH2  -  imp (inosine 5'-monophosphate) dehydrogenase 2<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+PLK1  -  polo-like kinase 1<br>
+HPRT1  -  hypoxanthine phosphoribosyltransferase 1<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+FKBP1B  -  fk506 binding protein 1b, 12.6 kda<br>
+RND2  -  rho family gtpase 2<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+LDHD  -  lactate dehydrogenase d<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+NQO2  -  nad(p)h dehydrogenase, quinone 2<br>
+SYN2  -  synapsin ii<br>
+NOS1  -  nitric oxide synthase 1 (neuronal)<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+CTBP2  -  c-terminal binding protein 2<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+ALDH1B1  -  aldehyde dehydrogenase 1 family, member b1<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+PRKX  -  protein kinase, x-linked<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+GAPDH  -  glyceraldehyde-3-phosphate dehydrogenase<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+CKB  -  creatine kinase, brain<br>
+KIF2C  -  kinesin family member 2c<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032555&amp;view=details' target="_blank">GO:0032555</a><a name=0032555></a></td>
+<td>purine ribonucleotide binding</td>
+<td  align=center>1.14E-4</td>
+<td  align=center>3.67E-2</td>
+<td  align=center>1.39 (15889,1674,805,118)</td>
+<td>
+<a id="ctrl_elements_GO:0032555" href="javascript:toggle('elements_GO:0032555')">[+] Show genes</a><br>
+<div id="elements_GO:0032555" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+RET  -  ret proto-oncogene<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+PLK1  -  polo-like kinase 1<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+RND2  -  rho family gtpase 2<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+SYN2  -  synapsin ii<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+PRKX  -  protein kinase, x-linked<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+CKB  -  creatine kinase, brain<br>
+KIF2C  -  kinesin family member 2c<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070180&amp;view=details' target="_blank">GO:0070180</a><a name=0070180></a></td>
+<td>large ribosomal subunit rRNA binding</td>
+<td  align=center>1.3E-4</td>
+<td  align=center>3.91E-2</td>
+<td  align=center>19.74 (15889,3,805,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070180" href="javascript:toggle('elements_GO:0070180')">[+] Show genes</a><br>
+<div id="elements_GO:0070180" style="display:none"> <font size=1>
+MRPL11  -  mitochondrial ribosomal protein l11<br>
+RPL12  -  ribosomal protein l12<br>
+RPLP0  -  ribosomal protein, large, p0<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036094&amp;view=details' target="_blank">GO:0036094</a><a name=0036094></a></td>
+<td>small molecule binding</td>
+<td  align=center>1.61E-4</td>
+<td  align=center>4.56E-2</td>
+<td  align=center>1.32 (15889,2226,805,149)</td>
+<td>
+<a id="ctrl_elements_GO:0036094" href="javascript:toggle('elements_GO:0036094')">[+] Show genes</a><br>
+<div id="elements_GO:0036094" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+TRPC6  -  transient receptor potential cation channel, subfamily c, member 6<br>
+RET  -  ret proto-oncogene<br>
+IMPDH2  -  imp (inosine 5'-monophosphate) dehydrogenase 2<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MARC1  -  mitochondrial amidoxime reducing component 1<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+PLK1  -  polo-like kinase 1<br>
+DDAH1  -  dimethylarginine dimethylaminohydrolase 1<br>
+HPRT1  -  hypoxanthine phosphoribosyltransferase 1<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+PROM1  -  prominin 1<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+FKBP1B  -  fk506 binding protein 1b, 12.6 kda<br>
+RND2  -  rho family gtpase 2<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+APRT  -  adenine phosphoribosyltransferase<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+CRABP1  -  cellular retinoic acid binding protein 1<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+PDE6G  -  phosphodiesterase 6g, cgmp-specific, rod, gamma<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+PTCH1  -  patched 1<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+ADH5  -  alcohol dehydrogenase 5 (class iii), chi polypeptide<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+LDHD  -  lactate dehydrogenase d<br>
+POLA1  -  polymerase (dna directed), alpha 1, catalytic subunit<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+NQO2  -  nad(p)h dehydrogenase, quinone 2<br>
+OGDHL  -  oxoglutarate dehydrogenase-like<br>
+SYN2  -  synapsin ii<br>
+POLR1B  -  polymerase (rna) i polypeptide b, 128kda<br>
+RTBDN  -  retbindin<br>
+NOS1  -  nitric oxide synthase 1 (neuronal)<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+HS3ST5  -  heparan sulfate (glucosamine) 3-o-sulfotransferase 5<br>
+PDE5A  -  phosphodiesterase 5a, cgmp-specific<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+CTBP2  -  c-terminal binding protein 2<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+GPI  -  glucose-6-phosphate isomerase<br>
+CALB1  -  calbindin 1, 28kda<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+ALDH1B1  -  aldehyde dehydrogenase 1 family, member b1<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+STK24  -  serine/threonine kinase 24<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+OARD1  -  o-acyl-adp-ribose deacylase 1<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+PRKX  -  protein kinase, x-linked<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+KIF1A  -  kinesin family member 1a<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+NDUFAB1  -  nadh dehydrogenase (ubiquinone) 1, alpha/beta subcomplex, 1, 8kda<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+OSBPL6  -  oxysterol binding protein-like 6<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+BCAN  -  brevican<br>
+GAPDH  -  glyceraldehyde-3-phosphate dehydrogenase<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+HMMR  -  hyaluronan-mediated motility receptor (rhamm)<br>
+PRKAR2B  -  protein kinase, camp-dependent, regulatory, type ii, beta<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+KIF2C  -  kinesin family member 2c<br>
+CKB  -  creatine kinase, brain<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+RBP1  -  retinol binding protein 1, cellular<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035639&amp;view=details' target="_blank">GO:0035639</a><a name=0035639></a></td>
+<td>purine ribonucleoside triphosphate binding</td>
+<td  align=center>1.92E-4</td>
+<td  align=center>5.1E-2</td>
+<td  align=center>1.39 (15889,1610,805,113)</td>
+<td>
+<a id="ctrl_elements_GO:0035639" href="javascript:toggle('elements_GO:0035639')">[+] Show genes</a><br>
+<div id="elements_GO:0035639" style="display:none"> <font size=1>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+DDX25  -  dead (asp-glu-ala-asp) box helicase 25<br>
+RFC1  -  replication factor c (activator 1) 1, 145kda<br>
+ORC1  -  origin recognition complex, subunit 1<br>
+FLT4  -  fms-related tyrosine kinase 4<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+NLRX1  -  nlr family member x1<br>
+SAMHD1  -  sam domain and hd domain 1<br>
+MKI67  -  antigen identified by monoclonal antibody ki-67<br>
+RET  -  ret proto-oncogene<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+PMS1  -  pms1 postmeiotic segregation increased 1 (s. cerevisiae)<br>
+MYO10  -  myosin x<br>
+TUBA4A  -  tubulin, alpha 4a<br>
+PLK1  -  polo-like kinase 1<br>
+KIAA1804  -  mixed lineage kinase 4<br>
+TUFM  -  tu translation elongation factor, mitochondrial<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+EIF2S3  -  eukaryotic translation initiation factor 2, subunit 3 gamma, 52kda<br>
+CHEK2  -  checkpoint kinase 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+RND2  -  rho family gtpase 2<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+MAGI1  -  membrane associated guanylate kinase, ww and pdz domain containing 1<br>
+BMPR1A  -  bone morphogenetic protein receptor, type ia<br>
+PAK1  -  p21 protein (cdc42/rac)-activated kinase 1<br>
+DDX10  -  dead (asp-glu-ala-asp) box polypeptide 10<br>
+EEF2  -  eukaryotic translation elongation factor 2<br>
+CAMKV  -  cam kinase-like vesicle-associated<br>
+SBK1  -  sh3-binding domain kinase 1<br>
+ARL2  -  adp-ribosylation factor-like 2<br>
+FGFR4  -  fibroblast growth factor receptor 4<br>
+MAP4K1  -  mitogen-activated protein kinase kinase kinase kinase 1<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+NMRK2  -  nicotinamide riboside kinase 2<br>
+EEF1A1  -  eukaryotic translation elongation factor 1 alpha 1<br>
+PDK3  -  pyruvate dehydrogenase kinase, isozyme 3<br>
+TOP2A  -  topoisomerase (dna) ii alpha 170kda<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+ADCY1  -  adenylate cyclase 1 (brain)<br>
+DCLK1  -  doublecortin-like kinase 1<br>
+SCN8A  -  sodium channel, voltage gated, type viii, alpha subunit<br>
+DARS  -  aspartyl-trna synthetase<br>
+BUB1  -  bub1 mitotic checkpoint serine/threonine kinase<br>
+BUB1B  -  bub1 mitotic checkpoint serine/threonine kinase b<br>
+CCT3  -  chaperonin containing tcp1, subunit 3 (gamma)<br>
+GNAZ  -  guanine nucleotide binding protein (g protein), alpha z polypeptide<br>
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br>
+LCK  -  lymphocyte-specific protein tyrosine kinase<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+TUBB2B  -  tubulin, beta 2b class iib<br>
+HELLS  -  helicase, lymphoid-specific<br>
+SEPT3  -  septin 3<br>
+GNAI2  -  guanine nucleotide binding protein (g protein), alpha inhibiting activity polypeptide 2<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+MYO5C  -  myosin vc<br>
+DIRAS1  -  diras family, gtp-binding ras-like 1<br>
+HSPA4  -  heat shock 70kda protein 4<br>
+TRAP1  -  tnf receptor-associated protein 1<br>
+SYN2  -  synapsin ii<br>
+ATP2A3  -  atpase, ca++ transporting, ubiquitous<br>
+CAMK1D  -  calcium/calmodulin-dependent protein kinase id<br>
+LARS  -  leucyl-trna synthetase<br>
+NME3  -  nme/nm23 nucleoside diphosphate kinase 3<br>
+KIF5A  -  kinesin family member 5a<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+WNK2  -  wnk lysine deficient protein kinase 2<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+MAPKAPK3  -  mitogen-activated protein kinase-activated protein kinase 3<br>
+RAB3B  -  rab3b, member ras oncogene family<br>
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MATK  -  megakaryocyte-associated tyrosine kinase<br>
+PIF1  -  pif1 5'-to-3' dna helicase<br>
+MCM3  -  minichromosome maintenance complex component 3<br>
+MCM6  -  minichromosome maintenance complex component 6<br>
+HACL1  -  2-hydroxyacyl-coa lyase 1<br>
+ATP5D  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+ATP5B  -  atp synthase, h+ transporting, mitochondrial f1 complex, beta polypeptide<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+MSH2  -  muts homolog 2, colon cancer, nonpolyposis type 1 (e. coli)<br>
+PAPOLG  -  poly(a) polymerase gamma<br>
+STK24  -  serine/threonine kinase 24<br>
+RAN  -  ran, member ras oncogene family<br>
+CTPS2  -  ctp synthase 2<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+ATP8A1  -  atpase, aminophospholipid transporter (aplt), class i, type 8a, member 1<br>
+MYH7B  -  myosin, heavy chain 7b, cardiac muscle, beta<br>
+PRKX  -  protein kinase, x-linked<br>
+RRAS2  -  related ras viral (r-ras) oncogene homolog 2<br>
+MAP2K5  -  mitogen-activated protein kinase kinase 5<br>
+GNA14  -  guanine nucleotide binding protein (g protein), alpha 14<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+KIF1A  -  kinesin family member 1a<br>
+BRSK2  -  br serine/threonine kinase 2<br>
+TUBB4A  -  tubulin, beta 4a class iva<br>
+MDN1  -  mdn1, midasin homolog (yeast)<br>
+ACTR3B  -  arp3 actin-related protein 3 homolog b (yeast)<br>
+SMARCA5  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 5<br>
+RYR1  -  ryanodine receptor 1 (skeletal)<br>
+PIK3CB  -  phosphatidylinositol-4,5-bisphosphate 3-kinase, catalytic subunit beta<br>
+RHOT1  -  ras homolog family member t1<br>
+PRKCG  -  protein kinase c, gamma<br>
+SCG5  -  secretogranin v (7b2 protein)<br>
+CKB  -  creatine kinase, brain<br>
+KIF2C  -  kinesin family member 2c<br>
+TTF2  -  transcription termination factor, rna polymerase ii<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030515&amp;view=details' target="_blank">GO:0030515</a><a name=0030515></a></td>
+<td>snoRNA binding</td>
+<td  align=center>3.88E-4</td>
+<td  align=center>9.74E-2</td>
+<td  align=center>4.93 (15889,28,805,7)</td>
+<td>
+<a id="ctrl_elements_GO:0030515" href="javascript:toggle('elements_GO:0030515')">[+] Show genes</a><br>
+<div id="elements_GO:0030515" style="display:none"> <font size=1>
+IMP3  -  imp3, u3 small nucleolar ribonucleoprotein, homolog (yeast)<br>
+DDX21  -  dead (asp-glu-ala-asp) box helicase 21<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+HEATR1  -  heat repeat containing 1<br>
+NUDT5  -  nudix (nucleoside diphosphate linked moiety x)-type motif 5<br>
+NUDT1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br>
+NHP2  -  nhp2 ribonucleoprotein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990948&amp;view=details' target="_blank">GO:1990948</a><a name=1990948></a></td>
+<td>ubiquitin ligase inhibitor activity</td>
+<td  align=center>4.99E-4</td>
+<td  align=center>1.19E-1</td>
+<td  align=center>14.80 (15889,4,805,3)</td>
+<td>
+<a id="ctrl_elements_GO:1990948" href="javascript:toggle('elements_GO:1990948')">[+] Show genes</a><br>
+<div id="elements_GO:1990948" style="display:none"> <font size=1>
+RPL5  -  ribosomal protein l5<br>
+RPS7  -  ribosomal protein s7<br>
+RPL11  -  ribosomal protein l11<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990446&amp;view=details' target="_blank">GO:1990446</a><a name=1990446></a></td>
+<td>U1 snRNP binding</td>
+<td  align=center>4.99E-4</td>
+<td  align=center>1.13E-1</td>
+<td  align=center>14.80 (15889,4,805,3)</td>
+<td>
+<a id="ctrl_elements_GO:1990446" href="javascript:toggle('elements_GO:1990446')">[+] Show genes</a><br>
+<div id="elements_GO:1990446" style="display:none"> <font size=1>
+SNRPD2  -  small nuclear ribonucleoprotein d2 polypeptide 16.5kda<br>
+SNRPA  -  small nuclear ribonucleoprotein polypeptide a<br>
+SNRPB  -  small nuclear ribonucleoprotein polypeptides b and b1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016874&amp;view=details' target="_blank">GO:0016874</a><a name=0016874></a></td>
+<td>ligase activity</td>
+<td  align=center>9.61E-4</td>
+<td  align=center>2.07E-1</td>
+<td  align=center>2.41 (15889,131,805,16)</td>
+<td>
+<a id="ctrl_elements_GO:0016874" href="javascript:toggle('elements_GO:0016874')">[+] Show genes</a><br>
+<div id="elements_GO:0016874" style="display:none"> <font size=1>
+DARS  -  aspartyl-trna synthetase<br>
+CAD  -  carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase<br>
+LRRC47  -  leucine rich repeat containing 47<br>
+PAICS  -  phosphoribosylaminoimidazole carboxylase, phosphoribosylaminoimidazole succinocarboxamide synthetase<br>
+CTPS2  -  ctp synthase 2<br>
+LARS  -  leucyl-trna synthetase<br>
+NARS2  -  asparaginyl-trna synthetase 2, mitochondrial (putative)<br>
+DPH6  -  diphthamine biosynthesis 6<br>
+QARS  -  glutaminyl-trna synthetase<br>
+MTHFD1  -  methylenetetrahydrofolate dehydrogenase (nadp+ dependent) 1, methenyltetrahydrofolate cyclohydrolase, formyltetrahydrofolate synthetase<br>
+EARS2  -  glutamyl-trna synthetase 2, mitochondrial<br>
+PFAS  -  phosphoribosylformylglycinamidine synthase<br>
+PCCA  -  propionyl coa carboxylase, alpha polypeptide<br>
+PCCB  -  propionyl coa carboxylase, beta polypeptide<br>
+SLC27A5  -  solute carrier family 27 (fatty acid transporter), member 5<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<H1 style='color:red'> Note that only 46.93% of the terms you entered were used in the analysis</H1><p>Species used: Homo sapiens</p><p>The system has recognized 18843 genes out of 33856 gene terms entered by the user.<br> 0 genes were recognized by gene symbol and 18843 genes by other gene IDs .<br>860 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 17983 genes.<br>Only 15889 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 4524 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

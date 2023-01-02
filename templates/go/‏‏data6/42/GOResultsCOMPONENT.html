@@ -1,0 +1,2561 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='955,560,1048,608' HREF='#0005654' ALT=''>
+<AREA SHAPE='RECT' COORDS='283,423,448,486' HREF='#0043232' ALT=''>
+<AREA SHAPE='RECT' COORDS='364,672,436,720' HREF='#0005814' ALT=''>
+<AREA SHAPE='RECT' COORDS='1001,904,1172,984' HREF='#0019908' ALT=''>
+<AREA SHAPE='RECT' COORDS='1167,1033,1273,1130' HREF='#0008024' ALT=''>
+<AREA SHAPE='RECT' COORDS='765,431,861,479' HREF='#0044430' ALT=''>
+<AREA SHAPE='RECT' COORDS='523,553,616,615' HREF='#0044450' ALT=''>
+<AREA SHAPE='RECT' COORDS='832,560,931,608' HREF='#0044451' ALT=''>
+<AREA SHAPE='RECT' COORDS='832,672,928,720' HREF='#0016604' ALT=''>
+<AREA SHAPE='RECT' COORDS='1315,665,1421,727' HREF='#0008023' ALT=''>
+<AREA SHAPE='RECT' COORDS='635,672,805,720' HREF='#0000123' ALT=''>
+<AREA SHAPE='RECT' COORDS='487,913,612,975' HREF='#0043189' ALT=''>
+<AREA SHAPE='RECT' COORDS='487,1050,612,1113' HREF='#0035267' ALT=''>
+<AREA SHAPE='RECT' COORDS='168,301,259,349' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='63,423,201,486' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='1173,560,1320,608' HREF='#0044454' ALT=''>
+<AREA SHAPE='RECT' COORDS='1459,672,1637,720' HREF='#0070603' ALT=''>
+<AREA SHAPE='RECT' COORDS='1039,431,1129,479' HREF='#0044428' ALT=''>
+<AREA SHAPE='RECT' COORDS='1159,785,1281,847' HREF='#0032806' ALT=''>
+<AREA SHAPE='RECT' COORDS='801,792,903,840' HREF='#0016607' ALT=''>
+<AREA SHAPE='RECT' COORDS='592,197,683,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='584,301,680,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='640,560,808,608' HREF='#0031248' ALT=''>
+<AREA SHAPE='RECT' COORDS='767,294,857,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='927,776,1049,856' HREF='#0000307' ALT=''>
+<AREA SHAPE='RECT' COORDS='636,913,807,975' HREF='#0070776' ALT=''>
+<AREA SHAPE='RECT' COORDS='252,197,327,245' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,301,144,349' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='283,301,448,349' HREF='#0043228' ALT=''>
+<AREA SHAPE='RECT' COORDS='1296,406,1451,503' HREF='#0061695' ALT=''>
+<AREA SHAPE='RECT' COORDS='1344,560,1451,608' HREF='#1902911' ALT=''>
+<AREA SHAPE='RECT' COORDS='1173,665,1291,727' HREF='#1902554' ALT=''>
+<AREA SHAPE='RECT' COORDS='1328,301,1419,349' HREF='#1990234' ALT=''>
+<AREA SHAPE='RECT' COORDS='888,431,1013,479' HREF='#1902493' ALT=''>
+<AREA SHAPE='RECT' COORDS='573,431,691,479' HREF='#0044431' ALT=''>
+<AREA SHAPE='RECT' COORDS='652,785,777,847' HREF='#0070775' ALT=''>
+<AREA SHAPE='RECT' COORDS='1496,920,1600,968' HREF='#0000812' ALT=''>
+<AREA SHAPE='RECT' COORDS='1525,301,1645,349' HREF='#1904949' ALT=''>
+<AREA SHAPE='RECT' COORDS='1161,431,1265,479' HREF='#0044427' ALT=''>
+<AREA SHAPE='RECT' COORDS='492,785,617,847' HREF='#1902562' ALT=''>
+<AREA SHAPE='RECT' COORDS='713,101,791,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='1356,197,1431,245' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='607,101,679,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='96,560,168,608' HREF='#0005634' ALT=''>
+<AREA SHAPE='RECT' COORDS='1503,792,1593,840' HREF='#0097346' ALT=''>
+<AREA SHAPE='RECT' COORDS='1329,101,1457,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='697,5,580,29' HREF='#0005575' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044446&amp;view=details' target="_blank">GO:0044446</a><a name=0044446></a></td>
+<td>intracellular organelle part</td>
+<td  align=center>5.12E-8</td>
+<td  align=center>9.93E-5</td>
+<td  align=center>1.35 (16005,6905,315,183)</td>
+<td>
+<a id="ctrl_elements_GO:0044446" href="javascript:toggle('elements_GO:0044446')">[+] Show genes</a><br>
+<div id="elements_GO:0044446" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Clcn3  -  chloride channel 3<br>
+Zfx  -  zinc finger protein x-linked<br>
+C87436  -  expressed sequence c87436<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Nrp1  -  neuropilin 1<br>
+Prkce  -  protein kinase c, epsilon<br>
+Setd5  -  set domain containing 5<br>
+Zbtb39  -  zinc finger and btb domain containing 39<br>
+Thoc2  -  tho complex 2<br>
+Polq  -  polymerase (dna directed), theta<br>
+Cenpj  -  centromere protein j<br>
+Pkd2  -  polycystic kidney disease 2<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Far1  -  fatty acyl coa reductase 1<br>
+Znrf2  -  zinc and ring finger 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Cspp1  -  centrosome and spindle pole associated protein 1<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Gata3  -  gata binding protein 3<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Clasp1  -  clip associating protein 1<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Ccnt2  -  cyclin t2<br>
+Rapgef6  -  rap guanine nucleotide exchange factor (gef) 6<br>
+Pigm  -  phosphatidylinositol glycan anchor biosynthesis, class m<br>
+Slc37a1  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 1<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Ttll3  -  tubulin tyrosine ligase-like family, member 3<br>
+Tubgcp3  -  tubulin, gamma complex associated protein 3<br>
+Mtx3  -  metaxin 3<br>
+1810026J23Rik  -  riken cdna 1810026j23 gene<br>
+Pcm1  -  pericentriolar material 1<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dido1  -  death inducer-obliterator 1<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Cep350  -  centrosomal protein 350<br>
+Szt2  -  seizure threshold 2<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+5830418K08Rik  -  riken cdna 5830418k08 gene<br>
+Rasa1  -  ras p21 protein activator 1<br>
+Micu3  -  mitochondrial calcium uptake family, member 3<br>
+Cep68  -  centrosomal protein 68<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+Eaf1  -  ell associated factor 1<br>
+BC018507  -  cdna sequence bc018507<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+4933427D14Rik  -  riken cdna 4933427d14 gene<br>
+Smcr7  -  smith-magenis syndrome chromosome region, candidate 7 homolog (human)<br>
+Safb2  -  scaffold attachment factor b2<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Slc25a42  -  solute carrier family 25, member 42<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Ccnl2  -  cyclin l2<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Endov  -  endonuclease v<br>
+Mars2  -  methionine-trna synthetase 2 (mitochondrial)<br>
+Htt  -  huntingtin<br>
+Slc37a3  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 3<br>
+Carf  -  calcium response factor<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Med1  -  mediator complex subunit 1<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Hinfp  -  histone h4 transcription factor<br>
+Cdc42bpb  -  cdc42 binding protein kinase beta<br>
+Atl1  -  atlastin gtpase 1<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Nsun3  -  nol1/nop2/sun domain family member 3<br>
+Ep400  -  e1a binding protein p400<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Stk19  -  serine/threonine kinase 19<br>
+Drc1  -  dynein regulatory complex subunit 1<br>
+Crebbp  -  creb binding protein<br>
+Sbf1  -  set binding factor 1<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Slc25a18  -  solute carrier family 25 (mitochondrial carrier), member 18<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Sec63  -  sec63-like (s. cerevisiae)<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Sfi1  -  sfi1 homolog, spindle assembly associated (yeast)<br>
+Emc1  -  er membrane protein complex subunit 1<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Enthd2  -  enth domain containing 2<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Cep152  -  centrosomal protein 152<br>
+Pex1  -  peroxisomal biogenesis factor 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Fmn1  -  formin 1<br>
+Tnnt3  -  troponin t3, skeletal, fast<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+Eml4  -  echinoderm microtubule associated protein like 4<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Lats1  -  large tumor suppressor<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Ccnl1  -  cyclin l1<br>
+Myo9b  -  myosin ixb<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Myo5a  -  myosin va<br>
+Herc4  -  hect domain and rld 4<br>
+Kif13b  -  kinesin family member 13b<br>
+Rest  -  re1-silencing transcription factor<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Kri1  -  kri1 homolog (s. cerevisiae)<br>
+Klhl21  -  kelch-like 21<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Pmm2  -  phosphomannomutase 2<br>
+Rpl5  -  ribosomal protein l5<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Rnf216  -  ring finger protein 216<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Brd1  -  bromodomain containing 1<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Brd8  -  bromodomain containing 8<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Atg16l1  -  autophagy related 16-like 1 (s. cerevisiae)<br>
+Ibtk  -  inhibitor of bruton agammaglobulinemia tyrosine kinase<br>
+Mlxip  -  mlx interacting protein<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Ago3  -  argonaute risc catalytic subunit 3<br>
+Dopey1  -  dopey family member 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016604&amp;view=details' target="_blank">GO:0016604</a><a name=0016604></a></td>
+<td>nuclear body</td>
+<td  align=center>3.71E-7</td>
+<td  align=center>3.6E-4</td>
+<td  align=center>2.59 (16005,666,315,34)</td>
+<td>
+<a id="ctrl_elements_GO:0016604" href="javascript:toggle('elements_GO:0016604')">[+] Show genes</a><br>
+<div id="elements_GO:0016604" style="display:none"> <font size=1>
+Hinfp  -  histone h4 transcription factor<br>
+Ccnl1  -  cyclin l1<br>
+Ep400  -  e1a binding protein p400<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Crebbp  -  creb binding protein<br>
+Stk19  -  serine/threonine kinase 19<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Sbf1  -  set binding factor 1<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Eaf1  -  ell associated factor 1<br>
+Brd2  -  bromodomain containing 2<br>
+BC018507  -  cdna sequence bc018507<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Son  -  son dna binding protein<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Safb2  -  scaffold attachment factor b2<br>
+Rbm15  -  rna binding motif protein 15<br>
+Enthd2  -  enth domain containing 2<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Brd1  -  bromodomain containing 1<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044422&amp;view=details' target="_blank">GO:0044422</a><a name=0044422></a></td>
+<td>organelle part</td>
+<td  align=center>5.2E-7</td>
+<td  align=center>3.36E-4</td>
+<td  align=center>1.31 (16005,7199,315,185)</td>
+<td>
+<a id="ctrl_elements_GO:0044422" href="javascript:toggle('elements_GO:0044422')">[+] Show genes</a><br>
+<div id="elements_GO:0044422" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Clcn3  -  chloride channel 3<br>
+Zfx  -  zinc finger protein x-linked<br>
+C87436  -  expressed sequence c87436<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Fbxl22  -  f-box and leucine-rich repeat protein 22<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Nrp1  -  neuropilin 1<br>
+Prkce  -  protein kinase c, epsilon<br>
+Setd5  -  set domain containing 5<br>
+Zbtb39  -  zinc finger and btb domain containing 39<br>
+Thoc2  -  tho complex 2<br>
+Polq  -  polymerase (dna directed), theta<br>
+Cenpj  -  centromere protein j<br>
+Pkd2  -  polycystic kidney disease 2<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Far1  -  fatty acyl coa reductase 1<br>
+Znrf2  -  zinc and ring finger 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Cspp1  -  centrosome and spindle pole associated protein 1<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Gata3  -  gata binding protein 3<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Clasp1  -  clip associating protein 1<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Adrbk2  -  adrenergic receptor kinase, beta 2<br>
+Ccnt2  -  cyclin t2<br>
+Rapgef6  -  rap guanine nucleotide exchange factor (gef) 6<br>
+Pigm  -  phosphatidylinositol glycan anchor biosynthesis, class m<br>
+Slc37a1  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 1<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Ttll3  -  tubulin tyrosine ligase-like family, member 3<br>
+Tubgcp3  -  tubulin, gamma complex associated protein 3<br>
+Mtx3  -  metaxin 3<br>
+1810026J23Rik  -  riken cdna 1810026j23 gene<br>
+Pcm1  -  pericentriolar material 1<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dido1  -  death inducer-obliterator 1<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Cep350  -  centrosomal protein 350<br>
+Szt2  -  seizure threshold 2<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+5830418K08Rik  -  riken cdna 5830418k08 gene<br>
+Rasa1  -  ras p21 protein activator 1<br>
+Micu3  -  mitochondrial calcium uptake family, member 3<br>
+Cep68  -  centrosomal protein 68<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+Eaf1  -  ell associated factor 1<br>
+BC018507  -  cdna sequence bc018507<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+4933427D14Rik  -  riken cdna 4933427d14 gene<br>
+Smcr7  -  smith-magenis syndrome chromosome region, candidate 7 homolog (human)<br>
+Safb2  -  scaffold attachment factor b2<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Slc25a42  -  solute carrier family 25, member 42<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Ccnl2  -  cyclin l2<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Endov  -  endonuclease v<br>
+Mars2  -  methionine-trna synthetase 2 (mitochondrial)<br>
+Htt  -  huntingtin<br>
+Slc37a3  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 3<br>
+Carf  -  calcium response factor<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Med1  -  mediator complex subunit 1<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Hinfp  -  histone h4 transcription factor<br>
+Cdc42bpb  -  cdc42 binding protein kinase beta<br>
+Atl1  -  atlastin gtpase 1<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Nsun3  -  nol1/nop2/sun domain family member 3<br>
+Ep400  -  e1a binding protein p400<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Stk19  -  serine/threonine kinase 19<br>
+Drc1  -  dynein regulatory complex subunit 1<br>
+Crebbp  -  creb binding protein<br>
+Sbf1  -  set binding factor 1<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Slc25a18  -  solute carrier family 25 (mitochondrial carrier), member 18<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Sec63  -  sec63-like (s. cerevisiae)<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Sfi1  -  sfi1 homolog, spindle assembly associated (yeast)<br>
+Emc1  -  er membrane protein complex subunit 1<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Enthd2  -  enth domain containing 2<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Cep152  -  centrosomal protein 152<br>
+Pex1  -  peroxisomal biogenesis factor 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Fmn1  -  formin 1<br>
+Tnnt3  -  troponin t3, skeletal, fast<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Eml4  -  echinoderm microtubule associated protein like 4<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Lats1  -  large tumor suppressor<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Ccnl1  -  cyclin l1<br>
+Myo9b  -  myosin ixb<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Myo5a  -  myosin va<br>
+Herc4  -  hect domain and rld 4<br>
+Kif13b  -  kinesin family member 13b<br>
+Rest  -  re1-silencing transcription factor<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Kri1  -  kri1 homolog (s. cerevisiae)<br>
+Klhl21  -  kelch-like 21<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Pmm2  -  phosphomannomutase 2<br>
+Rpl5  -  ribosomal protein l5<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Rnf216  -  ring finger protein 216<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Brd1  -  bromodomain containing 1<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Brd8  -  bromodomain containing 8<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Atg16l1  -  autophagy related 16-like 1 (s. cerevisiae)<br>
+Ibtk  -  inhibitor of bruton agammaglobulinemia tyrosine kinase<br>
+Mlxip  -  mlx interacting protein<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Ago3  -  argonaute risc catalytic subunit 3<br>
+Dopey1  -  dopey family member 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044451&amp;view=details' target="_blank">GO:0044451</a><a name=0044451></a></td>
+<td>nucleoplasm part</td>
+<td  align=center>6E-7</td>
+<td  align=center>2.91E-4</td>
+<td  align=center>2.23 (16005,978,315,43)</td>
+<td>
+<a id="ctrl_elements_GO:0044451" href="javascript:toggle('elements_GO:0044451')">[+] Show genes</a><br>
+<div id="elements_GO:0044451" style="display:none"> <font size=1>
+Med1  -  mediator complex subunit 1<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Hinfp  -  histone h4 transcription factor<br>
+Ccnl1  -  cyclin l1<br>
+Ep400  -  e1a binding protein p400<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Stk19  -  serine/threonine kinase 19<br>
+Crebbp  -  creb binding protein<br>
+Sbf1  -  set binding factor 1<br>
+Prdm15  -  pr domain containing 15<br>
+Setd5  -  set domain containing 5<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Brd2  -  bromodomain containing 2<br>
+Eaf1  -  ell associated factor 1<br>
+BC018507  -  cdna sequence bc018507<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Safb2  -  scaffold attachment factor b2<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Rbm15  -  rna binding motif protein 15<br>
+Enthd2  -  enth domain containing 2<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Brd1  -  bromodomain containing 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Brd8  -  bromodomain containing 8<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Ccnt2  -  cyclin t2<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005634&amp;view=details' target="_blank">GO:0005634</a><a name=0005634></a></td>
+<td>nucleus</td>
+<td  align=center>1.01E-6</td>
+<td  align=center>3.9E-4</td>
+<td  align=center>1.39 (16005,5345,315,146)</td>
+<td>
+<a id="ctrl_elements_GO:0005634" href="javascript:toggle('elements_GO:0005634')">[+] Show genes</a><br>
+<div id="elements_GO:0005634" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Dicer1  -  dicer 1, ribonuclease type iii<br>
+Zfx  -  zinc finger protein x-linked<br>
+Fbxl22  -  f-box and leucine-rich repeat protein 22<br>
+C87436  -  expressed sequence c87436<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+A530054K11Rik  -  riken cdna a530054k11 gene<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Prkce  -  protein kinase c, epsilon<br>
+Setd5  -  set domain containing 5<br>
+Zfp932  -  zinc finger protein 932<br>
+Thoc2  -  tho complex 2<br>
+Zfp646  -  zinc finger protein 646<br>
+Polq  -  polymerase (dna directed), theta<br>
+Cenpj  -  centromere protein j<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Rsbn1  -  rosbin, round spermatid basic protein 1<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Mbtd1  -  mbt domain containing 1<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Gata3  -  gata binding protein 3<br>
+Zfp871  -  zinc finger protein 871<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Sfswap  -  splicing factor, suppressor of white-apricot homolog (drosophila)<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Zfp62  -  zinc finger protein 62<br>
+Adrbk2  -  adrenergic receptor kinase, beta 2<br>
+Ccnt2  -  cyclin t2<br>
+Pank4  -  pantothenate kinase 4<br>
+Zfp738  -  zinc finger protein 738<br>
+Zfp780b  -  zinc finger protein 780b<br>
+Dnase1l2  -  deoxyribonuclease 1-like 2<br>
+Dido1  -  death inducer-obliterator 1<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Ino80d  -  ino80 complex subunit d<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Cep350  -  centrosomal protein 350<br>
+Btbd7  -  btb (poz) domain containing 7<br>
+Eaf1  -  ell associated factor 1<br>
+BC018507  -  cdna sequence bc018507<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+Zfp595  -  zinc finger protein 595<br>
+Safb2  -  scaffold attachment factor b2<br>
+Nktr  -  natural killer tumor recognition sequence<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Ccnl2  -  cyclin l2<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Endov  -  endonuclease v<br>
+Tmf1  -  tata element modulatory factor 1<br>
+Htt  -  huntingtin<br>
+Zfp653  -  zinc finger protein 653<br>
+Cramp1l  -  crm, cramped-like (drosophila)<br>
+Carf  -  calcium response factor<br>
+Zfp369  -  zinc finger protein 369<br>
+Med1  -  mediator complex subunit 1<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Hinfp  -  histone h4 transcription factor<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Ep400  -  e1a binding protein p400<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Stk19  -  serine/threonine kinase 19<br>
+Crebbp  -  creb binding protein<br>
+Rbm6  -  rna binding motif protein 6<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Adcy3  -  adenylate cyclase 3<br>
+Trim39  -  tripartite motif-containing 39<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Usp24  -  ubiquitin specific peptidase 24<br>
+Son  -  son dna binding protein<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Slc30a9  -  solute carrier family 30 (zinc transporter), member 9<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Zfp518a  -  zinc finger protein 518a<br>
+Fmn1  -  formin 1<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Zfp870  -  zinc finger protein 870<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Ccnl1  -  cyclin l1<br>
+Zfp866  -  zinc finger protein 866<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Tgfb1i1  -  transforming growth factor beta 1 induced transcript 1<br>
+Rest  -  re1-silencing transcription factor<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Paxbp1  -  pax3 and pax7 binding protein 1<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Oraov1  -  oral cancer overexpressed 1<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Zfp26  -  zinc finger protein 26<br>
+Rpl5  -  ribosomal protein l5<br>
+Rnf111  -  ring finger 111<br>
+Zfp280d  -  zinc finger protein 280d<br>
+Zfp606  -  zinc finger protein 606<br>
+Zfp113  -  zinc finger protein 113<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Zfp644  -  zinc finger protein 644<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Brd1  -  bromodomain containing 1<br>
+Brd8  -  bromodomain containing 8<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Usp34  -  ubiquitin specific peptidase 34<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Zfp445  -  zinc finger protein 445<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Mlxip  -  mlx interacting protein<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044428&amp;view=details' target="_blank">GO:0044428</a><a name=0044428></a></td>
+<td>nuclear part</td>
+<td  align=center>1.46E-6</td>
+<td  align=center>4.73E-4</td>
+<td  align=center>1.48 (16005,3944,315,115)</td>
+<td>
+<a id="ctrl_elements_GO:0044428" href="javascript:toggle('elements_GO:0044428')">[+] Show genes</a><br>
+<div id="elements_GO:0044428" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Zfx  -  zinc finger protein x-linked<br>
+C87436  -  expressed sequence c87436<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Zbtb39  -  zinc finger and btb domain containing 39<br>
+Setd5  -  set domain containing 5<br>
+Thoc2  -  tho complex 2<br>
+Polq  -  polymerase (dna directed), theta<br>
+Cenpj  -  centromere protein j<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Znrf2  -  zinc and ring finger 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Rbm15  -  rna binding motif protein 15<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Gata3  -  gata binding protein 3<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Ccnt2  -  cyclin t2<br>
+Pcm1  -  pericentriolar material 1<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dido1  -  death inducer-obliterator 1<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Rasa1  -  ras p21 protein activator 1<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+Eaf1  -  ell associated factor 1<br>
+Cep68  -  centrosomal protein 68<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+BC018507  -  cdna sequence bc018507<br>
+Safb2  -  scaffold attachment factor b2<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Ccnl2  -  cyclin l2<br>
+Endov  -  endonuclease v<br>
+Htt  -  huntingtin<br>
+Carf  -  calcium response factor<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Med1  -  mediator complex subunit 1<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Hinfp  -  histone h4 transcription factor<br>
+Ep400  -  e1a binding protein p400<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Crebbp  -  creb binding protein<br>
+Stk19  -  serine/threonine kinase 19<br>
+Sbf1  -  set binding factor 1<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Son  -  son dna binding protein<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Enthd2  -  enth domain containing 2<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Cep152  -  centrosomal protein 152<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Ccnl1  -  cyclin l1<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Rest  -  re1-silencing transcription factor<br>
+Herc4  -  hect domain and rld 4<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Kri1  -  kri1 homolog (s. cerevisiae)<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Rpl5  -  ribosomal protein l5<br>
+Pmm2  -  phosphomannomutase 2<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Brd1  -  bromodomain containing 1<br>
+Brd8  -  bromodomain containing 8<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Ibtk  -  inhibitor of bruton agammaglobulinemia tyrosine kinase<br>
+Ago3  -  argonaute risc catalytic subunit 3<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008023&amp;view=details' target="_blank">GO:0008023</a><a name=0008023></a></td>
+<td>transcription elongation factor complex</td>
+<td  align=center>5.39E-6</td>
+<td  align=center>1.49E-3</td>
+<td  align=center>8.13 (16005,50,315,8)</td>
+<td>
+<a id="ctrl_elements_GO:0008023" href="javascript:toggle('elements_GO:0008023')">[+] Show genes</a><br>
+<div id="elements_GO:0008023" style="display:none"> <font size=1>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Ccnl1  -  cyclin l1<br>
+Setd5  -  set domain containing 5<br>
+Eaf1  -  ell associated factor 1<br>
+Ccnt2  -  cyclin t2<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+BC018507  -  cdna sequence bc018507<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043229&amp;view=details' target="_blank">GO:0043229</a><a name=0043229></a></td>
+<td>intracellular organelle</td>
+<td  align=center>7.75E-6</td>
+<td  align=center>1.88E-3</td>
+<td  align=center>1.18 (16005,10100,315,235)</td>
+<td>
+<a id="ctrl_elements_GO:0043229" href="javascript:toggle('elements_GO:0043229')">[+] Show genes</a><br>
+<div id="elements_GO:0043229" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Zfx  -  zinc finger protein x-linked<br>
+Abl2  -  v-abl abelson murine leukemia viral oncogene 2 (arg, abelson-related gene)<br>
+Fbxl22  -  f-box and leucine-rich repeat protein 22<br>
+C87436  -  expressed sequence c87436<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Nrp1  -  neuropilin 1<br>
+Zfp932  -  zinc finger protein 932<br>
+Cenpj  -  centromere protein j<br>
+Far1  -  fatty acyl coa reductase 1<br>
+Znrf2  -  zinc and ring finger 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Mbtd1  -  mbt domain containing 1<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Zfp871  -  zinc finger protein 871<br>
+Slc35e2  -  solute carrier family 35, member e2<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Sfswap  -  splicing factor, suppressor of white-apricot homolog (drosophila)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Zfp62  -  zinc finger protein 62<br>
+Pank4  -  pantothenate kinase 4<br>
+Dennd6b  -  denn/madd domain containing 6b<br>
+Pigm  -  phosphatidylinositol glycan anchor biosynthesis, class m<br>
+Zfp738  -  zinc finger protein 738<br>
+Adam17  -  a disintegrin and metallopeptidase domain 17<br>
+Dnase1l2  -  deoxyribonuclease 1-like 2<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dido1  -  death inducer-obliterator 1<br>
+Ino80d  -  ino80 complex subunit d<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Cep350  -  centrosomal protein 350<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Gan  -  giant axonal neuropathy<br>
+5830418K08Rik  -  riken cdna 5830418k08 gene<br>
+BC018507  -  cdna sequence bc018507<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+Zfp595  -  zinc finger protein 595<br>
+Smcr7  -  smith-magenis syndrome chromosome region, candidate 7 homolog (human)<br>
+Nktr  -  natural killer tumor recognition sequence<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Ccnl2  -  cyclin l2<br>
+Tmf1  -  tata element modulatory factor 1<br>
+Htt  -  huntingtin<br>
+Slc37a3  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 3<br>
+Ptpn4  -  protein tyrosine phosphatase, non-receptor type 4<br>
+Zfp653  -  zinc finger protein 653<br>
+Pan3  -  pan3 polya specific ribonuclease subunit homolog (s. cerevisiae)<br>
+Cramp1l  -  crm, cramped-like (drosophila)<br>
+Carf  -  calcium response factor<br>
+Zfp369  -  zinc finger protein 369<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Ppm1k  -  protein phosphatase 1k (pp2c domain containing)<br>
+Gsr  -  glutathione reductase<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Hinfp  -  histone h4 transcription factor<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Cdc42bpb  -  cdc42 binding protein kinase beta<br>
+Atl1  -  atlastin gtpase 1<br>
+Cd247  -  cd247 antigen<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Ep400  -  e1a binding protein p400<br>
+Drc1  -  dynein regulatory complex subunit 1<br>
+Slc25a18  -  solute carrier family 25 (mitochondrial carrier), member 18<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Usp24  -  ubiquitin specific peptidase 24<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Emc1  -  er membrane protein complex subunit 1<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Dmxl2  -  dmx-like 2<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Cep152  -  centrosomal protein 152<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Fmn1  -  formin 1<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Lats1  -  large tumor suppressor<br>
+Myo9b  -  myosin ixb<br>
+Nbeal2  -  neurobeachin-like 2<br>
+Myo5a  -  myosin va<br>
+Tgfb1i1  -  transforming growth factor beta 1 induced transcript 1<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Klhl21  -  kelch-like 21<br>
+Oraov1  -  oral cancer overexpressed 1<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Zfp26  -  zinc finger protein 26<br>
+Zfp280d  -  zinc finger protein 280d<br>
+Zfp113  -  zinc finger protein 113<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Rdh10  -  retinol dehydrogenase 10 (all-trans)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Zfp644  -  zinc finger protein 644<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Rc3h2  -  ring finger and ccch-type zinc finger domains 2<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Usp34  -  ubiquitin specific peptidase 34<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Zfp445  -  zinc finger protein 445<br>
+Dopey1  -  dopey family member 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+Clcn3  -  chloride channel 3<br>
+Dicer1  -  dicer 1, ribonuclease type iii<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Sez6l2  -  seizure related 6 homolog like 2<br>
+Rc3h1  -  ring ccch (c3h) domains 1<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+A530054K11Rik  -  riken cdna a530054k11 gene<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Sspn  -  sarcospan<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ankrd13c  -  ankyrin repeat domain 13c<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Setd5  -  set domain containing 5<br>
+Thoc2  -  tho complex 2<br>
+Zfp646  -  zinc finger protein 646<br>
+Polq  -  polymerase (dna directed), theta<br>
+Pkd2  -  polycystic kidney disease 2<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Rsbn1  -  rosbin, round spermatid basic protein 1<br>
+Cspp1  -  centrosome and spindle pole associated protein 1<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Gata3  -  gata binding protein 3<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Clasp1  -  clip associating protein 1<br>
+Adrbk2  -  adrenergic receptor kinase, beta 2<br>
+Ccnt2  -  cyclin t2<br>
+Rapgef6  -  rap guanine nucleotide exchange factor (gef) 6<br>
+Zfp780b  -  zinc finger protein 780b<br>
+Slc37a1  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 1<br>
+Ttll3  -  tubulin tyrosine ligase-like family, member 3<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Tubgcp3  -  tubulin, gamma complex associated protein 3<br>
+1810026J23Rik  -  riken cdna 1810026j23 gene<br>
+Pcm1  -  pericentriolar material 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Szt2  -  seizure threshold 2<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Btbd7  -  btb (poz) domain containing 7<br>
+Micu3  -  mitochondrial calcium uptake family, member 3<br>
+Cep68  -  centrosomal protein 68<br>
+Eaf1  -  ell associated factor 1<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+Safb2  -  scaffold attachment factor b2<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Slc25a42  -  solute carrier family 25, member 42<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Endov  -  endonuclease v<br>
+Mars2  -  methionine-trna synthetase 2 (mitochondrial)<br>
+Med1  -  mediator complex subunit 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Nsun3  -  nol1/nop2/sun domain family member 3<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Crebbp  -  creb binding protein<br>
+Stk19  -  serine/threonine kinase 19<br>
+Rbm6  -  rna binding motif protein 6<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Trim39  -  tripartite motif-containing 39<br>
+Adcy3  -  adenylate cyclase 3<br>
+Krit1  -  krit1, ankyrin repeat containing<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Ireb2  -  iron responsive element binding protein 2<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Sec63  -  sec63-like (s. cerevisiae)<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Sfi1  -  sfi1 homolog, spindle assembly associated (yeast)<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Enthd2  -  enth domain containing 2<br>
+Pex1  -  peroxisomal biogenesis factor 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Slc30a9  -  solute carrier family 30 (zinc transporter), member 9<br>
+Zfp518a  -  zinc finger protein 518a<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Eml4  -  echinoderm microtubule associated protein like 4<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Zfp870  -  zinc finger protein 870<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Ccnl1  -  cyclin l1<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Zfp866  -  zinc finger protein 866<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Rest  -  re1-silencing transcription factor<br>
+Gls  -  glutaminase<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Kri1  -  kri1 homolog (s. cerevisiae)<br>
+Paxbp1  -  pax3 and pax7 binding protein 1<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Rpl5  -  ribosomal protein l5<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Akap10  -  a kinase (prka) anchor protein 10<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Brd1  -  bromodomain containing 1<br>
+Brd8  -  bromodomain containing 8<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Atg16l1  -  autophagy related 16-like 1 (s. cerevisiae)<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Mlxip  -  mlx interacting protein<br>
+Ago3  -  argonaute risc catalytic subunit 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005654&amp;view=details' target="_blank">GO:0005654</a><a name=0005654></a></td>
+<td>nucleoplasm</td>
+<td  align=center>8.06E-6</td>
+<td  align=center>1.74E-3</td>
+<td  align=center>1.56 (16005,2841,315,87)</td>
+<td>
+<a id="ctrl_elements_GO:0005654" href="javascript:toggle('elements_GO:0005654')">[+] Show genes</a><br>
+<div id="elements_GO:0005654" style="display:none"> <font size=1>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Med1  -  mediator complex subunit 1<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Akna  -  at-hook transcription factor<br>
+Hinfp  -  histone h4 transcription factor<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Zfx  -  zinc finger protein x-linked<br>
+C87436  -  expressed sequence c87436<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Crebbp  -  creb binding protein<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Prdm15  -  pr domain containing 15<br>
+Zbtb39  -  zinc finger and btb domain containing 39<br>
+Setd5  -  set domain containing 5<br>
+Brd2  -  bromodomain containing 2<br>
+Polq  -  polymerase (dna directed), theta<br>
+Cenpj  -  centromere protein j<br>
+Rai1  -  retinoic acid induced 1<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Znrf2  -  zinc and ring finger 2<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Gata3  -  gata binding protein 3<br>
+Cep152  -  centrosomal protein 152<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Ccnt2  -  cyclin t2<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Dido1  -  death inducer-obliterator 1<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Rest  -  re1-silencing transcription factor<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Rpl5  -  ribosomal protein l5<br>
+Pmm2  -  phosphomannomutase 2<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+Eaf1  -  ell associated factor 1<br>
+Cep68  -  centrosomal protein 68<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+BC018507  -  cdna sequence bc018507<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+Safb2  -  scaffold attachment factor b2<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Ccnl2  -  cyclin l2<br>
+Brd8  -  bromodomain containing 8<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Ibtk  -  inhibitor of bruton agammaglobulinemia tyrosine kinase<br>
+Htt  -  huntingtin<br>
+Ago3  -  argonaute risc catalytic subunit 3<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016607&amp;view=details' target="_blank">GO:0016607</a><a name=0016607></a></td>
+<td>nuclear speck</td>
+<td  align=center>1.13E-5</td>
+<td  align=center>2.19E-3</td>
+<td  align=center>3.14 (16005,307,315,19)</td>
+<td>
+<a id="ctrl_elements_GO:0016607" href="javascript:toggle('elements_GO:0016607')">[+] Show genes</a><br>
+<div id="elements_GO:0016607" style="display:none"> <font size=1>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Ccnl1  -  cyclin l1<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Ep400  -  e1a binding protein p400<br>
+Rbm15  -  rna binding motif protein 15<br>
+Enthd2  -  enth domain containing 2<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Stk19  -  serine/threonine kinase 19<br>
+Brd1  -  bromodomain containing 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Brd2  -  bromodomain containing 2<br>
+Nxf1  -  nuclear rna export factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044424&amp;view=details' target="_blank">GO:0044424</a><a name=0044424></a></td>
+<td>intracellular part</td>
+<td  align=center>1.14E-5</td>
+<td  align=center>2E-3</td>
+<td  align=center>1.13 (16005,12098,315,269)</td>
+<td>
+<a id="ctrl_elements_GO:0044424" href="javascript:toggle('elements_GO:0044424')">[+] Show genes</a><br>
+<div id="elements_GO:0044424" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Ptar1  -  protein prenyltransferase alpha subunit repeat containing 1<br>
+Zfx  -  zinc finger protein x-linked<br>
+C87436  -  expressed sequence c87436<br>
+Abl2  -  v-abl abelson murine leukemia viral oncogene 2 (arg, abelson-related gene)<br>
+Fbxl22  -  f-box and leucine-rich repeat protein 22<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Nrp1  -  neuropilin 1<br>
+Ankzf1  -  ankyrin repeat and zinc finger domain containing 1<br>
+Zfp932  -  zinc finger protein 932<br>
+Cenpj  -  centromere protein j<br>
+Far1  -  fatty acyl coa reductase 1<br>
+Znrf2  -  zinc and ring finger 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Mbtd1  -  mbt domain containing 1<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Zfp871  -  zinc finger protein 871<br>
+Slc35e2  -  solute carrier family 35, member e2<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Sfswap  -  splicing factor, suppressor of white-apricot homolog (drosophila)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Zfp62  -  zinc finger protein 62<br>
+Ddhd1  -  ddhd domain containing 1<br>
+Pank4  -  pantothenate kinase 4<br>
+Dennd6b  -  denn/madd domain containing 6b<br>
+Pigm  -  phosphatidylinositol glycan anchor biosynthesis, class m<br>
+Zfp738  -  zinc finger protein 738<br>
+Adam17  -  a disintegrin and metallopeptidase domain 17<br>
+Mtx3  -  metaxin 3<br>
+Dnase1l2  -  deoxyribonuclease 1-like 2<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Ino80d  -  ino80 complex subunit d<br>
+Dido1  -  death inducer-obliterator 1<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Cep350  -  centrosomal protein 350<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Gan  -  giant axonal neuropathy<br>
+5830418K08Rik  -  riken cdna 5830418k08 gene<br>
+Rasa1  -  ras p21 protein activator 1<br>
+BC018507  -  cdna sequence bc018507<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+Zfp595  -  zinc finger protein 595<br>
+Smcr7  -  smith-magenis syndrome chromosome region, candidate 7 homolog (human)<br>
+Nktr  -  natural killer tumor recognition sequence<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Ccnl2  -  cyclin l2<br>
+Tmf1  -  tata element modulatory factor 1<br>
+Htt  -  huntingtin<br>
+Slc37a3  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 3<br>
+Ptpn4  -  protein tyrosine phosphatase, non-receptor type 4<br>
+Zfp653  -  zinc finger protein 653<br>
+Pan3  -  pan3 polya specific ribonuclease subunit homolog (s. cerevisiae)<br>
+Cramp1l  -  crm, cramped-like (drosophila)<br>
+Carf  -  calcium response factor<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+Zfp369  -  zinc finger protein 369<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Ppm1k  -  protein phosphatase 1k (pp2c domain containing)<br>
+Gsr  -  glutathione reductase<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Hinfp  -  histone h4 transcription factor<br>
+Cdc42bpb  -  cdc42 binding protein kinase beta<br>
+Atl1  -  atlastin gtpase 1<br>
+Cd247  -  cd247 antigen<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Ep400  -  e1a binding protein p400<br>
+Drc1  -  dynein regulatory complex subunit 1<br>
+Yod1  -  yod1 otu deubiquitinating enzyme 1 homologue (s. cerevisiae)<br>
+Spag1  -  sperm associated antigen 1<br>
+Slc25a18  -  solute carrier family 25 (mitochondrial carrier), member 18<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Usp24  -  ubiquitin specific peptidase 24<br>
+Emc1  -  er membrane protein complex subunit 1<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Dmxl2  -  dmx-like 2<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Cep152  -  centrosomal protein 152<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Tecpr2  -  tectonin beta-propeller repeat containing 2<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Fmn1  -  formin 1<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Lats1  -  large tumor suppressor<br>
+Myo9b  -  myosin ixb<br>
+Nbeal2  -  neurobeachin-like 2<br>
+Myo5a  -  myosin va<br>
+Tgfb1i1  -  transforming growth factor beta 1 induced transcript 1<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Klhl21  -  kelch-like 21<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Oraov1  -  oral cancer overexpressed 1<br>
+Zfp26  -  zinc finger protein 26<br>
+Zfp280d  -  zinc finger protein 280d<br>
+Capn15  -  calpain 15<br>
+Zfp113  -  zinc finger protein 113<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Dcaf10  -  ddb1 and cul4 associated factor 10<br>
+Rdh10  -  retinol dehydrogenase 10 (all-trans)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Zfp644  -  zinc finger protein 644<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Rc3h2  -  ring finger and ccch-type zinc finger domains 2<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Usp34  -  ubiquitin specific peptidase 34<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Zfp445  -  zinc finger protein 445<br>
+Pid1  -  phosphotyrosine interaction domain containing 1<br>
+Dopey1  -  dopey family member 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+Clcn3  -  chloride channel 3<br>
+Etnk1  -  ethanolamine kinase 1<br>
+Dicer1  -  dicer 1, ribonuclease type iii<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Sez6l2  -  seizure related 6 homolog like 2<br>
+Rc3h1  -  ring ccch (c3h) domains 1<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+A530054K11Rik  -  riken cdna a530054k11 gene<br>
+Gda  -  guanine deaminase<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Sspn  -  sarcospan<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ankrd13c  -  ankyrin repeat domain 13c<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Zbtb39  -  zinc finger and btb domain containing 39<br>
+Setd5  -  set domain containing 5<br>
+Zfp646  -  zinc finger protein 646<br>
+Thoc2  -  tho complex 2<br>
+Ubr1  -  ubiquitin protein ligase e3 component n-recognin 1<br>
+Polq  -  polymerase (dna directed), theta<br>
+Pkd2  -  polycystic kidney disease 2<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Rsbn1  -  rosbin, round spermatid basic protein 1<br>
+Cspp1  -  centrosome and spindle pole associated protein 1<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Gata3  -  gata binding protein 3<br>
+Pik3ca  -  phosphatidylinositol 3-kinase, catalytic, alpha polypeptide<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Sacs  -  sacsin<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Cdc37l1  -  cell division cycle 37-like 1<br>
+Clasp1  -  clip associating protein 1<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Adrbk2  -  adrenergic receptor kinase, beta 2<br>
+Ccnt2  -  cyclin t2<br>
+Rapgef6  -  rap guanine nucleotide exchange factor (gef) 6<br>
+Zfp780b  -  zinc finger protein 780b<br>
+Slc37a1  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 1<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Ttll3  -  tubulin tyrosine ligase-like family, member 3<br>
+Tubgcp3  -  tubulin, gamma complex associated protein 3<br>
+1810026J23Rik  -  riken cdna 1810026j23 gene<br>
+Pcm1  -  pericentriolar material 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Szt2  -  seizure threshold 2<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Btbd7  -  btb (poz) domain containing 7<br>
+Micu3  -  mitochondrial calcium uptake family, member 3<br>
+Cep68  -  centrosomal protein 68<br>
+Eaf1  -  ell associated factor 1<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+4933427D14Rik  -  riken cdna 4933427d14 gene<br>
+Safb2  -  scaffold attachment factor b2<br>
+Atrn  -  attractin<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Slc25a42  -  solute carrier family 25, member 42<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Endov  -  endonuclease v<br>
+Mars2  -  methionine-trna synthetase 2 (mitochondrial)<br>
+Med1  -  mediator complex subunit 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Nsun3  -  nol1/nop2/sun domain family member 3<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Crebbp  -  creb binding protein<br>
+Stk19  -  serine/threonine kinase 19<br>
+Anks3  -  ankyrin repeat and sterile alpha motif domain containing 3<br>
+Rbm6  -  rna binding motif protein 6<br>
+Sbf1  -  set binding factor 1<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Trim39  -  tripartite motif-containing 39<br>
+Adcy3  -  adenylate cyclase 3<br>
+Krit1  -  krit1, ankyrin repeat containing<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Ireb2  -  iron responsive element binding protein 2<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Sec63  -  sec63-like (s. cerevisiae)<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Rictor  -  rptor independent companion of mtor, complex 2<br>
+Sfi1  -  sfi1 homolog, spindle assembly associated (yeast)<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Dpp8  -  dipeptidylpeptidase 8<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Frs2  -  fibroblast growth factor receptor substrate 2<br>
+Enthd2  -  enth domain containing 2<br>
+Pex1  -  peroxisomal biogenesis factor 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Slc30a9  -  solute carrier family 30 (zinc transporter), member 9<br>
+Ltn1  -  listerin e3 ubiquitin protein ligase 1<br>
+Zfp518a  -  zinc finger protein 518a<br>
+Tnnt3  -  troponin t3, skeletal, fast<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Eml4  -  echinoderm microtubule associated protein like 4<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Zfp870  -  zinc finger protein 870<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Ccnl1  -  cyclin l1<br>
+Zfp866  -  zinc finger protein 866<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Herc4  -  hect domain and rld 4<br>
+Kif13b  -  kinesin family member 13b<br>
+Rest  -  re1-silencing transcription factor<br>
+Gls  -  glutaminase<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Kri1  -  kri1 homolog (s. cerevisiae)<br>
+Paxbp1  -  pax3 and pax7 binding protein 1<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Rpl5  -  ribosomal protein l5<br>
+Pmm2  -  phosphomannomutase 2<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Akap10  -  a kinase (prka) anchor protein 10<br>
+Gm5741  -  predicted gene 5741<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Nbeal1  -  neurobeachin like 1<br>
+Brd1  -  bromodomain containing 1<br>
+Brd8  -  bromodomain containing 8<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Atg16l1  -  autophagy related 16-like 1 (s. cerevisiae)<br>
+Ibtk  -  inhibitor of bruton agammaglobulinemia tyrosine kinase<br>
+Ankhd1  -  ankyrin repeat and kh domain containing 1<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Mlxip  -  mlx interacting protein<br>
+Ago3  -  argonaute risc catalytic subunit 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044450&amp;view=details' target="_blank">GO:0044450</a><a name=0044450></a></td>
+<td>microtubule organizing center part</td>
+<td  align=center>1.14E-5</td>
+<td  align=center>1.84E-3</td>
+<td  align=center>3.58 (16005,227,315,16)</td>
+<td>
+<a id="ctrl_elements_GO:0044450" href="javascript:toggle('elements_GO:0044450')">[+] Show genes</a><br>
+<div id="elements_GO:0044450" style="display:none"> <font size=1>
+4933427D14Rik  -  riken cdna 4933427d14 gene<br>
+Akna  -  at-hook transcription factor<br>
+Tubgcp3  -  tubulin, gamma complex associated protein 3<br>
+Pcm1  -  pericentriolar material 1<br>
+Cep152  -  centrosomal protein 152<br>
+Cep350  -  centrosomal protein 350<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Clasp1  -  clip associating protein 1<br>
+5830418K08Rik  -  riken cdna 5830418k08 gene<br>
+Htt  -  huntingtin<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+Cep68  -  centrosomal protein 68<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Cenpj  -  centromere protein j<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043226&amp;view=details' target="_blank">GO:0043226</a><a name=0043226></a></td>
+<td>organelle</td>
+<td  align=center>1.88E-5</td>
+<td  align=center>2.8E-3</td>
+<td  align=center>1.17 (16005,10299,315,237)</td>
+<td>
+<a id="ctrl_elements_GO:0043226" href="javascript:toggle('elements_GO:0043226')">[+] Show genes</a><br>
+<div id="elements_GO:0043226" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Zfx  -  zinc finger protein x-linked<br>
+Abl2  -  v-abl abelson murine leukemia viral oncogene 2 (arg, abelson-related gene)<br>
+Fbxl22  -  f-box and leucine-rich repeat protein 22<br>
+C87436  -  expressed sequence c87436<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Npff  -  neuropeptide ff-amide peptide precursor<br>
+Nrp1  -  neuropilin 1<br>
+Zfp932  -  zinc finger protein 932<br>
+Cenpj  -  centromere protein j<br>
+Far1  -  fatty acyl coa reductase 1<br>
+Znrf2  -  zinc and ring finger 2<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Mbtd1  -  mbt domain containing 1<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Zfp871  -  zinc finger protein 871<br>
+Slc35e2  -  solute carrier family 35, member e2<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Sfswap  -  splicing factor, suppressor of white-apricot homolog (drosophila)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Zfp62  -  zinc finger protein 62<br>
+Pank4  -  pantothenate kinase 4<br>
+Dennd6b  -  denn/madd domain containing 6b<br>
+Pigm  -  phosphatidylinositol glycan anchor biosynthesis, class m<br>
+Zfp738  -  zinc finger protein 738<br>
+Adam17  -  a disintegrin and metallopeptidase domain 17<br>
+Dnase1l2  -  deoxyribonuclease 1-like 2<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dido1  -  death inducer-obliterator 1<br>
+Ino80d  -  ino80 complex subunit d<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Cep350  -  centrosomal protein 350<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Gan  -  giant axonal neuropathy<br>
+5830418K08Rik  -  riken cdna 5830418k08 gene<br>
+BC018507  -  cdna sequence bc018507<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+Zfp595  -  zinc finger protein 595<br>
+Smcr7  -  smith-magenis syndrome chromosome region, candidate 7 homolog (human)<br>
+Nktr  -  natural killer tumor recognition sequence<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Ccnl2  -  cyclin l2<br>
+Tmf1  -  tata element modulatory factor 1<br>
+Htt  -  huntingtin<br>
+Slc37a3  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 3<br>
+Ptpn4  -  protein tyrosine phosphatase, non-receptor type 4<br>
+Zfp653  -  zinc finger protein 653<br>
+Pan3  -  pan3 polya specific ribonuclease subunit homolog (s. cerevisiae)<br>
+Cramp1l  -  crm, cramped-like (drosophila)<br>
+Carf  -  calcium response factor<br>
+Zfp369  -  zinc finger protein 369<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Ppm1k  -  protein phosphatase 1k (pp2c domain containing)<br>
+Gsr  -  glutathione reductase<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Hinfp  -  histone h4 transcription factor<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Cdc42bpb  -  cdc42 binding protein kinase beta<br>
+Atl1  -  atlastin gtpase 1<br>
+Cd247  -  cd247 antigen<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Ep400  -  e1a binding protein p400<br>
+Drc1  -  dynein regulatory complex subunit 1<br>
+Slc25a18  -  solute carrier family 25 (mitochondrial carrier), member 18<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Usp24  -  ubiquitin specific peptidase 24<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Emc1  -  er membrane protein complex subunit 1<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Dmxl2  -  dmx-like 2<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Cep152  -  centrosomal protein 152<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Fmn1  -  formin 1<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Lats1  -  large tumor suppressor<br>
+Myo9b  -  myosin ixb<br>
+Nbeal2  -  neurobeachin-like 2<br>
+Myo5a  -  myosin va<br>
+Tgfb1i1  -  transforming growth factor beta 1 induced transcript 1<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Klhl21  -  kelch-like 21<br>
+Oraov1  -  oral cancer overexpressed 1<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Zfp26  -  zinc finger protein 26<br>
+Zfp280d  -  zinc finger protein 280d<br>
+Zfp113  -  zinc finger protein 113<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Rdh10  -  retinol dehydrogenase 10 (all-trans)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Zfp644  -  zinc finger protein 644<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Rc3h2  -  ring finger and ccch-type zinc finger domains 2<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Usp34  -  ubiquitin specific peptidase 34<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Zfp445  -  zinc finger protein 445<br>
+Dopey1  -  dopey family member 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+Clcn3  -  chloride channel 3<br>
+Dicer1  -  dicer 1, ribonuclease type iii<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Sez6l2  -  seizure related 6 homolog like 2<br>
+Rc3h1  -  ring ccch (c3h) domains 1<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+A530054K11Rik  -  riken cdna a530054k11 gene<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Sspn  -  sarcospan<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ankrd13c  -  ankyrin repeat domain 13c<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Setd5  -  set domain containing 5<br>
+Thoc2  -  tho complex 2<br>
+Zfp646  -  zinc finger protein 646<br>
+Polq  -  polymerase (dna directed), theta<br>
+Pkd2  -  polycystic kidney disease 2<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Rsbn1  -  rosbin, round spermatid basic protein 1<br>
+Cspp1  -  centrosome and spindle pole associated protein 1<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Gata3  -  gata binding protein 3<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Clasp1  -  clip associating protein 1<br>
+Adrbk2  -  adrenergic receptor kinase, beta 2<br>
+Ccnt2  -  cyclin t2<br>
+Rapgef6  -  rap guanine nucleotide exchange factor (gef) 6<br>
+Zfp780b  -  zinc finger protein 780b<br>
+Slc37a1  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 1<br>
+Ttll3  -  tubulin tyrosine ligase-like family, member 3<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Tubgcp3  -  tubulin, gamma complex associated protein 3<br>
+1810026J23Rik  -  riken cdna 1810026j23 gene<br>
+Pcm1  -  pericentriolar material 1<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Szt2  -  seizure threshold 2<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Btbd7  -  btb (poz) domain containing 7<br>
+Micu3  -  mitochondrial calcium uptake family, member 3<br>
+Cep68  -  centrosomal protein 68<br>
+Eaf1  -  ell associated factor 1<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+Safb2  -  scaffold attachment factor b2<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Slc25a42  -  solute carrier family 25, member 42<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Endov  -  endonuclease v<br>
+Mars2  -  methionine-trna synthetase 2 (mitochondrial)<br>
+Med1  -  mediator complex subunit 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Nsun3  -  nol1/nop2/sun domain family member 3<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Crebbp  -  creb binding protein<br>
+Stk19  -  serine/threonine kinase 19<br>
+Rbm6  -  rna binding motif protein 6<br>
+Anks3  -  ankyrin repeat and sterile alpha motif domain containing 3<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Trim39  -  tripartite motif-containing 39<br>
+Adcy3  -  adenylate cyclase 3<br>
+Krit1  -  krit1, ankyrin repeat containing<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Ireb2  -  iron responsive element binding protein 2<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Sec63  -  sec63-like (s. cerevisiae)<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Sfi1  -  sfi1 homolog, spindle assembly associated (yeast)<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Enthd2  -  enth domain containing 2<br>
+Pex1  -  peroxisomal biogenesis factor 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Slc30a9  -  solute carrier family 30 (zinc transporter), member 9<br>
+Zfp518a  -  zinc finger protein 518a<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+Eml4  -  echinoderm microtubule associated protein like 4<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Zfp870  -  zinc finger protein 870<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Ccnl1  -  cyclin l1<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Zfp866  -  zinc finger protein 866<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Rest  -  re1-silencing transcription factor<br>
+Gls  -  glutaminase<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Kri1  -  kri1 homolog (s. cerevisiae)<br>
+Paxbp1  -  pax3 and pax7 binding protein 1<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Rpl5  -  ribosomal protein l5<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Akap10  -  a kinase (prka) anchor protein 10<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Brd1  -  bromodomain containing 1<br>
+Brd8  -  bromodomain containing 8<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Atg16l1  -  autophagy related 16-like 1 (s. cerevisiae)<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Mlxip  -  mlx interacting protein<br>
+Ago3  -  argonaute risc catalytic subunit 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000123&amp;view=details' target="_blank">GO:0000123</a><a name=0000123></a></td>
+<td>histone acetyltransferase complex</td>
+<td  align=center>1.97E-5</td>
+<td  align=center>2.73E-3</td>
+<td  align=center>5.94 (16005,77,315,9)</td>
+<td>
+<a id="ctrl_elements_GO:0000123" href="javascript:toggle('elements_GO:0000123')">[+] Show genes</a><br>
+<div id="elements_GO:0000123" style="display:none"> <font size=1>
+Brd1  -  bromodomain containing 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Brd8  -  bromodomain containing 8<br>
+Ep400  -  e1a binding protein p400<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Crebbp  -  creb binding protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000812&amp;view=details' target="_blank">GO:0000812</a><a name=0000812></a></td>
+<td>Swr1 complex</td>
+<td  align=center>4.36E-5</td>
+<td  align=center>5.64E-3</td>
+<td  align=center>18.48 (16005,11,315,4)</td>
+<td>
+<a id="ctrl_elements_GO:0000812" href="javascript:toggle('elements_GO:0000812')">[+] Show genes</a><br>
+<div id="elements_GO:0000812" style="display:none"> <font size=1>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Brd8  -  bromodomain containing 8<br>
+Ep400  -  e1a binding protein p400<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902493&amp;view=details' target="_blank">GO:1902493</a><a name=1902493></a></td>
+<td>acetyltransferase complex</td>
+<td  align=center>5.27E-5</td>
+<td  align=center>6.4E-3</td>
+<td  align=center>5.26 (16005,87,315,9)</td>
+<td>
+<a id="ctrl_elements_GO:1902493" href="javascript:toggle('elements_GO:1902493')">[+] Show genes</a><br>
+<div id="elements_GO:1902493" style="display:none"> <font size=1>
+Brd1  -  bromodomain containing 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Brd8  -  bromodomain containing 8<br>
+Ep400  -  e1a binding protein p400<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Crebbp  -  creb binding protein<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031248&amp;view=details' target="_blank">GO:0031248</a><a name=0031248></a></td>
+<td>protein acetyltransferase complex</td>
+<td  align=center>5.27E-5</td>
+<td  align=center>6.02E-3</td>
+<td  align=center>5.26 (16005,87,315,9)</td>
+<td>
+<a id="ctrl_elements_GO:0031248" href="javascript:toggle('elements_GO:0031248')">[+] Show genes</a><br>
+<div id="elements_GO:0031248" style="display:none"> <font size=1>
+Brd1  -  bromodomain containing 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Brd8  -  bromodomain containing 8<br>
+Ep400  -  e1a binding protein p400<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Crebbp  -  creb binding protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097346&amp;view=details' target="_blank">GO:0097346</a><a name=0097346></a></td>
+<td>INO80-type complex</td>
+<td  align=center>7.19E-5</td>
+<td  align=center>7.76E-3</td>
+<td  align=center>11.05 (16005,23,315,5)</td>
+<td>
+<a id="ctrl_elements_GO:0097346" href="javascript:toggle('elements_GO:0097346')">[+] Show genes</a><br>
+<div id="elements_GO:0097346" style="display:none"> <font size=1>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Brd8  -  bromodomain containing 8<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Ep400  -  e1a binding protein p400<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043231&amp;view=details' target="_blank">GO:0043231</a><a name=0043231></a></td>
+<td>intracellular membrane-bounded organelle</td>
+<td  align=center>1.12E-4</td>
+<td  align=center>1.14E-2</td>
+<td  align=center>1.19 (16005,8713,315,204)</td>
+<td>
+<a id="ctrl_elements_GO:0043231" href="javascript:toggle('elements_GO:0043231')">[+] Show genes</a><br>
+<div id="elements_GO:0043231" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Zfx  -  zinc finger protein x-linked<br>
+Fbxl22  -  f-box and leucine-rich repeat protein 22<br>
+C87436  -  expressed sequence c87436<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Nrp1  -  neuropilin 1<br>
+Zfp932  -  zinc finger protein 932<br>
+Cenpj  -  centromere protein j<br>
+Znrf2  -  zinc and ring finger 2<br>
+Far1  -  fatty acyl coa reductase 1<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Mbtd1  -  mbt domain containing 1<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Zfp871  -  zinc finger protein 871<br>
+Slc35e2  -  solute carrier family 35, member e2<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Sfswap  -  splicing factor, suppressor of white-apricot homolog (drosophila)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Zfp62  -  zinc finger protein 62<br>
+Pank4  -  pantothenate kinase 4<br>
+Pigm  -  phosphatidylinositol glycan anchor biosynthesis, class m<br>
+Zfp738  -  zinc finger protein 738<br>
+Dnase1l2  -  deoxyribonuclease 1-like 2<br>
+Dido1  -  death inducer-obliterator 1<br>
+Ino80d  -  ino80 complex subunit d<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Cep350  -  centrosomal protein 350<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+BC018507  -  cdna sequence bc018507<br>
+Zfp595  -  zinc finger protein 595<br>
+Smcr7  -  smith-magenis syndrome chromosome region, candidate 7 homolog (human)<br>
+Nktr  -  natural killer tumor recognition sequence<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Ccnl2  -  cyclin l2<br>
+Tmf1  -  tata element modulatory factor 1<br>
+Htt  -  huntingtin<br>
+Slc37a3  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 3<br>
+Zfp653  -  zinc finger protein 653<br>
+Cramp1l  -  crm, cramped-like (drosophila)<br>
+Carf  -  calcium response factor<br>
+Zfp369  -  zinc finger protein 369<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Ppm1k  -  protein phosphatase 1k (pp2c domain containing)<br>
+Gsr  -  glutathione reductase<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Hinfp  -  histone h4 transcription factor<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Atl1  -  atlastin gtpase 1<br>
+Cd247  -  cd247 antigen<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Ep400  -  e1a binding protein p400<br>
+Slc25a18  -  solute carrier family 25 (mitochondrial carrier), member 18<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Usp24  -  ubiquitin specific peptidase 24<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Emc1  -  er membrane protein complex subunit 1<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Fmn1  -  formin 1<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Nbeal2  -  neurobeachin-like 2<br>
+Myo5a  -  myosin va<br>
+Tgfb1i1  -  transforming growth factor beta 1 induced transcript 1<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Oraov1  -  oral cancer overexpressed 1<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Zfp26  -  zinc finger protein 26<br>
+Zfp280d  -  zinc finger protein 280d<br>
+Zfp113  -  zinc finger protein 113<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Rdh10  -  retinol dehydrogenase 10 (all-trans)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Zfp644  -  zinc finger protein 644<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Rc3h2  -  ring finger and ccch-type zinc finger domains 2<br>
+Usp34  -  ubiquitin specific peptidase 34<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Zfp445  -  zinc finger protein 445<br>
+Dopey1  -  dopey family member 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+Clcn3  -  chloride channel 3<br>
+Dicer1  -  dicer 1, ribonuclease type iii<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Sez6l2  -  seizure related 6 homolog like 2<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+A530054K11Rik  -  riken cdna a530054k11 gene<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Ankrd13c  -  ankyrin repeat domain 13c<br>
+Prkce  -  protein kinase c, epsilon<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Setd5  -  set domain containing 5<br>
+Thoc2  -  tho complex 2<br>
+Zfp646  -  zinc finger protein 646<br>
+Polq  -  polymerase (dna directed), theta<br>
+Pkd2  -  polycystic kidney disease 2<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Rsbn1  -  rosbin, round spermatid basic protein 1<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Gata3  -  gata binding protein 3<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Clasp1  -  clip associating protein 1<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Adrbk2  -  adrenergic receptor kinase, beta 2<br>
+Ccnt2  -  cyclin t2<br>
+Zfp780b  -  zinc finger protein 780b<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Slc37a1  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 1<br>
+1810026J23Rik  -  riken cdna 1810026j23 gene<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Szt2  -  seizure threshold 2<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Btbd7  -  btb (poz) domain containing 7<br>
+Micu3  -  mitochondrial calcium uptake family, member 3<br>
+Eaf1  -  ell associated factor 1<br>
+Safb2  -  scaffold attachment factor b2<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Slc25a42  -  solute carrier family 25, member 42<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Endov  -  endonuclease v<br>
+Mars2  -  methionine-trna synthetase 2 (mitochondrial)<br>
+Med1  -  mediator complex subunit 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Nsun3  -  nol1/nop2/sun domain family member 3<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Crebbp  -  creb binding protein<br>
+Stk19  -  serine/threonine kinase 19<br>
+Rbm6  -  rna binding motif protein 6<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Trim39  -  tripartite motif-containing 39<br>
+Adcy3  -  adenylate cyclase 3<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Ireb2  -  iron responsive element binding protein 2<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Sec63  -  sec63-like (s. cerevisiae)<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Enthd2  -  enth domain containing 2<br>
+Pex1  -  peroxisomal biogenesis factor 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Slc30a9  -  solute carrier family 30 (zinc transporter), member 9<br>
+Zfp518a  -  zinc finger protein 518a<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Zfp870  -  zinc finger protein 870<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Ccnl1  -  cyclin l1<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Zfp866  -  zinc finger protein 866<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Rest  -  re1-silencing transcription factor<br>
+Gls  -  glutaminase<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Paxbp1  -  pax3 and pax7 binding protein 1<br>
+Rpl5  -  ribosomal protein l5<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Akap10  -  a kinase (prka) anchor protein 10<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Brd1  -  bromodomain containing 1<br>
+Brd8  -  bromodomain containing 8<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Atg16l1  -  autophagy related 16-like 1 (s. cerevisiae)<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Mlxip  -  mlx interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043227&amp;view=details' target="_blank">GO:0043227</a><a name=0043227></a></td>
+<td>membrane-bounded organelle</td>
+<td  align=center>2.14E-4</td>
+<td  align=center>2.08E-2</td>
+<td  align=center>1.17 (16005,9317,315,214)</td>
+<td>
+<a id="ctrl_elements_GO:0043227" href="javascript:toggle('elements_GO:0043227')">[+] Show genes</a><br>
+<div id="elements_GO:0043227" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Zfx  -  zinc finger protein x-linked<br>
+Abl2  -  v-abl abelson murine leukemia viral oncogene 2 (arg, abelson-related gene)<br>
+Fbxl22  -  f-box and leucine-rich repeat protein 22<br>
+C87436  -  expressed sequence c87436<br>
+Zhx1  -  zinc fingers and homeoboxes 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Npff  -  neuropeptide ff-amide peptide precursor<br>
+Nrp1  -  neuropilin 1<br>
+Zfp932  -  zinc finger protein 932<br>
+Cenpj  -  centromere protein j<br>
+Znrf2  -  zinc and ring finger 2<br>
+Far1  -  fatty acyl coa reductase 1<br>
+Ap5z1  -  adaptor-related protein complex 5, zeta 1 subunit<br>
+Mbtd1  -  mbt domain containing 1<br>
+2810403A07Rik  -  riken cdna 2810403a07 gene<br>
+Cabin1  -  calcineurin binding protein 1<br>
+Zfp871  -  zinc finger protein 871<br>
+Slc35e2  -  solute carrier family 35, member e2<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Sfswap  -  splicing factor, suppressor of white-apricot homolog (drosophila)<br>
+Zfml  -  zinc finger, matrin-like<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Zfp62  -  zinc finger protein 62<br>
+Pank4  -  pantothenate kinase 4<br>
+Dennd6b  -  denn/madd domain containing 6b<br>
+Pigm  -  phosphatidylinositol glycan anchor biosynthesis, class m<br>
+Zfp738  -  zinc finger protein 738<br>
+Adam17  -  a disintegrin and metallopeptidase domain 17<br>
+Dnase1l2  -  deoxyribonuclease 1-like 2<br>
+Dido1  -  death inducer-obliterator 1<br>
+Ino80d  -  ino80 complex subunit d<br>
+Mier3  -  mesoderm induction early response 1, family member 3<br>
+Dmtf1  -  cyclin d binding myb-like transcription factor 1<br>
+Cep350  -  centrosomal protein 350<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Dclre1a  -  dna cross-link repair 1a, pso2 homolog (s. cerevisiae)<br>
+BC018507  -  cdna sequence bc018507<br>
+Zfp595  -  zinc finger protein 595<br>
+Smcr7  -  smith-magenis syndrome chromosome region, candidate 7 homolog (human)<br>
+Nktr  -  natural killer tumor recognition sequence<br>
+Ccar1  -  cell division cycle and apoptosis regulator 1<br>
+Ccnl2  -  cyclin l2<br>
+Tmf1  -  tata element modulatory factor 1<br>
+Htt  -  huntingtin<br>
+Slc37a3  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 3<br>
+Zfp653  -  zinc finger protein 653<br>
+Cramp1l  -  crm, cramped-like (drosophila)<br>
+Carf  -  calcium response factor<br>
+Zfp369  -  zinc finger protein 369<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+Pcf11  -  cleavage and polyadenylation factor subunit homolog (s. cerevisiae)<br>
+Ppm1k  -  protein phosphatase 1k (pp2c domain containing)<br>
+Gsr  -  glutathione reductase<br>
+Dock10  -  dedicator of cytokinesis 10<br>
+Zbed6  -  zinc finger, bed domain containing 6<br>
+Hinfp  -  histone h4 transcription factor<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Atl1  -  atlastin gtpase 1<br>
+Cd247  -  cd247 antigen<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+Ep400  -  e1a binding protein p400<br>
+Slc25a18  -  solute carrier family 25 (mitochondrial carrier), member 18<br>
+Brd2  -  bromodomain containing 2<br>
+Rai1  -  retinoic acid induced 1<br>
+Usp24  -  ubiquitin specific peptidase 24<br>
+Zfyve27  -  zinc finger, fyve domain containing 27<br>
+Emc1  -  er membrane protein complex subunit 1<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Dmxl2  -  dmx-like 2<br>
+Micall1  -  microtubule associated monooxygenase, calponin and lim domain containing -like 1<br>
+Ptbp2  -  polypyrimidine tract binding protein 2<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Fmn1  -  formin 1<br>
+Tmc8  -  transmembrane channel-like gene family 8<br>
+Nbeal2  -  neurobeachin-like 2<br>
+Myo5a  -  myosin va<br>
+Tgfb1i1  -  transforming growth factor beta 1 induced transcript 1<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Rassf1  -  ras association (ralgds/af-6) domain family member 1<br>
+Oraov1  -  oral cancer overexpressed 1<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Zfp26  -  zinc finger protein 26<br>
+Zfp280d  -  zinc finger protein 280d<br>
+Zfp113  -  zinc finger protein 113<br>
+Rexo1  -  rex1, rna exonuclease 1 homolog (s. cerevisiae)<br>
+Rdh10  -  retinol dehydrogenase 10 (all-trans)<br>
+Nufip2  -  nuclear fragile x mental retardation protein interacting protein 2<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Zfp644  -  zinc finger protein 644<br>
+Pla2g6  -  phospholipase a2, group vi<br>
+Rc3h2  -  ring finger and ccch-type zinc finger domains 2<br>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Usp34  -  ubiquitin specific peptidase 34<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+Zfp445  -  zinc finger protein 445<br>
+Dopey1  -  dopey family member 1<br>
+Nxf1  -  nuclear rna export factor 1<br>
+Clcn3  -  chloride channel 3<br>
+Dicer1  -  dicer 1, ribonuclease type iii<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Sez6l2  -  seizure related 6 homolog like 2<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+A530054K11Rik  -  riken cdna a530054k11 gene<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Sspn  -  sarcospan<br>
+Asxl2  -  additional sex combs like 2 (drosophila)<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ankrd13c  -  ankyrin repeat domain 13c<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Setd5  -  set domain containing 5<br>
+Thoc2  -  tho complex 2<br>
+Zfp646  -  zinc finger protein 646<br>
+Polq  -  polymerase (dna directed), theta<br>
+Pkd2  -  polycystic kidney disease 2<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Rsbn1  -  rosbin, round spermatid basic protein 1<br>
+Ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+Rbm15  -  rna binding motif protein 15<br>
+Snrnp48  -  small nuclear ribonucleoprotein 48 (u11/u12)<br>
+Gata3  -  gata binding protein 3<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Clasp1  -  clip associating protein 1<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Adrbk2  -  adrenergic receptor kinase, beta 2<br>
+Ccnt2  -  cyclin t2<br>
+Rapgef6  -  rap guanine nucleotide exchange factor (gef) 6<br>
+Zfp780b  -  zinc finger protein 780b<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Slc37a1  -  solute carrier family 37 (glycerol-3-phosphate transporter), member 1<br>
+1810026J23Rik  -  riken cdna 1810026j23 gene<br>
+Snapc3  -  small nuclear rna activating complex, polypeptide 3<br>
+Cdkn2aip  -  cdkn2a interacting protein<br>
+Szt2  -  seizure threshold 2<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Btbd7  -  btb (poz) domain containing 7<br>
+Micu3  -  mitochondrial calcium uptake family, member 3<br>
+Eaf1  -  ell associated factor 1<br>
+Safb2  -  scaffold attachment factor b2<br>
+Casp8ap2  -  caspase 8 associated protein 2<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Slc25a42  -  solute carrier family 25, member 42<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Endov  -  endonuclease v<br>
+Mars2  -  methionine-trna synthetase 2 (mitochondrial)<br>
+Med1  -  mediator complex subunit 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Nsun3  -  nol1/nop2/sun domain family member 3<br>
+Ccnj  -  cyclin j<br>
+Prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+Crebbp  -  creb binding protein<br>
+Stk19  -  serine/threonine kinase 19<br>
+Rbm6  -  rna binding motif protein 6<br>
+Nr2c2  -  nuclear receptor subfamily 2, group c, member 2<br>
+1110008J03Rik  -  riken cdna 1110008j03 gene<br>
+Trim39  -  tripartite motif-containing 39<br>
+Adcy3  -  adenylate cyclase 3<br>
+Prdm15  -  pr domain containing 15<br>
+Rbbp6  -  retinoblastoma binding protein 6<br>
+Ireb2  -  iron responsive element binding protein 2<br>
+Sfrs18  -  serine/arginine-rich splicing factor 18<br>
+Sec63  -  sec63-like (s. cerevisiae)<br>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Son  -  son dna binding protein<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Zkscan3  -  zinc finger with krab and scan domains 3<br>
+Dnd1  -  dead end homolog 1 (zebrafish)<br>
+Enthd2  -  enth domain containing 2<br>
+Pex1  -  peroxisomal biogenesis factor 1<br>
+Smek1  -  smek homolog 1, suppressor of mek1 (dictyostelium)<br>
+Slc30a9  -  solute carrier family 30 (zinc transporter), member 9<br>
+Zfp518a  -  zinc finger protein 518a<br>
+2810474O19Rik  -  riken cdna 2810474o19 gene<br>
+A230046K03Rik  -  riken cdna a230046k03 gene<br>
+Syne4  -  spectrin repeat containing, nuclear envelope family member 4<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+Hnrnpul2  -  heterogeneous nuclear ribonucleoprotein u-like 2<br>
+Zfp870  -  zinc finger protein 870<br>
+Zbtb49  -  zinc finger and btb domain containing 49<br>
+Ccnl1  -  cyclin l1<br>
+Dennd4b  -  denn/madd domain containing 4b<br>
+Zfp866  -  zinc finger protein 866<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Rest  -  re1-silencing transcription factor<br>
+Gls  -  glutaminase<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Paxbp1  -  pax3 and pax7 binding protein 1<br>
+Mdm4  -  transformed mouse 3t3 cell double minute 4<br>
+Ttf1  -  transcription termination factor, rna polymerase i<br>
+Rpl5  -  ribosomal protein l5<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Rnf111  -  ring finger 111<br>
+Zfp606  -  zinc finger protein 606<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Akap10  -  a kinase (prka) anchor protein 10<br>
+2210018M11Rik  -  riken cdna 2210018m11 gene<br>
+Rnf216  -  ring finger protein 216<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Brd1  -  bromodomain containing 1<br>
+Brd8  -  bromodomain containing 8<br>
+Smg1  -  smg1 homolog, phosphatidylinositol 3-kinase-related kinase (c. elegans)<br>
+Atg16l1  -  autophagy related 16-like 1 (s. cerevisiae)<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Mlxip  -  mlx interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070776&amp;view=details' target="_blank">GO:0070776</a><a name=0070776></a></td>
+<td>MOZ/MORF histone acetyltransferase complex</td>
+<td  align=center>3.93E-4</td>
+<td  align=center>3.63E-2</td>
+<td  align=center>19.05 (16005,8,315,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070776" href="javascript:toggle('elements_GO:0070776')">[+] Show genes</a><br>
+<div id="elements_GO:0070776" style="display:none"> <font size=1>
+Brd1  -  bromodomain containing 1<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005814&amp;view=details' target="_blank">GO:0005814</a><a name=0005814></a></td>
+<td>centriole</td>
+<td  align=center>4.48E-4</td>
+<td  align=center>3.95E-2</td>
+<td  align=center>3.98 (16005,115,315,9)</td>
+<td>
+<a id="ctrl_elements_GO:0005814" href="javascript:toggle('elements_GO:0005814')">[+] Show genes</a><br>
+<div id="elements_GO:0005814" style="display:none"> <font size=1>
+Akna  -  at-hook transcription factor<br>
+Tubgcp3  -  tubulin, gamma complex associated protein 3<br>
+5830418K08Rik  -  riken cdna 5830418k08 gene<br>
+Pcm1  -  pericentriolar material 1<br>
+Htt  -  huntingtin<br>
+Cep152  -  centrosomal protein 152<br>
+Ccdc88a  -  coiled coil domain containing 88a<br>
+Cep350  -  centrosomal protein 350<br>
+Cenpj  -  centromere protein j<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044431&amp;view=details' target="_blank">GO:0044431</a><a name=0044431></a></td>
+<td>Golgi apparatus part</td>
+<td  align=center>5.6E-4</td>
+<td  align=center>4.73E-2</td>
+<td  align=center>2.17 (16005,514,315,22)</td>
+<td>
+<a id="ctrl_elements_GO:0044431" href="javascript:toggle('elements_GO:0044431')">[+] Show genes</a><br>
+<div id="elements_GO:0044431" style="display:none"> <font size=1>
+Vps54  -  vacuolar protein sorting 54 (yeast)<br>
+Cog3  -  component of oligomeric golgi complex 3<br>
+Trip11  -  thyroid hormone receptor interactor 11<br>
+Atl1  -  atlastin gtpase 1<br>
+Wasl  -  wiskott-aldrich syndrome-like (human)<br>
+D15Ertd621e  -  dna segment, chr 15, erato doi 621, expressed<br>
+Stk25  -  serine/threonine kinase 25 (yeast)<br>
+Enthd2  -  enth domain containing 2<br>
+Ap4e1  -  adaptor-related protein complex ap-4, epsilon 1<br>
+Hook3  -  hook homolog 3 (drosophila)<br>
+Slc35b3  -  solute carrier family 35, member b3<br>
+Atp8b4  -  atpase, class i, type 8b, member 4<br>
+Mapk8ip3  -  mitogen-activated protein kinase 8 interacting protein 3<br>
+Mbtps1  -  membrane-bound transcription factor peptidase, site 1<br>
+Pikfyve  -  phosphoinositide kinase, fyve finger containing<br>
+Atp11c  -  atpase, class vi, type 11c<br>
+Huwe1  -  hect, uba and wwe domain containing 1<br>
+Prkce  -  protein kinase c, epsilon<br>
+Slc30a7  -  solute carrier family 30 (zinc transporter), member 7<br>
+Birc6  -  baculoviral iap repeat-containing 6<br>
+Dopey1  -  dopey family member 1<br>
+2310035C23Rik  -  riken cdna 2310035c23 gene<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008024&amp;view=details' target="_blank">GO:0008024</a><a name=0008024></a></td>
+<td>cyclin/CDK positive transcription elongation factor complex</td>
+<td  align=center>5.81E-4</td>
+<td  align=center>4.7E-2</td>
+<td  align=center>16.94 (16005,9,315,3)</td>
+<td>
+<a id="ctrl_elements_GO:0008024" href="javascript:toggle('elements_GO:0008024')">[+] Show genes</a><br>
+<div id="elements_GO:0008024" style="display:none"> <font size=1>
+Cdk12  -  cyclin-dependent kinase 12<br>
+Ccnt2  -  cyclin t2<br>
+Cdk13  -  cyclin-dependent kinase 13<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070775&amp;view=details' target="_blank">GO:0070775</a><a name=0070775></a></td>
+<td>H3 histone acetyltransferase complex</td>
+<td  align=center>5.81E-4</td>
+<td  align=center>4.51E-2</td>
+<td  align=center>16.94 (16005,9,315,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070775" href="javascript:toggle('elements_GO:0070775')">[+] Show genes</a><br>
+<div id="elements_GO:0070775" style="display:none"> <font size=1>
+Brd1  -  bromodomain containing 1<br>
+Brpf1  -  bromodomain and phd finger containing, 1<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043189&amp;view=details' target="_blank">GO:0043189</a><a name=0043189></a></td>
+<td>H4/H2A histone acetyltransferase complex</td>
+<td  align=center>6.76E-4</td>
+<td  align=center>5.05E-2</td>
+<td  align=center>9.68 (16005,21,315,4)</td>
+<td>
+<a id="ctrl_elements_GO:0043189" href="javascript:toggle('elements_GO:0043189')">[+] Show genes</a><br>
+<div id="elements_GO:0043189" style="display:none"> <font size=1>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Brd8  -  bromodomain containing 8<br>
+Ep400  -  e1a binding protein p400<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035267&amp;view=details' target="_blank">GO:0035267</a><a name=0035267></a></td>
+<td>NuA4 histone acetyltransferase complex</td>
+<td  align=center>6.76E-4</td>
+<td  align=center>4.86E-2</td>
+<td  align=center>9.68 (16005,21,315,4)</td>
+<td>
+<a id="ctrl_elements_GO:0035267" href="javascript:toggle('elements_GO:0035267')">[+] Show genes</a><br>
+<div id="elements_GO:0035267" style="display:none"> <font size=1>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Brd8  -  bromodomain containing 8<br>
+Ep400  -  e1a binding protein p400<br>
+Epc1  -  enhancer of polycomb homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044427&amp;view=details' target="_blank">GO:0044427</a><a name=0044427></a></td>
+<td>chromosomal part</td>
+<td  align=center>9.07E-4</td>
+<td  align=center>6.29E-2</td>
+<td  align=center>1.83 (16005,863,315,31)</td>
+<td>
+<a id="ctrl_elements_GO:0044427" href="javascript:toggle('elements_GO:0044427')">[+] Show genes</a><br>
+<div id="elements_GO:0044427" style="display:none"> <font size=1>
+Med1  -  mediator complex subunit 1<br>
+Trrap  -  transformation/transcription domain-associated protein<br>
+Nfrkb  -  nuclear factor related to kappa b binding protein<br>
+Ep400  -  e1a binding protein p400<br>
+Ogt  -  o-linked n-acetylglucosamine (glcnac) transferase (udp-n-acetylglucosamine:polypeptide-n-acetylglucosaminyl transferase)<br>
+Rest  -  re1-silencing transcription factor<br>
+Srcap  -  snf2-related crebbp activator protein<br>
+Crebbp  -  creb binding protein<br>
+Kat6a  -  k(lysine) acetyltransferase 6a<br>
+Suv420h1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+Setd5  -  set domain containing 5<br>
+Bod1l  -  biorientation of chromosomes in cell division 1-like<br>
+Thoc2  -  tho complex 2<br>
+BC018507  -  cdna sequence bc018507<br>
+Smg6  -  smg-6 homolog, nonsense mediated mrna decay factor (c. elegans)<br>
+Narg2  -  nmda receptor-regulated gene 2<br>
+Ncoa3  -  nuclear receptor coactivator 3<br>
+Gata3  -  gata binding protein 3<br>
+Ubr2  -  ubiquitin protein ligase e3 component n-recognin 2<br>
+Zeb2  -  zinc finger e-box binding homeobox 2<br>
+Shprh  -  snf2 histone linker phd ring helicase<br>
+D14Abb1e  -  dna segment, chr 14, abbott 1 expressed<br>
+Clock  -  circadian locomotor output cycles kaput<br>
+Nsl1  -  nsl1, mind kinetochore complex component, homolog (s. cerevisiae)<br>
+Brd8  -  bromodomain containing 8<br>
+Mau2  -  mau2 chromatid cohesion factor homolog (c. elegans)<br>
+Chd3  -  chromodomain helicase dna binding protein 3<br>
+Clasp1  -  clip associating protein 1<br>
+Trappc12  -  trafficking protein particle complex 12<br>
+Mbd1  -  methyl-cpg binding domain protein 1<br>
+Fam178a  -  family with sequence similarity 178, member a<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 16951 genes out of 31206 gene terms entered by the user.<br> 381 genes were recognized by gene symbol and 16570 genes by other gene IDs .<br>333 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 16618 genes.<br>Only 16005 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1941 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

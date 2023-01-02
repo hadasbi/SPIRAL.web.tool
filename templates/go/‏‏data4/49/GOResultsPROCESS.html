@@ -1,0 +1,2688 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='1260,198,1353,261' HREF='#0065008' ALT=''>
+<AREA SHAPE='RECT' COORDS='1261,318,1352,381' HREF='#0010817' ALT=''>
+<AREA SHAPE='RECT' COORDS='3237,601,3371,681' HREF='#0023019' ALT=''>
+<AREA SHAPE='RECT' COORDS='3336,927,3467,990' HREF='#0010629' ALT=''>
+<AREA SHAPE='RECT' COORDS='2577,1375,2692,1455' HREF='#0045892' ALT=''>
+<AREA SHAPE='RECT' COORDS='301,780,413,828' HREF='#0050767' ALT=''>
+<AREA SHAPE='RECT' COORDS='301,927,413,990' HREF='#0050768' ALT=''>
+<AREA SHAPE='RECT' COORDS='2315,764,2443,844' HREF='#0010556' ALT=''>
+<AREA SHAPE='RECT' COORDS='2885,910,3013,1007' HREF='#0010557' ALT=''>
+<AREA SHAPE='RECT' COORDS='2600,927,2741,990' HREF='#2001141' ALT=''>
+<AREA SHAPE='RECT' COORDS='2448,910,2576,1007' HREF='#0010558' ALT=''>
+<AREA SHAPE='RECT' COORDS='2309,910,2424,1007' HREF='#2000112' ALT=''>
+<AREA SHAPE='RECT' COORDS='2581,1219,2691,1317' HREF='#1903507' ALT=''>
+<AREA SHAPE='RECT' COORDS='3035,601,3163,681' HREF='#0060255' ALT=''>
+<AREA SHAPE='RECT' COORDS='3488,780,3619,828' HREF='#0010468' ALT=''>
+<AREA SHAPE='RECT' COORDS='3035,755,3163,853' HREF='#0010605' ALT=''>
+<AREA SHAPE='RECT' COORDS='3187,773,3312,835' HREF='#0051252' ALT=''>
+<AREA SHAPE='RECT' COORDS='3336,755,3464,853' HREF='#0010604' ALT=''>
+<AREA SHAPE='RECT' COORDS='1035,318,1117,381' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='979,447,1061,527' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='565,463,701,511' HREF='#0045595' ALT=''>
+<AREA SHAPE='RECT' COORDS='2051,447,2133,527' HREF='#0031323' ALT=''>
+<AREA SHAPE='RECT' COORDS='872,447,955,527' HREF='#0048523' ALT=''>
+<AREA SHAPE='RECT' COORDS='2673,463,2804,511' HREF='#0007165' ALT=''>
+<AREA SHAPE='RECT' COORDS='1085,463,1211,511' HREF='#0042127' ALT=''>
+<AREA SHAPE='RECT' COORDS='2716,1375,2857,1455' HREF='#0006357' ALT=''>
+<AREA SHAPE='RECT' COORDS='419,447,541,527' HREF='#0051093' ALT=''>
+<AREA SHAPE='RECT' COORDS='507,610,643,673' HREF='#0045596' ALT=''>
+<AREA SHAPE='RECT' COORDS='136,764,277,844' HREF='#0051961' ALT=''>
+<AREA SHAPE='RECT' COORDS='572,318,695,381' HREF='#0050793' ALT=''>
+<AREA SHAPE='RECT' COORDS='152,447,261,527' HREF='#2000026' ALT=''>
+<AREA SHAPE='RECT' COORDS='725,447,848,527' HREF='#0051094' ALT=''>
+<AREA SHAPE='RECT' COORDS='819,910,915,1007' HREF='#1902931' ALT=''>
+<AREA SHAPE='RECT' COORDS='1417,1513,1513,1610' HREF='#2000065' ALT=''>
+<AREA SHAPE='RECT' COORDS='1091,1366,1197,1463' HREF='#0032348' ALT=''>
+<AREA SHAPE='RECT' COORDS='285,438,395,535' HREF='#0051241' ALT=''>
+<AREA SHAPE='RECT' COORDS='1895,1073,1991,1153' HREF='#0010566' ALT=''>
+<AREA SHAPE='RECT' COORDS='1549,1375,1645,1455' HREF='#2000064' ALT=''>
+<AREA SHAPE='RECT' COORDS='1136,1228,1243,1308' HREF='#0032347' ALT=''>
+<AREA SHAPE='RECT' COORDS='3187,919,3312,999' HREF='#0051254' ALT=''>
+<AREA SHAPE='RECT' COORDS='2867,1073,3008,1153' HREF='#1902680' ALT=''>
+<AREA SHAPE='RECT' COORDS='2517,764,2627,844' HREF='#0009891' ALT=''>
+<AREA SHAPE='RECT' COORDS='2765,910,2861,1007' HREF='#0031328' ALT=''>
+<AREA SHAPE='RECT' COORDS='1256,919,1363,999' HREF='#0032344' ALT=''>
+<AREA SHAPE='RECT' COORDS='1051,1065,1157,1162' HREF='#0032345' ALT=''>
+<AREA SHAPE='RECT' COORDS='827,610,952,673' HREF='#0008284' ALT=''>
+<AREA SHAPE='RECT' COORDS='667,610,803,673' HREF='#0045597' ALT=''>
+<AREA SHAPE='RECT' COORDS='2305,593,2388,690' HREF='#0031325' ALT=''>
+<AREA SHAPE='RECT' COORDS='136,610,277,673' HREF='#0051960' ALT=''>
+<AREA SHAPE='RECT' COORDS='2513,438,2599,535' HREF='#0051171' ALT=''>
+<AREA SHAPE='RECT' COORDS='2513,584,2599,699' HREF='#0051172' ALT=''>
+<AREA SHAPE='RECT' COORDS='2815,584,2900,699' HREF='#0051173' ALT=''>
+<AREA SHAPE='RECT' COORDS='2623,593,2791,690' HREF='#0019219' ALT=''>
+<AREA SHAPE='RECT' COORDS='352,617,483,665' HREF='#0060284' ALT=''>
+<AREA SHAPE='RECT' COORDS='437,773,568,835' HREF='#0010721' ALT=''>
+<AREA SHAPE='RECT' COORDS='2732,1073,2841,1153' HREF='#1903506' ALT=''>
+<AREA SHAPE='RECT' COORDS='2729,1237,2844,1299' HREF='#0006355' ALT=''>
+<AREA SHAPE='RECT' COORDS='2883,1219,2992,1317' HREF='#1903508' ALT=''>
+<AREA SHAPE='RECT' COORDS='2881,1375,2996,1455' HREF='#0045893' ALT=''>
+<AREA SHAPE='RECT' COORDS='1631,1065,1751,1162' HREF='#0031944' ALT=''>
+<AREA SHAPE='RECT' COORDS='1405,1366,1525,1463' HREF='#0031947' ALT=''>
+<AREA SHAPE='RECT' COORDS='1959,610,2068,673' HREF='#0009889' ALT=''>
+<AREA SHAPE='RECT' COORDS='1011,764,1107,844' HREF='#1902930' ALT=''>
+<AREA SHAPE='RECT' COORDS='2195,764,2291,844' HREF='#0031326' ALT=''>
+<AREA SHAPE='RECT' COORDS='1800,773,1936,835' HREF='#0046890' ALT=''>
+<AREA SHAPE='RECT' COORDS='1960,764,2069,844' HREF='#0009890' ALT=''>
+<AREA SHAPE='RECT' COORDS='2739,5,2626,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='2703,101,2775,149' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='2799,101,2905,149' HREF='#0032502' ALT=''>
+<AREA SHAPE='RECT' COORDS='1267,101,1347,149' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='1144,601,1269,681' HREF='#0062012' ALT=''>
+<AREA SHAPE='RECT' COORDS='861,755,987,853' HREF='#0062014' ALT=''>
+<AREA SHAPE='RECT' COORDS='1347,764,1472,844' HREF='#0010565' ALT=''>
+<AREA SHAPE='RECT' COORDS='1928,919,2064,999' HREF='#0051055' ALT=''>
+<AREA SHAPE='RECT' COORDS='1775,1065,1871,1162' HREF='#0010894' ALT=''>
+<AREA SHAPE='RECT' COORDS='2328,1056,2443,1171' HREF='#2000113' ALT=''>
+<AREA SHAPE='RECT' COORDS='2565,1073,2707,1153' HREF='#1902679' ALT=''>
+<AREA SHAPE='RECT' COORDS='2799,198,2905,261' HREF='#0048869' ALT=''>
+<AREA SHAPE='RECT' COORDS='2813,325,2936,373' HREF='#0030154' ALT=''>
+<AREA SHAPE='RECT' COORDS='2651,747,2819,861' HREF='#0045934' ALT=''>
+<AREA SHAPE='RECT' COORDS='88,325,189,373' HREF='#0032879' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,447,128,527' HREF='#1904872' ALT=''>
+<AREA SHAPE='RECT' COORDS='285,309,395,389' HREF='#0051239' ALT=''>
+<AREA SHAPE='RECT' COORDS='917,309,1011,389' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='2339,447,2435,527' HREF='#0009893' ALT=''>
+<AREA SHAPE='RECT' COORDS='1387,919,1483,999' HREF='#0046885' ALT=''>
+<AREA SHAPE='RECT' COORDS='2139,910,2235,1007' HREF='#0031327' ALT=''>
+<AREA SHAPE='RECT' COORDS='1232,764,1323,844' HREF='#0032350' ALT=''>
+<AREA SHAPE='RECT' COORDS='3541,927,3672,990' HREF='#0010628' ALT=''>
+<AREA SHAPE='RECT' COORDS='3037,919,3163,999' HREF='#0051253' ALT=''>
+<AREA SHAPE='RECT' COORDS='1808,919,1904,999' HREF='#0050810' ALT=''>
+<AREA SHAPE='RECT' COORDS='1507,919,1627,999' HREF='#0031943' ALT=''>
+<AREA SHAPE='RECT' COORDS='1440,1228,1560,1308' HREF='#0031946' ALT=''>
+<AREA SHAPE='RECT' COORDS='744,764,837,844' HREF='#2000648' ALT=''>
+<AREA SHAPE='RECT' COORDS='2004,318,2100,381' HREF='#0019222' ALT=''>
+<AREA SHAPE='RECT' COORDS='2157,447,2240,527' HREF='#0080090' ALT=''>
+<AREA SHAPE='RECT' COORDS='1873,447,1969,527' HREF='#0009892' ALT=''>
+<AREA SHAPE='RECT' COORDS='1267,1219,1416,1317' HREF='#0090032' ALT=''>
+<AREA SHAPE='RECT' COORDS='2092,593,2175,690' HREF='#0031324' ALT=''>
+<AREA SHAPE='RECT' COORDS='1760,610,1883,673' HREF='#0019216' ALT=''>
+<AREA SHAPE='RECT' COORDS='2828,463,2969,511' HREF='#0030182' ALT=''>
+<AREA SHAPE='RECT' COORDS='2843,747,3011,861' HREF='#0045935' ALT=''>
+<AREA SHAPE='RECT' COORDS='1653,764,1776,844' HREF='#0045833' ALT=''>
+<AREA SHAPE='RECT' COORDS='1547,764,1629,844' HREF='#0019218' ALT=''>
+<AREA SHAPE='RECT' COORDS='1141,910,1232,1007' HREF='#0032351' ALT=''>
+<AREA SHAPE='RECT' COORDS='1651,910,1733,1007' HREF='#0045939' ALT=''>
+<AREA SHAPE='RECT' COORDS='976,610,1069,673' HREF='#0072091' ALT=''>
+<AREA SHAPE='RECT' COORDS='1236,1065,1332,1162' HREF='#0032353' ALT=''>
+<AREA SHAPE='RECT' COORDS='1356,1073,1505,1153' HREF='#0090030' ALT=''>
+<AREA SHAPE='RECT' COORDS='859,198,952,261' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='800,309,893,389' HREF='#0048519' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000112&amp;view=details' target="_blank">GO:2000112</a><a name=2000112></a></td>
+<td>regulation of cellular macromolecule biosynthetic process</td>
+<td  align=center>1.82E-6</td>
+<td  align=center>2.74E-2</td>
+<td  align=center>1.71 (15889,3424,179,66)</td>
+<td>
+<a id="ctrl_elements_GO:2000112" href="javascript:toggle('elements_GO:2000112')">[+] Show genes</a><br>
+<div id="elements_GO:2000112" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+RNF187  -  ring finger protein 187<br>
+SP4  -  sp4 transcription factor<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+ZNF585A  -  zinc finger protein 585a<br>
+RBM4  -  rna binding motif protein 4<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010556&amp;view=details' target="_blank">GO:0010556</a><a name=0010556></a></td>
+<td>regulation of macromolecule biosynthetic process</td>
+<td  align=center>2.45E-6</td>
+<td  align=center>1.84E-2</td>
+<td  align=center>1.70 (15889,3452,179,66)</td>
+<td>
+<a id="ctrl_elements_GO:0010556" href="javascript:toggle('elements_GO:0010556')">[+] Show genes</a><br>
+<div id="elements_GO:0010556" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+RNF187  -  ring finger protein 187<br>
+SP4  -  sp4 transcription factor<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+ZNF585A  -  zinc finger protein 585a<br>
+RBM4  -  rna binding motif protein 4<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000113&amp;view=details' target="_blank">GO:2000113</a><a name=2000113></a></td>
+<td>negative regulation of cellular macromolecule biosynthetic process</td>
+<td  align=center>6.34E-6</td>
+<td  align=center>3.17E-2</td>
+<td  align=center>2.28 (15889,1287,179,33)</td>
+<td>
+<a id="ctrl_elements_GO:2000113" href="javascript:toggle('elements_GO:2000113')">[+] Show genes</a><br>
+<div id="elements_GO:2000113" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010558&amp;view=details' target="_blank">GO:0010558</a><a name=0010558></a></td>
+<td>negative regulation of macromolecule biosynthetic process</td>
+<td  align=center>7.34E-6</td>
+<td  align=center>2.75E-2</td>
+<td  align=center>2.26 (15889,1296,179,33)</td>
+<td>
+<a id="ctrl_elements_GO:0010558" href="javascript:toggle('elements_GO:0010558')">[+] Show genes</a><br>
+<div id="elements_GO:0010558" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031326&amp;view=details' target="_blank">GO:0031326</a><a name=0031326></a></td>
+<td>regulation of cellular biosynthetic process</td>
+<td  align=center>1.3E-5</td>
+<td  align=center>3.89E-2</td>
+<td  align=center>1.62 (15889,3619,179,66)</td>
+<td>
+<a id="ctrl_elements_GO:0031326" href="javascript:toggle('elements_GO:0031326')">[+] Show genes</a><br>
+<div id="elements_GO:0031326" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+RNF187  -  ring finger protein 187<br>
+SP4  -  sp4 transcription factor<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+ZNF585A  -  zinc finger protein 585a<br>
+RBM4  -  rna binding motif protein 4<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031327&amp;view=details' target="_blank">GO:0031327</a><a name=0031327></a></td>
+<td>negative regulation of cellular biosynthetic process</td>
+<td  align=center>1.84E-5</td>
+<td  align=center>4.61E-2</td>
+<td  align=center>2.16 (15889,1355,179,33)</td>
+<td>
+<a id="ctrl_elements_GO:0031327" href="javascript:toggle('elements_GO:0031327')">[+] Show genes</a><br>
+<div id="elements_GO:0031327" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045934&amp;view=details' target="_blank">GO:0045934</a><a name=0045934></a></td>
+<td>negative regulation of nucleobase-containing compound metabolic process</td>
+<td  align=center>2.21E-5</td>
+<td  align=center>4.73E-2</td>
+<td  align=center>2.18 (15889,1305,179,32)</td>
+<td>
+<a id="ctrl_elements_GO:0045934" href="javascript:toggle('elements_GO:0045934')">[+] Show genes</a><br>
+<div id="elements_GO:0045934" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009889&amp;view=details' target="_blank">GO:0009889</a><a name=0009889></a></td>
+<td>regulation of biosynthetic process</td>
+<td  align=center>2.53E-5</td>
+<td  align=center>4.74E-2</td>
+<td  align=center>1.59 (15889,3691,179,66)</td>
+<td>
+<a id="ctrl_elements_GO:0009889" href="javascript:toggle('elements_GO:0009889')">[+] Show genes</a><br>
+<div id="elements_GO:0009889" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+RNF187  -  ring finger protein 187<br>
+SP4  -  sp4 transcription factor<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+ZNF585A  -  zinc finger protein 585a<br>
+RBM4  -  rna binding motif protein 4<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009890&amp;view=details' target="_blank">GO:0009890</a><a name=0009890></a></td>
+<td>negative regulation of biosynthetic process</td>
+<td  align=center>2.63E-5</td>
+<td  align=center>4.39E-2</td>
+<td  align=center>2.12 (15889,1379,179,33)</td>
+<td>
+<a id="ctrl_elements_GO:0009890" href="javascript:toggle('elements_GO:0009890')">[+] Show genes</a><br>
+<div id="elements_GO:0009890" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045595&amp;view=details' target="_blank">GO:0045595</a><a name=0045595></a></td>
+<td>regulation of cell differentiation</td>
+<td  align=center>3.47E-5</td>
+<td  align=center>5.21E-2</td>
+<td  align=center>2.01 (15889,1590,179,36)</td>
+<td>
+<a id="ctrl_elements_GO:0045595" href="javascript:toggle('elements_GO:0045595')">[+] Show genes</a><br>
+<div id="elements_GO:0045595" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+RAB17  -  rab17, member ras oncogene family<br>
+FUT9  -  fucosyltransferase 9 (alpha (1,3) fucosyltransferase)<br>
+FGF13  -  fibroblast growth factor 13<br>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+AJAP1  -  adherens junctions associated protein 1<br>
+ATP11C  -  atpase, class vi, type 11c<br>
+CCDC71L  -  coiled-coil domain containing 71-like<br>
+TIAM2  -  t-cell lymphoma invasion and metastasis 2<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+CDX2  -  caudal type homeobox 2<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+ZNF675  -  zinc finger protein 675<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+COBL  -  cordon-bleu wh2 repeat protein<br>
+FZD3  -  frizzled family receptor 3<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+RORA  -  rar-related orphan receptor a<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+CD53  -  cd53 molecule<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+FAM60A  -  family with sequence similarity 60, member a<br>
+CCND1  -  cyclin d1<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051252&amp;view=details' target="_blank">GO:0051252</a><a name=0051252></a></td>
+<td>regulation of RNA metabolic process</td>
+<td  align=center>5.19E-5</td>
+<td  align=center>7.07E-2</td>
+<td  align=center>1.62 (15889,3241,179,59)</td>
+<td>
+<a id="ctrl_elements_GO:0051252" href="javascript:toggle('elements_GO:0051252')">[+] Show genes</a><br>
+<div id="elements_GO:0051252" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+RNF187  -  ring finger protein 187<br>
+SP4  -  sp4 transcription factor<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+TBX6  -  t-box 6<br>
+RORA  -  rar-related orphan receptor a<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+ZNF585A  -  zinc finger protein 585a<br>
+RBM4  -  rna binding motif protein 4<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051253&amp;view=details' target="_blank">GO:0051253</a><a name=0051253></a></td>
+<td>negative regulation of RNA metabolic process</td>
+<td  align=center>5.63E-5</td>
+<td  align=center>7.03E-2</td>
+<td  align=center>2.18 (15889,1182,179,29)</td>
+<td>
+<a id="ctrl_elements_GO:0051253" href="javascript:toggle('elements_GO:0051253')">[+] Show genes</a><br>
+<div id="elements_GO:0051253" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006355&amp;view=details' target="_blank">GO:0006355</a><a name=0006355></a></td>
+<td>regulation of transcription, DNA-templated</td>
+<td  align=center>8.99E-5</td>
+<td  align=center>1.04E-1</td>
+<td  align=center>1.63 (15889,3003,179,55)</td>
+<td>
+<a id="ctrl_elements_GO:0006355" href="javascript:toggle('elements_GO:0006355')">[+] Show genes</a><br>
+<div id="elements_GO:0006355" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+PAX7  -  paired box 7<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903506&amp;view=details' target="_blank">GO:1903506</a><a name=1903506></a></td>
+<td>regulation of nucleic acid-templated transcription</td>
+<td  align=center>8.99E-5</td>
+<td  align=center>9.62E-2</td>
+<td  align=center>1.63 (15889,3003,179,55)</td>
+<td>
+<a id="ctrl_elements_GO:1903506" href="javascript:toggle('elements_GO:1903506')">[+] Show genes</a><br>
+<div id="elements_GO:1903506" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+PAX7  -  paired box 7<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2001141&amp;view=details' target="_blank">GO:2001141</a><a name=2001141></a></td>
+<td>regulation of RNA biosynthetic process</td>
+<td  align=center>9.41E-5</td>
+<td  align=center>9.4E-2</td>
+<td  align=center>1.62 (15889,3008,179,55)</td>
+<td>
+<a id="ctrl_elements_GO:2001141" href="javascript:toggle('elements_GO:2001141')">[+] Show genes</a><br>
+<div id="elements_GO:2001141" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+PAX7  -  paired box 7<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019219&amp;view=details' target="_blank">GO:0019219</a><a name=0019219></a></td>
+<td>regulation of nucleobase-containing compound metabolic process</td>
+<td  align=center>9.5E-5</td>
+<td  align=center>8.91E-2</td>
+<td  align=center>1.56 (15889,3536,179,62)</td>
+<td>
+<a id="ctrl_elements_GO:0019219" href="javascript:toggle('elements_GO:0019219')">[+] Show genes</a><br>
+<div id="elements_GO:0019219" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+RNF187  -  ring finger protein 187<br>
+SP4  -  sp4 transcription factor<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ANKRD32  -  ankyrin repeat domain 32<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+ZNF585A  -  zinc finger protein 585a<br>
+RBM4  -  rna binding motif protein 4<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045892&amp;view=details' target="_blank">GO:0045892</a><a name=0045892></a></td>
+<td>negative regulation of transcription, DNA-templated</td>
+<td  align=center>9.8E-5</td>
+<td  align=center>8.64E-2</td>
+<td  align=center>2.19 (15889,1096,179,27)</td>
+<td>
+<a id="ctrl_elements_GO:0045892" href="javascript:toggle('elements_GO:0045892')">[+] Show genes</a><br>
+<div id="elements_GO:0045892" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902679&amp;view=details' target="_blank">GO:1902679</a><a name=1902679></a></td>
+<td>negative regulation of RNA biosynthetic process</td>
+<td  align=center>9.95E-5</td>
+<td  align=center>8.29E-2</td>
+<td  align=center>2.18 (15889,1097,179,27)</td>
+<td>
+<a id="ctrl_elements_GO:1902679" href="javascript:toggle('elements_GO:1902679')">[+] Show genes</a><br>
+<div id="elements_GO:1902679" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903507&amp;view=details' target="_blank">GO:1903507</a><a name=1903507></a></td>
+<td>negative regulation of nucleic acid-templated transcription</td>
+<td  align=center>9.95E-5</td>
+<td  align=center>7.85E-2</td>
+<td  align=center>2.18 (15889,1097,179,27)</td>
+<td>
+<a id="ctrl_elements_GO:1903507" href="javascript:toggle('elements_GO:1903507')">[+] Show genes</a><br>
+<div id="elements_GO:1903507" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045597&amp;view=details' target="_blank">GO:0045597</a><a name=0045597></a></td>
+<td>positive regulation of cell differentiation</td>
+<td  align=center>1.11E-4</td>
+<td  align=center>8.35E-2</td>
+<td  align=center>2.36 (15889,865,179,23)</td>
+<td>
+<a id="ctrl_elements_GO:0045597" href="javascript:toggle('elements_GO:0045597')">[+] Show genes</a><br>
+<div id="elements_GO:0045597" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+FUT9  -  fucosyltransferase 9 (alpha (1,3) fucosyltransferase)<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+SYK  -  spleen tyrosine kinase<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+RBM4  -  rna binding motif protein 4<br>
+CD53  -  cd53 molecule<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+ATP11C  -  atpase, class vi, type 11c<br>
+CCDC71L  -  coiled-coil domain containing 71-like<br>
+TIAM2  -  t-cell lymphoma invasion and metastasis 2<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+CDX2  -  caudal type homeobox 2<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+COBL  -  cordon-bleu wh2 repeat protein<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+BMP7  -  bone morphogenetic protein 7<br>
+FZD3  -  frizzled family receptor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030154&amp;view=details' target="_blank">GO:0030154</a><a name=0030154></a></td>
+<td>cell differentiation</td>
+<td  align=center>1.43E-4</td>
+<td  align=center>1.02E-1</td>
+<td  align=center>1.90 (15889,1636,179,35)</td>
+<td>
+<a id="ctrl_elements_GO:0030154" href="javascript:toggle('elements_GO:0030154')">[+] Show genes</a><br>
+<div id="elements_GO:0030154" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+FUT9  -  fucosyltransferase 9 (alpha (1,3) fucosyltransferase)<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+ATP11C  -  atpase, class vi, type 11c<br>
+INA  -  internexin neuronal intermediate filament protein, alpha<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+FZD3  -  frizzled family receptor 3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+MDGA2  -  mam domain containing glycosylphosphatidylinositol anchor 2<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+RORA  -  rar-related orphan receptor a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+RBM4  -  rna binding motif protein 4<br>
+EDAR  -  ectodysplasin a receptor<br>
+IRX2  -  iroquois homeobox 2<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+WNT5B  -  wingless-type mmtv integration site family, member 5b<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+NHS  -  nance-horan syndrome (congenital cataracts and dental anomalies)<br>
+CCND1  -  cyclin d1<br>
+NAV2  -  neuron navigator 2<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010468&amp;view=details' target="_blank">GO:0010468</a><a name=0010468></a></td>
+<td>regulation of gene expression</td>
+<td  align=center>2.25E-4</td>
+<td  align=center>1.53E-1</td>
+<td  align=center>1.48 (15889,3952,179,66)</td>
+<td>
+<a id="ctrl_elements_GO:0010468" href="javascript:toggle('elements_GO:0010468')">[+] Show genes</a><br>
+<div id="elements_GO:0010468" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+RNF187  -  ring finger protein 187<br>
+SP4  -  sp4 transcription factor<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+EDAR  -  ectodysplasin a receptor<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+FUT8  -  fucosyltransferase 8 (alpha (1,6) fucosyltransferase)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TMPRSS4  -  transmembrane protease, serine 4<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+ZNF585A  -  zinc finger protein 585a<br>
+RBM4  -  rna binding motif protein 4<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPL10A  -  ribosomal protein l10a<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010557&amp;view=details' target="_blank">GO:0010557</a><a name=0010557></a></td>
+<td>positive regulation of macromolecule biosynthetic process</td>
+<td  align=center>3.26E-4</td>
+<td  align=center>2.13E-1</td>
+<td  align=center>1.84 (15889,1640,179,34)</td>
+<td>
+<a id="ctrl_elements_GO:0010557" href="javascript:toggle('elements_GO:0010557')">[+] Show genes</a><br>
+<div id="elements_GO:0010557" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+RNF187  -  ring finger protein 187<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+TBX6  -  t-box 6<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+RORA  -  rar-related orphan receptor a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+ZNF585A  -  zinc finger protein 585a<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030182&amp;view=details' target="_blank">GO:0030182</a><a name=0030182></a></td>
+<td>neuron differentiation</td>
+<td  align=center>3.37E-4</td>
+<td  align=center>2.11E-1</td>
+<td  align=center>3.78 (15889,235,179,10)</td>
+<td>
+<a id="ctrl_elements_GO:0030182" href="javascript:toggle('elements_GO:0030182')">[+] Show genes</a><br>
+<div id="elements_GO:0030182" style="display:none"> <font size=1>
+SALL1  -  sal-like 1 (drosophila)<br>
+FUT9  -  fucosyltransferase 9 (alpha (1,3) fucosyltransferase)<br>
+MDGA2  -  mam domain containing glycosylphosphatidylinositol anchor 2<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+RORA  -  rar-related orphan receptor a<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+IRX2  -  iroquois homeobox 2<br>
+WNT5B  -  wingless-type mmtv integration site family, member 5b<br>
+FZD3  -  frizzled family receptor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0080090&amp;view=details' target="_blank">GO:0080090</a><a name=0080090></a></td>
+<td>regulation of primary metabolic process</td>
+<td  align=center>3.79E-4</td>
+<td  align=center>2.28E-1</td>
+<td  align=center>1.37 (15889,5235,179,81)</td>
+<td>
+<a id="ctrl_elements_GO:0080090" href="javascript:toggle('elements_GO:0080090')">[+] Show genes</a><br>
+<div id="elements_GO:0080090" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+SPSB4  -  spla/ryanodine receptor domain and socs box containing 4<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+GAREM  -  grb2 associated, regulator of mapk1<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+EDAR  -  ectodysplasin a receptor<br>
+HPGD  -  hydroxyprostaglandin dehydrogenase 15-(nad)<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ANKRD32  -  ankyrin repeat domain 32<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+FGF13  -  fibroblast growth factor 13<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+TIAM2  -  t-cell lymphoma invasion and metastasis 2<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+IPO7  -  importin 7<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+PPAP2A  -  phosphatidic acid phosphatase type 2a<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+HMX1  -  h6 family homeobox 1<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050768&amp;view=details' target="_blank">GO:0050768</a><a name=0050768></a></td>
+<td>negative regulation of neurogenesis</td>
+<td  align=center>4.39E-4</td>
+<td  align=center>2.53E-1</td>
+<td  align=center>3.65 (15889,243,179,10)</td>
+<td>
+<a id="ctrl_elements_GO:0050768" href="javascript:toggle('elements_GO:0050768')">[+] Show genes</a><br>
+<div id="elements_GO:0050768" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+FGF13  -  fibroblast growth factor 13<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+REST  -  re1-silencing transcription factor<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+BMP7  -  bone morphogenetic protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006357&amp;view=details' target="_blank">GO:0006357</a><a name=0006357></a></td>
+<td>regulation of transcription by RNA polymerase II</td>
+<td  align=center>4.43E-4</td>
+<td  align=center>2.46E-1</td>
+<td  align=center>1.66 (15889,2299,179,43)</td>
+<td>
+<a id="ctrl_elements_GO:0006357" href="javascript:toggle('elements_GO:0006357')">[+] Show genes</a><br>
+<div id="elements_GO:0006357" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+REST  -  re1-silencing transcription factor<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+SP4  -  sp4 transcription factor<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+RORA  -  rar-related orphan receptor a<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+ZNF585A  -  zinc finger protein 585a<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+IRX2  -  iroquois homeobox 2<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+SATB1  -  satb homeobox 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051172&amp;view=details' target="_blank">GO:0051172</a><a name=0051172></a></td>
+<td>negative regulation of nitrogen compound metabolic process</td>
+<td  align=center>4.44E-4</td>
+<td  align=center>2.38E-1</td>
+<td  align=center>1.70 (15889,2085,179,40)</td>
+<td>
+<a id="ctrl_elements_GO:0051172" href="javascript:toggle('elements_GO:0051172')">[+] Show genes</a><br>
+<div id="elements_GO:0051172" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+ZNF675  -  zinc finger protein 675<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+IPO7  -  importin 7<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051094&amp;view=details' target="_blank">GO:0051094</a><a name=0051094></a></td>
+<td>positive regulation of developmental process</td>
+<td  align=center>4.46E-4</td>
+<td  align=center>2.31E-1</td>
+<td  align=center>1.99 (15889,1204,179,27)</td>
+<td>
+<a id="ctrl_elements_GO:0051094" href="javascript:toggle('elements_GO:0051094')">[+] Show genes</a><br>
+<div id="elements_GO:0051094" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+FUT9  -  fucosyltransferase 9 (alpha (1,3) fucosyltransferase)<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+ATP11C  -  atpase, class vi, type 11c<br>
+CCDC71L  -  coiled-coil domain containing 71-like<br>
+TIAM2  -  t-cell lymphoma invasion and metastasis 2<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+CDX2  -  caudal type homeobox 2<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+COBL  -  cordon-bleu wh2 repeat protein<br>
+FZD3  -  frizzled family receptor 3<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+CD53  -  cd53 molecule<br>
+WNT5B  -  wingless-type mmtv integration site family, member 5b<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+CCND1  -  cyclin d1<br>
+SYNDIG1  -  synapse differentiation inducing 1<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010629&amp;view=details' target="_blank">GO:0010629</a><a name=0010629></a></td>
+<td>negative regulation of gene expression</td>
+<td  align=center>4.5E-4</td>
+<td  align=center>2.25E-1</td>
+<td  align=center>1.83 (15889,1601,179,33)</td>
+<td>
+<a id="ctrl_elements_GO:0010629" href="javascript:toggle('elements_GO:0010629')">[+] Show genes</a><br>
+<div id="elements_GO:0010629" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ZNF675  -  zinc finger protein 675<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+RBM4  -  rna binding motif protein 4<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+RPL10A  -  ribosomal protein l10a<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031324&amp;view=details' target="_blank">GO:0031324</a><a name=0031324></a></td>
+<td>negative regulation of cellular metabolic process</td>
+<td  align=center>4.59E-4</td>
+<td  align=center>2.22E-1</td>
+<td  align=center>1.67 (15889,2231,179,42)</td>
+<td>
+<a id="ctrl_elements_GO:0031324" href="javascript:toggle('elements_GO:0031324')">[+] Show genes</a><br>
+<div id="elements_GO:0031324" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+PCDH11X  -  protocadherin 11 x-linked<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+ZNF675  -  zinc finger protein 675<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+IPO7  -  importin 7<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072091&amp;view=details' target="_blank">GO:0072091</a><a name=0072091></a></td>
+<td>regulation of stem cell proliferation</td>
+<td  align=center>6.13E-4</td>
+<td  align=center>2.87E-1</td>
+<td  align=center>7.28 (15889,61,179,5)</td>
+<td>
+<a id="ctrl_elements_GO:0072091" href="javascript:toggle('elements_GO:0072091')">[+] Show genes</a><br>
+<div id="elements_GO:0072091" style="display:none"> <font size=1>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+FZD3  -  frizzled family receptor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045893&amp;view=details' target="_blank">GO:0045893</a><a name=0045893></a></td>
+<td>positive regulation of transcription, DNA-templated</td>
+<td  align=center>6.3E-4</td>
+<td  align=center>2.86E-1</td>
+<td  align=center>1.86 (15889,1429,179,30)</td>
+<td>
+<a id="ctrl_elements_GO:0045893" href="javascript:toggle('elements_GO:0045893')">[+] Show genes</a><br>
+<div id="elements_GO:0045893" style="display:none"> <font size=1>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+RNF187  -  ring finger protein 187<br>
+TBX6  -  t-box 6<br>
+RORA  -  rar-related orphan receptor a<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+ZNF585A  -  zinc finger protein 585a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903508&amp;view=details' target="_blank">GO:1903508</a><a name=1903508></a></td>
+<td>positive regulation of nucleic acid-templated transcription</td>
+<td  align=center>6.3E-4</td>
+<td  align=center>2.78E-1</td>
+<td  align=center>1.86 (15889,1429,179,30)</td>
+<td>
+<a id="ctrl_elements_GO:1903508" href="javascript:toggle('elements_GO:1903508')">[+] Show genes</a><br>
+<div id="elements_GO:1903508" style="display:none"> <font size=1>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+RNF187  -  ring finger protein 187<br>
+TBX6  -  t-box 6<br>
+RORA  -  rar-related orphan receptor a<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+ZNF585A  -  zinc finger protein 585a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902680&amp;view=details' target="_blank">GO:1902680</a><a name=1902680></a></td>
+<td>positive regulation of RNA biosynthetic process</td>
+<td  align=center>6.37E-4</td>
+<td  align=center>2.73E-1</td>
+<td  align=center>1.86 (15889,1430,179,30)</td>
+<td>
+<a id="ctrl_elements_GO:1902680" href="javascript:toggle('elements_GO:1902680')">[+] Show genes</a><br>
+<div id="elements_GO:1902680" style="display:none"> <font size=1>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+RNF187  -  ring finger protein 187<br>
+TBX6  -  t-box 6<br>
+RORA  -  rar-related orphan receptor a<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+ZNF585A  -  zinc finger protein 585a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051171&amp;view=details' target="_blank">GO:0051171</a><a name=0051171></a></td>
+<td>regulation of nitrogen compound metabolic process</td>
+<td  align=center>6.39E-4</td>
+<td  align=center>2.66E-1</td>
+<td  align=center>1.37 (15889,5066,179,78)</td>
+<td>
+<a id="ctrl_elements_GO:0051171" href="javascript:toggle('elements_GO:0051171')">[+] Show genes</a><br>
+<div id="elements_GO:0051171" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+SPSB4  -  spla/ryanodine receptor domain and socs box containing 4<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+GAREM  -  grb2 associated, regulator of mapk1<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+EDAR  -  ectodysplasin a receptor<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ANKRD32  -  ankyrin repeat domain 32<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+FGF13  -  fibroblast growth factor 13<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+IPO7  -  importin 7<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+HMX1  -  h6 family homeobox 1<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010605&amp;view=details' target="_blank">GO:0010605</a><a name=0010605></a></td>
+<td>negative regulation of macromolecule metabolic process</td>
+<td  align=center>6.62E-4</td>
+<td  align=center>2.68E-1</td>
+<td  align=center>1.63 (15889,2343,179,43)</td>
+<td>
+<a id="ctrl_elements_GO:0010605" href="javascript:toggle('elements_GO:0010605')">[+] Show genes</a><br>
+<div id="elements_GO:0010605" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+TAGLN3  -  transgelin 3<br>
+DCP2  -  decapping mrna 2<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+ZNF589  -  zinc finger protein 589<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+IPO7  -  importin 7<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+IRX2  -  iroquois homeobox 2<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+RPL10A  -  ribosomal protein l10a<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+SATB1  -  satb homeobox 1<br>
+CCND1  -  cyclin d1<br>
+HMX1  -  h6 family homeobox 1<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051173&amp;view=details' target="_blank">GO:0051173</a><a name=0051173></a></td>
+<td>positive regulation of nitrogen compound metabolic process</td>
+<td  align=center>6.99E-4</td>
+<td  align=center>2.76E-1</td>
+<td  align=center>1.56 (15889,2792,179,49)</td>
+<td>
+<a id="ctrl_elements_GO:0051173" href="javascript:toggle('elements_GO:0051173')">[+] Show genes</a><br>
+<div id="elements_GO:0051173" style="display:none"> <font size=1>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+SPSB4  -  spla/ryanodine receptor domain and socs box containing 4<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+GAREM  -  grb2 associated, regulator of mapk1<br>
+RNF187  -  ring finger protein 187<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+EDAR  -  ectodysplasin a receptor<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ANKRD32  -  ankyrin repeat domain 32<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+FGF13  -  fibroblast growth factor 13<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+HOXA1  -  homeobox a1<br>
+CDX2  -  caudal type homeobox 2<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+RORA  -  rar-related orphan receptor a<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+CCND1  -  cyclin d1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904872&amp;view=details' target="_blank">GO:1904872</a><a name=1904872></a></td>
+<td>regulation of telomerase RNA localization to Cajal body</td>
+<td  align=center>7.07E-4</td>
+<td  align=center>2.72E-1</td>
+<td  align=center>16.64 (15889,16,179,3)</td>
+<td>
+<a id="ctrl_elements_GO:1904872" href="javascript:toggle('elements_GO:1904872')">[+] Show genes</a><br>
+<div id="elements_GO:1904872" style="display:none"> <font size=1>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+DCP2  -  decapping mrna 2<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051961&amp;view=details' target="_blank">GO:0051961</a><a name=0051961></a></td>
+<td>negative regulation of nervous system development</td>
+<td  align=center>7.42E-4</td>
+<td  align=center>2.78E-1</td>
+<td  align=center>3.41 (15889,260,179,10)</td>
+<td>
+<a id="ctrl_elements_GO:0051961" href="javascript:toggle('elements_GO:0051961')">[+] Show genes</a><br>
+<div id="elements_GO:0051961" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+TBX6  -  t-box 6<br>
+FGF13  -  fibroblast growth factor 13<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+REST  -  re1-silencing transcription factor<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+BMP7  -  bone morphogenetic protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051254&amp;view=details' target="_blank">GO:0051254</a><a name=0051254></a></td>
+<td>positive regulation of RNA metabolic process</td>
+<td  align=center>7.43E-4</td>
+<td  align=center>2.72E-1</td>
+<td  align=center>1.82 (15889,1511,179,31)</td>
+<td>
+<a id="ctrl_elements_GO:0051254" href="javascript:toggle('elements_GO:0051254')">[+] Show genes</a><br>
+<div id="elements_GO:0051254" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+REST  -  re1-silencing transcription factor<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+RNF187  -  ring finger protein 187<br>
+TBX6  -  t-box 6<br>
+RORA  -  rar-related orphan receptor a<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+ZNF585A  -  zinc finger protein 585a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032345&amp;view=details' target="_blank">GO:0032345</a><a name=0032345></a></td>
+<td>negative regulation of aldosterone metabolic process</td>
+<td  align=center>7.46E-4</td>
+<td  align=center>2.66E-1</td>
+<td  align=center>44.38 (15889,4,179,2)</td>
+<td>
+<a id="ctrl_elements_GO:0032345" href="javascript:toggle('elements_GO:0032345')">[+] Show genes</a><br>
+<div id="elements_GO:0032345" style="display:none"> <font size=1>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+REST  -  re1-silencing transcription factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032348&amp;view=details' target="_blank">GO:0032348</a><a name=0032348></a></td>
+<td>negative regulation of aldosterone biosynthetic process</td>
+<td  align=center>7.46E-4</td>
+<td  align=center>2.6E-1</td>
+<td  align=center>44.38 (15889,4,179,2)</td>
+<td>
+<a id="ctrl_elements_GO:0032348" href="javascript:toggle('elements_GO:0032348')">[+] Show genes</a><br>
+<div id="elements_GO:0032348" style="display:none"> <font size=1>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+REST  -  re1-silencing transcription factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000065&amp;view=details' target="_blank">GO:2000065</a><a name=2000065></a></td>
+<td>negative regulation of cortisol biosynthetic process</td>
+<td  align=center>7.46E-4</td>
+<td  align=center>2.54E-1</td>
+<td  align=center>44.38 (15889,4,179,2)</td>
+<td>
+<a id="ctrl_elements_GO:2000065" href="javascript:toggle('elements_GO:2000065')">[+] Show genes</a><br>
+<div id="elements_GO:2000065" style="display:none"> <font size=1>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+REST  -  re1-silencing transcription factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019222&amp;view=details' target="_blank">GO:0019222</a><a name=0019222></a></td>
+<td>regulation of metabolic process</td>
+<td  align=center>7.81E-4</td>
+<td  align=center>2.6E-1</td>
+<td  align=center>1.32 (15889,5850,179,87)</td>
+<td>
+<a id="ctrl_elements_GO:0019222" href="javascript:toggle('elements_GO:0019222')">[+] Show genes</a><br>
+<div id="elements_GO:0019222" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+PCDH11X  -  protocadherin 11 x-linked<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+SOGA2  -  soga family member 2<br>
+PAX7  -  paired box 7<br>
+SPSB4  -  spla/ryanodine receptor domain and socs box containing 4<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+GAREM  -  grb2 associated, regulator of mapk1<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+EDAR  -  ectodysplasin a receptor<br>
+HPGD  -  hydroxyprostaglandin dehydrogenase 15-(nad)<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+FUT8  -  fucosyltransferase 8 (alpha (1,6) fucosyltransferase)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ANKRD32  -  ankyrin repeat domain 32<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+FGF13  -  fibroblast growth factor 13<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+TIAM2  -  t-cell lymphoma invasion and metastasis 2<br>
+HOXA1  -  homeobox a1<br>
+TMPRSS4  -  transmembrane protease, serine 4<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+IPO7  -  importin 7<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPL10A  -  ribosomal protein l10a<br>
+PPAP2A  -  phosphatidic acid phosphatase type 2a<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+HMX1  -  h6 family homeobox 1<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060255&amp;view=details' target="_blank">GO:0060255</a><a name=0060255></a></td>
+<td>regulation of macromolecule metabolic process</td>
+<td  align=center>8.06E-4</td>
+<td  align=center>2.63E-1</td>
+<td  align=center>1.34 (15889,5351,179,81)</td>
+<td>
+<a id="ctrl_elements_GO:0060255" href="javascript:toggle('elements_GO:0060255')">[+] Show genes</a><br>
+<div id="elements_GO:0060255" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+SPSB4  -  spla/ryanodine receptor domain and socs box containing 4<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+GAREM  -  grb2 associated, regulator of mapk1<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+EDAR  -  ectodysplasin a receptor<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+FUT8  -  fucosyltransferase 8 (alpha (1,6) fucosyltransferase)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ANKRD32  -  ankyrin repeat domain 32<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+FGF13  -  fibroblast growth factor 13<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TMPRSS4  -  transmembrane protease, serine 4<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+IPO7  -  importin 7<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPL10A  -  ribosomal protein l10a<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+HMX1  -  h6 family homeobox 1<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0023019&amp;view=details' target="_blank">GO:0023019</a><a name=0023019></a></td>
+<td>signal transduction involved in regulation of gene expression</td>
+<td  align=center>8.51E-4</td>
+<td  align=center>2.72E-1</td>
+<td  align=center>15.66 (15889,17,179,3)</td>
+<td>
+<a id="ctrl_elements_GO:0023019" href="javascript:toggle('elements_GO:0023019')">[+] Show genes</a><br>
+<div id="elements_GO:0023019" style="display:none"> <font size=1>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+TBX6  -  t-box 6<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000648&amp;view=details' target="_blank">GO:2000648</a><a name=2000648></a></td>
+<td>positive regulation of stem cell proliferation</td>
+<td  align=center>8.52E-4</td>
+<td  align=center>2.66E-1</td>
+<td  align=center>9.34 (15889,38,179,4)</td>
+<td>
+<a id="ctrl_elements_GO:2000648" href="javascript:toggle('elements_GO:2000648')">[+] Show genes</a><br>
+<div id="elements_GO:2000648" style="display:none"> <font size=1>
+SOX11  -  sry (sex determining region y)-box 11<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+FZD3  -  frizzled family receptor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031328&amp;view=details' target="_blank">GO:0031328</a><a name=0031328></a></td>
+<td>positive regulation of cellular biosynthetic process</td>
+<td  align=center>8.55E-4</td>
+<td  align=center>2.62E-1</td>
+<td  align=center>1.74 (15889,1730,179,34)</td>
+<td>
+<a id="ctrl_elements_GO:0031328" href="javascript:toggle('elements_GO:0031328')">[+] Show genes</a><br>
+<div id="elements_GO:0031328" style="display:none"> <font size=1>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+CASZ1  -  castor zinc finger 1<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+RNF187  -  ring finger protein 187<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+TBX6  -  t-box 6<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+RORA  -  rar-related orphan receptor a<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+ZNF585A  -  zinc finger protein 585a<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+KIAA0947  -  kiaa0947<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+BMP7  -  bone morphogenetic protein 7<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031323&amp;view=details' target="_blank">GO:0031323</a><a name=0031323></a></td>
+<td>regulation of cellular metabolic process</td>
+<td  align=center>9.19E-4</td>
+<td  align=center>2.76E-1</td>
+<td  align=center>1.34 (15889,5372,179,81)</td>
+<td>
+<a id="ctrl_elements_GO:0031323" href="javascript:toggle('elements_GO:0031323')">[+] Show genes</a><br>
+<div id="elements_GO:0031323" style="display:none"> <font size=1>
+TAGLN3  -  transgelin 3<br>
+CASZ1  -  castor zinc finger 1<br>
+PCDH11X  -  protocadherin 11 x-linked<br>
+SYK  -  spleen tyrosine kinase<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+RNF34  -  ring finger protein 34, e3 ubiquitin protein ligase<br>
+SOGA2  -  soga family member 2<br>
+SPSB4  -  spla/ryanodine receptor domain and socs box containing 4<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+PAX7  -  paired box 7<br>
+TRIML2  -  tripartite motif family-like 2<br>
+NR6A1  -  nuclear receptor subfamily 6, group a, member 1<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+SEMA6A  -  sema domain, transmembrane domain (tm), and cytoplasmic domain, (semaphorin) 6a<br>
+NAA15  -  n(alpha)-acetyltransferase 15, nata auxiliary subunit<br>
+REST  -  re1-silencing transcription factor<br>
+PLCB1  -  phospholipase c, beta 1 (phosphoinositide-specific)<br>
+ATF7IP  -  activating transcription factor 7 interacting protein<br>
+FOXN3  -  forkhead box n3<br>
+GAREM  -  grb2 associated, regulator of mapk1<br>
+SP4  -  sp4 transcription factor<br>
+RNF187  -  ring finger protein 187<br>
+WDFY2  -  wd repeat and fyve domain containing 2<br>
+ID1  -  inhibitor of dna binding 1, dominant negative helix-loop-helix protein<br>
+LMX1B  -  lim homeobox transcription factor 1, beta<br>
+SOX11  -  sry (sex determining region y)-box 11<br>
+PRDM1  -  pr domain containing 1, with znf domain<br>
+SALL3  -  sal-like 3 (drosophila)<br>
+EDAR  -  ectodysplasin a receptor<br>
+HPGD  -  hydroxyprostaglandin dehydrogenase 15-(nad)<br>
+IRX2  -  iroquois homeobox 2<br>
+SOX3  -  sry (sex determining region y)-box 3<br>
+WWP1  -  ww domain containing e3 ubiquitin protein ligase 1<br>
+NECAB1  -  n-terminal ef-hand calcium binding protein 1<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+NOLC1  -  nucleolar and coiled-body phosphoprotein 1<br>
+ZSCAN16  -  zinc finger and scan domain containing 16<br>
+ANKRD32  -  ankyrin repeat domain 32<br>
+ZNF614  -  zinc finger protein 614<br>
+BMP7  -  bone morphogenetic protein 7<br>
+LIN28A  -  lin-28 homolog a (c. elegans)<br>
+DCP2  -  decapping mrna 2<br>
+FGF13  -  fibroblast growth factor 13<br>
+OVOL2  -  ovo-like 2 (drosophila)<br>
+HOXB1  -  homeobox b1<br>
+PASK  -  pas domain containing serine/threonine kinase<br>
+ZNF589  -  zinc finger protein 589<br>
+HOXA1  -  homeobox a1<br>
+TET1  -  tet methylcytosine dioxygenase 1<br>
+CDX2  -  caudal type homeobox 2<br>
+PLA2G2A  -  phospholipase a2, group iia (platelets, synovial fluid)<br>
+MYCN  -  v-myc avian myelocytomatosis viral oncogene neuroblastoma derived homolog<br>
+ZNF675  -  zinc finger protein 675<br>
+MTL5  -  metallothionein-like 5, testis-specific (tesmin)<br>
+IPO7  -  importin 7<br>
+SMARCC1  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily c, member 1<br>
+CBFA2T3  -  core-binding factor, runt domain, alpha subunit 2; translocated to, 3<br>
+TBX6  -  t-box 6<br>
+ZFP82  -  zfp82 zinc finger protein<br>
+RORA  -  rar-related orphan receptor a<br>
+DBI  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+RBM4  -  rna binding motif protein 4<br>
+ZNF585A  -  zinc finger protein 585a<br>
+HSPD1  -  heat shock 60kda protein 1 (chaperonin)<br>
+CCT4  -  chaperonin containing tcp1, subunit 4 (delta)<br>
+EPCAM  -  epithelial cell adhesion molecule<br>
+KIAA0947  -  kiaa0947<br>
+SALL1  -  sal-like 1 (drosophila)<br>
+PARP1  -  poly (adp-ribose) polymerase 1<br>
+RPUSD3  -  rna pseudouridylate synthase domain containing 3<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+RUVBL1  -  ruvb-like 1 (e. coli)<br>
+YBX2  -  y box binding protein 2<br>
+PTPN14  -  protein tyrosine phosphatase, non-receptor type 14<br>
+SATB1  -  satb homeobox 1<br>
+JHDM1D  -  jumonji c domain containing histone demethylase 1 homolog d (s. cerevisiae)<br>
+CCND1  -  cyclin d1<br>
+ECT2  -  epithelial cell transforming sequence 2 oncogene<br>
+HMX1  -  h6 family homeobox 1<br>
+WAPAL  -  wings apart-like homolog (drosophila)<br>
+KAT7  -  k(lysine) acetyltransferase 7<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<H1 style='color:red'> Note that only 48.05% of the terms you entered were used in the analysis</H1><p>Species used: Homo sapiens</p><p>The system has recognized 18169 genes out of 33070 gene terms entered by the user.<br> 0 genes were recognized by gene symbol and 18169 genes by other gene IDs .<br>186 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 17983 genes.<br>Only 15889 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 14993 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

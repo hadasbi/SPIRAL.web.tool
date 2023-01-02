@@ -1,0 +1,3260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='215,117,327,165' HREF='#0008283' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,245,123,293' HREF='#0061351' ALT=''>
+<AREA SHAPE='RECT' COORDS='4877,830,4979,893' HREF='#0008637' ALT=''>
+<AREA SHAPE='RECT' COORDS='4807,977,4924,1109' HREF='#1902108' ALT=''>
+<AREA SHAPE='RECT' COORDS='5243,117,5328,165' HREF='#0051179' ALT=''>
+<AREA SHAPE='RECT' COORDS='5460,245,5567,293' HREF='#0051234' ALT=''>
+<AREA SHAPE='RECT' COORDS='847,366,929,429' HREF='#0070482' ALT=''>
+<AREA SHAPE='RECT' COORDS='843,503,944,566' HREF='#0036293' ALT=''>
+<AREA SHAPE='RECT' COORDS='2325,649,2416,729' HREF='#0048660' ALT=''>
+<AREA SHAPE='RECT' COORDS='2292,821,2407,901' HREF='#1904705' ALT=''>
+<AREA SHAPE='RECT' COORDS='2057,813,2148,910' HREF='#0048661' ALT=''>
+<AREA SHAPE='RECT' COORDS='2861,511,2973,559' HREF='#0030155' ALT=''>
+<AREA SHAPE='RECT' COORDS='2925,658,3037,721' HREF='#0007162' ALT=''>
+<AREA SHAPE='RECT' COORDS='2819,658,2901,721' HREF='#0022407' ALT=''>
+<AREA SHAPE='RECT' COORDS='5407,665,5500,713' HREF='#0046649' ALT=''>
+<AREA SHAPE='RECT' COORDS='5784,837,5883,885' HREF='#0030098' ALT=''>
+<AREA SHAPE='RECT' COORDS='5405,837,5515,885' HREF='#0042110' ALT=''>
+<AREA SHAPE='RECT' COORDS='5539,837,5651,885' HREF='#0042113' ALT=''>
+<AREA SHAPE='RECT' COORDS='5288,813,5381,910' HREF='#0002285' ALT=''>
+<AREA SHAPE='RECT' COORDS='4907,658,5008,721' HREF='#0007006' ALT=''>
+<AREA SHAPE='RECT' COORDS='4736,821,4853,901' HREF='#0046902' ALT=''>
+<AREA SHAPE='RECT' COORDS='5829,373,5939,421' HREF='#0048598' ALT=''>
+<AREA SHAPE='RECT' COORDS='5872,511,5981,559' HREF='#0042472' ALT=''>
+<AREA SHAPE='RECT' COORDS='4288,373,4384,421' HREF='#0042592' ALT=''>
+<AREA SHAPE='RECT' COORDS='4339,511,4435,559' HREF='#0019725' ALT=''>
+<AREA SHAPE='RECT' COORDS='4219,511,4315,559' HREF='#0048878' ALT=''>
+<AREA SHAPE='RECT' COORDS='4341,658,4437,721' HREF='#0055082' ALT=''>
+<AREA SHAPE='RECT' COORDS='4220,837,4337,885' HREF='#0006873' ALT=''>
+<AREA SHAPE='RECT' COORDS='3277,357,3371,437' HREF='#0048519' ALT=''>
+<AREA SHAPE='RECT' COORDS='3107,495,3189,575' HREF='#0048523' ALT=''>
+<AREA SHAPE='RECT' COORDS='3936,486,4045,583' HREF='#0051241' ALT=''>
+<AREA SHAPE='RECT' COORDS='3579,495,3701,575' HREF='#0051093' ALT=''>
+<AREA SHAPE='RECT' COORDS='3331,495,3445,575' HREF='#0002683' ALT=''>
+<AREA SHAPE='RECT' COORDS='3213,495,3307,575' HREF='#0048585' ALT=''>
+<AREA SHAPE='RECT' COORDS='2956,366,3049,429' HREF='#0048583' ALT=''>
+<AREA SHAPE='RECT' COORDS='2997,503,3083,566' HREF='#0050776' ALT=''>
+<AREA SHAPE='RECT' COORDS='1760,495,1853,575' HREF='#0048584' ALT=''>
+<AREA SHAPE='RECT' COORDS='5303,511,5385,559' HREF='#0045321' ALT=''>
+<AREA SHAPE='RECT' COORDS='5083,665,5213,713' HREF='#0002274' ALT=''>
+<AREA SHAPE='RECT' COORDS='5291,641,5376,738' HREF='#0002366' ALT=''>
+<AREA SHAPE='RECT' COORDS='2569,830,2676,893' HREF='#0051249' ALT=''>
+<AREA SHAPE='RECT' COORDS='2421,1011,2528,1074' HREF='#0050670' ALT=''>
+<AREA SHAPE='RECT' COORDS='2832,1019,2957,1067' HREF='#0050863' ALT=''>
+<AREA SHAPE='RECT' COORDS='2552,1019,2677,1067' HREF='#0050864' ALT=''>
+<AREA SHAPE='RECT' COORDS='2291,1003,2397,1083' HREF='#0051251' ALT=''>
+<AREA SHAPE='RECT' COORDS='2701,1003,2808,1083' HREF='#0051250' ALT=''>
+<AREA SHAPE='RECT' COORDS='5332,1003,5447,1083' HREF='#0002286' ALT=''>
+<AREA SHAPE='RECT' COORDS='303,1225,420,1273' HREF='#0006493' ALT=''>
+<AREA SHAPE='RECT' COORDS='319,1467,404,1515' HREF='#0016266' ALT=''>
+<AREA SHAPE='RECT' COORDS='1376,503,1461,566' HREF='#0060341' ALT=''>
+<AREA SHAPE='RECT' COORDS='1341,658,1472,721' HREF='#1903827' ALT=''>
+<AREA SHAPE='RECT' COORDS='2940,821,3023,901' HREF='#0022408' ALT=''>
+<AREA SHAPE='RECT' COORDS='2032,357,2125,437' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='1877,495,1992,575' HREF='#0002684' ALT=''>
+<AREA SHAPE='RECT' COORDS='2181,495,2264,575' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='4663,5,4550,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='491,117,573,165' HREF='#0008152' ALT=''>
+<AREA SHAPE='RECT' COORDS='4657,117,4743,165' HREF='#0040011' ALT=''>
+<AREA SHAPE='RECT' COORDS='1147,117,1232,165' HREF='#0050896' ALT=''>
+<AREA SHAPE='RECT' COORDS='4319,117,4399,165' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='4887,101,4985,181' HREF='#0071840' ALT=''>
+<AREA SHAPE='RECT' COORDS='4775,117,4847,165' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='5591,117,5697,165' HREF='#0032502' ALT=''>
+<AREA SHAPE='RECT' COORDS='2836,117,2945,165' HREF='#0051704' ALT=''>
+<AREA SHAPE='RECT' COORDS='5785,110,5879,173' HREF='#0032501' ALT=''>
+<AREA SHAPE='RECT' COORDS='4452,245,4569,293' HREF='#0002376' ALT=''>
+<AREA SHAPE='RECT' COORDS='273,511,388,559' HREF='#0043412' ALT=''>
+<AREA SHAPE='RECT' COORDS='356,665,495,713' HREF='#0036211' ALT=''>
+<AREA SHAPE='RECT' COORDS='217,665,332,713' HREF='#0043413' ALT=''>
+<AREA SHAPE='RECT' COORDS='5524,665,5601,713' HREF='#0032940' ALT=''>
+<AREA SHAPE='RECT' COORDS='5675,837,5760,885' HREF='#0006887' ALT=''>
+<AREA SHAPE='RECT' COORDS='356,830,495,893' HREF='#0006464' ALT=''>
+<AREA SHAPE='RECT' COORDS='291,1019,432,1067' HREF='#0006486' ALT=''>
+<AREA SHAPE='RECT' COORDS='519,658,644,721' HREF='#0044267' ALT=''>
+<AREA SHAPE='RECT' COORDS='5103,1201,5188,1298' HREF='#0002283' ALT=''>
+<AREA SHAPE='RECT' COORDS='5155,1467,5253,1515' HREF='#0043312' ALT=''>
+<AREA SHAPE='RECT' COORDS='533,245,661,293' HREF='#0044238' ALT=''>
+<AREA SHAPE='RECT' COORDS='147,245,245,293' HREF='#0070085' ALT=''>
+<AREA SHAPE='RECT' COORDS='424,229,509,309' HREF='#0006807' ALT=''>
+<AREA SHAPE='RECT' COORDS='685,238,768,301' HREF='#0044237' ALT=''>
+<AREA SHAPE='RECT' COORDS='269,238,400,301' HREF='#0071704' ALT=''>
+<AREA SHAPE='RECT' COORDS='3073,366,3188,429' HREF='#0002682' ALT=''>
+<AREA SHAPE='RECT' COORDS='3469,495,3555,575' HREF='#0002697' ALT=''>
+<AREA SHAPE='RECT' COORDS='2560,658,2656,721' HREF='#0002694' ALT=''>
+<AREA SHAPE='RECT' COORDS='4067,665,4176,713' HREF='#1903706' ALT=''>
+<AREA SHAPE='RECT' COORDS='4632,511,4763,559' HREF='#0007165' ALT=''>
+<AREA SHAPE='RECT' COORDS='4667,649,4757,729' HREF='#0007166' ALT=''>
+<AREA SHAPE='RECT' COORDS='3755,658,3891,721' HREF='#0045596' ALT=''>
+<AREA SHAPE='RECT' COORDS='2680,658,2795,721' HREF='#0050866' ALT=''>
+<AREA SHAPE='RECT' COORDS='5631,1442,5732,1539' HREF='#0002313' ALT=''>
+<AREA SHAPE='RECT' COORDS='5504,511,5579,559' HREF='#0046903' ALT=''>
+<AREA SHAPE='RECT' COORDS='412,511,537,559' HREF='#0019538' ALT=''>
+<AREA SHAPE='RECT' COORDS='4915,238,5005,301' HREF='#0016043' ALT=''>
+<AREA SHAPE='RECT' COORDS='5029,373,5120,421' HREF='#0006996' ALT=''>
+<AREA SHAPE='RECT' COORDS='4915,373,5005,421' HREF='#0061024' ALT=''>
+<AREA SHAPE='RECT' COORDS='5744,1019,5877,1067' HREF='#0030183' ALT=''>
+<AREA SHAPE='RECT' COORDS='5120,813,5213,910' HREF='#0002275' ALT=''>
+<AREA SHAPE='RECT' COORDS='843,238,920,301' HREF='#0009628' ALT=''>
+<AREA SHAPE='RECT' COORDS='4665,994,4783,1091' HREF='#0035794' ALT=''>
+<AREA SHAPE='RECT' COORDS='4676,1192,4796,1307' HREF='#1902686' ALT=''>
+<AREA SHAPE='RECT' COORDS='3655,366,3777,429' HREF='#0050793' ALT=''>
+<AREA SHAPE='RECT' COORDS='4069,495,4179,575' HREF='#2000026' ALT=''>
+<AREA SHAPE='RECT' COORDS='3725,511,3861,559' HREF='#0045595' ALT=''>
+<AREA SHAPE='RECT' COORDS='3936,357,4045,437' HREF='#0051239' ALT=''>
+<AREA SHAPE='RECT' COORDS='3592,795,3691,927' HREF='#0002701' ALT=''>
+<AREA SHAPE='RECT' COORDS='909,665,992,713' HREF='#0001666' ALT=''>
+<AREA SHAPE='RECT' COORDS='5717,1225,5819,1273' HREF='#0002335' ALT=''>
+<AREA SHAPE='RECT' COORDS='4461,665,4544,713' HREF='#0050900' ALT=''>
+<AREA SHAPE='RECT' COORDS='3632,632,3731,747' HREF='#0002700' ALT=''>
+<AREA SHAPE='RECT' COORDS='4993,511,5100,559' HREF='#0007005' ALT=''>
+<AREA SHAPE='RECT' COORDS='4736,1416,4853,1565' HREF='#1902110' ALT=''>
+<AREA SHAPE='RECT' COORDS='4504,821,4587,901' HREF='#0007215' ALT=''>
+<AREA SHAPE='RECT' COORDS='4752,373,4840,421' HREF='#0048870' ALT=''>
+<AREA SHAPE='RECT' COORDS='4009,830,4108,893' HREF='#1902105' ALT=''>
+<AREA SHAPE='RECT' COORDS='3877,1003,3976,1083' HREF='#1902106' ALT=''>
+<AREA SHAPE='RECT' COORDS='4000,1011,4123,1074' HREF='#2001198' ALT=''>
+<AREA SHAPE='RECT' COORDS='2103,994,2217,1091' HREF='#1904707' ALT=''>
+<AREA SHAPE='RECT' COORDS='2172,821,2268,901' HREF='#0002696' ALT=''>
+<AREA SHAPE='RECT' COORDS='1547,649,1632,729' HREF='#0050778' ALT=''>
+<AREA SHAPE='RECT' COORDS='5505,373,5577,421' HREF='#0006810' ALT=''>
+<AREA SHAPE='RECT' COORDS='5603,511,5725,559' HREF='#0016192' ALT=''>
+<AREA SHAPE='RECT' COORDS='1368,238,1453,301' HREF='#0051716' ALT=''>
+<AREA SHAPE='RECT' COORDS='1261,357,1355,437' HREF='#0070887' ALT=''>
+<AREA SHAPE='RECT' COORDS='4509,511,4608,559' HREF='#0016477' ALT=''>
+<AREA SHAPE='RECT' COORDS='1256,245,1344,293' HREF='#0042221' ALT=''>
+<AREA SHAPE='RECT' COORDS='744,665,867,713' HREF='#0072376' ALT=''>
+<AREA SHAPE='RECT' COORDS='1147,238,1232,301' HREF='#0009605' ALT=''>
+<AREA SHAPE='RECT' COORDS='1045,238,1123,301' HREF='#0009607' ALT=''>
+<AREA SHAPE='RECT' COORDS='944,245,1021,293' HREF='#0006950' ALT=''>
+<AREA SHAPE='RECT' COORDS='1429,373,1555,421' HREF='#0006955' ALT=''>
+<AREA SHAPE='RECT' COORDS='2900,1218,3025,1281' HREF='#0050868' ALT=''>
+<AREA SHAPE='RECT' COORDS='3229,1157,3357,1341' HREF='#2001188' ALT=''>
+<AREA SHAPE='RECT' COORDS='5212,1225,5311,1273' HREF='#0043299' ALT=''>
+<AREA SHAPE='RECT' COORDS='1155,366,1237,429' HREF='#0010033' ALT=''>
+<AREA SHAPE='RECT' COORDS='4568,665,4643,713' HREF='#0008347' ALT=''>
+<AREA SHAPE='RECT' COORDS='4381,837,4480,885' HREF='#0043615' ALT=''>
+<AREA SHAPE='RECT' COORDS='2700,821,2796,901' HREF='#0002695' ALT=''>
+<AREA SHAPE='RECT' COORDS='5019,1019,5101,1067' HREF='#0042119' ALT=''>
+<AREA SHAPE='RECT' COORDS='5003,837,5096,885' HREF='#0036230' ALT=''>
+<AREA SHAPE='RECT' COORDS='3472,641,3557,738' HREF='#0002698' ALT=''>
+<AREA SHAPE='RECT' COORDS='1024,366,1131,429' HREF='#0043207' ALT=''>
+<AREA SHAPE='RECT' COORDS='1019,511,1141,559' HREF='#0051707' ALT=''>
+<AREA SHAPE='RECT' COORDS='3061,658,3187,721' HREF='#0002819' ALT=''>
+<AREA SHAPE='RECT' COORDS='4200,665,4317,713' HREF='#0050801' ALT=''>
+<AREA SHAPE='RECT' COORDS='5635,1019,5720,1067' HREF='#0045055' ALT=''>
+<AREA SHAPE='RECT' COORDS='1264,837,1376,885' HREF='#0030334' ALT=''>
+<AREA SHAPE='RECT' COORDS='5749,511,5848,559' HREF='#0002521' ALT=''>
+<AREA SHAPE='RECT' COORDS='1641,1209,1756,1289' HREF='#1902897' ALT=''>
+<AREA SHAPE='RECT' COORDS='2551,511,2665,559' HREF='#0050865' ALT=''>
+<AREA SHAPE='RECT' COORDS='2187,658,2301,721' HREF='#0050867' ALT=''>
+<AREA SHAPE='RECT' COORDS='2820,821,2916,901' HREF='#1903037' ALT=''>
+<AREA SHAPE='RECT' COORDS='2981,994,3077,1091' HREF='#1903038' ALT=''>
+<AREA SHAPE='RECT' COORDS='3932,1209,4055,1289' HREF='#2001199' ALT=''>
+<AREA SHAPE='RECT' COORDS='4312,238,4405,301' HREF='#0065008' ALT=''>
+<AREA SHAPE='RECT' COORDS='2956,238,3049,301' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='1443,1003,1541,1083' HREF='#1905475' ALT=''>
+<AREA SHAPE='RECT' COORDS='4735,1641,4855,1703' HREF='#0097345' ALT=''>
+<AREA SHAPE='RECT' COORDS='1284,1019,1380,1067' HREF='#0006956' ALT=''>
+<AREA SHAPE='RECT' COORDS='5175,495,5279,575' HREF='#0002263' ALT=''>
+<AREA SHAPE='RECT' COORDS='1701,373,1803,421' HREF='#0032879' ALT=''>
+<AREA SHAPE='RECT' COORDS='1595,495,1685,575' HREF='#0051270' ALT=''>
+<AREA SHAPE='RECT' COORDS='1267,511,1352,559' HREF='#0051049' ALT=''>
+<AREA SHAPE='RECT' COORDS='1485,503,1571,566' HREF='#0032880' ALT=''>
+<AREA SHAPE='RECT' COORDS='3315,1390,3443,1591' HREF='#2001189' ALT=''>
+<AREA SHAPE='RECT' COORDS='3261,649,3347,729' HREF='#0050777' ALT=''>
+<AREA SHAPE='RECT' COORDS='2431,830,2545,893' HREF='#0032944' ALT=''>
+<AREA SHAPE='RECT' COORDS='416,357,525,437' HREF='#1901564' ALT=''>
+<AREA SHAPE='RECT' COORDS='3873,830,3983,893' HREF='#1903707' ALT=''>
+<AREA SHAPE='RECT' COORDS='2440,658,2536,721' HREF='#0070663' ALT=''>
+<AREA SHAPE='RECT' COORDS='5591,238,5697,301' HREF='#0048869' ALT=''>
+<AREA SHAPE='RECT' COORDS='5640,373,5763,421' HREF='#0030154' ALT=''>
+<AREA SHAPE='RECT' COORDS='5177,373,5276,421' HREF='#0001775' ALT=''>
+<AREA SHAPE='RECT' COORDS='4752,229,4840,309' HREF='#0006928' ALT=''>
+<AREA SHAPE='RECT' COORDS='2037,658,2163,721' HREF='#0008284' ALT=''>
+<AREA SHAPE='RECT' COORDS='1923,641,2013,738' HREF='#0051130' ALT=''>
+<AREA SHAPE='RECT' COORDS='1216,665,1317,713' HREF='#2000145' ALT=''>
+<AREA SHAPE='RECT' COORDS='5721,238,5831,301' HREF='#0009653' ALT=''>
+<AREA SHAPE='RECT' COORDS='2567,366,2649,429' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='2355,511,2480,559' HREF='#0042127' ALT=''>
+<AREA SHAPE='RECT' COORDS='2067,495,2157,575' HREF='#0051128' ALT=''>
+<AREA SHAPE='RECT' COORDS='1284,1209,1380,1289' HREF='#0006958' ALT=''>
+<AREA SHAPE='RECT' COORDS='1641,1003,1756,1083' HREF='#1901626' ALT=''>
+<AREA SHAPE='RECT' COORDS='1033,665,1127,713' HREF='#0009617' ALT=''>
+<AREA SHAPE='RECT' COORDS='4781,658,4883,721' HREF='#0090559' ALT=''>
+<AREA SHAPE='RECT' COORDS='4611,821,4712,901' HREF='#1905710' ALT=''>
+<AREA SHAPE='RECT' COORDS='2416,1218,2541,1281' HREF='#0050871' ALT=''>
+<AREA SHAPE='RECT' COORDS='5855,245,5940,293' HREF='#0001503' ALT=''>
+<AREA SHAPE='RECT' COORDS='1704,830,1819,893' HREF='#0099175' ALT=''>
+<AREA SHAPE='RECT' COORDS='1780,1011,1919,1074' HREF='#1905874' ALT=''>
+<AREA SHAPE='RECT' COORDS='1579,373,1677,421' HREF='#0040012' ALT=''>
+<AREA SHAPE='RECT' COORDS='561,495,676,575' HREF='#0044260' ALT=''>
+<AREA SHAPE='RECT' COORDS='1843,830,1933,893' HREF='#0033043' ALT=''>
+<AREA SHAPE='RECT' COORDS='1467,830,1552,893' HREF='#0002253' ALT=''>
+<AREA SHAPE='RECT' COORDS='277,366,392,429' HREF='#0043170' ALT=''>
+<AREA SHAPE='RECT' COORDS='4509,373,4627,421' HREF='#0002252' ALT=''>
+<AREA SHAPE='RECT' COORDS='5493,1003,5611,1083' HREF='#0002312' ALT=''>
+<AREA SHAPE='RECT' COORDS='1707,658,1797,721' HREF='#0050807' ALT=''>
+<AREA SHAPE='RECT' COORDS='1117,837,1240,885' HREF='#0006959' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002366&amp;view=details' target="_blank">GO:0002366</a><a name=0002366></a></td>
+<td>leukocyte activation involved in immune response</td>
+<td  align=center>6.56E-9</td>
+<td  align=center>8.29E-5</td>
+<td  align=center>3.21 (8795,391,217,31)</td>
+<td>
+<a id="ctrl_elements_GO:0002366" href="javascript:toggle('elements_GO:0002366')">[+] Show genes</a><br>
+<div id="elements_GO:0002366" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+ITM2A  -  integral membrane protein 2a<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+CD300A  -  cd300a molecule<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002263&amp;view=details' target="_blank">GO:0002263</a><a name=0002263></a></td>
+<td>cell activation involved in immune response</td>
+<td  align=center>7.41E-9</td>
+<td  align=center>4.68E-5</td>
+<td  align=center>3.20 (8795,393,217,31)</td>
+<td>
+<a id="ctrl_elements_GO:0002263" href="javascript:toggle('elements_GO:0002263')">[+] Show genes</a><br>
+<div id="elements_GO:0002263" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+ITM2A  -  integral membrane protein 2a<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+CD300A  -  cd300a molecule<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002252&amp;view=details' target="_blank">GO:0002252</a><a name=0002252></a></td>
+<td>immune effector process</td>
+<td  align=center>7.63E-9</td>
+<td  align=center>3.21E-5</td>
+<td  align=center>2.67 (8795,608,217,40)</td>
+<td>
+<a id="ctrl_elements_GO:0002252" href="javascript:toggle('elements_GO:0002252')">[+] Show genes</a><br>
+<div id="elements_GO:0002252" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+TMEM30A  -  transmembrane protein 30a<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+ITM2A  -  integral membrane protein 2a<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+CD300A  -  cd300a molecule<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002313&amp;view=details' target="_blank">GO:0002313</a><a name=0002313></a></td>
+<td>mature B cell differentiation involved in immune response</td>
+<td  align=center>8.75E-7</td>
+<td  align=center>2.76E-3</td>
+<td  align=center>16.21 (8795,15,217,6)</td>
+<td>
+<a id="ctrl_elements_GO:0002313" href="javascript:toggle('elements_GO:0002313')">[+] Show genes</a><br>
+<div id="elements_GO:0002313" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ITM2A  -  integral membrane protein 2a<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002285&amp;view=details' target="_blank">GO:0002285</a><a name=0002285></a></td>
+<td>lymphocyte activation involved in immune response</td>
+<td  align=center>1.48E-6</td>
+<td  align=center>3.75E-3</td>
+<td  align=center>6.87 (8795,59,217,10)</td>
+<td>
+<a id="ctrl_elements_GO:0002285" href="javascript:toggle('elements_GO:0002285')">[+] Show genes</a><br>
+<div id="elements_GO:0002285" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+RORA  -  rar-related orphan receptor a<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+GATA3  -  gata binding protein 3<br>
+ADA  -  adenosine deaminase<br>
+ITM2A  -  integral membrane protein 2a<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007166&amp;view=details' target="_blank">GO:0007166</a><a name=0007166></a></td>
+<td>cell surface receptor signaling pathway</td>
+<td  align=center>2.62E-6</td>
+<td  align=center>5.52E-3</td>
+<td  align=center>1.97 (8795,990,217,48)</td>
+<td>
+<a id="ctrl_elements_GO:0007166" href="javascript:toggle('elements_GO:0007166')">[+] Show genes</a><br>
+<div id="elements_GO:0007166" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+CDK14  -  cyclin-dependent kinase 14<br>
+HIST1H3G  -  histone cluster 1, h3g<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+ITGB7  -  integrin, beta 7<br>
+BSG  -  basigin (ok blood group)<br>
+MESDC2  -  mesoderm development candidate 2<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+BTLA  -  b and t lymphocyte associated<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+FZD3  -  frizzled family receptor 3<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+MPZL1  -  myelin protein zero-like 1<br>
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RORA  -  rar-related orphan receptor a<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+PLXNB2  -  plexin b2<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+TSPAN12  -  tetraspanin 12<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+NLK  -  nemo-like kinase<br>
+BCL9  -  b-cell cll/lymphoma 9<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+IL10  -  interleukin 10<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+CSRNP1  -  cysteine-serine-rich nuclear protein 1<br>
+POLR2A  -  polymerase (rna) ii (dna directed) polypeptide a, 220kda<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002335&amp;view=details' target="_blank">GO:0002335</a><a name=0002335></a></td>
+<td>mature B cell differentiation</td>
+<td  align=center>3.05E-6</td>
+<td  align=center>5.5E-3</td>
+<td  align=center>13.51 (8795,18,217,6)</td>
+<td>
+<a id="ctrl_elements_GO:0002335" href="javascript:toggle('elements_GO:0002335')">[+] Show genes</a><br>
+<div id="elements_GO:0002335" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ITM2A  -  integral membrane protein 2a<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045321&amp;view=details' target="_blank">GO:0045321</a><a name=0045321></a></td>
+<td>leukocyte activation</td>
+<td  align=center>4.57E-6</td>
+<td  align=center>7.22E-3</td>
+<td  align=center>2.35 (8795,551,217,32)</td>
+<td>
+<a id="ctrl_elements_GO:0045321" href="javascript:toggle('elements_GO:0045321')">[+] Show genes</a><br>
+<div id="elements_GO:0045321" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+ITM2A  -  integral membrane protein 2a<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+CD300A  -  cd300a molecule<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006959&amp;view=details' target="_blank">GO:0006959</a><a name=0006959></a></td>
+<td>humoral immune response</td>
+<td  align=center>4.82E-6</td>
+<td  align=center>6.76E-3</td>
+<td  align=center>5.44 (8795,82,217,11)</td>
+<td>
+<a id="ctrl_elements_GO:0006959" href="javascript:toggle('elements_GO:0006959')">[+] Show genes</a><br>
+<div id="elements_GO:0006959" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+GATA3  -  gata binding protein 3<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032879&amp;view=details' target="_blank">GO:0032879</a><a name=0032879></a></td>
+<td>regulation of localization</td>
+<td  align=center>7.8E-6</td>
+<td  align=center>9.86E-3</td>
+<td  align=center>1.81 (8795,1185,217,53)</td>
+<td>
+<a id="ctrl_elements_GO:0032879" href="javascript:toggle('elements_GO:0032879')">[+] Show genes</a><br>
+<div id="elements_GO:0032879" style="display:none"> <font size=1>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+TMEM30A  -  transmembrane protein 30a<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+LGMN  -  legumain<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+SP1  -  sp1 transcription factor<br>
+CTSH  -  cathepsin h<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+REEP5  -  receptor accessory protein 5<br>
+CRIPT  -  cysteine-rich pdz-binding protein<br>
+SELT  -  selenoprotein t<br>
+CENPJ  -  centromere protein j<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+FXYD5  -  fxyd domain containing ion transport regulator 5<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+GLRX  -  glutaredoxin (thioltransferase)<br>
+TERF1  -  telomeric repeat binding factor (nima-interacting) 1<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+TMEM59  -  transmembrane protein 59<br>
+MESDC2  -  mesoderm development candidate 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+SEPT1  -  septin 1<br>
+GPR183  -  g protein-coupled receptor 183<br>
+PLIN2  -  perilipin 2<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+INSIG1  -  insulin induced gene 1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+GATA3  -  gata binding protein 3<br>
+PLXNB2  -  plexin b2<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+MFF  -  mitochondrial fission factor<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+RHOT1  -  ras homolog family member t1<br>
+GCSAM  -  germinal center-associated, signaling and motility<br>
+CD300A  -  cd300a molecule<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001775&amp;view=details' target="_blank">GO:0001775</a><a name=0001775></a></td>
+<td>cell activation</td>
+<td  align=center>1.01E-5</td>
+<td  align=center>1.17E-2</td>
+<td  align=center>2.23 (8795,600,217,33)</td>
+<td>
+<a id="ctrl_elements_GO:0001775" href="javascript:toggle('elements_GO:0001775')">[+] Show genes</a><br>
+<div id="elements_GO:0001775" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+ITM2A  -  integral membrane protein 2a<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+CD300A  -  cd300a molecule<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002376&amp;view=details' target="_blank">GO:0002376</a><a name=0002376></a></td>
+<td>immune system process</td>
+<td  align=center>1.43E-5</td>
+<td  align=center>1.51E-2</td>
+<td  align=center>1.76 (8795,1242,217,54)</td>
+<td>
+<a id="ctrl_elements_GO:0002376" href="javascript:toggle('elements_GO:0002376')">[+] Show genes</a><br>
+<div id="elements_GO:0002376" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+LGMN  -  legumain<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+BSG  -  basigin (ok blood group)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ITM2A  -  integral membrane protein 2a<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+CTSH  -  cathepsin h<br>
+CD53  -  cd53 molecule<br>
+CD48  -  cd48 molecule<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+ITGB7  -  integrin, beta 7<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+GPR183  -  g protein-coupled receptor 183<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+NCSTN  -  nicastrin<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+CD300A  -  cd300a molecule<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016192&amp;view=details' target="_blank">GO:0016192</a><a name=0016192></a></td>
+<td>vesicle-mediated transport</td>
+<td  align=center>1.47E-5</td>
+<td  align=center>1.43E-2</td>
+<td  align=center>1.86 (8795,1023,217,47)</td>
+<td>
+<a id="ctrl_elements_GO:0016192" href="javascript:toggle('elements_GO:0016192')">[+] Show genes</a><br>
+<div id="elements_GO:0016192" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+TMEM87B  -  transmembrane protein 87b<br>
+PRDX6  -  peroxiredoxin 6<br>
+COG3  -  component of oligomeric golgi complex 3<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+CNIH4  -  cornichon homolog 4 (drosophila)<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+SFT2D1  -  sft2 domain containing 1<br>
+SDF4  -  stromal cell derived factor 4<br>
+MESDC2  -  mesoderm development candidate 2<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+HEATR5B  -  heat repeat containing 5b<br>
+CTSH  -  cathepsin h<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+TFG  -  trk-fused gene<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
+TMPRSS3  -  transmembrane protease, serine 3<br>
+CD300A  -  cd300a molecule<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+RHOBTB3  -  rho-related btb domain containing 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048522&amp;view=details' target="_blank">GO:0048522</a><a name=0048522></a></td>
+<td>positive regulation of cellular process</td>
+<td  align=center>3.18E-5</td>
+<td  align=center>2.87E-2</td>
+<td  align=center>1.41 (8795,2823,217,98)</td>
+<td>
+<a id="ctrl_elements_GO:0048522" href="javascript:toggle('elements_GO:0048522')">[+] Show genes</a><br>
+<div id="elements_GO:0048522" style="display:none"> <font size=1>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+MAD2L1BP  -  mad2l1 binding protein<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+LGMN  -  legumain<br>
+TSPAN14  -  tetraspanin 14<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS14  -  lectin, galactoside-binding, soluble, 14<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+SP1  -  sp1 transcription factor<br>
+STARD4  -  star-related lipid transfer (start) domain containing 4<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+CD53  -  cd53 molecule<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+TFG  -  trk-fused gene<br>
+IL10  -  interleukin 10<br>
+SELT  -  selenoprotein t<br>
+CENPJ  -  centromere protein j<br>
+SUB1  -  sub1 homolog (s. cerevisiae)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+EHD1  -  eh-domain containing 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+CSRNP1  -  cysteine-serine-rich nuclear protein 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+MACC1  -  metastasis associated in colon cancer 1<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+TMEM59  -  transmembrane protein 59<br>
+MEF2D  -  myocyte enhancer factor 2d<br>
+ADA  -  adenosine deaminase<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+GPR183  -  g protein-coupled receptor 183<br>
+INSIG1  -  insulin induced gene 1<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RORA  -  rar-related orphan receptor a<br>
+E4F1  -  e4f transcription factor 1<br>
+PLXNB2  -  plexin b2<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+MFF  -  mitochondrial fission factor<br>
+NCSTN  -  nicastrin<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+POLR2A  -  polymerase (rna) ii (dna directed) polypeptide a, 220kda<br>
+TMEM30A  -  transmembrane protein 30a<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+T  -  t, brachyury homolog (mouse)<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+UHRF2  -  ubiquitin-like with phd and ring finger domains 2, e3 ubiquitin protein ligase<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+FZD3  -  frizzled family receptor 3<br>
+ZBTB48  -  zinc finger and btb domain containing 48<br>
+CTSH  -  cathepsin h<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
+DUSP5  -  dual specificity phosphatase 5<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+FNIP2  -  folliculin interacting protein 2<br>
+ATXN1L  -  ataxin 1-like<br>
+AUTS2  -  autism susceptibility candidate 2<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+ZNF513  -  zinc finger protein 513<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+ZFAT  -  zinc finger and at hook domain containing<br>
+TERF1  -  telomeric repeat binding factor (nima-interacting) 1<br>
+ATF5  -  activating transcription factor 5<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+MESDC2  -  mesoderm development candidate 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+BCL9  -  b-cell cll/lymphoma 9<br>
+CUL4B  -  cullin 4b<br>
+CD300A  -  cd300a molecule<br>
+ARIH1  -  ariadne homolog, ubiquitin-conjugating enzyme e2 binding protein, 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045055&amp;view=details' target="_blank">GO:0045055</a><a name=0045055></a></td>
+<td>regulated exocytosis</td>
+<td  align=center>3.56E-5</td>
+<td  align=center>3E-2</td>
+<td  align=center>2.48 (8795,393,217,24)</td>
+<td>
+<a id="ctrl_elements_GO:0045055" href="javascript:toggle('elements_GO:0045055')">[+] Show genes</a><br>
+<div id="elements_GO:0045055" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+SDF4  -  stromal cell derived factor 4<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+CD300A  -  cd300a molecule<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051179&amp;view=details' target="_blank">GO:0051179</a><a name=0051179></a></td>
+<td>localization</td>
+<td  align=center>3.94E-5</td>
+<td  align=center>3.11E-2</td>
+<td  align=center>1.42 (8795,2650,217,93)</td>
+<td>
+<a id="ctrl_elements_GO:0051179" href="javascript:toggle('elements_GO:0051179')">[+] Show genes</a><br>
+<div id="elements_GO:0051179" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+TMEM87B  -  transmembrane protein 87b<br>
+COG3  -  component of oligomeric golgi complex 3<br>
+TSPAN14  -  tetraspanin 14<br>
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+CNIH4  -  cornichon homolog 4 (drosophila)<br>
+SDF4  -  stromal cell derived factor 4<br>
+SFT2D1  -  sft2 domain containing 1<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+BSG  -  basigin (ok blood group)<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+CPT2  -  carnitine palmitoyltransferase 2<br>
+CTSH  -  cathepsin h<br>
+EMC7  -  er membrane protein complex subunit 7<br>
+STARD4  -  star-related lipid transfer (start) domain containing 4<br>
+PEX14  -  peroxisomal biogenesis factor 14<br>
+NMT2  -  n-myristoyltransferase 2<br>
+CD53  -  cd53 molecule<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+STYX  -  serine/threonine/tyrosine interacting protein<br>
+WDR33  -  wd repeat domain 33<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+TFG  -  trk-fused gene<br>
+IL10  -  interleukin 10<br>
+EMC3  -  er membrane protein complex subunit 3<br>
+OSBPL2  -  oxysterol binding protein-like 2<br>
+CRIPT  -  cysteine-rich pdz-binding protein<br>
+SELT  -  selenoprotein t<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
+RAB40C  -  rab40c, member ras oncogene family<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+CENPJ  -  centromere protein j<br>
+TMPRSS3  -  transmembrane protease, serine 3<br>
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+RHOBTB3  -  rho-related btb domain containing 3<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+PITRM1  -  pitrilysin metallopeptidase 1<br>
+FXYD5  -  fxyd domain containing ion transport regulator 5<br>
+SEPT10  -  septin 10<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+ITGB7  -  integrin, beta 7<br>
+MESDC2  -  mesoderm development candidate 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+TM9SF2  -  transmembrane 9 superfamily member 2<br>
+SEPT1  -  septin 1<br>
+TRAM2  -  translocation associated membrane protein 2<br>
+PLIN2  -  perilipin 2<br>
+HEATR5B  -  heat repeat containing 5b<br>
+INSIG1  -  insulin induced gene 1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
+CLUAP1  -  clusterin associated protein 1<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+MFF  -  mitochondrial fission factor<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+RHOT1  -  ras homolog family member t1<br>
+ATP13A1  -  atpase type 13a1<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+CD300A  -  cd300a molecule<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007165&amp;view=details' target="_blank">GO:0007165</a><a name=0007165></a></td>
+<td>signal transduction</td>
+<td  align=center>4.61E-5</td>
+<td  align=center>3.43E-2</td>
+<td  align=center>1.53 (8795,1903,217,72)</td>
+<td>
+<a id="ctrl_elements_GO:0007165" href="javascript:toggle('elements_GO:0007165')">[+] Show genes</a><br>
+<div id="elements_GO:0007165" style="display:none"> <font size=1>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+LGMN  -  legumain<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+T  -  t, brachyury homolog (mouse)<br>
+CDK14  -  cyclin-dependent kinase 14<br>
+HIST1H3G  -  histone cluster 1, h3g<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+BSG  -  basigin (ok blood group)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+PPM1D  -  protein phosphatase, mg2+/mn2+ dependent, 1d<br>
+BTLA  -  b and t lymphocyte associated<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+FZD3  -  frizzled family receptor 3<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+CTSH  -  cathepsin h<br>
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+RIC8B  -  ric8 guanine nucleotide exchange factor b<br>
+DUSP5  -  dual specificity phosphatase 5<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+CD53  -  cd53 molecule<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+NLK  -  nemo-like kinase<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+FNIP2  -  folliculin interacting protein 2<br>
+RAB40C  -  rab40c, member ras oncogene family<br>
+SUB1  -  sub1 homolog (s. cerevisiae)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+CSRNP1  -  cysteine-serine-rich nuclear protein 1<br>
+MACC1  -  metastasis associated in colon cancer 1<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+ITGB7  -  integrin, beta 7<br>
+MESDC2  -  mesoderm development candidate 2<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+GPR183  -  g protein-coupled receptor 183<br>
+INSIG1  -  insulin induced gene 1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+MPZL1  -  myelin protein zero-like 1<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RORA  -  rar-related orphan receptor a<br>
+PLXNB2  -  plexin b2<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+NCSTN  -  nicastrin<br>
+TSPAN12  -  tetraspanin 12<br>
+BCL9  -  b-cell cll/lymphoma 9<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+UBE4B  -  ubiquitination factor e4b<br>
+POLR2A  -  polymerase (rna) ii (dna directed) polypeptide a, 220kda<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061351&amp;view=details' target="_blank">GO:0061351</a><a name=0061351></a></td>
+<td>neural precursor cell proliferation</td>
+<td  align=center>5.76E-5</td>
+<td  align=center>4.04E-2</td>
+<td  align=center>11.26 (8795,18,217,5)</td>
+<td>
+<a id="ctrl_elements_GO:0061351" href="javascript:toggle('elements_GO:0061351')">[+] Show genes</a><br>
+<div id="elements_GO:0061351" style="display:none"> <font size=1>
+ATF5  -  activating transcription factor 5<br>
+ORC3  -  origin recognition complex, subunit 3<br>
+RORA  -  rar-related orphan receptor a<br>
+PLXNB2  -  plexin b2<br>
+FZD3  -  frizzled family receptor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002694&amp;view=details' target="_blank">GO:0002694</a><a name=0002694></a></td>
+<td>regulation of leukocyte activation</td>
+<td  align=center>5.91E-5</td>
+<td  align=center>3.93E-2</td>
+<td  align=center>2.67 (8795,304,217,20)</td>
+<td>
+<a id="ctrl_elements_GO:0002694" href="javascript:toggle('elements_GO:0002694')">[+] Show genes</a><br>
+<div id="elements_GO:0002694" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043299&amp;view=details' target="_blank">GO:0043299</a><a name=0043299></a></td>
+<td>leukocyte degranulation</td>
+<td  align=center>6.24E-5</td>
+<td  align=center>3.94E-2</td>
+<td  align=center>2.58 (8795,330,217,21)</td>
+<td>
+<a id="ctrl_elements_GO:0043299" href="javascript:toggle('elements_GO:0043299')">[+] Show genes</a><br>
+<div id="elements_GO:0043299" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+NCSTN  -  nicastrin<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036230&amp;view=details' target="_blank">GO:0036230</a><a name=0036230></a></td>
+<td>granulocyte activation</td>
+<td  align=center>6.8E-5</td>
+<td  align=center>4.09E-2</td>
+<td  align=center>2.56 (8795,332,217,21)</td>
+<td>
+<a id="ctrl_elements_GO:0036230" href="javascript:toggle('elements_GO:0036230')">[+] Show genes</a><br>
+<div id="elements_GO:0036230" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+NCSTN  -  nicastrin<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048518&amp;view=details' target="_blank">GO:0048518</a><a name=0048518></a></td>
+<td>positive regulation of biological process</td>
+<td  align=center>7.95E-5</td>
+<td  align=center>4.56E-2</td>
+<td  align=center>1.35 (8795,3149,217,105)</td>
+<td>
+<a id="ctrl_elements_GO:0048518" href="javascript:toggle('elements_GO:0048518')">[+] Show genes</a><br>
+<div id="elements_GO:0048518" style="display:none"> <font size=1>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+MAD2L1BP  -  mad2l1 binding protein<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+LGMN  -  legumain<br>
+TSPAN14  -  tetraspanin 14<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS14  -  lectin, galactoside-binding, soluble, 14<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+CPT2  -  carnitine palmitoyltransferase 2<br>
+SP1  -  sp1 transcription factor<br>
+STARD4  -  star-related lipid transfer (start) domain containing 4<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+CD53  -  cd53 molecule<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+TFG  -  trk-fused gene<br>
+IL10  -  interleukin 10<br>
+SELT  -  selenoprotein t<br>
+CENPJ  -  centromere protein j<br>
+SUB1  -  sub1 homolog (s. cerevisiae)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+EHD1  -  eh-domain containing 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+CSRNP1  -  cysteine-serine-rich nuclear protein 1<br>
+MACC1  -  metastasis associated in colon cancer 1<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+GLRX  -  glutaredoxin (thioltransferase)<br>
+MEF2D  -  myocyte enhancer factor 2d<br>
+TMEM59  -  transmembrane protein 59<br>
+ADA  -  adenosine deaminase<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+GPR183  -  g protein-coupled receptor 183<br>
+PLIN2  -  perilipin 2<br>
+INSIG1  -  insulin induced gene 1<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RORA  -  rar-related orphan receptor a<br>
+E4F1  -  e4f transcription factor 1<br>
+PLXNB2  -  plexin b2<br>
+NCSTN  -  nicastrin<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+MFF  -  mitochondrial fission factor<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+POLR2A  -  polymerase (rna) ii (dna directed) polypeptide a, 220kda<br>
+TMEM30A  -  transmembrane protein 30a<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+T  -  t, brachyury homolog (mouse)<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+UHRF2  -  ubiquitin-like with phd and ring finger domains 2, e3 ubiquitin protein ligase<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+FZD3  -  frizzled family receptor 3<br>
+ZBTB48  -  zinc finger and btb domain containing 48<br>
+CTSH  -  cathepsin h<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+DUSP5  -  dual specificity phosphatase 5<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+FNIP2  -  folliculin interacting protein 2<br>
+ATXN1L  -  ataxin 1-like<br>
+AUTS2  -  autism susceptibility candidate 2<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+ZNF513  -  zinc finger protein 513<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+ZFAT  -  zinc finger and at hook domain containing<br>
+TERF1  -  telomeric repeat binding factor (nima-interacting) 1<br>
+ATF5  -  activating transcription factor 5<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+MESDC2  -  mesoderm development candidate 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+BCL9  -  b-cell cll/lymphoma 9<br>
+CUL4B  -  cullin 4b<br>
+CD300A  -  cd300a molecule<br>
+ARIH1  -  ariadne homolog, ubiquitin-conjugating enzyme e2 binding protein, 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009617&amp;view=details' target="_blank">GO:0009617</a><a name=0009617></a></td>
+<td>response to bacterium</td>
+<td  align=center>8.01E-5</td>
+<td  align=center>4.4E-2</td>
+<td  align=center>4.05 (8795,110,217,11)</td>
+<td>
+<a id="ctrl_elements_GO:0009617" href="javascript:toggle('elements_GO:0009617')">[+] Show genes</a><br>
+<div id="elements_GO:0009617" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+IL10  -  interleukin 10<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+PPM1D  -  protein phosphatase, mg2+/mn2+ dependent, 1d<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032501&amp;view=details' target="_blank">GO:0032501</a><a name=0032501></a></td>
+<td>multicellular organismal process</td>
+<td  align=center>8.51E-5</td>
+<td  align=center>4.48E-2</td>
+<td  align=center>1.75 (8795,1064,217,46)</td>
+<td>
+<a id="ctrl_elements_GO:0032501" href="javascript:toggle('elements_GO:0032501')">[+] Show genes</a><br>
+<div id="elements_GO:0032501" style="display:none"> <font size=1>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+LGMN  -  legumain<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+T  -  t, brachyury homolog (mouse)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+HIST1H3G  -  histone cluster 1, h3g<br>
+ATF5  -  activating transcription factor 5<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+MESDC2  -  mesoderm development candidate 2<br>
+MEF2D  -  myocyte enhancer factor 2d<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+BFSP2  -  beaded filament structural protein 2, phakinin<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+FZD3  -  frizzled family receptor 3<br>
+OAT  -  ornithine aminotransferase<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+MUT  -  methylmalonyl coa mutase<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+BCL9  -  b-cell cll/lymphoma 9<br>
+IL10  -  interleukin 10<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ATXN1L  -  ataxin 1-like<br>
+IMPAD1  -  inositol monophosphatase domain containing 1<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+TMPRSS3  -  transmembrane protease, serine 3<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+ZNF513  -  zinc finger protein 513<br>
+CSRNP1  -  cysteine-serine-rich nuclear protein 1<br>
+POLR2A  -  polymerase (rna) ii (dna directed) polypeptide a, 220kda<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002275&amp;view=details' target="_blank">GO:0002275</a><a name=0002275></a></td>
+<td>myeloid cell activation involved in immune response</td>
+<td  align=center>8.8E-5</td>
+<td  align=center>4.44E-2</td>
+<td  align=center>2.52 (8795,338,217,21)</td>
+<td>
+<a id="ctrl_elements_GO:0002275" href="javascript:toggle('elements_GO:0002275')">[+] Show genes</a><br>
+<div id="elements_GO:0002275" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+NCSTN  -  nicastrin<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050865&amp;view=details' target="_blank">GO:0050865</a><a name=0050865></a></td>
+<td>regulation of cell activation</td>
+<td  align=center>8.87E-5</td>
+<td  align=center>4.31E-2</td>
+<td  align=center>2.59 (8795,313,217,20)</td>
+<td>
+<a id="ctrl_elements_GO:0050865" href="javascript:toggle('elements_GO:0050865')">[+] Show genes</a><br>
+<div id="elements_GO:0050865" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046903&amp;view=details' target="_blank">GO:0046903</a><a name=0046903></a></td>
+<td>secretion</td>
+<td  align=center>9.69E-5</td>
+<td  align=center>4.54E-2</td>
+<td  align=center>2.15 (8795,528,217,28)</td>
+<td>
+<a id="ctrl_elements_GO:0046903" href="javascript:toggle('elements_GO:0046903')">[+] Show genes</a><br>
+<div id="elements_GO:0046903" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+TSPAN14  -  tetraspanin 14<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+SDF4  -  stromal cell derived factor 4<br>
+ADA  -  adenosine deaminase<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+CTSH  -  cathepsin h<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+CD53  -  cd53 molecule<br>
+NCSTN  -  nicastrin<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+SELT  -  selenoprotein t<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+CD300A  -  cd300a molecule<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051234&amp;view=details' target="_blank">GO:0051234</a><a name=0051234></a></td>
+<td>establishment of localization</td>
+<td  align=center>1.08E-4</td>
+<td  align=center>4.85E-2</td>
+<td  align=center>1.43 (8795,2346,217,83)</td>
+<td>
+<a id="ctrl_elements_GO:0051234" href="javascript:toggle('elements_GO:0051234')">[+] Show genes</a><br>
+<div id="elements_GO:0051234" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+TMEM87B  -  transmembrane protein 87b<br>
+COG3  -  component of oligomeric golgi complex 3<br>
+TSPAN14  -  tetraspanin 14<br>
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+CNIH4  -  cornichon homolog 4 (drosophila)<br>
+SDF4  -  stromal cell derived factor 4<br>
+SFT2D1  -  sft2 domain containing 1<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+CPT2  -  carnitine palmitoyltransferase 2<br>
+CTSH  -  cathepsin h<br>
+EMC7  -  er membrane protein complex subunit 7<br>
+STARD4  -  star-related lipid transfer (start) domain containing 4<br>
+PEX14  -  peroxisomal biogenesis factor 14<br>
+NMT2  -  n-myristoyltransferase 2<br>
+CD53  -  cd53 molecule<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+STYX  -  serine/threonine/tyrosine interacting protein<br>
+WDR33  -  wd repeat domain 33<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+TFG  -  trk-fused gene<br>
+EMC3  -  er membrane protein complex subunit 3<br>
+OSBPL2  -  oxysterol binding protein-like 2<br>
+CRIPT  -  cysteine-rich pdz-binding protein<br>
+SELT  -  selenoprotein t<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+TMPRSS3  -  transmembrane protease, serine 3<br>
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+RHOBTB3  -  rho-related btb domain containing 3<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+PITRM1  -  pitrilysin metallopeptidase 1<br>
+FXYD5  -  fxyd domain containing ion transport regulator 5<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+MESDC2  -  mesoderm development candidate 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+TRAM2  -  translocation associated membrane protein 2<br>
+PLIN2  -  perilipin 2<br>
+HEATR5B  -  heat repeat containing 5b<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
+CLUAP1  -  clusterin associated protein 1<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+MFF  -  mitochondrial fission factor<br>
+NCSTN  -  nicastrin<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+RHOT1  -  ras homolog family member t1<br>
+ATP13A1  -  atpase type 13a1<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+CD300A  -  cd300a molecule<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002819&amp;view=details' target="_blank">GO:0002819</a><a name=0002819></a></td>
+<td>regulation of adaptive immune response</td>
+<td  align=center>1.1E-4</td>
+<td  align=center>4.79E-2</td>
+<td  align=center>4.27 (8795,95,217,10)</td>
+<td>
+<a id="ctrl_elements_GO:0002819" href="javascript:toggle('elements_GO:0002819')">[+] Show genes</a><br>
+<div id="elements_GO:0002819" style="display:none"> <font size=1>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IL10  -  interleukin 10<br>
+GATA3  -  gata binding protein 3<br>
+ADA  -  adenosine deaminase<br>
+CD48  -  cd48 molecule<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042221&amp;view=details' target="_blank">GO:0042221</a><a name=0042221></a></td>
+<td>response to chemical</td>
+<td  align=center>1.2E-4</td>
+<td  align=center>5.04E-2</td>
+<td  align=center>1.64 (8795,1307,217,53)</td>
+<td>
+<a id="ctrl_elements_GO:0042221" href="javascript:toggle('elements_GO:0042221')">[+] Show genes</a><br>
+<div id="elements_GO:0042221" style="display:none"> <font size=1>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+LGMN  -  legumain<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+SDF4  -  stromal cell derived factor 4<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+BSG  -  basigin (ok blood group)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+FZD3  -  frizzled family receptor 3<br>
+SP1  -  sp1 transcription factor<br>
+CTSH  -  cathepsin h<br>
+DCPS  -  decapping enzyme, scavenger<br>
+AK4  -  adenylate kinase 4<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+MT1E  -  metallothionein 1e<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+SELT  -  selenoprotein t<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+EHD1  -  eh-domain containing 1<br>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+PLIN2  -  perilipin 2<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+INSIG1  -  insulin induced gene 1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+NCSTN  -  nicastrin<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+FUNDC1  -  fun14 domain containing 1<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+UBE4B  -  ubiquitination factor e4b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043312&amp;view=details' target="_blank">GO:0043312</a><a name=0043312></a></td>
+<td>neutrophil degranulation</td>
+<td  align=center>1.25E-4</td>
+<td  align=center>5.11E-2</td>
+<td  align=center>2.53 (8795,321,217,20)</td>
+<td>
+<a id="ctrl_elements_GO:0043312" href="javascript:toggle('elements_GO:0043312')">[+] Show genes</a><br>
+<div id="elements_GO:0043312" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+NCSTN  -  nicastrin<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051249&amp;view=details' target="_blank">GO:0051249</a><a name=0051249></a></td>
+<td>regulation of lymphocyte activation</td>
+<td  align=center>1.36E-4</td>
+<td  align=center>5.37E-2</td>
+<td  align=center>2.67 (8795,273,217,18)</td>
+<td>
+<a id="ctrl_elements_GO:0051249" href="javascript:toggle('elements_GO:0051249')">[+] Show genes</a><br>
+<div id="elements_GO:0051249" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IL10  -  interleukin 10<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002283&amp;view=details' target="_blank">GO:0002283</a><a name=0002283></a></td>
+<td>neutrophil activation involved in immune response</td>
+<td  align=center>1.42E-4</td>
+<td  align=center>5.44E-2</td>
+<td  align=center>2.50 (8795,324,217,20)</td>
+<td>
+<a id="ctrl_elements_GO:0002283" href="javascript:toggle('elements_GO:0002283')">[+] Show genes</a><br>
+<div id="elements_GO:0002283" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+NCSTN  -  nicastrin<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002696&amp;view=details' target="_blank">GO:0002696</a><a name=0002696></a></td>
+<td>positive regulation of leukocyte activation</td>
+<td  align=center>1.44E-4</td>
+<td  align=center>5.35E-2</td>
+<td  align=center>2.99 (8795,203,217,15)</td>
+<td>
+<a id="ctrl_elements_GO:0002696" href="javascript:toggle('elements_GO:0002696')">[+] Show genes</a><br>
+<div id="elements_GO:0002696" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IL10  -  interleukin 10<br>
+ADA  -  adenosine deaminase<br>
+BTLA  -  b and t lymphocyte associated<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016266&amp;view=details' target="_blank">GO:0016266</a><a name=0016266></a></td>
+<td>O-glycan processing</td>
+<td  align=center>1.63E-4</td>
+<td  align=center>5.89E-2</td>
+<td  align=center>9.21 (8795,22,217,5)</td>
+<td>
+<a id="ctrl_elements_GO:0016266" href="javascript:toggle('elements_GO:0016266')">[+] Show genes</a><br>
+<div id="elements_GO:0016266" style="display:none"> <font size=1>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050864&amp;view=details' target="_blank">GO:0050864</a><a name=0050864></a></td>
+<td>regulation of B cell activation</td>
+<td  align=center>1.69E-4</td>
+<td  align=center>5.94E-2</td>
+<td  align=center>4.05 (8795,100,217,10)</td>
+<td>
+<a id="ctrl_elements_GO:0050864" href="javascript:toggle('elements_GO:0050864')">[+] Show genes</a><br>
+<div id="elements_GO:0050864" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IL10  -  interleukin 10<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042119&amp;view=details' target="_blank">GO:0042119</a><a name=0042119></a></td>
+<td>neutrophil activation</td>
+<td  align=center>1.75E-4</td>
+<td  align=center>5.97E-2</td>
+<td  align=center>2.46 (8795,329,217,20)</td>
+<td>
+<a id="ctrl_elements_GO:0042119" href="javascript:toggle('elements_GO:0042119')">[+] Show genes</a><br>
+<div id="elements_GO:0042119" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+NCSTN  -  nicastrin<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050867&amp;view=details' target="_blank">GO:0050867</a><a name=0050867></a></td>
+<td>positive regulation of cell activation</td>
+<td  align=center>1.79E-4</td>
+<td  align=center>5.94E-2</td>
+<td  align=center>2.94 (8795,207,217,15)</td>
+<td>
+<a id="ctrl_elements_GO:0050867" href="javascript:toggle('elements_GO:0050867')">[+] Show genes</a><br>
+<div id="elements_GO:0050867" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IL10  -  interleukin 10<br>
+ADA  -  adenosine deaminase<br>
+BTLA  -  b and t lymphocyte associated<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002312&amp;view=details' target="_blank">GO:0002312</a><a name=0002312></a></td>
+<td>B cell activation involved in immune response</td>
+<td  align=center>1.88E-4</td>
+<td  align=center>6.08E-2</td>
+<td  align=center>6.95 (8795,35,217,6)</td>
+<td>
+<a id="ctrl_elements_GO:0002312" href="javascript:toggle('elements_GO:0002312')">[+] Show genes</a><br>
+<div id="elements_GO:0002312" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ITM2A  -  integral membrane protein 2a<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006887&amp;view=details' target="_blank">GO:0006887</a><a name=0006887></a></td>
+<td>exocytosis</td>
+<td  align=center>1.94E-4</td>
+<td  align=center>6.12E-2</td>
+<td  align=center>2.22 (8795,438,217,24)</td>
+<td>
+<a id="ctrl_elements_GO:0006887" href="javascript:toggle('elements_GO:0006887')">[+] Show genes</a><br>
+<div id="elements_GO:0006887" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+CD53  -  cd53 molecule<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+SDF4  -  stromal cell derived factor 4<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+CD300A  -  cd300a molecule<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032940&amp;view=details' target="_blank">GO:0032940</a><a name=0032940></a></td>
+<td>secretion by cell</td>
+<td  align=center>1.98E-4</td>
+<td  align=center>6.09E-2</td>
+<td  align=center>2.13 (8795,494,217,26)</td>
+<td>
+<a id="ctrl_elements_GO:0032940" href="javascript:toggle('elements_GO:0032940')">[+] Show genes</a><br>
+<div id="elements_GO:0032940" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+SDF4  -  stromal cell derived factor 4<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+CTSH  -  cathepsin h<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+CD53  -  cd53 molecule<br>
+NCSTN  -  nicastrin<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+SELT  -  selenoprotein t<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+CD300A  -  cd300a molecule<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048869&amp;view=details' target="_blank">GO:0048869</a><a name=0048869></a></td>
+<td>cellular developmental process</td>
+<td  align=center>2E-4</td>
+<td  align=center>6.02E-2</td>
+<td  align=center>1.69 (8795,1103,217,46)</td>
+<td>
+<a id="ctrl_elements_GO:0048869" href="javascript:toggle('elements_GO:0048869')">[+] Show genes</a><br>
+<div id="elements_GO:0048869" style="display:none"> <font size=1>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+T  -  t, brachyury homolog (mouse)<br>
+ZFAT  -  zinc finger and at hook domain containing<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+ETV7  -  ets variant 7<br>
+ATF5  -  activating transcription factor 5<br>
+SDF4  -  stromal cell derived factor 4<br>
+ITGB7  -  integrin, beta 7<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+MEF2D  -  myocyte enhancer factor 2d<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+ITM2A  -  integral membrane protein 2a<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br>
+UHRF2  -  ubiquitin-like with phd and ring finger domains 2, e3 ubiquitin protein ligase<br>
+BFSP2  -  beaded filament structural protein 2, phakinin<br>
+FZD3  -  frizzled family receptor 3<br>
+GPR183  -  g protein-coupled receptor 183<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+MFF  -  mitochondrial fission factor<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+BCL9  -  b-cell cll/lymphoma 9<br>
+IL10  -  interleukin 10<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+IMPAD1  -  inositol monophosphatase domain containing 1<br>
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051251&amp;view=details' target="_blank">GO:0051251</a><a name=0051251></a></td>
+<td>positive regulation of lymphocyte activation</td>
+<td  align=center>2.21E-4</td>
+<td  align=center>6.5E-2</td>
+<td  align=center>3.02 (8795,188,217,14)</td>
+<td>
+<a id="ctrl_elements_GO:0051251" href="javascript:toggle('elements_GO:0051251')">[+] Show genes</a><br>
+<div id="elements_GO:0051251" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+IL10  -  interleukin 10<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+ADA  -  adenosine deaminase<br>
+BTLA  -  b and t lymphocyte associated<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050900&amp;view=details' target="_blank">GO:0050900</a><a name=0050900></a></td>
+<td>leukocyte migration</td>
+<td  align=center>2.22E-4</td>
+<td  align=center>6.37E-2</td>
+<td  align=center>3.38 (8795,144,217,12)</td>
+<td>
+<a id="ctrl_elements_GO:0050900" href="javascript:toggle('elements_GO:0050900')">[+] Show genes</a><br>
+<div id="elements_GO:0050900" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+ITGB7  -  integrin, beta 7<br>
+IL10  -  interleukin 10<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+BSG  -  basigin (ok blood group)<br>
+GATA3  -  gata binding protein 3<br>
+CD48  -  cd48 molecule<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010033&amp;view=details' target="_blank">GO:0010033</a><a name=0010033></a></td>
+<td>response to organic substance</td>
+<td  align=center>2.35E-4</td>
+<td  align=center>6.59E-2</td>
+<td  align=center>1.70 (8795,1046,217,44)</td>
+<td>
+<a id="ctrl_elements_GO:0010033" href="javascript:toggle('elements_GO:0010033')">[+] Show genes</a><br>
+<div id="elements_GO:0010033" style="display:none"> <font size=1>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+LGMN  -  legumain<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+SDF4  -  stromal cell derived factor 4<br>
+BSG  -  basigin (ok blood group)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+PLIN2  -  perilipin 2<br>
+CTSH  -  cathepsin h<br>
+INSIG1  -  insulin induced gene 1<br>
+SP1  -  sp1 transcription factor<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+DCPS  -  decapping enzyme, scavenger<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+FUNDC1  -  fun14 domain containing 1<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+SELT  -  selenoprotein t<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EHD1  -  eh-domain containing 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+UBE4B  -  ubiquitination factor e4b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032502&amp;view=details' target="_blank">GO:0032502</a><a name=0032502></a></td>
+<td>developmental process</td>
+<td  align=center>2.51E-4</td>
+<td  align=center>6.88E-2</td>
+<td  align=center>1.46 (8795,2003,217,72)</td>
+<td>
+<a id="ctrl_elements_GO:0032502" href="javascript:toggle('elements_GO:0032502')">[+] Show genes</a><br>
+<div id="elements_GO:0032502" style="display:none"> <font size=1>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+T  -  t, brachyury homolog (mouse)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+ETV7  -  ets variant 7<br>
+SDF4  -  stromal cell derived factor 4<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+BSG  -  basigin (ok blood group)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+ITM2A  -  integral membrane protein 2a<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br>
+UHRF2  -  ubiquitin-like with phd and ring finger domains 2, e3 ubiquitin protein ligase<br>
+FZD3  -  frizzled family receptor 3<br>
+CTSH  -  cathepsin h<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+DUSP5  -  dual specificity phosphatase 5<br>
+AK4  -  adenylate kinase 4<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IL10  -  interleukin 10<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+ATXN1L  -  ataxin 1-like<br>
+SELT  -  selenoprotein t<br>
+AUTS2  -  autism susceptibility candidate 2<br>
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+CSRNP1  -  cysteine-serine-rich nuclear protein 1<br>
+ZNF513  -  zinc finger protein 513<br>
+RHOBTB3  -  rho-related btb domain containing 3<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+ZFAT  -  zinc finger and at hook domain containing<br>
+BBX  -  bobby sox homolog (drosophila)<br>
+ATF5  -  activating transcription factor 5<br>
+ITGB7  -  integrin, beta 7<br>
+MEF2D  -  myocyte enhancer factor 2d<br>
+MESDC2  -  mesoderm development candidate 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+CSDE1  -  cold shock domain containing e1, rna-binding<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+BFSP2  -  beaded filament structural protein 2, phakinin<br>
+GPR183  -  g protein-coupled receptor 183<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+INSIG1  -  insulin induced gene 1<br>
+RORA  -  rar-related orphan receptor a<br>
+PLXNB2  -  plexin b2<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+MFF  -  mitochondrial fission factor<br>
+NCSTN  -  nicastrin<br>
+XAB2  -  xpa binding protein 2<br>
+TSPAN12  -  tetraspanin 12<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
+BCL9  -  b-cell cll/lymphoma 9<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+IMPAD1  -  inositol monophosphatase domain containing 1<br>
+SERF1B  -  small edrk-rich factor 1b (centromeric)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+POLR2A  -  polymerase (rna) ii (dna directed) polypeptide a, 220kda<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002286&amp;view=details' target="_blank">GO:0002286</a><a name=0002286></a></td>
+<td>T cell activation involved in immune response</td>
+<td  align=center>2.53E-4</td>
+<td  align=center>6.8E-2</td>
+<td  align=center>8.44 (8795,24,217,5)</td>
+<td>
+<a id="ctrl_elements_GO:0002286" href="javascript:toggle('elements_GO:0002286')">[+] Show genes</a><br>
+<div id="elements_GO:0002286" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042472&amp;view=details' target="_blank">GO:0042472</a><a name=0042472></a></td>
+<td>inner ear morphogenesis</td>
+<td  align=center>2.8E-4</td>
+<td  align=center>7.38E-2</td>
+<td  align=center>20.26 (8795,6,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:0042472" href="javascript:toggle('elements_GO:0042472')">[+] Show genes</a><br>
+<div id="elements_GO:0042472" style="display:none"> <font size=1>
+INSIG1  -  insulin induced gene 1<br>
+GATA3  -  gata binding protein 3<br>
+FZD3  -  frizzled family receptor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002274&amp;view=details' target="_blank">GO:0002274</a><a name=0002274></a></td>
+<td>myeloid leukocyte activation</td>
+<td  align=center>2.87E-4</td>
+<td  align=center>7.4E-2</td>
+<td  align=center>2.31 (8795,368,217,21)</td>
+<td>
+<a id="ctrl_elements_GO:0002274" href="javascript:toggle('elements_GO:0002274')">[+] Show genes</a><br>
+<div id="elements_GO:0002274" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+CTSH  -  cathepsin h<br>
+TSPAN14  -  tetraspanin 14<br>
+NCSTN  -  nicastrin<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CD53  -  cd53 molecule<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+CD300A  -  cd300a molecule<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050871&amp;view=details' target="_blank">GO:0050871</a><a name=0050871></a></td>
+<td>positive regulation of B cell activation</td>
+<td  align=center>3.06E-4</td>
+<td  align=center>7.73E-2</td>
+<td  align=center>4.63 (8795,70,217,8)</td>
+<td>
+<a id="ctrl_elements_GO:0050871" href="javascript:toggle('elements_GO:0050871')">[+] Show genes</a><br>
+<div id="elements_GO:0050871" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+IL10  -  interleukin 10<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+ADA  -  adenosine deaminase<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050807&amp;view=details' target="_blank">GO:0050807</a><a name=0050807></a></td>
+<td>regulation of synapse organization</td>
+<td  align=center>3.06E-4</td>
+<td  align=center>7.58E-2</td>
+<td  align=center>4.63 (8795,70,217,8)</td>
+<td>
+<a id="ctrl_elements_GO:0050807" href="javascript:toggle('elements_GO:0050807')">[+] Show genes</a><br>
+<div id="elements_GO:0050807" style="display:none"> <font size=1>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+IL10  -  interleukin 10<br>
+CRIPT  -  cysteine-rich pdz-binding protein<br>
+MESDC2  -  mesoderm development candidate 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006958&amp;view=details' target="_blank">GO:0006958</a><a name=0006958></a></td>
+<td>complement activation, classical pathway</td>
+<td  align=center>3.1E-4</td>
+<td  align=center>7.53E-2</td>
+<td  align=center>8.11 (8795,25,217,5)</td>
+<td>
+<a id="ctrl_elements_GO:0006958" href="javascript:toggle('elements_GO:0006958')">[+] Show genes</a><br>
+<div id="elements_GO:0006958" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070887&amp;view=details' target="_blank">GO:0070887</a><a name=0070887></a></td>
+<td>cellular response to chemical stimulus</td>
+<td  align=center>3.48E-4</td>
+<td  align=center>8.31E-2</td>
+<td  align=center>1.78 (8795,842,217,37)</td>
+<td>
+<a id="ctrl_elements_GO:0070887" href="javascript:toggle('elements_GO:0070887')">[+] Show genes</a><br>
+<div id="elements_GO:0070887" style="display:none"> <font size=1>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+LGMN  -  legumain<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+INSIG1  -  insulin induced gene 1<br>
+SP1  -  sp1 transcription factor<br>
+CTSH  -  cathepsin h<br>
+DCPS  -  decapping enzyme, scavenger<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+AK4  -  adenylate kinase 4<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+NCSTN  -  nicastrin<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+MT1E  -  metallothionein 1e<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EHD1  -  eh-domain containing 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006956&amp;view=details' target="_blank">GO:0006956</a><a name=0006956></a></td>
+<td>complement activation</td>
+<td  align=center>3.76E-4</td>
+<td  align=center>8.8E-2</td>
+<td  align=center>7.79 (8795,26,217,5)</td>
+<td>
+<a id="ctrl_elements_GO:0006956" href="javascript:toggle('elements_GO:0006956')">[+] Show genes</a><br>
+<div id="elements_GO:0006956" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022407&amp;view=details' target="_blank">GO:0022407</a><a name=0022407></a></td>
+<td>regulation of cell-cell adhesion</td>
+<td  align=center>3.82E-4</td>
+<td  align=center>8.77E-2</td>
+<td  align=center>2.74 (8795,222,217,15)</td>
+<td>
+<a id="ctrl_elements_GO:0022407" href="javascript:toggle('elements_GO:0022407')">[+] Show genes</a><br>
+<div id="elements_GO:0022407" style="display:none"> <font size=1>
+GRAP2  -  grb2-related adaptor protein 2<br>
+FXYD5  -  fxyd domain containing ion transport regulator 5<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+IL10  -  interleukin 10<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001503&amp;view=details' target="_blank">GO:0001503</a><a name=0001503></a></td>
+<td>ossification</td>
+<td  align=center>4.01E-4</td>
+<td  align=center>9.04E-2</td>
+<td  align=center>6.08 (8795,40,217,6)</td>
+<td>
+<a id="ctrl_elements_GO:0001503" href="javascript:toggle('elements_GO:0001503')">[+] Show genes</a><br>
+<div id="elements_GO:0001503" style="display:none"> <font size=1>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+IMPAD1  -  inositol monophosphatase domain containing 1<br>
+MESDC2  -  mesoderm development candidate 2<br>
+MEF2D  -  myocyte enhancer factor 2d<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051270&amp;view=details' target="_blank">GO:0051270</a><a name=0051270></a></td>
+<td>regulation of cellular component movement</td>
+<td  align=center>4.36E-4</td>
+<td  align=center>9.67E-2</td>
+<td  align=center>2.19 (8795,407,217,22)</td>
+<td>
+<a id="ctrl_elements_GO:0051270" href="javascript:toggle('elements_GO:0051270')">[+] Show genes</a><br>
+<div id="elements_GO:0051270" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+SP1  -  sp1 transcription factor<br>
+CTSH  -  cathepsin h<br>
+LGMN  -  legumain<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+PLXNB2  -  plexin b2<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+RHOT1  -  ras homolog family member t1<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+GCSAM  -  germinal center-associated, signaling and motility<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901626&amp;view=details' target="_blank">GO:1901626</a><a name=1901626></a></td>
+<td>regulation of postsynaptic membrane organization</td>
+<td  align=center>4.82E-4</td>
+<td  align=center>1.05E-1</td>
+<td  align=center>17.37 (8795,7,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:1901626" href="javascript:toggle('elements_GO:1901626')">[+] Show genes</a><br>
+<div id="elements_GO:1901626" style="display:none"> <font size=1>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+CRIPT  -  cysteine-rich pdz-binding protein<br>
+MESDC2  -  mesoderm development candidate 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072376&amp;view=details' target="_blank">GO:0072376</a><a name=0072376></a></td>
+<td>protein activation cascade</td>
+<td  align=center>5.4E-4</td>
+<td  align=center>1.16E-1</td>
+<td  align=center>7.24 (8795,28,217,5)</td>
+<td>
+<a id="ctrl_elements_GO:0072376" href="javascript:toggle('elements_GO:0072376')">[+] Show genes</a><br>
+<div id="elements_GO:0072376" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006873&amp;view=details' target="_blank">GO:0006873</a><a name=0006873></a></td>
+<td>cellular ion homeostasis</td>
+<td  align=center>5.58E-4</td>
+<td  align=center>1.17E-1</td>
+<td  align=center>2.54 (8795,255,217,16)</td>
+<td>
+<a id="ctrl_elements_GO:0006873" href="javascript:toggle('elements_GO:0006873')">[+] Show genes</a><br>
+<div id="elements_GO:0006873" style="display:none"> <font size=1>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+MT1E  -  metallothionein 1e<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+ATP13A1  -  atpase type 13a1<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+SELT  -  selenoprotein t<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
+TMPRSS3  -  transmembrane protease, serine 3<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016477&amp;view=details' target="_blank">GO:0016477</a><a name=0016477></a></td>
+<td>cell migration</td>
+<td  align=center>5.63E-4</td>
+<td  align=center>1.17E-1</td>
+<td  align=center>2.31 (8795,333,217,19)</td>
+<td>
+<a id="ctrl_elements_GO:0016477" href="javascript:toggle('elements_GO:0016477')">[+] Show genes</a><br>
+<div id="elements_GO:0016477" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+GPR183  -  g protein-coupled receptor 183<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+GATA3  -  gata binding protein 3<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+CD48  -  cd48 molecule<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+IL10  -  interleukin 10<br>
+ITGB7  -  integrin, beta 7<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+BSG  -  basigin (ok blood group)<br>
+AUTS2  -  autism susceptibility candidate 2<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+RHOBTB3  -  rho-related btb domain containing 3<br>
+FZD3  -  frizzled family receptor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043615&amp;view=details' target="_blank">GO:0043615</a><a name=0043615></a></td>
+<td>astrocyte cell migration</td>
+<td  align=center>6.06E-4</td>
+<td  align=center>1.23E-1</td>
+<td  align=center>40.53 (8795,2,217,2)</td>
+<td>
+<a id="ctrl_elements_GO:0043615" href="javascript:toggle('elements_GO:0043615')">[+] Show genes</a><br>
+<div id="elements_GO:0043615" style="display:none"> <font size=1>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902897&amp;view=details' target="_blank">GO:1902897</a><a name=1902897></a></td>
+<td>regulation of postsynaptic density protein 95 clustering</td>
+<td  align=center>6.06E-4</td>
+<td  align=center>1.22E-1</td>
+<td  align=center>40.53 (8795,2,217,2)</td>
+<td>
+<a id="ctrl_elements_GO:1902897" href="javascript:toggle('elements_GO:1902897')">[+] Show genes</a><br>
+<div id="elements_GO:1902897" style="display:none"> <font size=1>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+CRIPT  -  cysteine-rich pdz-binding protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2001199&amp;view=details' target="_blank">GO:2001199</a><a name=2001199></a></td>
+<td>negative regulation of dendritic cell differentiation</td>
+<td  align=center>6.06E-4</td>
+<td  align=center>1.2E-1</td>
+<td  align=center>40.53 (8795,2,217,2)</td>
+<td>
+<a id="ctrl_elements_GO:2001199" href="javascript:toggle('elements_GO:2001199')">[+] Show genes</a><br>
+<div id="elements_GO:2001199" style="display:none"> <font size=1>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2001189&amp;view=details' target="_blank">GO:2001189</a><a name=2001189></a></td>
+<td>negative regulation of T cell activation via T cell receptor contact with antigen bound to MHC molecule on antigen presenting cell</td>
+<td  align=center>6.06E-4</td>
+<td  align=center>1.18E-1</td>
+<td  align=center>40.53 (8795,2,217,2)</td>
+<td>
+<a id="ctrl_elements_GO:2001189" href="javascript:toggle('elements_GO:2001189')">[+] Show genes</a><br>
+<div id="elements_GO:2001189" style="display:none"> <font size=1>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030334&amp;view=details' target="_blank">GO:0030334</a><a name=0030334></a></td>
+<td>regulation of cell migration</td>
+<td  align=center>6.07E-4</td>
+<td  align=center>1.16E-1</td>
+<td  align=center>2.24 (8795,362,217,20)</td>
+<td>
+<a id="ctrl_elements_GO:0030334" href="javascript:toggle('elements_GO:0030334')">[+] Show genes</a><br>
+<div id="elements_GO:0030334" style="display:none"> <font size=1>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+GPR183  -  g protein-coupled receptor 183<br>
+SP1  -  sp1 transcription factor<br>
+CTSH  -  cathepsin h<br>
+LGMN  -  legumain<br>
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
+PLXNB2  -  plexin b2<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+GCSAM  -  germinal center-associated, signaling and motility<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006810&amp;view=details' target="_blank">GO:0006810</a><a name=0006810></a></td>
+<td>transport</td>
+<td  align=center>6.36E-4</td>
+<td  align=center>1.2E-1</td>
+<td  align=center>1.39 (8795,2246,217,77)</td>
+<td>
+<a id="ctrl_elements_GO:0006810" href="javascript:toggle('elements_GO:0006810')">[+] Show genes</a><br>
+<div id="elements_GO:0006810" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+PRDX6  -  peroxiredoxin 6<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+TMEM87B  -  transmembrane protein 87b<br>
+COG3  -  component of oligomeric golgi complex 3<br>
+TSPAN14  -  tetraspanin 14<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
+CAMP  -  cathelicidin antimicrobial peptide<br>
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
+CNIH4  -  cornichon homolog 4 (drosophila)<br>
+SDF4  -  stromal cell derived factor 4<br>
+SFT2D1  -  sft2 domain containing 1<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
+CPT2  -  carnitine palmitoyltransferase 2<br>
+CTSH  -  cathepsin h<br>
+STARD4  -  star-related lipid transfer (start) domain containing 4<br>
+PEX14  -  peroxisomal biogenesis factor 14<br>
+NMT2  -  n-myristoyltransferase 2<br>
+CD53  -  cd53 molecule<br>
+LMTK2  -  lemur tyrosine kinase 2<br>
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
+STYX  -  serine/threonine/tyrosine interacting protein<br>
+WDR33  -  wd repeat domain 33<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+TFG  -  trk-fused gene<br>
+OSBPL2  -  oxysterol binding protein-like 2<br>
+SELT  -  selenoprotein t<br>
+DGAT1  -  diacylglycerol o-acyltransferase 1<br>
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
+NCOA2  -  nuclear receptor coactivator 2<br>
+TMPRSS3  -  transmembrane protease, serine 3<br>
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+BBS7  -  bardet-biedl syndrome 7<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+RHOBTB3  -  rho-related btb domain containing 3<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+PITRM1  -  pitrilysin metallopeptidase 1<br>
+FXYD5  -  fxyd domain containing ion transport regulator 5<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+MESDC2  -  mesoderm development candidate 2<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+TRAM2  -  translocation associated membrane protein 2<br>
+PLIN2  -  perilipin 2<br>
+HEATR5B  -  heat repeat containing 5b<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
+CLUAP1  -  clusterin associated protein 1<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+MFF  -  mitochondrial fission factor<br>
+NCSTN  -  nicastrin<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+RHOT1  -  ras homolog family member t1<br>
+ATP13A1  -  atpase type 13a1<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+CD300A  -  cd300a molecule<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051049&amp;view=details' target="_blank">GO:0051049</a><a name=0051049></a></td>
+<td>regulation of transport</td>
+<td  align=center>6.43E-4</td>
+<td  align=center>1.19E-1</td>
+<td  align=center>1.80 (8795,744,217,33)</td>
+<td>
+<a id="ctrl_elements_GO:0051049" href="javascript:toggle('elements_GO:0051049')">[+] Show genes</a><br>
+<div id="elements_GO:0051049" style="display:none"> <font size=1>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+TMEM30A  -  transmembrane protein 30a<br>
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+FXYD5  -  fxyd domain containing ion transport regulator 5<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+GLRX  -  glutaredoxin (thioltransferase)<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+ADA  -  adenosine deaminase<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+SEPT1  -  septin 1<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+INSIG1  -  insulin induced gene 1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+MFF  -  mitochondrial fission factor<br>
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+REEP5  -  receptor accessory protein 5<br>
+RHOT1  -  ras homolog family member t1<br>
+SELT  -  selenoprotein t<br>
+CD300A  -  cd300a molecule<br>
+BCAP31  -  b-cell receptor-associated protein 31<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904707&amp;view=details' target="_blank">GO:1904707</a><a name=1904707></a></td>
+<td>positive regulation of vascular smooth muscle cell proliferation</td>
+<td  align=center>6.66E-4</td>
+<td  align=center>1.22E-1</td>
+<td  align=center>9.54 (8795,17,217,4)</td>
+<td>
+<a id="ctrl_elements_GO:1904707" href="javascript:toggle('elements_GO:1904707')">[+] Show genes</a><br>
+<div id="elements_GO:1904707" style="display:none"> <font size=1>
+IL10  -  interleukin 10<br>
+MEF2D  -  myocyte enhancer factor 2d<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006486&amp;view=details' target="_blank">GO:0006486</a><a name=0006486></a></td>
+<td>protein glycosylation</td>
+<td  align=center>6.93E-4</td>
+<td  align=center>1.25E-1</td>
+<td  align=center>3.41 (8795,119,217,10)</td>
+<td>
+<a id="ctrl_elements_GO:0006486" href="javascript:toggle('elements_GO:0006486')">[+] Show genes</a><br>
+<div id="elements_GO:0006486" style="display:none"> <font size=1>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+COG3  -  component of oligomeric golgi complex 3<br>
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043413&amp;view=details' target="_blank">GO:0043413</a><a name=0043413></a></td>
+<td>macromolecule glycosylation</td>
+<td  align=center>6.93E-4</td>
+<td  align=center>1.23E-1</td>
+<td  align=center>3.41 (8795,119,217,10)</td>
+<td>
+<a id="ctrl_elements_GO:0043413" href="javascript:toggle('elements_GO:0043413')">[+] Show genes</a><br>
+<div id="elements_GO:0043413" style="display:none"> <font size=1>
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+COG3  -  component of oligomeric golgi complex 3<br>
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050670&amp;view=details' target="_blank">GO:0050670</a><a name=0050670></a></td>
+<td>regulation of lymphocyte proliferation</td>
+<td  align=center>6.93E-4</td>
+<td  align=center>1.22E-1</td>
+<td  align=center>3.41 (8795,119,217,10)</td>
+<td>
+<a id="ctrl_elements_GO:0050670" href="javascript:toggle('elements_GO:0050670')">[+] Show genes</a><br>
+<div id="elements_GO:0050670" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+IL10  -  interleukin 10<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030183&amp;view=details' target="_blank">GO:0030183</a><a name=0030183></a></td>
+<td>B cell differentiation</td>
+<td  align=center>7.11E-4</td>
+<td  align=center>1.23E-1</td>
+<td  align=center>4.65 (8795,61,217,7)</td>
+<td>
+<a id="ctrl_elements_GO:0030183" href="javascript:toggle('elements_GO:0030183')">[+] Show genes</a><br>
+<div id="elements_GO:0030183" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+IL10  -  interleukin 10<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+ITM2A  -  integral membrane protein 2a<br>
+POU2AF1  -  pou class 2 associating factor 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002682&amp;view=details' target="_blank">GO:0002682</a><a name=0002682></a></td>
+<td>regulation of immune system process</td>
+<td  align=center>7.12E-4</td>
+<td  align=center>1.22E-1</td>
+<td  align=center>1.72 (8795,874,217,37)</td>
+<td>
+<a id="ctrl_elements_GO:0002682" href="javascript:toggle('elements_GO:0002682')">[+] Show genes</a><br>
+<div id="elements_GO:0002682" style="display:none"> <font size=1>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+IGHM  -  immunoglobulin heavy constant mu<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+LGMN  -  legumain<br>
+HIST1H3G  -  histone cluster 1, h3g<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+ITGB7  -  integrin, beta 7<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+BTLA  -  b and t lymphocyte associated<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+GPR183  -  g protein-coupled receptor 183<br>
+CTSH  -  cathepsin h<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RORA  -  rar-related orphan receptor a<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+CD48  -  cd48 molecule<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+IL10  -  interleukin 10<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+ATXN1L  -  ataxin 1-like<br>
+GCSAM  -  germinal center-associated, signaling and motility<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+CD300A  -  cd300a molecule<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+SPPL2A  -  signal peptide peptidase like 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032944&amp;view=details' target="_blank">GO:0032944</a><a name=0032944></a></td>
+<td>regulation of mononuclear cell proliferation</td>
+<td  align=center>7.4E-4</td>
+<td  align=center>1.25E-1</td>
+<td  align=center>3.38 (8795,120,217,10)</td>
+<td>
+<a id="ctrl_elements_GO:0032944" href="javascript:toggle('elements_GO:0032944')">[+] Show genes</a><br>
+<div id="elements_GO:0032944" style="display:none"> <font size=1>
+GPR183  -  g protein-coupled receptor 183<br>
+IL10  -  interleukin 10<br>
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+ADA  -  adenosine deaminase<br>
+CD300A  -  cd300a molecule<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007215&amp;view=details' target="_blank">GO:0007215</a><a name=0007215></a></td>
+<td>glutamate receptor signaling pathway</td>
+<td  align=center>7.57E-4</td>
+<td  align=center>1.26E-1</td>
+<td  align=center>15.20 (8795,8,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:0007215" href="javascript:toggle('elements_GO:0007215')">[+] Show genes</a><br>
+<div id="elements_GO:0007215" style="display:none"> <font size=1>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+NCSTN  -  nicastrin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097345&amp;view=details' target="_blank">GO:0097345</a><a name=0097345></a></td>
+<td>mitochondrial outer membrane permeabilization</td>
+<td  align=center>7.57E-4</td>
+<td  align=center>1.24E-1</td>
+<td  align=center>15.20 (8795,8,217,3)</td>
+<td>
+<a id="ctrl_elements_GO:0097345" href="javascript:toggle('elements_GO:0097345')">[+] Show genes</a><br>
+<div id="elements_GO:0097345" style="display:none"> <font size=1>
+RHOT1  -  ras homolog family member t1<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002684&amp;view=details' target="_blank">GO:0002684</a><a name=0002684></a></td>
+<td>positive regulation of immune system process</td>
+<td  align=center>7.69E-4</td>
+<td  align=center>1.24E-1</td>
+<td  align=center>1.89 (8795,599,217,28)</td>
+<td>
+<a id="ctrl_elements_GO:0002684" href="javascript:toggle('elements_GO:0002684')">[+] Show genes</a><br>
+<div id="elements_GO:0002684" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+LGMN  -  legumain<br>
+C1orf186  -  chromosome 1 open reading frame 186<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+ADA  -  adenosine deaminase<br>
+MAP2K6  -  mitogen-activated protein kinase kinase 6<br>
+BTLA  -  b and t lymphocyte associated<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+GPR183  -  g protein-coupled receptor 183<br>
+GRAP2  -  grb2-related adaptor protein 2<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+GATA3  -  gata binding protein 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
+SUV420H1  -  suppressor of variegation 4-20 homolog 1 (drosophila)<br>
+IL10  -  interleukin 10<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+ATXN1L  -  ataxin 1-like<br>
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
+CD300A  -  cd300a molecule<br>
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006928&amp;view=details' target="_blank">GO:0006928</a><a name=0006928></a></td>
+<td>movement of cell or subcellular component</td>
+<td  align=center>8.19E-4</td>
+<td  align=center>1.31E-1</td>
+<td  align=center>1.94 (8795,542,217,26)</td>
+<td>
+<a id="ctrl_elements_GO:0006928" href="javascript:toggle('elements_GO:0006928')">[+] Show genes</a><br>
+<div id="elements_GO:0006928" style="display:none"> <font size=1>
+IGHM  -  immunoglobulin heavy constant mu<br>
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+ITGB7  -  integrin, beta 7<br>
+BSG  -  basigin (ok blood group)<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
+FZD3  -  frizzled family receptor 3<br>
+GPR183  -  g protein-coupled receptor 183<br>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+CLUAP1  -  clusterin associated protein 1<br>
+PEX14  -  peroxisomal biogenesis factor 14<br>
+GATA3  -  gata binding protein 3<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+CD48  -  cd48 molecule<br>
+CCL3  -  chemokine (c-c motif) ligand 3<br>
+RHOT1  -  ras homolog family member t1<br>
+IL10  -  interleukin 10<br>
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
+HEXB  -  hexosaminidase b (beta polypeptide)<br>
+AUTS2  -  autism susceptibility candidate 2<br>
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
+RHOBTB3  -  rho-related btb domain containing 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002701&amp;view=details' target="_blank">GO:0002701</a><a name=0002701></a></td>
+<td>negative regulation of production of molecular mediator of immune response</td>
+<td  align=center>8.4E-4</td>
+<td  align=center>1.33E-1</td>
+<td  align=center>9.01 (8795,18,217,4)</td>
+<td>
+<a id="ctrl_elements_GO:0002701" href="javascript:toggle('elements_GO:0002701')">[+] Show genes</a><br>
+<div id="elements_GO:0002701" style="display:none"> <font size=1>
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
+IL10  -  interleukin 10<br>
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001666&amp;view=details' target="_blank">GO:0001666</a><a name=0001666></a></td>
+<td>response to hypoxia</td>
+<td  align=center>8.45E-4</td>
+<td  align=center>1.32E-1</td>
+<td  align=center>3.10 (8795,144,217,11)</td>
+<td>
+<a id="ctrl_elements_GO:0001666" href="javascript:toggle('elements_GO:0001666')">[+] Show genes</a><br>
+<div id="elements_GO:0001666" style="display:none"> <font size=1>
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+ERO1L  -  ero1-like (s. cerevisiae)<br>
+FUNDC1  -  fun14 domain containing 1<br>
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
+RORA  -  rar-related orphan receptor a<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+AK4  -  adenylate kinase 4<br>
+ADA  -  adenosine deaminase<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051130&amp;view=details' target="_blank">GO:0051130</a><a name=0051130></a></td>
+<td>positive regulation of cellular component organization</td>
+<td  align=center>9.77E-4</td>
+<td  align=center>1.51E-1</td>
+<td  align=center>1.79 (8795,700,217,31)</td>
+<td>
+<a id="ctrl_elements_GO:0051130" href="javascript:toggle('elements_GO:0051130')">[+] Show genes</a><br>
+<div id="elements_GO:0051130" style="display:none"> <font size=1>
+TMEM30A  -  transmembrane protein 30a<br>
+ZMYND8  -  zinc finger, mynd-type containing 8<br>
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
+MAD2L1BP  -  mad2l1 binding protein<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+IL15RA  -  interleukin 15 receptor, alpha<br>
+TERF1  -  telomeric repeat binding factor (nima-interacting) 1<br>
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
+LMAN2  -  lectin, mannose-binding 2<br>
+PTK2B  -  protein tyrosine kinase 2 beta<br>
+MESDC2  -  mesoderm development candidate 2<br>
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
+RAP1B  -  rap1b, member of ras oncogene family<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+ATRX  -  alpha thalassemia/mental retardation syndrome x-linked<br>
+GATA3  -  gata binding protein 3<br>
+PLXNB2  -  plexin b2<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+KIDINS220  -  kinase d-interacting substrate, 220kda<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
+MFF  -  mitochondrial fission factor<br>
+CD53  -  cd53 molecule<br>
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
+CUL4B  -  cullin 4b<br>
+FNIP2  -  folliculin interacting protein 2<br>
+AUTS2  -  autism susceptibility candidate 2<br>
+CENPJ  -  centromere protein j<br>
+SUB1  -  sub1 homolog (s. cerevisiae)<br>
+EHD1  -  eh-domain containing 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9253 genes out of 9706 gene terms entered by the user.<br> 9253 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>225 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

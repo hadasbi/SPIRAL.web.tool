@@ -1,0 +1,1507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='149,535,245,598' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='205,665,317,762' HREF='#0030176' ALT=''>
+<AREA SHAPE='RECT' COORDS='1836,923,1951,1003' HREF='#0071752' ALT=''>
+<AREA SHAPE='RECT' COORDS='383,301,468,349' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='163,413,288,461' HREF='#0098552' ALT=''>
+<AREA SHAPE='RECT' COORDS='312,406,408,469' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,413,139,461' HREF='#0044459' ALT=''>
+<AREA SHAPE='RECT' COORDS='405,535,504,598' HREF='#0005789' ALT=''>
+<AREA SHAPE='RECT' COORDS='873,413,988,461' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='1749,811,1888,874' HREF='#0071751' ALT=''>
+<AREA SHAPE='RECT' COORDS='16,535,125,598' HREF='#0009897' ALT=''>
+<AREA SHAPE='RECT' COORDS='755,294,845,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='1012,413,1129,461' HREF='#0044431' ALT=''>
+<AREA SHAPE='RECT' COORDS='655,413,727,461' HREF='#0044437' ALT=''>
+<AREA SHAPE='RECT' COORDS='751,406,849,469' HREF='#0044432' ALT=''>
+<AREA SHAPE='RECT' COORDS='1153,413,1249,461' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='269,518,381,615' HREF='#0031227' ALT=''>
+<AREA SHAPE='RECT' COORDS='765,197,843,245' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='492,301,569,349' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='989,301,1072,349' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='1800,301,1939,349' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='1593,406,1732,469' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='2057,413,2129,461' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='1693,197,1768,245' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1547,301,1637,349' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='2013,301,2109,349' HREF='#0043230' ALT=''>
+<AREA SHAPE='RECT' COORDS='1603,543,1701,591' HREF='#0005783' ALT=''>
+<AREA SHAPE='RECT' COORDS='869,301,965,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='2057,689,2153,737' HREF='#0070062' ALT=''>
+<AREA SHAPE='RECT' COORDS='1273,413,1356,461' HREF='#1905368' ALT=''>
+<AREA SHAPE='RECT' COORDS='1157,543,1277,591' HREF='#0005787' ALT=''>
+<AREA SHAPE='RECT' COORDS='1443,301,1517,349' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='1301,543,1419,591' HREF='#0000139' ALT=''>
+<AREA SHAPE='RECT' COORDS='1299,301,1419,349' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='1443,543,1568,591' HREF='#0030660' ALT=''>
+<AREA SHAPE='RECT' COORDS='2057,543,2153,591' HREF='#1903561' ALT=''>
+<AREA SHAPE='RECT' COORDS='528,543,600,591' HREF='#0005775' ALT=''>
+<AREA SHAPE='RECT' COORDS='1825,682,1964,745' HREF='#0071749' ALT=''>
+<AREA SHAPE='RECT' COORDS='1912,811,2027,874' HREF='#0071750' ALT=''>
+<AREA SHAPE='RECT' COORDS='521,689,607,737' HREF='#0043202' ALT=''>
+<AREA SHAPE='RECT' COORDS='877,535,1003,598' HREF='#0036513' ALT=''>
+<AREA SHAPE='RECT' COORDS='989,197,1072,245' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='1096,301,1224,349' HREF='#0005886' ALT=''>
+<AREA SHAPE='RECT' COORDS='1380,406,1468,469' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='1919,406,2033,469' HREF='#0042571' ALT=''>
+<AREA SHAPE='RECT' COORDS='1791,535,1929,598' HREF='#0071746' ALT=''>
+<AREA SHAPE='RECT' COORDS='747,527,853,607' HREF='#0044322' ALT=''>
+<AREA SHAPE='RECT' COORDS='1027,543,1133,591' HREF='#0036502' ALT=''>
+<AREA SHAPE='RECT' COORDS='624,535,723,598' HREF='#0005788' ALT=''>
+<AREA SHAPE='RECT' COORDS='1663,682,1801,745' HREF='#0071748' ALT=''>
+<AREA SHAPE='RECT' COORDS='1756,413,1895,461' HREF='#0071745' ALT=''>
+<AREA SHAPE='RECT' COORDS='1209,197,1337,245' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='1661,301,1776,349' HREF='#0019814' ALT=''>
+<AREA SHAPE='RECT' COORDS='540,406,631,469' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='1971,197,2067,245' HREF='#0044421' ALT=''>
+<AREA SHAPE='RECT' COORDS='2133,301,2229,349' HREF='#0005615' ALT=''>
+<AREA SHAPE='RECT' COORDS='1209,101,1305,149' HREF='#0005576' ALT=''>
+<AREA SHAPE='RECT' COORDS='901,101,973,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='872,197,963,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='532,101,673,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='1020,5,903,29' HREF='#0005575' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details' target="_blank">GO:0016021</a><a name=0016021></a></td>
+<td>integral component of membrane</td>
+<td  align=center>1.93E-15</td>
+<td  align=center>3.33E-12</td>
+<td  align=center>2.63 (8795,1660,129,64)</td>
+<td>
+<a id="ctrl_elements_GO:0016021" href="javascript:toggle('elements_GO:0016021')">[+] Show genes</a><br>
+<div id="elements_GO:0016021" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+LAX1  -  lymphocyte transmembrane adaptor 1<br>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+DST  -  dystonin<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+FNDC3B  -  fibronectin type iii domain containing 3b<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+XBP1  -  x-box binding protein 1<br>
+DERL1  -  derlin 1<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+CD38  -  cd38 molecule<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+EVI2B  -  ecotropic viral integration site 2b<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+MANEA  -  mannosidase, endo-alpha<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+DENND5B  -  denn/madd domain containing 5b<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+CHPF  -  chondroitin polymerizing factor<br>
+RNF103  -  ring finger protein 103<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+TMEM59  -  transmembrane protein 59<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+FICD  -  fic domain containing<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+SEL1L3  -  sel-1 suppressor of lin-12-like 3 (c. elegans)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
+<td>membrane part</td>
+<td  align=center>2.42E-15</td>
+<td  align=center>2.08E-12</td>
+<td  align=center>2.16 (8795,2524,129,80)</td>
+<td>
+<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
+<div id="elements_GO:0044425" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+LAX1  -  lymphocyte transmembrane adaptor 1<br>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+DST  -  dystonin<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+RHOQ  -  ras homolog family member q<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+FNDC3B  -  fibronectin type iii domain containing 3b<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+ITM2B  -  integral membrane protein 2b<br>
+XBP1  -  x-box binding protein 1<br>
+DERL1  -  derlin 1<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+IGHV3-21  -  immunoglobulin heavy variable 3-21<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+CD38  -  cd38 molecule<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+EVI2B  -  ecotropic viral integration site 2b<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+MANEA  -  mannosidase, endo-alpha<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+DENND5B  -  denn/madd domain containing 5b<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+CHPF  -  chondroitin polymerizing factor<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+RNF103  -  ring finger protein 103<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+B2M  -  beta-2-microglobulin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+TMEM59  -  transmembrane protein 59<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+FICD  -  fic domain containing<br>
+WDR45  -  wd repeat domain 45<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+SEL1L3  -  sel-1 suppressor of lin-12-like 3 (c. elegans)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details' target="_blank">GO:0031224</a><a name=0031224></a></td>
+<td>intrinsic component of membrane</td>
+<td  align=center>5.2E-15</td>
+<td  align=center>2.98E-12</td>
+<td  align=center>2.58 (8795,1693,129,64)</td>
+<td>
+<a id="ctrl_elements_GO:0031224" href="javascript:toggle('elements_GO:0031224')">[+] Show genes</a><br>
+<div id="elements_GO:0031224" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+LAX1  -  lymphocyte transmembrane adaptor 1<br>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+DST  -  dystonin<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+FNDC3B  -  fibronectin type iii domain containing 3b<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+XBP1  -  x-box binding protein 1<br>
+DERL1  -  derlin 1<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+CD38  -  cd38 molecule<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+EVI2B  -  ecotropic viral integration site 2b<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+MANEA  -  mannosidase, endo-alpha<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+DENND5B  -  denn/madd domain containing 5b<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+CHPF  -  chondroitin polymerizing factor<br>
+RNF103  -  ring finger protein 103<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+TMEM59  -  transmembrane protein 59<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+FICD  -  fic domain containing<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+SEL1L3  -  sel-1 suppressor of lin-12-like 3 (c. elegans)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details' target="_blank">GO:0044432</a><a name=0044432></a></td>
+<td>endoplasmic reticulum part</td>
+<td  align=center>9.37E-14</td>
+<td  align=center>4.03E-11</td>
+<td  align=center>3.60 (8795,776,129,41)</td>
+<td>
+<a id="ctrl_elements_GO:0044432" href="javascript:toggle('elements_GO:0044432')">[+] Show genes</a><br>
+<div id="elements_GO:0044432" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+RNF103  -  ring finger protein 103<br>
+ARSA  -  arylsulfatase a<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+B2M  -  beta-2-microglobulin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+DERL1  -  derlin 1<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+FICD  -  fic domain containing<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019814&amp;view=details' target="_blank">GO:0019814</a><a name=0019814></a></td>
+<td>immunoglobulin complex</td>
+<td  align=center>2.16E-9</td>
+<td  align=center>7.42E-7</td>
+<td  align=center>20.98 (8795,26,129,8)</td>
+<td>
+<a id="ctrl_elements_GO:0019814" href="javascript:toggle('elements_GO:0019814')">[+] Show genes</a><br>
+<div id="elements_GO:0019814" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+IGLV4-69  -  immunoglobulin lambda variable 4-69<br>
+IGLV2-23  -  immunoglobulin lambda variable 2-23<br>
+IGHV3-21  -  immunoglobulin heavy variable 3-21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005788&amp;view=details' target="_blank">GO:0005788</a><a name=0005788></a></td>
+<td>endoplasmic reticulum lumen</td>
+<td  align=center>5.6E-9</td>
+<td  align=center>1.61E-6</td>
+<td  align=center>8.13 (8795,109,129,13)</td>
+<td>
+<a id="ctrl_elements_GO:0005788" href="javascript:toggle('elements_GO:0005788')">[+] Show genes</a><br>
+<div id="elements_GO:0005788" style="display:none"> <font size=1>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+B2M  -  beta-2-microglobulin<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042571&amp;view=details' target="_blank">GO:0042571</a><a name=0042571></a></td>
+<td>immunoglobulin complex, circulating</td>
+<td  align=center>1.42E-7</td>
+<td  align=center>3.5E-5</td>
+<td  align=center>22.73 (8795,18,129,6)</td>
+<td>
+<a id="ctrl_elements_GO:0042571" href="javascript:toggle('elements_GO:0042571')">[+] Show genes</a><br>
+<div id="elements_GO:0042571" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+IGHV3-21  -  immunoglobulin heavy variable 3-21<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005789&amp;view=details' target="_blank">GO:0005789</a><a name=0005789></a></td>
+<td>endoplasmic reticulum membrane</td>
+<td  align=center>3.49E-7</td>
+<td  align=center>7.52E-5</td>
+<td  align=center>2.99 (8795,593,129,26)</td>
+<td>
+<a id="ctrl_elements_GO:0005789" href="javascript:toggle('elements_GO:0005789')">[+] Show genes</a><br>
+<div id="elements_GO:0005789" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+RNF103  -  ring finger protein 103<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+HM13  -  histocompatibility (minor) 13<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+XBP1  -  x-box binding protein 1<br>
+DERL1  -  derlin 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+PLD3  -  phospholipase d family, member 3<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005783&amp;view=details' target="_blank">GO:0005783</a><a name=0005783></a></td>
+<td>endoplasmic reticulum</td>
+<td  align=center>1.64E-6</td>
+<td  align=center>3.14E-4</td>
+<td  align=center>2.76 (8795,643,129,26)</td>
+<td>
+<a id="ctrl_elements_GO:0005783" href="javascript:toggle('elements_GO:0005783')">[+] Show genes</a><br>
+<div id="elements_GO:0005783" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+FBXW7  -  f-box and wd repeat domain containing 7, e3 ubiquitin protein ligase<br>
+RNF103  -  ring finger protein 103<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+METTL7A  -  methyltransferase like 7a<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+HM13  -  histocompatibility (minor) 13<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+XBP1  -  x-box binding protein 1<br>
+DERL1  -  derlin 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+NPC2  -  niemann-pick disease, type c2<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044421&amp;view=details' target="_blank">GO:0044421</a><a name=0044421></a></td>
+<td>extracellular region part</td>
+<td  align=center>6.68E-6</td>
+<td  align=center>1.15E-3</td>
+<td  align=center>1.97 (8795,1417,129,41)</td>
+<td>
+<a id="ctrl_elements_GO:0044421" href="javascript:toggle('elements_GO:0044421')">[+] Show genes</a><br>
+<div id="elements_GO:0044421" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+DST  -  dystonin<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+IFI35  -  interferon-induced protein 35<br>
+PSAP  -  prosaposin<br>
+IGLV4-69  -  immunoglobulin lambda variable 4-69<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+SSR4  -  signal sequence receptor, delta<br>
+BTG2  -  btg family, member 2<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+TMEM59  -  transmembrane protein 59<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+ITM2B  -  integral membrane protein 2b<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+IGHV3-21  -  immunoglobulin heavy variable 3-21<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+CD38  -  cd38 molecule<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+NPC2  -  niemann-pick disease, type c2<br>
+IGLV2-23  -  immunoglobulin lambda variable 2-23<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CPNE5  -  copine v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005576&amp;view=details' target="_blank">GO:0005576</a><a name=0005576></a></td>
+<td>extracellular region</td>
+<td  align=center>7.34E-6</td>
+<td  align=center>1.15E-3</td>
+<td  align=center>3.04 (8795,448,129,20)</td>
+<td>
+<a id="ctrl_elements_GO:0005576" href="javascript:toggle('elements_GO:0005576')">[+] Show genes</a><br>
+<div id="elements_GO:0005576" style="display:none"> <font size=1>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+METTL7A  -  methyltransferase like 7a<br>
+IGLV2-23  -  immunoglobulin lambda variable 2-23<br>
+ARSA  -  arylsulfatase a<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+B2M  -  beta-2-microglobulin<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+CD27  -  cd27 molecule<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+ITM2B  -  integral membrane protein 2b<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044322&amp;view=details' target="_blank">GO:0044322</a><a name=0044322></a></td>
+<td>endoplasmic reticulum quality control compartment</td>
+<td  align=center>2.13E-5</td>
+<td  align=center>3.06E-3</td>
+<td  align=center>14.20 (8795,24,129,5)</td>
+<td>
+<a id="ctrl_elements_GO:0044322" href="javascript:toggle('elements_GO:0044322')">[+] Show genes</a><br>
+<div id="elements_GO:0044322" style="display:none"> <font size=1>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+RNF103  -  ring finger protein 103<br>
+DERL1  -  derlin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005615&amp;view=details' target="_blank">GO:0005615</a><a name=0005615></a></td>
+<td>extracellular space</td>
+<td  align=center>2.42E-5</td>
+<td  align=center>3.21E-3</td>
+<td  align=center>3.31 (8795,330,129,16)</td>
+<td>
+<a id="ctrl_elements_GO:0005615" href="javascript:toggle('elements_GO:0005615')">[+] Show genes</a><br>
+<div id="elements_GO:0005615" style="display:none"> <font size=1>
+FAM3C  -  family with sequence similarity 3, member c<br>
+IFI35  -  interferon-induced protein 35<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+IGLV4-69  -  immunoglobulin lambda variable 4-69<br>
+IGLV2-23  -  immunoglobulin lambda variable 2-23<br>
+B2M  -  beta-2-microglobulin<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+ITM2B  -  integral membrane protein 2b<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000139&amp;view=details' target="_blank">GO:0000139</a><a name=0000139></a></td>
+<td>Golgi membrane</td>
+<td  align=center>2.79E-5</td>
+<td  align=center>3.42E-3</td>
+<td  align=center>2.88 (8795,450,129,19)</td>
+<td>
+<a id="ctrl_elements_GO:0000139" href="javascript:toggle('elements_GO:0000139')">[+] Show genes</a><br>
+<div id="elements_GO:0000139" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+CHPF  -  chondroitin polymerizing factor<br>
+RAB30  -  rab30, member ras oncogene family<br>
+PLD3  -  phospholipase d family, member 3<br>
+B2M  -  beta-2-microglobulin<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+MANEA  -  mannosidase, endo-alpha<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+TMEM59  -  transmembrane protein 59<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+ITM2B  -  integral membrane protein 2b<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005787&amp;view=details' target="_blank">GO:0005787</a><a name=0005787></a></td>
+<td>signal peptidase complex</td>
+<td  align=center>3.02E-5</td>
+<td  align=center>3.46E-3</td>
+<td  align=center>40.91 (8795,5,129,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005787" href="javascript:toggle('elements_GO:0005787')">[+] Show genes</a><br>
+<div id="elements_GO:0005787" style="display:none"> <font size=1>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009897&amp;view=details' target="_blank">GO:0009897</a><a name=0009897></a></td>
+<td>external side of plasma membrane</td>
+<td  align=center>3.16E-5</td>
+<td  align=center>3.4E-3</td>
+<td  align=center>5.58 (8795,110,129,9)</td>
+<td>
+<a id="ctrl_elements_GO:0009897" href="javascript:toggle('elements_GO:0009897')">[+] Show genes</a><br>
+<div id="elements_GO:0009897" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+CD27  -  cd27 molecule<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+IGHV3-21  -  immunoglobulin heavy variable 3-21<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+B2M  -  beta-2-microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
+<td>membrane</td>
+<td  align=center>3.23E-5</td>
+<td  align=center>3.27E-3</td>
+<td  align=center>1.42 (8795,3755,129,78)</td>
+<td>
+<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
+<div id="elements_GO:0016020" style="display:none"> <font size=1>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+LAX1  -  lymphocyte transmembrane adaptor 1<br>
+DST  -  dystonin<br>
+ITM2C  -  integral membrane protein 2c<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+IFI35  -  interferon-induced protein 35<br>
+PSAP  -  prosaposin<br>
+RAB30  -  rab30, member ras oncogene family<br>
+RHOQ  -  ras homolog family member q<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+ITM2B  -  integral membrane protein 2b<br>
+DERL1  -  derlin 1<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+CD38  -  cd38 molecule<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+IGLV2-23  -  immunoglobulin lambda variable 2-23<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+CD27  -  cd27 molecule<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+MANEA  -  mannosidase, endo-alpha<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+CHPF  -  chondroitin polymerizing factor<br>
+IGLV4-69  -  immunoglobulin lambda variable 4-69<br>
+RNF103  -  ring finger protein 103<br>
+METTL7A  -  methyltransferase like 7a<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+B2M  -  beta-2-microglobulin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+TMEM59  -  transmembrane protein 59<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+WDR45  -  wd repeat domain 45<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+IRF7  -  interferon regulatory factor 7<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+CPNE5  -  copine v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030176&amp;view=details' target="_blank">GO:0030176</a><a name=0030176></a></td>
+<td>integral component of endoplasmic reticulum membrane</td>
+<td  align=center>4.2E-5</td>
+<td  align=center>4.02E-3</td>
+<td  align=center>5.38 (8795,114,129,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030176" href="javascript:toggle('elements_GO:0030176')">[+] Show genes</a><br>
+<div id="elements_GO:0030176" style="display:none"> <font size=1>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+FICD  -  fic domain containing<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+DERL1  -  derlin 1<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031227&amp;view=details' target="_blank">GO:0031227</a><a name=0031227></a></td>
+<td>intrinsic component of endoplasmic reticulum membrane</td>
+<td  align=center>5.16E-5</td>
+<td  align=center>4.68E-3</td>
+<td  align=center>5.24 (8795,117,129,9)</td>
+<td>
+<a id="ctrl_elements_GO:0031227" href="javascript:toggle('elements_GO:0031227')">[+] Show genes</a><br>
+<div id="elements_GO:0031227" style="display:none"> <font size=1>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+FICD  -  fic domain containing<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+DERL1  -  derlin 1<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043202&amp;view=details' target="_blank">GO:0043202</a><a name=0043202></a></td>
+<td>lysosomal lumen</td>
+<td  align=center>6.56E-5</td>
+<td  align=center>5.65E-3</td>
+<td  align=center>8.52 (8795,48,129,6)</td>
+<td>
+<a id="ctrl_elements_GO:0043202" href="javascript:toggle('elements_GO:0043202')">[+] Show genes</a><br>
+<div id="elements_GO:0043202" style="display:none"> <font size=1>
+SCARB2  -  scavenger receptor class b, member 2<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030660&amp;view=details' target="_blank">GO:0030660</a><a name=0030660></a></td>
+<td>Golgi-associated vesicle membrane</td>
+<td  align=center>1.29E-4</td>
+<td  align=center>1.05E-2</td>
+<td  align=center>7.58 (8795,54,129,6)</td>
+<td>
+<a id="ctrl_elements_GO:0030660" href="javascript:toggle('elements_GO:0030660')">[+] Show genes</a><br>
+<div id="elements_GO:0030660" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+ITM2B  -  integral membrane protein 2b<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036513&amp;view=details' target="_blank">GO:0036513</a><a name=0036513></a></td>
+<td>Derlin-1 retrotranslocation complex</td>
+<td  align=center>1.64E-4</td>
+<td  align=center>1.28E-2</td>
+<td  align=center>25.57 (8795,8,129,3)</td>
+<td>
+<a id="ctrl_elements_GO:0036513" href="javascript:toggle('elements_GO:0036513')">[+] Show genes</a><br>
+<div id="elements_GO:0036513" style="display:none"> <font size=1>
+HM13  -  histocompatibility (minor) 13<br>
+DERL1  -  derlin 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005886&amp;view=details' target="_blank">GO:0005886</a><a name=0005886></a></td>
+<td>plasma membrane</td>
+<td  align=center>1.71E-4</td>
+<td  align=center>1.28E-2</td>
+<td  align=center>1.76 (8795,1512,129,39)</td>
+<td>
+<a id="ctrl_elements_GO:0005886" href="javascript:toggle('elements_GO:0005886')">[+] Show genes</a><br>
+<div id="elements_GO:0005886" style="display:none"> <font size=1>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+LAX1  -  lymphocyte transmembrane adaptor 1<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+ITM2C  -  integral membrane protein 2c<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+IGLV4-69  -  immunoglobulin lambda variable 4-69<br>
+PSAP  -  prosaposin<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+LPAR6  -  lysophosphatidic acid receptor 6<br>
+TMEM59  -  transmembrane protein 59<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+HM13  -  histocompatibility (minor) 13<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+IFNAR2  -  interferon (alpha, beta and omega) receptor 2<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+CD38  -  cd38 molecule<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+IGLV2-23  -  immunoglobulin lambda variable 2-23<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+CD27  -  cd27 molecule<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+CPNE5  -  copine v<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071752&amp;view=details' target="_blank">GO:0071752</a><a name=0071752></a></td>
+<td>secretory dimeric IgA immunoglobulin complex</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.53E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071752" href="javascript:toggle('elements_GO:0071752')">[+] Show genes</a><br>
+<div id="elements_GO:0071752" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071750&amp;view=details' target="_blank">GO:0071750</a><a name=0071750></a></td>
+<td>dimeric IgA immunoglobulin complex</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.47E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071750" href="javascript:toggle('elements_GO:0071750')">[+] Show genes</a><br>
+<div id="elements_GO:0071750" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071751&amp;view=details' target="_blank">GO:0071751</a><a name=0071751></a></td>
+<td>secretory IgA immunoglobulin complex</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.41E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071751" href="javascript:toggle('elements_GO:0071751')">[+] Show genes</a><br>
+<div id="elements_GO:0071751" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071745&amp;view=details' target="_blank">GO:0071745</a><a name=0071745></a></td>
+<td>IgA immunoglobulin complex</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.36E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071745" href="javascript:toggle('elements_GO:0071745')">[+] Show genes</a><br>
+<div id="elements_GO:0071745" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071746&amp;view=details' target="_blank">GO:0071746</a><a name=0071746></a></td>
+<td>IgA immunoglobulin complex, circulating</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.31E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071746" href="javascript:toggle('elements_GO:0071746')">[+] Show genes</a><br>
+<div id="elements_GO:0071746" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071748&amp;view=details' target="_blank">GO:0071748</a><a name=0071748></a></td>
+<td>monomeric IgA immunoglobulin complex</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.27E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071748" href="javascript:toggle('elements_GO:0071748')">[+] Show genes</a><br>
+<div id="elements_GO:0071748" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071749&amp;view=details' target="_blank">GO:0071749</a><a name=0071749></a></td>
+<td>polymeric IgA immunoglobulin complex</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.22E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071749" href="javascript:toggle('elements_GO:0071749')">[+] Show genes</a><br>
+<div id="elements_GO:0071749" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036502&amp;view=details' target="_blank">GO:0036502</a><a name=0036502></a></td>
+<td>Derlin-1-VIMP complex</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>1.19E-2</td>
+<td  align=center>68.18 (8795,2,129,2)</td>
+<td>
+<a id="ctrl_elements_GO:0036502" href="javascript:toggle('elements_GO:0036502')">[+] Show genes</a><br>
+<div id="elements_GO:0036502" style="display:none"> <font size=1>
+DERL1  -  derlin 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044431&amp;view=details' target="_blank">GO:0044431</a><a name=0044431></a></td>
+<td>Golgi apparatus part</td>
+<td  align=center>2.54E-4</td>
+<td  align=center>1.37E-2</td>
+<td  align=center>2.37 (8795,576,129,20)</td>
+<td>
+<a id="ctrl_elements_GO:0044431" href="javascript:toggle('elements_GO:0044431')">[+] Show genes</a><br>
+<div id="elements_GO:0044431" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+CHPF  -  chondroitin polymerizing factor<br>
+RAB30  -  rab30, member ras oncogene family<br>
+PLD3  -  phospholipase d family, member 3<br>
+B2M  -  beta-2-microglobulin<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+MANEA  -  mannosidase, endo-alpha<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+TMEM59  -  transmembrane protein 59<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+ITM2B  -  integral membrane protein 2b<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070062&amp;view=details' target="_blank">GO:0070062</a><a name=0070062></a></td>
+<td>extracellular exosome</td>
+<td  align=center>4.58E-4</td>
+<td  align=center>2.39E-2</td>
+<td  align=center>1.84 (8795,1149,129,31)</td>
+<td>
+<a id="ctrl_elements_GO:0070062" href="javascript:toggle('elements_GO:0070062')">[+] Show genes</a><br>
+<div id="elements_GO:0070062" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+PSAP  -  prosaposin<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+BTG2  -  btg family, member 2<br>
+SSR4  -  signal sequence receptor, delta<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+TMEM59  -  transmembrane protein 59<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+CD38  -  cd38 molecule<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+CPNE5  -  copine v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details' target="_blank">GO:0098588</a><a name=0098588></a></td>
+<td>bounding membrane of organelle</td>
+<td  align=center>4.65E-4</td>
+<td  align=center>2.35E-2</td>
+<td  align=center>1.84 (8795,1150,129,31)</td>
+<td>
+<a id="ctrl_elements_GO:0098588" href="javascript:toggle('elements_GO:0098588')">[+] Show genes</a><br>
+<div id="elements_GO:0098588" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ITM2C  -  integral membrane protein 2c<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+PSAP  -  prosaposin<br>
+CHPF  -  chondroitin polymerizing factor<br>
+RAB30  -  rab30, member ras oncogene family<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+TMEM59  -  transmembrane protein 59<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+ABCB9  -  atp-binding cassette, sub-family b (mdr/tap), member 9<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+CD38  -  cd38 molecule<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+MANEA  -  mannosidase, endo-alpha<br>
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+IRF7  -  interferon regulatory factor 7<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043230&amp;view=details' target="_blank">GO:0043230</a><a name=0043230></a></td>
+<td>extracellular organelle</td>
+<td  align=center>4.79E-4</td>
+<td  align=center>2.36E-2</td>
+<td  align=center>1.83 (8795,1152,129,31)</td>
+<td>
+<a id="ctrl_elements_GO:0043230" href="javascript:toggle('elements_GO:0043230')">[+] Show genes</a><br>
+<div id="elements_GO:0043230" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+PSAP  -  prosaposin<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+BTG2  -  btg family, member 2<br>
+SSR4  -  signal sequence receptor, delta<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+TMEM59  -  transmembrane protein 59<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+CD38  -  cd38 molecule<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+CPNE5  -  copine v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903561&amp;view=details' target="_blank">GO:1903561</a><a name=1903561></a></td>
+<td>extracellular vesicle</td>
+<td  align=center>4.79E-4</td>
+<td  align=center>2.29E-2</td>
+<td  align=center>1.83 (8795,1152,129,31)</td>
+<td>
+<a id="ctrl_elements_GO:1903561" href="javascript:toggle('elements_GO:1903561')">[+] Show genes</a><br>
+<div id="elements_GO:1903561" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+PSAP  -  prosaposin<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+BTG2  -  btg family, member 2<br>
+SSR4  -  signal sequence receptor, delta<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+TMEM59  -  transmembrane protein 59<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+CD38  -  cd38 molecule<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+CPNE5  -  copine v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details' target="_blank">GO:0031982</a><a name=0031982></a></td>
+<td>vesicle</td>
+<td  align=center>5.4E-4</td>
+<td  align=center>2.51E-2</td>
+<td  align=center>1.63 (8795,1710,129,41)</td>
+<td>
+<a id="ctrl_elements_GO:0031982" href="javascript:toggle('elements_GO:0031982')">[+] Show genes</a><br>
+<div id="elements_GO:0031982" style="display:none"> <font size=1>
+MAN1A1  -  mannosidase, alpha, class 1a, member 1<br>
+DST  -  dystonin<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+GPR155  -  g protein-coupled receptor 155<br>
+ITM2C  -  integral membrane protein 2c<br>
+SAMD9L  -  sterile alpha motif domain containing 9-like<br>
+ENTPD4  -  ectonucleoside triphosphate diphosphohydrolase 4<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+PSAP  -  prosaposin<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+SSR4  -  signal sequence receptor, delta<br>
+BTG2  -  btg family, member 2<br>
+TMEM59  -  transmembrane protein 59<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+ITM2B  -  integral membrane protein 2b<br>
+DERL1  -  derlin 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+CD38  -  cd38 molecule<br>
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+VPS37B  -  vacuolar protein sorting 37 homolog b (s. cerevisiae)<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+CPNE5  -  copine v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005775&amp;view=details' target="_blank">GO:0005775</a><a name=0005775></a></td>
+<td>vacuolar lumen</td>
+<td  align=center>5.67E-4</td>
+<td  align=center>2.57E-2</td>
+<td  align=center>4.87 (8795,98,129,7)</td>
+<td>
+<a id="ctrl_elements_GO:0005775" href="javascript:toggle('elements_GO:0005775')">[+] Show genes</a><br>
+<div id="elements_GO:0005775" style="display:none"> <font size=1>
+SCARB2  -  scavenger receptor class b, member 2<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043233&amp;view=details' target="_blank">GO:0043233</a><a name=0043233></a></td>
+<td>organelle lumen</td>
+<td  align=center>7.06E-4</td>
+<td  align=center>3.12E-2</td>
+<td  align=center>2.09 (8795,719,129,22)</td>
+<td>
+<a id="ctrl_elements_GO:0043233" href="javascript:toggle('elements_GO:0043233')">[+] Show genes</a><br>
+<div id="elements_GO:0043233" style="display:none"> <font size=1>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+CHPF  -  chondroitin polymerizing factor<br>
+METTL7A  -  methyltransferase like 7a<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+B2M  -  beta-2-microglobulin<br>
+TXNIP  -  thioredoxin interacting protein<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070013&amp;view=details' target="_blank">GO:0070013</a><a name=0070013></a></td>
+<td>intracellular organelle lumen</td>
+<td  align=center>7.06E-4</td>
+<td  align=center>3.04E-2</td>
+<td  align=center>2.09 (8795,719,129,22)</td>
+<td>
+<a id="ctrl_elements_GO:0070013" href="javascript:toggle('elements_GO:0070013')">[+] Show genes</a><br>
+<div id="elements_GO:0070013" style="display:none"> <font size=1>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+CHPF  -  chondroitin polymerizing factor<br>
+METTL7A  -  methyltransferase like 7a<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+B2M  -  beta-2-microglobulin<br>
+TXNIP  -  thioredoxin interacting protein<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031974&amp;view=details' target="_blank">GO:0031974</a><a name=0031974></a></td>
+<td>membrane-enclosed lumen</td>
+<td  align=center>7.06E-4</td>
+<td  align=center>2.97E-2</td>
+<td  align=center>2.09 (8795,719,129,22)</td>
+<td>
+<a id="ctrl_elements_GO:0031974" href="javascript:toggle('elements_GO:0031974')">[+] Show genes</a><br>
+<div id="elements_GO:0031974" style="display:none"> <font size=1>
+LRPAP1  -  low density lipoprotein receptor-related protein associated protein 1<br>
+SCARB2  -  scavenger receptor class b, member 2<br>
+FAM3C  -  family with sequence similarity 3, member c<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+NPC2  -  niemann-pick disease, type c2<br>
+PSAP  -  prosaposin<br>
+CHPF  -  chondroitin polymerizing factor<br>
+METTL7A  -  methyltransferase like 7a<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+TXNDC5  -  thioredoxin domain containing 5 (endoplasmic reticulum)<br>
+B2M  -  beta-2-microglobulin<br>
+TXNIP  -  thioredoxin interacting protein<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+COL24A1  -  collagen, type xxiv, alpha 1<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+LAMC1  -  laminin, gamma 1 (formerly lamb2)<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+CECR1  -  cat eye syndrome chromosome region, candidate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098552&amp;view=details' target="_blank">GO:0098552</a><a name=0098552></a></td>
+<td>side of membrane</td>
+<td  align=center>8.23E-4</td>
+<td  align=center>3.37E-2</td>
+<td  align=center>3.63 (8795,169,129,9)</td>
+<td>
+<a id="ctrl_elements_GO:0098552" href="javascript:toggle('elements_GO:0098552')">[+] Show genes</a><br>
+<div id="elements_GO:0098552" style="display:none"> <font size=1>
+IGHA1  -  immunoglobulin heavy constant alpha 1<br>
+CD27  -  cd27 molecule<br>
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
+IGLC2  -  immunoglobulin lambda constant 2 (kern-oz- marker)<br>
+IGHA2  -  immunoglobulin heavy constant alpha 2 (a2m marker)<br>
+IGLC6  -  immunoglobulin lambda constant 6 (kern+oz- marker, gene/pseudogene)<br>
+IGHV3-21  -  immunoglobulin heavy variable 3-21<br>
+P2RX1  -  purinergic receptor p2x, ligand-gated ion channel, 1<br>
+B2M  -  beta-2-microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9162 genes out of 9615 gene terms entered by the user.<br> 9162 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>134 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

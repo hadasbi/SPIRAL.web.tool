@@ -1,0 +1,707 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='1015,197,1105,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='809,294,900,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='924,294,1015,357' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='1209,301,1297,349' HREF='#1990037' ALT=''>
+<AREA SHAPE='RECT' COORDS='1089,301,1185,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='1007,413,1116,461' HREF='#0000151' ALT=''>
+<AREA SHAPE='RECT' COORDS='1321,301,1412,349' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='513,301,620,349' HREF='#0005667' ALT=''>
+<AREA SHAPE='RECT' COORDS='488,413,579,461' HREF='#0044428' ALT=''>
+<AREA SHAPE='RECT' COORDS='384,543,525,591' HREF='#0044798' ALT=''>
+<AREA SHAPE='RECT' COORDS='393,682,516,745' HREF='#0090575' ALT=''>
+<AREA SHAPE='RECT' COORDS='343,811,441,859' HREF='#1990617' ALT=''>
+<AREA SHAPE='RECT' COORDS='465,811,572,859' HREF='#0036488' ALT=''>
+<AREA SHAPE='RECT' COORDS='1309,543,1408,591' HREF='#0005783' ALT=''>
+<AREA SHAPE='RECT' COORDS='707,907,819,970' HREF='#0000839' ALT=''>
+<AREA SHAPE='RECT' COORDS='184,665,296,762' HREF='#0030176' ALT=''>
+<AREA SHAPE='RECT' COORDS='699,197,773,245' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='695,301,785,349' HREF='#1990234' ALT=''>
+<AREA SHAPE='RECT' COORDS='1329,197,1404,245' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1436,301,1575,349' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='1053,535,1152,598' HREF='#0005788' ALT=''>
+<AREA SHAPE='RECT' COORDS='1432,527,1544,607' HREF='#0005793' ALT=''>
+<AREA SHAPE='RECT' COORDS='1336,406,1475,469' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='603,413,717,461' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='708,689,817,737' HREF='#0000835' ALT=''>
+<AREA SHAPE='RECT' COORDS='600,535,725,598' HREF='#0036513' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,535,104,598' HREF='#0005789' ALT=''>
+<AREA SHAPE='RECT' COORDS='333,301,419,349' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='256,406,352,469' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='128,535,224,598' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='248,518,360,615' HREF='#0031227' ALT=''>
+<AREA SHAPE='RECT' COORDS='707,811,819,859' HREF='#0000836' ALT=''>
+<AREA SHAPE='RECT' COORDS='605,101,733,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='804,406,903,469' HREF='#0044432' ALT=''>
+<AREA SHAPE='RECT' COORDS='191,101,273,149' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='1035,101,1107,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='1167,197,1252,245' HREF='#0097458' ALT=''>
+<AREA SHAPE='RECT' COORDS='768,101,845,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='901,197,979,245' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='800,527,907,607' HREF='#0044322' ALT=''>
+<AREA SHAPE='RECT' COORDS='931,535,1029,598' HREF='#0070971' ALT=''>
+<AREA SHAPE='RECT' COORDS='1176,535,1285,598' HREF='#0000153' ALT=''>
+<AREA SHAPE='RECT' COORDS='869,101,1011,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='807,5,689,29' HREF='#0005575' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details' target="_blank">GO:0044432</a><a name=0044432></a></td>
+<td>endoplasmic reticulum part</td>
+<td  align=center>3.9E-17</td>
+<td  align=center>6.72E-14</td>
+<td  align=center>3.66 (8795,776,158,51)</td>
+<td>
+<a id="ctrl_elements_GO:0044432" href="javascript:toggle('elements_GO:0044432')">[+] Show genes</a><br>
+<div id="elements_GO:0044432" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+KDELR1  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 1<br>
+SCD5  -  stearoyl-coa desaturase 5<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+LRRK2  -  leucine-rich repeat kinase 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+PIGO  -  phosphatidylinositol glycan anchor biosynthesis, class o<br>
+STX5  -  syntaxin 5<br>
+RPN1  -  ribophorin i<br>
+YIPF5  -  yip1 domain family, member 5<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+TFG  -  trk-fused gene<br>
+REEP5  -  receptor accessory protein 5<br>
+H6PD  -  hexose-6-phosphate dehydrogenase (glucose 1-dehydrogenase)<br>
+TBL2  -  transducin (beta)-like 2<br>
+CLCC1  -  chloride channel clic-like 1<br>
+DERL2  -  derlin 2<br>
+VIMP  -  vcp-interacting membrane protein<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+TMEM258  -  transmembrane protein 258<br>
+MOGS  -  mannosyl-oligosaccharide glucosidase<br>
+TMEM39A  -  transmembrane protein 39a<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+DOLPP1  -  dolichyldiphosphatase 1<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+SRPRB  -  signal recognition particle receptor, b subunit<br>
+TMEM66  -  transmembrane protein 66<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+UBXN4  -  ubx domain protein 4<br>
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+LMBR1L  -  limb development membrane protein 1-like<br>
+ATP13A1  -  atpase type 13a1<br>
+SELK  -  selenoprotein k<br>
+COPA  -  coatomer protein complex, subunit alpha<br>
+CTAGE5  -  ctage family, member 5<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+ZDHHC4  -  zinc finger, dhhc-type containing 4<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+MGST3  -  microsomal glutathione s-transferase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005783&amp;view=details' target="_blank">GO:0005783</a><a name=0005783></a></td>
+<td>endoplasmic reticulum</td>
+<td  align=center>1.47E-12</td>
+<td  align=center>1.26E-9</td>
+<td  align=center>3.46 (8795,643,158,40)</td>
+<td>
+<a id="ctrl_elements_GO:0005783" href="javascript:toggle('elements_GO:0005783')">[+] Show genes</a><br>
+<div id="elements_GO:0005783" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+TMEM258  -  transmembrane protein 258<br>
+KDELR1  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 1<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
+MOGS  -  mannosyl-oligosaccharide glucosidase<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+VMP1  -  vacuole membrane protein 1<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+LRRK2  -  leucine-rich repeat kinase 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+TMEM66  -  transmembrane protein 66<br>
+UBXN4  -  ubx domain protein 4<br>
+HAX1  -  hcls1 associated protein x-1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+RPN1  -  ribophorin i<br>
+YIPF5  -  yip1 domain family, member 5<br>
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+UFM1  -  ubiquitin-fold modifier 1<br>
+REEP5  -  receptor accessory protein 5<br>
+SELK  -  selenoprotein k<br>
+TBL2  -  transducin (beta)-like 2<br>
+CTAGE5  -  ctage family, member 5<br>
+CLCC1  -  chloride channel clic-like 1<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+DERL2  -  derlin 2<br>
+ZDHHC4  -  zinc finger, dhhc-type containing 4<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+VIMP  -  vcp-interacting membrane protein<br>
+MGST3  -  microsomal glutathione s-transferase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005789&amp;view=details' target="_blank">GO:0005789</a><a name=0005789></a></td>
+<td>endoplasmic reticulum membrane</td>
+<td  align=center>5.07E-11</td>
+<td  align=center>2.91E-8</td>
+<td  align=center>3.38 (8795,593,158,36)</td>
+<td>
+<a id="ctrl_elements_GO:0005789" href="javascript:toggle('elements_GO:0005789')">[+] Show genes</a><br>
+<div id="elements_GO:0005789" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+KDELR1  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 1<br>
+SCD5  -  stearoyl-coa desaturase 5<br>
+MOGS  -  mannosyl-oligosaccharide glucosidase<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+TMEM39A  -  transmembrane protein 39a<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+DOLPP1  -  dolichyldiphosphatase 1<br>
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+LRRK2  -  leucine-rich repeat kinase 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+SRPRB  -  signal recognition particle receptor, b subunit<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+UBXN4  -  ubx domain protein 4<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+PIGO  -  phosphatidylinositol glycan anchor biosynthesis, class o<br>
+STX5  -  syntaxin 5<br>
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
+RPN1  -  ribophorin i<br>
+YIPF5  -  yip1 domain family, member 5<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+LMBR1L  -  limb development membrane protein 1-like<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+ATP13A1  -  atpase type 13a1<br>
+SELK  -  selenoprotein k<br>
+COPA  -  coatomer protein complex, subunit alpha<br>
+CTAGE5  -  ctage family, member 5<br>
+CLCC1  -  chloride channel clic-like 1<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+DERL2  -  derlin 2<br>
+ZDHHC4  -  zinc finger, dhhc-type containing 4<br>
+VIMP  -  vcp-interacting membrane protein<br>
+MGST3  -  microsomal glutathione s-transferase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044322&amp;view=details' target="_blank">GO:0044322</a><a name=0044322></a></td>
+<td>endoplasmic reticulum quality control compartment</td>
+<td  align=center>5.24E-9</td>
+<td  align=center>2.25E-6</td>
+<td  align=center>18.55 (8795,24,158,8)</td>
+<td>
+<a id="ctrl_elements_GO:0044322" href="javascript:toggle('elements_GO:0044322')">[+] Show genes</a><br>
+<div id="elements_GO:0044322" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+DERL2  -  derlin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details' target="_blank">GO:0016021</a><a name=0016021></a></td>
+<td>integral component of membrane</td>
+<td  align=center>1.31E-6</td>
+<td  align=center>4.51E-4</td>
+<td  align=center>1.84 (8795,1660,158,55)</td>
+<td>
+<a id="ctrl_elements_GO:0016021" href="javascript:toggle('elements_GO:0016021')">[+] Show genes</a><br>
+<div id="elements_GO:0016021" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+TMEM179B  -  transmembrane protein 179b<br>
+KDELR1  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 1<br>
+SCD5  -  stearoyl-coa desaturase 5<br>
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
+TMEM106A  -  transmembrane protein 106a<br>
+VMP1  -  vacuole membrane protein 1<br>
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+CASC4  -  cancer susceptibility candidate 4<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+B3GALT6  -  udp-gal:betagal beta 1,3-galactosyltransferase polypeptide 6<br>
+STX5  -  syntaxin 5<br>
+PIGO  -  phosphatidylinositol glycan anchor biosynthesis, class o<br>
+SLC35C1  -  solute carrier family 35 (gdp-fucose transporter), member c1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+RPN1  -  ribophorin i<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+SLC1A5  -  solute carrier family 1 (neutral amino acid transporter), member 5<br>
+SLC1A4  -  solute carrier family 1 (glutamate/neutral amino acid transporter), member 4<br>
+REEP5  -  receptor accessory protein 5<br>
+TBL2  -  transducin (beta)-like 2<br>
+DERL2  -  derlin 2<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CCPG1  -  cell cycle progression 1<br>
+SLC30A7  -  solute carrier family 30 (zinc transporter), member 7<br>
+TMEM258  -  transmembrane protein 258<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+CHPF  -  chondroitin polymerizing factor<br>
+ANKRD46  -  ankyrin repeat domain 46<br>
+MOGS  -  mannosyl-oligosaccharide glucosidase<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+TMEM39A  -  transmembrane protein 39a<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+DOLPP1  -  dolichyldiphosphatase 1<br>
+SRPRB  -  signal recognition particle receptor, b subunit<br>
+TMEM66  -  transmembrane protein 66<br>
+TM9SF2  -  transmembrane 9 superfamily member 2<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+LMBR1L  -  limb development membrane protein 1-like<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+SLC17A5  -  solute carrier family 17 (acidic sugar transporter), member 5<br>
+TMX4  -  thioredoxin-related transmembrane protein 4<br>
+ATP13A1  -  atpase type 13a1<br>
+SELK  -  selenoprotein k<br>
+TMEM140  -  transmembrane protein 140<br>
+CTAGE5  -  ctage family, member 5<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+ZDHHC4  -  zinc finger, dhhc-type containing 4<br>
+YIPF2  -  yip1 domain family, member 2<br>
+MGST3  -  microsomal glutathione s-transferase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details' target="_blank">GO:0031224</a><a name=0031224></a></td>
+<td>intrinsic component of membrane</td>
+<td  align=center>2.48E-6</td>
+<td  align=center>7.11E-4</td>
+<td  align=center>1.81 (8795,1693,158,55)</td>
+<td>
+<a id="ctrl_elements_GO:0031224" href="javascript:toggle('elements_GO:0031224')">[+] Show genes</a><br>
+<div id="elements_GO:0031224" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+TMEM179B  -  transmembrane protein 179b<br>
+KDELR1  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 1<br>
+SCD5  -  stearoyl-coa desaturase 5<br>
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
+TMEM106A  -  transmembrane protein 106a<br>
+VMP1  -  vacuole membrane protein 1<br>
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+CASC4  -  cancer susceptibility candidate 4<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+B3GALT6  -  udp-gal:betagal beta 1,3-galactosyltransferase polypeptide 6<br>
+PIGO  -  phosphatidylinositol glycan anchor biosynthesis, class o<br>
+STX5  -  syntaxin 5<br>
+SLC35C1  -  solute carrier family 35 (gdp-fucose transporter), member c1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+RPN1  -  ribophorin i<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+SLC1A5  -  solute carrier family 1 (neutral amino acid transporter), member 5<br>
+SLC1A4  -  solute carrier family 1 (glutamate/neutral amino acid transporter), member 4<br>
+REEP5  -  receptor accessory protein 5<br>
+TBL2  -  transducin (beta)-like 2<br>
+DERL2  -  derlin 2<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CCPG1  -  cell cycle progression 1<br>
+SLC30A7  -  solute carrier family 30 (zinc transporter), member 7<br>
+TMEM258  -  transmembrane protein 258<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+CHPF  -  chondroitin polymerizing factor<br>
+ANKRD46  -  ankyrin repeat domain 46<br>
+MOGS  -  mannosyl-oligosaccharide glucosidase<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+TMEM39A  -  transmembrane protein 39a<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+DOLPP1  -  dolichyldiphosphatase 1<br>
+SRPRB  -  signal recognition particle receptor, b subunit<br>
+TMEM66  -  transmembrane protein 66<br>
+TM9SF2  -  transmembrane 9 superfamily member 2<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+LMBR1L  -  limb development membrane protein 1-like<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+SLC17A5  -  solute carrier family 17 (acidic sugar transporter), member 5<br>
+TMX4  -  thioredoxin-related transmembrane protein 4<br>
+ATP13A1  -  atpase type 13a1<br>
+SELK  -  selenoprotein k<br>
+TMEM140  -  transmembrane protein 140<br>
+CTAGE5  -  ctage family, member 5<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+ZDHHC4  -  zinc finger, dhhc-type containing 4<br>
+YIPF2  -  yip1 domain family, member 2<br>
+MGST3  -  microsomal glutathione s-transferase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000836&amp;view=details' target="_blank">GO:0000836</a><a name=0000836></a></td>
+<td>Hrd1p ubiquitin ligase complex</td>
+<td  align=center>6.64E-6</td>
+<td  align=center>1.63E-3</td>
+<td  align=center>27.83 (8795,8,158,4)</td>
+<td>
+<a id="ctrl_elements_GO:0000836" href="javascript:toggle('elements_GO:0000836')">[+] Show genes</a><br>
+<div id="elements_GO:0000836" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+DERL2  -  derlin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000835&amp;view=details' target="_blank">GO:0000835</a><a name=0000835></a></td>
+<td>ER ubiquitin ligase complex</td>
+<td  align=center>1.18E-5</td>
+<td  align=center>2.53E-3</td>
+<td  align=center>24.74 (8795,9,158,4)</td>
+<td>
+<a id="ctrl_elements_GO:0000835" href="javascript:toggle('elements_GO:0000835')">[+] Show genes</a><br>
+<div id="elements_GO:0000835" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+DERL2  -  derlin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
+<td>membrane part</td>
+<td  align=center>1.82E-5</td>
+<td  align=center>3.47E-3</td>
+<td  align=center>1.54 (8795,2524,158,70)</td>
+<td>
+<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
+<div id="elements_GO:0044425" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+TMEM179B  -  transmembrane protein 179b<br>
+EPS8L2  -  eps8-like 2<br>
+KDELR1  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 1<br>
+SCD5  -  stearoyl-coa desaturase 5<br>
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
+VMP1  -  vacuole membrane protein 1<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+TMEM106A  -  transmembrane protein 106a<br>
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+ATF4  -  activating transcription factor 4<br>
+LRRK2  -  leucine-rich repeat kinase 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+CASC4  -  cancer susceptibility candidate 4<br>
+B3GALT6  -  udp-gal:betagal beta 1,3-galactosyltransferase polypeptide 6<br>
+DBN1  -  drebrin 1<br>
+ALG2  -  alg2, alpha-1,3/1,6-mannosyltransferase<br>
+HAX1  -  hcls1 associated protein x-1<br>
+PIGO  -  phosphatidylinositol glycan anchor biosynthesis, class o<br>
+STX5  -  syntaxin 5<br>
+SLC35C1  -  solute carrier family 35 (gdp-fucose transporter), member c1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+RPN1  -  ribophorin i<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+SLC1A5  -  solute carrier family 1 (neutral amino acid transporter), member 5<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+SLC1A4  -  solute carrier family 1 (glutamate/neutral amino acid transporter), member 4<br>
+REEP5  -  receptor accessory protein 5<br>
+TBL2  -  transducin (beta)-like 2<br>
+CLCC1  -  chloride channel clic-like 1<br>
+DERL2  -  derlin 2<br>
+VIMP  -  vcp-interacting membrane protein<br>
+CCPG1  -  cell cycle progression 1<br>
+SLC30A7  -  solute carrier family 30 (zinc transporter), member 7<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+TMEM258  -  transmembrane protein 258<br>
+CHPF  -  chondroitin polymerizing factor<br>
+ANKRD46  -  ankyrin repeat domain 46<br>
+MOGS  -  mannosyl-oligosaccharide glucosidase<br>
+VPS36  -  vacuolar protein sorting 36 homolog (s. cerevisiae)<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+TMEM39A  -  transmembrane protein 39a<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+DOLPP1  -  dolichyldiphosphatase 1<br>
+ATP6V1E2  -  atpase, h+ transporting, lysosomal 31kda, v1 subunit e2<br>
+TMEM66  -  transmembrane protein 66<br>
+SRPRB  -  signal recognition particle receptor, b subunit<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+TM9SF2  -  transmembrane 9 superfamily member 2<br>
+UBXN4  -  ubx domain protein 4<br>
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+WDR45  -  wd repeat domain 45<br>
+LMBR1L  -  limb development membrane protein 1-like<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+SLC17A5  -  solute carrier family 17 (acidic sugar transporter), member 5<br>
+TMX4  -  thioredoxin-related transmembrane protein 4<br>
+ATP13A1  -  atpase type 13a1<br>
+SELK  -  selenoprotein k<br>
+COPA  -  coatomer protein complex, subunit alpha<br>
+TMEM140  -  transmembrane protein 140<br>
+CTAGE5  -  ctage family, member 5<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+ZDHHC4  -  zinc finger, dhhc-type containing 4<br>
+YIPF2  -  yip1 domain family, member 2<br>
+MGST3  -  microsomal glutathione s-transferase 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005788&amp;view=details' target="_blank">GO:0005788</a><a name=0005788></a></td>
+<td>endoplasmic reticulum lumen</td>
+<td  align=center>2.44E-5</td>
+<td  align=center>4.2E-3</td>
+<td  align=center>5.11 (8795,109,158,10)</td>
+<td>
+<a id="ctrl_elements_GO:0005788" href="javascript:toggle('elements_GO:0005788')">[+] Show genes</a><br>
+<div id="elements_GO:0005788" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+H6PD  -  hexose-6-phosphate dehydrogenase (glucose 1-dehydrogenase)<br>
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000153&amp;view=details' target="_blank">GO:0000153</a><a name=0000153></a></td>
+<td>cytoplasmic ubiquitin ligase complex</td>
+<td  align=center>1.17E-4</td>
+<td  align=center>1.83E-2</td>
+<td  align=center>14.84 (8795,15,158,4)</td>
+<td>
+<a id="ctrl_elements_GO:0000153" href="javascript:toggle('elements_GO:0000153')">[+] Show genes</a><br>
+<div id="elements_GO:0000153" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+DERL2  -  derlin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000839&amp;view=details' target="_blank">GO:0000839</a><a name=0000839></a></td>
+<td>Hrd1p ubiquitin ligase ERAD-L complex</td>
+<td  align=center>1.89E-4</td>
+<td  align=center>2.71E-2</td>
+<td  align=center>23.86 (8795,7,158,3)</td>
+<td>
+<a id="ctrl_elements_GO:0000839" href="javascript:toggle('elements_GO:0000839')">[+] Show genes</a><br>
+<div id="elements_GO:0000839" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+DERL2  -  derlin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036513&amp;view=details' target="_blank">GO:0036513</a><a name=0036513></a></td>
+<td>Derlin-1 retrotranslocation complex</td>
+<td  align=center>2.98E-4</td>
+<td  align=center>3.95E-2</td>
+<td  align=center>20.87 (8795,8,158,3)</td>
+<td>
+<a id="ctrl_elements_GO:0036513" href="javascript:toggle('elements_GO:0036513')">[+] Show genes</a><br>
+<div id="elements_GO:0036513" style="display:none"> <font size=1>
+SEL1L  -  sel-1 suppressor of lin-12-like (c. elegans)<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036488&amp;view=details' target="_blank">GO:0036488</a><a name=0036488></a></td>
+<td>CHOP-C/EBP complex</td>
+<td  align=center>3.21E-4</td>
+<td  align=center>3.94E-2</td>
+<td  align=center>55.66 (8795,2,158,2)</td>
+<td>
+<a id="ctrl_elements_GO:0036488" href="javascript:toggle('elements_GO:0036488')">[+] Show genes</a><br>
+<div id="elements_GO:0036488" style="display:none"> <font size=1>
+DDIT3  -  dna-damage-inducible transcript 3<br>
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990617&amp;view=details' target="_blank">GO:1990617</a><a name=1990617></a></td>
+<td>CHOP-ATF4 complex</td>
+<td  align=center>3.21E-4</td>
+<td  align=center>3.68E-2</td>
+<td  align=center>55.66 (8795,2,158,2)</td>
+<td>
+<a id="ctrl_elements_GO:1990617" href="javascript:toggle('elements_GO:1990617')">[+] Show genes</a><br>
+<div id="elements_GO:1990617" style="display:none"> <font size=1>
+ATF4  -  activating transcription factor 4<br>
+DDIT3  -  dna-damage-inducible transcript 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070971&amp;view=details' target="_blank">GO:0070971</a><a name=0070971></a></td>
+<td>endoplasmic reticulum exit site</td>
+<td  align=center>4.73E-4</td>
+<td  align=center>5.09E-2</td>
+<td  align=center>10.60 (8795,21,158,4)</td>
+<td>
+<a id="ctrl_elements_GO:0070971" href="javascript:toggle('elements_GO:0070971')">[+] Show genes</a><br>
+<div id="elements_GO:0070971" style="display:none"> <font size=1>
+TFG  -  trk-fused gene<br>
+LRRK2  -  leucine-rich repeat kinase 2<br>
+YIPF5  -  yip1 domain family, member 5<br>
+CTAGE5  -  ctage family, member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005793&amp;view=details' target="_blank">GO:0005793</a><a name=0005793></a></td>
+<td>endoplasmic reticulum-Golgi intermediate compartment</td>
+<td  align=center>6.28E-4</td>
+<td  align=center>6.35E-2</td>
+<td  align=center>5.66 (8795,59,158,6)</td>
+<td>
+<a id="ctrl_elements_GO:0005793" href="javascript:toggle('elements_GO:0005793')">[+] Show genes</a><br>
+<div id="elements_GO:0005793" style="display:none"> <font size=1>
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+KDELR1  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 1<br>
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990037&amp;view=details' target="_blank">GO:1990037</a><a name=1990037></a></td>
+<td>Lewy body core</td>
+<td  align=center>9.51E-4</td>
+<td  align=center>9.09E-2</td>
+<td  align=center>37.11 (8795,3,158,2)</td>
+<td>
+<a id="ctrl_elements_GO:1990037" href="javascript:toggle('elements_GO:1990037')">[+] Show genes</a><br>
+<div id="elements_GO:1990037" style="display:none"> <font size=1>
+ATF4  -  activating transcription factor 4<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030176&amp;view=details' target="_blank">GO:0030176</a><a name=0030176></a></td>
+<td>integral component of endoplasmic reticulum membrane</td>
+<td  align=center>9.99E-4</td>
+<td  align=center>9.05E-2</td>
+<td  align=center>3.91 (8795,114,158,8)</td>
+<td>
+<a id="ctrl_elements_GO:0030176" href="javascript:toggle('elements_GO:0030176')">[+] Show genes</a><br>
+<div id="elements_GO:0030176" style="display:none"> <font size=1>
+DOLPP1  -  dolichyldiphosphatase 1<br>
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
+TMEM66  -  transmembrane protein 66<br>
+SYVN1  -  synovial apoptosis inhibitor 1, synoviolin<br>
+TBL2  -  transducin (beta)-like 2<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+DERL2  -  derlin 2<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9193 genes out of 9646 gene terms entered by the user.<br> 9193 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>165 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,1243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='1140,413,1260,461' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='1104,689,1229,737' HREF='#0030658' ALT=''>
+<AREA SHAPE='RECT' COORDS='1253,689,1360,737' HREF='#0030662' ALT=''>
+<AREA SHAPE='RECT' COORDS='1384,689,1509,737' HREF='#0030660' ALT=''>
+<AREA SHAPE='RECT' COORDS='1799,197,1937,245' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='1921,406,2060,469' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='1832,301,1904,349' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='1276,101,1417,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='1308,197,1385,245' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='555,197,640,245' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='475,406,571,469' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='383,301,497,349' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='603,535,701,598' HREF='#0005789' ALT=''>
+<AREA SHAPE='RECT' COORDS='1093,197,1176,245' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='1172,301,1255,349' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='1869,811,1971,891' HREF='#0030134' ALT=''>
+<AREA SHAPE='RECT' COORDS='1675,689,1776,737' HREF='#0030127' ALT=''>
+<AREA SHAPE='RECT' COORDS='77,413,168,461' HREF='#1990234' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,543,179,591' HREF='#0008250' ALT=''>
+<AREA SHAPE='RECT' COORDS='403,665,515,762' HREF='#0030176' ALT=''>
+<AREA SHAPE='RECT' COORDS='347,535,443,598' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='467,518,579,615' HREF='#0031227' ALT=''>
+<AREA SHAPE='RECT' COORDS='848,527,955,607' HREF='#0044322' ALT=''>
+<AREA SHAPE='RECT' COORDS='1213,5,1096,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='1175,101,1252,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='376,197,504,245' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='1724,101,1799,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1441,101,1513,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='1933,543,2032,591' HREF='#0005783' ALT=''>
+<AREA SHAPE='RECT' COORDS='1279,294,1369,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='725,406,824,469' HREF='#0044432' ALT=''>
+<AREA SHAPE='RECT' COORDS='1335,413,1431,461' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='1564,413,1681,461' HREF='#0044431' ALT=''>
+<AREA SHAPE='RECT' COORDS='1432,197,1523,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='1508,301,1604,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='1717,301,1808,349' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='1393,294,1484,357' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='979,535,1077,598' HREF='#0005788' ALT=''>
+<AREA SHAPE='RECT' COORDS='203,543,323,591' HREF='#0005787' ALT=''>
+<AREA SHAPE='RECT' COORDS='725,535,824,598' HREF='#0070971' ALT=''>
+<AREA SHAPE='RECT' COORDS='1804,543,1900,591' HREF='#0031410' ALT=''>
+<AREA SHAPE='RECT' COORDS='1800,689,1904,737' HREF='#0030135' ALT=''>
+<AREA SHAPE='RECT' COORDS='1928,689,2051,737' HREF='#0005798' ALT=''>
+<AREA SHAPE='RECT' COORDS='1152,543,1277,591' HREF='#0030659' ALT=''>
+<AREA SHAPE='RECT' COORDS='1565,543,1656,591' HREF='#0030120' ALT=''>
+<AREA SHAPE='RECT' COORDS='225,301,300,349' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='1455,413,1540,461' HREF='#0030117' ALT=''>
+<AREA SHAPE='RECT' COORDS='940,413,1065,461' HREF='#0012506' ALT=''>
+<AREA SHAPE='RECT' COORDS='1244,819,1369,882' HREF='#0012507' ALT=''>
+<AREA SHAPE='RECT' COORDS='1807,413,1897,461' HREF='#0097708' ALT=''>
+<AREA SHAPE='RECT' COORDS='221,413,304,461' HREF='#1905368' ALT=''>
+<AREA SHAPE='RECT' COORDS='1403,535,1491,598' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='1533,689,1651,737' HREF='#0000139' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details' target="_blank">GO:0044432</a><a name=0044432></a></td>
+<td>endoplasmic reticulum part</td>
+<td  align=center>3.8E-27</td>
+<td  align=center>6.54E-24</td>
+<td  align=center>5.12 (8795,776,124,56)</td>
+<td>
+<a id="ctrl_elements_GO:0044432" href="javascript:toggle('elements_GO:0044432')">[+] Show genes</a><br>
+<div id="elements_GO:0044432" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+SEP15  -  15 kda selenoprotein<br>
+RPN2  -  ribophorin ii<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+VIMP  -  vcp-interacting membrane protein<br>
+KRTCAP2  -  keratinocyte associated protein 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+TMEM258  -  transmembrane protein 258<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+B2M  -  beta-2-microglobulin<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+UBXN4  -  ubx domain protein 4<br>
+FICD  -  fic domain containing<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+SSR1  -  signal sequence receptor, alpha<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
+<td>membrane part</td>
+<td  align=center>7.19E-19</td>
+<td  align=center>6.19E-16</td>
+<td  align=center>2.33 (8795,2524,124,83)</td>
+<td>
+<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
+<div id="elements_GO:0044425" style="display:none"> <font size=1>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+DST  -  dystonin<br>
+WIPI1  -  wd repeat domain, phosphoinositide interacting 1<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+RHOQ  -  ras homolog family member q<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+ITM2B  -  integral membrane protein 2b<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+RPN2  -  ribophorin ii<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+EVI2B  -  ecotropic viral integration site 2b<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+ARF4  -  adp-ribosylation factor 4<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+C10orf54  -  chromosome 10 open reading frame 54<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+KRTCAP2  -  keratinocyte associated protein 2<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+DENND5B  -  denn/madd domain containing 5b<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+TMEM258  -  transmembrane protein 258<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+CHPF  -  chondroitin polymerizing factor<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+B2M  -  beta-2-microglobulin<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+TMEM59  -  transmembrane protein 59<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+BIN2  -  bridging integrator 2<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+UBXN4  -  ubx domain protein 4<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+TMEM154  -  transmembrane protein 154<br>
+FICD  -  fic domain containing<br>
+WDR45  -  wd repeat domain 45<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+SSR1  -  signal sequence receptor, alpha<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details' target="_blank">GO:0016021</a><a name=0016021></a></td>
+<td>integral component of membrane</td>
+<td  align=center>6.48E-18</td>
+<td  align=center>3.72E-15</td>
+<td  align=center>2.82 (8795,1660,124,66)</td>
+<td>
+<a id="ctrl_elements_GO:0016021" href="javascript:toggle('elements_GO:0016021')">[+] Show genes</a><br>
+<div id="elements_GO:0016021" style="display:none"> <font size=1>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+DST  -  dystonin<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+ITM2B  -  integral membrane protein 2b<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+RPN2  -  ribophorin ii<br>
+EVI2B  -  ecotropic viral integration site 2b<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+C10orf54  -  chromosome 10 open reading frame 54<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+KRTCAP2  -  keratinocyte associated protein 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+DENND5B  -  denn/madd domain containing 5b<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+TMEM258  -  transmembrane protein 258<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+CHPF  -  chondroitin polymerizing factor<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+TMEM59  -  transmembrane protein 59<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+TMEM154  -  transmembrane protein 154<br>
+FICD  -  fic domain containing<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+SSR1  -  signal sequence receptor, alpha<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details' target="_blank">GO:0031224</a><a name=0031224></a></td>
+<td>intrinsic component of membrane</td>
+<td  align=center>1.87E-17</td>
+<td  align=center>8.06E-15</td>
+<td  align=center>2.77 (8795,1693,124,66)</td>
+<td>
+<a id="ctrl_elements_GO:0031224" href="javascript:toggle('elements_GO:0031224')">[+] Show genes</a><br>
+<div id="elements_GO:0031224" style="display:none"> <font size=1>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+DST  -  dystonin<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+ITM2B  -  integral membrane protein 2b<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+RPN2  -  ribophorin ii<br>
+EVI2B  -  ecotropic viral integration site 2b<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+C19orf38  -  chromosome 19 open reading frame 38<br>
+CD27  -  cd27 molecule<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+C10orf54  -  chromosome 10 open reading frame 54<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+KRTCAP2  -  keratinocyte associated protein 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+DENND5B  -  denn/madd domain containing 5b<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+TMEM258  -  transmembrane protein 258<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+CHPF  -  chondroitin polymerizing factor<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+TMEM59  -  transmembrane protein 59<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+HM13  -  histocompatibility (minor) 13<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+TMEM154  -  transmembrane protein 154<br>
+FICD  -  fic domain containing<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+SSR1  -  signal sequence receptor, alpha<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005789&amp;view=details' target="_blank">GO:0005789</a><a name=0005789></a></td>
+<td>endoplasmic reticulum membrane</td>
+<td  align=center>7.36E-17</td>
+<td  align=center>2.53E-14</td>
+<td  align=center>4.66 (8795,593,124,39)</td>
+<td>
+<a id="ctrl_elements_GO:0005789" href="javascript:toggle('elements_GO:0005789')">[+] Show genes</a><br>
+<div id="elements_GO:0005789" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+HM13  -  histocompatibility (minor) 13<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+UBXN4  -  ubx domain protein 4<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+RPN2  -  ribophorin ii<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+SSR1  -  signal sequence receptor, alpha<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+VIMP  -  vcp-interacting membrane protein<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005783&amp;view=details' target="_blank">GO:0005783</a><a name=0005783></a></td>
+<td>endoplasmic reticulum</td>
+<td  align=center>2.32E-13</td>
+<td  align=center>6.66E-11</td>
+<td  align=center>3.97 (8795,643,124,36)</td>
+<td>
+<a id="ctrl_elements_GO:0005783" href="javascript:toggle('elements_GO:0005783')">[+] Show genes</a><br>
+<div id="elements_GO:0005783" style="display:none"> <font size=1>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+TMEM258  -  transmembrane protein 258<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+METTL7A  -  methyltransferase like 7a<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+HM13  -  histocompatibility (minor) 13<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+UBXN4  -  ubx domain protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+RPN2  -  ribophorin ii<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+SSR1  -  signal sequence receptor, alpha<br>
+UFM1  -  ubiquitin-fold modifier 1<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+VIMP  -  vcp-interacting membrane protein<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005788&amp;view=details' target="_blank">GO:0005788</a><a name=0005788></a></td>
+<td>endoplasmic reticulum lumen</td>
+<td  align=center>1.81E-12</td>
+<td  align=center>4.45E-10</td>
+<td  align=center>10.41 (8795,109,124,16)</td>
+<td>
+<a id="ctrl_elements_GO:0005788" href="javascript:toggle('elements_GO:0005788')">[+] Show genes</a><br>
+<div id="elements_GO:0005788" style="display:none"> <font size=1>
+SEP15  -  15 kda selenoprotein<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+B2M  -  beta-2-microglobulin<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
+<td>membrane</td>
+<td  align=center>4.37E-9</td>
+<td  align=center>9.39E-7</td>
+<td  align=center>1.61 (8795,3755,124,85)</td>
+<td>
+<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
+<div id="elements_GO:0016020" style="display:none"> <font size=1>
+IFITM1  -  interferon induced transmembrane protein 1<br>
+DST  -  dystonin<br>
+WIPI1  -  wd repeat domain, phosphoinositide interacting 1<br>
+IFI35  -  interferon-induced protein 35<br>
+PSAP  -  prosaposin<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+RHOQ  -  ras homolog family member q<br>
+XRN1  -  5'-3' exoribonuclease 1<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+CYTH4  -  cytohesin 4<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+ITM2B  -  integral membrane protein 2b<br>
+XBP1  -  x-box binding protein 1<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+RPN2  -  ribophorin ii<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+ARF4  -  adp-ribosylation factor 4<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+CD27  -  cd27 molecule<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+C10orf54  -  chromosome 10 open reading frame 54<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+CCPG1  -  cell cycle progression 1<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+NEU1  -  sialidase 1 (lysosomal sialidase)<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+ICAM2  -  intercellular adhesion molecule 2<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+CHPF  -  chondroitin polymerizing factor<br>
+METTL7A  -  methyltransferase like 7a<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+B2M  -  beta-2-microglobulin<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+TMEM59  -  transmembrane protein 59<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+BIN2  -  bridging integrator 2<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+UBXN4  -  ubx domain protein 4<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+WDR45  -  wd repeat domain 45<br>
+TNFRSF17  -  tumor necrosis factor receptor superfamily, member 17<br>
+SSR1  -  signal sequence receptor, alpha<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+IFITM2  -  interferon induced transmembrane protein 2<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+IRF7  -  interferon regulatory factor 7<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000139&amp;view=details' target="_blank">GO:0000139</a><a name=0000139></a></td>
+<td>Golgi membrane</td>
+<td  align=center>1.25E-8</td>
+<td  align=center>2.39E-6</td>
+<td  align=center>3.78 (8795,450,124,24)</td>
+<td>
+<a id="ctrl_elements_GO:0000139" href="javascript:toggle('elements_GO:0000139')">[+] Show genes</a><br>
+<div id="elements_GO:0000139" style="display:none"> <font size=1>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+WIPI1  -  wd repeat domain, phosphoinositide interacting 1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+CHPF  -  chondroitin polymerizing factor<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+B2M  -  beta-2-microglobulin<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+CYTH4  -  cytohesin 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+TMEM59  -  transmembrane protein 59<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+ITM2B  -  integral membrane protein 2b<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030660&amp;view=details' target="_blank">GO:0030660</a><a name=0030660></a></td>
+<td>Golgi-associated vesicle membrane</td>
+<td  align=center>5.12E-8</td>
+<td  align=center>8.82E-6</td>
+<td  align=center>11.82 (8795,54,124,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030660" href="javascript:toggle('elements_GO:0030660')">[+] Show genes</a><br>
+<div id="elements_GO:0030660" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+ITM2B  -  integral membrane protein 2b<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005787&amp;view=details' target="_blank">GO:0005787</a><a name=0005787></a></td>
+<td>signal peptidase complex</td>
+<td  align=center>1.86E-7</td>
+<td  align=center>2.91E-5</td>
+<td  align=center>56.74 (8795,5,124,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005787" href="javascript:toggle('elements_GO:0005787')">[+] Show genes</a><br>
+<div id="elements_GO:0005787" style="display:none"> <font size=1>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044431&amp;view=details' target="_blank">GO:0044431</a><a name=0044431></a></td>
+<td>Golgi apparatus part</td>
+<td  align=center>1.26E-6</td>
+<td  align=center>1.81E-4</td>
+<td  align=center>2.96 (8795,576,124,24)</td>
+<td>
+<a id="ctrl_elements_GO:0044431" href="javascript:toggle('elements_GO:0044431')">[+] Show genes</a><br>
+<div id="elements_GO:0044431" style="display:none"> <font size=1>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+WIPI1  -  wd repeat domain, phosphoinositide interacting 1<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+CHPF  -  chondroitin polymerizing factor<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+B2M  -  beta-2-microglobulin<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+CYTH4  -  cytohesin 4<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+TMEM59  -  transmembrane protein 59<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+ITM2B  -  integral membrane protein 2b<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details' target="_blank">GO:0098588</a><a name=0098588></a></td>
+<td>bounding membrane of organelle</td>
+<td  align=center>1.43E-5</td>
+<td  align=center>1.9E-3</td>
+<td  align=center>2.10 (8795,1150,124,34)</td>
+<td>
+<a id="ctrl_elements_GO:0098588" href="javascript:toggle('elements_GO:0098588')">[+] Show genes</a><br>
+<div id="elements_GO:0098588" style="display:none"> <font size=1>
+NEU1  -  sialidase 1 (lysosomal sialidase)<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+WIPI1  -  wd repeat domain, phosphoinositide interacting 1<br>
+CHPF  -  chondroitin polymerizing factor<br>
+PSAP  -  prosaposin<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+RHOQ  -  ras homolog family member q<br>
+B2M  -  beta-2-microglobulin<br>
+CYTH4  -  cytohesin 4<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+TMEM59  -  transmembrane protein 59<br>
+ITM2B  -  integral membrane protein 2b<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+TXNDC15  -  thioredoxin domain containing 15<br>
+RPN2  -  ribophorin ii<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+PLD3  -  phospholipase d family, member 3<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+IRF7  -  interferon regulatory factor 7<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044322&amp;view=details' target="_blank">GO:0044322</a><a name=0044322></a></td>
+<td>endoplasmic reticulum quality control compartment</td>
+<td  align=center>1.76E-5</td>
+<td  align=center>2.17E-3</td>
+<td  align=center>14.78 (8795,24,124,5)</td>
+<td>
+<a id="ctrl_elements_GO:0044322" href="javascript:toggle('elements_GO:0044322')">[+] Show genes</a><br>
+<div id="elements_GO:0044322" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0012507&amp;view=details' target="_blank">GO:0012507</a><a name=0012507></a></td>
+<td>ER to Golgi transport vesicle membrane</td>
+<td  align=center>2.09E-5</td>
+<td  align=center>2.4E-3</td>
+<td  align=center>10.38 (8795,41,124,6)</td>
+<td>
+<a id="ctrl_elements_GO:0012507" href="javascript:toggle('elements_GO:0012507')">[+] Show genes</a><br>
+<div id="elements_GO:0012507" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+B2M  -  beta-2-microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098796&amp;view=details' target="_blank">GO:0098796</a><a name=0098796></a></td>
+<td>membrane protein complex</td>
+<td  align=center>5.07E-5</td>
+<td  align=center>5.45E-3</td>
+<td  align=center>2.50 (8795,623,124,22)</td>
+<td>
+<a id="ctrl_elements_GO:0098796" href="javascript:toggle('elements_GO:0098796')">[+] Show genes</a><br>
+<div id="elements_GO:0098796" style="display:none"> <font size=1>
+ITGA4  -  integrin, alpha 4 (antigen cd49d, alpha 4 subunit of vla-4 receptor)<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+RPN2  -  ribophorin ii<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+TMEM258  -  transmembrane protein 258<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+B2M  -  beta-2-microglobulin<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+KCNK6  -  potassium channel, subfamily k, member 6<br>
+SSR4  -  signal sequence receptor, delta<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+VIMP  -  vcp-interacting membrane protein<br>
+KRTCAP2  -  keratinocyte associated protein 2<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030662&amp;view=details' target="_blank">GO:0030662</a><a name=0030662></a></td>
+<td>coated vesicle membrane</td>
+<td  align=center>1.08E-4</td>
+<td  align=center>1.09E-2</td>
+<td  align=center>6.37 (8795,78,124,7)</td>
+<td>
+<a id="ctrl_elements_GO:0030662" href="javascript:toggle('elements_GO:0030662')">[+] Show genes</a><br>
+<div id="elements_GO:0030662" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+B2M  -  beta-2-microglobulin<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043233&amp;view=details' target="_blank">GO:0043233</a><a name=0043233></a></td>
+<td>organelle lumen</td>
+<td  align=center>1.52E-4</td>
+<td  align=center>1.45E-2</td>
+<td  align=center>2.27 (8795,719,124,23)</td>
+<td>
+<a id="ctrl_elements_GO:0043233" href="javascript:toggle('elements_GO:0043233')">[+] Show genes</a><br>
+<div id="elements_GO:0043233" style="display:none"> <font size=1>
+NEU1  -  sialidase 1 (lysosomal sialidase)<br>
+SEP15  -  15 kda selenoprotein<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PSAP  -  prosaposin<br>
+CHPF  -  chondroitin polymerizing factor<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+METTL7A  -  methyltransferase like 7a<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+B2M  -  beta-2-microglobulin<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+TXNIP  -  thioredoxin interacting protein<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+BIN2  -  bridging integrator 2<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070013&amp;view=details' target="_blank">GO:0070013</a><a name=0070013></a></td>
+<td>intracellular organelle lumen</td>
+<td  align=center>1.52E-4</td>
+<td  align=center>1.37E-2</td>
+<td  align=center>2.27 (8795,719,124,23)</td>
+<td>
+<a id="ctrl_elements_GO:0070013" href="javascript:toggle('elements_GO:0070013')">[+] Show genes</a><br>
+<div id="elements_GO:0070013" style="display:none"> <font size=1>
+NEU1  -  sialidase 1 (lysosomal sialidase)<br>
+SEP15  -  15 kda selenoprotein<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PSAP  -  prosaposin<br>
+CHPF  -  chondroitin polymerizing factor<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+METTL7A  -  methyltransferase like 7a<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+B2M  -  beta-2-microglobulin<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+TXNIP  -  thioredoxin interacting protein<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+BIN2  -  bridging integrator 2<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031974&amp;view=details' target="_blank">GO:0031974</a><a name=0031974></a></td>
+<td>membrane-enclosed lumen</td>
+<td  align=center>1.52E-4</td>
+<td  align=center>1.3E-2</td>
+<td  align=center>2.27 (8795,719,124,23)</td>
+<td>
+<a id="ctrl_elements_GO:0031974" href="javascript:toggle('elements_GO:0031974')">[+] Show genes</a><br>
+<div id="elements_GO:0031974" style="display:none"> <font size=1>
+NEU1  -  sialidase 1 (lysosomal sialidase)<br>
+SEP15  -  15 kda selenoprotein<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PSAP  -  prosaposin<br>
+CHPF  -  chondroitin polymerizing factor<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+METTL7A  -  methyltransferase like 7a<br>
+ARSA  -  arylsulfatase a<br>
+PLD3  -  phospholipase d family, member 3<br>
+B2M  -  beta-2-microglobulin<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+TXNIP  -  thioredoxin interacting protein<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+BIN2  -  bridging integrator 2<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070971&amp;view=details' target="_blank">GO:0070971</a><a name=0070971></a></td>
+<td>endoplasmic reticulum exit site</td>
+<td  align=center>1.87E-4</td>
+<td  align=center>1.53E-2</td>
+<td  align=center>13.51 (8795,21,124,4)</td>
+<td>
+<a id="ctrl_elements_GO:0070971" href="javascript:toggle('elements_GO:0070971')">[+] Show genes</a><br>
+<div id="elements_GO:0070971" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030176&amp;view=details' target="_blank">GO:0030176</a><a name=0030176></a></td>
+<td>integral component of endoplasmic reticulum membrane</td>
+<td  align=center>1.97E-4</td>
+<td  align=center>1.54E-2</td>
+<td  align=center>4.98 (8795,114,124,8)</td>
+<td>
+<a id="ctrl_elements_GO:0030176" href="javascript:toggle('elements_GO:0030176')">[+] Show genes</a><br>
+<div id="elements_GO:0030176" style="display:none"> <font size=1>
+FICD  -  fic domain containing<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031227&amp;view=details' target="_blank">GO:0031227</a><a name=0031227></a></td>
+<td>intrinsic component of endoplasmic reticulum membrane</td>
+<td  align=center>2.35E-4</td>
+<td  align=center>1.76E-2</td>
+<td  align=center>4.85 (8795,117,124,8)</td>
+<td>
+<a id="ctrl_elements_GO:0031227" href="javascript:toggle('elements_GO:0031227')">[+] Show genes</a><br>
+<div id="elements_GO:0031227" style="display:none"> <font size=1>
+FICD  -  fic domain containing<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044444&amp;view=details' target="_blank">GO:0044444</a><a name=0044444></a></td>
+<td>cytoplasmic part</td>
+<td  align=center>3.68E-4</td>
+<td  align=center>2.64E-2</td>
+<td  align=center>1.22 (8795,5777,124,99)</td>
+<td>
+<a id="ctrl_elements_GO:0044444" href="javascript:toggle('elements_GO:0044444')">[+] Show genes</a><br>
+<div id="elements_GO:0044444" style="display:none"> <font size=1>
+DST  -  dystonin<br>
+SEC14L1  -  sec14-like 1 (s. cerevisiae)<br>
+PSAP  -  prosaposin<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+CYTIP  -  cytohesin 1 interacting protein<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+XRN1  -  5'-3' exoribonuclease 1<br>
+CREB3L2  -  camp responsive element binding protein 3-like 2<br>
+CKAP4  -  cytoskeleton-associated protein 4<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+ANKRD28  -  ankyrin repeat domain 28<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+ARF4  -  adp-ribosylation factor 4<br>
+GLT8D1  -  glycosyltransferase 8 domain containing 1<br>
+TXNIP  -  thioredoxin interacting protein<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+KRTCAP2  -  keratinocyte associated protein 2<br>
+VIMP  -  vcp-interacting membrane protein<br>
+DENND5B  -  denn/madd domain containing 5b<br>
+SERP1  -  stress-associated endoplasmic reticulum protein 1<br>
+TMEM258  -  transmembrane protein 258<br>
+SPCS2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+CHPF  -  chondroitin polymerizing factor<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+ARSA  -  arylsulfatase a<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+TMEM59  -  transmembrane protein 59<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+TXNDC11  -  thioredoxin domain containing 11<br>
+BIN2  -  bridging integrator 2<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
+RABAC1  -  rab acceptor 1 (prenylated)<br>
+FICD  -  fic domain containing<br>
+WDR45  -  wd repeat domain 45<br>
+CDKN1B  -  cyclin-dependent kinase inhibitor 1b (p27, kip1)<br>
+SEC11C  -  sec11 homolog c (s. cerevisiae)<br>
+ZBP1  -  z-dna binding protein 1<br>
+PLD3  -  phospholipase d family, member 3<br>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+IRF7  -  interferon regulatory factor 7<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+CHST12  -  carbohydrate (chondroitin 4) sulfotransferase 12<br>
+SIL1  -  sil1 nucleotide exchange factor<br>
+WIPI1  -  wd repeat domain, phosphoinositide interacting 1<br>
+SAMD9L  -  sterile alpha motif domain containing 9-like<br>
+IFI35  -  interferon-induced protein 35<br>
+RHOQ  -  ras homolog family member q<br>
+IFNAR1  -  interferon (alpha, beta and omega) receptor 1<br>
+CYTH4  -  cytohesin 4<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+EDEM2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+EIF2AK3  -  eukaryotic translation initiation factor 2-alpha kinase 3<br>
+XBP1  -  x-box binding protein 1<br>
+ITM2B  -  integral membrane protein 2b<br>
+FNDC3A  -  fibronectin type iii domain containing 3a<br>
+SEP15  -  15 kda selenoprotein<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br>
+RPN2  -  ribophorin ii<br>
+TRAM1  -  translocation associated membrane protein 1<br>
+B4GALT3  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 3<br>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+SLC44A1  -  solute carrier family 44 (choline transporter), member 1<br>
+CYBA  -  cytochrome b-245, alpha polypeptide<br>
+IFI6  -  interferon, alpha-inducible protein 6<br>
+NEU1  -  sialidase 1 (lysosomal sialidase)<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+NMRK1  -  nicotinamide riboside kinase 1<br>
+METTL7A  -  methyltransferase like 7a<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+ERN1  -  endoplasmic reticulum to nucleus signaling 1<br>
+B2M  -  beta-2-microglobulin<br>
+SSR2  -  signal sequence receptor, beta (translocon-associated protein beta)<br>
+SSR3  -  signal sequence receptor, gamma (translocon-associated protein gamma)<br>
+SSR4  -  signal sequence receptor, delta<br>
+ISG15  -  isg15 ubiquitin-like modifier<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+MZB1  -  marginal zone b and b1 cell-specific protein<br>
+SPCS1  -  signal peptidase complex subunit 1 homolog (s. cerevisiae)<br>
+SPCS3  -  signal peptidase complex subunit 3 homolog (s. cerevisiae)<br>
+HM13  -  histocompatibility (minor) 13<br>
+UBXN4  -  ubx domain protein 4<br>
+IFITM3  -  interferon induced transmembrane protein 3<br>
+ZFP36  -  zfp36 ring finger protein<br>
+EDEM3  -  er degradation enhancer, mannosidase alpha-like 3<br>
+ARMCX3  -  armadillo repeat containing, x-linked 3<br>
+UFM1  -  ubiquitin-fold modifier 1<br>
+SSR1  -  signal sequence receptor, alpha<br>
+MIA3  -  melanoma inhibitory activity family, member 3<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008250&amp;view=details' target="_blank">GO:0008250</a><a name=0008250></a></td>
+<td>oligosaccharyltransferase complex</td>
+<td  align=center>4.16E-4</td>
+<td  align=center>2.86E-2</td>
+<td  align=center>19.34 (8795,11,124,3)</td>
+<td>
+<a id="ctrl_elements_GO:0008250" href="javascript:toggle('elements_GO:0008250')">[+] Show genes</a><br>
+<div id="elements_GO:0008250" style="display:none"> <font size=1>
+TMEM258  -  transmembrane protein 258<br>
+RPN2  -  ribophorin ii<br>
+KRTCAP2  -  keratinocyte associated protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030658&amp;view=details' target="_blank">GO:0030658</a><a name=0030658></a></td>
+<td>transport vesicle membrane</td>
+<td  align=center>5.48E-4</td>
+<td  align=center>3.63E-2</td>
+<td  align=center>5.83 (8795,73,124,6)</td>
+<td>
+<a id="ctrl_elements_GO:0030658" href="javascript:toggle('elements_GO:0030658')">[+] Show genes</a><br>
+<div id="elements_GO:0030658" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+B2M  -  beta-2-microglobulin<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030134&amp;view=details' target="_blank">GO:0030134</a><a name=0030134></a></td>
+<td>COPII-coated ER to Golgi transport vesicle</td>
+<td  align=center>8.82E-4</td>
+<td  align=center>5.62E-2</td>
+<td  align=center>9.15 (8795,31,124,4)</td>
+<td>
+<a id="ctrl_elements_GO:0030134" href="javascript:toggle('elements_GO:0030134')">[+] Show genes</a><br>
+<div id="elements_GO:0030134" style="display:none"> <font size=1>
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
+TMED4  -  transmembrane emp24 protein transport domain containing 4<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030127&amp;view=details' target="_blank">GO:0030127</a><a name=0030127></a></td>
+<td>COPII vesicle coat</td>
+<td  align=center>8.89E-4</td>
+<td  align=center>5.46E-2</td>
+<td  align=center>15.20 (8795,14,124,3)</td>
+<td>
+<a id="ctrl_elements_GO:0030127" href="javascript:toggle('elements_GO:0030127')">[+] Show genes</a><br>
+<div id="elements_GO:0030127" style="display:none"> <font size=1>
+SEC24A  -  sec24 family, member a (s. cerevisiae)<br>
+SAR1B  -  sar1 homolog b (s. cerevisiae)<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9156 genes out of 9605 gene terms entered by the user.<br> 9156 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>128 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

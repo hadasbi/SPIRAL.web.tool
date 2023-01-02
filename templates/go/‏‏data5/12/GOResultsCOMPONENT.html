@@ -1,0 +1,816 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='644,302,719,365' HREF='#0005583' ALT=''>
+<AREA SHAPE='RECT' COORDS='636,429,727,477' HREF='#0005584' ALT=''>
+<AREA SHAPE='RECT' COORDS='121,101,193,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='81,197,172,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='339,101,480,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='247,197,324,245' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='240,302,331,365' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='1356,429,1452,477' HREF='#1903561' ALT=''>
+<AREA SHAPE='RECT' COORDS='1356,541,1452,589' HREF='#0070062' ALT=''>
+<AREA SHAPE='RECT' COORDS='1439,309,1511,357' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='121,422,220,485' HREF='#0044432' ALT=''>
+<AREA SHAPE='RECT' COORDS='172,534,271,597' HREF='#0005788' ALT=''>
+<AREA SHAPE='RECT' COORDS='760,429,843,477' HREF='#0005604' ALT=''>
+<AREA SHAPE='RECT' COORDS='1140,309,1255,357' HREF='#0099512' ALT=''>
+<AREA SHAPE='RECT' COORDS='1117,429,1205,477' HREF='#0071953' ALT=''>
+<AREA SHAPE='RECT' COORDS='775,101,871,149' HREF='#0044421' ALT=''>
+<AREA SHAPE='RECT' COORDS='1015,197,1140,245' HREF='#0044420' ALT=''>
+<AREA SHAPE='RECT' COORDS='1303,197,1399,245' HREF='#0043230' ALT=''>
+<AREA SHAPE='RECT' COORDS='620,197,751,245' HREF='#0072562' ALT=''>
+<AREA SHAPE='RECT' COORDS='365,293,475,373' HREF='#0016942' ALT=''>
+<AREA SHAPE='RECT' COORDS='895,197,991,245' HREF='#0005615' ALT=''>
+<AREA SHAPE='RECT' COORDS='775,197,871,245' HREF='#0031012' ALT=''>
+<AREA SHAPE='RECT' COORDS='237,101,315,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='125,302,216,365' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='504,101,632,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='521,197,596,245' HREF='#0005581' ALT=''>
+<AREA SHAPE='RECT' COORDS='348,197,447,245' HREF='#0036454' ALT=''>
+<AREA SHAPE='RECT' COORDS='867,429,949,477' HREF='#0005614' ALT=''>
+<AREA SHAPE='RECT' COORDS='363,422,477,485' HREF='#0042567' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,309,101,357' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='1164,197,1279,245' HREF='#0099081' ALT=''>
+<AREA SHAPE='RECT' COORDS='1029,101,1144,149' HREF='#0099080' ALT=''>
+<AREA SHAPE='RECT' COORDS='1339,101,1435,149' HREF='#0005576' ALT=''>
+<AREA SHAPE='RECT' COORDS='509,309,608,357' HREF='#0005589' ALT=''>
+<AREA SHAPE='RECT' COORDS='755,302,891,365' HREF='#0062023' ALT=''>
+<AREA SHAPE='RECT' COORDS='695,5,577,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='1240,101,1315,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1423,197,1561,245' HREF='#0043227' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0062023&amp;view=details' target="_blank">GO:0062023</a><a name=0062023></a></td>
+<td>collagen-containing extracellular matrix</td>
+<td  align=center>3.47E-30</td>
+<td  align=center>6.7E-27</td>
+<td  align=center>16.54 (15353,369,78,31)</td>
+<td>
+<a id="ctrl_elements_GO:0062023" href="javascript:toggle('elements_GO:0062023')">[+] Show genes</a><br>
+<div id="elements_GO:0062023" style="display:none"> <font size=1>
+ADAMTS4  -  adam metallopeptidase with thrombospondin type 1 motif, 4<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+AEBP1  -  ae binding protein 1<br>
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br>
+FN1  -  fibronectin 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+CCDC80  -  coiled-coil domain containing 80<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+DPT  -  dermatopontin<br>
+FBLN1  -  fibulin 1<br>
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+OMD  -  osteomodulin<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+GREM1  -  gremlin 1, dan family bmp antagonist<br>
+VIT  -  vitrin<br>
+OGN  -  osteoglycin<br>
+PODN  -  podocan<br>
+MGP  -  matrix gla protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031012&amp;view=details' target="_blank">GO:0031012</a><a name=0031012></a></td>
+<td>extracellular matrix</td>
+<td  align=center>2.06E-26</td>
+<td  align=center>1.99E-23</td>
+<td  align=center>12.48 (15353,489,78,31)</td>
+<td>
+<a id="ctrl_elements_GO:0031012" href="javascript:toggle('elements_GO:0031012')">[+] Show genes</a><br>
+<div id="elements_GO:0031012" style="display:none"> <font size=1>
+ADAMTS4  -  adam metallopeptidase with thrombospondin type 1 motif, 4<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+AEBP1  -  ae binding protein 1<br>
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br>
+FN1  -  fibronectin 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+CCDC80  -  coiled-coil domain containing 80<br>
+DCN  -  decorin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+DPT  -  dermatopontin<br>
+FBLN1  -  fibulin 1<br>
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+OMD  -  osteomodulin<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+GREM1  -  gremlin 1, dan family bmp antagonist<br>
+VIT  -  vitrin<br>
+OGN  -  osteoglycin<br>
+MGP  -  matrix gla protein<br>
+PODN  -  podocan<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005615&amp;view=details' target="_blank">GO:0005615</a><a name=0005615></a></td>
+<td>extracellular space</td>
+<td  align=center>1.38E-21</td>
+<td  align=center>8.85E-19</td>
+<td  align=center>6.09 (15353,1228,78,38)</td>
+<td>
+<a id="ctrl_elements_GO:0005615" href="javascript:toggle('elements_GO:0005615')">[+] Show genes</a><br>
+<div id="elements_GO:0005615" style="display:none"> <font size=1>
+ADAMTS4  -  adam metallopeptidase with thrombospondin type 1 motif, 4<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+AEBP1  -  ae binding protein 1<br>
+FN1  -  fibronectin 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+GPX3  -  glutathione peroxidase 3 (plasma)<br>
+GSN  -  gelsolin<br>
+PI16  -  peptidase inhibitor 16<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br>
+FBLN1  -  fibulin 1<br>
+DPT  -  dermatopontin<br>
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br>
+CTSK  -  cathepsin k<br>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+OMD  -  osteomodulin<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+C1S  -  complement component 1, s subcomponent<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+IGFBP4  -  insulin-like growth factor binding protein 4<br>
+GREM1  -  gremlin 1, dan family bmp antagonist<br>
+OGN  -  osteoglycin<br>
+PODN  -  podocan<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005576&amp;view=details' target="_blank">GO:0005576</a><a name=0005576></a></td>
+<td>extracellular region</td>
+<td  align=center>4.85E-21</td>
+<td  align=center>2.34E-18</td>
+<td  align=center>5.42 (15353,1452,78,40)</td>
+<td>
+<a id="ctrl_elements_GO:0005576" href="javascript:toggle('elements_GO:0005576')">[+] Show genes</a><br>
+<div id="elements_GO:0005576" style="display:none"> <font size=1>
+ADAMTS4  -  adam metallopeptidase with thrombospondin type 1 motif, 4<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+AEBP1  -  ae binding protein 1<br>
+FN1  -  fibronectin 1<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br>
+GPX3  -  glutathione peroxidase 3 (plasma)<br>
+GSN  -  gelsolin<br>
+PDGFRL  -  platelet-derived growth factor receptor-like<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br>
+FBLN1  -  fibulin 1<br>
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br>
+CTSK  -  cathepsin k<br>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+PENK  -  proenkephalin<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+OMD  -  osteomodulin<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+C1S  -  complement component 1, s subcomponent<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+IGFBP4  -  insulin-like growth factor binding protein 4<br>
+OGN  -  osteoglycin<br>
+THY1  -  thy-1 cell surface antigen<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044421&amp;view=details' target="_blank">GO:0044421</a><a name=0044421></a></td>
+<td>extracellular region part</td>
+<td  align=center>3.95E-16</td>
+<td  align=center>1.52E-13</td>
+<td  align=center>3.24 (15353,2856,78,47)</td>
+<td>
+<a id="ctrl_elements_GO:0044421" href="javascript:toggle('elements_GO:0044421')">[+] Show genes</a><br>
+<div id="elements_GO:0044421" style="display:none"> <font size=1>
+ADAMTS4  -  adam metallopeptidase with thrombospondin type 1 motif, 4<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br>
+AEBP1  -  ae binding protein 1<br>
+FN1  -  fibronectin 1<br>
+GPX3  -  glutathione peroxidase 3 (plasma)<br>
+HTRA1  -  htra serine peptidase 1<br>
+GSN  -  gelsolin<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+PI16  -  peptidase inhibitor 16<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+BTG2  -  btg family, member 2<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+CCDC80  -  coiled-coil domain containing 80<br>
+DCN  -  decorin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br>
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br>
+CYBRD1  -  cytochrome b reductase 1<br>
+DPT  -  dermatopontin<br>
+FBLN1  -  fibulin 1<br>
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br>
+CTSK  -  cathepsin k<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+OMD  -  osteomodulin<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+C1R  -  complement component 1, r subcomponent<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+C1S  -  complement component 1, s subcomponent<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+IGFBP4  -  insulin-like growth factor binding protein 4<br>
+GREM1  -  gremlin 1, dan family bmp antagonist<br>
+VIT  -  vitrin<br>
+OGN  -  osteoglycin<br>
+THY1  -  thy-1 cell surface antigen<br>
+MGP  -  matrix gla protein<br>
+PODN  -  podocan<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005788&amp;view=details' target="_blank">GO:0005788</a><a name=0005788></a></td>
+<td>endoplasmic reticulum lumen</td>
+<td  align=center>1.37E-9</td>
+<td  align=center>4.4E-7</td>
+<td  align=center>9.17 (15353,279,78,13)</td>
+<td>
+<a id="ctrl_elements_GO:0005788" href="javascript:toggle('elements_GO:0005788')">[+] Show genes</a><br>
+<div id="elements_GO:0005788" style="display:none"> <font size=1>
+COLGALT2  -  collagen beta(1-o)galactosyltransferase 2<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+FN1  -  fibronectin 1<br>
+P4HA3  -  prolyl 4-hydroxylase, alpha polypeptide iii<br>
+PENK  -  proenkephalin<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+IGFBP4  -  insulin-like growth factor binding protein 4<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043233&amp;view=details' target="_blank">GO:0043233</a><a name=0043233></a></td>
+<td>organelle lumen</td>
+<td  align=center>6.74E-8</td>
+<td  align=center>1.86E-5</td>
+<td  align=center>3.80 (15353,1089,78,21)</td>
+<td>
+<a id="ctrl_elements_GO:0043233" href="javascript:toggle('elements_GO:0043233')">[+] Show genes</a><br>
+<div id="elements_GO:0043233" style="display:none"> <font size=1>
+CTSK  -  cathepsin k<br>
+COLGALT2  -  collagen beta(1-o)galactosyltransferase 2<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+P4HA3  -  prolyl 4-hydroxylase, alpha polypeptide iii<br>
+FN1  -  fibronectin 1<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+PENK  -  proenkephalin<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+GSN  -  gelsolin<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+OMD  -  osteomodulin<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+IGFBP4  -  insulin-like growth factor binding protein 4<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+OGN  -  osteoglycin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070013&amp;view=details' target="_blank">GO:0070013</a><a name=0070013></a></td>
+<td>intracellular organelle lumen</td>
+<td  align=center>6.74E-8</td>
+<td  align=center>1.63E-5</td>
+<td  align=center>3.80 (15353,1089,78,21)</td>
+<td>
+<a id="ctrl_elements_GO:0070013" href="javascript:toggle('elements_GO:0070013')">[+] Show genes</a><br>
+<div id="elements_GO:0070013" style="display:none"> <font size=1>
+CTSK  -  cathepsin k<br>
+COLGALT2  -  collagen beta(1-o)galactosyltransferase 2<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+P4HA3  -  prolyl 4-hydroxylase, alpha polypeptide iii<br>
+FN1  -  fibronectin 1<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+PENK  -  proenkephalin<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+GSN  -  gelsolin<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+OMD  -  osteomodulin<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+IGFBP4  -  insulin-like growth factor binding protein 4<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+OGN  -  osteoglycin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031974&amp;view=details' target="_blank">GO:0031974</a><a name=0031974></a></td>
+<td>membrane-enclosed lumen</td>
+<td  align=center>6.74E-8</td>
+<td  align=center>1.44E-5</td>
+<td  align=center>3.80 (15353,1089,78,21)</td>
+<td>
+<a id="ctrl_elements_GO:0031974" href="javascript:toggle('elements_GO:0031974')">[+] Show genes</a><br>
+<div id="elements_GO:0031974" style="display:none"> <font size=1>
+CTSK  -  cathepsin k<br>
+COLGALT2  -  collagen beta(1-o)galactosyltransferase 2<br>
+TIMP2  -  timp metallopeptidase inhibitor 2<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+P4HA3  -  prolyl 4-hydroxylase, alpha polypeptide iii<br>
+FN1  -  fibronectin 1<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+PENK  -  proenkephalin<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+GSN  -  gelsolin<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+OMD  -  osteomodulin<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+IGFBP4  -  insulin-like growth factor binding protein 4<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+SPARCL1  -  sparc-like 1 (hevin)<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+OGN  -  osteoglycin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005589&amp;view=details' target="_blank">GO:0005589</a><a name=0005589></a></td>
+<td>collagen type VI trimer</td>
+<td  align=center>1.26E-7</td>
+<td  align=center>2.43E-5</td>
+<td  align=center>196.83 (15353,3,78,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005589" href="javascript:toggle('elements_GO:0005589')">[+] Show genes</a><br>
+<div id="elements_GO:0005589" style="display:none"> <font size=1>
+COL6A3  -  collagen, type vi, alpha 3<br>
+DCN  -  decorin<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005581&amp;view=details' target="_blank">GO:0005581</a><a name=0005581></a></td>
+<td>collagen trimer</td>
+<td  align=center>1.57E-7</td>
+<td  align=center>2.75E-5</td>
+<td  align=center>17.22 (15353,80,78,7)</td>
+<td>
+<a id="ctrl_elements_GO:0005581" href="javascript:toggle('elements_GO:0005581')">[+] Show genes</a><br>
+<div id="elements_GO:0005581" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+DCN  -  decorin<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044420&amp;view=details' target="_blank">GO:0044420</a><a name=0044420></a></td>
+<td>extracellular matrix component</td>
+<td  align=center>2.69E-7</td>
+<td  align=center>4.31E-5</td>
+<td  align=center>22.28 (15353,53,78,6)</td>
+<td>
+<a id="ctrl_elements_GO:0044420" href="javascript:toggle('elements_GO:0044420')">[+] Show genes</a><br>
+<div id="elements_GO:0044420" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+FBLN1  -  fibulin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016942&amp;view=details' target="_blank">GO:0016942</a><a name=0016942></a></td>
+<td>insulin-like growth factor binding protein complex</td>
+<td  align=center>1.25E-6</td>
+<td  align=center>1.86E-4</td>
+<td  align=center>118.10 (15353,5,78,3)</td>
+<td>
+<a id="ctrl_elements_GO:0016942" href="javascript:toggle('elements_GO:0016942')">[+] Show genes</a><br>
+<div id="elements_GO:0016942" style="display:none"> <font size=1>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036454&amp;view=details' target="_blank">GO:0036454</a><a name=0036454></a></td>
+<td>growth factor complex</td>
+<td  align=center>1.25E-6</td>
+<td  align=center>1.72E-4</td>
+<td  align=center>118.10 (15353,5,78,3)</td>
+<td>
+<a id="ctrl_elements_GO:0036454" href="javascript:toggle('elements_GO:0036454')">[+] Show genes</a><br>
+<div id="elements_GO:0036454" style="display:none"> <font size=1>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070062&amp;view=details' target="_blank">GO:0070062</a><a name=0070062></a></td>
+<td>extracellular exosome</td>
+<td  align=center>4.4E-6</td>
+<td  align=center>5.66E-4</td>
+<td  align=center>2.66 (15353,1776,78,24)</td>
+<td>
+<a id="ctrl_elements_GO:0070062" href="javascript:toggle('elements_GO:0070062')">[+] Show genes</a><br>
+<div id="elements_GO:0070062" style="display:none"> <font size=1>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+AEBP1  -  ae binding protein 1<br>
+FN1  -  fibronectin 1<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+GPX3  -  glutathione peroxidase 3 (plasma)<br>
+HTRA1  -  htra serine peptidase 1<br>
+GSN  -  gelsolin<br>
+OMD  -  osteomodulin<br>
+C1R  -  complement component 1, r subcomponent<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+BTG2  -  btg family, member 2<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+OGN  -  osteoglycin<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+THY1  -  thy-1 cell surface antigen<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+MGP  -  matrix gla protein<br>
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br>
+CYBRD1  -  cytochrome b reductase 1<br>
+FBLN1  -  fibulin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043230&amp;view=details' target="_blank">GO:0043230</a><a name=0043230></a></td>
+<td>extracellular organelle</td>
+<td  align=center>5.2E-6</td>
+<td  align=center>6.26E-4</td>
+<td  align=center>2.63 (15353,1793,78,24)</td>
+<td>
+<a id="ctrl_elements_GO:0043230" href="javascript:toggle('elements_GO:0043230')">[+] Show genes</a><br>
+<div id="elements_GO:0043230" style="display:none"> <font size=1>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+AEBP1  -  ae binding protein 1<br>
+FN1  -  fibronectin 1<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+GPX3  -  glutathione peroxidase 3 (plasma)<br>
+HTRA1  -  htra serine peptidase 1<br>
+GSN  -  gelsolin<br>
+OMD  -  osteomodulin<br>
+C1R  -  complement component 1, r subcomponent<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+BTG2  -  btg family, member 2<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+OGN  -  osteoglycin<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+THY1  -  thy-1 cell surface antigen<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+MGP  -  matrix gla protein<br>
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br>
+CYBRD1  -  cytochrome b reductase 1<br>
+FBLN1  -  fibulin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903561&amp;view=details' target="_blank">GO:1903561</a><a name=1903561></a></td>
+<td>extracellular vesicle</td>
+<td  align=center>5.2E-6</td>
+<td  align=center>5.89E-4</td>
+<td  align=center>2.63 (15353,1793,78,24)</td>
+<td>
+<a id="ctrl_elements_GO:1903561" href="javascript:toggle('elements_GO:1903561')">[+] Show genes</a><br>
+<div id="elements_GO:1903561" style="display:none"> <font size=1>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+AEBP1  -  ae binding protein 1<br>
+FN1  -  fibronectin 1<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+GPX3  -  glutathione peroxidase 3 (plasma)<br>
+HTRA1  -  htra serine peptidase 1<br>
+GSN  -  gelsolin<br>
+OMD  -  osteomodulin<br>
+C1R  -  complement component 1, r subcomponent<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+BTG2  -  btg family, member 2<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+OGN  -  osteoglycin<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+THY1  -  thy-1 cell surface antigen<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+MGP  -  matrix gla protein<br>
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br>
+CYBRD1  -  cytochrome b reductase 1<br>
+FBLN1  -  fibulin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details' target="_blank">GO:0031982</a><a name=0031982></a></td>
+<td>vesicle</td>
+<td  align=center>6.58E-6</td>
+<td  align=center>7.04E-4</td>
+<td  align=center>2.19 (15353,2791,78,31)</td>
+<td>
+<a id="ctrl_elements_GO:0031982" href="javascript:toggle('elements_GO:0031982')">[+] Show genes</a><br>
+<div id="elements_GO:0031982" style="display:none"> <font size=1>
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br>
+AEBP1  -  ae binding protein 1<br>
+FN1  -  fibronectin 1<br>
+FGFR1  -  fibroblast growth factor receptor 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+ADRA2C  -  adrenoceptor alpha 2c<br>
+GPX3  -  glutathione peroxidase 3 (plasma)<br>
+GSN  -  gelsolin<br>
+CXCL12  -  chemokine (c-x-c motif) ligand 12<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+BTG2  -  btg family, member 2<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+TNXB  -  tenascin xb<br>
+LTBP2  -  latent transforming growth factor beta binding protein 2<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br>
+FBLN1  -  fibulin 1<br>
+CYBRD1  -  cytochrome b reductase 1<br>
+COL6A3  -  collagen, type vi, alpha 3<br>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br>
+OMD  -  osteomodulin<br>
+COL6A1  -  collagen, type vi, alpha 1<br>
+C1R  -  complement component 1, r subcomponent<br>
+FGD5  -  fyve, rhogef and ph domain containing 5<br>
+OGN  -  osteoglycin<br>
+THY1  -  thy-1 cell surface antigen<br>
+MGP  -  matrix gla protein<br>
+PALM  -  paralemmin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005614&amp;view=details' target="_blank">GO:0005614</a><a name=0005614></a></td>
+<td>interstitial matrix</td>
+<td  align=center>1.04E-5</td>
+<td  align=center>1.05E-3</td>
+<td  align=center>65.61 (15353,9,78,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005614" href="javascript:toggle('elements_GO:0005614')">[+] Show genes</a><br>
+<div id="elements_GO:0005614" style="display:none"> <font size=1>
+VIT  -  vitrin<br>
+CCDC80  -  coiled-coil domain containing 80<br>
+COL14A1  -  collagen, type xiv, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005584&amp;view=details' target="_blank">GO:0005584</a><a name=0005584></a></td>
+<td>collagen type I trimer</td>
+<td  align=center>2.55E-5</td>
+<td  align=center>2.46E-3</td>
+<td  align=center>196.83 (15353,2,78,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005584" href="javascript:toggle('elements_GO:0005584')">[+] Show genes</a><br>
+<div id="elements_GO:0005584" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005583&amp;view=details' target="_blank">GO:0005583</a><a name=0005583></a></td>
+<td>fibrillar collagen trimer</td>
+<td  align=center>2.69E-5</td>
+<td  align=center>2.47E-3</td>
+<td  align=center>49.21 (15353,12,78,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005583" href="javascript:toggle('elements_GO:0005583')">[+] Show genes</a><br>
+<div id="elements_GO:0005583" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+COL5A2  -  collagen, type v, alpha 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005604&amp;view=details' target="_blank">GO:0005604</a><a name=0005604></a></td>
+<td>basement membrane</td>
+<td  align=center>5.63E-5</td>
+<td  align=center>4.94E-3</td>
+<td  align=center>12.15 (15353,81,78,5)</td>
+<td>
+<a id="ctrl_elements_GO:0005604" href="javascript:toggle('elements_GO:0005604')">[+] Show genes</a><br>
+<div id="elements_GO:0005604" style="display:none"> <font size=1>
+TGFBI  -  transforming growth factor, beta-induced, 68kda<br>
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br>
+FN1  -  fibronectin 1<br>
+CCDC80  -  coiled-coil domain containing 80<br>
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072562&amp;view=details' target="_blank">GO:0072562</a><a name=0072562></a></td>
+<td>blood microparticle</td>
+<td  align=center>1.33E-4</td>
+<td  align=center>1.12E-2</td>
+<td  align=center>10.15 (15353,97,78,5)</td>
+<td>
+<a id="ctrl_elements_GO:0072562" href="javascript:toggle('elements_GO:0072562')">[+] Show genes</a><br>
+<div id="elements_GO:0072562" style="display:none"> <font size=1>
+FN1  -  fibronectin 1<br>
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br>
+GSN  -  gelsolin<br>
+C1R  -  complement component 1, r subcomponent<br>
+C1S  -  complement component 1, s subcomponent<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042567&amp;view=details' target="_blank">GO:0042567</a><a name=0042567></a></td>
+<td>insulin-like growth factor ternary complex</td>
+<td  align=center>1.52E-4</td>
+<td  align=center>1.22E-2</td>
+<td  align=center>98.42 (15353,4,78,2)</td>
+<td>
+<a id="ctrl_elements_GO:0042567" href="javascript:toggle('elements_GO:0042567')">[+] Show genes</a><br>
+<div id="elements_GO:0042567" style="display:none"> <font size=1>
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
+IGFBP5  -  insulin-like growth factor binding protein 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071953&amp;view=details' target="_blank">GO:0071953</a><a name=0071953></a></td>
+<td>elastic fiber</td>
+<td  align=center>2.52E-4</td>
+<td  align=center>1.95E-2</td>
+<td  align=center>78.73 (15353,5,78,2)</td>
+<td>
+<a id="ctrl_elements_GO:0071953" href="javascript:toggle('elements_GO:0071953')">[+] Show genes</a><br>
+<div id="elements_GO:0071953" style="display:none"> <font size=1>
+FBLN1  -  fibulin 1<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 15809 genes out of 16564 gene terms entered by the user.<br> 15809 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>88 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 15721 genes.<br>Only 15353 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1928 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

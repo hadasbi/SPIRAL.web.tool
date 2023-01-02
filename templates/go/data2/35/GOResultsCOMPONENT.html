@@ -1,0 +1,1101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='340,525,412,573' HREF='#0030425' ALT=''>
+<AREA SHAPE='RECT' COORDS='387,629,493,677' HREF='#0097440' ALT=''>
+<AREA SHAPE='RECT' COORDS='261,629,363,677' HREF='#0150002' ALT=''>
+<AREA SHAPE='RECT' COORDS='380,421,455,469' HREF='#0043025' ALT=''>
+<AREA SHAPE='RECT' COORDS='580,421,700,469' HREF='#0043005' ALT=''>
+<AREA SHAPE='RECT' COORDS='680,525,800,573' HREF='#1990769' ALT=''>
+<AREA SHAPE='RECT' COORDS='584,525,656,573' HREF='#0030424' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,197,144,245' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='39,309,111,357' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='408,197,483,245' HREF='#0044297' ALT=''>
+<AREA SHAPE='RECT' COORDS='961,197,1039,245' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='844,302,935,365' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='964,309,1047,357' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='1044,421,1164,469' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='957,629,1083,677' HREF='#0030658' ALT=''>
+<AREA SHAPE='RECT' COORDS='116,421,207,469' HREF='#0097708' ALT=''>
+<AREA SHAPE='RECT' COORDS='724,421,820,469' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='567,309,663,357' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='125,525,221,573' HREF='#0031410' ALT=''>
+<AREA SHAPE='RECT' COORDS='533,101,605,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='457,309,543,357' HREF='#0097458' ALT=''>
+<AREA SHAPE='RECT' COORDS='567,197,657,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='264,197,371,245' HREF='#0044463' ALT=''>
+<AREA SHAPE='RECT' COORDS='692,197,793,245' HREF='#0042995' ALT=''>
+<AREA SHAPE='RECT' COORDS='133,629,213,677' HREF='#0099503' ALT=''>
+<AREA SHAPE='RECT' COORDS='133,725,213,773' HREF='#0030141' ALT=''>
+<AREA SHAPE='RECT' COORDS='957,725,1083,773' HREF='#0099501' ALT=''>
+<AREA SHAPE='RECT' COORDS='957,821,1083,869' HREF='#0030672' ALT=''>
+<AREA SHAPE='RECT' COORDS='128,821,219,869' HREF='#0031045' ALT=''>
+<AREA SHAPE='RECT' COORDS='249,293,383,373' HREF='#0120038' ALT=''>
+<AREA SHAPE='RECT' COORDS='281,421,356,469' HREF='#1990635' ALT=''>
+<AREA SHAPE='RECT' COORDS='144,101,219,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='135,309,225,357' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='1129,725,1225,773' HREF='#0044456' ALT=''>
+<AREA SHAPE='RECT' COORDS='687,302,820,365' HREF='#0120025' ALT=''>
+<AREA SHAPE='RECT' COORDS='1239,101,1311,149' HREF='#0045202' ALT=''>
+<AREA SHAPE='RECT' COORDS='1239,197,1332,245' HREF='#0098982' ALT=''>
+<AREA SHAPE='RECT' COORDS='827,525,952,573' HREF='#0030659' ALT=''>
+<AREA SHAPE='RECT' COORDS='976,518,1064,581' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='844,421,969,469' HREF='#0012506' ALT=''>
+<AREA SHAPE='RECT' COORDS='1104,5,987,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='1335,101,1425,149' HREF='#0030054' ALT=''>
+<AREA SHAPE='RECT' COORDS='1063,197,1145,245' HREF='#0016020' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097458&amp;view=details' target="_blank">GO:0097458</a><a name=0097458></a></td>
+<td>neuron part</td>
+<td  align=center>1.75E-18</td>
+<td  align=center>3.37E-15</td>
+<td  align=center>3.29 (16689,1905,165,62)</td>
+<td>
+<a id="ctrl_elements_GO:0097458" href="javascript:toggle('elements_GO:0097458')">[+] Show genes</a><br>
+<div id="elements_GO:0097458" style="display:none"> <font size=1>
+Scg2  -  secretogranin ii<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ahi1  -  abelson helper integration site 1<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Rasgrp2  -  ras, guanyl releasing protein 2<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Cpe  -  carboxypeptidase e<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Zwint  -  zw10 interactor<br>
+Map2  -  microtubule-associated protein 2<br>
+Tac1  -  tachykinin 1<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Tacr3  -  tachykinin receptor 3<br>
+Nrsn1  -  neurensin 1<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Ngb  -  neuroglobin<br>
+Tacr1  -  tachykinin receptor 1<br>
+Nts  -  neurotensin<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Oprl1  -  opioid receptor-like 1<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Gap43  -  growth associated protein 43<br>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Cpne5  -  copine v<br>
+Resp18  -  regulated endocrine-specific protein 18<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Cckar  -  cholecystokinin a receptor<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Pde1b  -  phosphodiesterase 1b, ca2+-calmodulin dependent<br>
+Rgs2  -  regulator of g-protein signaling 2<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Rgs17  -  regulator of g-protein signaling 17<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Lrfn5  -  leucine rich repeat and fibronectin type iii domain containing 5<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Pak3  -  p21 protein (cdc42/rac)-activated kinase 3<br>
+Vstm2l  -  v-set and transmembrane domain containing 2-like<br>
+Doc2a  -  double c2, alpha<br>
+Gpr149  -  g protein-coupled receptor 149<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Guk1  -  guanylate kinase 1<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Sst  -  somatostatin<br>
+Syn1  -  synapsin i<br>
+Sstr2  -  somatostatin receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043005&amp;view=details' target="_blank">GO:0043005</a><a name=0043005></a></td>
+<td>neuron projection</td>
+<td  align=center>7.47E-16</td>
+<td  align=center>7.19E-13</td>
+<td  align=center>3.83 (16689,1215,165,46)</td>
+<td>
+<a id="ctrl_elements_GO:0043005" href="javascript:toggle('elements_GO:0043005')">[+] Show genes</a><br>
+<div id="elements_GO:0043005" style="display:none"> <font size=1>
+Cpne5  -  copine v<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Rasgrp2  -  ras, guanyl releasing protein 2<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Rgs2  -  regulator of g-protein signaling 2<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Syt5  -  synaptotagmin v<br>
+Cpe  -  carboxypeptidase e<br>
+Zwint  -  zw10 interactor<br>
+Tac1  -  tachykinin 1<br>
+Map2  -  microtubule-associated protein 2<br>
+Syt1  -  synaptotagmin i<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Rgs17  -  regulator of g-protein signaling 17<br>
+Epha5  -  eph receptor a5<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Nrsn1  -  neurensin 1<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Ngb  -  neuroglobin<br>
+Tacr1  -  tachykinin receptor 1<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Vstm2l  -  v-set and transmembrane domain containing 2-like<br>
+Oprl1  -  opioid receptor-like 1<br>
+Doc2a  -  double c2, alpha<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Gpr149  -  g protein-coupled receptor 149<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Syn1  -  synapsin i<br>
+Sstr2  -  somatostatin receptor 2<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120025&amp;view=details' target="_blank">GO:0120025</a><a name=0120025></a></td>
+<td>plasma membrane bounded cell projection</td>
+<td  align=center>5.81E-12</td>
+<td  align=center>3.73E-9</td>
+<td  align=center>2.85 (16689,1741,165,49)</td>
+<td>
+<a id="ctrl_elements_GO:0120025" href="javascript:toggle('elements_GO:0120025')">[+] Show genes</a><br>
+<div id="elements_GO:0120025" style="display:none"> <font size=1>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ahi1  -  abelson helper integration site 1<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Rasgrp2  -  ras, guanyl releasing protein 2<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Lrrc6  -  leucine rich repeat containing 6 (testis)<br>
+Cpe  -  carboxypeptidase e<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Zwint  -  zw10 interactor<br>
+Tac1  -  tachykinin 1<br>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Nrsn1  -  neurensin 1<br>
+Ngb  -  neuroglobin<br>
+Tekt5  -  tektin 5<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Tacr1  -  tachykinin receptor 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Oprl1  -  opioid receptor-like 1<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Gap43  -  growth associated protein 43<br>
+Cpne5  -  copine v<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Rgs2  -  regulator of g-protein signaling 2<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Rgs17  -  regulator of g-protein signaling 17<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Vstm2l  -  v-set and transmembrane domain containing 2-like<br>
+Doc2a  -  double c2, alpha<br>
+Gpr149  -  g protein-coupled receptor 149<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Syn1  -  synapsin i<br>
+Sstr2  -  somatostatin receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042995&amp;view=details' target="_blank">GO:0042995</a><a name=0042995></a></td>
+<td>cell projection</td>
+<td  align=center>6.92E-11</td>
+<td  align=center>3.33E-8</td>
+<td  align=center>2.55 (16689,2065,165,52)</td>
+<td>
+<a id="ctrl_elements_GO:0042995" href="javascript:toggle('elements_GO:0042995')">[+] Show genes</a><br>
+<div id="elements_GO:0042995" style="display:none"> <font size=1>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ahi1  -  abelson helper integration site 1<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Rasgrp2  -  ras, guanyl releasing protein 2<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Lrrc6  -  leucine rich repeat containing 6 (testis)<br>
+Ndn  -  necdin<br>
+Cpe  -  carboxypeptidase e<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Zwint  -  zw10 interactor<br>
+Tac1  -  tachykinin 1<br>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Nrsn1  -  neurensin 1<br>
+Ngb  -  neuroglobin<br>
+Tekt5  -  tektin 5<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Tacr1  -  tachykinin receptor 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Oprl1  -  opioid receptor-like 1<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Gap43  -  growth associated protein 43<br>
+Cpne5  -  copine v<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Rgs2  -  regulator of g-protein signaling 2<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Rgs17  -  regulator of g-protein signaling 17<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Vstm2l  -  v-set and transmembrane domain containing 2-like<br>
+Basp1  -  brain abundant, membrane attached signal protein 1<br>
+Doc2a  -  double c2, alpha<br>
+Gpr149  -  g protein-coupled receptor 149<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Syn1  -  synapsin i<br>
+Sstr2  -  somatostatin receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044297&amp;view=details' target="_blank">GO:0044297</a><a name=0044297></a></td>
+<td>cell body</td>
+<td  align=center>2.39E-10</td>
+<td  align=center>9.21E-8</td>
+<td  align=center>4.05 (16689,699,165,28)</td>
+<td>
+<a id="ctrl_elements_GO:0044297" href="javascript:toggle('elements_GO:0044297')">[+] Show genes</a><br>
+<div id="elements_GO:0044297" style="display:none"> <font size=1>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Cpne5  -  copine v<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Tubb5  -  tubulin, beta 5 class i<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Pde1b  -  phosphodiesterase 1b, ca2+-calmodulin dependent<br>
+Syt5  -  synaptotagmin v<br>
+Cpe  -  carboxypeptidase e<br>
+Map2  -  microtubule-associated protein 2<br>
+Tac1  -  tachykinin 1<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Nrsn1  -  neurensin 1<br>
+Tacr1  -  tachykinin receptor 1<br>
+Nts  -  neurotensin<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Sst  -  somatostatin<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045202&amp;view=details' target="_blank">GO:0045202</a><a name=0045202></a></td>
+<td>synapse</td>
+<td  align=center>1.4E-9</td>
+<td  align=center>4.5E-7</td>
+<td  align=center>3.18 (16689,1083,165,34)</td>
+<td>
+<a id="ctrl_elements_GO:0045202" href="javascript:toggle('elements_GO:0045202')">[+] Show genes</a><br>
+<div id="elements_GO:0045202" style="display:none"> <font size=1>
+Cbln2  -  cerebellin 2 precursor protein<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Vwc2  -  von willebrand factor c domain containing 2<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Ache  -  acetylcholinesterase<br>
+Rasgrp2  -  ras, guanyl releasing protein 2<br>
+Syt5  -  synaptotagmin v<br>
+Baiap3  -  bai1-associated protein 3<br>
+Syt1  -  synaptotagmin i<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Syngr3  -  synaptogyrin 3<br>
+Rgs17  -  regulator of g-protein signaling 17<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Lrfn5  -  leucine rich repeat and fibronectin type iii domain containing 5<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Cbln4  -  cerebellin 4 precursor protein<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Pak3  -  p21 protein (cdc42/rac)-activated kinase 3<br>
+Elavl2  -  elav (embryonic lethal, abnormal vision, drosophila)-like 2 (hu antigen b)<br>
+Doc2a  -  double c2, alpha<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Prkar1b  -  protein kinase, camp dependent regulatory, type i beta<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Rtn3  -  reticulon 3<br>
+Syn1  -  synapsin i<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043025&amp;view=details' target="_blank">GO:0043025</a><a name=0043025></a></td>
+<td>neuronal cell body</td>
+<td  align=center>1.45E-9</td>
+<td  align=center>3.99E-7</td>
+<td  align=center>4.16 (16689,608,165,25)</td>
+<td>
+<a id="ctrl_elements_GO:0043025" href="javascript:toggle('elements_GO:0043025')">[+] Show genes</a><br>
+<div id="elements_GO:0043025" style="display:none"> <font size=1>
+Cpne5  -  copine v<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Pde1b  -  phosphodiesterase 1b, ca2+-calmodulin dependent<br>
+Syt5  -  synaptotagmin v<br>
+Cpe  -  carboxypeptidase e<br>
+Map2  -  microtubule-associated protein 2<br>
+Tac1  -  tachykinin 1<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Nrsn1  -  neurensin 1<br>
+Nts  -  neurotensin<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Sst  -  somatostatin<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044456&amp;view=details' target="_blank">GO:0044456</a><a name=0044456></a></td>
+<td>synapse part</td>
+<td  align=center>1.74E-7</td>
+<td  align=center>4.18E-5</td>
+<td  align=center>2.85 (16689,1066,165,30)</td>
+<td>
+<a id="ctrl_elements_GO:0044456" href="javascript:toggle('elements_GO:0044456')">[+] Show genes</a><br>
+<div id="elements_GO:0044456" style="display:none"> <font size=1>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Cckar  -  cholecystokinin a receptor<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Ache  -  acetylcholinesterase<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Cpe  -  carboxypeptidase e<br>
+Syt5  -  synaptotagmin v<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Syt1  -  synaptotagmin i<br>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Syngr3  -  synaptogyrin 3<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Nts  -  neurotensin<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Lrfn5  -  leucine rich repeat and fibronectin type iii domain containing 5<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Pak3  -  p21 protein (cdc42/rac)-activated kinase 3<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Doc2a  -  double c2, alpha<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Syn1  -  synapsin i<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030424&amp;view=details' target="_blank">GO:0030424</a><a name=0030424></a></td>
+<td>axon</td>
+<td  align=center>1.46E-6</td>
+<td  align=center>3.12E-4</td>
+<td  align=center>3.96 (16689,434,165,17)</td>
+<td>
+<a id="ctrl_elements_GO:0030424" href="javascript:toggle('elements_GO:0030424')">[+] Show genes</a><br>
+<div id="elements_GO:0030424" style="display:none"> <font size=1>
+Tac1  -  tachykinin 1<br>
+Syt1  -  synaptotagmin i<br>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Epha5  -  eph receptor a5<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Vstm2l  -  v-set and transmembrane domain containing 2-like<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Ache  -  acetylcholinesterase<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Syn1  -  synapsin i<br>
+Syt5  -  synaptotagmin v<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120038&amp;view=details' target="_blank">GO:0120038</a><a name=0120038></a></td>
+<td>plasma membrane bounded cell projection part</td>
+<td  align=center>2.78E-6</td>
+<td  align=center>5.35E-4</td>
+<td  align=center>2.32 (16689,1485,165,34)</td>
+<td>
+<a id="ctrl_elements_GO:0120038" href="javascript:toggle('elements_GO:0120038')">[+] Show genes</a><br>
+<div id="elements_GO:0120038" style="display:none"> <font size=1>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ahi1  -  abelson helper integration site 1<br>
+Cckar  -  cholecystokinin a receptor<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Cpe  -  carboxypeptidase e<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Zwint  -  zw10 interactor<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Syt1  -  synaptotagmin i<br>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Tacr3  -  tachykinin receptor 3<br>
+Nrsn1  -  neurensin 1<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Tacr1  -  tachykinin receptor 1<br>
+Nts  -  neurotensin<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Syn1  -  synapsin i<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044463&amp;view=details' target="_blank">GO:0044463</a><a name=0044463></a></td>
+<td>cell projection part</td>
+<td  align=center>2.78E-6</td>
+<td  align=center>4.86E-4</td>
+<td  align=center>2.32 (16689,1485,165,34)</td>
+<td>
+<a id="ctrl_elements_GO:0044463" href="javascript:toggle('elements_GO:0044463')">[+] Show genes</a><br>
+<div id="elements_GO:0044463" style="display:none"> <font size=1>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ahi1  -  abelson helper integration site 1<br>
+Cckar  -  cholecystokinin a receptor<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Ache  -  acetylcholinesterase<br>
+Timp2  -  tissue inhibitor of metalloproteinase 2<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Cpe  -  carboxypeptidase e<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Zwint  -  zw10 interactor<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Syt1  -  synaptotagmin i<br>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Tacr3  -  tachykinin receptor 3<br>
+Nrsn1  -  neurensin 1<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Tacr1  -  tachykinin receptor 1<br>
+Nts  -  neurotensin<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Calca  -  calcitonin/calcitonin-related polypeptide, alpha<br>
+Syn1  -  synapsin i<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030425&amp;view=details' target="_blank">GO:0030425</a><a name=0030425></a></td>
+<td>dendrite</td>
+<td  align=center>1.56E-5</td>
+<td  align=center>2.5E-3</td>
+<td  align=center>3.31 (16689,519,165,17)</td>
+<td>
+<a id="ctrl_elements_GO:0030425" href="javascript:toggle('elements_GO:0030425')">[+] Show genes</a><br>
+<div id="elements_GO:0030425" style="display:none"> <font size=1>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Tacr1  -  tachykinin receptor 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Ache  -  acetylcholinesterase<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Syn1  -  synapsin i<br>
+Cpe  -  carboxypeptidase e<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Zwint  -  zw10 interactor<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031410&amp;view=details' target="_blank">GO:0031410</a><a name=0031410></a></td>
+<td>cytoplasmic vesicle</td>
+<td  align=center>2.49E-5</td>
+<td  align=center>3.68E-3</td>
+<td  align=center>2.09 (16689,1645,165,34)</td>
+<td>
+<a id="ctrl_elements_GO:0031410" href="javascript:toggle('elements_GO:0031410')">[+] Show genes</a><br>
+<div id="elements_GO:0031410" style="display:none"> <font size=1>
+Scg2  -  secretogranin ii<br>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Resp18  -  regulated endocrine-specific protein 18<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Cckar  -  cholecystokinin a receptor<br>
+Fnbp1l  -  formin binding protein 1-like<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Cpe  -  carboxypeptidase e<br>
+Syt5  -  synaptotagmin v<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Cartpt  -  cart prepropeptide<br>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Nrsn1  -  neurensin 1<br>
+Rab9b  -  rab9b, member ras oncogene family<br>
+Nts  -  neurotensin<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Cyb561  -  cytochrome b-561<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Pak3  -  p21 protein (cdc42/rac)-activated kinase 3<br>
+Nod2  -  nucleotide-binding oligomerization domain containing 2<br>
+Oprl1  -  opioid receptor-like 1<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Doc2a  -  double c2, alpha<br>
+Prkar1b  -  protein kinase, camp dependent regulatory, type i beta<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Pld3  -  phospholipase d family, member 3<br>
+Syn1  -  synapsin i<br>
+Grp  -  gastrin releasing peptide<br>
+Cxxc4  -  cxxc finger 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097708&amp;view=details' target="_blank">GO:0097708</a><a name=0097708></a></td>
+<td>intracellular vesicle</td>
+<td  align=center>2.68E-5</td>
+<td  align=center>3.69E-3</td>
+<td  align=center>2.08 (16689,1651,165,34)</td>
+<td>
+<a id="ctrl_elements_GO:0097708" href="javascript:toggle('elements_GO:0097708')">[+] Show genes</a><br>
+<div id="elements_GO:0097708" style="display:none"> <font size=1>
+Scg2  -  secretogranin ii<br>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Resp18  -  regulated endocrine-specific protein 18<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Cckar  -  cholecystokinin a receptor<br>
+Fnbp1l  -  formin binding protein 1-like<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Cpe  -  carboxypeptidase e<br>
+Syt5  -  synaptotagmin v<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Cartpt  -  cart prepropeptide<br>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Nrsn1  -  neurensin 1<br>
+Rab9b  -  rab9b, member ras oncogene family<br>
+Nts  -  neurotensin<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Cyb561  -  cytochrome b-561<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Pak3  -  p21 protein (cdc42/rac)-activated kinase 3<br>
+Nod2  -  nucleotide-binding oligomerization domain containing 2<br>
+Oprl1  -  opioid receptor-like 1<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Doc2a  -  double c2, alpha<br>
+Prkar1b  -  protein kinase, camp dependent regulatory, type i beta<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Pld3  -  phospholipase d family, member 3<br>
+Syn1  -  synapsin i<br>
+Grp  -  gastrin releasing peptide<br>
+Cxxc4  -  cxxc finger 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0150002&amp;view=details' target="_blank">GO:0150002</a><a name=0150002></a></td>
+<td>distal dendrite</td>
+<td  align=center>9.72E-5</td>
+<td  align=center>1.25E-2</td>
+<td  align=center>101.15 (16689,2,165,2)</td>
+<td>
+<a id="ctrl_elements_GO:0150002" href="javascript:toggle('elements_GO:0150002')">[+] Show genes</a><br>
+<div id="elements_GO:0150002" style="display:none"> <font size=1>
+Map2  -  microtubule-associated protein 2<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990635&amp;view=details' target="_blank">GO:1990635</a><a name=1990635></a></td>
+<td>proximal dendrite</td>
+<td  align=center>1.08E-4</td>
+<td  align=center>1.3E-2</td>
+<td  align=center>30.34 (16689,10,165,3)</td>
+<td>
+<a id="ctrl_elements_GO:1990635" href="javascript:toggle('elements_GO:1990635')">[+] Show genes</a><br>
+<div id="elements_GO:1990635" style="display:none"> <font size=1>
+Map2  -  microtubule-associated protein 2<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details' target="_blank">GO:0031982</a><a name=0031982></a></td>
+<td>vesicle</td>
+<td  align=center>1.08E-4</td>
+<td  align=center>1.23E-2</td>
+<td  align=center>1.94 (16689,1770,165,34)</td>
+<td>
+<a id="ctrl_elements_GO:0031982" href="javascript:toggle('elements_GO:0031982')">[+] Show genes</a><br>
+<div id="elements_GO:0031982" style="display:none"> <font size=1>
+Scg2  -  secretogranin ii<br>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Resp18  -  regulated endocrine-specific protein 18<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Cckar  -  cholecystokinin a receptor<br>
+Fnbp1l  -  formin binding protein 1-like<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Cpe  -  carboxypeptidase e<br>
+Syt5  -  synaptotagmin v<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Cartpt  -  cart prepropeptide<br>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Nrsn1  -  neurensin 1<br>
+Rab9b  -  rab9b, member ras oncogene family<br>
+Nts  -  neurotensin<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Cyb561  -  cytochrome b-561<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Pak3  -  p21 protein (cdc42/rac)-activated kinase 3<br>
+Nod2  -  nucleotide-binding oligomerization domain containing 2<br>
+Oprl1  -  opioid receptor-like 1<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Doc2a  -  double c2, alpha<br>
+Prkar1b  -  protein kinase, camp dependent regulatory, type i beta<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Pld3  -  phospholipase d family, member 3<br>
+Syn1  -  synapsin i<br>
+Grp  -  gastrin releasing peptide<br>
+Cxxc4  -  cxxc finger 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031045&amp;view=details' target="_blank">GO:0031045</a><a name=0031045></a></td>
+<td>dense core granule</td>
+<td  align=center>1.16E-4</td>
+<td  align=center>1.24E-2</td>
+<td  align=center>15.56 (16689,26,165,4)</td>
+<td>
+<a id="ctrl_elements_GO:0031045" href="javascript:toggle('elements_GO:0031045')">[+] Show genes</a><br>
+<div id="elements_GO:0031045" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Scg2  -  secretogranin ii<br>
+Syt5  -  synaptotagmin v<br>
+Cpe  -  carboxypeptidase e<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097440&amp;view=details' target="_blank">GO:0097440</a><a name=0097440></a></td>
+<td>apical dendrite</td>
+<td  align=center>1.8E-4</td>
+<td  align=center>1.83E-2</td>
+<td  align=center>13.95 (16689,29,165,4)</td>
+<td>
+<a id="ctrl_elements_GO:0097440" href="javascript:toggle('elements_GO:0097440')">[+] Show genes</a><br>
+<div id="elements_GO:0097440" style="display:none"> <font size=1>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030054&amp;view=details' target="_blank">GO:0030054</a><a name=0030054></a></td>
+<td>cell junction</td>
+<td  align=center>4.01E-4</td>
+<td  align=center>3.86E-2</td>
+<td  align=center>2.11 (16689,1150,165,24)</td>
+<td>
+<a id="ctrl_elements_GO:0030054" href="javascript:toggle('elements_GO:0030054')">[+] Show genes</a><br>
+<div id="elements_GO:0030054" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Syngr3  -  synaptogyrin 3<br>
+Rgs17  -  regulator of g-protein signaling 17<br>
+Epha5  -  eph receptor a5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Vwc2  -  von willebrand factor c domain containing 2<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Cbln4  -  cerebellin 4 precursor protein<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Ahi1  -  abelson helper integration site 1<br>
+Basp1  -  brain abundant, membrane attached signal protein 1<br>
+Doc2a  -  double c2, alpha<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Tanc2  -  tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2<br>
+Ache  -  acetylcholinesterase<br>
+Rasgrp2  -  ras, guanyl releasing protein 2<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Magi3  -  membrane associated guanylate kinase, ww and pdz domain containing 3<br>
+Syt5  -  synaptotagmin v<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099501&amp;view=details' target="_blank">GO:0099501</a><a name=0099501></a></td>
+<td>exocytic vesicle membrane</td>
+<td  align=center>4.23E-4</td>
+<td  align=center>3.88E-2</td>
+<td  align=center>7.90 (16689,64,165,5)</td>
+<td>
+<a id="ctrl_elements_GO:0099501" href="javascript:toggle('elements_GO:0099501')">[+] Show genes</a><br>
+<div id="elements_GO:0099501" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Syn1  -  synapsin i<br>
+Syt5  -  synaptotagmin v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030672&amp;view=details' target="_blank">GO:0030672</a><a name=0030672></a></td>
+<td>synaptic vesicle membrane</td>
+<td  align=center>4.23E-4</td>
+<td  align=center>3.7E-2</td>
+<td  align=center>7.90 (16689,64,165,5)</td>
+<td>
+<a id="ctrl_elements_GO:0030672" href="javascript:toggle('elements_GO:0030672')">[+] Show genes</a><br>
+<div id="elements_GO:0030672" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Syn1  -  synapsin i<br>
+Syt5  -  synaptotagmin v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098982&amp;view=details' target="_blank">GO:0098982</a><a name=0098982></a></td>
+<td>GABA-ergic synapse</td>
+<td  align=center>5.53E-4</td>
+<td  align=center>4.63E-2</td>
+<td  align=center>5.89 (16689,103,165,6)</td>
+<td>
+<a id="ctrl_elements_GO:0098982" href="javascript:toggle('elements_GO:0098982')">[+] Show genes</a><br>
+<div id="elements_GO:0098982" style="display:none"> <font size=1>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Cbln4  -  cerebellin 4 precursor protein<br>
+Lrfn5  -  leucine rich repeat and fibronectin type iii domain containing 5<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Baiap3  -  bai1-associated protein 3<br>
+Gap43  -  growth associated protein 43<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
+<td>membrane</td>
+<td  align=center>5.63E-4</td>
+<td  align=center>4.52E-2</td>
+<td  align=center>1.32 (16689,6763,165,88)</td>
+<td>
+<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
+<div id="elements_GO:0016020" style="display:none"> <font size=1>
+Slc22a17  -  solute carrier family 22 (organic cation transporter), member 17<br>
+Arhgdig  -  rho gdp dissociation inhibitor (gdi) gamma<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Ppp2r2b  -  protein phosphatase 2 (formerly 2a), regulatory subunit b (pr 52), beta isoform<br>
+Rasgrf2  -  ras protein-specific guanine nucleotide-releasing factor 2<br>
+Rasgrf1  -  ras protein-specific guanine nucleotide-releasing factor 1<br>
+Tmem130  -  transmembrane protein 130<br>
+Elfn1  -  leucine rich repeat and fibronectin type iii, extracellular 1<br>
+Tmem179  -  transmembrane protein 179<br>
+Nrsn2  -  neurensin 2<br>
+Cntnap2  -  contactin associated protein-like 2<br>
+Nlrp6  -  nlr family, pyrin domain containing 6<br>
+Ache  -  acetylcholinesterase<br>
+Cdk14  -  cyclin-dependent kinase 14<br>
+Rasd2  -  rasd family, member 2<br>
+Rasgrp2  -  ras, guanyl releasing protein 2<br>
+Vstm2b  -  v-set and transmembrane domain containing 2b<br>
+Uchl1  -  ubiquitin carboxy-terminal hydrolase l1<br>
+Chst1  -  carbohydrate (keratan sulfate gal-6) sulfotransferase 1<br>
+Ly6h  -  lymphocyte antigen 6 complex, locus h<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Cpe  -  carboxypeptidase e<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Tac1  -  tachykinin 1<br>
+Map2  -  microtubule-associated protein 2<br>
+Map1b  -  microtubule-associated protein 1b<br>
+Epha5  -  eph receptor a5<br>
+Nrsn1  -  neurensin 1<br>
+Tacr3  -  tachykinin receptor 3<br>
+Htr2c  -  5-hydroxytryptamine (serotonin) receptor 2c<br>
+Tacr1  -  tachykinin receptor 1<br>
+Glra2  -  glycine receptor, alpha 2 subunit<br>
+Fxyd7  -  fxyd domain-containing ion transport regulator 7<br>
+Nod2  -  nucleotide-binding oligomerization domain containing 2<br>
+Matk  -  megakaryocyte-associated tyrosine kinase<br>
+Oprl1  -  opioid receptor-like 1<br>
+Slc1a1  -  solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter, system xag), member 1<br>
+Fndc9  -  fibronectin type iii domain containing 9<br>
+Lor  -  loricrin<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Vgf  -  vgf nerve growth factor inducible<br>
+Gap43  -  growth associated protein 43<br>
+Gabarapl1  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 1<br>
+Cpne5  -  copine v<br>
+Disp2  -  dispatched homolog 2 (drosophila)<br>
+Mtch1  -  mitochondrial carrier homolog 1 (c. elegans)<br>
+Gabrg3  -  gamma-aminobutyric acid (gaba) a receptor, subunit gamma 3<br>
+Tubb5  -  tubulin, beta 5 class i<br>
+Cckar  -  cholecystokinin a receptor<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Lypd6b  -  ly6/plaur domain containing 6b<br>
+Fnbp1l  -  formin binding protein 1-like<br>
+Wdr6  -  wd repeat domain 6<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Zdhhc22  -  zinc finger, dhhc-type containing 22<br>
+Gaa  -  glucosidase, alpha, acid<br>
+Rgs2  -  regulator of g-protein signaling 2<br>
+Syt5  -  synaptotagmin v<br>
+Baiap3  -  bai1-associated protein 3<br>
+Rgs4  -  regulator of g-protein signaling 4<br>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Caly  -  calcyon neuron-specific vesicular protein<br>
+Rgs17  -  regulator of g-protein signaling 17<br>
+Rab9b  -  rab9b, member ras oncogene family<br>
+Sorcs2  -  sortilin-related vps10 domain containing receptor 2<br>
+Lrfn5  -  leucine rich repeat and fibronectin type iii domain containing 5<br>
+Begain  -  brain-enriched guanylate kinase-associated<br>
+Cyb561  -  cytochrome b-561<br>
+Ptprn  -  protein tyrosine phosphatase, receptor type, n<br>
+Tmx4  -  thioredoxin-related transmembrane protein 4<br>
+Ctxn2  -  cortexin 2<br>
+Vstm2l  -  v-set and transmembrane domain containing 2-like<br>
+Basp1  -  brain abundant, membrane attached signal protein 1<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Ldb2  -  lim domain binding 2<br>
+Doc2a  -  double c2, alpha<br>
+Prkar1b  -  protein kinase, camp dependent regulatory, type i beta<br>
+Gpr149  -  g protein-coupled receptor 149<br>
+Cib2  -  calcium and integrin binding family member 2<br>
+Ptpn5  -  protein tyrosine phosphatase, non-receptor type 5<br>
+Rtn3  -  reticulon 3<br>
+Tmem91  -  transmembrane protein 91<br>
+Pld3  -  phospholipase d family, member 3<br>
+Syn1  -  synapsin i<br>
+Sstr2  -  somatostatin receptor 2<br>
+Magi3  -  membrane associated guanylate kinase, ww and pdz domain containing 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030658&amp;view=details' target="_blank">GO:0030658</a><a name=0030658></a></td>
+<td>transport vesicle membrane</td>
+<td  align=center>9.33E-4</td>
+<td  align=center>7.18E-2</td>
+<td  align=center>6.65 (16689,76,165,5)</td>
+<td>
+<a id="ctrl_elements_GO:0030658" href="javascript:toggle('elements_GO:0030658')">[+] Show genes</a><br>
+<div id="elements_GO:0030658" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Syngr3  -  synaptogyrin 3<br>
+Snap47  -  synaptosomal-associated protein, 47<br>
+Syn1  -  synapsin i<br>
+Syt5  -  synaptotagmin v<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990769&amp;view=details' target="_blank">GO:1990769</a><a name=1990769></a></td>
+<td>proximal neuron projection</td>
+<td  align=center>9.53E-4</td>
+<td  align=center>7.05E-2</td>
+<td  align=center>40.46 (16689,5,165,2)</td>
+<td>
+<a id="ctrl_elements_GO:1990769" href="javascript:toggle('elements_GO:1990769')">[+] Show genes</a><br>
+<div id="elements_GO:1990769" style="display:none"> <font size=1>
+Map2  -  microtubule-associated protein 2<br>
+Syt5  -  synaptotagmin v<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 18117 genes out of 21130 gene terms entered by the user.<br> 18117 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>190 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 17927 genes.<br>Only 16689 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1925 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,947 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='187,608,304,656' HREF='#0003690' ALT=''>
+<AREA SHAPE='RECT' COORDS='201,721,332,783' HREF='#1990837' ALT=''>
+<AREA SHAPE='RECT' COORDS='247,326,369,423' HREF='#0000981' ALT=''>
+<AREA SHAPE='RECT' COORDS='637,712,752,792' HREF='#0019199' ALT=''>
+<AREA SHAPE='RECT' COORDS='568,840,683,920' HREF='#0004714' ALT=''>
+<AREA SHAPE='RECT' COORDS='192,109,264,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='55,214,151,277' HREF='#1901363' ALT=''>
+<AREA SHAPE='RECT' COORDS='175,214,281,277' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='393,326,548,423' HREF='#0016772' ALT=''>
+<AREA SHAPE='RECT' COORDS='309,472,448,552' HREF='#0016773' ALT=''>
+<AREA SHAPE='RECT' COORDS='472,488,576,536' HREF='#0016301' ALT=''>
+<AREA SHAPE='RECT' COORDS='548,968,703,1048' HREF='#0005007' ALT=''>
+<AREA SHAPE='RECT' COORDS='503,608,609,656' HREF='#0004672' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,601,112,663' HREF='#0001067' ALT=''>
+<AREA SHAPE='RECT' COORDS='65,712,161,792' HREF='#0044212' ALT=''>
+<AREA SHAPE='RECT' COORDS='653,472,768,552' HREF='#0004888' ALT=''>
+<AREA SHAPE='RECT' COORDS='428,221,519,269' HREF='#0016740' ALT=''>
+<AREA SHAPE='RECT' COORDS='59,351,152,399' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='117,488,211,536' HREF='#0003677' ALT=''>
+<AREA SHAPE='RECT' COORDS='499,728,613,776' HREF='#0004713' ALT=''>
+<AREA SHAPE='RECT' COORDS='311,102,407,165' HREF='#0140110' ALT=''>
+<AREA SHAPE='RECT' COORDS='305,214,404,277' HREF='#0003700' ALT=''>
+<AREA SHAPE='RECT' COORDS='436,109,511,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='572,335,649,415' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='183,840,351,920' HREF='#0000976' ALT=''>
+<AREA SHAPE='RECT' COORDS='36,840,159,920' HREF='#0001012' ALT=''>
+<AREA SHAPE='RECT' COORDS='13,968,181,1048' HREF='#0000977' ALT=''>
+<AREA SHAPE='RECT' COORDS='205,968,336,1048' HREF='#0000987' ALT=''>
+<AREA SHAPE='RECT' COORDS='119,1097,249,1194' HREF='#0000978' ALT=''>
+<AREA SHAPE='RECT' COORDS='673,343,751,406' HREF='#0038023' ALT=''>
+<AREA SHAPE='RECT' COORDS='328,608,459,656' HREF='#0043565' ALT=''>
+<AREA SHAPE='RECT' COORDS='581,102,667,165' HREF='#0060089' ALT=''>
+<AREA SHAPE='RECT' COORDS='416,5,302,29' HREF='#0003674' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000978&amp;view=details' target="_blank">GO:0000978</a><a name=0000978></a></td>
+<td>RNA polymerase II proximal promoter sequence-specific DNA binding</td>
+<td  align=center>4.38E-18</td>
+<td  align=center>1.46E-14</td>
+<td  align=center>6.98 (17542,897,84,30)</td>
+<td>
+<a id="ctrl_elements_GO:0000978" href="javascript:toggle('elements_GO:0000978')">[+] Show genes</a><br>
+<div id="elements_GO:0000978" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000987&amp;view=details' target="_blank">GO:0000987</a><a name=0000987></a></td>
+<td>proximal promoter sequence-specific DNA binding</td>
+<td  align=center>6.13E-18</td>
+<td  align=center>1.02E-14</td>
+<td  align=center>6.90 (17542,908,84,30)</td>
+<td>
+<a id="ctrl_elements_GO:0000987" href="javascript:toggle('elements_GO:0000987')">[+] Show genes</a><br>
+<div id="elements_GO:0000987" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000981&amp;view=details' target="_blank">GO:0000981</a><a name=0000981></a></td>
+<td>DNA-binding transcription factor activity, RNA polymerase II-specific</td>
+<td  align=center>3.75E-17</td>
+<td  align=center>4.16E-14</td>
+<td  align=center>5.87 (17542,1138,84,32)</td>
+<td>
+<a id="ctrl_elements_GO:0000981" href="javascript:toggle('elements_GO:0000981')">[+] Show genes</a><br>
+<div id="elements_GO:0000981" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+dbx1b  -  developing brain homeobox 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003700&amp;view=details' target="_blank">GO:0003700</a><a name=0003700></a></td>
+<td>DNA-binding transcription factor activity</td>
+<td  align=center>3.86E-16</td>
+<td  align=center>3.21E-13</td>
+<td  align=center>5.42 (17542,1234,84,32)</td>
+<td>
+<a id="ctrl_elements_GO:0003700" href="javascript:toggle('elements_GO:0003700')">[+] Show genes</a><br>
+<div id="elements_GO:0003700" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+dbx1b  -  developing brain homeobox 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990837&amp;view=details' target="_blank">GO:1990837</a><a name=1990837></a></td>
+<td>sequence-specific double-stranded DNA binding</td>
+<td  align=center>1.76E-15</td>
+<td  align=center>1.17E-12</td>
+<td  align=center>5.36 (17542,1208,84,31)</td>
+<td>
+<a id="ctrl_elements_GO:1990837" href="javascript:toggle('elements_GO:1990837')">[+] Show genes</a><br>
+<div id="elements_GO:1990837" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000977&amp;view=details' target="_blank">GO:0000977</a><a name=0000977></a></td>
+<td>RNA polymerase II regulatory region sequence-specific DNA binding</td>
+<td  align=center>2.06E-15</td>
+<td  align=center>1.14E-12</td>
+<td  align=center>5.57 (17542,1124,84,30)</td>
+<td>
+<a id="ctrl_elements_GO:0000977" href="javascript:toggle('elements_GO:0000977')">[+] Show genes</a><br>
+<div id="elements_GO:0000977" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001012&amp;view=details' target="_blank">GO:0001012</a><a name=0001012></a></td>
+<td>RNA polymerase II regulatory region DNA binding</td>
+<td  align=center>2.06E-15</td>
+<td  align=center>9.78E-13</td>
+<td  align=center>5.57 (17542,1124,84,30)</td>
+<td>
+<a id="ctrl_elements_GO:0001012" href="javascript:toggle('elements_GO:0001012')">[+] Show genes</a><br>
+<div id="elements_GO:0001012" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000976&amp;view=details' target="_blank">GO:0000976</a><a name=0000976></a></td>
+<td>transcription regulatory region sequence-specific DNA binding</td>
+<td  align=center>6.16E-15</td>
+<td  align=center>2.56E-12</td>
+<td  align=center>5.35 (17542,1171,84,30)</td>
+<td>
+<a id="ctrl_elements_GO:0000976" href="javascript:toggle('elements_GO:0000976')">[+] Show genes</a><br>
+<div id="elements_GO:0000976" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003690&amp;view=details' target="_blank">GO:0003690</a><a name=0003690></a></td>
+<td>double-stranded DNA binding</td>
+<td  align=center>6.26E-15</td>
+<td  align=center>2.32E-12</td>
+<td  align=center>5.12 (17542,1265,84,31)</td>
+<td>
+<a id="ctrl_elements_GO:0003690" href="javascript:toggle('elements_GO:0003690')">[+] Show genes</a><br>
+<div id="elements_GO:0003690" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001067&amp;view=details' target="_blank">GO:0001067</a><a name=0001067></a></td>
+<td>regulatory region nucleic acid binding</td>
+<td  align=center>6.3E-15</td>
+<td  align=center>2.1E-12</td>
+<td  align=center>5.35 (17542,1172,84,30)</td>
+<td>
+<a id="ctrl_elements_GO:0001067" href="javascript:toggle('elements_GO:0001067')">[+] Show genes</a><br>
+<div id="elements_GO:0001067" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044212&amp;view=details' target="_blank">GO:0044212</a><a name=0044212></a></td>
+<td>transcription regulatory region DNA binding</td>
+<td  align=center>6.3E-15</td>
+<td  align=center>1.9E-12</td>
+<td  align=center>5.35 (17542,1172,84,30)</td>
+<td>
+<a id="ctrl_elements_GO:0044212" href="javascript:toggle('elements_GO:0044212')">[+] Show genes</a><br>
+<div id="elements_GO:0044212" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043565&amp;view=details' target="_blank">GO:0043565</a><a name=0043565></a></td>
+<td>sequence-specific DNA binding</td>
+<td  align=center>1.38E-14</td>
+<td  align=center>3.82E-12</td>
+<td  align=center>4.97 (17542,1302,84,31)</td>
+<td>
+<a id="ctrl_elements_GO:0043565" href="javascript:toggle('elements_GO:0043565')">[+] Show genes</a><br>
+<div id="elements_GO:0043565" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0140110&amp;view=details' target="_blank">GO:0140110</a><a name=0140110></a></td>
+<td>transcription regulator activity</td>
+<td  align=center>1.4E-14</td>
+<td  align=center>3.58E-12</td>
+<td  align=center>4.59 (17542,1502,84,33)</td>
+<td>
+<a id="ctrl_elements_GO:0140110" href="javascript:toggle('elements_GO:0140110')">[+] Show genes</a><br>
+<div id="elements_GO:0140110" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+dbx1b  -  developing brain homeobox 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+id1  -  inhibitor of dna binding 1<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003677&amp;view=details' target="_blank">GO:0003677</a><a name=0003677></a></td>
+<td>DNA binding</td>
+<td  align=center>9.63E-13</td>
+<td  align=center>2.29E-10</td>
+<td  align=center>3.82 (17542,1858,84,34)</td>
+<td>
+<a id="ctrl_elements_GO:0003677" href="javascript:toggle('elements_GO:0003677')">[+] Show genes</a><br>
+<div id="elements_GO:0003677" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+sp8b  -  sp8 transcription factor b<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+tox3  -  tox high mobility group box family member 3<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+dbx1b  -  developing brain homeobox 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003676&amp;view=details' target="_blank">GO:0003676</a><a name=0003676></a></td>
+<td>nucleic acid binding</td>
+<td  align=center>7.68E-10</td>
+<td  align=center>1.7E-7</td>
+<td  align=center>2.78 (17542,2775,84,37)</td>
+<td>
+<a id="ctrl_elements_GO:0003676" href="javascript:toggle('elements_GO:0003676')">[+] Show genes</a><br>
+<div id="elements_GO:0003676" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+sp8b  -  sp8 transcription factor b<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+tox3  -  tox high mobility group box family member 3<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+dbx1b  -  developing brain homeobox 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901363&amp;view=details' target="_blank">GO:1901363</a><a name=1901363></a></td>
+<td>heterocyclic compound binding</td>
+<td  align=center>8.51E-6</td>
+<td  align=center>1.77E-3</td>
+<td  align=center>1.83 (17542,4802,84,42)</td>
+<td>
+<a id="ctrl_elements_GO:1901363" href="javascript:toggle('elements_GO:1901363')">[+] Show genes</a><br>
+<div id="elements_GO:1901363" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+cyp26b1  -  cytochrome p450, family 26, subfamily b, polypeptide 1<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epha7  -  eph receptor a7<br>
+tox3  -  tox high mobility group box family member 3<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+dbx1b  -  developing brain homeobox 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+jun  -  jun proto-oncogene<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+fgfr2  -  fibroblast growth factor receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097159&amp;view=details' target="_blank">GO:0097159</a><a name=0097159></a></td>
+<td>organic cyclic compound binding</td>
+<td  align=center>1.14E-5</td>
+<td  align=center>2.24E-3</td>
+<td  align=center>1.81 (17542,4855,84,42)</td>
+<td>
+<a id="ctrl_elements_GO:0097159" href="javascript:toggle('elements_GO:0097159')">[+] Show genes</a><br>
+<div id="elements_GO:0097159" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+cyp26b1  -  cytochrome p450, family 26, subfamily b, polypeptide 1<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+lbx1b  -  ladybird homeobox 1b<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epha7  -  eph receptor a7<br>
+tox3  -  tox high mobility group box family member 3<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+dbx1b  -  developing brain homeobox 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+wu:fb25b09  -  wu:fb25b09<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+jun  -  jun proto-oncogene<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+fgfr2  -  fibroblast growth factor receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005007&amp;view=details' target="_blank">GO:0005007</a><a name=0005007></a></td>
+<td>fibroblast growth factor-activated receptor activity</td>
+<td  align=center>4.68E-4</td>
+<td  align=center>8.66E-2</td>
+<td  align=center>59.67 (17542,7,84,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005007" href="javascript:toggle('elements_GO:0005007')">[+] Show genes</a><br>
+<div id="elements_GO:0005007" style="display:none"> <font size=1>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+fgfr2  -  fibroblast growth factor receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005488&amp;view=details' target="_blank">GO:0005488</a><a name=0005488></a></td>
+<td>binding</td>
+<td  align=center>7.44E-4</td>
+<td  align=center>1.3E-1</td>
+<td  align=center>1.32 (17542,9678,84,61)</td>
+<td>
+<a id="ctrl_elements_GO:0005488" href="javascript:toggle('elements_GO:0005488')">[+] Show genes</a><br>
+<div id="elements_GO:0005488" style="display:none"> <font size=1>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+bahcc1  -  bah domain and coiled-coil containing 1<br>
+mdkb  -  midkine-related growth factor b<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+lbx1b  -  ladybird homeobox 1b<br>
+phf21aa  -  phd finger protein 21aa<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+dbx1b  -  developing brain homeobox 1b<br>
+wu:fb25b09  -  wu:fb25b09<br>
+kirrela  -  kin of irre like a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+dtx1  -  deltex1<br>
+nkx6.2  -  nk6 homeobox 2<br>
+mdka  -  midkine-related growth factor<br>
+sema3fa  -  semaphorin 3fa<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+plagx  -  pleiomorphic adenoma gene x<br>
+angptl4  -  angiopoietin-like 4<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+her4.3  -  hairy-related 4.3<br>
+foxp4  -  forkhead box p4<br>
+celsr1b  -  cadherin egf lag seven-pass g-type receptor 1b<br>
+hoxa2b  -  homeo box a2b<br>
+sp8b  -  sp8 transcription factor b<br>
+cdh7  -  cadherin 7, type 2<br>
+gpr98  -  g protein-coupled receptor 98<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+cyp26b1  -  cytochrome p450, family 26, subfamily b, polypeptide 1<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+notch1b  -  notch homolog 1b<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+lmo3  -  lim domain only 3<br>
+zfhx4  -  zinc finger homeobox 4<br>
+nell2a  -  nel-like 2a<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+fosb  -  fbj murine osteosarcoma viral oncogene homolog b<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+LOC100148329  -  hairy-related 4.2-like<br>
+epha7  -  eph receptor a7<br>
+tox3  -  tox high mobility group box family member 3<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+id1  -  inhibitor of dna binding 1<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+her12  -  hairy-related 12<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pax6a  -  paired box gene 6a<br>
+jun  -  jun proto-oncogene<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+adam10b  -  a disintegrin and metalloprotease domain 10b<br>
+zfhx3  -  zinc finger homeobox 3<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+olig3  -  oligodendrocyte transcription factor 3<br>
+fgfr2  -  fibroblast growth factor receptor 2<br>
+robo4  -  roundabout homolog 4<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24092 genes out of 30198 gene terms entered by the user.<br> 24092 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>191 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3327 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='2849,652,2935,700' HREF='#0006508' ALT=''>
+<AREA SHAPE='RECT' COORDS='2720,782,2840,879' HREF='#0051603' ALT=''>
+<AREA SHAPE='RECT' COORDS='555,360,685,408' HREF='#0008104' ALT=''>
+<AREA SHAPE='RECT' COORDS='585,490,692,553' HREF='#0045184' ALT=''>
+<AREA SHAPE='RECT' COORDS='2560,490,2675,553' HREF='#0009057' ALT=''>
+<AREA SHAPE='RECT' COORDS='2701,652,2821,700' HREF='#0030163' ALT=''>
+<AREA SHAPE='RECT' COORDS='2547,636,2661,716' HREF='#0044265' ALT=''>
+<AREA SHAPE='RECT' COORDS='339,961,453,1009' HREF='#0015031' ALT=''>
+<AREA SHAPE='RECT' COORDS='1105,481,1188,561' HREF='#0048523' ALT=''>
+<AREA SHAPE='RECT' COORDS='968,627,1051,725' HREF='#0031324' ALT=''>
+<AREA SHAPE='RECT' COORDS='1605,1219,1704,1317' HREF='#0032055' ALT=''>
+<AREA SHAPE='RECT' COORDS='1337,344,1431,424' HREF='#0048519' ALT=''>
+<AREA SHAPE='RECT' COORDS='1523,481,1619,561' HREF='#0009892' ALT=''>
+<AREA SHAPE='RECT' COORDS='2320,490,2397,553' HREF='#0044248' ALT=''>
+<AREA SHAPE='RECT' COORDS='353,223,460,271' HREF='#0051234' ALT=''>
+<AREA SHAPE='RECT' COORDS='201,353,308,415' HREF='#0051649' ALT=''>
+<AREA SHAPE='RECT' COORDS='351,360,423,408' HREF='#0006810' ALT=''>
+<AREA SHAPE='RECT' COORDS='173,223,259,271' HREF='#0051641' ALT=''>
+<AREA SHAPE='RECT' COORDS='60,497,151,545' HREF='#0046907' ALT=''>
+<AREA SHAPE='RECT' COORDS='2307,652,2384,700' HREF='#0006950' ALT=''>
+<AREA SHAPE='RECT' COORDS='2221,799,2299,862' HREF='#0033554' ALT=''>
+<AREA SHAPE='RECT' COORDS='2137,223,2209,271' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='2197,645,2283,707' HREF='#0051716' ALT=''>
+<AREA SHAPE='RECT' COORDS='951,497,1081,545' HREF='#0007165' ALT=''>
+<AREA SHAPE='RECT' COORDS='2291,353,2373,415' HREF='#0044237' ALT=''>
+<AREA SHAPE='RECT' COORDS='135,1107,249,1155' HREF='#0006886' ALT=''>
+<AREA SHAPE='RECT' COORDS='128,1237,256,1299' HREF='#0032527' ALT=''>
+<AREA SHAPE='RECT' COORDS='2539,791,2696,871' HREF='#0043632' ALT=''>
+<AREA SHAPE='RECT' COORDS='2539,954,2696,1017' HREF='#0019941' ALT=''>
+<AREA SHAPE='RECT' COORDS='2067,799,2197,862' HREF='#0010629' ALT=''>
+<AREA SHAPE='RECT' COORDS='1543,1099,1639,1162' HREF='#0017148' ALT=''>
+<AREA SHAPE='RECT' COORDS='172,799,295,862' HREF='#0006888' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,1228,104,1308' HREF='#1903513' ALT=''>
+<AREA SHAPE='RECT' COORDS='1659,473,1744,570' HREF='#0051171' ALT=''>
+<AREA SHAPE='RECT' COORDS='1936,636,2019,716' HREF='#0051246' ALT=''>
+<AREA SHAPE='RECT' COORDS='1195,636,1315,716' HREF='#0034248' ALT=''>
+<AREA SHAPE='RECT' COORDS='1675,619,1760,733' HREF='#0051172' ALT=''>
+<AREA SHAPE='RECT' COORDS='779,490,872,553' HREF='#0080134' ALT=''>
+<AREA SHAPE='RECT' COORDS='744,636,827,716' HREF='#0080135' ALT=''>
+<AREA SHAPE='RECT' COORDS='337,807,455,855' HREF='#0015833' ALT=''>
+<AREA SHAPE='RECT' COORDS='1212,481,1295,561' HREF='#0031323' ALT=''>
+<AREA SHAPE='RECT' COORDS='1656,791,1781,871' HREF='#0032268' ALT=''>
+<AREA SHAPE='RECT' COORDS='1075,636,1171,716' HREF='#0031326' ALT=''>
+<AREA SHAPE='RECT' COORDS='63,1366,185,1429' HREF='#0030970' ALT=''>
+<AREA SHAPE='RECT' COORDS='2543,1228,2692,1308' HREF='#0043161' ALT=''>
+<AREA SHAPE='RECT' COORDS='2480,1373,2619,1421' HREF='#0030433' ALT=''>
+<AREA SHAPE='RECT' COORDS='2720,954,2840,1017' HREF='#0010498' ALT=''>
+<AREA SHAPE='RECT' COORDS='1523,636,1651,716' HREF='#0010556' ALT=''>
+<AREA SHAPE='RECT' COORDS='1315,782,1429,879' HREF='#2000112' ALT=''>
+<AREA SHAPE='RECT' COORDS='1504,782,1632,879' HREF='#0010558' ALT=''>
+<AREA SHAPE='RECT' COORDS='1355,928,1469,1043' HREF='#2000113' ALT=''>
+<AREA SHAPE='RECT' COORDS='829,791,947,871' HREF='#2001020' ALT=''>
+<AREA SHAPE='RECT' COORDS='771,954,888,1017' HREF='#2000001' ALT=''>
+<AREA SHAPE='RECT' COORDS='1805,782,1888,879' HREF='#0051248' ALT=''>
+<AREA SHAPE='RECT' COORDS='1521,937,1647,1034' HREF='#0032269' ALT=''>
+<AREA SHAPE='RECT' COORDS='441,101,527,149' HREF='#0051179' ALT=''>
+<AREA SHAPE='RECT' COORDS='504,223,619,271' HREF='#0033036' ALT=''>
+<AREA SHAPE='RECT' COORDS='1671,961,1767,1009' HREF='#0006417' ALT=''>
+<AREA SHAPE='RECT' COORDS='2389,954,2515,1017' HREF='#0010243' ALT=''>
+<AREA SHAPE='RECT' COORDS='2407,1107,2516,1155' HREF='#0036503' ALT=''>
+<AREA SHAPE='RECT' COORDS='1337,215,1431,278' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='835,353,928,415' HREF='#0048583' ALT=''>
+<AREA SHAPE='RECT' COORDS='1523,353,1619,415' HREF='#0019222' ALT=''>
+<AREA SHAPE='RECT' COORDS='1009,353,1092,415' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='2548,1099,2687,1162' HREF='#0006511' ALT=''>
+<AREA SHAPE='RECT' COORDS='851,645,944,707' HREF='#0006984' ALT=''>
+<AREA SHAPE='RECT' COORDS='321,497,452,545' HREF='#0071702' ALT=''>
+<AREA SHAPE='RECT' COORDS='175,497,297,545' HREF='#0016192' ALT=''>
+<AREA SHAPE='RECT' COORDS='476,490,561,553' HREF='#0071705' ALT=''>
+<AREA SHAPE='RECT' COORDS='1784,481,1912,561' HREF='#0060255' ALT=''>
+<AREA SHAPE='RECT' COORDS='1784,627,1912,725' HREF='#0010605' ALT=''>
+<AREA SHAPE='RECT' COORDS='2043,652,2173,700' HREF='#0010468' ALT=''>
+<AREA SHAPE='RECT' COORDS='1936,481,2019,561' HREF='#0080090' ALT=''>
+<AREA SHAPE='RECT' COORDS='2017,198,2113,295' HREF='#0002440' ALT=''>
+<AREA SHAPE='RECT' COORDS='1669,1091,1768,1171' HREF='#0043555' ALT=''>
+<AREA SHAPE='RECT' COORDS='2227,945,2341,1025' HREF='#0034976' ALT=''>
+<AREA SHAPE='RECT' COORDS='193,652,292,700' HREF='#0048193' ALT=''>
+<AREA SHAPE='RECT' COORDS='2408,652,2496,700' HREF='#0042221' ALT=''>
+<AREA SHAPE='RECT' COORDS='2429,799,2515,862' HREF='#1901698' ALT=''>
+<AREA SHAPE='RECT' COORDS='2323,799,2405,862' HREF='#0010033' ALT=''>
+<AREA SHAPE='RECT' COORDS='2009,101,2127,149' HREF='#0002376' ALT=''>
+<AREA SHAPE='RECT' COORDS='2117,5,2005,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='1624,101,1704,149' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='2211,497,2296,545' HREF='#0050896' ALT=''>
+<AREA SHAPE='RECT' COORDS='2527,101,2609,149' HREF='#0008152' ALT=''>
+<AREA SHAPE='RECT' COORDS='1389,636,1499,716' HREF='#0009890' ALT=''>
+<AREA SHAPE='RECT' COORDS='1171,782,1291,879' HREF='#0034249' ALT=''>
+<AREA SHAPE='RECT' COORDS='1051,782,1147,879' HREF='#0031327' ALT=''>
+<AREA SHAPE='RECT' COORDS='664,954,747,1017' HREF='#0007346' ALT=''>
+<AREA SHAPE='RECT' COORDS='655,1091,756,1171' HREF='#1904289' ALT=''>
+<AREA SHAPE='RECT' COORDS='424,652,536,700' HREF='#0042886' ALT=''>
+<AREA SHAPE='RECT' COORDS='2567,215,2697,278' HREF='#0071704' ALT=''>
+<AREA SHAPE='RECT' COORDS='2587,353,2717,415' HREF='#1901575' ALT=''>
+<AREA SHAPE='RECT' COORDS='2741,344,2851,424' HREF='#1901564' ALT=''>
+<AREA SHAPE='RECT' COORDS='2448,353,2563,415' HREF='#0043170' ALT=''>
+<AREA SHAPE='RECT' COORDS='712,799,805,862' HREF='#1901976' ALT=''>
+<AREA SHAPE='RECT' COORDS='2699,481,2808,561' HREF='#1901565' ALT=''>
+<AREA SHAPE='RECT' COORDS='547,954,640,1017' HREF='#0010564' ALT=''>
+<AREA SHAPE='RECT' COORDS='1912,799,2043,862' HREF='#0010608' ALT=''>
+<AREA SHAPE='RECT' COORDS='1389,490,1499,553' HREF='#0009889' ALT=''>
+<AREA SHAPE='RECT' COORDS='2465,223,2543,271' HREF='#0009056' ALT=''>
+<AREA SHAPE='RECT' COORDS='2721,207,2807,287' HREF='#0006807' ALT=''>
+<AREA SHAPE='RECT' COORDS='2831,223,2959,271' HREF='#0044238' ALT=''>
+<AREA SHAPE='RECT' COORDS='2832,497,2957,545' HREF='#0019538' ALT=''>
+<AREA SHAPE='RECT' COORDS='2421,481,2536,561' HREF='#0044260' ALT=''>
+<AREA SHAPE='RECT' COORDS='629,652,720,700' HREF='#0051726' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006984&amp;view=details' target="_blank">GO:0006984</a><a name=0006984></a></td>
+<td>ER-nucleus signaling pathway</td>
+<td  align=center>8.53E-5</td>
+<td  align=center>1E0</td>
+<td  align=center>8.02 (8795,35,188,6)</td>
+<td>
+<a id="ctrl_elements_GO:0006984" href="javascript:toggle('elements_GO:0006984')">[+] Show genes</a><br>
+<div id="elements_GO:0006984" style="display:none"> <font size=1>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+ATF4  -  activating transcription factor 4<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+PPP1R15B  -  protein phosphatase 1, regulatory subunit 15b<br>
+ATF6  -  activating transcription factor 6<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042886&amp;view=details' target="_blank">GO:0042886</a><a name=0042886></a></td>
+<td>amide transport</td>
+<td  align=center>8.97E-5</td>
+<td  align=center>5.67E-1</td>
+<td  align=center>1.87 (8795,949,188,38)</td>
+<td>
+<a id="ctrl_elements_GO:0042886" href="javascript:toggle('elements_GO:0042886')">[+] Show genes</a><br>
+<div id="elements_GO:0042886" style="display:none"> <font size=1>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+MICALL1  -  mical-like 1<br>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+GOLGA2  -  golgin a2<br>
+UEVLD  -  uev and lactate/malate dehyrogenase domains<br>
+RAB35  -  rab35, member ras oncogene family<br>
+TBC1D15  -  tbc1 domain family, member 15<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+IFT27  -  intraflagellar transport 27 homolog (chlamydomonas)<br>
+GOLGA4  -  golgin a4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+LIN7C  -  lin-7 homolog c (c. elegans)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+RINT1  -  rad50 interactor 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+PHAX  -  phosphorylated adaptor for rna export<br>
+SLU7  -  slu7 splicing factor homolog (s. cerevisiae)<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+ATP6AP1  -  atpase, h+ transporting, lysosomal accessory protein 1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+ACOX1  -  acyl-coa oxidase 1, palmitoyl<br>
+ARF4  -  adp-ribosylation factor 4<br>
+DUSP16  -  dual specificity phosphatase 16<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
+SCFD2  -  sec1 family domain containing 2<br>
+EXOC1  -  exocyst complex component 1<br>
+TMEM9  -  transmembrane protein 9<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032055&amp;view=details' target="_blank">GO:0032055</a><a name=0032055></a></td>
+<td>negative regulation of translation in response to stress</td>
+<td  align=center>1.83E-4</td>
+<td  align=center>7.72E-1</td>
+<td  align=center>23.39 (8795,6,188,3)</td>
+<td>
+<a id="ctrl_elements_GO:0032055" href="javascript:toggle('elements_GO:0032055')">[+] Show genes</a><br>
+<div id="elements_GO:0032055" style="display:none"> <font size=1>
+ATF4  -  activating transcription factor 4<br>
+SESN2  -  sestrin 2<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045184&amp;view=details' target="_blank">GO:0045184</a><a name=0045184></a></td>
+<td>establishment of protein localization</td>
+<td  align=center>2.27E-4</td>
+<td  align=center>7.16E-1</td>
+<td  align=center>1.79 (8795,992,188,38)</td>
+<td>
+<a id="ctrl_elements_GO:0045184" href="javascript:toggle('elements_GO:0045184')">[+] Show genes</a><br>
+<div id="elements_GO:0045184" style="display:none"> <font size=1>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+MICALL1  -  mical-like 1<br>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+GOLGA2  -  golgin a2<br>
+UEVLD  -  uev and lactate/malate dehyrogenase domains<br>
+RAB35  -  rab35, member ras oncogene family<br>
+TBC1D15  -  tbc1 domain family, member 15<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+IFT27  -  intraflagellar transport 27 homolog (chlamydomonas)<br>
+GOLGA4  -  golgin a4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+LIN7C  -  lin-7 homolog c (c. elegans)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+RINT1  -  rad50 interactor 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+PHAX  -  phosphorylated adaptor for rna export<br>
+SLU7  -  slu7 splicing factor homolog (s. cerevisiae)<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+ATP6AP1  -  atpase, h+ transporting, lysosomal accessory protein 1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+ACOX1  -  acyl-coa oxidase 1, palmitoyl<br>
+ARF4  -  adp-ribosylation factor 4<br>
+DUSP16  -  dual specificity phosphatase 16<br>
+CRIPT  -  cysteine-rich pdz-binding protein<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
+SCFD2  -  sec1 family domain containing 2<br>
+EXOC1  -  exocyst complex component 1<br>
+BAG6  -  bcl2-associated athanogene 6<br>
+TMEM9  -  transmembrane protein 9<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030970&amp;view=details' target="_blank">GO:0030970</a><a name=0030970></a></td>
+<td>retrograde protein transport, ER to cytosol</td>
+<td  align=center>2.29E-4</td>
+<td  align=center>5.8E-1</td>
+<td  align=center>12.48 (8795,15,188,4)</td>
+<td>
+<a id="ctrl_elements_GO:0030970" href="javascript:toggle('elements_GO:0030970')">[+] Show genes</a><br>
+<div id="elements_GO:0030970" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903513&amp;view=details' target="_blank">GO:1903513</a><a name=1903513></a></td>
+<td>endoplasmic reticulum to cytosol transport</td>
+<td  align=center>2.29E-4</td>
+<td  align=center>4.83E-1</td>
+<td  align=center>12.48 (8795,15,188,4)</td>
+<td>
+<a id="ctrl_elements_GO:1903513" href="javascript:toggle('elements_GO:1903513')">[+] Show genes</a><br>
+<div id="elements_GO:1903513" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071705&amp;view=details' target="_blank">GO:0071705</a><a name=0071705></a></td>
+<td>nitrogen compound transport</td>
+<td  align=center>2.61E-4</td>
+<td  align=center>4.71E-1</td>
+<td  align=center>1.71 (8795,1146,188,42)</td>
+<td>
+<a id="ctrl_elements_GO:0071705" href="javascript:toggle('elements_GO:0071705')">[+] Show genes</a><br>
+<div id="elements_GO:0071705" style="display:none"> <font size=1>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+MICALL1  -  mical-like 1<br>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+GOLGA2  -  golgin a2<br>
+UEVLD  -  uev and lactate/malate dehyrogenase domains<br>
+RAB35  -  rab35, member ras oncogene family<br>
+TBC1D15  -  tbc1 domain family, member 15<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+IFT27  -  intraflagellar transport 27 homolog (chlamydomonas)<br>
+SLC52A2  -  solute carrier family 52 (riboflavin transporter), member 2<br>
+GOLGA4  -  golgin a4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+LIN7C  -  lin-7 homolog c (c. elegans)<br>
+SLC35D2  -  solute carrier family 35 (udp-glcnac/udp-glucose transporter), member d2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+RINT1  -  rad50 interactor 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+PHAX  -  phosphorylated adaptor for rna export<br>
+SLU7  -  slu7 splicing factor homolog (s. cerevisiae)<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+ATP6AP1  -  atpase, h+ transporting, lysosomal accessory protein 1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+SLC1A5  -  solute carrier family 1 (neutral amino acid transporter), member 5<br>
+ACOX1  -  acyl-coa oxidase 1, palmitoyl<br>
+ARF4  -  adp-ribosylation factor 4<br>
+SLC35B3  -  solute carrier family 35 (adenosine 3'-phospho 5'-phosphosulfate transporter), member b3<br>
+DUSP16  -  dual specificity phosphatase 16<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
+SCFD2  -  sec1 family domain containing 2<br>
+EXOC1  -  exocyst complex component 1<br>
+TMEM9  -  transmembrane protein 9<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015031&amp;view=details' target="_blank">GO:0015031</a><a name=0015031></a></td>
+<td>protein transport</td>
+<td  align=center>2.62E-4</td>
+<td  align=center>4.14E-1</td>
+<td  align=center>1.82 (8795,927,188,36)</td>
+<td>
+<a id="ctrl_elements_GO:0015031" href="javascript:toggle('elements_GO:0015031')">[+] Show genes</a><br>
+<div id="elements_GO:0015031" style="display:none"> <font size=1>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+MICALL1  -  mical-like 1<br>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+GOLGA2  -  golgin a2<br>
+UEVLD  -  uev and lactate/malate dehyrogenase domains<br>
+RAB35  -  rab35, member ras oncogene family<br>
+TBC1D15  -  tbc1 domain family, member 15<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+IFT27  -  intraflagellar transport 27 homolog (chlamydomonas)<br>
+GOLGA4  -  golgin a4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+LIN7C  -  lin-7 homolog c (c. elegans)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+RINT1  -  rad50 interactor 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+PHAX  -  phosphorylated adaptor for rna export<br>
+SLU7  -  slu7 splicing factor homolog (s. cerevisiae)<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+ATP6AP1  -  atpase, h+ transporting, lysosomal accessory protein 1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+ACOX1  -  acyl-coa oxidase 1, palmitoyl<br>
+ARF4  -  adp-ribosylation factor 4<br>
+DUSP16  -  dual specificity phosphatase 16<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
+SCFD2  -  sec1 family domain containing 2<br>
+EXOC1  -  exocyst complex component 1<br>
+TMEM9  -  transmembrane protein 9<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015833&amp;view=details' target="_blank">GO:0015833</a><a name=0015833></a></td>
+<td>peptide transport</td>
+<td  align=center>3.1E-4</td>
+<td  align=center>4.35E-1</td>
+<td  align=center>1.80 (8795,935,188,36)</td>
+<td>
+<a id="ctrl_elements_GO:0015833" href="javascript:toggle('elements_GO:0015833')">[+] Show genes</a><br>
+<div id="elements_GO:0015833" style="display:none"> <font size=1>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+MICALL1  -  mical-like 1<br>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+GOLGA2  -  golgin a2<br>
+UEVLD  -  uev and lactate/malate dehyrogenase domains<br>
+RAB35  -  rab35, member ras oncogene family<br>
+TBC1D15  -  tbc1 domain family, member 15<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+IFT27  -  intraflagellar transport 27 homolog (chlamydomonas)<br>
+GOLGA4  -  golgin a4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+LIN7C  -  lin-7 homolog c (c. elegans)<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+RINT1  -  rad50 interactor 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+PHAX  -  phosphorylated adaptor for rna export<br>
+SLU7  -  slu7 splicing factor homolog (s. cerevisiae)<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+ATP6AP1  -  atpase, h+ transporting, lysosomal accessory protein 1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+ACOX1  -  acyl-coa oxidase 1, palmitoyl<br>
+ARF4  -  adp-ribosylation factor 4<br>
+DUSP16  -  dual specificity phosphatase 16<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
+SCFD2  -  sec1 family domain containing 2<br>
+EXOC1  -  exocyst complex component 1<br>
+TMEM9  -  transmembrane protein 9<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034976&amp;view=details' target="_blank">GO:0034976</a><a name=0034976></a></td>
+<td>response to endoplasmic reticulum stress</td>
+<td  align=center>3.14E-4</td>
+<td  align=center>3.96E-1</td>
+<td  align=center>3.07 (8795,198,188,13)</td>
+<td>
+<a id="ctrl_elements_GO:0034976" href="javascript:toggle('elements_GO:0034976')">[+] Show genes</a><br>
+<div id="elements_GO:0034976" style="display:none"> <font size=1>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+EIF2AK4  -  eukaryotic translation initiation factor 2 alpha kinase 4<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+ATF4  -  activating transcription factor 4<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+FKBP14  -  fk506 binding protein 14, 22 kda<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+BAG6  -  bcl2-associated athanogene 6<br>
+SESN2  -  sestrin 2<br>
+ATF6  -  activating transcription factor 6<br>
+PPP1R15B  -  protein phosphatase 1, regulatory subunit 15b<br>
+VIMP  -  vcp-interacting membrane protein<br>
+UBXN4  -  ubx domain protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030433&amp;view=details' target="_blank">GO:0030433</a><a name=0030433></a></td>
+<td>ubiquitin-dependent ERAD pathway</td>
+<td  align=center>3.67E-4</td>
+<td  align=center>4.21E-1</td>
+<td  align=center>5.20 (8795,63,188,7)</td>
+<td>
+<a id="ctrl_elements_GO:0030433" href="javascript:toggle('elements_GO:0030433')">[+] Show genes</a><br>
+<div id="elements_GO:0030433" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+BAG6  -  bcl2-associated athanogene 6<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+VIMP  -  vcp-interacting membrane protein<br>
+UBXN4  -  ubx domain protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904289&amp;view=details' target="_blank">GO:1904289</a><a name=1904289></a></td>
+<td>regulation of mitotic DNA damage checkpoint</td>
+<td  align=center>4.55E-4</td>
+<td  align=center>4.79E-1</td>
+<td  align=center>46.78 (8795,2,188,2)</td>
+<td>
+<a id="ctrl_elements_GO:1904289" href="javascript:toggle('elements_GO:1904289')">[+] Show genes</a><br>
+<div id="elements_GO:1904289" style="display:none"> <font size=1>
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
+RINT1  -  rad50 interactor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006888&amp;view=details' target="_blank">GO:0006888</a><a name=0006888></a></td>
+<td>ER to Golgi vesicle-mediated transport</td>
+<td  align=center>5.44E-4</td>
+<td  align=center>5.28E-1</td>
+<td  align=center>3.52 (8795,133,188,10)</td>
+<td>
+<a id="ctrl_elements_GO:0006888" href="javascript:toggle('elements_GO:0006888')">[+] Show genes</a><br>
+<div id="elements_GO:0006888" style="display:none"> <font size=1>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+TRIP11  -  thyroid hormone receptor interactor 11<br>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+STX5  -  syntaxin 5<br>
+CD55  -  cd55 molecule, decay accelerating factor for complement (cromer blood group)<br>
+GOLGA2  -  golgin a2<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+ARF4  -  adp-ribosylation factor 4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002440&amp;view=details' target="_blank">GO:0002440</a><a name=0002440></a></td>
+<td>production of molecular mediator of immune response</td>
+<td  align=center>6.09E-4</td>
+<td  align=center>5.5E-1</td>
+<td  align=center>9.85 (8795,19,188,4)</td>
+<td>
+<a id="ctrl_elements_GO:0002440" href="javascript:toggle('elements_GO:0002440')">[+] Show genes</a><br>
+<div id="elements_GO:0002440" style="display:none"> <font size=1>
+IGKV1-12  -  immunoglobulin kappa variable 1-12<br>
+IGKC  -  immunoglobulin kappa constant<br>
+CD55  -  cd55 molecule, decay accelerating factor for complement (cromer blood group)<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071702&amp;view=details' target="_blank">GO:0071702</a><a name=0071702></a></td>
+<td>organic substance transport</td>
+<td  align=center>6.55E-4</td>
+<td  align=center>5.51E-1</td>
+<td  align=center>1.62 (8795,1273,188,44)</td>
+<td>
+<a id="ctrl_elements_GO:0071702" href="javascript:toggle('elements_GO:0071702')">[+] Show genes</a><br>
+<div id="elements_GO:0071702" style="display:none"> <font size=1>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+MICALL1  -  mical-like 1<br>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+GOLGA2  -  golgin a2<br>
+UEVLD  -  uev and lactate/malate dehyrogenase domains<br>
+RAB35  -  rab35, member ras oncogene family<br>
+TBC1D15  -  tbc1 domain family, member 15<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+IFT27  -  intraflagellar transport 27 homolog (chlamydomonas)<br>
+SLC52A2  -  solute carrier family 52 (riboflavin transporter), member 2<br>
+GOLGA4  -  golgin a4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+LIN7C  -  lin-7 homolog c (c. elegans)<br>
+SLC35D2  -  solute carrier family 35 (udp-glcnac/udp-glucose transporter), member d2<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+GPR89A  -  g protein-coupled receptor 89a<br>
+SESN2  -  sestrin 2<br>
+LDLRAP1  -  low density lipoprotein receptor adaptor protein 1<br>
+RINT1  -  rad50 interactor 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+SLC33A1  -  solute carrier family 33 (acetyl-coa transporter), member 1<br>
+PHAX  -  phosphorylated adaptor for rna export<br>
+SLU7  -  slu7 splicing factor homolog (s. cerevisiae)<br>
+RAB5A  -  rab5a, member ras oncogene family<br>
+STX5  -  syntaxin 5<br>
+ATP6AP1  -  atpase, h+ transporting, lysosomal accessory protein 1<br>
+YIPF5  -  yip1 domain family, member 5<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+SLC1A5  -  solute carrier family 1 (neutral amino acid transporter), member 5<br>
+ACOX1  -  acyl-coa oxidase 1, palmitoyl<br>
+ARF4  -  adp-ribosylation factor 4<br>
+SLC35B3  -  solute carrier family 35 (adenosine 3'-phospho 5'-phosphosulfate transporter), member b3<br>
+DUSP16  -  dual specificity phosphatase 16<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
+SCFD2  -  sec1 family domain containing 2<br>
+EXOC1  -  exocyst complex component 1<br>
+TMEM9  -  transmembrane protein 9<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032527&amp;view=details' target="_blank">GO:0032527</a><a name=0032527></a></td>
+<td>protein exit from endoplasmic reticulum</td>
+<td  align=center>7.49E-4</td>
+<td  align=center>5.91E-1</td>
+<td  align=center>9.36 (8795,20,188,4)</td>
+<td>
+<a id="ctrl_elements_GO:0032527" href="javascript:toggle('elements_GO:0032527')">[+] Show genes</a><br>
+<div id="elements_GO:0032527" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+VIMP  -  vcp-interacting membrane protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036503&amp;view=details' target="_blank">GO:0036503</a><a name=0036503></a></td>
+<td>ERAD pathway</td>
+<td  align=center>7.64E-4</td>
+<td  align=center>5.68E-1</td>
+<td  align=center>4.61 (8795,71,188,7)</td>
+<td>
+<a id="ctrl_elements_GO:0036503" href="javascript:toggle('elements_GO:0036503')">[+] Show genes</a><br>
+<div id="elements_GO:0036503" style="display:none"> <font size=1>
+OS9  -  osteosarcoma amplified 9, endoplasmic reticulum lectin<br>
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+BAG6  -  bcl2-associated athanogene 6<br>
+DNAJB9  -  dnaj (hsp40) homolog, subfamily b, member 9<br>
+VIMP  -  vcp-interacting membrane protein<br>
+UBXN4  -  ubx domain protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048193&amp;view=details' target="_blank">GO:0048193</a><a name=0048193></a></td>
+<td>Golgi vesicle transport</td>
+<td  align=center>9.2E-4</td>
+<td  align=center>6.46E-1</td>
+<td  align=center>2.62 (8795,250,188,14)</td>
+<td>
+<a id="ctrl_elements_GO:0048193" href="javascript:toggle('elements_GO:0048193')">[+] Show genes</a><br>
+<div id="elements_GO:0048193" style="display:none"> <font size=1>
+ARFGAP3  -  adp-ribosylation factor gtpase activating protein 3<br>
+TRIP11  -  thyroid hormone receptor interactor 11<br>
+STX5  -  syntaxin 5<br>
+GOLGA2  -  golgin a2<br>
+SEC24D  -  sec24 family, member d (s. cerevisiae)<br>
+GOLGA4  -  golgin a4<br>
+COG8  -  component of oligomeric golgi complex 8<br>
+ARF4  -  adp-ribosylation factor 4<br>
+MCFD2  -  multiple coagulation factor deficiency 2<br>
+CD55  -  cd55 molecule, decay accelerating factor for complement (cromer blood group)<br>
+EXOC1  -  exocyst complex component 1<br>
+RINT1  -  rad50 interactor 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+TMED7  -  transmembrane emp24 protein transport domain containing 7<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9226 genes out of 9685 gene terms entered by the user.<br> 9226 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>198 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='645,481,776,529' HREF='#0008565' ALT=''>
+<AREA SHAPE='RECT' COORDS='779,611,936,674' HREF='#0008320' ALT=''>
+<AREA SHAPE='RECT' COORDS='284,603,391,683' HREF='#0030942' ALT=''>
+<AREA SHAPE='RECT' COORDS='1264,465,1373,545' HREF='#0016758' ALT=''>
+<AREA SHAPE='RECT' COORDS='1264,611,1373,674' HREF='#0004576' ALT=''>
+<AREA SHAPE='RECT' COORDS='800,465,915,545' HREF='#0022884' ALT=''>
+<AREA SHAPE='RECT' COORDS='276,481,396,529' HREF='#0005048' ALT=''>
+<AREA SHAPE='RECT' COORDS='359,101,431,149' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,205,133,253' HREF='#0044877' ALT=''>
+<AREA SHAPE='RECT' COORDS='157,198,253,261' HREF='#1901363' ALT=''>
+<AREA SHAPE='RECT' COORDS='408,205,509,253' HREF='#0033218' ALT=''>
+<AREA SHAPE='RECT' COORDS='277,198,384,261' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='533,205,640,253' HREF='#0005515' ALT=''>
+<AREA SHAPE='RECT' COORDS='1457,611,1572,674' HREF='#0003756' ALT=''>
+<AREA SHAPE='RECT' COORDS='844,5,730,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='800,101,888,149' HREF='#0005215' ALT=''>
+<AREA SHAPE='RECT' COORDS='1281,101,1356,149' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='157,481,251,529' HREF='#0003723' ALT=''>
+<AREA SHAPE='RECT' COORDS='145,619,260,667' HREF='#0008312' ALT=''>
+<AREA SHAPE='RECT' COORDS='835,198,949,261' HREF='#0022857' ALT=''>
+<AREA SHAPE='RECT' COORDS='280,335,389,383' HREF='#0042277' ALT=''>
+<AREA SHAPE='RECT' COORDS='1131,205,1245,253' HREF='#0016491' ALT=''>
+<AREA SHAPE='RECT' COORDS='1273,205,1364,253' HREF='#0016740' ALT=''>
+<AREA SHAPE='RECT' COORDS='1400,205,1485,253' HREF='#0016853' ALT=''>
+<AREA SHAPE='RECT' COORDS='1536,465,1613,545' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='1128,310,1243,407' HREF='#0016667' ALT=''>
+<AREA SHAPE='RECT' COORDS='1273,310,1364,407' HREF='#0016757' ALT=''>
+<AREA SHAPE='RECT' COORDS='1125,474,1240,537' HREF='#0015036' ALT=''>
+<AREA SHAPE='RECT' COORDS='413,335,520,383' HREF='#0051787' ALT=''>
+<AREA SHAPE='RECT' COORDS='931,327,1085,390' HREF='#0042887' ALT=''>
+<AREA SHAPE='RECT' COORDS='939,474,1101,537' HREF='#1904680' ALT=''>
+<AREA SHAPE='RECT' COORDS='8,335,131,383' HREF='#0043021' ALT=''>
+<AREA SHAPE='RECT' COORDS='1393,327,1508,390' HREF='#0016860' ALT=''>
+<AREA SHAPE='RECT' COORDS='31,481,108,529' HREF='#0043022' ALT=''>
+<AREA SHAPE='RECT' COORDS='159,335,252,383' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='1123,611,1240,674' HREF='#0015037' ALT=''>
+<AREA SHAPE='RECT' COORDS='1397,457,1512,554' HREF='#0016864' ALT=''>
+<AREA SHAPE='RECT' COORDS='544,335,629,383' HREF='#0051087' ALT=''>
+<AREA SHAPE='RECT' COORDS='1185,731,1452,794' HREF='#0004579' ALT=''>
+<AREA SHAPE='RECT' COORDS='653,335,760,383' HREF='#0051082' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004576&amp;view=details' target="_blank">GO:0004576</a><a name=0004576></a></td>
+<td>oligosaccharyl transferase activity</td>
+<td  align=center>6.68E-10</td>
+<td  align=center>2.45E-6</td>
+<td  align=center>79.66 (8795,6,92,5)</td>
+<td>
+<a id="ctrl_elements_GO:0004576" href="javascript:toggle('elements_GO:0004576')">[+] Show genes</a><br>
+<div id="elements_GO:0004576" style="display:none"> <font size=1>
+RPN2  -  ribophorin ii<br>
+RPN1  -  ribophorin i<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br>
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004579&amp;view=details' target="_blank">GO:0004579</a><a name=0004579></a></td>
+<td>dolichyl-diphosphooligosaccharide-protein glycotransferase activity</td>
+<td  align=center>5.56E-8</td>
+<td  align=center>1.02E-4</td>
+<td  align=center>76.48 (8795,5,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0004579" href="javascript:toggle('elements_GO:0004579')">[+] Show genes</a><br>
+<div id="elements_GO:0004579" style="display:none"> <font size=1>
+RPN2  -  ribophorin ii<br>
+RPN1  -  ribophorin i<br>
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br>
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051787&amp;view=details' target="_blank">GO:0051787</a><a name=0051787></a></td>
+<td>misfolded protein binding</td>
+<td  align=center>9.72E-8</td>
+<td  align=center>1.19E-4</td>
+<td  align=center>24.94 (8795,23,92,6)</td>
+<td>
+<a id="ctrl_elements_GO:0051787" href="javascript:toggle('elements_GO:0051787')">[+] Show genes</a><br>
+<div id="elements_GO:0051787" style="display:none"> <font size=1>
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+SDF2L1  -  stromal cell-derived factor 2-like 1<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+DERL2  -  derlin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016864&amp;view=details' target="_blank">GO:0016864</a><a name=0016864></a></td>
+<td>intramolecular oxidoreductase activity, transposing S-S bonds</td>
+<td  align=center>3.1E-7</td>
+<td  align=center>2.85E-4</td>
+<td  align=center>31.87 (8795,15,92,5)</td>
+<td>
+<a id="ctrl_elements_GO:0016864" href="javascript:toggle('elements_GO:0016864')">[+] Show genes</a><br>
+<div id="elements_GO:0016864" style="display:none"> <font size=1>
+CRELD2  -  cysteine-rich with egf-like domains 2<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+PDIA6  -  protein disulfide isomerase family a, member 6<br>
+PDIA5  -  protein disulfide isomerase family a, member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003756&amp;view=details' target="_blank">GO:0003756</a><a name=0003756></a></td>
+<td>protein disulfide isomerase activity</td>
+<td  align=center>3.1E-7</td>
+<td  align=center>2.28E-4</td>
+<td  align=center>31.87 (8795,15,92,5)</td>
+<td>
+<a id="ctrl_elements_GO:0003756" href="javascript:toggle('elements_GO:0003756')">[+] Show genes</a><br>
+<div id="elements_GO:0003756" style="display:none"> <font size=1>
+CRELD2  -  cysteine-rich with egf-like domains 2<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+PDIA6  -  protein disulfide isomerase family a, member 6<br>
+PDIA5  -  protein disulfide isomerase family a, member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016758&amp;view=details' target="_blank">GO:0016758</a><a name=0016758></a></td>
+<td>transferase activity, transferring hexosyl groups</td>
+<td  align=center>3.55E-7</td>
+<td  align=center>2.18E-4</td>
+<td  align=center>9.56 (8795,90,92,9)</td>
+<td>
+<a id="ctrl_elements_GO:0016758" href="javascript:toggle('elements_GO:0016758')">[+] Show genes</a><br>
+<div id="elements_GO:0016758" style="display:none"> <font size=1>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+RPN2  -  ribophorin ii<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+RPN1  -  ribophorin i<br>
+SDF2L1  -  stromal cell-derived factor 2-like 1<br>
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br>
+CHPF  -  chondroitin polymerizing factor<br>
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016757&amp;view=details' target="_blank">GO:0016757</a><a name=0016757></a></td>
+<td>transferase activity, transferring glycosyl groups</td>
+<td  align=center>1.05E-6</td>
+<td  align=center>5.49E-4</td>
+<td  align=center>7.24 (8795,132,92,10)</td>
+<td>
+<a id="ctrl_elements_GO:0016757" href="javascript:toggle('elements_GO:0016757')">[+] Show genes</a><br>
+<div id="elements_GO:0016757" style="display:none"> <font size=1>
+MGAT1  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+RPN2  -  ribophorin ii<br>
+MGAT2  -  mannosyl (alpha-1,6-)-glycoprotein beta-1,2-n-acetylglucosaminyltransferase<br>
+RPN1  -  ribophorin i<br>
+ALG5  -  alg5, dolichyl-phosphate beta-glucosyltransferase<br>
+SDF2L1  -  stromal cell-derived factor 2-like 1<br>
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br>
+CHPF  -  chondroitin polymerizing factor<br>
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
+ST6GALNAC4  -  st6 (alpha-n-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-n-acetylgalactosaminide alpha-2,6-sialyltransferase 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016853&amp;view=details' target="_blank">GO:0016853</a><a name=0016853></a></td>
+<td>isomerase activity</td>
+<td  align=center>1.69E-6</td>
+<td  align=center>7.75E-4</td>
+<td  align=center>7.97 (8795,108,92,9)</td>
+<td>
+<a id="ctrl_elements_GO:0016853" href="javascript:toggle('elements_GO:0016853')">[+] Show genes</a><br>
+<div id="elements_GO:0016853" style="display:none"> <font size=1>
+FKBP11  -  fk506 binding protein 11, 19 kda<br>
+PGM3  -  phosphoglucomutase 3<br>
+CRELD2  -  cysteine-rich with egf-like domains 2<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+FKBP2  -  fk506 binding protein 2, 13kda<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+PDIA6  -  protein disulfide isomerase family a, member 6<br>
+PDIA5  -  protein disulfide isomerase family a, member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015037&amp;view=details' target="_blank">GO:0015037</a><a name=0015037></a></td>
+<td>peptide disulfide oxidoreductase activity</td>
+<td  align=center>3.5E-6</td>
+<td  align=center>1.43E-3</td>
+<td  align=center>34.76 (8795,11,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0015037" href="javascript:toggle('elements_GO:0015037')">[+] Show genes</a><br>
+<div id="elements_GO:0015037" style="display:none"> <font size=1>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+PDIA6  -  protein disulfide isomerase family a, member 6<br>
+PDIA5  -  protein disulfide isomerase family a, member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008320&amp;view=details' target="_blank">GO:0008320</a><a name=0008320></a></td>
+<td>protein transmembrane transporter activity</td>
+<td  align=center>2.4E-5</td>
+<td  align=center>8.83E-3</td>
+<td  align=center>22.49 (8795,17,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0008320" href="javascript:toggle('elements_GO:0008320')">[+] Show genes</a><br>
+<div id="elements_GO:0008320" style="display:none"> <font size=1>
+SEC63  -  sec63 homolog (s. cerevisiae)<br>
+SEC61G  -  sec61 gamma subunit<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051082&amp;view=details' target="_blank">GO:0051082</a><a name=0051082></a></td>
+<td>unfolded protein binding</td>
+<td  align=center>2.77E-5</td>
+<td  align=center>9.24E-3</td>
+<td  align=center>7.87 (8795,85,92,7)</td>
+<td>
+<a id="ctrl_elements_GO:0051082" href="javascript:toggle('elements_GO:0051082')">[+] Show genes</a><br>
+<div id="elements_GO:0051082" style="display:none"> <font size=1>
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
+HSPA13  -  heat shock protein 70kda family, member 13<br>
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
+ERLEC1  -  endoplasmic reticulum lectin 1<br>
+PPIB  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+LMAN1  -  lectin, mannose-binding, 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016860&amp;view=details' target="_blank">GO:0016860</a><a name=0016860></a></td>
+<td>intramolecular oxidoreductase activity</td>
+<td  align=center>2.84E-5</td>
+<td  align=center>8.7E-3</td>
+<td  align=center>13.66 (8795,35,92,5)</td>
+<td>
+<a id="ctrl_elements_GO:0016860" href="javascript:toggle('elements_GO:0016860')">[+] Show genes</a><br>
+<div id="elements_GO:0016860" style="display:none"> <font size=1>
+CRELD2  -  cysteine-rich with egf-like domains 2<br>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+PDIA6  -  protein disulfide isomerase family a, member 6<br>
+PDIA5  -  protein disulfide isomerase family a, member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008312&amp;view=details' target="_blank">GO:0008312</a><a name=0008312></a></td>
+<td>7S RNA binding</td>
+<td  align=center>3.76E-5</td>
+<td  align=center>1.06E-2</td>
+<td  align=center>40.97 (8795,7,92,3)</td>
+<td>
+<a id="ctrl_elements_GO:0008312" href="javascript:toggle('elements_GO:0008312')">[+] Show genes</a><br>
+<div id="elements_GO:0008312" style="display:none"> <font size=1>
+SRP68  -  signal recognition particle 68kda<br>
+SRP54  -  signal recognition particle 54kda<br>
+SRP19  -  signal recognition particle 19kda<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022884&amp;view=details' target="_blank">GO:0022884</a><a name=0022884></a></td>
+<td>macromolecule transmembrane transporter activity</td>
+<td  align=center>5.86E-5</td>
+<td  align=center>1.54E-2</td>
+<td  align=center>18.21 (8795,21,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0022884" href="javascript:toggle('elements_GO:0022884')">[+] Show genes</a><br>
+<div id="elements_GO:0022884" style="display:none"> <font size=1>
+SEC63  -  sec63 homolog (s. cerevisiae)<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SEC61G  -  sec61 gamma subunit<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904680&amp;view=details' target="_blank">GO:1904680</a><a name=1904680></a></td>
+<td>peptide transmembrane transporter activity</td>
+<td  align=center>1.2E-4</td>
+<td  align=center>2.93E-2</td>
+<td  align=center>15.30 (8795,25,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:1904680" href="javascript:toggle('elements_GO:1904680')">[+] Show genes</a><br>
+<div id="elements_GO:1904680" style="display:none"> <font size=1>
+SEC63  -  sec63 homolog (s. cerevisiae)<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SEC61G  -  sec61 gamma subunit<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043022&amp;view=details' target="_blank">GO:0043022</a><a name=0043022></a></td>
+<td>ribosome binding</td>
+<td  align=center>1.64E-4</td>
+<td  align=center>3.77E-2</td>
+<td  align=center>9.56 (8795,50,92,5)</td>
+<td>
+<a id="ctrl_elements_GO:0043022" href="javascript:toggle('elements_GO:0043022')">[+] Show genes</a><br>
+<div id="elements_GO:0043022" style="display:none"> <font size=1>
+SRP68  -  signal recognition particle 68kda<br>
+SRP19  -  signal recognition particle 19kda<br>
+RPN2  -  ribophorin ii<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008565&amp;view=details' target="_blank">GO:0008565</a><a name=0008565></a></td>
+<td>protein transporter activity</td>
+<td  align=center>2.18E-4</td>
+<td  align=center>4.71E-2</td>
+<td  align=center>13.19 (8795,29,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0008565" href="javascript:toggle('elements_GO:0008565')">[+] Show genes</a><br>
+<div id="elements_GO:0008565" style="display:none"> <font size=1>
+SEC63  -  sec63 homolog (s. cerevisiae)<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SEC61G  -  sec61 gamma subunit<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043021&amp;view=details' target="_blank">GO:0043021</a><a name=0043021></a></td>
+<td>ribonucleoprotein complex binding</td>
+<td  align=center>2.61E-4</td>
+<td  align=center>5.33E-2</td>
+<td  align=center>5.53 (8795,121,92,7)</td>
+<td>
+<a id="ctrl_elements_GO:0043021" href="javascript:toggle('elements_GO:0043021')">[+] Show genes</a><br>
+<div id="elements_GO:0043021" style="display:none"> <font size=1>
+SRP68  -  signal recognition particle 68kda<br>
+SRP54  -  signal recognition particle 54kda<br>
+SRP19  -  signal recognition particle 19kda<br>
+RPN2  -  ribophorin ii<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+DERL2  -  derlin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015036&amp;view=details' target="_blank">GO:0015036</a><a name=0015036></a></td>
+<td>disulfide oxidoreductase activity</td>
+<td  align=center>2.84E-4</td>
+<td  align=center>5.49E-2</td>
+<td  align=center>12.34 (8795,31,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0015036" href="javascript:toggle('elements_GO:0015036')">[+] Show genes</a><br>
+<div id="elements_GO:0015036" style="display:none"> <font size=1>
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
+PDIA4  -  protein disulfide isomerase family a, member 4<br>
+PDIA6  -  protein disulfide isomerase family a, member 6<br>
+PDIA5  -  protein disulfide isomerase family a, member 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042887&amp;view=details' target="_blank">GO:0042887</a><a name=0042887></a></td>
+<td>amide transmembrane transporter activity</td>
+<td  align=center>3.22E-4</td>
+<td  align=center>5.92E-2</td>
+<td  align=center>11.95 (8795,32,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0042887" href="javascript:toggle('elements_GO:0042887')">[+] Show genes</a><br>
+<div id="elements_GO:0042887" style="display:none"> <font size=1>
+SEC63  -  sec63 homolog (s. cerevisiae)<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+SEC61G  -  sec61 gamma subunit<br>
+TMED10  -  transmembrane emp24-like trafficking protein 10 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030942&amp;view=details' target="_blank">GO:0030942</a><a name=0030942></a></td>
+<td>endoplasmic reticulum signal peptide binding</td>
+<td  align=center>3.23E-4</td>
+<td  align=center>5.64E-2</td>
+<td  align=center>63.73 (8795,3,92,2)</td>
+<td>
+<a id="ctrl_elements_GO:0030942" href="javascript:toggle('elements_GO:0030942')">[+] Show genes</a><br>
+<div id="elements_GO:0030942" style="display:none"> <font size=1>
+SRP68  -  signal recognition particle 68kda<br>
+SRP54  -  signal recognition particle 54kda<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005048&amp;view=details' target="_blank">GO:0005048</a><a name=0005048></a></td>
+<td>signal sequence binding</td>
+<td  align=center>6.31E-4</td>
+<td  align=center>1.05E-1</td>
+<td  align=center>10.06 (8795,38,92,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005048" href="javascript:toggle('elements_GO:0005048')">[+] Show genes</a><br>
+<div id="elements_GO:0005048" style="display:none"> <font size=1>
+SRP68  -  signal recognition particle 68kda<br>
+SRP54  -  signal recognition particle 54kda<br>
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051087&amp;view=details' target="_blank">GO:0051087</a><a name=0051087></a></td>
+<td>chaperone binding</td>
+<td  align=center>9.63E-4</td>
+<td  align=center>1.54E-1</td>
+<td  align=center>6.55 (8795,73,92,5)</td>
+<td>
+<a id="ctrl_elements_GO:0051087" href="javascript:toggle('elements_GO:0051087')">[+] Show genes</a><br>
+<div id="elements_GO:0051087" style="display:none"> <font size=1>
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
+FICD  -  fic domain containing<br>
+DNAJC1  -  dnaj (hsp40) homolog, subfamily c, member 1<br>
+SDF2L1  -  stromal cell-derived factor 2-like 1<br>
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9123 genes out of 9570 gene terms entered by the user.<br> 9123 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>95 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3672 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

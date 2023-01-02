@@ -1,0 +1,2115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='655,1553,769,1601' HREF='#0000398' ALT=''>
+<AREA SHAPE='RECT' COORDS='655,1675,769,1738' HREF='#0000380' ALT=''>
+<AREA SHAPE='RECT' COORDS='1127,799,1220,879' HREF='#0009967' ALT=''>
+<AREA SHAPE='RECT' COORDS='1035,953,1165,1033' HREF='#1902533' ALT=''>
+<AREA SHAPE='RECT' COORDS='1745,343,1860,406' HREF='#0002682' ALT=''>
+<AREA SHAPE='RECT' COORDS='1797,481,1912,561' HREF='#0002684' ALT=''>
+<AREA SHAPE='RECT' COORDS='1688,490,1773,553' HREF='#0050776' ALT=''>
+<AREA SHAPE='RECT' COORDS='2597,652,2725,700' HREF='#0098542' ALT=''>
+<AREA SHAPE='RECT' COORDS='2801,815,2929,863' HREF='#0051607' ALT=''>
+<AREA SHAPE='RECT' COORDS='2203,627,2371,725' HREF='#0019219' ALT=''>
+<AREA SHAPE='RECT' COORDS='2345,807,2471,870' HREF='#0051252' ALT=''>
+<AREA SHAPE='RECT' COORDS='2153,781,2321,896' HREF='#0045935' ALT=''>
+<AREA SHAPE='RECT' COORDS='2495,790,2623,887' HREF='#0010604' ALT=''>
+<AREA SHAPE='RECT' COORDS='2177,945,2305,1042' HREF='#0010557' ALT=''>
+<AREA SHAPE='RECT' COORDS='2339,953,2464,1033' HREF='#0051254' ALT=''>
+<AREA SHAPE='RECT' COORDS='2493,962,2624,1025' HREF='#0010628' ALT=''>
+<AREA SHAPE='RECT' COORDS='2323,481,2405,561' HREF='#0080090' ALT=''>
+<AREA SHAPE='RECT' COORDS='2447,206,2524,269' HREF='#0009607' ALT=''>
+<AREA SHAPE='RECT' COORDS='2537,343,2644,406' HREF='#0043207' ALT=''>
+<AREA SHAPE='RECT' COORDS='2043,481,2139,561' HREF='#0009893' ALT=''>
+<AREA SHAPE='RECT' COORDS='1752,627,1835,725' HREF='#0031325' ALT=''>
+<AREA SHAPE='RECT' COORDS='1868,799,1977,879' HREF='#0009891' ALT=''>
+<AREA SHAPE='RECT' COORDS='2093,619,2179,733' HREF='#0051173' ALT=''>
+<AREA SHAPE='RECT' COORDS='579,969,701,1017' HREF='#0016071' ALT=''>
+<AREA SHAPE='RECT' COORDS='585,1107,711,1155' HREF='#0006397' ALT=''>
+<AREA SHAPE='RECT' COORDS='1388,799,1473,879' HREF='#0031349' ALT=''>
+<AREA SHAPE='RECT' COORDS='1497,953,1623,1033' HREF='#0045089' ALT=''>
+<AREA SHAPE='RECT' COORDS='2548,206,2633,269' HREF='#0009605' ALT=''>
+<AREA SHAPE='RECT' COORDS='2647,815,2777,863' HREF='#0010468' ALT=''>
+<AREA SHAPE='RECT' COORDS='2029,1237,2144,1299' HREF='#0006355' ALT=''>
+<AREA SHAPE='RECT' COORDS='735,1107,831,1155' HREF='#0008380' ALT=''>
+<AREA SHAPE='RECT' COORDS='697,1237,844,1299' HREF='#0000375' ALT=''>
+<AREA SHAPE='RECT' COORDS='2180,1383,2295,1463' HREF='#0045893' ALT=''>
+<AREA SHAPE='RECT' COORDS='2015,1383,2156,1463' HREF='#0006357' ALT=''>
+<AREA SHAPE='RECT' COORDS='868,326,953,423' HREF='#0006725' ALT=''>
+<AREA SHAPE='RECT' COORDS='580,481,735,561' HREF='#0006139' ALT=''>
+<AREA SHAPE='RECT' COORDS='596,815,708,863' HREF='#0016070' ALT=''>
+<AREA SHAPE='RECT' COORDS='725,969,840,1017' HREF='#0006396' ALT=''>
+<AREA SHAPE='RECT' COORDS='296,1107,424,1155' HREF='#0006473' ALT=''>
+<AREA SHAPE='RECT' COORDS='305,1244,415,1292' HREF='#0018394' ALT=''>
+<AREA SHAPE='RECT' COORDS='164,1237,276,1299' HREF='#0006474' ALT=''>
+<AREA SHAPE='RECT' COORDS='972,807,1103,870' HREF='#1902531' ALT=''>
+<AREA SHAPE='RECT' COORDS='832,636,923,716' HREF='#0007166' ALT=''>
+<AREA SHAPE='RECT' COORDS='816,807,947,870' HREF='#0019221' ALT=''>
+<AREA SHAPE='RECT' COORDS='2657,213,2783,261' HREF='#0006955' ALT=''>
+<AREA SHAPE='RECT' COORDS='448,1107,557,1155' HREF='#0018205' ALT=''>
+<AREA SHAPE='RECT' COORDS='2167,1091,2308,1171' HREF='#1902680' ALT=''>
+<AREA SHAPE='RECT' COORDS='811,497,941,545' HREF='#0007165' ALT=''>
+<AREA SHAPE='RECT' COORDS='36,335,145,415' HREF='#1901564' ALT=''>
+<AREA SHAPE='RECT' COORDS='164,497,289,545' HREF='#0019538' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,1107,131,1155' HREF='#0051604' ALT=''>
+<AREA SHAPE='RECT' COORDS='32,652,171,700' HREF='#0036211' ALT=''>
+<AREA SHAPE='RECT' COORDS='272,645,397,707' HREF='#0044267' ALT=''>
+<AREA SHAPE='RECT' COORDS='1067,490,1152,553' HREF='#0023056' ALT=''>
+<AREA SHAPE='RECT' COORDS='25,497,140,545' HREF='#0043412' ALT=''>
+<AREA SHAPE='RECT' COORDS='699,206,781,269' HREF='#0044237' ALT=''>
+<AREA SHAPE='RECT' COORDS='313,481,428,561' HREF='#0044260' ALT=''>
+<AREA SHAPE='RECT' COORDS='641,326,727,423' HREF='#0034641' ALT=''>
+<AREA SHAPE='RECT' COORDS='751,343,844,406' HREF='#0046483' ALT=''>
+<AREA SHAPE='RECT' COORDS='1873,945,1988,1042' HREF='#2000112' ALT=''>
+<AREA SHAPE='RECT' COORDS='2751,652,2828,700' HREF='#0009615' ALT=''>
+<AREA SHAPE='RECT' COORDS='1751,945,1847,1042' HREF='#0031328' ALT=''>
+<AREA SHAPE='RECT' COORDS='955,101,1027,149' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='1404,343,1497,406' HREF='#0048583' ALT=''>
+<AREA SHAPE='RECT' COORDS='1347,490,1440,553' HREF='#0080134' ALT=''>
+<AREA SHAPE='RECT' COORDS='1464,481,1557,561' HREF='#0048584' ALT=''>
+<AREA SHAPE='RECT' COORDS='991,645,1084,707' HREF='#0009966' ALT=''>
+<AREA SHAPE='RECT' COORDS='1632,636,1717,716' HREF='#0050778' ALT=''>
+<AREA SHAPE='RECT' COORDS='1936,481,2019,561' HREF='#0031323' ALT=''>
+<AREA SHAPE='RECT' COORDS='1748,799,1844,879' HREF='#0031326' ALT=''>
+<AREA SHAPE='RECT' COORDS='155,1099,272,1162' HREF='#0031365' ALT=''>
+<AREA SHAPE='RECT' COORDS='1521,343,1604,406' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='1176,497,1323,545' HREF='#0010646' ALT=''>
+<AREA SHAPE='RECT' COORDS='1581,481,1664,561' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='1167,645,1313,707' HREF='#0010647' ALT=''>
+<AREA SHAPE='RECT' COORDS='2091,1529,2232,1626' HREF='#0045944' ALT=''>
+<AREA SHAPE='RECT' COORDS='695,1365,841,1480' HREF='#0000377' ALT=''>
+<AREA SHAPE='RECT' COORDS='236,1391,345,1454' HREF='#0018076' ALT=''>
+<AREA SHAPE='RECT' COORDS='588,101,671,149' HREF='#0008152' ALT=''>
+<AREA SHAPE='RECT' COORDS='587,197,672,277' HREF='#0006807' ALT=''>
+<AREA SHAPE='RECT' COORDS='308,351,436,399' HREF='#0044238' ALT=''>
+<AREA SHAPE='RECT' COORDS='213,206,344,269' HREF='#0071704' ALT=''>
+<AREA SHAPE='RECT' COORDS='2368,351,2491,399' HREF='#0006952' ALT=''>
+<AREA SHAPE='RECT' COORDS='1067,351,1152,399' HREF='#0023051' ALT=''>
+<AREA SHAPE='RECT' COORDS='437,969,555,1017' HREF='#0018193' ALT=''>
+<AREA SHAPE='RECT' COORDS='864,962,979,1025' HREF='#0060337' ALT=''>
+<AREA SHAPE='RECT' COORDS='2213,473,2299,570' HREF='#0051171' ALT=''>
+<AREA SHAPE='RECT' COORDS='2128,343,2224,406' HREF='#0019222' ALT=''>
+<AREA SHAPE='RECT' COORDS='2445,636,2573,716' HREF='#0060255' ALT=''>
+<AREA SHAPE='RECT' COORDS='1960,645,2069,707' HREF='#0009889' ALT=''>
+<AREA SHAPE='RECT' COORDS='2001,799,2129,879' HREF='#0010556' ALT=''>
+<AREA SHAPE='RECT' COORDS='2600,497,2723,545' HREF='#0051707' ALT=''>
+<AREA SHAPE='RECT' COORDS='2661,101,2779,149' HREF='#0002376' ALT=''>
+<AREA SHAPE='RECT' COORDS='2807,213,2924,261' HREF='#0002252' ALT=''>
+<AREA SHAPE='RECT' COORDS='2443,101,2528,149' HREF='#0050896' ALT=''>
+<AREA SHAPE='RECT' COORDS='2345,213,2423,261' HREF='#0006950' ALT=''>
+<AREA SHAPE='RECT' COORDS='1909,5,1797,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='1973,101,2083,149' HREF='#0051704' ALT=''>
+<AREA SHAPE='RECT' COORDS='1752,101,1832,149' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='169,343,284,406' HREF='#0043170' ALT=''>
+<AREA SHAPE='RECT' COORDS='460,335,567,415' HREF='#1901360' ALT=''>
+<AREA SHAPE='RECT' COORDS='605,645,699,707' HREF='#0090304' ALT=''>
+<AREA SHAPE='RECT' COORDS='2183,1219,2292,1317' HREF='#1903508' ALT=''>
+<AREA SHAPE='RECT' COORDS='2012,962,2153,1025' HREF='#2001141' ALT=''>
+<AREA SHAPE='RECT' COORDS='265,807,404,870' HREF='#0006464' ALT=''>
+<AREA SHAPE='RECT' COORDS='296,969,413,1017' HREF='#0043543' ALT=''>
+<AREA SHAPE='RECT' COORDS='1628,206,1721,269' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='1628,335,1721,415' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='2032,1091,2141,1171' HREF='#1903506' ALT=''>
+<AREA SHAPE='RECT' COORDS='1388,645,1473,707' HREF='#0031347' ALT=''>
+<AREA SHAPE='RECT' COORDS='1497,807,1623,870' HREF='#0045088' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045088&amp;view=details' target="_blank">GO:0045088</a><a name=0045088></a></td>
+<td>regulation of innate immune response</td>
+<td  align=center>7.65E-6</td>
+<td  align=center>9.67E-2</td>
+<td  align=center>2.88 (8795,290,232,22)</td>
+<td>
+<a id="ctrl_elements_GO:0045088" href="javascript:toggle('elements_GO:0045088')">[+] Show genes</a><br>
+<div id="elements_GO:0045088" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+CTSB  -  cathepsin b<br>
+TRAFD1  -  traf-type zinc finger domain containing 1<br>
+UBC  -  ubiquitin c<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+SLAMF6  -  slam family member 6<br>
+PRKCE  -  protein kinase c, epsilon<br>
+EP300  -  e1a binding protein p300<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+CREBBP  -  creb binding protein<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006955&amp;view=details' target="_blank">GO:0006955</a><a name=0006955></a></td>
+<td>immune response</td>
+<td  align=center>1.76E-5</td>
+<td  align=center>1.11E-1</td>
+<td  align=center>2.32 (8795,473,232,29)</td>
+<td>
+<a id="ctrl_elements_GO:0006955" href="javascript:toggle('elements_GO:0006955')">[+] Show genes</a><br>
+<div id="elements_GO:0006955" style="display:none"> <font size=1>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SLAMF6  -  slam family member 6<br>
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+IFI44L  -  interferon-induced protein 44-like<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+GPR65  -  g protein-coupled receptor 65<br>
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+TRIM38  -  tripartite motif containing 38<br>
+TRIM61  -  tripartite motif containing 61<br>
+MYO1G  -  myosin ig<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+GTPBP1  -  gtp binding protein 1<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002376&amp;view=details' target="_blank">GO:0002376</a><a name=0002376></a></td>
+<td>immune system process</td>
+<td  align=center>2.58E-5</td>
+<td  align=center>1.09E-1</td>
+<td  align=center>1.71 (8795,1242,232,56)</td>
+<td>
+<a id="ctrl_elements_GO:0002376" href="javascript:toggle('elements_GO:0002376')">[+] Show genes</a><br>
+<div id="elements_GO:0002376" style="display:none"> <font size=1>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+F11R  -  f11 receptor<br>
+GSN  -  gelsolin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+IFI44L  -  interferon-induced protein 44-like<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
+CTSB  -  cathepsin b<br>
+CD53  -  cd53 molecule<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+TRIM38  -  tripartite motif containing 38<br>
+STXBP3  -  syntaxin binding protein 3<br>
+GTPBP1  -  gtp binding protein 1<br>
+CD22  -  cd22 molecule<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+CREBBP  -  creb binding protein<br>
+C16orf62  -  chromosome 16 open reading frame 62<br>
+STK10  -  serine/threonine kinase 10<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+YPEL5  -  yippee-like 5 (drosophila)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+UBC  -  ubiquitin c<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SLAMF6  -  slam family member 6<br>
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+GPR65  -  g protein-coupled receptor 65<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+TRIM61  -  tripartite motif containing 61<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+MYO1G  -  myosin ig<br>
+IRF2  -  interferon regulatory factor 2<br>
+TMC6  -  transmembrane channel-like 6<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+PRKCE  -  protein kinase c, epsilon<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051254&amp;view=details' target="_blank">GO:0051254</a><a name=0051254></a></td>
+<td>positive regulation of RNA metabolic process</td>
+<td  align=center>4.61E-5</td>
+<td  align=center>1.46E-1</td>
+<td  align=center>1.80 (8795,968,232,46)</td>
+<td>
+<a id="ctrl_elements_GO:0051254" href="javascript:toggle('elements_GO:0051254')">[+] Show genes</a><br>
+<div id="elements_GO:0051254" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+MED17  -  mediator complex subunit 17<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+MKL2  -  mkl/myocardin-like 2<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+CREBRF  -  creb3 regulatory factor<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+SERTAD3  -  serta domain containing 3<br>
+SCAND1  -  scan domain containing 1<br>
+MED16  -  mediator complex subunit 16<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+SRSF5  -  serine/arginine-rich splicing factor 5<br>
+TRIM38  -  tripartite motif containing 38<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CIRBP  -  cold inducible rna binding protein<br>
+CREBBP  -  creb binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002252&amp;view=details' target="_blank">GO:0002252</a><a name=0002252></a></td>
+<td>immune effector process</td>
+<td  align=center>5.37E-5</td>
+<td  align=center>1.36E-1</td>
+<td  align=center>2.06 (8795,608,232,33)</td>
+<td>
+<a id="ctrl_elements_GO:0002252" href="javascript:toggle('elements_GO:0002252')">[+] Show genes</a><br>
+<div id="elements_GO:0002252" style="display:none"> <font size=1>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+IRF9  -  interferon regulatory factor 9<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+YPEL5  -  yippee-like 5 (drosophila)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+GSN  -  gelsolin<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+IFI44L  -  interferon-induced protein 44-like<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
+CTSB  -  cathepsin b<br>
+CD53  -  cd53 molecule<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+MYO1G  -  myosin ig<br>
+STXBP3  -  syntaxin binding protein 3<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+IRF2  -  interferon regulatory factor 2<br>
+TMC6  -  transmembrane channel-like 6<br>
+RIOK3  -  rio kinase 3<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+PRKCE  -  protein kinase c, epsilon<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+STK10  -  serine/threonine kinase 10<br>
+C16orf62  -  chromosome 16 open reading frame 62<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0065007&amp;view=details' target="_blank">GO:0065007</a><a name=0065007></a></td>
+<td>biological regulation</td>
+<td  align=center>8.87E-5</td>
+<td  align=center>1.87E-1</td>
+<td  align=center>1.18 (8795,5741,232,178)</td>
+<td>
+<a id="ctrl_elements_GO:0065007" href="javascript:toggle('elements_GO:0065007')">[+] Show genes</a><br>
+<div id="elements_GO:0065007" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+PXK  -  px domain containing serine/threonine kinase<br>
+RBM23  -  rna binding motif protein 23<br>
+MGA  -  mga, max dimerization protein<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+PHF21A  -  phd finger protein 21a<br>
+PRR4  -  proline rich 4 (lacrimal)<br>
+F11R  -  f11 receptor<br>
+STK40  -  serine/threonine kinase 40<br>
+ATAT1  -  alpha tubulin acetyltransferase 1<br>
+GSN  -  gelsolin<br>
+EIF1B  -  eukaryotic translation initiation factor 1b<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+FARP2  -  ferm, rhogef and pleckstrin domain protein 2<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+SLC25A36  -  solute carrier family 25 (pyrimidine nucleotide carrier ), member 36<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+SCAND1  -  scan domain containing 1<br>
+RING1  -  ring finger protein 1<br>
+TRAFD1  -  traf-type zinc finger domain containing 1<br>
+CD53  -  cd53 molecule<br>
+LRRK1  -  leucine-rich repeat kinase 1<br>
+SNAPIN  -  snap-associated protein<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+MAT2B  -  methionine adenosyltransferase ii, beta<br>
+TM2D1  -  tm2 domain containing 1<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+GTPBP1  -  gtp binding protein 1<br>
+POLD4  -  polymerase (dna-directed), delta 4, accessory subunit<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+CD22  -  cd22 molecule<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+DYNLT3  -  dynein, light chain, tctex-type 3<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+DGKD  -  diacylglycerol kinase, delta 130kda<br>
+CCNDBP1  -  cyclin d-type binding-protein 1<br>
+ZMYM6  -  zinc finger, mym-type 6<br>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+SNX9  -  sorting nexin 9<br>
+GGNBP2  -  gametogenetin binding protein 2<br>
+DAZAP2  -  daz associated protein 2<br>
+ARHGEF7  -  rho guanine nucleotide exchange factor (gef) 7<br>
+PLIN3  -  perilipin 3<br>
+FCRL5  -  fc receptor-like 5<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SAMD4B  -  sterile alpha motif domain containing 4b<br>
+SLC35B2  -  solute carrier family 35 (adenosine 3'-phospho 5'-phosphosulfate transporter), member b2<br>
+BMF  -  bcl2 modifying factor<br>
+MKL2  -  mkl/myocardin-like 2<br>
+MAST3  -  microtubule associated serine/threonine kinase 3<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+RALGPS2  -  ral gef with ph domain and sh3 binding motif 2<br>
+UPF2  -  upf2 regulator of nonsense transcripts homolog (yeast)<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+ZNF691  -  zinc finger protein 691<br>
+BRAP  -  brca1 associated protein<br>
+CREBRF  -  creb3 regulatory factor<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+MED13L  -  mediator complex subunit 13-like<br>
+SERTAD3  -  serta domain containing 3<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+ZNF302  -  zinc finger protein 302<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+TRIM61  -  tripartite motif containing 61<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+ZNF226  -  zinc finger protein 226<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+IRF2  -  interferon regulatory factor 2<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TPCN1  -  two pore segment channel 1<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+FZR1  -  fizzy/cell division cycle 20 related 1 (drosophila)<br>
+KIAA1429  -  kiaa1429<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF790  -  zinc finger protein 790<br>
+ZNF394  -  zinc finger protein 394<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+UBR1  -  ubiquitin protein ligase e3 component n-recognin 1<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+PGGT1B  -  protein geranylgeranyltransferase type i, beta subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+MED17  -  mediator complex subunit 17<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+PLEKHA2  -  pleckstrin homology domain containing, family a (phosphoinositide binding specific) member 2<br>
+PPP4R1  -  protein phosphatase 4, regulatory subunit 1<br>
+ETV7  -  ets variant 7<br>
+XAF1  -  xiap associated factor 1<br>
+USP6NL  -  usp6 n-terminal like<br>
+TBC1D22A  -  tbc1 domain family, member 22a<br>
+BTBD7  -  btb (poz) domain containing 7<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+ATG14  -  autophagy related 14<br>
+PPP2R5C  -  protein phosphatase 2, regulatory subunit b', gamma<br>
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
+EVL  -  enah/vasp-like<br>
+CTSB  -  cathepsin b<br>
+MED16  -  mediator complex subunit 16<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+ATP6V1A  -  atpase, h+ transporting, lysosomal 70kda, v1 subunit a<br>
+GGA1  -  golgi-associated, gamma adaptin ear containing, arf binding protein 1<br>
+HERC4  -  hect and rld domain containing e3 ubiquitin protein ligase 4<br>
+TRIM38  -  tripartite motif containing 38<br>
+STXBP3  -  syntaxin binding protein 3<br>
+UVRAG  -  uv radiation resistance associated<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+ZNF507  -  zinc finger protein 507<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+STK10  -  serine/threonine kinase 10<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+DYNC2LI1  -  dynein, cytoplasmic 2, light intermediate chain 1<br>
+UBC  -  ubiquitin c<br>
+MORC3  -  morc family cw-type zinc finger 3<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+MFN1  -  mitofusin 1<br>
+CORO1B  -  coronin, actin binding protein, 1b<br>
+VRK3  -  vaccinia related kinase 3<br>
+SIAH2  -  siah e3 ubiquitin protein ligase 2<br>
+LY6E  -  lymphocyte antigen 6 complex, locus e<br>
+SLAMF6  -  slam family member 6<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+NF1  -  neurofibromin 1<br>
+SLC39A10  -  solute carrier family 39 (zinc transporter), member 10<br>
+ZFX  -  zinc finger protein, x-linked<br>
+ZNHIT3  -  zinc finger, hit-type containing 3<br>
+GPR65  -  g protein-coupled receptor 65<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+RASSF3  -  ras association (ralgds/af-6) domain family member 3<br>
+SRSF5  -  serine/arginine-rich splicing factor 5<br>
+PLCE1  -  phospholipase c, epsilon 1<br>
+PNPLA8  -  patatin-like phospholipase domain containing 8<br>
+MIEN1  -  migration and invasion enhancer 1<br>
+MYO1G  -  myosin ig<br>
+NBR1  -  neighbor of brca1 gene 1<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+SYNE2  -  spectrin repeat containing, nuclear envelope 2<br>
+PRKCE  -  protein kinase c, epsilon<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+CIRBP  -  cold inducible rna binding protein<br>
+ZNF791  -  zinc finger protein 791<br>
+CCDC115  -  coiled-coil domain containing 115<br>
+PNKP  -  polynucleotide kinase 3'-phosphatase<br>
+QRSL1  -  glutaminyl-trna synthase (glutamine-hydrolyzing)-like 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006357&amp;view=details' target="_blank">GO:0006357</a><a name=0006357></a></td>
+<td>regulation of transcription by RNA polymerase II</td>
+<td  align=center>1.03E-4</td>
+<td  align=center>1.85E-1</td>
+<td  align=center>1.63 (8795,1304,232,56)</td>
+<td>
+<a id="ctrl_elements_GO:0006357" href="javascript:toggle('elements_GO:0006357')">[+] Show genes</a><br>
+<div id="elements_GO:0006357" style="display:none"> <font size=1>
+MEF2B  -  myocyte enhancer factor 2b<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+MGA  -  mga, max dimerization protein<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+PHF21A  -  phd finger protein 21a<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+MED17  -  mediator complex subunit 17<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+FLCN  -  folliculin<br>
+ETV7  -  ets variant 7<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+MED16  -  mediator complex subunit 16<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+ZNF507  -  zinc finger protein 507<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+MKL2  -  mkl/myocardin-like 2<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+ZNF691  -  zinc finger protein 691<br>
+CREBRF  -  creb3 regulatory factor<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+ZFX  -  zinc finger protein, x-linked<br>
+MED13L  -  mediator complex subunit 13-like<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+ZNF302  -  zinc finger protein 302<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+IRF2  -  interferon regulatory factor 2<br>
+ZNF226  -  zinc finger protein 226<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF791  -  zinc finger protein 791<br>
+ZNF790  -  zinc finger protein 790<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ZNF394  -  zinc finger protein 394<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050776&amp;view=details' target="_blank">GO:0050776</a><a name=0050776></a></td>
+<td>regulation of immune response</td>
+<td  align=center>1.43E-4</td>
+<td  align=center>2.26E-1</td>
+<td  align=center>2.01 (8795,585,232,31)</td>
+<td>
+<a id="ctrl_elements_GO:0050776" href="javascript:toggle('elements_GO:0050776')">[+] Show genes</a><br>
+<div id="elements_GO:0050776" style="display:none"> <font size=1>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+UBC  -  ubiquitin c<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SLAMF6  -  slam family member 6<br>
+EP300  -  e1a binding protein p300<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+SLC39A10  -  solute carrier family 39 (zinc transporter), member 10<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+CTSB  -  cathepsin b<br>
+TRAFD1  -  traf-type zinc finger domain containing 1<br>
+MYO1G  -  myosin ig<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+PRKCE  -  protein kinase c, epsilon<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+CD22  -  cd22 molecule<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+CREBBP  -  creb binding protein<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050789&amp;view=details' target="_blank">GO:0050789</a><a name=0050789></a></td>
+<td>regulation of biological process</td>
+<td  align=center>1.69E-4</td>
+<td  align=center>2.37E-1</td>
+<td  align=center>1.18 (8795,5415,232,169)</td>
+<td>
+<a id="ctrl_elements_GO:0050789" href="javascript:toggle('elements_GO:0050789')">[+] Show genes</a><br>
+<div id="elements_GO:0050789" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+RBM23  -  rna binding motif protein 23<br>
+PXK  -  px domain containing serine/threonine kinase<br>
+MGA  -  mga, max dimerization protein<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+PHF21A  -  phd finger protein 21a<br>
+F11R  -  f11 receptor<br>
+STK40  -  serine/threonine kinase 40<br>
+ATAT1  -  alpha tubulin acetyltransferase 1<br>
+GSN  -  gelsolin<br>
+EIF1B  -  eukaryotic translation initiation factor 1b<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+FARP2  -  ferm, rhogef and pleckstrin domain protein 2<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+SCAND1  -  scan domain containing 1<br>
+RING1  -  ring finger protein 1<br>
+TRAFD1  -  traf-type zinc finger domain containing 1<br>
+CD53  -  cd53 molecule<br>
+LRRK1  -  leucine-rich repeat kinase 1<br>
+SNAPIN  -  snap-associated protein<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+TM2D1  -  tm2 domain containing 1<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+GTPBP1  -  gtp binding protein 1<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+CD22  -  cd22 molecule<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+DYNLT3  -  dynein, light chain, tctex-type 3<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+DGKD  -  diacylglycerol kinase, delta 130kda<br>
+CCNDBP1  -  cyclin d-type binding-protein 1<br>
+ZMYM6  -  zinc finger, mym-type 6<br>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+SNX9  -  sorting nexin 9<br>
+GGNBP2  -  gametogenetin binding protein 2<br>
+DAZAP2  -  daz associated protein 2<br>
+ARHGEF7  -  rho guanine nucleotide exchange factor (gef) 7<br>
+PLIN3  -  perilipin 3<br>
+FCRL5  -  fc receptor-like 5<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SAMD4B  -  sterile alpha motif domain containing 4b<br>
+SLC35B2  -  solute carrier family 35 (adenosine 3'-phospho 5'-phosphosulfate transporter), member b2<br>
+BMF  -  bcl2 modifying factor<br>
+MKL2  -  mkl/myocardin-like 2<br>
+MAST3  -  microtubule associated serine/threonine kinase 3<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+RALGPS2  -  ral gef with ph domain and sh3 binding motif 2<br>
+UPF2  -  upf2 regulator of nonsense transcripts homolog (yeast)<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+ZNF691  -  zinc finger protein 691<br>
+BRAP  -  brca1 associated protein<br>
+CREBRF  -  creb3 regulatory factor<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+MED13L  -  mediator complex subunit 13-like<br>
+SERTAD3  -  serta domain containing 3<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+ZNF302  -  zinc finger protein 302<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+TRIM61  -  tripartite motif containing 61<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+ZNF226  -  zinc finger protein 226<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+IRF2  -  interferon regulatory factor 2<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TPCN1  -  two pore segment channel 1<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+FZR1  -  fizzy/cell division cycle 20 related 1 (drosophila)<br>
+KIAA1429  -  kiaa1429<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF790  -  zinc finger protein 790<br>
+ZNF394  -  zinc finger protein 394<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+UBR1  -  ubiquitin protein ligase e3 component n-recognin 1<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+PGGT1B  -  protein geranylgeranyltransferase type i, beta subunit<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+MED17  -  mediator complex subunit 17<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+PLEKHA2  -  pleckstrin homology domain containing, family a (phosphoinositide binding specific) member 2<br>
+PPP4R1  -  protein phosphatase 4, regulatory subunit 1<br>
+ETV7  -  ets variant 7<br>
+XAF1  -  xiap associated factor 1<br>
+USP6NL  -  usp6 n-terminal like<br>
+BTBD7  -  btb (poz) domain containing 7<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+ATG14  -  autophagy related 14<br>
+PPP2R5C  -  protein phosphatase 2, regulatory subunit b', gamma<br>
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
+EVL  -  enah/vasp-like<br>
+CTSB  -  cathepsin b<br>
+MED16  -  mediator complex subunit 16<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+ATP6V1A  -  atpase, h+ transporting, lysosomal 70kda, v1 subunit a<br>
+GGA1  -  golgi-associated, gamma adaptin ear containing, arf binding protein 1<br>
+HERC4  -  hect and rld domain containing e3 ubiquitin protein ligase 4<br>
+TRIM38  -  tripartite motif containing 38<br>
+STXBP3  -  syntaxin binding protein 3<br>
+UVRAG  -  uv radiation resistance associated<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+ZNF507  -  zinc finger protein 507<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+STK10  -  serine/threonine kinase 10<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+DYNC2LI1  -  dynein, cytoplasmic 2, light intermediate chain 1<br>
+UBC  -  ubiquitin c<br>
+MORC3  -  morc family cw-type zinc finger 3<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+CORO1B  -  coronin, actin binding protein, 1b<br>
+VRK3  -  vaccinia related kinase 3<br>
+SIAH2  -  siah e3 ubiquitin protein ligase 2<br>
+LY6E  -  lymphocyte antigen 6 complex, locus e<br>
+SLAMF6  -  slam family member 6<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+NF1  -  neurofibromin 1<br>
+SLC39A10  -  solute carrier family 39 (zinc transporter), member 10<br>
+ZFX  -  zinc finger protein, x-linked<br>
+ZNHIT3  -  zinc finger, hit-type containing 3<br>
+GPR65  -  g protein-coupled receptor 65<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+RASSF3  -  ras association (ralgds/af-6) domain family member 3<br>
+SRSF5  -  serine/arginine-rich splicing factor 5<br>
+PLCE1  -  phospholipase c, epsilon 1<br>
+MIEN1  -  migration and invasion enhancer 1<br>
+MYO1G  -  myosin ig<br>
+NBR1  -  neighbor of brca1 gene 1<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+SYNE2  -  spectrin repeat containing, nuclear envelope 2<br>
+PRKCE  -  protein kinase c, epsilon<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+CIRBP  -  cold inducible rna binding protein<br>
+ZNF791  -  zinc finger protein 791<br>
+PNKP  -  polynucleotide kinase 3'-phosphatase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060337&amp;view=details' target="_blank">GO:0060337</a><a name=0060337></a></td>
+<td>type I interferon signaling pathway</td>
+<td  align=center>1.81E-4</td>
+<td  align=center>2.28E-1</td>
+<td  align=center>5.77 (8795,46,232,7)</td>
+<td>
+<a id="ctrl_elements_GO:0060337" href="javascript:toggle('elements_GO:0060337')">[+] Show genes</a><br>
+<div id="elements_GO:0060337" style="display:none"> <font size=1>
+IRF2  -  interferon regulatory factor 2<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+XAF1  -  xiap associated factor 1<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+IRF9  -  interferon regulatory factor 9<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051607&amp;view=details' target="_blank">GO:0051607</a><a name=0051607></a></td>
+<td>defense response to virus</td>
+<td  align=center>2.25E-4</td>
+<td  align=center>2.59E-1</td>
+<td  align=center>3.37 (8795,135,232,12)</td>
+<td>
+<a id="ctrl_elements_GO:0051607" href="javascript:toggle('elements_GO:0051607')">[+] Show genes</a><br>
+<div id="elements_GO:0051607" style="display:none"> <font size=1>
+IRF2  -  interferon regulatory factor 2<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+RIOK3  -  rio kinase 3<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+IRF9  -  interferon regulatory factor 9<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+IFI44L  -  interferon-induced protein 44-like<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006952&amp;view=details' target="_blank">GO:0006952</a><a name=0006952></a></td>
+<td>defense response</td>
+<td  align=center>2.85E-4</td>
+<td  align=center>3E-1</td>
+<td  align=center>2.05 (8795,499,232,27)</td>
+<td>
+<a id="ctrl_elements_GO:0006952" href="javascript:toggle('elements_GO:0006952')">[+] Show genes</a><br>
+<div id="elements_GO:0006952" style="display:none"> <font size=1>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+PXK  -  px domain containing serine/threonine kinase<br>
+IRF9  -  interferon regulatory factor 9<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+F11R  -  f11 receptor<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SLAMF6  -  slam family member 6<br>
+EP300  -  e1a binding protein p300<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+IFI44L  -  interferon-induced protein 44-like<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+TRIM38  -  tripartite motif containing 38<br>
+TRIM61  -  tripartite motif containing 61<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+IRF2  -  interferon regulatory factor 2<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045893&amp;view=details' target="_blank">GO:0045893</a><a name=0045893></a></td>
+<td>positive regulation of transcription, DNA-templated</td>
+<td  align=center>2.92E-4</td>
+<td  align=center>2.83E-1</td>
+<td  align=center>1.73 (8795,896,232,41)</td>
+<td>
+<a id="ctrl_elements_GO:0045893" href="javascript:toggle('elements_GO:0045893')">[+] Show genes</a><br>
+<div id="elements_GO:0045893" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+MED17  -  mediator complex subunit 17<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+MKL2  -  mkl/myocardin-like 2<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+CREBRF  -  creb3 regulatory factor<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+SERTAD3  -  serta domain containing 3<br>
+SCAND1  -  scan domain containing 1<br>
+MED16  -  mediator complex subunit 16<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+TRIM38  -  tripartite motif containing 38<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903508&amp;view=details' target="_blank">GO:1903508</a><a name=1903508></a></td>
+<td>positive regulation of nucleic acid-templated transcription</td>
+<td  align=center>2.92E-4</td>
+<td  align=center>2.63E-1</td>
+<td  align=center>1.73 (8795,896,232,41)</td>
+<td>
+<a id="ctrl_elements_GO:1903508" href="javascript:toggle('elements_GO:1903508')">[+] Show genes</a><br>
+<div id="elements_GO:1903508" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+MED17  -  mediator complex subunit 17<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+MKL2  -  mkl/myocardin-like 2<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+CREBRF  -  creb3 regulatory factor<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+SERTAD3  -  serta domain containing 3<br>
+SCAND1  -  scan domain containing 1<br>
+MED16  -  mediator complex subunit 16<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+TRIM38  -  tripartite motif containing 38<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902680&amp;view=details' target="_blank">GO:1902680</a><a name=1902680></a></td>
+<td>positive regulation of RNA biosynthetic process</td>
+<td  align=center>2.98E-4</td>
+<td  align=center>2.51E-1</td>
+<td  align=center>1.73 (8795,897,232,41)</td>
+<td>
+<a id="ctrl_elements_GO:1902680" href="javascript:toggle('elements_GO:1902680')">[+] Show genes</a><br>
+<div id="elements_GO:1902680" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+MED17  -  mediator complex subunit 17<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+MKL2  -  mkl/myocardin-like 2<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+CREBRF  -  creb3 regulatory factor<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+SERTAD3  -  serta domain containing 3<br>
+SCAND1  -  scan domain containing 1<br>
+MED16  -  mediator complex subunit 16<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+TRIM38  -  tripartite motif containing 38<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045089&amp;view=details' target="_blank">GO:0045089</a><a name=0045089></a></td>
+<td>positive regulation of innate immune response</td>
+<td  align=center>3.07E-4</td>
+<td  align=center>2.42E-1</td>
+<td  align=center>2.68 (8795,226,232,16)</td>
+<td>
+<a id="ctrl_elements_GO:0045089" href="javascript:toggle('elements_GO:0045089')">[+] Show genes</a><br>
+<div id="elements_GO:0045089" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+CTSB  -  cathepsin b<br>
+UBC  -  ubiquitin c<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+SLAMF6  -  slam family member 6<br>
+PRKCE  -  protein kinase c, epsilon<br>
+EP300  -  e1a binding protein p300<br>
+CREBBP  -  creb binding protein<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050794&amp;view=details' target="_blank">GO:0050794</a><a name=0050794></a></td>
+<td>regulation of cellular process</td>
+<td  align=center>3.19E-4</td>
+<td  align=center>2.37E-1</td>
+<td  align=center>1.19 (8795,5100,232,160)</td>
+<td>
+<a id="ctrl_elements_GO:0050794" href="javascript:toggle('elements_GO:0050794')">[+] Show genes</a><br>
+<div id="elements_GO:0050794" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+RBM23  -  rna binding motif protein 23<br>
+PXK  -  px domain containing serine/threonine kinase<br>
+MGA  -  mga, max dimerization protein<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+PHF21A  -  phd finger protein 21a<br>
+F11R  -  f11 receptor<br>
+STK40  -  serine/threonine kinase 40<br>
+ATAT1  -  alpha tubulin acetyltransferase 1<br>
+GSN  -  gelsolin<br>
+EIF1B  -  eukaryotic translation initiation factor 1b<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+FARP2  -  ferm, rhogef and pleckstrin domain protein 2<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+SCAND1  -  scan domain containing 1<br>
+RING1  -  ring finger protein 1<br>
+CD53  -  cd53 molecule<br>
+LRRK1  -  leucine-rich repeat kinase 1<br>
+SNAPIN  -  snap-associated protein<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+TM2D1  -  tm2 domain containing 1<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+GTPBP1  -  gtp binding protein 1<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+CD22  -  cd22 molecule<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+DYNLT3  -  dynein, light chain, tctex-type 3<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+DGKD  -  diacylglycerol kinase, delta 130kda<br>
+CCNDBP1  -  cyclin d-type binding-protein 1<br>
+ZMYM6  -  zinc finger, mym-type 6<br>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+SNX9  -  sorting nexin 9<br>
+GGNBP2  -  gametogenetin binding protein 2<br>
+DAZAP2  -  daz associated protein 2<br>
+ARHGEF7  -  rho guanine nucleotide exchange factor (gef) 7<br>
+FCRL5  -  fc receptor-like 5<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SAMD4B  -  sterile alpha motif domain containing 4b<br>
+SLC35B2  -  solute carrier family 35 (adenosine 3'-phospho 5'-phosphosulfate transporter), member b2<br>
+BMF  -  bcl2 modifying factor<br>
+MKL2  -  mkl/myocardin-like 2<br>
+MAST3  -  microtubule associated serine/threonine kinase 3<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+RALGPS2  -  ral gef with ph domain and sh3 binding motif 2<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+ZNF691  -  zinc finger protein 691<br>
+BRAP  -  brca1 associated protein<br>
+CREBRF  -  creb3 regulatory factor<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+MED13L  -  mediator complex subunit 13-like<br>
+SERTAD3  -  serta domain containing 3<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+ZNF302  -  zinc finger protein 302<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+ZNF226  -  zinc finger protein 226<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+IRF2  -  interferon regulatory factor 2<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TPCN1  -  two pore segment channel 1<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+FZR1  -  fizzy/cell division cycle 20 related 1 (drosophila)<br>
+KIAA1429  -  kiaa1429<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF790  -  zinc finger protein 790<br>
+ZNF394  -  zinc finger protein 394<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+UBR1  -  ubiquitin protein ligase e3 component n-recognin 1<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+PGGT1B  -  protein geranylgeranyltransferase type i, beta subunit<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+MED17  -  mediator complex subunit 17<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+PPP4R1  -  protein phosphatase 4, regulatory subunit 1<br>
+ETV7  -  ets variant 7<br>
+XAF1  -  xiap associated factor 1<br>
+USP6NL  -  usp6 n-terminal like<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+ATG14  -  autophagy related 14<br>
+PPP2R5C  -  protein phosphatase 2, regulatory subunit b', gamma<br>
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
+EVL  -  enah/vasp-like<br>
+CTSB  -  cathepsin b<br>
+MED16  -  mediator complex subunit 16<br>
+ATP6V1A  -  atpase, h+ transporting, lysosomal 70kda, v1 subunit a<br>
+HERC4  -  hect and rld domain containing e3 ubiquitin protein ligase 4<br>
+TRIM38  -  tripartite motif containing 38<br>
+STXBP3  -  syntaxin binding protein 3<br>
+UVRAG  -  uv radiation resistance associated<br>
+TMBIM1  -  transmembrane bax inhibitor motif containing 1<br>
+ZNF507  -  zinc finger protein 507<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+STK10  -  serine/threonine kinase 10<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+DYNC2LI1  -  dynein, cytoplasmic 2, light intermediate chain 1<br>
+UBC  -  ubiquitin c<br>
+MORC3  -  morc family cw-type zinc finger 3<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+CORO1B  -  coronin, actin binding protein, 1b<br>
+VRK3  -  vaccinia related kinase 3<br>
+SIAH2  -  siah e3 ubiquitin protein ligase 2<br>
+LY6E  -  lymphocyte antigen 6 complex, locus e<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+NF1  -  neurofibromin 1<br>
+SLC39A10  -  solute carrier family 39 (zinc transporter), member 10<br>
+ZFX  -  zinc finger protein, x-linked<br>
+ZNHIT3  -  zinc finger, hit-type containing 3<br>
+GPR65  -  g protein-coupled receptor 65<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+RASSF3  -  ras association (ralgds/af-6) domain family member 3<br>
+SRSF5  -  serine/arginine-rich splicing factor 5<br>
+PLCE1  -  phospholipase c, epsilon 1<br>
+MIEN1  -  migration and invasion enhancer 1<br>
+MYO1G  -  myosin ig<br>
+NBR1  -  neighbor of brca1 gene 1<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+SYNE2  -  spectrin repeat containing, nuclear envelope 2<br>
+PRKCE  -  protein kinase c, epsilon<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+CIRBP  -  cold inducible rna binding protein<br>
+ZNF791  -  zinc finger protein 791<br>
+PNKP  -  polynucleotide kinase 3'-phosphatase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002682&amp;view=details' target="_blank">GO:0002682</a><a name=0002682></a></td>
+<td>regulation of immune system process</td>
+<td  align=center>3.49E-4</td>
+<td  align=center>2.45E-1</td>
+<td  align=center>1.73 (8795,874,232,40)</td>
+<td>
+<a id="ctrl_elements_GO:0002682" href="javascript:toggle('elements_GO:0002682')">[+] Show genes</a><br>
+<div id="elements_GO:0002682" style="display:none"> <font size=1>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+GSN  -  gelsolin<br>
+UBC  -  ubiquitin c<br>
+FLCN  -  folliculin<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+SLAMF6  -  slam family member 6<br>
+EP300  -  e1a binding protein p300<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+SLC39A10  -  solute carrier family 39 (zinc transporter), member 10<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+CTSB  -  cathepsin b<br>
+TRAFD1  -  traf-type zinc finger domain containing 1<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+MYO1G  -  myosin ig<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+PRKCE  -  protein kinase c, epsilon<br>
+CD22  -  cd22 molecule<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+CREBBP  -  creb binding protein<br>
+STK10  -  serine/threonine kinase 10<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048584&amp;view=details' target="_blank">GO:0048584</a><a name=0048584></a></td>
+<td>positive regulation of response to stimulus</td>
+<td  align=center>4.17E-4</td>
+<td  align=center>2.77E-1</td>
+<td  align=center>1.61 (8795,1155,232,49)</td>
+<td>
+<a id="ctrl_elements_GO:0048584" href="javascript:toggle('elements_GO:0048584')">[+] Show genes</a><br>
+<div id="elements_GO:0048584" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+F11R  -  f11 receptor<br>
+GSN  -  gelsolin<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
+CTSB  -  cathepsin b<br>
+LRRK1  -  leucine-rich repeat kinase 1<br>
+TRIM38  -  tripartite motif containing 38<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+DGKD  -  diacylglycerol kinase, delta 130kda<br>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+UBC  -  ubiquitin c<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+SLAMF6  -  slam family member 6<br>
+SLC35B2  -  solute carrier family 35 (adenosine 3'-phospho 5'-phosphosulfate transporter), member b2<br>
+BMF  -  bcl2 modifying factor<br>
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+SLC39A10  -  solute carrier family 39 (zinc transporter), member 10<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+GPR65  -  g protein-coupled receptor 65<br>
+PLCE1  -  phospholipase c, epsilon 1<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+MYO1G  -  myosin ig<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+PRKCE  -  protein kinase c, epsilon<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+PNKP  -  polynucleotide kinase 3'-phosphatase<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010628&amp;view=details' target="_blank">GO:0010628</a><a name=0010628></a></td>
+<td>positive regulation of gene expression</td>
+<td  align=center>4.25E-4</td>
+<td  align=center>2.69E-1</td>
+<td  align=center>1.61 (8795,1156,232,49)</td>
+<td>
+<a id="ctrl_elements_GO:0010628" href="javascript:toggle('elements_GO:0010628')">[+] Show genes</a><br>
+<div id="elements_GO:0010628" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+MED17  -  mediator complex subunit 17<br>
+GSN  -  gelsolin<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+SCAND1  -  scan domain containing 1<br>
+MED16  -  mediator complex subunit 16<br>
+TRIM38  -  tripartite motif containing 38<br>
+ZNF507  -  zinc finger protein 507<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+MKL2  -  mkl/myocardin-like 2<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+CREBRF  -  creb3 regulatory factor<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+SERTAD3  -  serta domain containing 3<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+SRSF5  -  serine/arginine-rich splicing factor 5<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+IRF2  -  interferon regulatory factor 2<br>
+ZNF226  -  zinc finger protein 226<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+CIRBP  -  cold inducible rna binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045944&amp;view=details' target="_blank">GO:0045944</a><a name=0045944></a></td>
+<td>positive regulation of transcription by RNA polymerase II</td>
+<td  align=center>5.13E-4</td>
+<td  align=center>3.08E-1</td>
+<td  align=center>1.87 (8795,629,232,31)</td>
+<td>
+<a id="ctrl_elements_GO:0045944" href="javascript:toggle('elements_GO:0045944')">[+] Show genes</a><br>
+<div id="elements_GO:0045944" style="display:none"> <font size=1>
+MEF2B  -  myocyte enhancer factor 2b<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+MED17  -  mediator complex subunit 17<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+MKL2  -  mkl/myocardin-like 2<br>
+EP300  -  e1a binding protein p300<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+CREBRF  -  creb3 regulatory factor<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+MED16  -  mediator complex subunit 16<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+IRF2  -  interferon regulatory factor 2<br>
+ZNF226  -  zinc finger protein 226<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF507  -  zinc finger protein 507<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CREBBP  -  creb binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051252&amp;view=details' target="_blank">GO:0051252</a><a name=0051252></a></td>
+<td>regulation of RNA metabolic process</td>
+<td  align=center>5.7E-4</td>
+<td  align=center>3.27E-1</td>
+<td  align=center>1.40 (8795,2051,232,76)</td>
+<td>
+<a id="ctrl_elements_GO:0051252" href="javascript:toggle('elements_GO:0051252')">[+] Show genes</a><br>
+<div id="elements_GO:0051252" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+MGA  -  mga, max dimerization protein<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+MED17  -  mediator complex subunit 17<br>
+PHF21A  -  phd finger protein 21a<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+FLCN  -  folliculin<br>
+ETV7  -  ets variant 7<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+SCAND1  -  scan domain containing 1<br>
+RING1  -  ring finger protein 1<br>
+MED16  -  mediator complex subunit 16<br>
+TRIM38  -  tripartite motif containing 38<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+GTPBP1  -  gtp binding protein 1<br>
+ZNF507  -  zinc finger protein 507<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+SIAH2  -  siah e3 ubiquitin protein ligase 2<br>
+SAMD4B  -  sterile alpha motif domain containing 4b<br>
+MKL2  -  mkl/myocardin-like 2<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+ZNF691  -  zinc finger protein 691<br>
+CREBRF  -  creb3 regulatory factor<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+ZFX  -  zinc finger protein, x-linked<br>
+SERTAD3  -  serta domain containing 3<br>
+ZNHIT3  -  zinc finger, hit-type containing 3<br>
+MED13L  -  mediator complex subunit 13-like<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+ZNF302  -  zinc finger protein 302<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+SRSF5  -  serine/arginine-rich splicing factor 5<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+IRF2  -  interferon regulatory factor 2<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+KIAA1429  -  kiaa1429<br>
+CIRBP  -  cold inducible rna binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF791  -  zinc finger protein 791<br>
+ZNF790  -  zinc finger protein 790<br>
+ZNF394  -  zinc finger protein 394<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045935&amp;view=details' target="_blank">GO:0045935</a><a name=0045935></a></td>
+<td>positive regulation of nucleobase-containing compound metabolic process</td>
+<td  align=center>6.1E-4</td>
+<td  align=center>3.35E-1</td>
+<td  align=center>1.60 (8795,1112,232,47)</td>
+<td>
+<a id="ctrl_elements_GO:0045935" href="javascript:toggle('elements_GO:0045935')">[+] Show genes</a><br>
+<div id="elements_GO:0045935" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+MED17  -  mediator complex subunit 17<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+MKL2  -  mkl/myocardin-like 2<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+CREBRF  -  creb3 regulatory factor<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+SERTAD3  -  serta domain containing 3<br>
+SCAND1  -  scan domain containing 1<br>
+MED16  -  mediator complex subunit 16<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+SRSF5  -  serine/arginine-rich splicing factor 5<br>
+TRIM38  -  tripartite motif containing 38<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+GTPBP1  -  gtp binding protein 1<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+CIRBP  -  cold inducible rna binding protein<br>
+CREBBP  -  creb binding protein<br>
+MED19  -  mediator complex subunit 19<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+PNKP  -  polynucleotide kinase 3'-phosphatase<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007166&amp;view=details' target="_blank">GO:0007166</a><a name=0007166></a></td>
+<td>cell surface receptor signaling pathway</td>
+<td  align=center>6.21E-4</td>
+<td  align=center>3.27E-1</td>
+<td  align=center>1.65 (8795,990,232,43)</td>
+<td>
+<a id="ctrl_elements_GO:0007166" href="javascript:toggle('elements_GO:0007166')">[+] Show genes</a><br>
+<div id="elements_GO:0007166" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+CCR6  -  chemokine (c-c motif) receptor 6<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+IRF9  -  interferon regulatory factor 9<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+F11R  -  f11 receptor<br>
+ARHGEF7  -  rho guanine nucleotide exchange factor (gef) 7<br>
+UBC  -  ubiquitin c<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+FCRL5  -  fc receptor-like 5<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+ADAR  -  adenosine deaminase, rna-specific<br>
+XAF1  -  xiap associated factor 1<br>
+LY6E  -  lymphocyte antigen 6 complex, locus e<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+EP300  -  e1a binding protein p300<br>
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+TNRC6B  -  trinucleotide repeat containing 6b<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+FARP2  -  ferm, rhogef and pleckstrin domain protein 2<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+EVL  -  enah/vasp-like<br>
+PLCE1  -  phospholipase c, epsilon 1<br>
+ATP6V1A  -  atpase, h+ transporting, lysosomal 70kda, v1 subunit a<br>
+TRIM38  -  tripartite motif containing 38<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+MYO1G  -  myosin ig<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+IRF2  -  interferon regulatory factor 2<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+PRKCE  -  protein kinase c, epsilon<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+DGKD  -  diacylglycerol kinase, delta 130kda<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050778&amp;view=details' target="_blank">GO:0050778</a><a name=0050778></a></td>
+<td>positive regulation of immune response</td>
+<td  align=center>6.38E-4</td>
+<td  align=center>3.23E-1</td>
+<td  align=center>2.05 (8795,444,232,24)</td>
+<td>
+<a id="ctrl_elements_GO:0050778" href="javascript:toggle('elements_GO:0050778')">[+] Show genes</a><br>
+<div id="elements_GO:0050778" style="display:none"> <font size=1>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+CD46  -  cd46 molecule, complement regulatory protein<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+CTSB  -  cathepsin b<br>
+UBC  -  ubiquitin c<br>
+MYO1G  -  myosin ig<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+LAG3  -  lymphocyte-activation gene 3<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+RIOK3  -  rio kinase 3<br>
+CXorf21  -  chromosome x open reading frame 21<br>
+SLAMF6  -  slam family member 6<br>
+PRKCE  -  protein kinase c, epsilon<br>
+EP300  -  e1a binding protein p300<br>
+CREBBP  -  creb binding protein<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+EIF2B4  -  eukaryotic translation initiation factor 2b, subunit 4 delta, 67kda<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+SLC39A10  -  solute carrier family 39 (zinc transporter), member 10<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0018076&amp;view=details' target="_blank">GO:0018076</a><a name=0018076></a></td>
+<td>N-terminal peptidyl-lysine acetylation</td>
+<td  align=center>6.93E-4</td>
+<td  align=center>3.37E-1</td>
+<td  align=center>37.91 (8795,2,232,2)</td>
+<td>
+<a id="ctrl_elements_GO:0018076" href="javascript:toggle('elements_GO:0018076')">[+] Show genes</a><br>
+<div id="elements_GO:0018076" style="display:none"> <font size=1>
+EP300  -  e1a binding protein p300<br>
+CREBBP  -  creb binding protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902533&amp;view=details' target="_blank">GO:1902533</a><a name=1902533></a></td>
+<td>positive regulation of intracellular signal transduction</td>
+<td  align=center>7.74E-4</td>
+<td  align=center>3.62E-1</td>
+<td  align=center>1.92 (8795,532,232,27)</td>
+<td>
+<a id="ctrl_elements_GO:1902533" href="javascript:toggle('elements_GO:1902533')">[+] Show genes</a><br>
+<div id="elements_GO:1902533" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+F11R  -  f11 receptor<br>
+UBC  -  ubiquitin c<br>
+CCR1  -  chemokine (c-c motif) receptor 1<br>
+FLCN  -  folliculin<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+SLC35B2  -  solute carrier family 35 (adenosine 3'-phospho 5'-phosphosulfate transporter), member b2<br>
+BMF  -  bcl2 modifying factor<br>
+EP300  -  e1a binding protein p300<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+TMEM55B  -  transmembrane protein 55b<br>
+GPR65  -  g protein-coupled receptor 65<br>
+PLCE1  -  phospholipase c, epsilon 1<br>
+LRRK1  -  leucine-rich repeat kinase 1<br>
+TRIM38  -  tripartite motif containing 38<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+PRKCE  -  protein kinase c, epsilon<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006355&amp;view=details' target="_blank">GO:0006355</a><a name=0006355></a></td>
+<td>regulation of transcription, DNA-templated</td>
+<td  align=center>8.55E-4</td>
+<td  align=center>3.86E-1</td>
+<td  align=center>1.42 (8795,1842,232,69)</td>
+<td>
+<a id="ctrl_elements_GO:0006355" href="javascript:toggle('elements_GO:0006355')">[+] Show genes</a><br>
+<div id="elements_GO:0006355" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+MGA  -  mga, max dimerization protein<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+MED17  -  mediator complex subunit 17<br>
+PHF21A  -  phd finger protein 21a<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+FLCN  -  folliculin<br>
+ETV7  -  ets variant 7<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+SCAND1  -  scan domain containing 1<br>
+RING1  -  ring finger protein 1<br>
+MED16  -  mediator complex subunit 16<br>
+TRIM38  -  tripartite motif containing 38<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+SIAH2  -  siah e3 ubiquitin protein ligase 2<br>
+MKL2  -  mkl/myocardin-like 2<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+ZNF691  -  zinc finger protein 691<br>
+CREBRF  -  creb3 regulatory factor<br>
+ZFX  -  zinc finger protein, x-linked<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+SERTAD3  -  serta domain containing 3<br>
+ZNHIT3  -  zinc finger, hit-type containing 3<br>
+MED13L  -  mediator complex subunit 13-like<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+ZNF302  -  zinc finger protein 302<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+ZNF791  -  zinc finger protein 791<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF790  -  zinc finger protein 790<br>
+ZNF394  -  zinc finger protein 394<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000380&amp;view=details' target="_blank">GO:0000380</a><a name=0000380></a></td>
+<td>alternative mRNA splicing, via spliceosome</td>
+<td  align=center>8.57E-4</td>
+<td  align=center>3.73E-1</td>
+<td  align=center>8.92 (8795,17,232,4)</td>
+<td>
+<a id="ctrl_elements_GO:0000380" href="javascript:toggle('elements_GO:0000380')">[+] Show genes</a><br>
+<div id="elements_GO:0000380" style="display:none"> <font size=1>
+SLU7  -  slu7 splicing factor homolog (s. cerevisiae)<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903506&amp;view=details' target="_blank">GO:1903506</a><a name=1903506></a></td>
+<td>regulation of nucleic acid-templated transcription</td>
+<td  align=center>8.69E-4</td>
+<td  align=center>3.66E-1</td>
+<td  align=center>1.42 (8795,1843,232,69)</td>
+<td>
+<a id="ctrl_elements_GO:1903506" href="javascript:toggle('elements_GO:1903506')">[+] Show genes</a><br>
+<div id="elements_GO:1903506" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+MGA  -  mga, max dimerization protein<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+MED17  -  mediator complex subunit 17<br>
+PHF21A  -  phd finger protein 21a<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+FLCN  -  folliculin<br>
+ETV7  -  ets variant 7<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+SCAND1  -  scan domain containing 1<br>
+RING1  -  ring finger protein 1<br>
+MED16  -  mediator complex subunit 16<br>
+TRIM38  -  tripartite motif containing 38<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+SIAH2  -  siah e3 ubiquitin protein ligase 2<br>
+MKL2  -  mkl/myocardin-like 2<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+ZNF691  -  zinc finger protein 691<br>
+CREBRF  -  creb3 regulatory factor<br>
+ZFX  -  zinc finger protein, x-linked<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+SERTAD3  -  serta domain containing 3<br>
+ZNHIT3  -  zinc finger, hit-type containing 3<br>
+MED13L  -  mediator complex subunit 13-like<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+ZNF302  -  zinc finger protein 302<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+ZNF791  -  zinc finger protein 791<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF790  -  zinc finger protein 790<br>
+ZNF394  -  zinc finger protein 394<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2001141&amp;view=details' target="_blank">GO:2001141</a><a name=2001141></a></td>
+<td>regulation of RNA biosynthetic process</td>
+<td  align=center>9.52E-4</td>
+<td  align=center>3.88E-1</td>
+<td  align=center>1.41 (8795,1849,232,69)</td>
+<td>
+<a id="ctrl_elements_GO:2001141" href="javascript:toggle('elements_GO:2001141')">[+] Show genes</a><br>
+<div id="elements_GO:2001141" style="display:none"> <font size=1>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+MEF2B  -  myocyte enhancer factor 2b<br>
+RBM23  -  rna binding motif protein 23<br>
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
+MGA  -  mga, max dimerization protein<br>
+IFI16  -  interferon, gamma-inducible protein 16<br>
+MED17  -  mediator complex subunit 17<br>
+PHF21A  -  phd finger protein 21a<br>
+IFI27  -  interferon, alpha-inducible protein 27<br>
+GABPB2  -  ga binding protein transcription factor, beta subunit 2<br>
+EHMT1  -  euchromatic histone-lysine n-methyltransferase 1<br>
+FLCN  -  folliculin<br>
+ETV7  -  ets variant 7<br>
+RELA  -  v-rel avian reticuloendotheliosis viral oncogene homolog a<br>
+EP300  -  e1a binding protein p300<br>
+ZNF518A  -  zinc finger protein 518a<br>
+SPI1  -  spleen focus forming virus (sffv) proviral integration oncogene<br>
+HKR1  -  hkr1, gli-kruppel zinc finger family member<br>
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br>
+SUPT20H  -  suppressor of ty 20 homolog (s. cerevisiae)<br>
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
+THAP3  -  thap domain containing, apoptosis associated protein 3<br>
+CAMKK2  -  calcium/calmodulin-dependent protein kinase kinase 2, beta<br>
+RPS6KA5  -  ribosomal protein s6 kinase, 90kda, polypeptide 5<br>
+CIR1  -  corepressor interacting with rbpj, 1<br>
+SCAND1  -  scan domain containing 1<br>
+RING1  -  ring finger protein 1<br>
+MED16  -  mediator complex subunit 16<br>
+TRIM38  -  tripartite motif containing 38<br>
+GATAD2B  -  gata zinc finger domain containing 2b<br>
+ELF1  -  e74-like factor 1 (ets domain transcription factor)<br>
+ZNF507  -  zinc finger protein 507<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+EAPP  -  e2f-associated phosphoprotein<br>
+TADA2B  -  transcriptional adaptor 2b<br>
+CREBBP  -  creb binding protein<br>
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br>
+ANKRD49  -  ankyrin repeat domain 49<br>
+ERCC6  -  excision repair cross-complementing rodent repair deficiency, complementation group 6<br>
+IRF9  -  interferon regulatory factor 9<br>
+NIPBL  -  nipped-b homolog (drosophila)<br>
+ELMSAN1  -  elm2 and myb/sant-like domain containing 1<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+SIAH2  -  siah e3 ubiquitin protein ligase 2<br>
+MKL2  -  mkl/myocardin-like 2<br>
+DDX17  -  dead (asp-glu-ala-asp) box helicase 17<br>
+PARP9  -  poly (adp-ribose) polymerase family, member 9<br>
+ZNF691  -  zinc finger protein 691<br>
+CREBRF  -  creb3 regulatory factor<br>
+ZFX  -  zinc finger protein, x-linked<br>
+SKAP1  -  src kinase associated phosphoprotein 1<br>
+SERTAD3  -  serta domain containing 3<br>
+ZNHIT3  -  zinc finger, hit-type containing 3<br>
+MED13L  -  mediator complex subunit 13-like<br>
+ZBTB14  -  zinc finger and btb domain containing 14<br>
+ZBTB24  -  zinc finger and btb domain containing 24<br>
+ZNF302  -  zinc finger protein 302<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+TRAF6  -  tnf receptor-associated factor 6, e3 ubiquitin protein ligase<br>
+ZNF226  -  zinc finger protein 226<br>
+IRF2  -  interferon regulatory factor 2<br>
+ZNF791  -  zinc finger protein 791<br>
+MED19  -  mediator complex subunit 19<br>
+ZNF790  -  zinc finger protein 790<br>
+ZNF394  -  zinc finger protein 394<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+ERBB2IP  -  erbb2 interacting protein<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9268 genes out of 9724 gene terms entered by the user.<br> 9268 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>240 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

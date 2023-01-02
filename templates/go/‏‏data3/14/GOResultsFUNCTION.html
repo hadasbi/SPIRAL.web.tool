@@ -1,0 +1,927 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='752,5,638,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='799,109,887,157' HREF='#0005215' ALT=''>
+<AREA SHAPE='RECT' COORDS='627,109,699,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='1061,102,1141,165' HREF='#0005198' ALT=''>
+<AREA SHAPE='RECT' COORDS='291,480,365,528' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='1117,343,1253,406' HREF='#0015075' ALT=''>
+<AREA SHAPE='RECT' COORDS='1081,473,1236,535' HREF='#0008324' ALT=''>
+<AREA SHAPE='RECT' COORDS='785,894,940,957' HREF='#0015078' ALT=''>
+<AREA SHAPE='RECT' COORDS='532,1048,641,1096' HREF='#0004129' ALT=''>
+<AREA SHAPE='RECT' COORDS='187,584,264,664' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='83,737,165,785' HREF='#0008233' ALT=''>
+<AREA SHAPE='RECT' COORDS='204,885,311,965' HREF='#0003755' ALT=''>
+<AREA SHAPE='RECT' COORDS='940,584,1095,664' HREF='#0022890' ALT=''>
+<AREA SHAPE='RECT' COORDS='429,351,523,399' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='544,480,637,528' HREF='#0003723' ALT=''>
+<AREA SHAPE='RECT' COORDS='337,894,447,957' HREF='#0015002' ALT=''>
+<AREA SHAPE='RECT' COORDS='444,713,559,810' HREF='#0016675' ALT=''>
+<AREA SHAPE='RECT' COORDS='471,859,585,991' HREF='#0016676' ALT=''>
+<AREA SHAPE='RECT' COORDS='288,600,373,648' HREF='#0016853' ALT=''>
+<AREA SHAPE='RECT' COORDS='267,730,352,793' HREF='#0016859' ALT=''>
+<AREA SHAPE='RECT' COORDS='485,214,592,277' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,1041,112,1103' HREF='#0070003' ALT=''>
+<AREA SHAPE='RECT' COORDS='69,1153,179,1215' HREF='#0004298' ALT=''>
+<AREA SHAPE='RECT' COORDS='365,214,461,277' HREF='#1901363' ALT=''>
+<AREA SHAPE='RECT' COORDS='667,600,765,648' HREF='#0019843' ALT=''>
+<AREA SHAPE='RECT' COORDS='659,730,773,793' HREF='#0070180' ALT=''>
+<AREA SHAPE='RECT' COORDS='941,326,1093,423' HREF='#0015318' ALT=''>
+<AREA SHAPE='RECT' COORDS='1091,214,1181,277' HREF='#0003735' ALT=''>
+<AREA SHAPE='RECT' COORDS='789,600,893,648' HREF='#0003729' ALT=''>
+<AREA SHAPE='RECT' COORDS='868,713,1023,810' HREF='#0015077' ALT=''>
+<AREA SHAPE='RECT' COORDS='792,221,920,269' HREF='#0044877' ALT=''>
+<AREA SHAPE='RECT' COORDS='795,351,917,399' HREF='#0043021' ALT=''>
+<AREA SHAPE='RECT' COORDS='667,221,768,269' HREF='#0033218' ALT=''>
+<AREA SHAPE='RECT' COORDS='661,351,771,399' HREF='#0042277' ALT=''>
+<AREA SHAPE='RECT' COORDS='80,600,163,648' HREF='#0016787' ALT=''>
+<AREA SHAPE='RECT' COORDS='952,214,1067,277' HREF='#0022857' ALT=''>
+<AREA SHAPE='RECT' COORDS='547,351,637,399' HREF='#0008144' ALT=''>
+<AREA SHAPE='RECT' COORDS='75,877,173,974' HREF='#0070011' ALT=''>
+<AREA SHAPE='RECT' COORDS='136,1048,245,1096' HREF='#0004175' ALT=''>
+<AREA SHAPE='RECT' COORDS='664,480,755,528' HREF='#0016018' ALT=''>
+<AREA SHAPE='RECT' COORDS='536,593,643,655' HREF='#0008135' ALT=''>
+<AREA SHAPE='RECT' COORDS='397,600,512,648' HREF='#0016491' ALT=''>
+<AREA SHAPE='RECT' COORDS='609,894,681,957' HREF='#0009055' ALT=''>
+<AREA SHAPE='RECT' COORDS='817,480,895,528' HREF='#0043022' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003735&amp;view=details' target="_blank">GO:0003735</a><a name=0003735></a></td>
+<td>structural constituent of ribosome</td>
+<td  align=center>1.03E-113</td>
+<td  align=center>3.42E-110</td>
+<td  align=center>46.44 (17542,145,198,76)</td>
+<td>
+<a id="ctrl_elements_GO:0003735" href="javascript:toggle('elements_GO:0003735')">[+] Show genes</a><br>
+<div id="elements_GO:0003735" style="display:none"> <font size=1>
+rplp0  -  ribosomal protein, large, p0<br>
+rps8a  -  ribosomal protein s8a<br>
+zgc:92868  -  zgc:92868<br>
+rpl13a  -  ribosomal protein l13a<br>
+rpl4  -  ribosomal protein l4<br>
+rpl22l1  -  ribosomal protein l22-like 1<br>
+rps4x  -  ribosomal protein s4, x-linked<br>
+rps23  -  ribosomal protein s23<br>
+rps10  -  ribosomal protein s10<br>
+rpl23  -  ribosomal protein l23<br>
+rpl35a  -  ribosomal protein l35a<br>
+uba52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
+rpl18  -  ribosomal protein l18<br>
+rpl38  -  ribosomal protein l38<br>
+rpl8  -  ribosomal protein l8<br>
+rps6  -  ribosomal protein s6<br>
+rps15  -  ribosomal protein s15<br>
+rpl31  -  ribosomal protein l31<br>
+rps13  -  ribosomal protein s13<br>
+rpl13  -  ribosomal protein l13<br>
+rpl39  -  ribosomal protein l39<br>
+rps15a  -  ribosomal protein s15a<br>
+zgc:171772  -  zgc:171772<br>
+rpl23a  -  ribosomal protein l23a<br>
+rps12  -  ribosomal protein s12<br>
+rpl37  -  ribosomal protein l37<br>
+rpl35  -  ribosomal protein l35<br>
+rpl34  -  ribosomal protein l34<br>
+rps5  -  ribosomal protein s5<br>
+rpl32  -  ribosomal protein l32<br>
+rpl15  -  ribosomal protein l15<br>
+rps25  -  ribosomal protein s25<br>
+rpl28  -  ribosomal protein l28<br>
+rps18  -  ribosomal protein s18<br>
+rpl10a  -  ribosomal protein l10a<br>
+rps14  -  ribosomal protein s14<br>
+rps21  -  ribosomal protein s21<br>
+rps27.1  -  ribosomal protein s27, isoform 1<br>
+rplp2l  -  ribosomal protein, large p2, like<br>
+rps26  -  ribosomal protein s26<br>
+rps20  -  ribosomal protein s20<br>
+rps3a  -  ribosomal protein s3a<br>
+rplp1  -  ribosomal protein, large, p1<br>
+rpl10  -  ribosomal protein l10<br>
+rpl30  -  ribosomal protein l30<br>
+rpl19  -  ribosomal protein l19<br>
+rpl6  -  ribosomal protein l6<br>
+rpl3  -  ribosomal protein l3<br>
+rpl9  -  ribosomal protein l9<br>
+rplp2  -  ribosomal protein, large p2<br>
+rpl7  -  ribosomal protein l7<br>
+rps7  -  ribosomal protein s7<br>
+rpl27  -  ribosomal protein l27<br>
+rps2  -  ribosomal protein s2<br>
+rpl21  -  ribosomal protein l21<br>
+rpl36  -  ribosomal protein l36<br>
+rps29  -  ribosomal protein s29<br>
+rpl36a  -  ribosomal protein l36a<br>
+rps3  -  ribosomal protein s3<br>
+rps27.2  -  ribosomal protein s27, isoform 2<br>
+rpl14  -  ribosomal protein l14<br>
+rpl5a  -  ribosomal protein l5a<br>
+rpl11  -  ribosomal protein l11<br>
+faua  -  finkel-biskis-reilly murine sarcoma virus (fbr-musv) ubiquitously expressed a<br>
+rpl22  -  ribosomal protein l22<br>
+rps26l  -  ribosomal protein s26, like<br>
+rpl17  -  ribosomal protein l17<br>
+rps24  -  ribosomal protein s24<br>
+rps27a  -  ribosomal protein s27a<br>
+rpsa  -  ribosomal protein sa<br>
+rpl18a  -  ribosomal protein l18a<br>
+rpl26  -  ribosomal protein l26<br>
+zgc:114188  -  zgc:114188<br>
+rps19  -  ribosomal protein s19<br>
+rps16  -  ribosomal protein s16<br>
+rps9  -  ribosomal protein s9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005198&amp;view=details' target="_blank">GO:0005198</a><a name=0005198></a></td>
+<td>structural molecule activity</td>
+<td  align=center>2.85E-70</td>
+<td  align=center>4.73E-67</td>
+<td  align=center>14.83 (17542,460,198,77)</td>
+<td>
+<a id="ctrl_elements_GO:0005198" href="javascript:toggle('elements_GO:0005198')">[+] Show genes</a><br>
+<div id="elements_GO:0005198" style="display:none"> <font size=1>
+zgc:92868  -  zgc:92868<br>
+rplp0  -  ribosomal protein, large, p0<br>
+rps8a  -  ribosomal protein s8a<br>
+rpl13a  -  ribosomal protein l13a<br>
+rps4x  -  ribosomal protein s4, x-linked<br>
+rpl22l1  -  ribosomal protein l22-like 1<br>
+rpl4  -  ribosomal protein l4<br>
+rps23  -  ribosomal protein s23<br>
+rps10  -  ribosomal protein s10<br>
+rpl35a  -  ribosomal protein l35a<br>
+rpl23  -  ribosomal protein l23<br>
+rpl18  -  ribosomal protein l18<br>
+uba52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
+rpl38  -  ribosomal protein l38<br>
+rpl8  -  ribosomal protein l8<br>
+rps6  -  ribosomal protein s6<br>
+actb2  -  actin, beta 2<br>
+rps15  -  ribosomal protein s15<br>
+rpl31  -  ribosomal protein l31<br>
+rps13  -  ribosomal protein s13<br>
+rpl13  -  ribosomal protein l13<br>
+rps15a  -  ribosomal protein s15a<br>
+rpl39  -  ribosomal protein l39<br>
+zgc:171772  -  zgc:171772<br>
+rpl23a  -  ribosomal protein l23a<br>
+rps12  -  ribosomal protein s12<br>
+rpl37  -  ribosomal protein l37<br>
+rpl34  -  ribosomal protein l34<br>
+rpl35  -  ribosomal protein l35<br>
+rps5  -  ribosomal protein s5<br>
+rpl32  -  ribosomal protein l32<br>
+rpl15  -  ribosomal protein l15<br>
+rps25  -  ribosomal protein s25<br>
+rpl28  -  ribosomal protein l28<br>
+rps18  -  ribosomal protein s18<br>
+rpl10a  -  ribosomal protein l10a<br>
+rps14  -  ribosomal protein s14<br>
+rps21  -  ribosomal protein s21<br>
+rplp2l  -  ribosomal protein, large p2, like<br>
+rps27.1  -  ribosomal protein s27, isoform 1<br>
+rps26  -  ribosomal protein s26<br>
+rps20  -  ribosomal protein s20<br>
+rps3a  -  ribosomal protein s3a<br>
+rplp1  -  ribosomal protein, large, p1<br>
+rpl10  -  ribosomal protein l10<br>
+rpl19  -  ribosomal protein l19<br>
+rpl30  -  ribosomal protein l30<br>
+rpl6  -  ribosomal protein l6<br>
+rpl3  -  ribosomal protein l3<br>
+rpl9  -  ribosomal protein l9<br>
+rplp2  -  ribosomal protein, large p2<br>
+rpl7  -  ribosomal protein l7<br>
+rps7  -  ribosomal protein s7<br>
+rpl27  -  ribosomal protein l27<br>
+rps2  -  ribosomal protein s2<br>
+rpl21  -  ribosomal protein l21<br>
+rpl36  -  ribosomal protein l36<br>
+rps29  -  ribosomal protein s29<br>
+rpl36a  -  ribosomal protein l36a<br>
+rps3  -  ribosomal protein s3<br>
+rps27.2  -  ribosomal protein s27, isoform 2<br>
+rpl14  -  ribosomal protein l14<br>
+rpl5a  -  ribosomal protein l5a<br>
+rpl11  -  ribosomal protein l11<br>
+faua  -  finkel-biskis-reilly murine sarcoma virus (fbr-musv) ubiquitously expressed a<br>
+rpl22  -  ribosomal protein l22<br>
+rpl17  -  ribosomal protein l17<br>
+rps26l  -  ribosomal protein s26, like<br>
+rps24  -  ribosomal protein s24<br>
+rps27a  -  ribosomal protein s27a<br>
+rpsa  -  ribosomal protein sa<br>
+rpl18a  -  ribosomal protein l18a<br>
+rpl26  -  ribosomal protein l26<br>
+zgc:114188  -  zgc:114188<br>
+rps16  -  ribosomal protein s16<br>
+rps19  -  ribosomal protein s19<br>
+rps9  -  ribosomal protein s9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003723&amp;view=details' target="_blank">GO:0003723</a><a name=0003723></a></td>
+<td>RNA binding</td>
+<td  align=center>1.45E-23</td>
+<td  align=center>1.61E-20</td>
+<td  align=center>5.34 (17542,846,198,51)</td>
+<td>
+<a id="ctrl_elements_GO:0003723" href="javascript:toggle('elements_GO:0003723')">[+] Show genes</a><br>
+<div id="elements_GO:0003723" style="display:none"> <font size=1>
+rplp0  -  ribosomal protein, large, p0<br>
+rpl13a  -  ribosomal protein l13a<br>
+rps4x  -  ribosomal protein s4, x-linked<br>
+rpl22l1  -  ribosomal protein l22-like 1<br>
+rpl4  -  ribosomal protein l4<br>
+rps10  -  ribosomal protein s10<br>
+rpl23  -  ribosomal protein l23<br>
+rpl18  -  ribosomal protein l18<br>
+rpl8  -  ribosomal protein l8<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+rps15  -  ribosomal protein s15<br>
+eif5a  -  eukaryotic translation initiation factor 5a<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+rpl13  -  ribosomal protein l13<br>
+rps13  -  ribosomal protein s13<br>
+eif3k  -  eukaryotic translation initiation factor 3, subunit k<br>
+rpl23a  -  ribosomal protein l23a<br>
+rpl7a  -  ribosomal protein l7a<br>
+rpl37  -  ribosomal protein l37<br>
+rpl35  -  ribosomal protein l35<br>
+rps5  -  ribosomal protein s5<br>
+rpl15  -  ribosomal protein l15<br>
+rps18  -  ribosomal protein s18<br>
+rpl10a  -  ribosomal protein l10a<br>
+rps14  -  ribosomal protein s14<br>
+rps27.1  -  ribosomal protein s27, isoform 1<br>
+rps26  -  ribosomal protein s26<br>
+eif3f  -  eukaryotic translation initiation factor 3, subunit f<br>
+rps20  -  ribosomal protein s20<br>
+rpl19  -  ribosomal protein l19<br>
+rpl30  -  ribosomal protein l30<br>
+rpl6  -  ribosomal protein l6<br>
+rpl3  -  ribosomal protein l3<br>
+rpl9  -  ribosomal protein l9<br>
+rpl7  -  ribosomal protein l7<br>
+rbms2b  -  rna binding motif, single stranded interacting protein 2b<br>
+rps2  -  ribosomal protein s2<br>
+eef1db  -  elongation factor-1, delta, b<br>
+rps3  -  ribosomal protein s3<br>
+rps27.2  -  ribosomal protein s27, isoform 2<br>
+rpl14  -  ribosomal protein l14<br>
+eif3ea  -  eukaryotic translation initiation factor 3, subunit e, a<br>
+rpl5a  -  ribosomal protein l5a<br>
+rpl11  -  ribosomal protein l11<br>
+rpl22  -  ribosomal protein l22<br>
+rps26l  -  ribosomal protein s26, like<br>
+rpl26  -  ribosomal protein l26<br>
+rps16  -  ribosomal protein s16<br>
+rps19  -  ribosomal protein s19<br>
+eef2b  -  eukaryotic translation elongation factor 2b<br>
+rps9  -  ribosomal protein s9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019843&amp;view=details' target="_blank">GO:0019843</a><a name=0019843></a></td>
+<td>rRNA binding</td>
+<td  align=center>5.97E-17</td>
+<td  align=center>4.97E-14</td>
+<td  align=center>31.99 (17542,36,198,13)</td>
+<td>
+<a id="ctrl_elements_GO:0019843" href="javascript:toggle('elements_GO:0019843')">[+] Show genes</a><br>
+<div id="elements_GO:0019843" style="display:none"> <font size=1>
+rplp0  -  ribosomal protein, large, p0<br>
+rps18  -  ribosomal protein s18<br>
+rps4x  -  ribosomal protein s4, x-linked<br>
+rps14  -  ribosomal protein s14<br>
+rps13  -  ribosomal protein s13<br>
+rpl23a  -  ribosomal protein l23a<br>
+rpl23  -  ribosomal protein l23<br>
+rpl5a  -  ribosomal protein l5a<br>
+rpl37  -  ribosomal protein l37<br>
+rps5  -  ribosomal protein s5<br>
+rpl8  -  ribosomal protein l8<br>
+rpl9  -  ribosomal protein l9<br>
+rps9  -  ribosomal protein s9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003676&amp;view=details' target="_blank">GO:0003676</a><a name=0003676></a></td>
+<td>nucleic acid binding</td>
+<td  align=center>1.1E-11</td>
+<td  align=center>7.3E-9</td>
+<td  align=center>2.23 (17542,2775,198,70)</td>
+<td>
+<a id="ctrl_elements_GO:0003676" href="javascript:toggle('elements_GO:0003676')">[+] Show genes</a><br>
+<div id="elements_GO:0003676" style="display:none"> <font size=1>
+rplp0  -  ribosomal protein, large, p0<br>
+rpl13a  -  ribosomal protein l13a<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+rpl22l1  -  ribosomal protein l22-like 1<br>
+rps4x  -  ribosomal protein s4, x-linked<br>
+rpl4  -  ribosomal protein l4<br>
+h2afy2  -  h2a histone family, member y2<br>
+rps10  -  ribosomal protein s10<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+rpl23  -  ribosomal protein l23<br>
+rpl18  -  ribosomal protein l18<br>
+stat1a  -  signal transduction and activation of transcription 1a<br>
+rpl8  -  ribosomal protein l8<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+meis4.1a  -  myeloid ecotropic viral integration site 4.1a<br>
+rps15  -  ribosomal protein s15<br>
+eif5a  -  eukaryotic translation initiation factor 5a<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+rpl13  -  ribosomal protein l13<br>
+rps13  -  ribosomal protein s13<br>
+eif3k  -  eukaryotic translation initiation factor 3, subunit k<br>
+rpl23a  -  ribosomal protein l23a<br>
+rpl7a  -  ribosomal protein l7a<br>
+rpl37  -  ribosomal protein l37<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+rpl35  -  ribosomal protein l35<br>
+rps5  -  ribosomal protein s5<br>
+her6  -  hairy-related 6<br>
+rpl15  -  ribosomal protein l15<br>
+rps18  -  ribosomal protein s18<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+rpl10a  -  ribosomal protein l10a<br>
+rps14  -  ribosomal protein s14<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+rps27.1  -  ribosomal protein s27, isoform 1<br>
+zfhx4  -  zinc finger homeobox 4<br>
+rps26  -  ribosomal protein s26<br>
+smad6a  -  smad family member 6a<br>
+eif3f  -  eukaryotic translation initiation factor 3, subunit f<br>
+rps20  -  ribosomal protein s20<br>
+rpl19  -  ribosomal protein l19<br>
+rpl30  -  ribosomal protein l30<br>
+rpl6  -  ribosomal protein l6<br>
+rpl3  -  ribosomal protein l3<br>
+rpl9  -  ribosomal protein l9<br>
+cxxc5a  -  cxxc finger 5a<br>
+rpl7  -  ribosomal protein l7<br>
+rbms2b  -  rna binding motif, single stranded interacting protein 2b<br>
+rps2  -  ribosomal protein s2<br>
+klf11b  -  kruppel-like factor 11b<br>
+eef1db  -  elongation factor-1, delta, b<br>
+rps27.2  -  ribosomal protein s27, isoform 2<br>
+rps3  -  ribosomal protein s3<br>
+eif3ea  -  eukaryotic translation initiation factor 3, subunit e, a<br>
+rpl14  -  ribosomal protein l14<br>
+jun  -  jun proto-oncogene<br>
+rpl5a  -  ribosomal protein l5a<br>
+rpl11  -  ribosomal protein l11<br>
+rpl22  -  ribosomal protein l22<br>
+rps26l  -  ribosomal protein s26, like<br>
+her9  -  hairy-related 9<br>
+rpl26  -  ribosomal protein l26<br>
+eef2b  -  eukaryotic translation elongation factor 2b<br>
+rps19  -  ribosomal protein s19<br>
+rps16  -  ribosomal protein s16<br>
+rps9  -  ribosomal protein s9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004129&amp;view=details' target="_blank">GO:0004129</a><a name=0004129></a></td>
+<td>cytochrome-c oxidase activity</td>
+<td  align=center>1.23E-7</td>
+<td  align=center>6.82E-5</td>
+<td  align=center>24.16 (17542,22,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0004129" href="javascript:toggle('elements_GO:0004129')">[+] Show genes</a><br>
+<div id="elements_GO:0004129" style="display:none"> <font size=1>
+cox8a  -  cytochrome c oxidase subunit 8a<br>
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br>
+zgc:86599  -  zgc:86599<br>
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br>
+cox5ab  -  cytochrome c oxidase subunit vab<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016675&amp;view=details' target="_blank">GO:0016675</a><a name=0016675></a></td>
+<td>oxidoreductase activity, acting on a heme group of donors</td>
+<td  align=center>1.23E-7</td>
+<td  align=center>5.85E-5</td>
+<td  align=center>24.16 (17542,22,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0016675" href="javascript:toggle('elements_GO:0016675')">[+] Show genes</a><br>
+<div id="elements_GO:0016675" style="display:none"> <font size=1>
+cox8a  -  cytochrome c oxidase subunit 8a<br>
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br>
+zgc:86599  -  zgc:86599<br>
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br>
+cox5ab  -  cytochrome c oxidase subunit vab<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016676&amp;view=details' target="_blank">GO:0016676</a><a name=0016676></a></td>
+<td>oxidoreductase activity, acting on a heme group of donors, oxygen as acceptor</td>
+<td  align=center>1.23E-7</td>
+<td  align=center>5.12E-5</td>
+<td  align=center>24.16 (17542,22,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0016676" href="javascript:toggle('elements_GO:0016676')">[+] Show genes</a><br>
+<div id="elements_GO:0016676" style="display:none"> <font size=1>
+cox8a  -  cytochrome c oxidase subunit 8a<br>
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br>
+zgc:86599  -  zgc:86599<br>
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br>
+cox5ab  -  cytochrome c oxidase subunit vab<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015002&amp;view=details' target="_blank">GO:0015002</a><a name=0015002></a></td>
+<td>heme-copper terminal oxidase activity</td>
+<td  align=center>1.23E-7</td>
+<td  align=center>4.55E-5</td>
+<td  align=center>24.16 (17542,22,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0015002" href="javascript:toggle('elements_GO:0015002')">[+] Show genes</a><br>
+<div id="elements_GO:0015002" style="display:none"> <font size=1>
+cox8a  -  cytochrome c oxidase subunit 8a<br>
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br>
+zgc:86599  -  zgc:86599<br>
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br>
+cox5ab  -  cytochrome c oxidase subunit vab<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015078&amp;view=details' target="_blank">GO:0015078</a><a name=0015078></a></td>
+<td>proton transmembrane transporter activity</td>
+<td  align=center>8.75E-7</td>
+<td  align=center>2.91E-4</td>
+<td  align=center>8.76 (17542,91,198,9)</td>
+<td>
+<a id="ctrl_elements_GO:0015078" href="javascript:toggle('elements_GO:0015078')">[+] Show genes</a><br>
+<div id="elements_GO:0015078" style="display:none"> <font size=1>
+cox8a  -  cytochrome c oxidase subunit 8a<br>
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br>
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br>
+zgc:86599  -  zgc:86599<br>
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br>
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br>
+cox5ab  -  cytochrome c oxidase subunit vab<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003755&amp;view=details' target="_blank">GO:0003755</a><a name=0003755></a></td>
+<td>peptidyl-prolyl cis-trans isomerase activity</td>
+<td  align=center>3.92E-6</td>
+<td  align=center>1.18E-3</td>
+<td  align=center>13.99 (17542,38,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0003755" href="javascript:toggle('elements_GO:0003755')">[+] Show genes</a><br>
+<div id="elements_GO:0003755" style="display:none"> <font size=1>
+fkbp9  -  fk506 binding protein 9<br>
+ppiab  -  peptidylprolyl isomerase ab (cyclophilin a)<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+fkbp1aa  -  fk506 binding protein 1aa<br>
+pin1  -  protein (peptidyl-prolyl cis/trans isomerase) nima-interacting 1<br>
+ppib  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901363&amp;view=details' target="_blank">GO:1901363</a><a name=1901363></a></td>
+<td>heterocyclic compound binding</td>
+<td  align=center>6.5E-6</td>
+<td  align=center>1.8E-3</td>
+<td  align=center>1.53 (17542,4802,198,83)</td>
+<td>
+<a id="ctrl_elements_GO:1901363" href="javascript:toggle('elements_GO:1901363')">[+] Show genes</a><br>
+<div id="elements_GO:1901363" style="display:none"> <font size=1>
+rplp0  -  ribosomal protein, large, p0<br>
+rpl13a  -  ribosomal protein l13a<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+rpl4  -  ribosomal protein l4<br>
+rpl22l1  -  ribosomal protein l22-like 1<br>
+rps4x  -  ribosomal protein s4, x-linked<br>
+LOC100331745  -  atrial natriuretic peptide receptor 2-like<br>
+h2afy2  -  h2a histone family, member y2<br>
+rps10  -  ribosomal protein s10<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+rpl23  -  ribosomal protein l23<br>
+rpl18  -  ribosomal protein l18<br>
+stat1a  -  signal transduction and activation of transcription 1a<br>
+prkag1  -  protein kinase, amp-activated, gamma 1 non-catalytic subunit<br>
+rpl8  -  ribosomal protein l8<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+hsp90ab1  -  heat shock protein 90, alpha (cytosolic), class b member 1<br>
+meis4.1a  -  myeloid ecotropic viral integration site 4.1a<br>
+rps15  -  ribosomal protein s15<br>
+actb2  -  actin, beta 2<br>
+dbi  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+zgc:63587  -  zgc:63587<br>
+eif5a  -  eukaryotic translation initiation factor 5a<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+rpl13  -  ribosomal protein l13<br>
+rps13  -  ribosomal protein s13<br>
+pim1  -  pim-1 oncogene<br>
+eif3k  -  eukaryotic translation initiation factor 3, subunit k<br>
+rpl23a  -  ribosomal protein l23a<br>
+rpl7a  -  ribosomal protein l7a<br>
+rpl37  -  ribosomal protein l37<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+rpl35  -  ribosomal protein l35<br>
+rps5  -  ribosomal protein s5<br>
+hk1  -  hexokinase 1<br>
+her6  -  hairy-related 6<br>
+rpl15  -  ribosomal protein l15<br>
+rps18  -  ribosomal protein s18<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+rpl10a  -  ribosomal protein l10a<br>
+rps14  -  ribosomal protein s14<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+rps27.1  -  ribosomal protein s27, isoform 1<br>
+zfhx4  -  zinc finger homeobox 4<br>
+rps26  -  ribosomal protein s26<br>
+smad6a  -  smad family member 6a<br>
+arl4cb  -  adp-ribosylation factor-like 4cb<br>
+eif3f  -  eukaryotic translation initiation factor 3, subunit f<br>
+rps20  -  ribosomal protein s20<br>
+rpl30  -  ribosomal protein l30<br>
+rpl19  -  ribosomal protein l19<br>
+cct2  -  chaperonin containing tcp1, subunit 2 (beta)<br>
+rpl6  -  ribosomal protein l6<br>
+rpl3  -  ribosomal protein l3<br>
+rpl9  -  ribosomal protein l9<br>
+si:dkey-261e22.1  -  si:dkey-261e22.1<br>
+rpl7  -  ribosomal protein l7<br>
+cxxc5a  -  cxxc finger 5a<br>
+rbms2b  -  rna binding motif, single stranded interacting protein 2b<br>
+rps2  -  ribosomal protein s2<br>
+klf11b  -  kruppel-like factor 11b<br>
+ak2  -  adenylate kinase 2<br>
+eef1db  -  elongation factor-1, delta, b<br>
+rps27.2  -  ribosomal protein s27, isoform 2<br>
+rps3  -  ribosomal protein s3<br>
+jun  -  jun proto-oncogene<br>
+rpl14  -  ribosomal protein l14<br>
+eif3ea  -  eukaryotic translation initiation factor 3, subunit e, a<br>
+rpl5a  -  ribosomal protein l5a<br>
+rpl11  -  ribosomal protein l11<br>
+wu:fc13c02  -  wu:fc13c02<br>
+rpl22  -  ribosomal protein l22<br>
+rps26l  -  ribosomal protein s26, like<br>
+her9  -  hairy-related 9<br>
+rpl26  -  ribosomal protein l26<br>
+rps19  -  ribosomal protein s19<br>
+rps16  -  ribosomal protein s16<br>
+eef2b  -  eukaryotic translation elongation factor 2b<br>
+rps9  -  ribosomal protein s9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016859&amp;view=details' target="_blank">GO:0016859</a><a name=0016859></a></td>
+<td>cis-trans isomerase activity</td>
+<td  align=center>7.17E-6</td>
+<td  align=center>1.83E-3</td>
+<td  align=center>12.66 (17542,42,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0016859" href="javascript:toggle('elements_GO:0016859')">[+] Show genes</a><br>
+<div id="elements_GO:0016859" style="display:none"> <font size=1>
+fkbp9  -  fk506 binding protein 9<br>
+ppiab  -  peptidylprolyl isomerase ab (cyclophilin a)<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+fkbp1aa  -  fk506 binding protein 1aa<br>
+pin1  -  protein (peptidyl-prolyl cis/trans isomerase) nima-interacting 1<br>
+ppib  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097159&amp;view=details' target="_blank">GO:0097159</a><a name=0097159></a></td>
+<td>organic cyclic compound binding</td>
+<td  align=center>1.02E-5</td>
+<td  align=center>2.43E-3</td>
+<td  align=center>1.51 (17542,4855,198,83)</td>
+<td>
+<a id="ctrl_elements_GO:0097159" href="javascript:toggle('elements_GO:0097159')">[+] Show genes</a><br>
+<div id="elements_GO:0097159" style="display:none"> <font size=1>
+rplp0  -  ribosomal protein, large, p0<br>
+rpl13a  -  ribosomal protein l13a<br>
+nr2f5  -  nuclear receptor subfamily 2, group f, member 5<br>
+jdp2  -  jun dimerization protein 2<br>
+rpl4  -  ribosomal protein l4<br>
+rpl22l1  -  ribosomal protein l22-like 1<br>
+rps4x  -  ribosomal protein s4, x-linked<br>
+LOC100331745  -  atrial natriuretic peptide receptor 2-like<br>
+h2afy2  -  h2a histone family, member y2<br>
+rps10  -  ribosomal protein s10<br>
+bcl6ab  -  b-cell cll/lymphoma 6a, genome duplicate b<br>
+rpl23  -  ribosomal protein l23<br>
+rpl18  -  ribosomal protein l18<br>
+stat1a  -  signal transduction and activation of transcription 1a<br>
+prkag1  -  protein kinase, amp-activated, gamma 1 non-catalytic subunit<br>
+rpl8  -  ribosomal protein l8<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+hsp90ab1  -  heat shock protein 90, alpha (cytosolic), class b member 1<br>
+meis4.1a  -  myeloid ecotropic viral integration site 4.1a<br>
+rps15  -  ribosomal protein s15<br>
+actb2  -  actin, beta 2<br>
+dbi  -  diazepam binding inhibitor (gaba receptor modulator, acyl-coa binding protein)<br>
+zgc:63587  -  zgc:63587<br>
+eif5a  -  eukaryotic translation initiation factor 5a<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+rpl13  -  ribosomal protein l13<br>
+rps13  -  ribosomal protein s13<br>
+pim1  -  pim-1 oncogene<br>
+eif3k  -  eukaryotic translation initiation factor 3, subunit k<br>
+rpl23a  -  ribosomal protein l23a<br>
+rpl7a  -  ribosomal protein l7a<br>
+rpl37  -  ribosomal protein l37<br>
+nr1d2b  -  nuclear receptor subfamily 1, group d, member 2b<br>
+rpl35  -  ribosomal protein l35<br>
+rps5  -  ribosomal protein s5<br>
+hk1  -  hexokinase 1<br>
+her6  -  hairy-related 6<br>
+rpl15  -  ribosomal protein l15<br>
+rps18  -  ribosomal protein s18<br>
+atf4b1  -  activating transcription factor 4b1 (tax-responsive enhancer element b67)<br>
+rpl10a  -  ribosomal protein l10a<br>
+rps14  -  ribosomal protein s14<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+junba  -  jun b proto-oncogene a<br>
+klf6a  -  kruppel-like factor 6a<br>
+rps27.1  -  ribosomal protein s27, isoform 1<br>
+zfhx4  -  zinc finger homeobox 4<br>
+rps26  -  ribosomal protein s26<br>
+smad6a  -  smad family member 6a<br>
+arl4cb  -  adp-ribosylation factor-like 4cb<br>
+eif3f  -  eukaryotic translation initiation factor 3, subunit f<br>
+rps20  -  ribosomal protein s20<br>
+rpl30  -  ribosomal protein l30<br>
+rpl19  -  ribosomal protein l19<br>
+cct2  -  chaperonin containing tcp1, subunit 2 (beta)<br>
+rpl6  -  ribosomal protein l6<br>
+rpl3  -  ribosomal protein l3<br>
+rpl9  -  ribosomal protein l9<br>
+si:dkey-261e22.1  -  si:dkey-261e22.1<br>
+rpl7  -  ribosomal protein l7<br>
+cxxc5a  -  cxxc finger 5a<br>
+rbms2b  -  rna binding motif, single stranded interacting protein 2b<br>
+rps2  -  ribosomal protein s2<br>
+klf11b  -  kruppel-like factor 11b<br>
+ak2  -  adenylate kinase 2<br>
+eef1db  -  elongation factor-1, delta, b<br>
+rps27.2  -  ribosomal protein s27, isoform 2<br>
+rps3  -  ribosomal protein s3<br>
+jun  -  jun proto-oncogene<br>
+rpl14  -  ribosomal protein l14<br>
+eif3ea  -  eukaryotic translation initiation factor 3, subunit e, a<br>
+rpl5a  -  ribosomal protein l5a<br>
+rpl11  -  ribosomal protein l11<br>
+wu:fc13c02  -  wu:fc13c02<br>
+rpl22  -  ribosomal protein l22<br>
+rps26l  -  ribosomal protein s26, like<br>
+her9  -  hairy-related 9<br>
+rpl26  -  ribosomal protein l26<br>
+rps19  -  ribosomal protein s19<br>
+rps16  -  ribosomal protein s16<br>
+eef2b  -  eukaryotic translation elongation factor 2b<br>
+rps9  -  ribosomal protein s9<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009055&amp;view=details' target="_blank">GO:0009055</a><a name=0009055></a></td>
+<td>electron transfer activity</td>
+<td  align=center>3.15E-5</td>
+<td  align=center>7E-3</td>
+<td  align=center>9.84 (17542,54,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0009055" href="javascript:toggle('elements_GO:0009055')">[+] Show genes</a><br>
+<div id="elements_GO:0009055" style="display:none"> <font size=1>
+cox8a  -  cytochrome c oxidase subunit 8a<br>
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br>
+zgc:86599  -  zgc:86599<br>
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br>
+cox5ab  -  cytochrome c oxidase subunit vab<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016018&amp;view=details' target="_blank">GO:0016018</a><a name=0016018></a></td>
+<td>cyclosporin A binding</td>
+<td  align=center>1.6E-4</td>
+<td  align=center>3.33E-2</td>
+<td  align=center>26.58 (17542,10,198,3)</td>
+<td>
+<a id="ctrl_elements_GO:0016018" href="javascript:toggle('elements_GO:0016018')">[+] Show genes</a><br>
+<div id="elements_GO:0016018" style="display:none"> <font size=1>
+ppiab  -  peptidylprolyl isomerase ab (cyclophilin a)<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+ppib  -  peptidylprolyl isomerase b (cyclophilin b)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003729&amp;view=details' target="_blank">GO:0003729</a><a name=0003729></a></td>
+<td>mRNA binding</td>
+<td  align=center>4.1E-4</td>
+<td  align=center>8.02E-2</td>
+<td  align=center>4.05 (17542,197,198,9)</td>
+<td>
+<a id="ctrl_elements_GO:0003729" href="javascript:toggle('elements_GO:0003729')">[+] Show genes</a><br>
+<div id="elements_GO:0003729" style="display:none"> <font size=1>
+rpl35  -  ribosomal protein l35<br>
+rbms2b  -  rna binding motif, single stranded interacting protein 2b<br>
+rpl13a  -  ribosomal protein l13a<br>
+rps5  -  ribosomal protein s5<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+rps14  -  ribosomal protein s14<br>
+hnrpkl  -  heterogeneous nuclear ribonucleoprotein k, like<br>
+rps26l  -  ribosomal protein s26, like<br>
+rps26  -  ribosomal protein s26<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043021&amp;view=details' target="_blank">GO:0043021</a><a name=0043021></a></td>
+<td>ribonucleoprotein complex binding</td>
+<td  align=center>5.32E-4</td>
+<td  align=center>9.83E-2</td>
+<td  align=center>7.51 (17542,59,198,5)</td>
+<td>
+<a id="ctrl_elements_GO:0043021" href="javascript:toggle('elements_GO:0043021')">[+] Show genes</a><br>
+<div id="elements_GO:0043021" style="display:none"> <font size=1>
+rplp1  -  ribosomal protein, large, p1<br>
+eif5a  -  eukaryotic translation initiation factor 5a<br>
+gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br>
+eif3k  -  eukaryotic translation initiation factor 3, subunit k<br>
+eef2b  -  eukaryotic translation elongation factor 2b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004298&amp;view=details' target="_blank">GO:0004298</a><a name=0004298></a></td>
+<td>threonine-type endopeptidase activity</td>
+<td  align=center>5.83E-4</td>
+<td  align=center>1.02E-1</td>
+<td  align=center>17.72 (17542,15,198,3)</td>
+<td>
+<a id="ctrl_elements_GO:0004298" href="javascript:toggle('elements_GO:0004298')">[+] Show genes</a><br>
+<div id="elements_GO:0004298" style="display:none"> <font size=1>
+psmb1  -  proteasome (prosome, macropain) subunit, beta type, 1<br>
+psmb6  -  proteasome (prosome, macropain) subunit, beta type, 6<br>
+psmb2  -  proteasome (prosome, macropain) subunit, beta type, 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070003&amp;view=details' target="_blank">GO:0070003</a><a name=0070003></a></td>
+<td>threonine-type peptidase activity</td>
+<td  align=center>5.83E-4</td>
+<td  align=center>9.7E-2</td>
+<td  align=center>17.72 (17542,15,198,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070003" href="javascript:toggle('elements_GO:0070003')">[+] Show genes</a><br>
+<div id="elements_GO:0070003" style="display:none"> <font size=1>
+psmb1  -  proteasome (prosome, macropain) subunit, beta type, 1<br>
+psmb6  -  proteasome (prosome, macropain) subunit, beta type, 6<br>
+psmb2  -  proteasome (prosome, macropain) subunit, beta type, 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043022&amp;view=details' target="_blank">GO:0043022</a><a name=0043022></a></td>
+<td>ribosome binding</td>
+<td  align=center>6.27E-4</td>
+<td  align=center>9.93E-2</td>
+<td  align=center>10.13 (17542,35,198,4)</td>
+<td>
+<a id="ctrl_elements_GO:0043022" href="javascript:toggle('elements_GO:0043022')">[+] Show genes</a><br>
+<div id="elements_GO:0043022" style="display:none"> <font size=1>
+eif5a  -  eukaryotic translation initiation factor 5a<br>
+eif3k  -  eukaryotic translation initiation factor 3, subunit k<br>
+gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br>
+eef2b  -  eukaryotic translation elongation factor 2b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008135&amp;view=details' target="_blank">GO:0008135</a><a name=0008135></a></td>
+<td>translation factor activity, RNA binding</td>
+<td  align=center>6.47E-4</td>
+<td  align=center>9.79E-2</td>
+<td  align=center>5.72 (17542,93,198,6)</td>
+<td>
+<a id="ctrl_elements_GO:0008135" href="javascript:toggle('elements_GO:0008135')">[+] Show genes</a><br>
+<div id="elements_GO:0008135" style="display:none"> <font size=1>
+eif5a  -  eukaryotic translation initiation factor 5a<br>
+eif3k  -  eukaryotic translation initiation factor 3, subunit k<br>
+eef1db  -  elongation factor-1, delta, b<br>
+eif3ea  -  eukaryotic translation initiation factor 3, subunit e, a<br>
+eef2b  -  eukaryotic translation elongation factor 2b<br>
+eif3f  -  eukaryotic translation initiation factor 3, subunit f<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070180&amp;view=details' target="_blank">GO:0070180</a><a name=0070180></a></td>
+<td>large ribosomal subunit rRNA binding</td>
+<td  align=center>7.49E-4</td>
+<td  align=center>1.08E-1</td>
+<td  align=center>44.30 (17542,4,198,2)</td>
+<td>
+<a id="ctrl_elements_GO:0070180" href="javascript:toggle('elements_GO:0070180')">[+] Show genes</a><br>
+<div id="elements_GO:0070180" style="display:none"> <font size=1>
+rplp0  -  ribosomal protein, large, p0<br>
+rpl23  -  ribosomal protein l23<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24211 genes out of 30331 gene terms entered by the user.<br> 24211 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>310 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3327 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,1193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='669,651,779,699' HREF='#0004175' ALT=''>
+<AREA SHAPE='RECT' COORDS='735,763,844,826' HREF='#0004298' ALT=''>
+<AREA SHAPE='RECT' COORDS='344,875,512,955' HREF='#0000976' ALT=''>
+<AREA SHAPE='RECT' COORDS='359,1003,489,1083' HREF='#0000987' ALT=''>
+<AREA SHAPE='RECT' COORDS='513,1003,681,1083' HREF='#0000977' ALT=''>
+<AREA SHAPE='RECT' COORDS='331,5,217,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='97,102,193,165' HREF='#0140110' ALT=''>
+<AREA SHAPE='RECT' COORDS='295,109,367,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='712,109,787,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='489,367,583,415' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='396,513,489,561' HREF='#0003677' ALT=''>
+<AREA SHAPE='RECT' COORDS='520,506,627,569' HREF='#0001067' ALT=''>
+<AREA SHAPE='RECT' COORDS='256,513,347,561' HREF='#0016018' ALT=''>
+<AREA SHAPE='RECT' COORDS='24,222,123,285' HREF='#0003700' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,342,128,439' HREF='#0000981' ALT=''>
+<AREA SHAPE='RECT' COORDS='680,489,779,586' HREF='#0070011' ALT=''>
+<AREA SHAPE='RECT' COORDS='803,643,909,706' HREF='#0070003' ALT=''>
+<AREA SHAPE='RECT' COORDS='532,635,628,715' HREF='#0044212' ALT=''>
+<AREA SHAPE='RECT' COORDS='536,875,659,955' HREF='#0001012' ALT=''>
+<AREA SHAPE='RECT' COORDS='688,367,771,415' HREF='#0008233' ALT=''>
+<AREA SHAPE='RECT' COORDS='763,213,840,293' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='841,497,948,577' HREF='#0003755' ALT=''>
+<AREA SHAPE='RECT' COORDS='363,763,493,826' HREF='#1990837' ALT=''>
+<AREA SHAPE='RECT' COORDS='203,367,293,415' HREF='#0008144' ALT=''>
+<AREA SHAPE='RECT' COORDS='445,1131,576,1229' HREF='#0000978' ALT=''>
+<AREA SHAPE='RECT' COORDS='377,651,508,699' HREF='#0043565' ALT=''>
+<AREA SHAPE='RECT' COORDS='119,651,212,699' HREF='#0031490' ALT=''>
+<AREA SHAPE='RECT' COORDS='236,651,353,699' HREF='#0003690' ALT=''>
+<AREA SHAPE='RECT' COORDS='525,222,632,285' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='280,229,381,277' HREF='#0033218' ALT=''>
+<AREA SHAPE='RECT' COORDS='124,513,207,561' HREF='#0003682' ALT=''>
+<AREA SHAPE='RECT' COORDS='405,222,501,285' HREF='#1901363' ALT=''>
+<AREA SHAPE='RECT' COORDS='317,367,427,415' HREF='#0042277' ALT=''>
+<AREA SHAPE='RECT' COORDS='864,229,949,277' HREF='#0016853' ALT=''>
+<AREA SHAPE='RECT' COORDS='861,359,947,422' HREF='#0016859' ALT=''>
+<AREA SHAPE='RECT' COORDS='656,229,739,277' HREF='#0016787' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000978&amp;view=details' target="_blank">GO:0000978</a><a name=0000978></a></td>
+<td>RNA polymerase II proximal promoter sequence-specific DNA binding</td>
+<td  align=center>8.1E-12</td>
+<td  align=center>2.69E-8</td>
+<td  align=center>4.18 (17542,897,145,31)</td>
+<td>
+<a id="ctrl_elements_GO:0000978" href="javascript:toggle('elements_GO:0000978')">[+] Show genes</a><br>
+<div id="elements_GO:0000978" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000987&amp;view=details' target="_blank">GO:0000987</a><a name=0000987></a></td>
+<td>proximal promoter sequence-specific DNA binding</td>
+<td  align=center>1.11E-11</td>
+<td  align=center>1.84E-8</td>
+<td  align=center>4.13 (17542,908,145,31)</td>
+<td>
+<a id="ctrl_elements_GO:0000987" href="javascript:toggle('elements_GO:0000987')">[+] Show genes</a><br>
+<div id="elements_GO:0000987" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003677&amp;view=details' target="_blank">GO:0003677</a><a name=0003677></a></td>
+<td>DNA binding</td>
+<td  align=center>1.36E-11</td>
+<td  align=center>1.51E-8</td>
+<td  align=center>2.93 (17542,1858,145,45)</td>
+<td>
+<a id="ctrl_elements_GO:0003677" href="javascript:toggle('elements_GO:0003677')">[+] Show genes</a><br>
+<div id="elements_GO:0003677" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+sp8b  -  sp8 transcription factor b<br>
+eng2b  -  engrailed 2b<br>
+meis2b  -  myeloid ecotropic viral integration site 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+h2afy2  -  h2a histone family, member y2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+hmgn3  -  high mobility group nucleosomal binding domain 3<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+tox3  -  tox high mobility group box family member 3<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hoxb3a  -  homeo box b3a<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+prdm12b  -  pr domain containing 12b<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+h1f0  -  h1 histone family, member 0<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dbx1a  -  developing brain homeobox 1a<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000981&amp;view=details' target="_blank">GO:0000981</a><a name=0000981></a></td>
+<td>DNA-binding transcription factor activity, RNA polymerase II-specific</td>
+<td  align=center>3.56E-11</td>
+<td  align=center>2.96E-8</td>
+<td  align=center>3.61 (17542,1138,145,34)</td>
+<td>
+<a id="ctrl_elements_GO:0000981" href="javascript:toggle('elements_GO:0000981')">[+] Show genes</a><br>
+<div id="elements_GO:0000981" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dbx1a  -  developing brain homeobox 1a<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003700&amp;view=details' target="_blank">GO:0003700</a><a name=0003700></a></td>
+<td>DNA-binding transcription factor activity</td>
+<td  align=center>3.1E-10</td>
+<td  align=center>2.06E-7</td>
+<td  align=center>3.33 (17542,1234,145,34)</td>
+<td>
+<a id="ctrl_elements_GO:0003700" href="javascript:toggle('elements_GO:0003700')">[+] Show genes</a><br>
+<div id="elements_GO:0003700" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dbx1a  -  developing brain homeobox 1a<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000976&amp;view=details' target="_blank">GO:0000976</a><a name=0000976></a></td>
+<td>transcription regulatory region sequence-specific DNA binding</td>
+<td  align=center>3.37E-10</td>
+<td  align=center>1.87E-7</td>
+<td  align=center>3.41 (17542,1171,145,33)</td>
+<td>
+<a id="ctrl_elements_GO:0000976" href="javascript:toggle('elements_GO:0000976')">[+] Show genes</a><br>
+<div id="elements_GO:0000976" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001067&amp;view=details' target="_blank">GO:0001067</a><a name=0001067></a></td>
+<td>regulatory region nucleic acid binding</td>
+<td  align=center>3.44E-10</td>
+<td  align=center>1.64E-7</td>
+<td  align=center>3.41 (17542,1172,145,33)</td>
+<td>
+<a id="ctrl_elements_GO:0001067" href="javascript:toggle('elements_GO:0001067')">[+] Show genes</a><br>
+<div id="elements_GO:0001067" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044212&amp;view=details' target="_blank">GO:0044212</a><a name=0044212></a></td>
+<td>transcription regulatory region DNA binding</td>
+<td  align=center>3.44E-10</td>
+<td  align=center>1.43E-7</td>
+<td  align=center>3.41 (17542,1172,145,33)</td>
+<td>
+<a id="ctrl_elements_GO:0044212" href="javascript:toggle('elements_GO:0044212')">[+] Show genes</a><br>
+<div id="elements_GO:0044212" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000977&amp;view=details' target="_blank">GO:0000977</a><a name=0000977></a></td>
+<td>RNA polymerase II regulatory region sequence-specific DNA binding</td>
+<td  align=center>5.14E-10</td>
+<td  align=center>1.9E-7</td>
+<td  align=center>3.44 (17542,1124,145,32)</td>
+<td>
+<a id="ctrl_elements_GO:0000977" href="javascript:toggle('elements_GO:0000977')">[+] Show genes</a><br>
+<div id="elements_GO:0000977" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001012&amp;view=details' target="_blank">GO:0001012</a><a name=0001012></a></td>
+<td>RNA polymerase II regulatory region DNA binding</td>
+<td  align=center>5.14E-10</td>
+<td  align=center>1.71E-7</td>
+<td  align=center>3.44 (17542,1124,145,32)</td>
+<td>
+<a id="ctrl_elements_GO:0001012" href="javascript:toggle('elements_GO:0001012')">[+] Show genes</a><br>
+<div id="elements_GO:0001012" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003690&amp;view=details' target="_blank">GO:0003690</a><a name=0003690></a></td>
+<td>double-stranded DNA binding</td>
+<td  align=center>5.94E-10</td>
+<td  align=center>1.8E-7</td>
+<td  align=center>3.25 (17542,1265,145,34)</td>
+<td>
+<a id="ctrl_elements_GO:0003690" href="javascript:toggle('elements_GO:0003690')">[+] Show genes</a><br>
+<div id="elements_GO:0003690" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+h1f0  -  h1 histone family, member 0<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990837&amp;view=details' target="_blank">GO:1990837</a><a name=1990837></a></td>
+<td>sequence-specific double-stranded DNA binding</td>
+<td  align=center>7.47E-10</td>
+<td  align=center>2.07E-7</td>
+<td  align=center>3.30 (17542,1208,145,33)</td>
+<td>
+<a id="ctrl_elements_GO:1990837" href="javascript:toggle('elements_GO:1990837')">[+] Show genes</a><br>
+<div id="elements_GO:1990837" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0140110&amp;view=details' target="_blank">GO:0140110</a><a name=0140110></a></td>
+<td>transcription regulator activity</td>
+<td  align=center>9.78E-10</td>
+<td  align=center>2.5E-7</td>
+<td  align=center>2.98 (17542,1502,145,37)</td>
+<td>
+<a id="ctrl_elements_GO:0140110" href="javascript:toggle('elements_GO:0140110')">[+] Show genes</a><br>
+<div id="elements_GO:0140110" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+hsbp1a  -  heat shock factor binding protein 1a<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+zmiz1a  -  zinc finger, miz-type containing 1a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+kmt2cb  -  lysine (k)-specific methyltransferase 2cb<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dbx1a  -  developing brain homeobox 1a<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003676&amp;view=details' target="_blank">GO:0003676</a><a name=0003676></a></td>
+<td>nucleic acid binding</td>
+<td  align=center>2.7E-9</td>
+<td  align=center>6.41E-7</td>
+<td  align=center>2.27 (17542,2775,145,52)</td>
+<td>
+<a id="ctrl_elements_GO:0003676" href="javascript:toggle('elements_GO:0003676')">[+] Show genes</a><br>
+<div id="elements_GO:0003676" style="display:none"> <font size=1>
+bicc2  -  bicaudal c homolog 2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+meis2b  -  myeloid ecotropic viral integration site 2b<br>
+h2afy2  -  h2a histone family, member y2<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+sp8a  -  sp8 transcription factor a<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+nkx6.2  -  nk6 homeobox 2<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+prdm12b  -  pr domain containing 12b<br>
+tfdp2  -  transcription factor dp-2<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+h1f0  -  h1 histone family, member 0<br>
+hoxa4a  -  homeo box a4a<br>
+gpatch8  -  g patch domain containing 8<br>
+dacha  -  dachshund a<br>
+foxp4  -  forkhead box p4<br>
+hoxa2b  -  homeo box a2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+ptbp2b  -  polypyrimidine tract binding protein 2b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+hmgn3  -  high mobility group nucleosomal binding domain 3<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+tox3  -  tox high mobility group box family member 3<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dbx1a  -  developing brain homeobox 1a<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043565&amp;view=details' target="_blank">GO:0043565</a><a name=0043565></a></td>
+<td>sequence-specific DNA binding</td>
+<td  align=center>4.91E-9</td>
+<td  align=center>1.09E-6</td>
+<td  align=center>3.07 (17542,1302,145,33)</td>
+<td>
+<a id="ctrl_elements_GO:0043565" href="javascript:toggle('elements_GO:0043565')">[+] Show genes</a><br>
+<div id="elements_GO:0043565" style="display:none"> <font size=1>
+hoxa2b  -  homeo box a2b<br>
+eng2b  -  engrailed 2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+h2afy2  -  h2a histone family, member y2<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+egr2a  -  early growth response 2a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+sp8a  -  sp8 transcription factor a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+tcf12  -  transcription factor 12<br>
+egr2b  -  early growth response 2b<br>
+nkx6.2  -  nk6 homeobox 2<br>
+tfdp2  -  transcription factor dp-2<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+hoxa4a  -  homeo box a4a<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dacha  -  dachshund a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+foxp4  -  forkhead box p4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901363&amp;view=details' target="_blank">GO:1901363</a><a name=1901363></a></td>
+<td>heterocyclic compound binding</td>
+<td  align=center>2.06E-6</td>
+<td  align=center>4.28E-4</td>
+<td  align=center>1.66 (17542,4802,145,66)</td>
+<td>
+<a id="ctrl_elements_GO:1901363" href="javascript:toggle('elements_GO:1901363')">[+] Show genes</a><br>
+<div id="elements_GO:1901363" style="display:none"> <font size=1>
+bicc2  -  bicaudal c homolog 2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+meis2b  -  myeloid ecotropic viral integration site 2b<br>
+h2afy2  -  h2a histone family, member y2<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+sp8a  -  sp8 transcription factor a<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hsp90ab1  -  heat shock protein 90, alpha (cytosolic), class b member 1<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+nkx6.2  -  nk6 homeobox 2<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+prdm12b  -  pr domain containing 12b<br>
+tfdp2  -  transcription factor dp-2<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+h1f0  -  h1 histone family, member 0<br>
+hoxa4a  -  homeo box a4a<br>
+gpatch8  -  g patch domain containing 8<br>
+tuba1b  -  tubulin, alpha 1b<br>
+epha4a  -  eph receptor a4a<br>
+mapk11  -  mitogen-activated protein kinase 11<br>
+dacha  -  dachshund a<br>
+foxp4  -  forkhead box p4<br>
+chd2  -  chromodomain helicase dna binding protein 2<br>
+hoxa2b  -  homeo box a2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+ptbp2b  -  polypyrimidine tract binding protein 2b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+egr2a  -  early growth response 2a<br>
+rnd3a  -  rho family gtpase 3a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+arl4cb  -  adp-ribosylation factor-like 4cb<br>
+hmgn3  -  high mobility group nucleosomal binding domain 3<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+epha7  -  eph receptor a7<br>
+tox3  -  tox high mobility group box family member 3<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+gpr56  -  g protein-coupled receptor 56<br>
+tcf12  -  transcription factor 12<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+egr2b  -  early growth response 2b<br>
+ube2i2  -  ubiquitin-conjugating enzyme e2i2<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+tubb5  -  tubulin, beta 5<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+wu:fc13c02  -  wu:fc13c02<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dbx1a  -  developing brain homeobox 1a<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097159&amp;view=details' target="_blank">GO:0097159</a><a name=0097159></a></td>
+<td>organic cyclic compound binding</td>
+<td  align=center>3.11E-6</td>
+<td  align=center>6.08E-4</td>
+<td  align=center>1.64 (17542,4855,145,66)</td>
+<td>
+<a id="ctrl_elements_GO:0097159" href="javascript:toggle('elements_GO:0097159')">[+] Show genes</a><br>
+<div id="elements_GO:0097159" style="display:none"> <font size=1>
+bicc2  -  bicaudal c homolog 2<br>
+eng2b  -  engrailed 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+meis2b  -  myeloid ecotropic viral integration site 2b<br>
+h2afy2  -  h2a histone family, member y2<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+sp8a  -  sp8 transcription factor a<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hsp90ab1  -  heat shock protein 90, alpha (cytosolic), class b member 1<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+nkx6.2  -  nk6 homeobox 2<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+prdm12b  -  pr domain containing 12b<br>
+tfdp2  -  transcription factor dp-2<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+h1f0  -  h1 histone family, member 0<br>
+hoxa4a  -  homeo box a4a<br>
+gpatch8  -  g patch domain containing 8<br>
+tuba1b  -  tubulin, alpha 1b<br>
+epha4a  -  eph receptor a4a<br>
+mapk11  -  mitogen-activated protein kinase 11<br>
+dacha  -  dachshund a<br>
+foxp4  -  forkhead box p4<br>
+chd2  -  chromodomain helicase dna binding protein 2<br>
+hoxa2b  -  homeo box a2b<br>
+sp8b  -  sp8 transcription factor b<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+ptbp2b  -  polypyrimidine tract binding protein 2b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+egr2a  -  early growth response 2a<br>
+rnd3a  -  rho family gtpase 3a<br>
+zfhx4  -  zinc finger homeobox 4<br>
+arl4cb  -  adp-ribosylation factor-like 4cb<br>
+hmgn3  -  high mobility group nucleosomal binding domain 3<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+hoxc4a  -  homeo box c4a<br>
+epha7  -  eph receptor a7<br>
+tox3  -  tox high mobility group box family member 3<br>
+hoxb3a  -  homeo box b3a<br>
+sox1b  -  sry-box containing gene 1b<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hoxb2a  -  homeo box b2a<br>
+gpr56  -  g protein-coupled receptor 56<br>
+tcf12  -  transcription factor 12<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+egr2b  -  early growth response 2b<br>
+ube2i2  -  ubiquitin-conjugating enzyme e2i2<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+tubb5  -  tubulin, beta 5<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+wu:fc13c02  -  wu:fc13c02<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+zfhx3  -  zinc finger homeobox 3<br>
+dbx1a  -  developing brain homeobox 1a<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031490&amp;view=details' target="_blank">GO:0031490</a><a name=0031490></a></td>
+<td>chromatin DNA binding</td>
+<td  align=center>6.23E-5</td>
+<td  align=center>1.15E-2</td>
+<td  align=center>11.86 (17542,51,145,5)</td>
+<td>
+<a id="ctrl_elements_GO:0031490" href="javascript:toggle('elements_GO:0031490')">[+] Show genes</a><br>
+<div id="elements_GO:0031490" style="display:none"> <font size=1>
+tox3  -  tox high mobility group box family member 3<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+h2afy2  -  h2a histone family, member y2<br>
+h1f0  -  h1 histone family, member 0<br>
+hmgn3  -  high mobility group nucleosomal binding domain 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016018&amp;view=details' target="_blank">GO:0016018</a><a name=0016018></a></td>
+<td>cyclosporin A binding</td>
+<td  align=center>6.36E-5</td>
+<td  align=center>1.11E-2</td>
+<td  align=center>36.29 (17542,10,145,3)</td>
+<td>
+<a id="ctrl_elements_GO:0016018" href="javascript:toggle('elements_GO:0016018')">[+] Show genes</a><br>
+<div id="elements_GO:0016018" style="display:none"> <font size=1>
+ppiab  -  peptidylprolyl isomerase ab (cyclophilin a)<br>
+ppid  -  peptidylprolyl isomerase d<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003682&amp;view=details' target="_blank">GO:0003682</a><a name=0003682></a></td>
+<td>chromatin binding</td>
+<td  align=center>9.36E-5</td>
+<td  align=center>1.56E-2</td>
+<td  align=center>4.93 (17542,221,145,9)</td>
+<td>
+<a id="ctrl_elements_GO:0003682" href="javascript:toggle('elements_GO:0003682')">[+] Show genes</a><br>
+<div id="elements_GO:0003682" style="display:none"> <font size=1>
+tox3  -  tox high mobility group box family member 3<br>
+bahcc1  -  bah domain and coiled-coil containing 1<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+h2afy2  -  h2a histone family, member y2<br>
+h1f0  -  h1 histone family, member 0<br>
+ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br>
+phf21aa  -  phd finger protein 21aa<br>
+hmgn3  -  high mobility group nucleosomal binding domain 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004298&amp;view=details' target="_blank">GO:0004298</a><a name=0004298></a></td>
+<td>threonine-type endopeptidase activity</td>
+<td  align=center>2.34E-4</td>
+<td  align=center>3.71E-2</td>
+<td  align=center>24.20 (17542,15,145,3)</td>
+<td>
+<a id="ctrl_elements_GO:0004298" href="javascript:toggle('elements_GO:0004298')">[+] Show genes</a><br>
+<div id="elements_GO:0004298" style="display:none"> <font size=1>
+psmb1  -  proteasome (prosome, macropain) subunit, beta type, 1<br>
+psmb6  -  proteasome (prosome, macropain) subunit, beta type, 6<br>
+psmb2  -  proteasome (prosome, macropain) subunit, beta type, 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070003&amp;view=details' target="_blank">GO:0070003</a><a name=0070003></a></td>
+<td>threonine-type peptidase activity</td>
+<td  align=center>2.34E-4</td>
+<td  align=center>3.54E-2</td>
+<td  align=center>24.20 (17542,15,145,3)</td>
+<td>
+<a id="ctrl_elements_GO:0070003" href="javascript:toggle('elements_GO:0070003')">[+] Show genes</a><br>
+<div id="elements_GO:0070003" style="display:none"> <font size=1>
+psmb1  -  proteasome (prosome, macropain) subunit, beta type, 1<br>
+psmb6  -  proteasome (prosome, macropain) subunit, beta type, 6<br>
+psmb2  -  proteasome (prosome, macropain) subunit, beta type, 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003755&amp;view=details' target="_blank">GO:0003755</a><a name=0003755></a></td>
+<td>peptidyl-prolyl cis-trans isomerase activity</td>
+<td  align=center>2.66E-4</td>
+<td  align=center>3.84E-2</td>
+<td  align=center>12.73 (17542,38,145,4)</td>
+<td>
+<a id="ctrl_elements_GO:0003755" href="javascript:toggle('elements_GO:0003755')">[+] Show genes</a><br>
+<div id="elements_GO:0003755" style="display:none"> <font size=1>
+ppiab  -  peptidylprolyl isomerase ab (cyclophilin a)<br>
+ppid  -  peptidylprolyl isomerase d<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+fkbp1aa  -  fk506 binding protein 1aa<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016859&amp;view=details' target="_blank">GO:0016859</a><a name=0016859></a></td>
+<td>cis-trans isomerase activity</td>
+<td  align=center>3.93E-4</td>
+<td  align=center>5.44E-2</td>
+<td  align=center>11.52 (17542,42,145,4)</td>
+<td>
+<a id="ctrl_elements_GO:0016859" href="javascript:toggle('elements_GO:0016859')">[+] Show genes</a><br>
+<div id="elements_GO:0016859" style="display:none"> <font size=1>
+ppiab  -  peptidylprolyl isomerase ab (cyclophilin a)<br>
+ppid  -  peptidylprolyl isomerase d<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+fkbp1aa  -  fk506 binding protein 1aa<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005488&amp;view=details' target="_blank">GO:0005488</a><a name=0005488></a></td>
+<td>binding</td>
+<td  align=center>8.33E-4</td>
+<td  align=center>1.11E-1</td>
+<td  align=center>1.24 (17542,9678,145,99)</td>
+<td>
+<a id="ctrl_elements_GO:0005488" href="javascript:toggle('elements_GO:0005488')">[+] Show genes</a><br>
+<div id="elements_GO:0005488" style="display:none"> <font size=1>
+meis2b  -  myeloid ecotropic viral integration site 2b<br>
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br>
+lrrn1  -  leucine rich repeat neuronal 1<br>
+mdkb  -  midkine-related growth factor b<br>
+zeb2a  -  zinc finger e-box binding homeobox 2a<br>
+phf21aa  -  phd finger protein 21aa<br>
+appb  -  amyloid beta (a4) precursor protein b<br>
+si:dkey-103i16.2  -  si:dkey-103i16.2<br>
+txnipa  -  thioredoxin interacting protein a<br>
+meis2a  -  myeloid ecotropic viral integration site 2a<br>
+dpysl2b  -  dihydropyrimidinase-like 2b<br>
+top2b  -  topoisomerase (dna) ii beta<br>
+nkx6.2  -  nk6 homeobox 2<br>
+igsf9b  -  immunoglobulin superfamily, member 9b<br>
+ppiab  -  peptidylprolyl isomerase ab (cyclophilin a)<br>
+prdm12b  -  pr domain containing 12b<br>
+tfdp2  -  transcription factor dp-2<br>
+h1f0  -  h1 histone family, member 0<br>
+epha4a  -  eph receptor a4a<br>
+scube2  -  signal peptide, cub domain, egf-like 2<br>
+dacha  -  dachshund a<br>
+foxp4  -  forkhead box p4<br>
+celsr1b  -  cadherin egf lag seven-pass g-type receptor 1b<br>
+fabp3  -  fatty acid binding protein 3, muscle and heart<br>
+chd2  -  chromodomain helicase dna binding protein 2<br>
+sp8b  -  sp8 transcription factor b<br>
+cdh7  -  cadherin 7, type 2<br>
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br>
+irx3a  -  iroquois homeobox protein 3a<br>
+rnd3a  -  rho family gtpase 3a<br>
+egr2a  -  early growth response 2a<br>
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br>
+nell2a  -  nel-like 2a<br>
+arl4cb  -  adp-ribosylation factor-like 4cb<br>
+odz4  -  odd oz/ten-m homolog 4<br>
+hmgn3  -  high mobility group nucleosomal binding domain 3<br>
+sgce  -  sarcoglycan, epsilon<br>
+tox3  -  tox high mobility group box family member 3<br>
+epha7  -  eph receptor a7<br>
+sox1b  -  sry-box containing gene 1b<br>
+dpysl5a  -  dihydropyrimidinase-like 5a<br>
+zbtb16a  -  zinc finger and btb domain containing 16a<br>
+hm:gc12  -  hm:gc12<br>
+mff  -  mitochondrial fission factor<br>
+gpr56  -  g protein-coupled receptor 56<br>
+egr2b  -  early growth response 2b<br>
+syne2b  -  spectrin repeat containing, nuclear envelope 2b<br>
+pou3f2a  -  pou class 3 homeobox 2a<br>
+tubb5  -  tubulin, beta 5<br>
+zfhx3  -  zinc finger homeobox 3<br>
+nova2  -  neuro-oncological ventral antigen 2<br>
+ppiaa  -  peptidylprolyl isomerase aa (cyclophilin a)<br>
+bicc2  -  bicaudal c homolog 2<br>
+eng2b  -  engrailed 2b<br>
+bahcc1  -  bah domain and coiled-coil containing 1<br>
+h2afy2  -  h2a histone family, member y2<br>
+coro1cb  -  coronin, actin binding protein, 1cb<br>
+idh2  -  isocitrate dehydrogenase 2 (nadp+), mitochondrial<br>
+sp8a  -  sp8 transcription factor a<br>
+zmiz1a  -  zinc finger, miz-type containing 1a<br>
+h3f3b.1  -  h3 histone, family 3b.1<br>
+hsp90ab1  -  heat shock protein 90, alpha (cytosolic), class b member 1<br>
+kmt2cb  -  lysine (k)-specific methyltransferase 2cb<br>
+mdka  -  midkine-related growth factor<br>
+igf2bp1  -  insulin-like growth factor 2 mrna binding protein 1<br>
+msi1  -  musashi homolog 1 (drosophila)<br>
+ppid  -  peptidylprolyl isomerase d<br>
+hoxa4a  -  homeo box a4a<br>
+gpatch8  -  g patch domain containing 8<br>
+angptl4  -  angiopoietin-like 4<br>
+tuba1b  -  tubulin, alpha 1b<br>
+mapk11  -  mitogen-activated protein kinase 11<br>
+fgd  -  faciogenital dysplasia<br>
+hoxa2b  -  homeo box a2b<br>
+pou3f3b  -  pou class 3 homeobox 3b<br>
+gpr98  -  g protein-coupled receptor 98<br>
+ptbp2b  -  polypyrimidine tract binding protein 2b<br>
+irx5a  -  iroquois homeobox protein 5a<br>
+lmo3  -  lim domain only 3<br>
+zfhx4  -  zinc finger homeobox 4<br>
+hoxc4a  -  homeo box c4a<br>
+irx1a  -  iroquois homeobox protein 1, a<br>
+epb41a  -  erythrocyte membrane protein band 4.1a (elliptocytosis 1, rh-linked)<br>
+hoxb3a  -  homeo box b3a<br>
+tox  -  thymocyte selection-associated high mobility group box<br>
+hoxb2a  -  homeo box b2a<br>
+tcf12  -  transcription factor 12<br>
+fgfr3  -  fibroblast growth factor receptor 3<br>
+nkx2.9  -  nk2 transcription factor related, locus 9 (drosophila)<br>
+ube2i2  -  ubiquitin-conjugating enzyme e2i2<br>
+ssbp4  -  single stranded dna binding protein 4<br>
+si:ch73-386h18.1  -  si:ch73-386h18.1<br>
+pou3f2b  -  pou class 3 homeobox 2b<br>
+wu:fc13c02  -  wu:fc13c02<br>
+pou3f1  -  pou class 3 homeobox 1<br>
+adam10b  -  a disintegrin and metalloprotease domain 10b<br>
+dbx1a  -  developing brain homeobox 1a<br>
+nkx2.2b  -  nk2 transcription factor related 2b<br>
+ash1l  -  ash1 (absent, small, or homeotic)-like (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24162 genes out of 30279 gene terms entered by the user.<br> 24162 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>261 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3327 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

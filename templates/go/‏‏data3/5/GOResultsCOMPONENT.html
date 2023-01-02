@@ -1,0 +1,1534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='467,413,557,461' HREF='#0044428' ALT=''>
+<AREA SHAPE='RECT' COORDS='1121,535,1244,598' HREF='#0030532' ALT=''>
+<AREA SHAPE='RECT' COORDS='443,543,520,591' HREF='#0044452' ALT=''>
+<AREA SHAPE='RECT' COORDS='696,543,789,591' HREF='#0031519' ALT=''>
+<AREA SHAPE='RECT' COORDS='483,873,632,935' HREF='#0055029' ALT=''>
+<AREA SHAPE='RECT' COORDS='101,543,179,591' HREF='#0005730' ALT=''>
+<AREA SHAPE='RECT' COORDS='203,543,301,591' HREF='#0044451' ALT=''>
+<AREA SHAPE='RECT' COORDS='813,543,915,591' HREF='#0005681' ALT=''>
+<AREA SHAPE='RECT' COORDS='325,543,419,591' HREF='#0005654' ALT=''>
+<AREA SHAPE='RECT' COORDS='289,768,391,816' HREF='#0016607' ALT=''>
+<AREA SHAPE='RECT' COORDS='301,197,376,245' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='207,301,372,349' HREF='#0043228' ALT=''>
+<AREA SHAPE='RECT' COORDS='396,301,487,349' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='44,301,183,349' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='595,101,672,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='588,294,679,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='1235,664,1349,712' HREF='#0097525' ALT=''>
+<AREA SHAPE='RECT' COORDS='1148,768,1231,816' HREF='#0005686' ALT=''>
+<AREA SHAPE='RECT' COORDS='207,406,372,469' HREF='#0043232' ALT=''>
+<AREA SHAPE='RECT' COORDS='291,664,387,712' HREF='#0016604' ALT=''>
+<AREA SHAPE='RECT' COORDS='949,413,1072,461' HREF='#0034719' ALT=''>
+<AREA SHAPE='RECT' COORDS='1081,664,1204,712' HREF='#0030880' ALT=''>
+<AREA SHAPE='RECT' COORDS='895,761,1017,823' HREF='#0000428' ALT=''>
+<AREA SHAPE='RECT' COORDS='1344,518,1499,615' HREF='#0061695' ALT=''>
+<AREA SHAPE='RECT' COORDS='595,543,672,591' HREF='#0000785' ALT=''>
+<AREA SHAPE='RECT' COORDS='44,406,183,469' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='343,984,465,1032' HREF='#0005665' ALT=''>
+<AREA SHAPE='RECT' COORDS='811,413,925,461' HREF='#0034715' ALT=''>
+<AREA SHAPE='RECT' COORDS='683,5,565,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='947,197,1075,245' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='696,101,768,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,543,77,591' HREF='#0005634' ALT=''>
+<AREA SHAPE='RECT' COORDS='1255,768,1337,816' HREF='#0005682' ALT=''>
+<AREA SHAPE='RECT' COORDS='1361,761,1463,823' HREF='#0097526' ALT=''>
+<AREA SHAPE='RECT' COORDS='1487,768,1569,816' HREF='#0005687' ALT=''>
+<AREA SHAPE='RECT' COORDS='1041,768,1124,816' HREF='#0005685' ALT=''>
+<AREA SHAPE='RECT' COORDS='955,301,1067,349' HREF='#0120114' ALT=''>
+<AREA SHAPE='RECT' COORDS='924,664,1057,712' HREF='#0071013' ALT=''>
+<AREA SHAPE='RECT' COORDS='751,664,900,712' HREF='#0005684' ALT=''>
+<AREA SHAPE='RECT' COORDS='772,768,871,816' HREF='#0000243' ALT=''>
+<AREA SHAPE='RECT' COORDS='820,301,916,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='581,413,685,461' HREF='#0044427' ALT=''>
+<AREA SHAPE='RECT' COORDS='687,197,777,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='1360,413,1451,461' HREF='#1990234' ALT=''>
+<AREA SHAPE='RECT' COORDS='1269,301,1344,349' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='633,664,727,712' HREF='#0071011' ALT=''>
+<AREA SHAPE='RECT' COORDS='1096,413,1219,461' HREF='#1990904' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044428&amp;view=details' target="_blank">GO:0044428</a><a name=0044428></a></td>
+<td>nuclear part</td>
+<td  align=center>4.46E-29</td>
+<td  align=center>6.06E-26</td>
+<td  align=center>6.63 (17542,1284,101,49)</td>
+<td>
+<a id="ctrl_elements_GO:0044428" href="javascript:toggle('elements_GO:0044428')">[+] Show genes</a><br>
+<div id="elements_GO:0044428" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+zgc:162967  -  zgc:162967<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+wdr33  -  wd repeat domain 33<br>
+ran  -  ras-related nuclear protein<br>
+fbl  -  fibrillarin<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+rbm8a  -  rna binding motif protein 8a<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+nup205  -  nucleoporin 205<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+hnrnpa0l  -  heterogeneous nuclear ribonucleoprotein a0, like<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+lmnb2  -  lamin b2<br>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+tardbp  -  tar dna binding protein<br>
+hnrnpul1  -  heterogeneous nuclear ribonucleoprotein u-like 1<br>
+nutf2  -  nuclear transport factor 2<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005634&amp;view=details' target="_blank">GO:0005634</a><a name=0005634></a></td>
+<td>nucleus</td>
+<td  align=center>7.93E-19</td>
+<td  align=center>5.39E-16</td>
+<td  align=center>2.90 (17542,3778,101,63)</td>
+<td>
+<a id="ctrl_elements_GO:0005634" href="javascript:toggle('elements_GO:0005634')">[+] Show genes</a><br>
+<div id="elements_GO:0005634" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+ewsr1b  -  ewing sarcoma breakpoint region 1b<br>
+sap18  -  sin3-associated polypeptide<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+khdrbs1a  -  kh domain containing, rna binding, signal transduction associated 1a<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+eif1ad  -  eukaryotic translation initiation factor 1a domain containing<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+rbm8a  -  rna binding motif protein 8a<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+prmt1  -  protein arginine methyltransferase 1<br>
+nup205  -  nucleoporin 205<br>
+safb  -  scaffold attachment factor b<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+hnrnpl2  -  heterogeneous nuclear ribonucleoprotein l2<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+hmgb2b  -  high-mobility group box 2b<br>
+kars  -  lysyl-trna synthetase<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+ik  -  ik cytokine<br>
+hmgb2a  -  high-mobility group box 2a<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+npm1a  -  nucleophosmin 1a<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+impdh1b  -  inosine 5'-phosphate dehydrogenase 1b<br>
+mif4gda  -  mif4g domain containing a<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+xrcc1  -  x-ray repair complementing defective repair in chinese hamster cells 1<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+ptges3b  -  prostaglandin e synthase 3b (cytosolic)<br>
+carm1  -  coactivator-associated arginine methyltransferase 1<br>
+tardbp  -  tar dna binding protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044424&amp;view=details' target="_blank">GO:0044424</a><a name=0044424></a></td>
+<td>intracellular part</td>
+<td  align=center>9.68E-16</td>
+<td  align=center>4.38E-13</td>
+<td  align=center>1.65 (17542,9815,101,93)</td>
+<td>
+<a id="ctrl_elements_GO:0044424" href="javascript:toggle('elements_GO:0044424')">[+] Show genes</a><br>
+<div id="elements_GO:0044424" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+wdr35  -  wd repeat domain 35<br>
+ewsr1b  -  ewing sarcoma breakpoint region 1b<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+sap18  -  sin3-associated polypeptide<br>
+khdrbs1a  -  kh domain containing, rna binding, signal transduction associated 1a<br>
+cth  -  cystathionase (cystathionine gamma-lyase)<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+eif3s10  -  eukaryotic translation initiation factor 3, subunit 10 (theta)<br>
+wdr33  -  wd repeat domain 33<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+eif1ad  -  eukaryotic translation initiation factor 1a domain containing<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+rbm8a  -  rna binding motif protein 8a<br>
+fbl  -  fibrillarin<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+nucks1a  -  nuclear casein kinase and cyclin-dependent kinase substrate 1a<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+ubqln4  -  ubiquilin 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+nucks1b  -  nuclear casein kinase and cyclin-dependent kinase substrate 1b<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+prmt1  -  protein arginine methyltransferase 1<br>
+nup205  -  nucleoporin 205<br>
+safb  -  scaffold attachment factor b<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+hnrnpl2  -  heterogeneous nuclear ribonucleoprotein l2<br>
+nudcd3  -  nudc domain containing 3<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+hmgb2b  -  high-mobility group box 2b<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+kars  -  lysyl-trna synthetase<br>
+cnbpb  -  cchc-type zinc finger, nucleic acid binding protein b<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+ik  -  ik cytokine<br>
+hmgb2a  -  high-mobility group box 2a<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+abce1  -  atp-binding cassette, sub-family e (oabp), member 1<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+impdh1b  -  inosine 5'-phosphate dehydrogenase 1b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+mif4gda  -  mif4g domain containing a<br>
+hnrnpa0l  -  heterogeneous nuclear ribonucleoprotein a0, like<br>
+slc16a8  -  solute carrier family 16 (monocarboxylic acid transporters), member 8<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+caprin1a  -  cell cycle associated protein 1a<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+cyp2p6  -  cytochrome p450, family 2, subfamily p, polypeptide 6<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+lmnb2  -  lamin b2<br>
+xrcc1  -  x-ray repair complementing defective repair in chinese hamster cells 1<br>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+kif15  -  kinesin family member 15<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+ptges3b  -  prostaglandin e synthase 3b (cytosolic)<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+carm1  -  coactivator-associated arginine methyltransferase 1<br>
+tardbp  -  tar dna binding protein<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+hnrnpul1  -  heterogeneous nuclear ribonucleoprotein u-like 1<br>
+nutf2  -  nuclear transport factor 2<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044446&amp;view=details' target="_blank">GO:0044446</a><a name=0044446></a></td>
+<td>intracellular organelle part</td>
+<td  align=center>1.08E-15</td>
+<td  align=center>3.65E-13</td>
+<td  align=center>2.65 (17542,3931,101,60)</td>
+<td>
+<a id="ctrl_elements_GO:0044446" href="javascript:toggle('elements_GO:0044446')">[+] Show genes</a><br>
+<div id="elements_GO:0044446" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+wdr35  -  wd repeat domain 35<br>
+zgc:162967  -  zgc:162967<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+wdr33  -  wd repeat domain 33<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+fbl  -  fibrillarin<br>
+rbm8a  -  rna binding motif protein 8a<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+nup205  -  nucleoporin 205<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+hnrnpa0l  -  heterogeneous nuclear ribonucleoprotein a0, like<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+lmnb2  -  lamin b2<br>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+kif15  -  kinesin family member 15<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+tardbp  -  tar dna binding protein<br>
+hnrnpul1  -  heterogeneous nuclear ribonucleoprotein u-like 1<br>
+nutf2  -  nuclear transport factor 2<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044422&amp;view=details' target="_blank">GO:0044422</a><a name=0044422></a></td>
+<td>organelle part</td>
+<td  align=center>7.38E-15</td>
+<td  align=center>2.01E-12</td>
+<td  align=center>2.55 (17542,4090,101,60)</td>
+<td>
+<a id="ctrl_elements_GO:0044422" href="javascript:toggle('elements_GO:0044422')">[+] Show genes</a><br>
+<div id="elements_GO:0044422" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+wdr35  -  wd repeat domain 35<br>
+zgc:162967  -  zgc:162967<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+wdr33  -  wd repeat domain 33<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+fbl  -  fibrillarin<br>
+rbm8a  -  rna binding motif protein 8a<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+nup205  -  nucleoporin 205<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+hnrnpa0l  -  heterogeneous nuclear ribonucleoprotein a0, like<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+lmnb2  -  lamin b2<br>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+kif15  -  kinesin family member 15<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+tardbp  -  tar dna binding protein<br>
+hnrnpul1  -  heterogeneous nuclear ribonucleoprotein u-like 1<br>
+nutf2  -  nuclear transport factor 2<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005730&amp;view=details' target="_blank">GO:0005730</a><a name=0005730></a></td>
+<td>nucleolus</td>
+<td  align=center>2.75E-12</td>
+<td  align=center>6.22E-10</td>
+<td  align=center>13.22 (17542,184,101,14)</td>
+<td>
+<a id="ctrl_elements_GO:0005730" href="javascript:toggle('elements_GO:0005730')">[+] Show genes</a><br>
+<div id="elements_GO:0005730" style="display:none"> <font size=1>
+zgc:123180  -  zgc:123180<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+ncl  -  nucleolin<br>
+npm1a  -  nucleophosmin 1a<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+zgc:162967  -  zgc:162967<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+fbl  -  fibrillarin<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043229&amp;view=details' target="_blank">GO:0043229</a><a name=0043229></a></td>
+<td>intracellular organelle</td>
+<td  align=center>1.13E-11</td>
+<td  align=center>2.19E-9</td>
+<td  align=center>1.85 (17542,6846,101,73)</td>
+<td>
+<a id="ctrl_elements_GO:0043229" href="javascript:toggle('elements_GO:0043229')">[+] Show genes</a><br>
+<div id="elements_GO:0043229" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+wdr35  -  wd repeat domain 35<br>
+ewsr1b  -  ewing sarcoma breakpoint region 1b<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+sap18  -  sin3-associated polypeptide<br>
+khdrbs1a  -  kh domain containing, rna binding, signal transduction associated 1a<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+eif1ad  -  eukaryotic translation initiation factor 1a domain containing<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+rbm8a  -  rna binding motif protein 8a<br>
+fbl  -  fibrillarin<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+prmt1  -  protein arginine methyltransferase 1<br>
+nup205  -  nucleoporin 205<br>
+safb  -  scaffold attachment factor b<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+hnrnpl2  -  heterogeneous nuclear ribonucleoprotein l2<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+hmgb2b  -  high-mobility group box 2b<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+kars  -  lysyl-trna synthetase<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+ik  -  ik cytokine<br>
+pcna  -  proliferating cell nuclear antigen<br>
+hmgb2a  -  high-mobility group box 2a<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+impdh1b  -  inosine 5'-phosphate dehydrogenase 1b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+mif4gda  -  mif4g domain containing a<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+ccnf  -  cyclin f<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+cyp2p6  -  cytochrome p450, family 2, subfamily p, polypeptide 6<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+xrcc1  -  x-ray repair complementing defective repair in chinese hamster cells 1<br>
+kif15  -  kinesin family member 15<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+ptges3b  -  prostaglandin e synthase 3b (cytosolic)<br>
+carm1  -  coactivator-associated arginine methyltransferase 1<br>
+tardbp  -  tar dna binding protein<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043231&amp;view=details' target="_blank">GO:0043231</a><a name=0043231></a></td>
+<td>intracellular membrane-bounded organelle</td>
+<td  align=center>1.8E-11</td>
+<td  align=center>3.05E-9</td>
+<td  align=center>2.00 (17542,5743,101,66)</td>
+<td>
+<a id="ctrl_elements_GO:0043231" href="javascript:toggle('elements_GO:0043231')">[+] Show genes</a><br>
+<div id="elements_GO:0043231" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+ewsr1b  -  ewing sarcoma breakpoint region 1b<br>
+sap18  -  sin3-associated polypeptide<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+khdrbs1a  -  kh domain containing, rna binding, signal transduction associated 1a<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+eif1ad  -  eukaryotic translation initiation factor 1a domain containing<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+rbm8a  -  rna binding motif protein 8a<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+prmt1  -  protein arginine methyltransferase 1<br>
+nup205  -  nucleoporin 205<br>
+safb  -  scaffold attachment factor b<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+hnrnpl2  -  heterogeneous nuclear ribonucleoprotein l2<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+hmgb2b  -  high-mobility group box 2b<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+kars  -  lysyl-trna synthetase<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+ik  -  ik cytokine<br>
+hmgb2a  -  high-mobility group box 2a<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+npm1a  -  nucleophosmin 1a<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+impdh1b  -  inosine 5'-phosphate dehydrogenase 1b<br>
+mif4gda  -  mif4g domain containing a<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+cyp2p6  -  cytochrome p450, family 2, subfamily p, polypeptide 6<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+xrcc1  -  x-ray repair complementing defective repair in chinese hamster cells 1<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+ptges3b  -  prostaglandin e synthase 3b (cytosolic)<br>
+carm1  -  coactivator-associated arginine methyltransferase 1<br>
+tardbp  -  tar dna binding protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043226&amp;view=details' target="_blank">GO:0043226</a><a name=0043226></a></td>
+<td>organelle</td>
+<td  align=center>2.55E-11</td>
+<td  align=center>3.86E-9</td>
+<td  align=center>1.83 (17542,6947,101,73)</td>
+<td>
+<a id="ctrl_elements_GO:0043226" href="javascript:toggle('elements_GO:0043226')">[+] Show genes</a><br>
+<div id="elements_GO:0043226" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+wdr35  -  wd repeat domain 35<br>
+ewsr1b  -  ewing sarcoma breakpoint region 1b<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+sap18  -  sin3-associated polypeptide<br>
+khdrbs1a  -  kh domain containing, rna binding, signal transduction associated 1a<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+eif1ad  -  eukaryotic translation initiation factor 1a domain containing<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+rbm8a  -  rna binding motif protein 8a<br>
+fbl  -  fibrillarin<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+prmt1  -  protein arginine methyltransferase 1<br>
+nup205  -  nucleoporin 205<br>
+safb  -  scaffold attachment factor b<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+hnrnpl2  -  heterogeneous nuclear ribonucleoprotein l2<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+hmgb2b  -  high-mobility group box 2b<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+kars  -  lysyl-trna synthetase<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+ik  -  ik cytokine<br>
+pcna  -  proliferating cell nuclear antigen<br>
+hmgb2a  -  high-mobility group box 2a<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+impdh1b  -  inosine 5'-phosphate dehydrogenase 1b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+mif4gda  -  mif4g domain containing a<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+ccnf  -  cyclin f<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+cyp2p6  -  cytochrome p450, family 2, subfamily p, polypeptide 6<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+xrcc1  -  x-ray repair complementing defective repair in chinese hamster cells 1<br>
+kif15  -  kinesin family member 15<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+ptges3b  -  prostaglandin e synthase 3b (cytosolic)<br>
+carm1  -  coactivator-associated arginine methyltransferase 1<br>
+tardbp  -  tar dna binding protein<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990904&amp;view=details' target="_blank">GO:1990904</a><a name=1990904></a></td>
+<td>ribonucleoprotein complex</td>
+<td  align=center>3.2E-11</td>
+<td  align=center>4.35E-9</td>
+<td  align=center>6.37 (17542,545,101,20)</td>
+<td>
+<a id="ctrl_elements_GO:1990904" href="javascript:toggle('elements_GO:1990904')">[+] Show genes</a><br>
+<div id="elements_GO:1990904" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+npm1a  -  nucleophosmin 1a<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+eif3s10  -  eukaryotic translation initiation factor 3, subunit 10 (theta)<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+rbm8a  -  rna binding motif protein 8a<br>
+fbl  -  fibrillarin<br>
+prpf8  -  pre-mrna processing factor 8<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005681&amp;view=details' target="_blank">GO:0005681</a><a name=0005681></a></td>
+<td>spliceosomal complex</td>
+<td  align=center>1.42E-10</td>
+<td  align=center>1.76E-8</td>
+<td  align=center>15.28 (17542,125,101,11)</td>
+<td>
+<a id="ctrl_elements_GO:0005681" href="javascript:toggle('elements_GO:0005681')">[+] Show genes</a><br>
+<div id="elements_GO:0005681" style="display:none"> <font size=1>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+prpf8  -  pre-mrna processing factor 8<br>
+rbm8a  -  rna binding motif protein 8a<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043227&amp;view=details' target="_blank">GO:0043227</a><a name=0043227></a></td>
+<td>membrane-bounded organelle</td>
+<td  align=center>4.66E-10</td>
+<td  align=center>5.28E-8</td>
+<td  align=center>1.87 (17542,6138,101,66)</td>
+<td>
+<a id="ctrl_elements_GO:0043227" href="javascript:toggle('elements_GO:0043227')">[+] Show genes</a><br>
+<div id="elements_GO:0043227" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+ewsr1b  -  ewing sarcoma breakpoint region 1b<br>
+sap18  -  sin3-associated polypeptide<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+khdrbs1a  -  kh domain containing, rna binding, signal transduction associated 1a<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+eif1ad  -  eukaryotic translation initiation factor 1a domain containing<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+rbm8a  -  rna binding motif protein 8a<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+prmt1  -  protein arginine methyltransferase 1<br>
+nup205  -  nucleoporin 205<br>
+safb  -  scaffold attachment factor b<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+hnrnpl2  -  heterogeneous nuclear ribonucleoprotein l2<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+hmgb2b  -  high-mobility group box 2b<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+kars  -  lysyl-trna synthetase<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+ik  -  ik cytokine<br>
+hmgb2a  -  high-mobility group box 2a<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+npm1a  -  nucleophosmin 1a<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+impdh1b  -  inosine 5'-phosphate dehydrogenase 1b<br>
+mif4gda  -  mif4g domain containing a<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+cyp2p6  -  cytochrome p450, family 2, subfamily p, polypeptide 6<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+xrcc1  -  x-ray repair complementing defective repair in chinese hamster cells 1<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+ptges3b  -  prostaglandin e synthase 3b (cytosolic)<br>
+carm1  -  coactivator-associated arginine methyltransferase 1<br>
+tardbp  -  tar dna binding protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044464&amp;view=details' target="_blank">GO:0044464</a><a name=0044464></a></td>
+<td>cell part</td>
+<td  align=center>1.03E-9</td>
+<td  align=center>1.08E-7</td>
+<td  align=center>1.37 (17542,11912,101,94)</td>
+<td>
+<a id="ctrl_elements_GO:0044464" href="javascript:toggle('elements_GO:0044464')">[+] Show genes</a><br>
+<div id="elements_GO:0044464" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+wdr35  -  wd repeat domain 35<br>
+ewsr1b  -  ewing sarcoma breakpoint region 1b<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+sap18  -  sin3-associated polypeptide<br>
+khdrbs1a  -  kh domain containing, rna binding, signal transduction associated 1a<br>
+cth  -  cystathionase (cystathionine gamma-lyase)<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+eif3s10  -  eukaryotic translation initiation factor 3, subunit 10 (theta)<br>
+wdr33  -  wd repeat domain 33<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+eif1ad  -  eukaryotic translation initiation factor 1a domain containing<br>
+ran  -  ras-related nuclear protein<br>
+LOC561719  -  uncharacterized loc561719<br>
+rbm8a  -  rna binding motif protein 8a<br>
+fbl  -  fibrillarin<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+nucks1a  -  nuclear casein kinase and cyclin-dependent kinase substrate 1a<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+ubqln4  -  ubiquilin 4<br>
+zgc:123180  -  zgc:123180<br>
+zgc:158409  -  zgc:158409<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+nucks1b  -  nuclear casein kinase and cyclin-dependent kinase substrate 1b<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+prmt1  -  protein arginine methyltransferase 1<br>
+nup205  -  nucleoporin 205<br>
+safb  -  scaffold attachment factor b<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+hnrnpl2  -  heterogeneous nuclear ribonucleoprotein l2<br>
+nudcd3  -  nudc domain containing 3<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+hmgb2b  -  high-mobility group box 2b<br>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+kars  -  lysyl-trna synthetase<br>
+cnbpb  -  cchc-type zinc finger, nucleic acid binding protein b<br>
+bida  -  bh3 interacting domain death agonist<br>
+hdac1  -  histone deacetylase 1<br>
+pcna  -  proliferating cell nuclear antigen<br>
+ik  -  ik cytokine<br>
+hmgb2a  -  high-mobility group box 2a<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+abce1  -  atp-binding cassette, sub-family e (oabp), member 1<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+impdh1b  -  inosine 5'-phosphate dehydrogenase 1b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+mif4gda  -  mif4g domain containing a<br>
+hnrnpa0l  -  heterogeneous nuclear ribonucleoprotein a0, like<br>
+slc16a8  -  solute carrier family 16 (monocarboxylic acid transporters), member 8<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+caprin1a  -  cell cycle associated protein 1a<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+cyp2p6  -  cytochrome p450, family 2, subfamily p, polypeptide 6<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+lmnb2  -  lamin b2<br>
+xrcc1  -  x-ray repair complementing defective repair in chinese hamster cells 1<br>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+kif15  -  kinesin family member 15<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+ptges3b  -  prostaglandin e synthase 3b (cytosolic)<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+carm1  -  coactivator-associated arginine methyltransferase 1<br>
+slc7a3a  -  solute carrier family 7 (cationic amino acid transporter, y+ system), member 3a<br>
+tardbp  -  tar dna binding protein<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+hnrnpul1  -  heterogeneous nuclear ribonucleoprotein u-like 1<br>
+nutf2  -  nuclear transport factor 2<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044451&amp;view=details' target="_blank">GO:0044451</a><a name=0044451></a></td>
+<td>nucleoplasm part</td>
+<td  align=center>5.4E-8</td>
+<td  align=center>5.24E-6</td>
+<td  align=center>6.20 (17542,392,101,14)</td>
+<td>
+<a id="ctrl_elements_GO:0044451" href="javascript:toggle('elements_GO:0044451')">[+] Show genes</a><br>
+<div id="elements_GO:0044451" style="display:none"> <font size=1>
+hdac1  -  histone deacetylase 1<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+wdr33  -  wd repeat domain 33<br>
+fbl  -  fibrillarin<br>
+rbm8a  -  rna binding motif protein 8a<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032991&amp;view=details' target="_blank">GO:0032991</a><a name=0032991></a></td>
+<td>protein-containing complex</td>
+<td  align=center>7.72E-8</td>
+<td  align=center>6.99E-6</td>
+<td  align=center>2.19 (17542,3404,101,43)</td>
+<td>
+<a id="ctrl_elements_GO:0032991" href="javascript:toggle('elements_GO:0032991')">[+] Show genes</a><br>
+<div id="elements_GO:0032991" style="display:none"> <font size=1>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+ck2b  -  casein kinase 2 beta<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+kars  -  lysyl-trna synthetase<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+hdac1  -  histone deacetylase 1<br>
+wdr35  -  wd repeat domain 35<br>
+pcna  -  proliferating cell nuclear antigen<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+npm1a  -  nucleophosmin 1a<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+abce1  -  atp-binding cassette, sub-family e (oabp), member 1<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+eif3s10  -  eukaryotic translation initiation factor 3, subunit 10 (theta)<br>
+ccnf  -  cyclin f<br>
+nfya  -  nuclear transcription factor y, alpha<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+wdr33  -  wd repeat domain 33<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+ctnnb1  -  catenin (cadherin-associated protein), beta 1<br>
+mcm6  -  mcm6 minichromosome maintenance deficient 6, mitotin (s. cerevisiae)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+dhx15  -  deah (asp-glu-ala-his) box polypeptide 15<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+rbm8a  -  rna binding motif protein 8a<br>
+fbl  -  fibrillarin<br>
+mcm7  -  mcm7 minichromosome maintenance deficient 7 (s. cerevisiae)<br>
+ubqln4  -  ubiquilin 4<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+ncl  -  nucleolin<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+si:dkeyp-117b8.1  -  si:dkeyp-117b8.1<br>
+snrnp200  -  small nuclear ribonucleoprotein 200 (u5)<br>
+nup205  -  nucleoporin 205<br>
+kif15  -  kinesin family member 15<br>
+hnrnpm  -  heterogeneous nuclear ribonucleoprotein m<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+prpf8  -  pre-mrna processing factor 8<br>
+nutf2  -  nuclear transport factor 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043228&amp;view=details' target="_blank">GO:0043228</a><a name=0043228></a></td>
+<td>non-membrane-bounded organelle</td>
+<td  align=center>8.1E-8</td>
+<td  align=center>6.88E-6</td>
+<td  align=center>3.29 (17542,1321,101,25)</td>
+<td>
+<a id="ctrl_elements_GO:0043228" href="javascript:toggle('elements_GO:0043228')">[+] Show genes</a><br>
+<div id="elements_GO:0043228" style="display:none"> <font size=1>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+wdr35  -  wd repeat domain 35<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+ccnf  -  cyclin f<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+fbl  -  fibrillarin<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+zgc:123180  -  zgc:123180<br>
+ncl  -  nucleolin<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+kif15  -  kinesin family member 15<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043232&amp;view=details' target="_blank">GO:0043232</a><a name=0043232></a></td>
+<td>intracellular non-membrane-bounded organelle</td>
+<td  align=center>8.1E-8</td>
+<td  align=center>6.48E-6</td>
+<td  align=center>3.29 (17542,1321,101,25)</td>
+<td>
+<a id="ctrl_elements_GO:0043232" href="javascript:toggle('elements_GO:0043232')">[+] Show genes</a><br>
+<div id="elements_GO:0043232" style="display:none"> <font size=1>
+nop2  -  nop2 nucleolar protein homolog (yeast)<br>
+wdr35  -  wd repeat domain 35<br>
+npm1a  -  nucleophosmin 1a<br>
+hspb1  -  heat shock protein, alpha-crystallin-related, 1<br>
+mrto4  -  mrna turnover 4 homolog (s. cerevisiae)<br>
+zgc:162967  -  zgc:162967<br>
+npm3  -  nucleophosmin/nucleoplasmin, 3<br>
+ilf3b  -  interleukin enhancer binding factor 3b<br>
+rad51  -  rad51 homolog (reca homolog, e. coli) (s. cerevisiae)<br>
+ccnf  -  cyclin f<br>
+gnl3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
+bub3  -  bub3 budding uninhibited by benzimidazoles 3 homolog (yeast)<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+nip7  -  nuclear import 7 homolog (s. cerevisiae)<br>
+fbl  -  fibrillarin<br>
+gnl3l  -  guanine nucleotide binding protein-like 3 (nucleolar)-like<br>
+zgc:123180  -  zgc:123180<br>
+ncl  -  nucleolin<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+kif15  -  kinesin family member 15<br>
+parp1  -  poly (adp-ribose) polymerase family, member 1<br>
+map2k6  -  mitogen-activated protein kinase kinase 6<br>
+mrpl20  -  mitochondrial ribosomal protein l20<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097525&amp;view=details' target="_blank">GO:0097525</a><a name=0097525></a></td>
+<td>spliceosomal snRNP complex</td>
+<td  align=center>2.78E-7</td>
+<td  align=center>2.1E-5</td>
+<td  align=center>22.17 (17542,47,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0097525" href="javascript:toggle('elements_GO:0097525')">[+] Show genes</a><br>
+<div id="elements_GO:0097525" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+prpf8  -  pre-mrna processing factor 8<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030532&amp;view=details' target="_blank">GO:0030532</a><a name=0030532></a></td>
+<td>small nuclear ribonucleoprotein complex</td>
+<td  align=center>3.16E-7</td>
+<td  align=center>2.26E-5</td>
+<td  align=center>21.71 (17542,48,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0030532" href="javascript:toggle('elements_GO:0030532')">[+] Show genes</a><br>
+<div id="elements_GO:0030532" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+prpf8  -  pre-mrna processing factor 8<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005682&amp;view=details' target="_blank">GO:0005682</a><a name=0005682></a></td>
+<td>U5 snRNP</td>
+<td  align=center>3.31E-7</td>
+<td  align=center>2.25E-5</td>
+<td  align=center>63.16 (17542,11,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005682" href="javascript:toggle('elements_GO:0005682')">[+] Show genes</a><br>
+<div id="elements_GO:0005682" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+prpf8  -  pre-mrna processing factor 8<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120114&amp;view=details' target="_blank">GO:0120114</a><a name=0120114></a></td>
+<td>Sm-like protein family complex</td>
+<td  align=center>3.59E-7</td>
+<td  align=center>2.32E-5</td>
+<td  align=center>21.27 (17542,49,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0120114" href="javascript:toggle('elements_GO:0120114')">[+] Show genes</a><br>
+<div id="elements_GO:0120114" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+prpf8  -  pre-mrna processing factor 8<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005686&amp;view=details' target="_blank">GO:0005686</a><a name=0005686></a></td>
+<td>U2 snRNP</td>
+<td  align=center>1.79E-6</td>
+<td  align=center>1.1E-4</td>
+<td  align=center>43.42 (17542,16,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005686" href="javascript:toggle('elements_GO:0005686')">[+] Show genes</a><br>
+<div id="elements_GO:0005686" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005685&amp;view=details' target="_blank">GO:0005685</a><a name=0005685></a></td>
+<td>U1 snRNP</td>
+<td  align=center>2.33E-6</td>
+<td  align=center>1.37E-4</td>
+<td  align=center>40.87 (17542,17,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005685" href="javascript:toggle('elements_GO:0005685')">[+] Show genes</a><br>
+<div id="elements_GO:0005685" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071013&amp;view=details' target="_blank">GO:0071013</a><a name=0071013></a></td>
+<td>catalytic step 2 spliceosome</td>
+<td  align=center>3.21E-6</td>
+<td  align=center>1.82E-4</td>
+<td  align=center>21.71 (17542,40,101,5)</td>
+<td>
+<a id="ctrl_elements_GO:0071013" href="javascript:toggle('elements_GO:0071013')">[+] Show genes</a><br>
+<div id="elements_GO:0071013" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+prpf8  -  pre-mrna processing factor 8<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005684&amp;view=details' target="_blank">GO:0005684</a><a name=0005684></a></td>
+<td>U2-type spliceosomal complex</td>
+<td  align=center>7.25E-6</td>
+<td  align=center>3.94E-4</td>
+<td  align=center>18.48 (17542,47,101,5)</td>
+<td>
+<a id="ctrl_elements_GO:0005684" href="javascript:toggle('elements_GO:0005684')">[+] Show genes</a><br>
+<div id="elements_GO:0005684" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+rbm8a  -  rna binding motif protein 8a<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005665&amp;view=details' target="_blank">GO:0005665</a><a name=0005665></a></td>
+<td>RNA polymerase II, core complex</td>
+<td  align=center>2.96E-5</td>
+<td  align=center>1.55E-3</td>
+<td  align=center>47.37 (17542,11,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005665" href="javascript:toggle('elements_GO:0005665')">[+] Show genes</a><br>
+<div id="elements_GO:0005665" style="display:none"> <font size=1>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016604&amp;view=details' target="_blank">GO:0016604</a><a name=0016604></a></td>
+<td>nuclear body</td>
+<td  align=center>4.36E-5</td>
+<td  align=center>2.19E-3</td>
+<td  align=center>9.39 (17542,111,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0016604" href="javascript:toggle('elements_GO:0016604')">[+] Show genes</a><br>
+<div id="elements_GO:0016604" style="display:none"> <font size=1>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+sumo3a  -  smt3 suppressor of mif two 3 homolog 3a<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbm8a  -  rna binding motif protein 8a<br>
+fbl  -  fibrillarin<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902494&amp;view=details' target="_blank">GO:1902494</a><a name=1902494></a></td>
+<td>catalytic complex</td>
+<td  align=center>9.14E-5</td>
+<td  align=center>4.43E-3</td>
+<td  align=center>2.95 (17542,942,101,16)</td>
+<td>
+<a id="ctrl_elements_GO:1902494" href="javascript:toggle('elements_GO:1902494')">[+] Show genes</a><br>
+<div id="elements_GO:1902494" style="display:none"> <font size=1>
+uqcrh  -  ubiquinol-cytochrome c reductase hinge protein<br>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+hdac1  -  histone deacetylase 1<br>
+sf3b1  -  splicing factor 3b, subunit 1<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+ccnf  -  cyclin f<br>
+polr2d  -  polymerase (rna) ii (dna directed) polypeptide d<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+rbm8a  -  rna binding motif protein 8a<br>
+prpf8  -  pre-mrna processing factor 8<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+ubqln4  -  ubiquilin 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034715&amp;view=details' target="_blank">GO:0034715</a><a name=0034715></a></td>
+<td>pICln-Sm protein complex</td>
+<td  align=center>9.81E-5</td>
+<td  align=center>4.6E-3</td>
+<td  align=center>115.79 (17542,3,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0034715" href="javascript:toggle('elements_GO:0034715')">[+] Show genes</a><br>
+<div id="elements_GO:0034715" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044452&amp;view=details' target="_blank">GO:0044452</a><a name=0044452></a></td>
+<td>nucleolar part</td>
+<td  align=center>1.29E-4</td>
+<td  align=center>5.83E-3</td>
+<td  align=center>15.44 (17542,45,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0044452" href="javascript:toggle('elements_GO:0044452')">[+] Show genes</a><br>
+<div id="elements_GO:0044452" style="display:none"> <font size=1>
+polr2l  -  polymerase (rna) ii (dna directed) polypeptide l<br>
+gar1  -  gar1 ribonucleoprotein homolog (yeast)<br>
+polr2k  -  polymerase (rna) ii (dna directed) polypeptide k<br>
+fbl  -  fibrillarin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005654&amp;view=details' target="_blank">GO:0005654</a><a name=0005654></a></td>
+<td>nucleoplasm</td>
+<td  align=center>1.57E-4</td>
+<td  align=center>6.88E-3</td>
+<td  align=center>6.08 (17542,200,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0005654" href="javascript:toggle('elements_GO:0005654')">[+] Show genes</a><br>
+<div id="elements_GO:0005654" style="display:none"> <font size=1>
+hnrnpa0l  -  heterogeneous nuclear ribonucleoprotein a0, like<br>
+hnrnpk  -  heterogeneous nuclear ribonucleoprotein k<br>
+tardbp  -  tar dna binding protein<br>
+hnrnpul1  -  heterogeneous nuclear ribonucleoprotein u-like 1<br>
+npm1a  -  nucleophosmin 1a<br>
+zgc:162967  -  zgc:162967<br>
+hnrpdl  -  heterogeneous nuclear ribonucleoprotein d-like<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034719&amp;view=details' target="_blank">GO:0034719</a><a name=0034719></a></td>
+<td>SMN-Sm protein complex</td>
+<td  align=center>1.95E-4</td>
+<td  align=center>8.3E-3</td>
+<td  align=center>86.84 (17542,4,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0034719" href="javascript:toggle('elements_GO:0034719')">[+] Show genes</a><br>
+<div id="elements_GO:0034719" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071011&amp;view=details' target="_blank">GO:0071011</a><a name=0071011></a></td>
+<td>precatalytic spliceosome</td>
+<td  align=center>1.97E-4</td>
+<td  align=center>8.1E-3</td>
+<td  align=center>26.05 (17542,20,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0071011" href="javascript:toggle('elements_GO:0071011')">[+] Show genes</a><br>
+<div id="elements_GO:0071011" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000785&amp;view=details' target="_blank">GO:0000785</a><a name=0000785></a></td>
+<td>chromatin</td>
+<td  align=center>2.93E-4</td>
+<td  align=center>1.17E-2</td>
+<td  align=center>8.60 (17542,101,101,5)</td>
+<td>
+<a id="ctrl_elements_GO:0000785" href="javascript:toggle('elements_GO:0000785')">[+] Show genes</a><br>
+<div id="elements_GO:0000785" style="display:none"> <font size=1>
+zgc:158409  -  zgc:158409<br>
+seta  -  set translocation (myeloid leukemia-associated) a<br>
+setb  -  set translocation (myeloid leukemia-associated) b<br>
+LOC561719  -  uncharacterized loc561719<br>
+hmga1a  -  high mobility group at-hook 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097526&amp;view=details' target="_blank">GO:0097526</a><a name=0097526></a></td>
+<td>spliceosomal tri-snRNP complex</td>
+<td  align=center>3.02E-4</td>
+<td  align=center>1.17E-2</td>
+<td  align=center>22.65 (17542,23,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0097526" href="javascript:toggle('elements_GO:0097526')">[+] Show genes</a><br>
+<div id="elements_GO:0097526" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+snrpd2  -  small nuclear ribonucleoprotein d2 polypeptide<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005687&amp;view=details' target="_blank">GO:0005687</a><a name=0005687></a></td>
+<td>U4 snRNP</td>
+<td  align=center>4.85E-4</td>
+<td  align=center>1.83E-2</td>
+<td  align=center>57.89 (17542,6,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005687" href="javascript:toggle('elements_GO:0005687')">[+] Show genes</a><br>
+<div id="elements_GO:0005687" style="display:none"> <font size=1>
+snrpe  -  small nuclear ribonucleoprotein polypeptide e<br>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031519&amp;view=details' target="_blank">GO:0031519</a><a name=0031519></a></td>
+<td>PcG protein complex</td>
+<td  align=center>4.9E-4</td>
+<td  align=center>1.8E-2</td>
+<td  align=center>19.30 (17542,27,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0031519" href="javascript:toggle('elements_GO:0031519')">[+] Show genes</a><br>
+<div id="elements_GO:0031519" style="display:none"> <font size=1>
+ck2b  -  casein kinase 2 beta<br>
+rbb4l  -  retinoblastoma binding protein 4, like<br>
+rbb4  -  retinoblastoma binding protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000243&amp;view=details' target="_blank">GO:0000243</a><a name=0000243></a></td>
+<td>commitment complex</td>
+<td  align=center>6.76E-4</td>
+<td  align=center>2.42E-2</td>
+<td  align=center>49.62 (17542,7,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0000243" href="javascript:toggle('elements_GO:0000243')">[+] Show genes</a><br>
+<div id="elements_GO:0000243" style="display:none"> <font size=1>
+snrpd1  -  small nuclear ribonucleoprotein d1 polypeptide<br>
+prpf39  -  prp39 pre-mrna processing factor 39 homolog (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016607&amp;view=details' target="_blank">GO:0016607</a><a name=0016607></a></td>
+<td>nuclear speck</td>
+<td  align=center>9.2E-4</td>
+<td  align=center>3.21E-2</td>
+<td  align=center>9.26 (17542,75,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0016607" href="javascript:toggle('elements_GO:0016607')">[+] Show genes</a><br>
+<div id="elements_GO:0016607" style="display:none"> <font size=1>
+srsf1a  -  serine/arginine-rich splicing factor 1a<br>
+apex1  -  apex nuclease (multifunctional dna repair enzyme) 1<br>
+rbm8a  -  rna binding motif protein 8a<br>
+sfrs3a  -  splicing factor, arginine/serine-rich 3a<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24115 genes out of 30229 gene terms entered by the user.<br> 24115 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>214 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1359 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

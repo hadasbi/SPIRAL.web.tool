@@ -1,0 +1,657 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='92,518,191,581' HREF='#0005788' ALT=''>
+<AREA SHAPE='RECT' COORDS='420,413,516,461' HREF='#1903561' ALT=''>
+<AREA SHAPE='RECT' COORDS='420,525,516,573' HREF='#0070062' ALT=''>
+<AREA SHAPE='RECT' COORDS='853,413,941,461' HREF='#0071953' ALT=''>
+<AREA SHAPE='RECT' COORDS='477,101,552,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='304,197,443,245' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='467,197,563,245' HREF='#0043230' ALT=''>
+<AREA SHAPE='RECT' COORDS='171,101,248,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='37,197,115,245' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='145,294,236,357' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='31,294,121,357' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='392,301,464,349' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='327,101,399,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='189,197,280,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,101,147,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='976,413,1053,461' HREF='#0001527' ALT=''>
+<AREA SHAPE='RECT' COORDS='976,197,1091,245' HREF='#0099081' ALT=''>
+<AREA SHAPE='RECT' COORDS='976,301,1091,349' HREF='#0099512' ALT=''>
+<AREA SHAPE='RECT' COORDS='701,101,816,149' HREF='#0099080' ALT=''>
+<AREA SHAPE='RECT' COORDS='707,197,803,245' HREF='#0031012' ALT=''>
+<AREA SHAPE='RECT' COORDS='687,294,823,357' HREF='#0062023' ALT=''>
+<AREA SHAPE='RECT' COORDS='840,101,968,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='1115,197,1189,245' HREF='#0005581' ALT=''>
+<AREA SHAPE='RECT' COORDS='581,101,677,149' HREF='#0044421' ALT=''>
+<AREA SHAPE='RECT' COORDS='587,197,683,245' HREF='#0005615' ALT=''>
+<AREA SHAPE='RECT' COORDS='827,197,952,245' HREF='#0044420' ALT=''>
+<AREA SHAPE='RECT' COORDS='260,301,356,349' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='141,406,240,469' HREF='#0044432' ALT=''>
+<AREA SHAPE='RECT' COORDS='1115,294,1189,357' HREF='#0005583' ALT=''>
+<AREA SHAPE='RECT' COORDS='1107,413,1197,461' HREF='#0005584' ALT=''>
+<AREA SHAPE='RECT' COORDS='572,5,455,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='992,101,1088,149' HREF='#0005576' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0062023&amp;view=details' target="_blank">GO:0062023</a><a name=0062023></a></td>
+<td>collagen-containing extracellular matrix</td>
+<td  align=center>5.3E-29</td>
+<td  align=center>1.02E-25</td>
+<td  align=center>13.10 (15353,369,108,34)</td>
+<td>
+<a id="ctrl_elements_GO:0062023" href="javascript:toggle('elements_GO:0062023')">[+] Show genes</a><br>
+<div id="elements_GO:0062023" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+A2M  -  alpha-2-macroglobulin<br>
+AEBP1  -  ae binding protein 1<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+HTRA1  -  htra serine peptidase 1<br>
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br>
+ELN  -  elastin<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+NOV  -  nephroblastoma overexpressed<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+SBSPON  -  somatomedin b and thrombospondin, type 1 domain containing<br>
+ATRNL1  -  attractin-like 1<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LTBP1  -  latent transforming growth factor beta binding protein 1<br>
+SSC5D  -  scavenger receptor cysteine rich domain containing (5 domains)<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+HMCN1  -  hemicentin 1<br>
+SULF1  -  sulfatase 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+TGM2  -  transglutaminase 2<br>
+COCH  -  cochlin<br>
+WNT2  -  wingless-type mmtv integration site family member 2<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031012&amp;view=details' target="_blank">GO:0031012</a><a name=0031012></a></td>
+<td>extracellular matrix</td>
+<td  align=center>2.55E-27</td>
+<td  align=center>2.46E-24</td>
+<td  align=center>10.47 (15353,489,108,36)</td>
+<td>
+<a id="ctrl_elements_GO:0031012" href="javascript:toggle('elements_GO:0031012')">[+] Show genes</a><br>
+<div id="elements_GO:0031012" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+A2M  -  alpha-2-macroglobulin<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+AEBP1  -  ae binding protein 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br>
+ELN  -  elastin<br>
+NOV  -  nephroblastoma overexpressed<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+GLG1  -  golgi glycoprotein 1<br>
+FBLN5  -  fibulin 5<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+SBSPON  -  somatomedin b and thrombospondin, type 1 domain containing<br>
+ATRNL1  -  attractin-like 1<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LTBP1  -  latent transforming growth factor beta binding protein 1<br>
+SSC5D  -  scavenger receptor cysteine rich domain containing (5 domains)<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+HMCN1  -  hemicentin 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+SULF1  -  sulfatase 1<br>
+TGM2  -  transglutaminase 2<br>
+COCH  -  cochlin<br>
+WNT2  -  wingless-type mmtv integration site family member 2<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+NDNF  -  neuron-derived neurotrophic factor<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005615&amp;view=details' target="_blank">GO:0005615</a><a name=0005615></a></td>
+<td>extracellular space</td>
+<td  align=center>3.15E-18</td>
+<td  align=center>2.02E-15</td>
+<td  align=center>4.75 (15353,1228,108,41)</td>
+<td>
+<a id="ctrl_elements_GO:0005615" href="javascript:toggle('elements_GO:0005615')">[+] Show genes</a><br>
+<div id="elements_GO:0005615" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+A2M  -  alpha-2-macroglobulin<br>
+MASP1  -  mannan-binding lectin serine peptidase 1 (c4/c2 activating component of ra-reactive factor)<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+AEBP1  -  ae binding protein 1<br>
+IL13RA2  -  interleukin 13 receptor, alpha 2<br>
+HTRA1  -  htra serine peptidase 1<br>
+SEMA3E  -  sema domain, immunoglobulin domain (ig), short basic domain, secreted, (semaphorin) 3e<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+TSLP  -  thymic stromal lymphopoietin<br>
+WFDC1  -  wap four-disulfide core domain 1<br>
+FRZB  -  frizzled-related protein<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+FSTL1  -  follistatin-like 1<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+SSC5D  -  scavenger receptor cysteine rich domain containing (5 domains)<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+BDNF  -  brain-derived neurotrophic factor<br>
+C1QTNF1  -  c1q and tumor necrosis factor related protein 1<br>
+SULF1  -  sulfatase 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+WNT2  -  wingless-type mmtv integration site family member 2<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+NDNF  -  neuron-derived neurotrophic factor<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br>
+BMP5  -  bone morphogenetic protein 5<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005576&amp;view=details' target="_blank">GO:0005576</a><a name=0005576></a></td>
+<td>extracellular region</td>
+<td  align=center>2.98E-17</td>
+<td  align=center>1.44E-14</td>
+<td  align=center>4.21 (15353,1452,108,43)</td>
+<td>
+<a id="ctrl_elements_GO:0005576" href="javascript:toggle('elements_GO:0005576')">[+] Show genes</a><br>
+<div id="elements_GO:0005576" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+PRSS35  -  protease, serine, 35<br>
+A2M  -  alpha-2-macroglobulin<br>
+MASP1  -  mannan-binding lectin serine peptidase 1 (c4/c2 activating component of ra-reactive factor)<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+AEBP1  -  ae binding protein 1<br>
+IL13RA2  -  interleukin 13 receptor, alpha 2<br>
+HTRA1  -  htra serine peptidase 1<br>
+ARSB  -  arylsulfatase b<br>
+ELN  -  elastin<br>
+SEMA3E  -  sema domain, immunoglobulin domain (ig), short basic domain, secreted, (semaphorin) 3e<br>
+NOV  -  nephroblastoma overexpressed<br>
+SPOCK3  -  sparc/osteonectin, cwcv and kazal-like domains proteoglycan (testican) 3<br>
+CTGF  -  connective tissue growth factor<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+TSLP  -  thymic stromal lymphopoietin<br>
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+PTGFR  -  prostaglandin f receptor (fp)<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+FSTL1  -  follistatin-like 1<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+LTBP1  -  latent transforming growth factor beta binding protein 1<br>
+C1QTNF7  -  c1q and tumor necrosis factor related protein 7<br>
+EPHA3  -  eph receptor a3<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+BDNF  -  brain-derived neurotrophic factor<br>
+S100A4  -  s100 calcium binding protein a4<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+WNT2  -  wingless-type mmtv integration site family member 2<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+NDNF  -  neuron-derived neurotrophic factor<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044421&amp;view=details' target="_blank">GO:0044421</a><a name=0044421></a></td>
+<td>extracellular region part</td>
+<td  align=center>2.47E-16</td>
+<td  align=center>9.52E-14</td>
+<td  align=center>2.89 (15353,2856,108,58)</td>
+<td>
+<a id="ctrl_elements_GO:0044421" href="javascript:toggle('elements_GO:0044421')">[+] Show genes</a><br>
+<div id="elements_GO:0044421" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+FAM83D  -  family with sequence similarity 83, member d<br>
+MASP1  -  mannan-binding lectin serine peptidase 1 (c4/c2 activating component of ra-reactive factor)<br>
+AEBP1  -  ae binding protein 1<br>
+TIMP3  -  timp metallopeptidase inhibitor 3<br>
+IL13RA2  -  interleukin 13 receptor, alpha 2<br>
+HTRA1  -  htra serine peptidase 1<br>
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br>
+ELN  -  elastin<br>
+SEMA3E  -  sema domain, immunoglobulin domain (ig), short basic domain, secreted, (semaphorin) 3e<br>
+NOV  -  nephroblastoma overexpressed<br>
+CTGF  -  connective tissue growth factor<br>
+FRZB  -  frizzled-related protein<br>
+DKK3  -  dickkopf wnt signaling pathway inhibitor 3<br>
+WNT2B  -  wingless-type mmtv integration site family, member 2b<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+MTMR11  -  myotubularin related protein 11<br>
+BDNF  -  brain-derived neurotrophic factor<br>
+COCH  -  cochlin<br>
+WNT2  -  wingless-type mmtv integration site family member 2<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+BMP5  -  bone morphogenetic protein 5<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+ARSB  -  arylsulfatase b<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+WFDC1  -  wap four-disulfide core domain 1<br>
+TSLP  -  thymic stromal lymphopoietin<br>
+GLG1  -  golgi glycoprotein 1<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+SBSPON  -  somatomedin b and thrombospondin, type 1 domain containing<br>
+ATRNL1  -  attractin-like 1<br>
+FSTL1  -  follistatin-like 1<br>
+LTBP1  -  latent transforming growth factor beta binding protein 1<br>
+SSC5D  -  scavenger receptor cysteine rich domain containing (5 domains)<br>
+CNTN1  -  contactin 1<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+C1QTNF1  -  c1q and tumor necrosis factor related protein 1<br>
+HMCN1  -  hemicentin 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+SULF1  -  sulfatase 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+TGM2  -  transglutaminase 2<br>
+FAT4  -  fat atypical cadherin 4<br>
+C1R  -  complement component 1, r subcomponent<br>
+IGFBP6  -  insulin-like growth factor binding protein 6<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+NDNF  -  neuron-derived neurotrophic factor<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+YWHAH  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, eta polypeptide<br>
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044420&amp;view=details' target="_blank">GO:0044420</a><a name=0044420></a></td>
+<td>extracellular matrix component</td>
+<td  align=center>1.03E-10</td>
+<td  align=center>3.31E-8</td>
+<td  align=center>24.14 (15353,53,108,9)</td>
+<td>
+<a id="ctrl_elements_GO:0044420" href="javascript:toggle('elements_GO:0044420')">[+] Show genes</a><br>
+<div id="elements_GO:0044420" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+LTBP1  -  latent transforming growth factor beta binding protein 1<br>
+ELN  -  elastin<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005583&amp;view=details' target="_blank">GO:0005583</a><a name=0005583></a></td>
+<td>fibrillar collagen trimer</td>
+<td  align=center>1.1E-6</td>
+<td  align=center>3.02E-4</td>
+<td  align=center>47.39 (15353,12,108,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005583" href="javascript:toggle('elements_GO:0005583')">[+] Show genes</a><br>
+<div id="elements_GO:0005583" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+LUM  -  lumican<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071953&amp;view=details' target="_blank">GO:0071953</a><a name=0071953></a></td>
+<td>elastic fiber</td>
+<td  align=center>3.35E-6</td>
+<td  align=center>8.08E-4</td>
+<td  align=center>85.29 (15353,5,108,3)</td>
+<td>
+<a id="ctrl_elements_GO:0071953" href="javascript:toggle('elements_GO:0071953')">[+] Show genes</a><br>
+<div id="elements_GO:0071953" style="display:none"> <font size=1>
+FBLN5  -  fibulin 5<br>
+ELN  -  elastin<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details' target="_blank">GO:0031982</a><a name=0031982></a></td>
+<td>vesicle</td>
+<td  align=center>1.87E-5</td>
+<td  align=center>4E-3</td>
+<td  align=center>1.94 (15353,2791,108,38)</td>
+<td>
+<a id="ctrl_elements_GO:0031982" href="javascript:toggle('elements_GO:0031982')">[+] Show genes</a><br>
+<div id="elements_GO:0031982" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+AEBP1  -  ae binding protein 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+ATP9A  -  atpase, class ii, type 9a<br>
+ARSB  -  arylsulfatase b<br>
+LGR6  -  leucine-rich repeat containing g protein-coupled receptor 6<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+NTRK2  -  neurotrophic tyrosine kinase, receptor, type 2<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+GLG1  -  golgi glycoprotein 1<br>
+LUM  -  lumican<br>
+FBLN5  -  fibulin 5<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FSTL1  -  follistatin-like 1<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
+AMOTL2  -  angiomotin like 2<br>
+CNTN1  -  contactin 1<br>
+MTMR11  -  myotubularin related protein 11<br>
+EPHA3  -  eph receptor a3<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+BDNF  -  brain-derived neurotrophic factor<br>
+HMCN1  -  hemicentin 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+TGM2  -  transglutaminase 2<br>
+FAT4  -  fat atypical cadherin 4<br>
+C1R  -  complement component 1, r subcomponent<br>
+SYT11  -  synaptotagmin xi<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+YWHAH  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, eta polypeptide<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br>
+BMP5  -  bone morphogenetic protein 5<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+STMN2  -  stathmin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005581&amp;view=details' target="_blank">GO:0005581</a><a name=0005581></a></td>
+<td>collagen trimer</td>
+<td  align=center>2.08E-5</td>
+<td  align=center>4E-3</td>
+<td  align=center>10.66 (15353,80,108,6)</td>
+<td>
+<a id="ctrl_elements_GO:0005581" href="javascript:toggle('elements_GO:0005581')">[+] Show genes</a><br>
+<div id="elements_GO:0005581" style="display:none"> <font size=1>
+C1QTNF7  -  c1q and tumor necrosis factor related protein 7<br>
+COL1A1  -  collagen, type i, alpha 1<br>
+LUM  -  lumican<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+C1QTNF1  -  c1q and tumor necrosis factor related protein 1<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005788&amp;view=details' target="_blank">GO:0005788</a><a name=0005788></a></td>
+<td>endoplasmic reticulum lumen</td>
+<td  align=center>2.7E-5</td>
+<td  align=center>4.73E-3</td>
+<td  align=center>5.10 (15353,279,108,10)</td>
+<td>
+<a id="ctrl_elements_GO:0005788" href="javascript:toggle('elements_GO:0005788')">[+] Show genes</a><br>
+<div id="elements_GO:0005788" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FSTL1  -  follistatin-like 1<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br>
+LTBP1  -  latent transforming growth factor beta binding protein 1<br>
+ARSB  -  arylsulfatase b<br>
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br>
+COL16A1  -  collagen, type xvi, alpha 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005584&amp;view=details' target="_blank">GO:0005584</a><a name=0005584></a></td>
+<td>collagen type I trimer</td>
+<td  align=center>4.9E-5</td>
+<td  align=center>7.88E-3</td>
+<td  align=center>142.16 (15353,2,108,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005584" href="javascript:toggle('elements_GO:0005584')">[+] Show genes</a><br>
+<div id="elements_GO:0005584" style="display:none"> <font size=1>
+COL1A1  -  collagen, type i, alpha 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001527&amp;view=details' target="_blank">GO:0001527</a><a name=0001527></a></td>
+<td>microfibril</td>
+<td  align=center>7.11E-5</td>
+<td  align=center>1.05E-2</td>
+<td  align=center>35.54 (15353,12,108,3)</td>
+<td>
+<a id="ctrl_elements_GO:0001527" href="javascript:toggle('elements_GO:0001527')">[+] Show genes</a><br>
+<div id="elements_GO:0001527" style="display:none"> <font size=1>
+LTBP4  -  latent transforming growth factor beta binding protein 4<br>
+LTBP1  -  latent transforming growth factor beta binding protein 1<br>
+MFAP4  -  microfibrillar-associated protein 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070062&amp;view=details' target="_blank">GO:0070062</a><a name=0070062></a></td>
+<td>extracellular exosome</td>
+<td  align=center>1.96E-4</td>
+<td  align=center>2.71E-2</td>
+<td  align=center>2.08 (15353,1776,108,26)</td>
+<td>
+<a id="ctrl_elements_GO:0070062" href="javascript:toggle('elements_GO:0070062')">[+] Show genes</a><br>
+<div id="elements_GO:0070062" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+AEBP1  -  ae binding protein 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+ARSB  -  arylsulfatase b<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+GLG1  -  golgi glycoprotein 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+LUM  -  lumican<br>
+FSTL1  -  follistatin-like 1<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+CNTN1  -  contactin 1<br>
+MTMR11  -  myotubularin related protein 11<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+HMCN1  -  hemicentin 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+TGM2  -  transglutaminase 2<br>
+FAT4  -  fat atypical cadherin 4<br>
+C1R  -  complement component 1, r subcomponent<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+YWHAH  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, eta polypeptide<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043230&amp;view=details' target="_blank">GO:0043230</a><a name=0043230></a></td>
+<td>extracellular organelle</td>
+<td  align=center>2.29E-4</td>
+<td  align=center>2.94E-2</td>
+<td  align=center>2.06 (15353,1793,108,26)</td>
+<td>
+<a id="ctrl_elements_GO:0043230" href="javascript:toggle('elements_GO:0043230')">[+] Show genes</a><br>
+<div id="elements_GO:0043230" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+AEBP1  -  ae binding protein 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+ARSB  -  arylsulfatase b<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+GLG1  -  golgi glycoprotein 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+LUM  -  lumican<br>
+FSTL1  -  follistatin-like 1<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+CNTN1  -  contactin 1<br>
+MTMR11  -  myotubularin related protein 11<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+HMCN1  -  hemicentin 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+TGM2  -  transglutaminase 2<br>
+FAT4  -  fat atypical cadherin 4<br>
+C1R  -  complement component 1, r subcomponent<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+YWHAH  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, eta polypeptide<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903561&amp;view=details' target="_blank">GO:1903561</a><a name=1903561></a></td>
+<td>extracellular vesicle</td>
+<td  align=center>2.29E-4</td>
+<td  align=center>2.76E-2</td>
+<td  align=center>2.06 (15353,1793,108,26)</td>
+<td>
+<a id="ctrl_elements_GO:1903561" href="javascript:toggle('elements_GO:1903561')">[+] Show genes</a><br>
+<div id="elements_GO:1903561" style="display:none"> <font size=1>
+A2M  -  alpha-2-macroglobulin<br>
+AEBP1  -  ae binding protein 1<br>
+HTRA1  -  htra serine peptidase 1<br>
+ARSB  -  arylsulfatase b<br>
+MYH9  -  myosin, heavy chain 9, non-muscle<br>
+GLG1  -  golgi glycoprotein 1<br>
+COL1A2  -  collagen, type i, alpha 2<br>
+FBLN5  -  fibulin 5<br>
+LUM  -  lumican<br>
+FSTL1  -  follistatin-like 1<br>
+PRELP  -  proline/arginine-rich end leucine-rich repeat protein<br>
+CNTN1  -  contactin 1<br>
+MTMR11  -  myotubularin related protein 11<br>
+PCOLCE  -  procollagen c-endopeptidase enhancer<br>
+HMCN1  -  hemicentin 1<br>
+S100A4  -  s100 calcium binding protein a4<br>
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
+TGM2  -  transglutaminase 2<br>
+FAT4  -  fat atypical cadherin 4<br>
+C1R  -  complement component 1, r subcomponent<br>
+CLEC3B  -  c-type lectin domain family 3, member b<br>
+IGFBP7  -  insulin-like growth factor binding protein 7<br>
+SOD3  -  superoxide dismutase 3, extracellular<br>
+EFEMP1  -  egf containing fibulin-like extracellular matrix protein 1<br>
+YWHAH  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, eta polypeptide<br>
+ANGPTL2  -  angiopoietin-like 2<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 15838 genes out of 16596 gene terms entered by the user.<br> 15838 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>117 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 15721 genes.<br>Only 15353 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1928 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

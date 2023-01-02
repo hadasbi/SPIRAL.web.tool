@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='172,102,257,165' HREF='#0060089' ALT=''>
+<AREA SHAPE='RECT' COORDS='28,214,105,277' HREF='#0038023' ALT=''>
+<AREA SHAPE='RECT' COORDS='400,805,523,885' HREF='#0001012' ALT=''>
+<AREA SHAPE='RECT' COORDS='377,933,545,1013' HREF='#0000977' ALT=''>
+<AREA SHAPE='RECT' COORDS='536,573,653,621' HREF='#0003690' ALT=''>
+<AREA SHAPE='RECT' COORDS='565,686,696,749' HREF='#1990837' ALT=''>
+<AREA SHAPE='RECT' COORDS='741,221,843,269' HREF='#0033218' ALT=''>
+<AREA SHAPE='RECT' COORDS='760,341,869,389' HREF='#0042277' ALT=''>
+<AREA SHAPE='RECT' COORDS='357,573,461,621' HREF='#0003729' ALT=''>
+<AREA SHAPE='RECT' COORDS='363,341,456,389' HREF='#0003676' ALT=''>
+<AREA SHAPE='RECT' COORDS='363,461,456,509' HREF='#0003723' ALT=''>
+<AREA SHAPE='RECT' COORDS='520,461,613,509' HREF='#0003677' ALT=''>
+<AREA SHAPE='RECT' COORDS='227,566,333,629' HREF='#0001067' ALT=''>
+<AREA SHAPE='RECT' COORDS='547,805,715,885' HREF='#0000976' ALT=''>
+<AREA SHAPE='RECT' COORDS='135,221,263,269' HREF='#0044877' ALT=''>
+<AREA SHAPE='RECT' COORDS='144,341,259,389' HREF='#0023023' ALT=''>
+<AREA SHAPE='RECT' COORDS='569,933,700,1013' HREF='#0000987' ALT=''>
+<AREA SHAPE='RECT' COORDS='483,1062,613,1159' HREF='#0000978' ALT=''>
+<AREA SHAPE='RECT' COORDS='677,573,808,621' HREF='#0043565' ALT=''>
+<AREA SHAPE='RECT' COORDS='491,341,603,389' HREF='#0019899' ALT=''>
+<AREA SHAPE='RECT' COORDS='144,454,259,517' HREF='#0023026' ALT=''>
+<AREA SHAPE='RECT' COORDS='497,1208,599,1256' HREF='#0070888' ALT=''>
+<AREA SHAPE='RECT' COORDS='287,214,393,277' HREF='#0097159' ALT=''>
+<AREA SHAPE='RECT' COORDS='417,214,513,277' HREF='#1901363' ALT=''>
+<AREA SHAPE='RECT' COORDS='537,221,644,269' HREF='#0005515' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,325,120,405' HREF='#0004888' ALT=''>
+<AREA SHAPE='RECT' COORDS='17,454,108,517' HREF='#0032395' ALT=''>
+<AREA SHAPE='RECT' COORDS='429,677,525,757' HREF='#0044212' ALT=''>
+<AREA SHAPE='RECT' COORDS='429,109,501,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='627,341,736,389' HREF='#0003823' ALT=''>
+<AREA SHAPE='RECT' COORDS='651,461,765,509' HREF='#0042605' ALT=''>
+<AREA SHAPE='RECT' COORDS='340,5,226,29' HREF='#0003674' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032395&amp;view=details' target="_blank">GO:0032395</a><a name=0032395></a></td>
+<td>MHC class II receptor activity</td>
+<td  align=center>8.66E-6</td>
+<td  align=center>3.18E-2</td>
+<td  align=center>8.12 (8795,7,928,6)</td>
+<td>
+<a id="ctrl_elements_GO:0032395" href="javascript:toggle('elements_GO:0032395')">[+] Show genes</a><br>
+<div id="elements_GO:0032395" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+HLA-DQA1  -  major histocompatibility complex, class ii, dq alpha 1<br>
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br>
+HLA-DOA  -  major histocompatibility complex, class ii, do alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0023026&amp;view=details' target="_blank">GO:0023026</a><a name=0023026></a></td>
+<td>MHC class II protein complex binding</td>
+<td  align=center>8.84E-5</td>
+<td  align=center>1.62E-1</td>
+<td  align=center>4.74 (8795,16,928,8)</td>
+<td>
+<a id="ctrl_elements_GO:0023026" href="javascript:toggle('elements_GO:0023026')">[+] Show genes</a><br>
+<div id="elements_GO:0023026" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+ANXA11  -  annexin a11<br>
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br>
+PKM  -  pyruvate kinase, muscle<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+CD81  -  cd81 molecule<br>
+YWHAE  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, epsilon polypeptide<br>
+HLA-DOA  -  major histocompatibility complex, class ii, do alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042605&amp;view=details' target="_blank">GO:0042605</a><a name=0042605></a></td>
+<td>peptide antigen binding</td>
+<td  align=center>2.48E-4</td>
+<td  align=center>3.03E-1</td>
+<td  align=center>4.21 (8795,18,928,8)</td>
+<td>
+<a id="ctrl_elements_GO:0042605" href="javascript:toggle('elements_GO:0042605')">[+] Show genes</a><br>
+<div id="elements_GO:0042605" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+DHCR24  -  24-dehydrocholesterol reductase<br>
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+HLA-DQA1  -  major histocompatibility complex, class ii, dq alpha 1<br>
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br>
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br>
+MAML1  -  mastermind-like 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0023023&amp;view=details' target="_blank">GO:0023023</a><a name=0023023></a></td>
+<td>MHC protein complex binding</td>
+<td  align=center>2.48E-4</td>
+<td  align=center>2.27E-1</td>
+<td  align=center>4.21 (8795,18,928,8)</td>
+<td>
+<a id="ctrl_elements_GO:0023023" href="javascript:toggle('elements_GO:0023023')">[+] Show genes</a><br>
+<div id="elements_GO:0023023" style="display:none"> <font size=1>
+HLA-DRB1  -  major histocompatibility complex, class ii, dr beta 1<br>
+ANXA11  -  annexin a11<br>
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br>
+PKM  -  pyruvate kinase, muscle<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+YWHAE  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, epsilon polypeptide<br>
+CD81  -  cd81 molecule<br>
+HLA-DOA  -  major histocompatibility complex, class ii, do alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070888&amp;view=details' target="_blank">GO:0070888</a><a name=0070888></a></td>
+<td>E-box binding</td>
+<td  align=center>3.89E-4</td>
+<td  align=center>2.85E-1</td>
+<td  align=center>3.99 (8795,19,928,8)</td>
+<td>
+<a id="ctrl_elements_GO:0070888" href="javascript:toggle('elements_GO:0070888')">[+] Show genes</a><br>
+<div id="elements_GO:0070888" style="display:none"> <font size=1>
+HES1  -  hairy and enhancer of split 1, (drosophila)<br>
+GATA3  -  gata binding protein 3<br>
+SREBF2  -  sterol regulatory element binding transcription factor 2<br>
+ZEB1  -  zinc finger e-box binding homeobox 1<br>
+HDAC1  -  histone deacetylase 1<br>
+TCF12  -  transcription factor 12<br>
+AHR  -  aryl hydrocarbon receptor<br>
+HIF1A  -  hypoxia inducible factor 1, alpha subunit (basic helix-loop-helix transcription factor)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003729&amp;view=details' target="_blank">GO:0003729</a><a name=0003729></a></td>
+<td>mRNA binding</td>
+<td  align=center>4.87E-4</td>
+<td  align=center>2.98E-1</td>
+<td  align=center>1.73 (8795,208,928,38)</td>
+<td>
+<a id="ctrl_elements_GO:0003729" href="javascript:toggle('elements_GO:0003729')">[+] Show genes</a><br>
+<div id="elements_GO:0003729" style="display:none"> <font size=1>
+EIF4ENIF1  -  eukaryotic translation initiation factor 4e nuclear import factor 1<br>
+NSRP1  -  nuclear speckle splicing regulatory protein 1<br>
+G3BP1  -  gtpase activating protein (sh3 domain) binding protein 1<br>
+YTHDC1  -  yth domain containing 1<br>
+PTBP3  -  polypyrimidine tract binding protein 3<br>
+NUDT16  -  nudix (nucleoside diphosphate linked moiety x)-type motif 16<br>
+RBM15  -  rna binding motif protein 15<br>
+HNRNPA0  -  heterogeneous nuclear ribonucleoprotein a0<br>
+PAIP2  -  poly(a) binding protein interacting protein 2<br>
+SNRNP70  -  small nuclear ribonucleoprotein 70kda (u1)<br>
+YTHDF2  -  yth domain family, member 2<br>
+CSTF2  -  cleavage stimulation factor, 3' pre-rna, subunit 2, 64kda<br>
+RBMX  -  rna binding motif protein, x-linked<br>
+EIF3A  -  eukaryotic translation initiation factor 3, subunit a<br>
+FXR1  -  fragile x mental retardation, autosomal homolog 1<br>
+ZFP36L1  -  zfp36 ring finger protein-like 1<br>
+CELF1  -  cugbp, elav-like family member 1<br>
+EIF4G3  -  eukaryotic translation initiation factor 4 gamma, 3<br>
+KHDRBS1  -  kh domain containing, rna binding, signal transduction associated 1<br>
+PUM1  -  pumilio homolog 1 (drosophila)<br>
+PKM  -  pyruvate kinase, muscle<br>
+ILF3  -  interleukin enhancer binding factor 3, 90kda<br>
+DENR  -  density-regulated protein<br>
+HNRNPLL  -  heterogeneous nuclear ribonucleoprotein l-like<br>
+IGF2BP3  -  insulin-like growth factor 2 mrna binding protein 3<br>
+SF1  -  splicing factor 1<br>
+NXF1  -  nuclear rna export factor 1<br>
+HNRNPC  -  heterogeneous nuclear ribonucleoprotein c (c1/c2)<br>
+SRSF4  -  serine/arginine-rich splicing factor 4<br>
+AGO2  -  argonaute risc catalytic component 2<br>
+RBM25  -  rna binding motif protein 25<br>
+CNBP  -  cchc-type zinc finger, nucleic acid binding protein<br>
+RNF20  -  ring finger protein 20, e3 ubiquitin protein ligase<br>
+ZC3H12C  -  zinc finger ccch-type containing 12c<br>
+TARDBP  -  tar dna binding protein<br>
+YTHDF3  -  yth domain family, member 3<br>
+SF3B1  -  splicing factor 3b, subunit 1, 155kda<br>
+LSM14A  -  lsm14a, scd6 homolog a (s. cerevisiae)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019899&amp;view=details' target="_blank">GO:0019899</a><a name=0019899></a></td>
+<td>enzyme binding</td>
+<td  align=center>7.42E-4</td>
+<td  align=center>3.89E-1</td>
+<td  align=center>1.24 (8795,1361,928,178)</td>
+<td>
+<a id="ctrl_elements_GO:0019899" href="javascript:toggle('elements_GO:0019899')">[+] Show genes</a><br>
+<div id="elements_GO:0019899" style="display:none"> <font size=1>
+SIRPA  -  signal-regulatory protein alpha<br>
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
+PRDX6  -  peroxiredoxin 6<br>
+PAWR  -  prkc, apoptosis, wt1, regulator<br>
+ZMYM2  -  zinc finger, mym-type 2<br>
+FNTA  -  farnesyltransferase, caax box, alpha<br>
+LRBA  -  lps-responsive vesicle trafficking, beach and anchor containing<br>
+CDC42  -  cell division cycle 42<br>
+HNRNPA0  -  heterogeneous nuclear ribonucleoprotein a0<br>
+GADD45A  -  growth arrest and dna-damage-inducible, alpha<br>
+SPDL1  -  spindle apparatus coiled-coil protein 1<br>
+DENND5A  -  denn/madd domain containing 5a<br>
+ABI2  -  abl-interactor 2<br>
+SNW1  -  snw domain containing 1<br>
+HES1  -  hairy and enhancer of split 1, (drosophila)<br>
+CD70  -  cd70 molecule<br>
+MAP1LC3B  -  microtubule-associated protein 1 light chain 3 beta<br>
+BCOR  -  bcl6 corepressor<br>
+NCOR2  -  nuclear receptor corepressor 2<br>
+CYTH1  -  cytohesin 1<br>
+ATXN3  -  ataxin 3<br>
+ABR  -  active bcr-related<br>
+PRR7  -  proline rich 7 (synaptic)<br>
+TBC1D10A  -  tbc1 domain family, member 10a<br>
+RDX  -  radixin<br>
+LDHA  -  lactate dehydrogenase a<br>
+GCHFR  -  gtp cyclohydrolase i feedback regulator<br>
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
+GCH1  -  gtp cyclohydrolase 1<br>
+ENO1  -  enolase 1, (alpha)<br>
+HPS1  -  hermansky-pudlak syndrome 1<br>
+KSR1  -  kinase suppressor of ras 1<br>
+MAPKAPK5  -  mitogen-activated protein kinase-activated protein kinase 5<br>
+UBE2L6  -  ubiquitin-conjugating enzyme e2l 6<br>
+NACC1  -  nucleus accumbens associated 1, ben and btb (poz) domain containing<br>
+SOX9  -  sry (sex determining region y)-box 9<br>
+MFHAS1  -  malignant fibrous histiocytoma amplified sequence 1<br>
+MAT2B  -  methionine adenosyltransferase ii, beta<br>
+IKBKB  -  inhibitor of kappa light polypeptide gene enhancer in b-cells, kinase beta<br>
+TPRKB  -  tp53rk binding protein<br>
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br>
+ACTA2  -  actin, alpha 2, smooth muscle, aorta<br>
+GYS1  -  glycogen synthase 1 (muscle)<br>
+SOD1  -  superoxide dismutase 1, soluble<br>
+NUTF2  -  nuclear transport factor 2<br>
+RHEB  -  ras homolog enriched in brain<br>
+TSPAN33  -  tetraspanin 33<br>
+PAK2  -  p21 protein (cdc42/rac)-activated kinase 2<br>
+EHD1  -  eh-domain containing 1<br>
+DUSP10  -  dual specificity phosphatase 10<br>
+RPRD1B  -  regulation of nuclear pre-mrna domain containing 1b<br>
+PDE8A  -  phosphodiesterase 8a<br>
+TPI1  -  triosephosphate isomerase 1<br>
+PTAFR  -  platelet-activating factor receptor<br>
+PTEN  -  phosphatase and tensin homolog<br>
+LAMTOR5  -  late endosomal/lysosomal adaptor, mapk and mtor activator 5<br>
+ANP32B  -  acidic (leucine-rich) nuclear phosphoprotein 32 family, member b<br>
+UBXN7  -  ubx domain protein 7<br>
+MAML1  -  mastermind-like 1 (drosophila)<br>
+NSFL1C  -  nsfl1 (p97) cofactor (p47)<br>
+SUMO2  -  small ubiquitin-like modifier 2<br>
+RHOA  -  ras homolog family member a<br>
+GCLM  -  glutamate-cysteine ligase, modifier subunit<br>
+BAG4  -  bcl2-associated athanogene 4<br>
+BAG2  -  bcl2-associated athanogene 2<br>
+SUMO3  -  small ubiquitin-like modifier 3<br>
+SMARCA4  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4<br>
+EIF4E2  -  eukaryotic translation initiation factor 4e family member 2<br>
+GNB1  -  guanine nucleotide binding protein (g protein), beta polypeptide 1<br>
+RPGR  -  retinitis pigmentosa gtpase regulator<br>
+DENND4A  -  denn/madd domain containing 4a<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+LRPPRC  -  leucine-rich pentatricopeptide repeat containing<br>
+ZBTB7A  -  zinc finger and btb domain containing 7a<br>
+TCEB2  -  transcription elongation factor b (siii), polypeptide 2 (18kda, elongin b)<br>
+CTTNBP2NL  -  cttnbp2 n-terminal like<br>
+HTT  -  huntingtin<br>
+RCC2  -  regulator of chromosome condensation 2<br>
+HDAC1  -  histone deacetylase 1<br>
+OPTN  -  optineurin<br>
+POLR2A  -  polymerase (rna) ii (dna directed) polypeptide a, 220kda<br>
+PANX1  -  pannexin 1<br>
+RRN3  -  rrn3 rna polymerase i transcription factor homolog (s. cerevisiae)<br>
+GAPVD1  -  gtpase activating protein and vps9 domains 1<br>
+CSTB  -  cystatin b (stefin b)<br>
+PRKAB1  -  protein kinase, amp-activated, beta 1 non-catalytic subunit<br>
+WNK1  -  wnk lysine deficient protein kinase 1<br>
+NEK6  -  nima-related kinase 6<br>
+SOCS1  -  suppressor of cytokine signaling 1<br>
+CAMLG  -  calcium modulating ligand<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+ATP1B3  -  atpase, na+/k+ transporting, beta 3 polypeptide<br>
+BCL2L11  -  bcl2-like 11 (apoptosis facilitator)<br>
+EIF3A  -  eukaryotic translation initiation factor 3, subunit a<br>
+BCL2L10  -  bcl2-like 10 (apoptosis facilitator)<br>
+TOR1AIP2  -  torsin a interacting protein 2<br>
+GPI  -  glucose-6-phosphate isomerase<br>
+KCNN4  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 4<br>
+SIRT1  -  sirtuin 1<br>
+RAB3GAP2  -  rab3 gtpase activating protein subunit 2 (non-catalytic)<br>
+MARCH5  -  membrane-associated ring finger (c3hc4) 5<br>
+ZFHX3  -  zinc finger homeobox 3<br>
+RPA2  -  replication protein a2, 32kda<br>
+ATG14  -  autophagy related 14<br>
+MAF1  -  maf1 homolog (s. cerevisiae)<br>
+ATPIF1  -  atpase inhibitory factor 1<br>
+PPP2R2A  -  protein phosphatase 2, regulatory subunit b, alpha<br>
+AGO2  -  argonaute risc catalytic component 2<br>
+SLC2A1  -  solute carrier family 2 (facilitated glucose transporter), member 1<br>
+BRD4  -  bromodomain containing 4<br>
+ANKLE2  -  ankyrin repeat and lem domain containing 2<br>
+RRAGC  -  ras-related gtp binding c<br>
+DNM1L  -  dynamin 1-like<br>
+CALM2  -  calmodulin 2 (phosphorylase kinase, delta)<br>
+STAU1  -  staufen double-stranded rna binding protein 1<br>
+TJP2  -  tight junction protein 2<br>
+PPP1CB  -  protein phosphatase 1, catalytic subunit, beta isozyme<br>
+UBE2K  -  ubiquitin-conjugating enzyme e2k<br>
+CYLD  -  cylindromatosis (turban tumor syndrome)<br>
+UBA2  -  ubiquitin-like modifier activating enzyme 2<br>
+HIF1A  -  hypoxia inducible factor 1, alpha subunit (basic helix-loop-helix transcription factor)<br>
+RALA  -  v-ral simian leukemia viral oncogene homolog a (ras related)<br>
+EIF4ENIF1  -  eukaryotic translation initiation factor 4e nuclear import factor 1<br>
+KIAA1147  -  kiaa1147<br>
+RAP1A  -  rap1a, member of ras oncogene family<br>
+UBE2D1  -  ubiquitin-conjugating enzyme e2d 1<br>
+UBE2B  -  ubiquitin-conjugating enzyme e2b<br>
+NAT10  -  n-acetyltransferase 10 (gcn5-related)<br>
+MIER2  -  mesoderm induction early response 1, family member 2<br>
+STAT3  -  signal transducer and activator of transcription 3 (acute-phase response factor)<br>
+UBC  -  ubiquitin c<br>
+CTR9  -  ctr9, paf1/rna polymerase ii complex component<br>
+DHCR24  -  24-dehydrocholesterol reductase<br>
+CD226  -  cd226 molecule<br>
+SPAG9  -  sperm associated antigen 9<br>
+FBXO8  -  f-box protein 8<br>
+NFATC1  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 1<br>
+KHDRBS1  -  kh domain containing, rna binding, signal transduction associated 1<br>
+CHMP3  -  charged multivesicular body protein 3<br>
+NFATC2  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 2<br>
+CASC3  -  cancer susceptibility candidate 3<br>
+FNIP1  -  folliculin interacting protein 1<br>
+MAP2K1  -  mitogen-activated protein kinase kinase 1<br>
+PHACTR1  -  phosphatase and actin regulator 1<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+RARA  -  retinoic acid receptor, alpha<br>
+CYFIP1  -  cytoplasmic fmr1 interacting protein 1<br>
+RAPGEF1  -  rap guanine nucleotide exchange factor (gef) 1<br>
+FBXO7  -  f-box protein 7<br>
+ATP6V0A2  -  atpase, h+ transporting, lysosomal v0 subunit a2<br>
+PHRF1  -  phd and ring finger domains 1<br>
+MAPK8  -  mitogen-activated protein kinase 8<br>
+SUMO1  -  small ubiquitin-like modifier 1<br>
+SMAD2  -  smad family member 2<br>
+MAPK3  -  mitogen-activated protein kinase 3<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+PHF6  -  phd finger protein 6<br>
+MAPK1  -  mitogen-activated protein kinase 1<br>
+NOL3  -  nucleolar protein 3 (apoptosis repressor with card domain)<br>
+BIN1  -  bridging integrator 1<br>
+IGF2R  -  insulin-like growth factor 2 receptor<br>
+CBX3  -  chromobox homolog 3<br>
+SYT11  -  synaptotagmin xi<br>
+RNF20  -  ring finger protein 20, e3 ubiquitin protein ligase<br>
+PSD4  -  pleckstrin and sec7 domain containing 4<br>
+NR3C1  -  nuclear receptor subfamily 3, group c, member 1 (glucocorticoid receptor)<br>
+MARCH7  -  membrane-associated ring finger (c3hc4) 7, e3 ubiquitin protein ligase<br>
+RIOK3  -  rio kinase 3<br>
+PRKCH  -  protein kinase c, eta<br>
+HMGA1  -  high mobility group at-hook 1<br>
+UBE2D4  -  ubiquitin-conjugating enzyme e2d 4 (putative)<br>
+SMAD3  -  smad family member 3<br>
+YWHAG  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+GSK3B  -  glycogen synthase kinase 3 beta<br>
+PRKAR1B  -  protein kinase, camp-dependent, regulatory, type i, beta<br>
+DZIP3  -  daz interacting zinc finger protein 3<br>
+YWHAE  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, epsilon polypeptide<br>
+RHOF  -  ras homolog family member f (in filopodia)<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9974 genes out of 10444 gene terms entered by the user.<br> 9974 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>946 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3672 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

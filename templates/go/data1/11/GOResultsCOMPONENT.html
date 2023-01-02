@@ -1,0 +1,1451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='445,205,523,253' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='145,325,228,373' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='455,318,545,381' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='607,101,679,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='597,205,688,253' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='1053,205,1187,253' HREF='#0044459' ALT=''>
+<AREA SHAPE='RECT' COORDS='303,325,431,373' HREF='#0005886' ALT=''>
+<AREA SHAPE='RECT' COORDS='267,573,387,621' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='284,677,369,725' HREF='#0010008' ALT=''>
+<AREA SHAPE='RECT' COORDS='91,677,216,725' HREF='#0030666' ALT=''>
+<AREA SHAPE='RECT' COORDS='445,677,528,725' HREF='#0005774' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,573,131,621' HREF='#0030659' ALT=''>
+<AREA SHAPE='RECT' COORDS='691,5,573,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='275,205,357,253' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='1077,101,1163,149' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='1269,101,1397,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='703,101,777,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='155,566,243,629' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='16,453,141,501' HREF='#0012506' ALT=''>
+<AREA SHAPE='RECT' COORDS='388,453,484,501' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='411,573,499,621' HREF='#0044440' ALT=''>
+<AREA SHAPE='RECT' COORDS='508,453,580,501' HREF='#0044437' ALT=''>
+<AREA SHAPE='RECT' COORDS='804,325,876,373' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='705,453,796,501' HREF='#0097708' ALT=''>
+<AREA SHAPE='RECT' COORDS='569,325,665,373' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='781,573,853,621' HREF='#0005773' ALT=''>
+<AREA SHAPE='RECT' COORDS='587,573,683,621' HREF='#0031410' ALT=''>
+<AREA SHAPE='RECT' COORDS='1071,309,1161,389' HREF='#0031226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1027,437,1117,517' HREF='#0005887' ALT=''>
+<AREA SHAPE='RECT' COORDS='331,773,448,821' HREF='#0031901' ALT=''>
+<AREA SHAPE='RECT' COORDS='197,773,307,821' HREF='#0031902' ALT=''>
+<AREA SHAPE='RECT' COORDS='48,773,173,821' HREF='#0030670' ALT=''>
+<AREA SHAPE='RECT' COORDS='771,677,864,725' HREF='#0000323' ALT=''>
+<AREA SHAPE='RECT' COORDS='593,677,676,725' HREF='#0005768' ALT=''>
+<AREA SHAPE='RECT' COORDS='779,773,856,821' HREF='#0005764' ALT=''>
+<AREA SHAPE='RECT' COORDS='477,869,563,917' HREF='#0005765' ALT=''>
+<AREA SHAPE='RECT' COORDS='1211,205,1336,253' HREF='#0098552' ALT=''>
+<AREA SHAPE='RECT' COORDS='1201,318,1311,381' HREF='#0009897' ALT=''>
+<AREA SHAPE='RECT' COORDS='771,205,909,253' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='820,446,959,509' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='933,198,1029,261' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='1360,205,1475,253' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='689,325,780,373' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='1343,325,1476,373' HREF='#0098797' ALT=''>
+<AREA SHAPE='RECT' COORDS='1360,453,1459,501' HREF='#0042611' ALT=''>
+<AREA SHAPE='RECT' COORDS='951,318,1047,381' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='472,773,568,821' HREF='#0098852' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044440&amp;view=details' target="_blank">GO:0044440</a><a name=0044440></a></td>
+<td>endosomal part</td>
+<td  align=center>6.15E-8</td>
+<td  align=center>1.06E-4</td>
+<td  align=center>2.50 (8795,368,382,40)</td>
+<td>
+<a id="ctrl_elements_GO:0044440" href="javascript:toggle('elements_GO:0044440')">[+] Show genes</a><br>
+<div id="elements_GO:0044440" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+SNX14  -  sorting nexin 14<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+UBC  -  ubiquitin c<br>
+UBB  -  ubiquitin b<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+RRAGA  -  ras-related gtp binding a<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ZFYVE27  -  zinc finger, fyve domain containing 27<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+USP8  -  ubiquitin specific peptidase 8<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CTSH  -  cathepsin h<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+SNX6  -  sorting nexin 6<br>
+TMEM55B  -  transmembrane protein 55b<br>
+CD164  -  cd164 molecule, sialomucin<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+ACAP1  -  arfgap with coiled-coil, ankyrin repeat and ph domains 1<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+TSG101  -  tumor susceptibility gene 101<br>
+SNX2  -  sorting nexin 2<br>
+UBXN6  -  ubx domain protein 6<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+GGA2  -  golgi-associated, gamma adaptin ear containing, arf binding protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010008&amp;view=details' target="_blank">GO:0010008</a><a name=0010008></a></td>
+<td>endosome membrane</td>
+<td  align=center>2.49E-7</td>
+<td  align=center>2.14E-4</td>
+<td  align=center>2.52 (8795,329,382,36)</td>
+<td>
+<a id="ctrl_elements_GO:0010008" href="javascript:toggle('elements_GO:0010008')">[+] Show genes</a><br>
+<div id="elements_GO:0010008" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+SNX14  -  sorting nexin 14<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+UBC  -  ubiquitin c<br>
+UBB  -  ubiquitin b<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+ZFYVE27  -  zinc finger, fyve domain containing 27<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+SNX6  -  sorting nexin 6<br>
+TMEM55B  -  transmembrane protein 55b<br>
+CD164  -  cd164 molecule, sialomucin<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+ACAP1  -  arfgap with coiled-coil, ankyrin repeat and ph domains 1<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+TSG101  -  tumor susceptibility gene 101<br>
+SNX2  -  sorting nexin 2<br>
+UBXN6  -  ubx domain protein 6<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+GGA2  -  golgi-associated, gamma adaptin ear containing, arf binding protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030666&amp;view=details' target="_blank">GO:0030666</a><a name=0030666></a></td>
+<td>endocytic vesicle membrane</td>
+<td  align=center>5.91E-7</td>
+<td  align=center>3.39E-4</td>
+<td  align=center>4.33 (8795,85,382,16)</td>
+<td>
+<a id="ctrl_elements_GO:0030666" href="javascript:toggle('elements_GO:0030666')">[+] Show genes</a><br>
+<div id="elements_GO:0030666" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+UBC  -  ubiquitin c<br>
+UBB  -  ubiquitin b<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+TAPBP  -  tap binding protein (tapasin)<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005886&amp;view=details' target="_blank">GO:0005886</a><a name=0005886></a></td>
+<td>plasma membrane</td>
+<td  align=center>4.19E-6</td>
+<td  align=center>1.8E-3</td>
+<td  align=center>1.52 (8795,1512,382,100)</td>
+<td>
+<a id="ctrl_elements_GO:0005886" href="javascript:toggle('elements_GO:0005886')">[+] Show genes</a><br>
+<div id="elements_GO:0005886" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+PNISR  -  pnn-interacting serine/arginine-rich protein<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+USE1  -  unconventional snare in the er 1 homolog (s. cerevisiae)<br>
+CYTH1  -  cytohesin 1<br>
+FLOT2  -  flotillin 2<br>
+SH2B2  -  sh2b adaptor protein 2<br>
+RHBDF2  -  rhomboid 5 homolog 2 (drosophila)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+IGFLR1  -  igf-like family receptor 1<br>
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+STK17A  -  serine/threonine kinase 17a<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+CD22  -  cd22 molecule<br>
+TMEM219  -  transmembrane protein 219<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+TSG101  -  tumor susceptibility gene 101<br>
+PAK2  -  p21 protein (cdc42/rac)-activated kinase 2<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+RHOH  -  ras homolog family member h<br>
+ITGAL  -  integrin, alpha l (antigen cd11a (p180), lymphocyte function-associated antigen 1; alpha polypeptide)<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+NT5E  -  5'-nucleotidase, ecto (cd73)<br>
+CDC42SE2  -  cdc42 small effector 2<br>
+VNN2  -  vanin 2<br>
+GPR82  -  g protein-coupled receptor 82<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+CPNE3  -  copine iii<br>
+ROCK1  -  rho-associated, coiled-coil containing protein kinase 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+TMEM55B  -  transmembrane protein 55b<br>
+FNBP1  -  formin binding protein 1<br>
+TRAC  -  t cell receptor alpha constant<br>
+ADD1  -  adducin 1 (alpha)<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+KMT2E  -  lysine (k)-specific methyltransferase 2e<br>
+SERINC1  -  serine incorporator 1<br>
+PTPN1  -  protein tyrosine phosphatase, non-receptor type 1<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+RASGRP1  -  ras guanyl releasing protein 1 (calcium and dag-regulated)<br>
+TAOK3  -  tao kinase 3<br>
+SKAP2  -  src kinase associated phosphoprotein 2<br>
+HCLS1  -  hematopoietic cell-specific lyn substrate 1<br>
+MR1  -  major histocompatibility complex, class i-related<br>
+ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
+KCTD7  -  potassium channel tetramerization domain containing 7<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+DYNLL1  -  dynein, light chain, lc8-type 1<br>
+CHIC2  -  cysteine-rich hydrophobic domain 2<br>
+MPHOSPH8  -  m-phase phosphoprotein 8<br>
+RAB14  -  rab14, member ras oncogene family<br>
+PHKB  -  phosphorylase kinase, beta<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+GPM6B  -  glycoprotein m6b<br>
+IFNGR1  -  interferon gamma receptor 1<br>
+SIGIRR  -  single immunoglobulin and toll-interleukin 1 receptor (tir) domain<br>
+BTN2A1  -  butyrophilin, subfamily 2, member a1<br>
+NFX1  -  nuclear transcription factor, x-box binding 1<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+STXBP3  -  syntaxin binding protein 3<br>
+SEMA4D  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+PARP14  -  poly (adp-ribose) polymerase family, member 14<br>
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+TTC17  -  tetratricopeptide repeat domain 17<br>
+GRK5  -  g protein-coupled receptor kinase 5<br>
+LTB  -  lymphotoxin beta (tnf superfamily, member 3)<br>
+PARVG  -  parvin, gamma<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+UBC  -  ubiquitin c<br>
+UBB  -  ubiquitin b<br>
+ZDHHC21  -  zinc finger, dhhc-type containing 21<br>
+CORO1B  -  coronin, actin binding protein, 1b<br>
+ITSN2  -  intersectin 2<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+JAK3  -  janus kinase 3<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+CD164  -  cd164 molecule, sialomucin<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+RYK  -  receptor-like tyrosine kinase<br>
+MIEN1  -  migration and invasion enhancer 1<br>
+ANXA4  -  annexin a4<br>
+ATP6V1H  -  atpase, h+ transporting, lysosomal 50/57kda, v1 subunit h<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+CDIPT  -  cdp-diacylglycerol--inositol 3-phosphatidyltransferase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030670&amp;view=details' target="_blank">GO:0030670</a><a name=0030670></a></td>
+<td>phagocytic vesicle membrane</td>
+<td  align=center>5.52E-6</td>
+<td  align=center>1.9E-3</td>
+<td  align=center>4.76 (8795,58,382,12)</td>
+<td>
+<a id="ctrl_elements_GO:0030670" href="javascript:toggle('elements_GO:0030670')">[+] Show genes</a><br>
+<div id="elements_GO:0030670" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+TAPBP  -  tap binding protein (tapasin)<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098805&amp;view=details' target="_blank">GO:0098805</a><a name=0098805></a></td>
+<td>whole membrane</td>
+<td  align=center>8.39E-6</td>
+<td  align=center>2.41E-3</td>
+<td  align=center>1.74 (8795,820,382,62)</td>
+<td>
+<a id="ctrl_elements_GO:0098805" href="javascript:toggle('elements_GO:0098805')">[+] Show genes</a><br>
+<div id="elements_GO:0098805" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SNX14  -  sorting nexin 14<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+WIPI2  -  wd repeat domain, phosphoinositide interacting 2<br>
+DYNLL1  -  dynein, light chain, lc8-type 1<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+ACAP1  -  arfgap with coiled-coil, ankyrin repeat and ph domains 1<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+MOAP1  -  modulator of apoptosis 1<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+TSG101  -  tumor susceptibility gene 101<br>
+SNX2  -  sorting nexin 2<br>
+UBXN6  -  ubx domain protein 6<br>
+TOMM7  -  translocase of outer mitochondrial membrane 7 homolog (yeast)<br>
+ITGAL  -  integrin, alpha l (antigen cd11a (p180), lymphocyte function-associated antigen 1; alpha polypeptide)<br>
+VPS13C  -  vacuolar protein sorting 13 homolog c (s. cerevisiae)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LPIN1  -  lipin 1<br>
+UBC  -  ubiquitin c<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+MFN1  -  mitofusin 1<br>
+UBB  -  ubiquitin b<br>
+TAPBP  -  tap binding protein (tapasin)<br>
+RRAGA  -  ras-related gtp binding a<br>
+ZFYVE27  -  zinc finger, fyve domain containing 27<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+CPNE3  -  copine iii<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SNX6  -  sorting nexin 6<br>
+CD164  -  cd164 molecule, sialomucin<br>
+TMEM55B  -  transmembrane protein 55b<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+ATP6V1H  -  atpase, h+ transporting, lysosomal 50/57kda, v1 subunit h<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+SYNE2  -  spectrin repeat containing, nuclear envelope 2<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+GGA2  -  golgi-associated, gamma adaptin ear containing, arf binding protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042611&amp;view=details' target="_blank">GO:0042611</a><a name=0042611></a></td>
+<td>MHC protein complex</td>
+<td  align=center>8.84E-6</td>
+<td  align=center>2.17E-3</td>
+<td  align=center>8.48 (8795,19,382,7)</td>
+<td>
+<a id="ctrl_elements_GO:0042611" href="javascript:toggle('elements_GO:0042611')">[+] Show genes</a><br>
+<div id="elements_GO:0042611" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044433&amp;view=details' target="_blank">GO:0044433</a><a name=0044433></a></td>
+<td>cytoplasmic vesicle part</td>
+<td  align=center>9.46E-6</td>
+<td  align=center>2.04E-3</td>
+<td  align=center>1.72 (8795,859,382,64)</td>
+<td>
+<a id="ctrl_elements_GO:0044433" href="javascript:toggle('elements_GO:0044433')">[+] Show genes</a><br>
+<div id="elements_GO:0044433" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+SNX14  -  sorting nexin 14<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+DYNLL1  -  dynein, light chain, lc8-type 1<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+RAB14  -  rab14, member ras oncogene family<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+USP8  -  ubiquitin specific peptidase 8<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+CTSH  -  cathepsin h<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+ACAP1  -  arfgap with coiled-coil, ankyrin repeat and ph domains 1<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+TSG101  -  tumor susceptibility gene 101<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+SNX2  -  sorting nexin 2<br>
+UBXN6  -  ubx domain protein 6<br>
+YPEL5  -  yippee-like 5 (drosophila)<br>
+ITGAL  -  integrin, alpha l (antigen cd11a (p180), lymphocyte function-associated antigen 1; alpha polypeptide)<br>
+VPS13C  -  vacuolar protein sorting 13 homolog c (s. cerevisiae)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+UBC  -  ubiquitin c<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+ALDOC  -  aldolase c, fructose-bisphosphate<br>
+UBB  -  ubiquitin b<br>
+TAPBP  -  tap binding protein (tapasin)<br>
+RRAGA  -  ras-related gtp binding a<br>
+ZFYVE27  -  zinc finger, fyve domain containing 27<br>
+AFTPH  -  aftiphilin<br>
+GMFG  -  glia maturation factor, gamma<br>
+PLEKHO2  -  pleckstrin homology domain containing, family o member 2<br>
+CPNE3  -  copine iii<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+ROCK1  -  rho-associated, coiled-coil containing protein kinase 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SNX6  -  sorting nexin 6<br>
+CD164  -  cd164 molecule, sialomucin<br>
+TMEM55B  -  transmembrane protein 55b<br>
+MVP  -  major vault protein<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+CDK13  -  cyclin-dependent kinase 13<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+HMHA1  -  histocompatibility (minor) ha-1<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+GGA2  -  golgi-associated, gamma adaptin ear containing, arf binding protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000323&amp;view=details' target="_blank">GO:0000323</a><a name=0000323></a></td>
+<td>lytic vacuole</td>
+<td  align=center>1.73E-5</td>
+<td  align=center>3.31E-3</td>
+<td  align=center>2.72 (8795,186,382,22)</td>
+<td>
+<a id="ctrl_elements_GO:0000323" href="javascript:toggle('elements_GO:0000323')">[+] Show genes</a><br>
+<div id="elements_GO:0000323" style="display:none"> <font size=1>
+CTSH  -  cathepsin h<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+FNBP1  -  formin binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+NAAA  -  n-acylethanolamine acid amidase<br>
+IFI30  -  interferon, gamma-inducible protein 30<br>
+ACP5  -  acid phosphatase 5, tartrate resistant<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+WDR48  -  wd repeat domain 48<br>
+ANXA11  -  annexin a11<br>
+RRAGA  -  ras-related gtp binding a<br>
+RAB14  -  rab14, member ras oncogene family<br>
+TSC2  -  tuberous sclerosis 2<br>
+SNX2  -  sorting nexin 2<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+TPP1  -  tripeptidyl peptidase i<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005764&amp;view=details' target="_blank">GO:0005764</a><a name=0005764></a></td>
+<td>lysosome</td>
+<td  align=center>1.73E-5</td>
+<td  align=center>2.98E-3</td>
+<td  align=center>2.72 (8795,186,382,22)</td>
+<td>
+<a id="ctrl_elements_GO:0005764" href="javascript:toggle('elements_GO:0005764')">[+] Show genes</a><br>
+<div id="elements_GO:0005764" style="display:none"> <font size=1>
+CTSH  -  cathepsin h<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+FNBP1  -  formin binding protein 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+NAAA  -  n-acylethanolamine acid amidase<br>
+IFI30  -  interferon, gamma-inducible protein 30<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+ACP5  -  acid phosphatase 5, tartrate resistant<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+WDR48  -  wd repeat domain 48<br>
+ANXA11  -  annexin a11<br>
+RRAGA  -  ras-related gtp binding a<br>
+RAB14  -  rab14, member ras oncogene family<br>
+TSC2  -  tuberous sclerosis 2<br>
+SNX2  -  sorting nexin 2<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+TPP1  -  tripeptidyl peptidase i<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044459&amp;view=details' target="_blank">GO:0044459</a><a name=0044459></a></td>
+<td>plasma membrane part</td>
+<td  align=center>1.73E-5</td>
+<td  align=center>2.71E-3</td>
+<td  align=center>1.71 (8795,821,382,61)</td>
+<td>
+<a id="ctrl_elements_GO:0044459" href="javascript:toggle('elements_GO:0044459')">[+] Show genes</a><br>
+<div id="elements_GO:0044459" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+CD69  -  cd69 molecule<br>
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+CYTH1  -  cytohesin 1<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+FLOT2  -  flotillin 2<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+WASF2  -  was protein family, member 2<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+PDCD6IP  -  programmed cell death 6 interacting protein<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+IFNGR1  -  interferon gamma receptor 1<br>
+BTN2A1  -  butyrophilin, subfamily 2, member a1<br>
+USP8  -  ubiquitin specific peptidase 8<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+STXBP3  -  syntaxin binding protein 3<br>
+SEMA4D  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+CD22  -  cd22 molecule<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
+CD24  -  cd24 molecule<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+RHOH  -  ras homolog family member h<br>
+NT5E  -  5'-nucleotidase, ecto (cd73)<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+ITGAL  -  integrin, alpha l (antigen cd11a (p180), lymphocyte function-associated antigen 1; alpha polypeptide)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+GNB5  -  guanine nucleotide binding protein (g protein), beta 5<br>
+CDC42SE2  -  cdc42 small effector 2<br>
+FCRL5  -  fc receptor-like 5<br>
+ITSN2  -  intersectin 2<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ZFYVE27  -  zinc finger, fyve domain containing 27<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CD164  -  cd164 molecule, sialomucin<br>
+TRAC  -  t cell receptor alpha constant<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+RYK  -  receptor-like tyrosine kinase<br>
+MIEN1  -  migration and invasion enhancer 1<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+SYNE2  -  spectrin repeat containing, nuclear envelope 2<br>
+HMHA1  -  histocompatibility (minor) ha-1<br>
+P2RY8  -  purinergic receptor p2y, g-protein coupled, 8<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098852&amp;view=details' target="_blank">GO:0098852</a><a name=0098852></a></td>
+<td>lytic vacuole membrane</td>
+<td  align=center>3.51E-5</td>
+<td  align=center>5.04E-3</td>
+<td  align=center>2.33 (8795,267,382,27)</td>
+<td>
+<a id="ctrl_elements_GO:0098852" href="javascript:toggle('elements_GO:0098852')">[+] Show genes</a><br>
+<div id="elements_GO:0098852" style="display:none"> <font size=1>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+RRAGA  -  ras-related gtp binding a<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+RAB14  -  rab14, member ras oncogene family<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+CPNE3  -  copine iii<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+TMEM55B  -  transmembrane protein 55b<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+ATP6V1H  -  atpase, h+ transporting, lysosomal 50/57kda, v1 subunit h<br>
+UBXN6  -  ubx domain protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005765&amp;view=details' target="_blank">GO:0005765</a><a name=0005765></a></td>
+<td>lysosomal membrane</td>
+<td  align=center>3.51E-5</td>
+<td  align=center>4.65E-3</td>
+<td  align=center>2.33 (8795,267,382,27)</td>
+<td>
+<a id="ctrl_elements_GO:0005765" href="javascript:toggle('elements_GO:0005765')">[+] Show genes</a><br>
+<div id="elements_GO:0005765" style="display:none"> <font size=1>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+RRAGA  -  ras-related gtp binding a<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+CPNE3  -  copine iii<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+TMEM55B  -  transmembrane protein 55b<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+ATP6V1H  -  atpase, h+ transporting, lysosomal 50/57kda, v1 subunit h<br>
+UBXN6  -  ubx domain protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005773&amp;view=details' target="_blank">GO:0005773</a><a name=0005773></a></td>
+<td>vacuole</td>
+<td  align=center>6.68E-5</td>
+<td  align=center>8.21E-3</td>
+<td  align=center>2.38 (8795,232,382,24)</td>
+<td>
+<a id="ctrl_elements_GO:0005773" href="javascript:toggle('elements_GO:0005773')">[+] Show genes</a><br>
+<div id="elements_GO:0005773" style="display:none"> <font size=1>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+CTSH  -  cathepsin h<br>
+FNBP1  -  formin binding protein 1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+TBC1D17  -  tbc1 domain family, member 17<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+NAAA  -  n-acylethanolamine acid amidase<br>
+IFI30  -  interferon, gamma-inducible protein 30<br>
+ACP5  -  acid phosphatase 5, tartrate resistant<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+WDR48  -  wd repeat domain 48<br>
+ANXA11  -  annexin a11<br>
+RRAGA  -  ras-related gtp binding a<br>
+RAB14  -  rab14, member ras oncogene family<br>
+TSC2  -  tuberous sclerosis 2<br>
+SNX2  -  sorting nexin 2<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+TPP1  -  tripeptidyl peptidase i<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005774&amp;view=details' target="_blank">GO:0005774</a><a name=0005774></a></td>
+<td>vacuolar membrane</td>
+<td  align=center>7.38E-5</td>
+<td  align=center>8.46E-3</td>
+<td  align=center>2.19 (8795,294,382,28)</td>
+<td>
+<a id="ctrl_elements_GO:0005774" href="javascript:toggle('elements_GO:0005774')">[+] Show genes</a><br>
+<div id="elements_GO:0005774" style="display:none"> <font size=1>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+RRAGA  -  ras-related gtp binding a<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+CPNE3  -  copine iii<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+CD164  -  cd164 molecule, sialomucin<br>
+TMEM55B  -  transmembrane protein 55b<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+ATP6V1H  -  atpase, h+ transporting, lysosomal 50/57kda, v1 subunit h<br>
+UBXN6  -  ubx domain protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031902&amp;view=details' target="_blank">GO:0031902</a><a name=0031902></a></td>
+<td>late endosome membrane</td>
+<td  align=center>9.8E-5</td>
+<td  align=center>1.05E-2</td>
+<td  align=center>3.22 (8795,100,382,14)</td>
+<td>
+<a id="ctrl_elements_GO:0031902" href="javascript:toggle('elements_GO:0031902')">[+] Show genes</a><br>
+<div id="elements_GO:0031902" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+SNX14  -  sorting nexin 14<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+TSG101  -  tumor susceptibility gene 101<br>
+UBXN6  -  ubx domain protein 6<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009897&amp;view=details' target="_blank">GO:0009897</a><a name=0009897></a></td>
+<td>external side of plasma membrane</td>
+<td  align=center>2.75E-4</td>
+<td  align=center>2.78E-2</td>
+<td  align=center>2.93 (8795,110,382,14)</td>
+<td>
+<a id="ctrl_elements_GO:0009897" href="javascript:toggle('elements_GO:0009897')">[+] Show genes</a><br>
+<div id="elements_GO:0009897" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+NT5E  -  5'-nucleotidase, ecto (cd73)<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+CD69  -  cd69 molecule<br>
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
+CD22  -  cd22 molecule<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+BTN2A1  -  butyrophilin, subfamily 2, member a1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031226&amp;view=details' target="_blank">GO:0031226</a><a name=0031226></a></td>
+<td>intrinsic component of plasma membrane</td>
+<td  align=center>2.96E-4</td>
+<td  align=center>2.83E-2</td>
+<td  align=center>2.02 (8795,319,382,28)</td>
+<td>
+<a id="ctrl_elements_GO:0031226" href="javascript:toggle('elements_GO:0031226')">[+] Show genes</a><br>
+<div id="elements_GO:0031226" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+FCRL5  -  fc receptor-like 5<br>
+CD69  -  cd69 molecule<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+IFNGR1  -  interferon gamma receptor 1<br>
+BTN2A1  -  butyrophilin, subfamily 2, member a1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CD164  -  cd164 molecule, sialomucin<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+RYK  -  receptor-like tyrosine kinase<br>
+MIEN1  -  migration and invasion enhancer 1<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+SEMA4D  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+P2RY8  -  purinergic receptor p2y, g-protein coupled, 8<br>
+CD22  -  cd22 molecule<br>
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+CD24  -  cd24 molecule<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044437&amp;view=details' target="_blank">GO:0044437</a><a name=0044437></a></td>
+<td>vacuolar part</td>
+<td  align=center>3.13E-4</td>
+<td  align=center>2.83E-2</td>
+<td  align=center>1.91 (8795,386,382,32)</td>
+<td>
+<a id="ctrl_elements_GO:0044437" href="javascript:toggle('elements_GO:0044437')">[+] Show genes</a><br>
+<div id="elements_GO:0044437" style="display:none"> <font size=1>
+DTX3L  -  deltex 3-like (drosophila)<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+SNX14  -  sorting nexin 14<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+C18orf8  -  chromosome 18 open reading frame 8<br>
+IFI30  -  interferon, gamma-inducible protein 30<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+RRAGA  -  ras-related gtp binding a<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+CPNE3  -  copine iii<br>
+TPP1  -  tripeptidyl peptidase i<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+CD164  -  cd164 molecule, sialomucin<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+NAAA  -  n-acylethanolamine acid amidase<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+ATP6V1H  -  atpase, h+ transporting, lysosomal 50/57kda, v1 subunit h<br>
+HMHA1  -  histocompatibility (minor) ha-1<br>
+UBXN6  -  ubx domain protein 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097708&amp;view=details' target="_blank">GO:0097708</a><a name=0097708></a></td>
+<td>intracellular vesicle</td>
+<td  align=center>3.29E-4</td>
+<td  align=center>2.84E-2</td>
+<td  align=center>1.60 (8795,778,382,54)</td>
+<td>
+<a id="ctrl_elements_GO:0097708" href="javascript:toggle('elements_GO:0097708')">[+] Show genes</a><br>
+<div id="elements_GO:0097708" style="display:none"> <font size=1>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+SOCS1  -  suppressor of cytokine signaling 1<br>
+USE1  -  unconventional snare in the er 1 homolog (s. cerevisiae)<br>
+ANXA11  -  annexin a11<br>
+CHIC2  -  cysteine-rich hydrophobic domain 2<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+FLOT2  -  flotillin 2<br>
+ATM  -  ataxia telangiectasia mutated<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+WASF2  -  was protein family, member 2<br>
+PDCD6IP  -  programmed cell death 6 interacting protein<br>
+USP8  -  ubiquitin specific peptidase 8<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+CTSH  -  cathepsin h<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+STXBP3  -  syntaxin binding protein 3<br>
+WDR48  -  wd repeat domain 48<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+CD22  -  cd22 molecule<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+TSG101  -  tumor susceptibility gene 101<br>
+SNX2  -  sorting nexin 2<br>
+UBXN6  -  ubx domain protein 6<br>
+WIPF1  -  was/wasl interacting protein family, member 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+RHOH  -  ras homolog family member h<br>
+GGNBP2  -  gametogenetin binding protein 2<br>
+IQSEC1  -  iq motif and sec7 domain 1<br>
+TBC1D17  -  tbc1 domain family, member 17<br>
+ITSN2  -  intersectin 2<br>
+JAK1  -  janus kinase 1<br>
+JAK3  -  janus kinase 3<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ZFYVE21  -  zinc finger, fyve domain containing 21<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+TPP1  -  tripeptidyl peptidase i<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SNX6  -  sorting nexin 6<br>
+CD164  -  cd164 molecule, sialomucin<br>
+FNBP1  -  formin binding protein 1<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+PTPN1  -  protein tyrosine phosphatase, non-receptor type 1<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+GGA2  -  golgi-associated, gamma adaptin ear containing, arf binding protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0012506&amp;view=details' target="_blank">GO:0012506</a><a name=0012506></a></td>
+<td>vesicle membrane</td>
+<td  align=center>3.55E-4</td>
+<td  align=center>2.91E-2</td>
+<td  align=center>1.92 (8795,372,382,31)</td>
+<td>
+<a id="ctrl_elements_GO:0012506" href="javascript:toggle('elements_GO:0012506')">[+] Show genes</a><br>
+<div id="elements_GO:0012506" style="display:none"> <font size=1>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+ITGAL  -  integrin, alpha l (antigen cd11a (p180), lymphocyte function-associated antigen 1; alpha polypeptide)<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+VPS13C  -  vacuolar protein sorting 13 homolog c (s. cerevisiae)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+UBC  -  ubiquitin c<br>
+UBB  -  ubiquitin b<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+TAPBP  -  tap binding protein (tapasin)<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+RAB14  -  rab14, member ras oncogene family<br>
+DYNLL1  -  dynein, light chain, lc8-type 1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+CPNE3  -  copine iii<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+ANXA4  -  annexin a4<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030659&amp;view=details' target="_blank">GO:0030659</a><a name=0030659></a></td>
+<td>cytoplasmic vesicle membrane</td>
+<td  align=center>4.02E-4</td>
+<td  align=center>3.14E-2</td>
+<td  align=center>1.93 (8795,358,382,30)</td>
+<td>
+<a id="ctrl_elements_GO:0030659" href="javascript:toggle('elements_GO:0030659')">[+] Show genes</a><br>
+<div id="elements_GO:0030659" style="display:none"> <font size=1>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+ITGAL  -  integrin, alpha l (antigen cd11a (p180), lymphocyte function-associated antigen 1; alpha polypeptide)<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+VPS13C  -  vacuolar protein sorting 13 homolog c (s. cerevisiae)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+UBC  -  ubiquitin c<br>
+UBB  -  ubiquitin b<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+TAPBP  -  tap binding protein (tapasin)<br>
+RAB14  -  rab14, member ras oncogene family<br>
+DYNLL1  -  dynein, light chain, lc8-type 1<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+CPNE3  -  copine iii<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+TMEM55B  -  transmembrane protein 55b<br>
+RAP2C  -  rap2c, member of ras oncogene family<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
+<td>membrane part</td>
+<td  align=center>5.31E-4</td>
+<td  align=center>3.97E-2</td>
+<td  align=center>1.27 (8795,2524,382,139)</td>
+<td>
+<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
+<div id="elements_GO:0044425" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+DNAJB2  -  dnaj (hsp40) homolog, subfamily b, member 2<br>
+SNX14  -  sorting nexin 14<br>
+SMAGP  -  small cell adhesion glycoprotein<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+USE1  -  unconventional snare in the er 1 homolog (s. cerevisiae)<br>
+CD69  -  cd69 molecule<br>
+CYTH1  -  cytohesin 1<br>
+FLOT2  -  flotillin 2<br>
+COX7C  -  cytochrome c oxidase subunit viic<br>
+WASF2  -  was protein family, member 2<br>
+RHBDF2  -  rhomboid 5 homolog 2 (drosophila)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
+IGFLR1  -  igf-like family receptor 1<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+ACP5  -  acid phosphatase 5, tartrate resistant<br>
+DRAM2  -  dna-damage regulated autophagy modulator 2<br>
+TM2D1  -  tm2 domain containing 1<br>
+SMIM7  -  small integral membrane protein 7<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+SYS1  -  sys1 golgi-localized integral membrane protein homolog (s. cerevisiae)<br>
+CD22  -  cd22 molecule<br>
+TMEM219  -  transmembrane protein 219<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+TSG101  -  tumor susceptibility gene 101<br>
+TRIM13  -  tripartite motif containing 13<br>
+SNX2  -  sorting nexin 2<br>
+FGR  -  feline gardner-rasheed sarcoma viral oncogene homolog<br>
+UBXN6  -  ubx domain protein 6<br>
+FADS3  -  fatty acid desaturase 3<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+RHOH  -  ras homolog family member h<br>
+NT5E  -  5'-nucleotidase, ecto (cd73)<br>
+ITGAL  -  integrin, alpha l (antigen cd11a (p180), lymphocyte function-associated antigen 1; alpha polypeptide)<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+VPS13C  -  vacuolar protein sorting 13 homolog c (s. cerevisiae)<br>
+CDC42SE2  -  cdc42 small effector 2<br>
+VNN2  -  vanin 2<br>
+GPR82  -  g protein-coupled receptor 82<br>
+FCRL5  -  fc receptor-like 5<br>
+TAPBP  -  tap binding protein (tapasin)<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+WDR83OS  -  wd repeat domain 83 opposite strand<br>
+AFTPH  -  aftiphilin<br>
+LRP10  -  low density lipoprotein receptor-related protein 10<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+PCNXL4  -  pecanex-like 4 (drosophila)<br>
+PCSK7  -  proprotein convertase subtilisin/kexin type 7<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+SNX6  -  sorting nexin 6<br>
+TMEM55B  -  transmembrane protein 55b<br>
+FNBP1  -  formin binding protein 1<br>
+TRAC  -  t cell receptor alpha constant<br>
+SERINC1  -  serine incorporator 1<br>
+TMEM60  -  transmembrane protein 60<br>
+PTPN1  -  protein tyrosine phosphatase, non-receptor type 1<br>
+BCL10  -  b-cell cll/lymphoma 10<br>
+NPIPB5  -  nuclear pore complex interacting protein family, member b5<br>
+RASGRP1  -  ras guanyl releasing protein 1 (calcium and dag-regulated)<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+PCYT1A  -  phosphate cytidylyltransferase 1, choline, alpha<br>
+ERP44  -  endoplasmic reticulum protein 44<br>
+MR1  -  major histocompatibility complex, class i-related<br>
+PRKAA1  -  protein kinase, amp-activated, alpha 1 catalytic subunit<br>
+ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+SOCS1  -  suppressor of cytokine signaling 1<br>
+LAMTOR3  -  late endosomal/lysosomal adaptor, mapk and mtor activator 3<br>
+HIGD2A  -  hig1 hypoxia inducible domain family, member 2a<br>
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
+HLA-DQB1  -  major histocompatibility complex, class ii, dq beta 1<br>
+WIPI2  -  wd repeat domain, phosphoinositide interacting 2<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
+PDCD6IP  -  programmed cell death 6 interacting protein<br>
+IFNGR1  -  interferon gamma receptor 1<br>
+SIGIRR  -  single immunoglobulin and toll-interleukin 1 receptor (tir) domain<br>
+GPM6B  -  glycoprotein m6b<br>
+USP8  -  ubiquitin specific peptidase 8<br>
+RNFT1  -  ring finger protein, transmembrane 1<br>
+BTN2A1  -  butyrophilin, subfamily 2, member a1<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
+NAAA  -  n-acylethanolamine acid amidase<br>
+HLA-DMA  -  major histocompatibility complex, class ii, dm alpha<br>
+STXBP3  -  syntaxin binding protein 3<br>
+SEMA4D  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+CCDC107  -  coiled-coil domain containing 107<br>
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
+CD24  -  cd24 molecule<br>
+B3GALT4  -  udp-gal:betaglcnac beta 1,3-galactosyltransferase, polypeptide 4<br>
+FAM134C  -  family with sequence similarity 134, member c<br>
+LTB  -  lymphotoxin beta (tnf superfamily, member 3)<br>
+TOMM7  -  translocase of outer mitochondrial membrane 7 homolog (yeast)<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+LPIN1  -  lipin 1<br>
+GNB5  -  guanine nucleotide binding protein (g protein), beta 5<br>
+RNASEK  -  ribonuclease, rnase k<br>
+UBC  -  ubiquitin c<br>
+MFN1  -  mitofusin 1<br>
+UBB  -  ubiquitin b<br>
+ZDHHC21  -  zinc finger, dhhc-type containing 21<br>
+ITSN2  -  intersectin 2<br>
+C6orf1  -  chromosome 6 open reading frame 1<br>
+AMFR  -  autocrine motility factor receptor, e3 ubiquitin protein ligase<br>
+CEPT1  -  choline/ethanolamine phosphotransferase 1<br>
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
+RRAGA  -  ras-related gtp binding a<br>
+ZFYVE27  -  zinc finger, fyve domain containing 27<br>
+TPP1  -  tripeptidyl peptidase i<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+SLC44A2  -  solute carrier family 44 (choline transporter), member 2<br>
+CD164  -  cd164 molecule, sialomucin<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+RYK  -  receptor-like tyrosine kinase<br>
+MIEN1  -  migration and invasion enhancer 1<br>
+PHTF2  -  putative homeodomain transcription factor 2<br>
+ATP6V1H  -  atpase, h+ transporting, lysosomal 50/57kda, v1 subunit h<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+SYNE2  -  spectrin repeat containing, nuclear envelope 2<br>
+P2RY8  -  purinergic receptor p2y, g-protein coupled, 8<br>
+HMHA1  -  histocompatibility (minor) ha-1<br>
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+CDIPT  -  cdp-diacylglycerol--inositol 3-phosphatidyltransferase<br>
+SMDT1  -  single-pass membrane protein with aspartate-rich tail 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031410&amp;view=details' target="_blank">GO:0031410</a><a name=0031410></a></td>
+<td>cytoplasmic vesicle</td>
+<td  align=center>5.37E-4</td>
+<td  align=center>3.85E-2</td>
+<td  align=center>1.57 (8795,775,382,53)</td>
+<td>
+<a id="ctrl_elements_GO:0031410" href="javascript:toggle('elements_GO:0031410')">[+] Show genes</a><br>
+<div id="elements_GO:0031410" style="display:none"> <font size=1>
+LINC00869  -  long intergenic non-protein coding rna 869<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+SOCS1  -  suppressor of cytokine signaling 1<br>
+USE1  -  unconventional snare in the er 1 homolog (s. cerevisiae)<br>
+ANXA11  -  annexin a11<br>
+CHIC2  -  cysteine-rich hydrophobic domain 2<br>
+RAB14  -  rab14, member ras oncogene family<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+FLOT2  -  flotillin 2<br>
+ATM  -  ataxia telangiectasia mutated<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+WASF2  -  was protein family, member 2<br>
+PDCD6IP  -  programmed cell death 6 interacting protein<br>
+USP8  -  ubiquitin specific peptidase 8<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+CTSH  -  cathepsin h<br>
+ATP6V0A1  -  atpase, h+ transporting, lysosomal v0 subunit a1<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+STXBP3  -  syntaxin binding protein 3<br>
+WDR48  -  wd repeat domain 48<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+CD22  -  cd22 molecule<br>
+RAC2  -  ras-related c3 botulinum toxin substrate 2 (rho family, small gtp binding protein rac2)<br>
+TSG101  -  tumor susceptibility gene 101<br>
+SNX2  -  sorting nexin 2<br>
+UBXN6  -  ubx domain protein 6<br>
+WIPF1  -  was/wasl interacting protein family, member 1<br>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+RHOH  -  ras homolog family member h<br>
+GGNBP2  -  gametogenetin binding protein 2<br>
+IQSEC1  -  iq motif and sec7 domain 1<br>
+TBC1D17  -  tbc1 domain family, member 17<br>
+JAK1  -  janus kinase 1<br>
+JAK3  -  janus kinase 3<br>
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
+ZFYVE21  -  zinc finger, fyve domain containing 21<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+TPP1  -  tripeptidyl peptidase i<br>
+GABARAPL2  -  gaba(a) receptor-associated protein-like 2<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SNX6  -  sorting nexin 6<br>
+CD164  -  cd164 molecule, sialomucin<br>
+FNBP1  -  formin binding protein 1<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+SNAP23  -  synaptosomal-associated protein, 23kda<br>
+PTPN1  -  protein tyrosine phosphatase, non-receptor type 1<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+GGA2  -  golgi-associated, gamma adaptin ear containing, arf binding protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005887&amp;view=details' target="_blank">GO:0005887</a><a name=0005887></a></td>
+<td>integral component of plasma membrane</td>
+<td  align=center>5.88E-4</td>
+<td  align=center>4.05E-2</td>
+<td  align=center>2.00 (8795,300,382,26)</td>
+<td>
+<a id="ctrl_elements_GO:0005887" href="javascript:toggle('elements_GO:0005887')">[+] Show genes</a><br>
+<div id="elements_GO:0005887" style="display:none"> <font size=1>
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
+ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br>
+ICAM3  -  intercellular adhesion molecule 3<br>
+LRMP  -  lymphoid-restricted membrane protein<br>
+FCRL5  -  fc receptor-like 5<br>
+CD69  -  cd69 molecule<br>
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
+RASGRP3  -  ras guanyl releasing protein 3 (calcium and dag-regulated)<br>
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
+LAPTM5  -  lysosomal protein transmembrane 5<br>
+IFNGR1  -  interferon gamma receptor 1<br>
+BTN2A1  -  butyrophilin, subfamily 2, member a1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+GPR137B  -  g protein-coupled receptor 137b<br>
+IL27RA  -  interleukin 27 receptor, alpha<br>
+CD164  -  cd164 molecule, sialomucin<br>
+LNPEP  -  leucyl/cystinyl aminopeptidase<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+RYK  -  receptor-like tyrosine kinase<br>
+PLSCR1  -  phospholipid scramblase 1<br>
+NCKAP1L  -  nck-associated protein 1-like<br>
+SEMA4D  -  sema domain, immunoglobulin domain (ig), transmembrane domain (tm) and short cytoplasmic domain, (semaphorin) 4d<br>
+P2RY8  -  purinergic receptor p2y, g-protein coupled, 8<br>
+CD22  -  cd22 molecule<br>
+MS4A1  -  membrane-spanning 4-domains, subfamily a, member 1<br>
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031901&amp;view=details' target="_blank">GO:0031901</a><a name=0031901></a></td>
+<td>early endosome membrane</td>
+<td  align=center>7.94E-4</td>
+<td  align=center>5.26E-2</td>
+<td  align=center>2.91 (8795,95,382,12)</td>
+<td>
+<a id="ctrl_elements_GO:0031901" href="javascript:toggle('elements_GO:0031901')">[+] Show genes</a><br>
+<div id="elements_GO:0031901" style="display:none"> <font size=1>
+MR1  -  major histocompatibility complex, class i-related<br>
+SNX6  -  sorting nexin 6<br>
+RAB14  -  rab14, member ras oncogene family<br>
+HLA-F  -  major histocompatibility complex, class i, f<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+HLA-E  -  major histocompatibility complex, class i, e<br>
+TSG101  -  tumor susceptibility gene 101<br>
+SNX2  -  sorting nexin 2<br>
+PIKFYVE  -  phosphoinositide kinase, fyve finger containing<br>
+UBXN6  -  ubx domain protein 6<br>
+EPS15  -  epidermal growth factor receptor pathway substrate 15<br>
+GGA2  -  golgi-associated, gamma adaptin ear containing, arf binding protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005768&amp;view=details' target="_blank">GO:0005768</a><a name=0005768></a></td>
+<td>endosome</td>
+<td  align=center>9.37E-4</td>
+<td  align=center>5.97E-2</td>
+<td  align=center>1.81 (8795,394,382,31)</td>
+<td>
+<a id="ctrl_elements_GO:0005768" href="javascript:toggle('elements_GO:0005768')">[+] Show genes</a><br>
+<div id="elements_GO:0005768" style="display:none"> <font size=1>
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br>
+DTX3L  -  deltex 3-like (drosophila)<br>
+SNX14  -  sorting nexin 14<br>
+VPS28  -  vacuolar protein sorting 28 homolog (s. cerevisiae)<br>
+TGOLN2  -  trans-golgi network protein 2<br>
+TBC1D17  -  tbc1 domain family, member 17<br>
+STARD3  -  star-related lipid transfer (start) domain containing 3<br>
+JAK1  -  janus kinase 1<br>
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
+RAB14  -  rab14, member ras oncogene family<br>
+JAK3  -  janus kinase 3<br>
+FLOT2  -  flotillin 2<br>
+ZFYVE21  -  zinc finger, fyve domain containing 21<br>
+WASF2  -  was protein family, member 2<br>
+TPP1  -  tripeptidyl peptidase i<br>
+USP8  -  ubiquitin specific peptidase 8<br>
+GRIPAP1  -  grip1 associated protein 1<br>
+LAMP1  -  lysosomal-associated membrane protein 1<br>
+SNX6  -  sorting nexin 6<br>
+CD164  -  cd164 molecule, sialomucin<br>
+TRAK2  -  trafficking protein, kinesin binding 2<br>
+IL2RG  -  interleukin 2 receptor, gamma<br>
+CHMP4A  -  charged multivesicular body protein 4a<br>
+PTPN1  -  protein tyrosine phosphatase, non-receptor type 1<br>
+WDR48  -  wd repeat domain 48<br>
+RAB11B  -  rab11b, member ras oncogene family<br>
+CHMP1B  -  charged multivesicular body protein 1b<br>
+CD22  -  cd22 molecule<br>
+TSG101  -  tumor susceptibility gene 101<br>
+SNX2  -  sorting nexin 2<br>
+UBXN6  -  ubx domain protein 6<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9426 genes out of 9877 gene terms entered by the user.<br> 9426 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>398 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 16, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,997 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='1080,1027,1197,1090' HREF='#0030832' ALT=''>
+<AREA SHAPE='RECT' COORDS='939,1155,1093,1218' HREF='#0008064' ALT=''>
+<AREA SHAPE='RECT' COORDS='699,891,813,971' HREF='#0051495' ALT=''>
+<AREA SHAPE='RECT' COORDS='284,1403,401,1483' HREF='#0030838' ALT=''>
+<AREA SHAPE='RECT' COORDS='1215,341,1316,421' HREF='#0090066' ALT=''>
+<AREA SHAPE='RECT' COORDS='1276,479,1367,559' HREF='#0032535' ALT=''>
+<AREA SHAPE='RECT' COORDS='491,230,584,293' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='608,350,691,413' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='373,341,467,421' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='252,341,343,421' HREF='#0044087' ALT=''>
+<AREA SHAPE='RECT' COORDS='491,341,584,421' HREF='#0048519' ALT=''>
+<AREA SHAPE='RECT' COORDS='1225,117,1305,165' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='1219,230,1312,293' HREF='#0065008' ALT=''>
+<AREA SHAPE='RECT' COORDS='1444,771,1569,834' HREF='#0007229' ALT=''>
+<AREA SHAPE='RECT' COORDS='1385,1163,1487,1211' HREF='#0007015' ALT=''>
+<AREA SHAPE='RECT' COORDS='400,1531,512,1579' HREF='#0045010' ALT=''>
+<AREA SHAPE='RECT' COORDS='687,634,777,697' HREF='#0033043' ALT=''>
+<AREA SHAPE='RECT' COORDS='597,763,688,843' HREF='#0010638' ALT=''>
+<AREA SHAPE='RECT' COORDS='827,771,941,834' HREF='#0051493' ALT=''>
+<AREA SHAPE='RECT' COORDS='712,763,803,843' HREF='#0010639' ALT=''>
+<AREA SHAPE='RECT' COORDS='1709,230,1816,293' HREF='#0048869' ALT=''>
+<AREA SHAPE='RECT' COORDS='1776,350,1885,413' HREF='#0032989' ALT=''>
+<AREA SHAPE='RECT' COORDS='1187,771,1307,834' HREF='#1901879' ALT=''>
+<AREA SHAPE='RECT' COORDS='1136,891,1256,971' HREF='#1901880' ALT=''>
+<AREA SHAPE='RECT' COORDS='956,1283,1076,1346' HREF='#0030834' ALT=''>
+<AREA SHAPE='RECT' COORDS='1381,1035,1501,1083' HREF='#0097435' ALT=''>
+<AREA SHAPE='RECT' COORDS='1623,641,1753,689' HREF='#0030036' ALT=''>
+<AREA SHAPE='RECT' COORDS='369,1635,543,1683' HREF='#0034314' ALT=''>
+<AREA SHAPE='RECT' COORDS='496,479,579,559' HREF='#0048523' ALT=''>
+<AREA SHAPE='RECT' COORDS='496,617,587,714' HREF='#0051129' ALT=''>
+<AREA SHAPE='RECT' COORDS='1441,495,1572,543' HREF='#0007165' ALT=''>
+<AREA SHAPE='RECT' COORDS='385,479,468,559' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='1072,634,1227,697' HREF='#0032970' ALT=''>
+<AREA SHAPE='RECT' COORDS='603,479,693,559' HREF='#0051128' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,763,136,843' HREF='#0031334' ALT=''>
+<AREA SHAPE='RECT' COORDS='133,891,240,971' HREF='#0032273' ALT=''>
+<AREA SHAPE='RECT' COORDS='380,1283,497,1346' HREF='#0030833' ALT=''>
+<AREA SHAPE='RECT' COORDS='552,1403,669,1483' HREF='#0030837' ALT=''>
+<AREA SHAPE='RECT' COORDS='965,763,1112,843' HREF='#0043242' ALT=''>
+<AREA SHAPE='RECT' COORDS='1544,237,1685,285' HREF='#0030029' ALT=''>
+<AREA SHAPE='RECT' COORDS='547,1147,675,1227' HREF='#1902904' ALT=''>
+<AREA SHAPE='RECT' COORDS='291,763,421,843' HREF='#0031333' ALT=''>
+<AREA SHAPE='RECT' COORDS='315,891,421,971' HREF='#0032272' ALT=''>
+<AREA SHAPE='RECT' COORDS='791,1403,911,1483' HREF='#0030835' ALT=''>
+<AREA SHAPE='RECT' COORDS='160,771,267,834' HREF='#0032271' ALT=''>
+<AREA SHAPE='RECT' COORDS='956,899,1103,962' HREF='#0032956' ALT=''>
+<AREA SHAPE='RECT' COORDS='793,1275,908,1355' HREF='#0051494' ALT=''>
+<AREA SHAPE='RECT' COORDS='1572,357,1663,405' HREF='#0006996' ALT=''>
+<AREA SHAPE='RECT' COORDS='1596,495,1695,543' HREF='#0007010' ALT=''>
+<AREA SHAPE='RECT' COORDS='1375,101,1473,181' HREF='#0071840' ALT=''>
+<AREA SHAPE='RECT' COORDS='1379,230,1469,293' HREF='#0016043' ALT=''>
+<AREA SHAPE='RECT' COORDS='901,634,1048,697' HREF='#0043244' ALT=''>
+<AREA SHAPE='RECT' COORDS='1840,230,1949,293' HREF='#0009653' ALT=''>
+<AREA SHAPE='RECT' COORDS='1497,117,1569,165' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='939,1027,1056,1090' HREF='#0110053' ALT=''>
+<AREA SHAPE='RECT' COORDS='547,899,675,962' HREF='#1902903' ALT=''>
+<AREA SHAPE='RECT' COORDS='395,1019,523,1099' HREF='#1902905' ALT=''>
+<AREA SHAPE='RECT' COORDS='1461,625,1552,705' HREF='#0007166' ALT=''>
+<AREA SHAPE='RECT' COORDS='1479,5,1366,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='1709,117,1816,165' HREF='#0032502' ALT=''>
+<AREA SHAPE='RECT' COORDS='169,470,260,567' HREF='#0044089' ALT=''>
+<AREA SHAPE='RECT' COORDS='381,617,472,714' HREF='#0051130' ALT=''>
+<AREA SHAPE='RECT' COORDS='1769,495,1903,543' HREF='#0000902' ALT=''>
+<AREA SHAPE='RECT' COORDS='227,634,357,697' HREF='#0043254' ALT=''>
+<AREA SHAPE='RECT' COORDS='680,1531,781,1579' HREF='#0051693' ALT=''>
+<AREA SHAPE='RECT' COORDS='680,1627,781,1690' HREF='#0051016' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030833&amp;view=details' target="_blank">GO:0030833</a><a name=0030833></a></td>
+<td>regulation of actin filament polymerization</td>
+<td  align=center>3.89E-10</td>
+<td  align=center>3.44E-6</td>
+<td  align=center>21.11 (17542,110,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030833" href="javascript:toggle('elements_GO:0030833')">[+] Show genes</a><br>
+<div id="elements_GO:0030833" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030832&amp;view=details' target="_blank">GO:0030832</a><a name=0030832></a></td>
+<td>regulation of actin filament length</td>
+<td  align=center>4.58E-10</td>
+<td  align=center>2.03E-6</td>
+<td  align=center>20.73 (17542,112,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030832" href="javascript:toggle('elements_GO:0030832')">[+] Show genes</a><br>
+<div id="elements_GO:0030832" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008064&amp;view=details' target="_blank">GO:0008064</a><a name=0008064></a></td>
+<td>regulation of actin polymerization or depolymerization</td>
+<td  align=center>4.58E-10</td>
+<td  align=center>1.35E-6</td>
+<td  align=center>20.73 (17542,112,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0008064" href="javascript:toggle('elements_GO:0008064')">[+] Show genes</a><br>
+<div id="elements_GO:0008064" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032271&amp;view=details' target="_blank">GO:0032271</a><a name=0032271></a></td>
+<td>regulation of protein polymerization</td>
+<td  align=center>7.32E-10</td>
+<td  align=center>1.62E-6</td>
+<td  align=center>19.68 (17542,118,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0032271" href="javascript:toggle('elements_GO:0032271')">[+] Show genes</a><br>
+<div id="elements_GO:0032271" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0110053&amp;view=details' target="_blank">GO:0110053</a><a name=0110053></a></td>
+<td>regulation of actin filament organization</td>
+<td  align=center>1.22E-9</td>
+<td  align=center>2.17E-6</td>
+<td  align=center>18.57 (17542,125,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0110053" href="javascript:toggle('elements_GO:0110053')">[+] Show genes</a><br>
+<div id="elements_GO:0110053" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032970&amp;view=details' target="_blank">GO:0032970</a><a name=0032970></a></td>
+<td>regulation of actin filament-based process</td>
+<td  align=center>1.66E-9</td>
+<td  align=center>2.45E-6</td>
+<td  align=center>14.41 (17542,179,68,10)</td>
+<td>
+<a id="ctrl_elements_GO:0032970" href="javascript:toggle('elements_GO:0032970')">[+] Show genes</a><br>
+<div id="elements_GO:0032970" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+abracl  -  abra c-terminal like<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032535&amp;view=details' target="_blank">GO:0032535</a><a name=0032535></a></td>
+<td>regulation of cellular component size</td>
+<td  align=center>2.27E-9</td>
+<td  align=center>2.87E-6</td>
+<td  align=center>17.33 (17542,134,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0032535" href="javascript:toggle('elements_GO:0032535')">[+] Show genes</a><br>
+<div id="elements_GO:0032535" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902903&amp;view=details' target="_blank">GO:1902903</a><a name=1902903></a></td>
+<td>regulation of supramolecular fiber organization</td>
+<td  align=center>3.57E-9</td>
+<td  align=center>3.95E-6</td>
+<td  align=center>16.47 (17542,141,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:1902903" href="javascript:toggle('elements_GO:1902903')">[+] Show genes</a><br>
+<div id="elements_GO:1902903" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043254&amp;view=details' target="_blank">GO:0043254</a><a name=0043254></a></td>
+<td>regulation of protein complex assembly</td>
+<td  align=center>5.15E-9</td>
+<td  align=center>5.07E-6</td>
+<td  align=center>15.79 (17542,147,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0043254" href="javascript:toggle('elements_GO:0043254')">[+] Show genes</a><br>
+<div id="elements_GO:0043254" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032956&amp;view=details' target="_blank">GO:0032956</a><a name=0032956></a></td>
+<td>regulation of actin cytoskeleton organization</td>
+<td  align=center>2.49E-8</td>
+<td  align=center>2.2E-5</td>
+<td  align=center>13.19 (17542,176,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0032956" href="javascript:toggle('elements_GO:0032956')">[+] Show genes</a><br>
+<div id="elements_GO:0032956" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0090066&amp;view=details' target="_blank">GO:0090066</a><a name=0090066></a></td>
+<td>regulation of anatomical structure size</td>
+<td  align=center>3.17E-8</td>
+<td  align=center>2.55E-5</td>
+<td  align=center>12.83 (17542,181,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0090066" href="javascript:toggle('elements_GO:0090066')">[+] Show genes</a><br>
+<div id="elements_GO:0090066" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902905&amp;view=details' target="_blank">GO:1902905</a><a name=1902905></a></td>
+<td>positive regulation of supramolecular fiber organization</td>
+<td  align=center>3.46E-7</td>
+<td  align=center>2.55E-4</td>
+<td  align=center>21.50 (17542,72,68,6)</td>
+<td>
+<a id="ctrl_elements_GO:1902905" href="javascript:toggle('elements_GO:1902905')">[+] Show genes</a><br>
+<div id="elements_GO:1902905" style="display:none"> <font size=1>
+pfn1  -  profilin 1<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051493&amp;view=details' target="_blank">GO:0051493</a><a name=0051493></a></td>
+<td>regulation of cytoskeleton organization</td>
+<td  align=center>4.35E-7</td>
+<td  align=center>2.96E-4</td>
+<td  align=center>9.44 (17542,246,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0051493" href="javascript:toggle('elements_GO:0051493')">[+] Show genes</a><br>
+<div id="elements_GO:0051493" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051495&amp;view=details' target="_blank">GO:0051495</a><a name=0051495></a></td>
+<td>positive regulation of cytoskeleton organization</td>
+<td  align=center>4.42E-7</td>
+<td  align=center>2.79E-4</td>
+<td  align=center>20.64 (17542,75,68,6)</td>
+<td>
+<a id="ctrl_elements_GO:0051495" href="javascript:toggle('elements_GO:0051495')">[+] Show genes</a><br>
+<div id="elements_GO:0051495" style="display:none"> <font size=1>
+pfn1  -  profilin 1<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034314&amp;view=details' target="_blank">GO:0034314</a><a name=0034314></a></td>
+<td>Arp2/3 complex-mediated actin nucleation</td>
+<td  align=center>4.73E-7</td>
+<td  align=center>2.79E-4</td>
+<td  align=center>60.70 (17542,17,68,4)</td>
+<td>
+<a id="ctrl_elements_GO:0034314" href="javascript:toggle('elements_GO:0034314')">[+] Show genes</a><br>
+<div id="elements_GO:0034314" style="display:none"> <font size=1>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044087&amp;view=details' target="_blank">GO:0044087</a><a name=0044087></a></td>
+<td>regulation of cellular component biogenesis</td>
+<td  align=center>7.13E-7</td>
+<td  align=center>3.95E-4</td>
+<td  align=center>8.90 (17542,261,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0044087" href="javascript:toggle('elements_GO:0044087')">[+] Show genes</a><br>
+<div id="elements_GO:0044087" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030029&amp;view=details' target="_blank">GO:0030029</a><a name=0030029></a></td>
+<td>actin filament-based process</td>
+<td  align=center>8.1E-7</td>
+<td  align=center>4.22E-4</td>
+<td  align=center>8.76 (17542,265,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030029" href="javascript:toggle('elements_GO:0030029')">[+] Show genes</a><br>
+<div id="elements_GO:0030029" style="display:none"> <font size=1>
+myo1eb  -  myosin ie, b<br>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+cnn2  -  calponin 2<br>
+pfn1  -  profilin 1<br>
+tagln2  -  transgelin 2<br>
+pdlim1  -  pdz and lim domain 1 (elfin)<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+tpm3  -  tropomyosin 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030838&amp;view=details' target="_blank">GO:0030838</a><a name=0030838></a></td>
+<td>positive regulation of actin filament polymerization</td>
+<td  align=center>1.54E-6</td>
+<td  align=center>7.58E-4</td>
+<td  align=center>25.29 (17542,51,68,5)</td>
+<td>
+<a id="ctrl_elements_GO:0030838" href="javascript:toggle('elements_GO:0030838')">[+] Show genes</a><br>
+<div id="elements_GO:0030838" style="display:none"> <font size=1>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030036&amp;view=details' target="_blank">GO:0030036</a><a name=0030036></a></td>
+<td>actin cytoskeleton organization</td>
+<td  align=center>2.47E-6</td>
+<td  align=center>1.15E-3</td>
+<td  align=center>9.17 (17542,225,68,8)</td>
+<td>
+<a id="ctrl_elements_GO:0030036" href="javascript:toggle('elements_GO:0030036')">[+] Show genes</a><br>
+<div id="elements_GO:0030036" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+cnn2  -  calponin 2<br>
+pfn1  -  profilin 1<br>
+tagln2  -  transgelin 2<br>
+pdlim1  -  pdz and lim domain 1 (elfin)<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+tpm3  -  tropomyosin 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032273&amp;view=details' target="_blank">GO:0032273</a><a name=0032273></a></td>
+<td>positive regulation of protein polymerization</td>
+<td  align=center>2.7E-6</td>
+<td  align=center>1.19E-3</td>
+<td  align=center>22.63 (17542,57,68,5)</td>
+<td>
+<a id="ctrl_elements_GO:0032273" href="javascript:toggle('elements_GO:0032273')">[+] Show genes</a><br>
+<div id="elements_GO:0032273" style="display:none"> <font size=1>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016043&amp;view=details' target="_blank">GO:0016043</a><a name=0016043></a></td>
+<td>cellular component organization</td>
+<td  align=center>2.9E-6</td>
+<td  align=center>1.22E-3</td>
+<td  align=center>2.45 (17542,2842,68,27)</td>
+<td>
+<a id="ctrl_elements_GO:0016043" href="javascript:toggle('elements_GO:0016043')">[+] Show genes</a><br>
+<div id="elements_GO:0016043" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+serpinh1a  -  serpin peptidase inhibitor, clade h (heat shock protein 47), member 1a<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+crfb17  -  cytokine receptor family member b17<br>
+padi2  -  peptidyl arginine deiminase, type ii<br>
+myh9a  -  myosin, heavy polypeptide 9a, non-muscle<br>
+myo1eb  -  myosin ie, b<br>
+pfn1  -  profilin 1<br>
+tagln2  -  transgelin 2<br>
+pdlim1  -  pdz and lim domain 1 (elfin)<br>
+jupa  -  junction plakoglobin a<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+tjp2a  -  tight junction protein 2a (zona occludens 2)<br>
+cnn2  -  calponin 2<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+fras1  -  fraser syndrome 1<br>
+mmp30  -  matrix metallopeptidase 30<br>
+tp63  -  tumor protein p63<br>
+tpm3  -  tropomyosin 3<br>
+si:ch211-166a6.5  -  si:ch211-166a6.5<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+si:zfos-1011f11.1  -  si:zfos-1011f11.1<br>
+ptk2bb  -  protein tyrosine kinase 2 beta, b<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+cldni  -  claudin i<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044089&amp;view=details' target="_blank">GO:0044089</a><a name=0044089></a></td>
+<td>positive regulation of cellular component biogenesis</td>
+<td  align=center>4.01E-6</td>
+<td  align=center>1.61E-3</td>
+<td  align=center>14.20 (17542,109,68,6)</td>
+<td>
+<a id="ctrl_elements_GO:0044089" href="javascript:toggle('elements_GO:0044089')">[+] Show genes</a><br>
+<div id="elements_GO:0044089" style="display:none"> <font size=1>
+pfn1  -  profilin 1<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071840&amp;view=details' target="_blank">GO:0071840</a><a name=0071840></a></td>
+<td>cellular component organization or biogenesis</td>
+<td  align=center>4.33E-6</td>
+<td  align=center>1.66E-3</td>
+<td  align=center>2.40 (17542,2901,68,27)</td>
+<td>
+<a id="ctrl_elements_GO:0071840" href="javascript:toggle('elements_GO:0071840')">[+] Show genes</a><br>
+<div id="elements_GO:0071840" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+serpinh1a  -  serpin peptidase inhibitor, clade h (heat shock protein 47), member 1a<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+crfb17  -  cytokine receptor family member b17<br>
+padi2  -  peptidyl arginine deiminase, type ii<br>
+myh9a  -  myosin, heavy polypeptide 9a, non-muscle<br>
+myo1eb  -  myosin ie, b<br>
+pfn1  -  profilin 1<br>
+tagln2  -  transgelin 2<br>
+pdlim1  -  pdz and lim domain 1 (elfin)<br>
+jupa  -  junction plakoglobin a<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+tjp2a  -  tight junction protein 2a (zona occludens 2)<br>
+cnn2  -  calponin 2<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+fras1  -  fraser syndrome 1<br>
+mmp30  -  matrix metallopeptidase 30<br>
+tp63  -  tumor protein p63<br>
+tpm3  -  tropomyosin 3<br>
+si:ch211-166a6.5  -  si:ch211-166a6.5<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+si:zfos-1011f11.1  -  si:zfos-1011f11.1<br>
+ptk2bb  -  protein tyrosine kinase 2 beta, b<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+cldni  -  claudin i<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045010&amp;view=details' target="_blank">GO:0045010</a><a name=0045010></a></td>
+<td>actin nucleation</td>
+<td  align=center>4.56E-6</td>
+<td  align=center>1.68E-3</td>
+<td  align=center>35.58 (17542,29,68,4)</td>
+<td>
+<a id="ctrl_elements_GO:0045010" href="javascript:toggle('elements_GO:0045010')">[+] Show genes</a><br>
+<div id="elements_GO:0045010" style="display:none"> <font size=1>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031334&amp;view=details' target="_blank">GO:0031334</a><a name=0031334></a></td>
+<td>positive regulation of protein complex assembly</td>
+<td  align=center>6.5E-6</td>
+<td  align=center>2.3E-3</td>
+<td  align=center>18.97 (17542,68,68,5)</td>
+<td>
+<a id="ctrl_elements_GO:0031334" href="javascript:toggle('elements_GO:0031334')">[+] Show genes</a><br>
+<div id="elements_GO:0031334" style="display:none"> <font size=1>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010638&amp;view=details' target="_blank">GO:0010638</a><a name=0010638></a></td>
+<td>positive regulation of organelle organization</td>
+<td  align=center>1.56E-5</td>
+<td  align=center>5.3E-3</td>
+<td  align=center>11.22 (17542,138,68,6)</td>
+<td>
+<a id="ctrl_elements_GO:0010638" href="javascript:toggle('elements_GO:0010638')">[+] Show genes</a><br>
+<div id="elements_GO:0010638" style="display:none"> <font size=1>
+pfn1  -  profilin 1<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007229&amp;view=details' target="_blank">GO:0007229</a><a name=0007229></a></td>
+<td>integrin-mediated signaling pathway</td>
+<td  align=center>3.53E-5</td>
+<td  align=center>1.16E-2</td>
+<td  align=center>21.50 (17542,48,68,4)</td>
+<td>
+<a id="ctrl_elements_GO:0007229" href="javascript:toggle('elements_GO:0007229')">[+] Show genes</a><br>
+<div id="elements_GO:0007229" style="display:none"> <font size=1>
+itga3b  -  integrin, alpha 3b<br>
+zyx  -  zyxin<br>
+fermt1  -  fermitin family member 1<br>
+lama5  -  laminin, alpha 5<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033043&amp;view=details' target="_blank">GO:0033043</a><a name=0033043></a></td>
+<td>regulation of organelle organization</td>
+<td  align=center>5.53E-5</td>
+<td  align=center>1.75E-2</td>
+<td  align=center>5.18 (17542,448,68,9)</td>
+<td>
+<a id="ctrl_elements_GO:0033043" href="javascript:toggle('elements_GO:0033043')">[+] Show genes</a><br>
+<div id="elements_GO:0033043" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051016&amp;view=details' target="_blank">GO:0051016</a><a name=0051016></a></td>
+<td>barbed-end actin filament capping</td>
+<td  align=center>7.05E-5</td>
+<td  align=center>2.15E-2</td>
+<td  align=center>36.85 (17542,21,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0051016" href="javascript:toggle('elements_GO:0051016')">[+] Show genes</a><br>
+<div id="elements_GO:0051016" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007015&amp;view=details' target="_blank">GO:0007015</a><a name=0007015></a></td>
+<td>actin filament organization</td>
+<td  align=center>1.62E-4</td>
+<td  align=center>4.77E-2</td>
+<td  align=center>7.37 (17542,210,68,6)</td>
+<td>
+<a id="ctrl_elements_GO:0007015" href="javascript:toggle('elements_GO:0007015')">[+] Show genes</a><br>
+<div id="elements_GO:0007015" style="display:none"> <font size=1>
+myo1eb  -  myosin ie, b<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+tpm3  -  tropomyosin 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051693&amp;view=details' target="_blank">GO:0051693</a><a name=0051693></a></td>
+<td>actin filament capping</td>
+<td  align=center>1.89E-4</td>
+<td  align=center>5.41E-2</td>
+<td  align=center>26.69 (17542,29,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0051693" href="javascript:toggle('elements_GO:0051693')">[+] Show genes</a><br>
+<div id="elements_GO:0051693" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030835&amp;view=details' target="_blank">GO:0030835</a><a name=0030835></a></td>
+<td>negative regulation of actin filament depolymerization</td>
+<td  align=center>2.1E-4</td>
+<td  align=center>5.8E-2</td>
+<td  align=center>25.80 (17542,30,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0030835" href="javascript:toggle('elements_GO:0030835')">[+] Show genes</a><br>
+<div id="elements_GO:0030835" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030834&amp;view=details' target="_blank">GO:0030834</a><a name=0030834></a></td>
+<td>regulation of actin filament depolymerization</td>
+<td  align=center>2.55E-4</td>
+<td  align=center>6.84E-2</td>
+<td  align=center>24.18 (17542,32,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0030834" href="javascript:toggle('elements_GO:0030834')">[+] Show genes</a><br>
+<div id="elements_GO:0030834" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901880&amp;view=details' target="_blank">GO:1901880</a><a name=1901880></a></td>
+<td>negative regulation of protein depolymerization</td>
+<td  align=center>3.06E-4</td>
+<td  align=center>7.96E-2</td>
+<td  align=center>22.76 (17542,34,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:1901880" href="javascript:toggle('elements_GO:1901880')">[+] Show genes</a><br>
+<div id="elements_GO:1901880" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097435&amp;view=details' target="_blank">GO:0097435</a><a name=0097435></a></td>
+<td>supramolecular fiber organization</td>
+<td  align=center>3.22E-4</td>
+<td  align=center>8.14E-2</td>
+<td  align=center>5.36 (17542,337,68,7)</td>
+<td>
+<a id="ctrl_elements_GO:0097435" href="javascript:toggle('elements_GO:0097435')">[+] Show genes</a><br>
+<div id="elements_GO:0097435" style="display:none"> <font size=1>
+myo1eb  -  myosin ie, b<br>
+serpinh1a  -  serpin peptidase inhibitor, clade h (heat shock protein 47), member 1a<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+tpm3  -  tropomyosin 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051130&amp;view=details' target="_blank">GO:0051130</a><a name=0051130></a></td>
+<td>positive regulation of cellular component organization</td>
+<td  align=center>3.63E-4</td>
+<td  align=center>8.91E-2</td>
+<td  align=center>6.34 (17542,244,68,6)</td>
+<td>
+<a id="ctrl_elements_GO:0051130" href="javascript:toggle('elements_GO:0051130')">[+] Show genes</a><br>
+<div id="elements_GO:0051130" style="display:none"> <font size=1>
+pfn1  -  profilin 1<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043242&amp;view=details' target="_blank">GO:0043242</a><a name=0043242></a></td>
+<td>negative regulation of protein complex disassembly</td>
+<td  align=center>3.94E-4</td>
+<td  align=center>9.42E-2</td>
+<td  align=center>20.92 (17542,37,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0043242" href="javascript:toggle('elements_GO:0043242')">[+] Show genes</a><br>
+<div id="elements_GO:0043242" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032272&amp;view=details' target="_blank">GO:0032272</a><a name=0032272></a></td>
+<td>negative regulation of protein polymerization</td>
+<td  align=center>4.61E-4</td>
+<td  align=center>1.07E-1</td>
+<td  align=center>19.84 (17542,39,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0032272" href="javascript:toggle('elements_GO:0032272')">[+] Show genes</a><br>
+<div id="elements_GO:0032272" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030837&amp;view=details' target="_blank">GO:0030837</a><a name=0030837></a></td>
+<td>negative regulation of actin filament polymerization</td>
+<td  align=center>4.61E-4</td>
+<td  align=center>1.05E-1</td>
+<td  align=center>19.84 (17542,39,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0030837" href="javascript:toggle('elements_GO:0030837')">[+] Show genes</a><br>
+<div id="elements_GO:0030837" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901879&amp;view=details' target="_blank">GO:1901879</a><a name=1901879></a></td>
+<td>regulation of protein depolymerization</td>
+<td  align=center>4.97E-4</td>
+<td  align=center>1.1E-1</td>
+<td  align=center>19.35 (17542,40,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:1901879" href="javascript:toggle('elements_GO:1901879')">[+] Show genes</a><br>
+<div id="elements_GO:1901879" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000902&amp;view=details' target="_blank">GO:0000902</a><a name=0000902></a></td>
+<td>cell morphogenesis</td>
+<td  align=center>5.89E-4</td>
+<td  align=center>1.27E-1</td>
+<td  align=center>10.42 (17542,99,68,4)</td>
+<td>
+<a id="ctrl_elements_GO:0000902" href="javascript:toggle('elements_GO:0000902')">[+] Show genes</a><br>
+<div id="elements_GO:0000902" style="display:none"> <font size=1>
+tagln2  -  transgelin 2<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+crfb17  -  cytokine receptor family member b17<br>
+si:zfos-1011f11.1  -  si:zfos-1011f11.1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051128&amp;view=details' target="_blank">GO:0051128</a><a name=0051128></a></td>
+<td>regulation of cellular component organization</td>
+<td  align=center>6.55E-4</td>
+<td  align=center>1.38E-1</td>
+<td  align=center>3.39 (17542,760,68,10)</td>
+<td>
+<a id="ctrl_elements_GO:0051128" href="javascript:toggle('elements_GO:0051128')">[+] Show genes</a><br>
+<div id="elements_GO:0051128" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+pfn1  -  profilin 1<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+arpc2  -  actin related protein 2/3 complex, subunit 2<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+arpc3  -  actin related protein 2/3 complex, subunit 3<br>
+zgc:86896  -  zgc:86896<br>
+arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+cdc42ep3  -  cdc42 effector protein (rho gtpase binding) 3<br>
+pak2a  -  p21 (cdkn1a)-activated kinase 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902904&amp;view=details' target="_blank">GO:1902904</a><a name=1902904></a></td>
+<td>negative regulation of supramolecular fiber organization</td>
+<td  align=center>7.51E-4</td>
+<td  align=center>1.54E-1</td>
+<td  align=center>16.82 (17542,46,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:1902904" href="javascript:toggle('elements_GO:1902904')">[+] Show genes</a><br>
+<div id="elements_GO:1902904" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031333&amp;view=details' target="_blank">GO:0031333</a><a name=0031333></a></td>
+<td>negative regulation of protein complex assembly</td>
+<td  align=center>8E-4</td>
+<td  align=center>1.61E-1</td>
+<td  align=center>16.47 (17542,47,68,3)</td>
+<td>
+<a id="ctrl_elements_GO:0031333" href="javascript:toggle('elements_GO:0031333')">[+] Show genes</a><br>
+<div id="elements_GO:0031333" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007010&amp;view=details' target="_blank">GO:0007010</a><a name=0007010></a></td>
+<td>cytoskeleton organization</td>
+<td  align=center>9.55E-4</td>
+<td  align=center>1.88E-1</td>
+<td  align=center>3.92 (17542,527,68,8)</td>
+<td>
+<a id="ctrl_elements_GO:0007010" href="javascript:toggle('elements_GO:0007010')">[+] Show genes</a><br>
+<div id="elements_GO:0007010" style="display:none"> <font size=1>
+capza1a  -  capping protein (actin filament) muscle z-line, alpha 1a<br>
+cnn2  -  calponin 2<br>
+pfn1  -  profilin 1<br>
+tagln2  -  transgelin 2<br>
+capza1b  -  capping protein (actin filament) muscle z-line, alpha 1b<br>
+pdlim1  -  pdz and lim domain 1 (elfin)<br>
+capzb  -  capping protein (actin filament) muscle z-line, beta<br>
+tpm3  -  tropomyosin 3<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24077 genes out of 30186 gene terms entered by the user.<br> 24077 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>176 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br>Only 17542 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Jan 26, 2023
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 8849 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>
