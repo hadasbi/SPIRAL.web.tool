@@ -88,9 +88,7 @@ class LoadData(FlaskForm):
                             choices=[("samples", 'samples'), ("cells", 'cells'), ("spots", 'spots')],
                             validators=[DataRequired()], default="samples")
     labels_checkbox = BooleanField(Markup('My data set does <strong>not</strong> have labels. '))
-    submit_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    submit = SubmitField('Submit', render_kw=submit_style)
+    submit = SubmitField('Submit')
 
 
 class CheckData(FlaskForm):
@@ -151,9 +149,7 @@ class vln_plot_form(FlaskForm):
                                  validators=[DataRequired(), MoreThan('min_nFeatures')])
     max_mtpercent = IntegerField('Maximal percent of mitochondrial gene expression: ', default=100,
                                  validators=[NumberRange(1, 100)])
-    submit_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    submit = SubmitField('Submit', render_kw=submit_style)
+    submit = SubmitField('Submit')
 
 
 class alg_params_form(FlaskForm):
@@ -165,9 +161,7 @@ class alg_params_form(FlaskForm):
     mu = SelectMultipleField('Density parameter \u03bc: ', choices=[('0.9', '0.9'), ('0.95', '0.95')])
     path_len = SelectField('Path length L: ', choices=[('3', '3')])
     num_iter = SelectField('Number of iterations T: ', choices=[('10000', '10000')])
-    submit_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    submit = SubmitField('Submit', render_kw=submit_style)
+    submit = SubmitField('Submit')
 
 
 def flash_errors(form):
