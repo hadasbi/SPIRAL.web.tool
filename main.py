@@ -76,14 +76,12 @@ class LoadData(FlaskForm):
     email = StringField('E-mail address: ', validators=[Email("Please enter a valid email address")])
     count_matrix = FileField('Gene expression matrix: ',
                              validators=[FileRequired(), FileAllowed(tables, 'csv or txt files only!')])
-    visium_10x_matrix = FileField('Vision 10x matrix: ',
-                                  validators=[FileAllowed(matrix, 'mtx.gz files only!')])
+    visium_10x_matrix = FileField('Vision 10x matrix: ', validators=[FileAllowed(matrix, 'mtx.gz files only!')])
     visium_10x_features = FileField('Vision 10x features: ',
                                     validators=[FileAllowed(barcodes_features, 'tsv.gz files only!')])
     visium_10x_barcodes = FileField('Vision 10x barcodes: ',
                                     validators=[FileAllowed(barcodes_features, 'tsv.gz files only!')])
-    spatial_coors = FileField('Spatial coordinates: ',
-                              validators=[FileAllowed(tables, 'csv or txt files only!')])
+    spatial_coors = FileField('Spatial coordinates: ', validators=[FileAllowed(tables, 'csv or txt files only!')])
     species = SelectField('Species: ', choices=[("ARABIDOPSIS_THALIANA", 'Arabidopsis thaliana'),
                                                 ("SACCHAROMYCES_CEREVISIAE", 'Saccharomyces cerevisiae'),
                                                 ("CAENORHABDITIS_ELEGANS", 'Caenorhabditis elegans'),
@@ -101,21 +99,6 @@ class LoadData(FlaskForm):
                             validators=[DataRequired()], default="samples")
     labels_checkbox = BooleanField(Markup('My data set does <strong>not</strong> have labels. '))
     submit = SubmitField('Submit')
-
-    # def validate(self, *args, **kwargs):
-    #     if super().validate(*args, **kwargs):
-    #         if not ((isinstance(self.count_matrix.data, FileStorage) and self.count_matrix.data) or (
-    #                 (isinstance(self.visium_10x_matrix.data, FileStorage) and self.visium_10x_matrix.data) and (
-    #                 isinstance(self.visium_10x_features.data, FileStorage) and self.visium_10x_features.data) and (
-    #                         isinstance(self.visium_10x_barcodes.data, FileStorage) and self.visium_10x_barcodes.data))):
-    #             self.count_matrix.errors.append('This field is required.')
-    #             self.visium_10x_matrix.errors.append('This field is required.')
-    #             self.visium_10x_barcodes.errors.append('This field is required.')
-    #             self.visium_10x_features.errors.append('This field is required.')
-    #             return False
-    #         else:
-    #             return True
-    #     return False
 
 
 class CheckData(FlaskForm):
@@ -238,8 +221,6 @@ def load_data_form():
     if request.method == 'POST' and not form.email.errors and ('count_matrix' in request.files or all(
             x in request.files for x in
             ['visium_10x_matrix', 'visium_10x_features', 'visium_10x_barcodes'])):
-
-        print(request.files)
 
         # create a folder for the new dataset
         data_n = dataset_number(ANALYSIS_FOLDER)
