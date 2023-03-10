@@ -75,7 +75,7 @@ class LoadData(FlaskForm):
     dataset_name = StringField('Name of dataset: ')
     email = StringField('E-mail address: ', validators=[Email("Please enter a valid email address")])
     count_matrix = FileField('Gene expression matrix: ',
-                             validators=[FileAllowed(tables, 'csv or txt files only!')])
+                             validators=[FileRequired(), FileAllowed(tables, 'csv or txt files only!')])
     visium_10x_matrix = FileField('Vision 10x matrix: ',
                                   validators=[FileAllowed(matrix, 'mtx.gz files only!')])
     visium_10x_features = FileField('Vision 10x features: ',
@@ -102,20 +102,20 @@ class LoadData(FlaskForm):
     labels_checkbox = BooleanField(Markup('My data set does <strong>not</strong> have labels. '))
     submit = SubmitField('Submit')
 
-    def validate(self, extra_validators=None):
-        if super().validate(extra_validators):
-            if not ((isinstance(self.count_matrix.data, FileStorage) and self.count_matrix.data) or (
-                    (isinstance(self.visium_10x_matrix.data, FileStorage) and self.visium_10x_matrix.data) and (
-                    isinstance(self.visium_10x_features.data, FileStorage) and self.visium_10x_features.data) and (
-                            isinstance(self.visium_10x_barcodes.data, FileStorage) and self.visium_10x_barcodes.data))):
-                self.count_matrix.errors.append('This field is required.')
-                self.visium_10x_matrix.errors.append('This field is required.')
-                self.visium_10x_barcodes.errors.append('This field is required.')
-                self.visium_10x_features.errors.append('This field is required.')
-                return False
-            else:
-                return True
-        return False
+    # def validate(self, *args, **kwargs):
+    #     if super().validate(*args, **kwargs):
+    #         if not ((isinstance(self.count_matrix.data, FileStorage) and self.count_matrix.data) or (
+    #                 (isinstance(self.visium_10x_matrix.data, FileStorage) and self.visium_10x_matrix.data) and (
+    #                 isinstance(self.visium_10x_features.data, FileStorage) and self.visium_10x_features.data) and (
+    #                         isinstance(self.visium_10x_barcodes.data, FileStorage) and self.visium_10x_barcodes.data))):
+    #             self.count_matrix.errors.append('This field is required.')
+    #             self.visium_10x_matrix.errors.append('This field is required.')
+    #             self.visium_10x_barcodes.errors.append('This field is required.')
+    #             self.visium_10x_features.errors.append('This field is required.')
+    #             return False
+    #         else:
+    #             return True
+    #     return False
 
 
 class CheckData(FlaskForm):
@@ -236,7 +236,10 @@ def load_data_form():
     form = LoadData(request.form)
 
     if request.method == 'POST' and not form.email.errors and ('count_matrix' in request.files or all(
-            x in request.files for x in ['visium_10x_matrix', 'visium_10x_features', 'visium_10x_barcodes'])):
+            x in request.files for x in
+            ['visium_10x_matrix', 'visium_10x_features', 'visium_10x_barcodes'])):
+
+        print(request.files)
 
         # create a folder for the new dataset
         data_n = dataset_number(ANALYSIS_FOLDER)
@@ -252,11 +255,6 @@ def load_data_form():
         with open(os.path.join(data_path, 'email.txt'), 'w') as text_file:
             text_file.write(form.email.data)
 
-        # if 'spatial_coors' in request.files:
-        if request.files['spatial_coors'].filename:
-            filename = tables.save(storage=request.files['spatial_coors'], folder='data' + str(data_n),
-                                   name='spatial_coors.')
-
         # save species
         species = form.species.data
         with open(os.path.join(data_path, 'species.txt'), 'w') as text_file:
@@ -271,8 +269,13 @@ def load_data_form():
         labels_checkbox = form.labels_checkbox.data
         with open(os.path.join(data_path, 'labels_checkbox.txt'), 'w') as text_file:
             text_file.write(str(labels_checkbox))
+
         if request.files['count_matrix'].filename:
             tables.save(storage=request.files['count_matrix'], folder='data' + str(data_n), name='counts.')
+
+            # if 'spatial_coors' in request.files:
+            if request.files['spatial_coors'].filename:
+                tables.save(storage=request.files['spatial_coors'], folder='data' + str(data_n), name='spatial_coors.')
         else:
             matrix_dir = os.path.join('data' + str(data_n), 'temp')
             data_path = os.path.join(ANALYSIS_FOLDER, matrix_dir)
@@ -283,6 +286,7 @@ def load_data_form():
 
             # read in MEX format matrix as table
             mat_filtered = scipy.io.mmread(os.path.join(data_path, "matrix.mtx.gz"))
+
             # list of transcript ids, e.g. 'ENSG00000187634'
             features_path = os.path.join(data_path, "features.tsv.gz")
             # list of gene names, e.g. 'SAMD11'
@@ -296,7 +300,17 @@ def load_data_form():
             matrix_df.insert(loc=0, column="gene", value=gene_names)
 
             # save the table as a CSV (note the CSV will be a very large file)
-            matrix_df.to_csv(os.path.join(ANALYSIS_FOLDER,'data' + str(data_n), "counts.csv"), index=False)
+            matrix_df.to_csv(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), "counts.csv"), index=False)
+
+            # if 'spatial_coors' in request.files:
+            if request.files['spatial_coors'].filename:
+                # tables.save(storage=request.files['spatial_coors'], name=matrix_dir + '/spatial_coors.')
+                spatial_coors = pd.read_csv(request.files['spatial_coors'])
+                spatial_coors.drop(spatial_coors.iloc[:, 1:4], axis=1, inplace=True)
+                spatial_coors.to_csv(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), "spatial_coors.csv"),
+                                     index=False)
+
+            # os.remove(matrix_dir)
 
         return redirect(url_for('check_data_form', data_n=data_n, samp_name=samp_name, species=species))
 
