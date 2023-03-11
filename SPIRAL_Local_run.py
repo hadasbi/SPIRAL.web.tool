@@ -1,8 +1,19 @@
 from SPIRAL_pipeline_funcs import *
-from main import dataset_number
+
+
+def dataset_number(path):
+    existing_folders = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
+    existing_folders = [d for d in existing_folders if d[:4] == 'data' and len(d) > 4]
+    if existing_folders:
+        new_n = max([int(d[4:]) for d in existing_folders]) + 1
+    else:
+        new_n = 1
+    return new_n
+
 
 ANALYSIS_FOLDER = '.\\static\\analysis'
 STATIC_FOLDER = '.\\static'
+
 if __name__ == '__main__':
     print("#############################################################################")
     print("########                                                             ########")
