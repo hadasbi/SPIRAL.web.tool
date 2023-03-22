@@ -1,1528 +1,2452 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title>
-Results
-</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<script type='text/javascript'>
-function toggle(item) {
-obj=document.getElementById(item);
-visible=(obj.style.display!="none")
-key=document.getElementById("ctrl_" + item);
-if (visible) {
-    obj.style.display="none";
-key.innerHTML="[+] Show genes";
-}
-else {
-obj.style.display="block";
-key.innerHTML="[-] Hide genes";
-}
-}
-</script>
-</head>
-<body>
-<p><center><b>
-
-</b></center></p>
-<table border="1" width="80%" id="tab:pval_legend" align=center>
-<CAPTION><EM>P-value color scale</EM></CAPTION>
-<tr>
-	<td  width=140 align=center> > 10<sup>-3</sup></td>
-	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
-	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
-	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
-	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
-</tr >
-</table>
-<MAP NAME='goPathImage'>
-<AREA SHAPE='RECT' COORDS='1720,689,1819,737' HREF='#0071682' ALT=''>
-<AREA SHAPE='RECT' COORDS='1120,413,1245,461' HREF='#0012506' ALT=''>
-<AREA SHAPE='RECT' COORDS='1163,543,1288,591' HREF='#0030659' ALT=''>
-<AREA SHAPE='RECT' COORDS='1792,518,1904,615' HREF='#0033116' ALT=''>
-<AREA SHAPE='RECT' COORDS='1600,543,1717,591' HREF='#0000139' ALT=''>
-<AREA SHAPE='RECT' COORDS='725,197,853,245' HREF='#0032991' ALT=''>
-<AREA SHAPE='RECT' COORDS='828,301,951,349' HREF='#1990904' ALT=''>
-<AREA SHAPE='RECT' COORDS='563,301,677,349' HREF='#0098796' ALT=''>
-<AREA SHAPE='RECT' COORDS='464,301,539,349' HREF='#1902494' ALT=''>
-<AREA SHAPE='RECT' COORDS='691,527,789,607' HREF='#0034663' ALT=''>
-<AREA SHAPE='RECT' COORDS='2117,689,2195,737' HREF='#0030133' ALT=''>
-<AREA SHAPE='RECT' COORDS='1135,197,1217,245' HREF='#0016020' ALT=''>
-<AREA SHAPE='RECT' COORDS='976,413,1096,461' HREF='#0098805' ALT=''>
-<AREA SHAPE='RECT' COORDS='1207,301,1289,349' HREF='#0031090' ALT=''>
-<AREA SHAPE='RECT' COORDS='459,535,557,598' HREF='#0005789' ALT=''>
-<AREA SHAPE='RECT' COORDS='481,197,567,245' HREF='#0044425' ALT=''>
-<AREA SHAPE='RECT' COORDS='133,406,229,469' HREF='#0031224' ALT=''>
-<AREA SHAPE='RECT' COORDS='2219,689,2333,737' HREF='#0048770' ALT=''>
-<AREA SHAPE='RECT' COORDS='2228,827,2324,875' HREF='#0042470' ALT=''>
-<AREA SHAPE='RECT' COORDS='1157,689,1264,737' HREF='#0030662' ALT=''>
-<AREA SHAPE='RECT' COORDS='1503,197,1580,245' HREF='#0044422' ALT=''>
-<AREA SHAPE='RECT' COORDS='1496,294,1587,357' HREF='#0044446' ALT=''>
-<AREA SHAPE='RECT' COORDS='1805,301,1883,349' HREF='#0043233' ALT=''>
-<AREA SHAPE='RECT' COORDS='1745,101,1887,149' HREF='#0031974' ALT=''>
-<AREA SHAPE='RECT' COORDS='1541,5,1424,29' HREF='#0005575' ALT=''>
-<AREA SHAPE='RECT' COORDS='1608,101,1680,149' HREF='#0044464' ALT=''>
-<AREA SHAPE='RECT' COORDS='2160,101,2235,149' HREF='#0043226' ALT=''>
-<AREA SHAPE='RECT' COORDS='653,406,752,469' HREF='#0044432' ALT=''>
-<AREA SHAPE='RECT' COORDS='125,518,237,615' HREF='#0031227' ALT=''>
-<AREA SHAPE='RECT' COORDS='261,543,435,591' HREF='#0008250' ALT=''>
-<AREA SHAPE='RECT' COORDS='581,543,667,591' HREF='#0071256' ALT=''>
-<AREA SHAPE='RECT' COORDS='1363,535,1461,598' HREF='#0005788' ALT=''>
-<AREA SHAPE='RECT' COORDS='5,535,101,598' HREF='#0016021' ALT=''>
-<AREA SHAPE='RECT' COORDS='2019,413,2117,461' HREF='#0031983' ALT=''>
-<AREA SHAPE='RECT' COORDS='1928,543,2027,591' HREF='#0060205' ALT=''>
-<AREA SHAPE='RECT' COORDS='2235,197,2373,245' HREF='#0043227' ALT=''>
-<AREA SHAPE='RECT' COORDS='2268,301,2340,349' HREF='#0031982' ALT=''>
-<AREA SHAPE='RECT' COORDS='2357,406,2496,469' HREF='#0043231' ALT=''>
-<AREA SHAPE='RECT' COORDS='1013,543,1139,591' HREF='#0030660' ALT=''>
-<AREA SHAPE='RECT' COORDS='1381,413,1467,461' HREF='#0030117' ALT=''>
-<AREA SHAPE='RECT' COORDS='1485,543,1576,591' HREF='#0030120' ALT=''>
-<AREA SHAPE='RECT' COORDS='1625,301,1721,349' HREF='#0044444' ALT=''>
-<AREA SHAPE='RECT' COORDS='827,413,952,461' HREF='#0048500' ALT=''>
-<AREA SHAPE='RECT' COORDS='2171,543,2283,591' HREF='#0005794' ALT=''>
-<AREA SHAPE='RECT' COORDS='2307,543,2405,591' HREF='#0005783' ALT=''>
-<AREA SHAPE='RECT' COORDS='2429,527,2541,607' HREF='#0005793' ALT=''>
-<AREA SHAPE='RECT' COORDS='1491,413,1587,461' HREF='#0044433' ALT=''>
-<AREA SHAPE='RECT' COORDS='2051,543,2147,591' HREF='#0031410' ALT=''>
-<AREA SHAPE='RECT' COORDS='1611,413,1728,461' HREF='#0044431' ALT=''>
-<AREA SHAPE='RECT' COORDS='813,518,939,615' HREF='#0005786' ALT=''>
-<AREA SHAPE='RECT' COORDS='1803,406,1893,469' HREF='#0070013' ALT=''>
-<AREA SHAPE='RECT' COORDS='61,665,173,762' HREF='#0030176' ALT=''>
-<AREA SHAPE='RECT' COORDS='2153,301,2244,349' HREF='#0043229' ALT=''>
-<AREA SHAPE='RECT' COORDS='2243,413,2333,461' HREF='#0097708' ALT=''>
-<AREA SHAPE='RECT' COORDS='1989,689,2093,737' HREF='#0030135' ALT=''>
-<AREA SHAPE='RECT' COORDS='1921,811,2023,891' HREF='#0030134' ALT=''>
-<AREA SHAPE='RECT' COORDS='1628,197,1719,245' HREF='#0044424' ALT=''>
-<AREA SHAPE='RECT' COORDS='1088,827,1213,875' HREF='#0030663' ALT=''>
-<AREA SHAPE='RECT' COORDS='1513,689,1612,737' HREF='#0030126' ALT=''>
-<AREA SHAPE='RECT' COORDS='1361,682,1463,745' HREF='#0033018' ALT=''>
-<AREA SHAPE='RECT' COORDS='2357,689,2504,737' HREF='#0005790' ALT=''>
-<AREA SHAPE='RECT' COORDS='1843,689,1965,737' HREF='#0005798' ALT=''>
-<AREA SHAPE='RECT' COORDS='299,413,389,461' HREF='#1990234' ALT=''>
-<AREA SHAPE='RECT' COORDS='1269,406,1357,469' HREF='#0098588' ALT=''>
-</MAP>
-<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
-<p>&nbsp;</p>
-<table border='1' width='100%' id='table1'>
-	<tr>
-		<td Align=center ><b>GO term</b></td>
-		<td Align=center><b>Description</b></td>
-		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
-		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
-		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
-		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
-	</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details' target="_blank">GO:0044432</a><a name=0044432></a></td>
-<td>endoplasmic reticulum part</td>
-<td  align=center>1.22E-31</td>
-<td  align=center>2.1E-28</td>
-<td  align=center>6.32 (8795,776,95,53)</td>
-<td>
-<a id="ctrl_elements_GO:0044432" href="javascript:toggle('elements_GO:0044432')">[+] Show genes</a><br>
-<div id="elements_GO:0044432" style="display:none"> <font size=1>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-CANX  -  calnexin<br>
-SEC61B  -  sec61 beta subunit<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-TMEM208  -  transmembrane protein 208<br>
-SURF4  -  surfeit 4<br>
-MLEC  -  malectin<br>
-MTDH  -  metadherin<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-ARCN1  -  archain 1<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-TMEM214  -  transmembrane protein 214<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
-DERL2  -  derlin 2<br>
-VCP  -  valosin containing protein<br>
-CREB3  -  camp responsive element binding protein 3<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-EMC9  -  er membrane protein complex subunit 9<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-MAGT1  -  magnesium transporter 1<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-SEC61G  -  sec61 gamma subunit<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-PREB  -  prolactin regulatory element binding<br>
-SELK  -  selenoprotein k<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-RRBP1  -  ribosome binding protein 1<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005789&amp;view=details' target="_blank">GO:0005789</a><a name=0005789></a></td>
-<td>endoplasmic reticulum membrane</td>
-<td  align=center>9.53E-25</td>
-<td  align=center>8.2E-22</td>
-<td  align=center>6.56 (8795,593,95,42)</td>
-<td>
-<a id="ctrl_elements_GO:0005789" href="javascript:toggle('elements_GO:0005789')">[+] Show genes</a><br>
-<div id="elements_GO:0005789" style="display:none"> <font size=1>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-CANX  -  calnexin<br>
-SEC61B  -  sec61 beta subunit<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-TMEM208  -  transmembrane protein 208<br>
-SEC61G  -  sec61 gamma subunit<br>
-SURF4  -  surfeit 4<br>
-MLEC  -  malectin<br>
-MTDH  -  metadherin<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-ARCN1  -  archain 1<br>
-TMEM214  -  transmembrane protein 214<br>
-SSR1  -  signal sequence receptor, alpha<br>
-PREB  -  prolactin regulatory element binding<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SELK  -  selenoprotein k<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-DERL2  -  derlin 2<br>
-VCP  -  valosin containing protein<br>
-CREB3  -  camp responsive element binding protein 3<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005783&amp;view=details' target="_blank">GO:0005783</a><a name=0005783></a></td>
-<td>endoplasmic reticulum</td>
-<td  align=center>2.46E-22</td>
-<td  align=center>1.41E-19</td>
-<td  align=center>5.90 (8795,643,95,41)</td>
-<td>
-<a id="ctrl_elements_GO:0005783" href="javascript:toggle('elements_GO:0005783')">[+] Show genes</a><br>
-<div id="elements_GO:0005783" style="display:none"> <font size=1>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-CRELD2  -  cysteine-rich with egf-like domains 2<br>
-CANX  -  calnexin<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-SEC61B  -  sec61 beta subunit<br>
-MAGT1  -  magnesium transporter 1<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-MESDC2  -  mesoderm development candidate 2<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-HAX1  -  hcls1 associated protein x-1<br>
-MLEC  -  malectin<br>
-SRP68  -  signal recognition particle 68kda<br>
-MTDH  -  metadherin<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-SRP72  -  signal recognition particle 72kda<br>
-MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-SSR1  -  signal sequence receptor, alpha<br>
-UFM1  -  ubiquitin-fold modifier 1<br>
-TMEM214  -  transmembrane protein 214<br>
-CNPY2  -  canopy fgf signaling regulator 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SELK  -  selenoprotein k<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-DERL2  -  derlin 2<br>
-VCP  -  valosin containing protein<br>
-RRBP1  -  ribosome binding protein 1<br>
-CREB3  -  camp responsive element binding protein 3<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
-<td>membrane part</td>
-<td  align=center>1.05E-11</td>
-<td  align=center>4.54E-9</td>
-<td  align=center>2.16 (8795,2524,95,59)</td>
-<td>
-<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
-<div id="elements_GO:0044425" style="display:none"> <font size=1>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-CANX  -  calnexin<br>
-SEC61B  -  sec61 beta subunit<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-TMEM208  -  transmembrane protein 208<br>
-TM9SF3  -  transmembrane 9 superfamily member 3<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-MLEC  -  malectin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-MTDH  -  metadherin<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-ARCN1  -  archain 1<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-TMEM214  -  transmembrane protein 214<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DERL2  -  derlin 2<br>
-VCP  -  valosin containing protein<br>
-CREB3  -  camp responsive element binding protein 3<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-EMC9  -  er membrane protein complex subunit 9<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-MAGT1  -  magnesium transporter 1<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-CLPTM1L  -  clptm1-like<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SEC61G  -  sec61 gamma subunit<br>
-TMEM167A  -  transmembrane protein 167a<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-JTB  -  jumping translocation breakpoint<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-PREB  -  prolactin regulatory element binding<br>
-SELK  -  selenoprotein k<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-MCUR1  -  mitochondrial calcium uniporter regulator 1<br>
-SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-RRBP1  -  ribosome binding protein 1<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details' target="_blank">GO:0016021</a><a name=0016021></a></td>
-<td>integral component of membrane</td>
-<td  align=center>5.26E-11</td>
-<td  align=center>1.81E-8</td>
-<td  align=center>2.57 (8795,1660,95,46)</td>
-<td>
-<a id="ctrl_elements_GO:0016021" href="javascript:toggle('elements_GO:0016021')">[+] Show genes</a><br>
-<div id="elements_GO:0016021" style="display:none"> <font size=1>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br>
-CANX  -  calnexin<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-SEC61B  -  sec61 beta subunit<br>
-MAGT1  -  magnesium transporter 1<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-CLPTM1L  -  clptm1-like<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-TMEM208  -  transmembrane protein 208<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-SEC61G  -  sec61 gamma subunit<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-TMEM167A  -  transmembrane protein 167a<br>
-TM9SF3  -  transmembrane 9 superfamily member 3<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-JTB  -  jumping translocation breakpoint<br>
-SURF4  -  surfeit 4<br>
-MLEC  -  malectin<br>
-MTDH  -  metadherin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-TMEM214  -  transmembrane protein 214<br>
-PREB  -  prolactin regulatory element binding<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-SELK  -  selenoprotein k<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-MCUR1  -  mitochondrial calcium uniporter regulator 1<br>
-SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-DERL2  -  derlin 2<br>
-CREB3  -  camp responsive element binding protein 3<br>
-RRBP1  -  ribosome binding protein 1<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details' target="_blank">GO:0031224</a><a name=0031224></a></td>
-<td>intrinsic component of membrane</td>
-<td  align=center>1.06E-10</td>
-<td  align=center>3.03E-8</td>
-<td  align=center>2.52 (8795,1693,95,46)</td>
-<td>
-<a id="ctrl_elements_GO:0031224" href="javascript:toggle('elements_GO:0031224')">[+] Show genes</a><br>
-<div id="elements_GO:0031224" style="display:none"> <font size=1>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br>
-CANX  -  calnexin<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-SEC61B  -  sec61 beta subunit<br>
-MAGT1  -  magnesium transporter 1<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-CLPTM1L  -  clptm1-like<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-TMEM208  -  transmembrane protein 208<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-SEC61G  -  sec61 gamma subunit<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-TMEM167A  -  transmembrane protein 167a<br>
-TM9SF3  -  transmembrane 9 superfamily member 3<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-JTB  -  jumping translocation breakpoint<br>
-SURF4  -  surfeit 4<br>
-MLEC  -  malectin<br>
-MTDH  -  metadherin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-TMEM214  -  transmembrane protein 214<br>
-PREB  -  prolactin regulatory element binding<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-SELK  -  selenoprotein k<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-MCUR1  -  mitochondrial calcium uniporter regulator 1<br>
-SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-DERL2  -  derlin 2<br>
-CREB3  -  camp responsive element binding protein 3<br>
-RRBP1  -  ribosome binding protein 1<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033018&amp;view=details' target="_blank">GO:0033018</a><a name=0033018></a></td>
-<td>sarcoplasmic reticulum lumen</td>
-<td  align=center>1.28E-8</td>
-<td  align=center>3.14E-6</td>
-<td  align=center>92.58 (8795,4,95,4)</td>
-<td>
-<a id="ctrl_elements_GO:0033018" href="javascript:toggle('elements_GO:0033018')">[+] Show genes</a><br>
-<div id="elements_GO:0033018" style="display:none"> <font size=1>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005788&amp;view=details' target="_blank">GO:0005788</a><a name=0005788></a></td>
-<td>endoplasmic reticulum lumen</td>
-<td  align=center>2.08E-8</td>
-<td  align=center>4.48E-6</td>
-<td  align=center>9.34 (8795,109,95,11)</td>
-<td>
-<a id="ctrl_elements_GO:0005788" href="javascript:toggle('elements_GO:0005788')">[+] Show genes</a><br>
-<div id="elements_GO:0005788" style="display:none"> <font size=1>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
-CANX  -  calnexin<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
-<td>membrane</td>
-<td  align=center>3.29E-8</td>
-<td  align=center>6.29E-6</td>
-<td  align=center>1.65 (8795,3755,95,67)</td>
-<td>
-<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
-<div id="elements_GO:0016020" style="display:none"> <font size=1>
-MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-FTL  -  ferritin, light polypeptide<br>
-CANX  -  calnexin<br>
-SEC61B  -  sec61 beta subunit<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-TMEM208  -  transmembrane protein 208<br>
-TM9SF3  -  transmembrane 9 superfamily member 3<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br>
-MLEC  -  malectin<br>
-MTDH  -  metadherin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-ARCN1  -  archain 1<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-TMEM214  -  transmembrane protein 214<br>
-ARF1  -  adp-ribosylation factor 1<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
-VCP  -  valosin containing protein<br>
-DERL2  -  derlin 2<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-CREB3  -  camp responsive element binding protein 3<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-MAGT1  -  magnesium transporter 1<br>
-MORF4L2  -  mortality factor 4 like 2<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-CLPTM1L  -  clptm1-like<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-MESDC2  -  mesoderm development candidate 2<br>
-KRT10  -  keratin 10<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SEC61G  -  sec61 gamma subunit<br>
-TMEM167A  -  transmembrane protein 167a<br>
-JTB  -  jumping translocation breakpoint<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-MRPL22  -  mitochondrial ribosomal protein l22<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-PREB  -  prolactin regulatory element binding<br>
-MRPS14  -  mitochondrial ribosomal protein s14<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SELK  -  selenoprotein k<br>
-GNL3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
-HDLBP  -  high density lipoprotein binding protein<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-RRBP1  -  ribosome binding protein 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034663&amp;view=details' target="_blank">GO:0034663</a><a name=0034663></a></td>
-<td>endoplasmic reticulum chaperone complex</td>
-<td  align=center>1.89E-7</td>
-<td  align=center>3.24E-5</td>
-<td  align=center>61.72 (8795,6,95,4)</td>
-<td>
-<a id="ctrl_elements_GO:0034663" href="javascript:toggle('elements_GO:0034663')">[+] Show genes</a><br>
-<div id="elements_GO:0034663" style="display:none"> <font size=1>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033116&amp;view=details' target="_blank">GO:0033116</a><a name=0033116></a></td>
-<td>endoplasmic reticulum-Golgi intermediate compartment membrane</td>
-<td  align=center>1.24E-6</td>
-<td  align=center>1.93E-4</td>
-<td  align=center>12.46 (8795,52,95,7)</td>
-<td>
-<a id="ctrl_elements_GO:0033116" href="javascript:toggle('elements_GO:0033116')">[+] Show genes</a><br>
-<div id="elements_GO:0033116" style="display:none"> <font size=1>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-SURF4  -  surfeit 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044444&amp;view=details' target="_blank">GO:0044444</a><a name=0044444></a></td>
-<td>cytoplasmic part</td>
-<td  align=center>1.26E-6</td>
-<td  align=center>1.8E-4</td>
-<td  align=center>1.33 (8795,5777,95,83)</td>
-<td>
-<a id="ctrl_elements_GO:0044444" href="javascript:toggle('elements_GO:0044444')">[+] Show genes</a><br>
-<div id="elements_GO:0044444" style="display:none"> <font size=1>
-MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-FTL  -  ferritin, light polypeptide<br>
-CANX  -  calnexin<br>
-SEC61B  -  sec61 beta subunit<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM208  -  transmembrane protein 208<br>
-CHCHD2  -  coiled-coil-helix-coiled-coil-helix domain containing 2<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br>
-MLEC  -  malectin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-MTDH  -  metadherin<br>
-NANS  -  n-acetylneuraminic acid synthase<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br>
-RPN1  -  ribophorin i<br>
-MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
-PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-ARCN1  -  archain 1<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-TMEM214  -  transmembrane protein 214<br>
-ARF1  -  adp-ribosylation factor 1<br>
-CNPY2  -  canopy fgf signaling regulator 2<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
-VCP  -  valosin containing protein<br>
-DERL2  -  derlin 2<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-CREB3  -  camp responsive element binding protein 3<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-EXOSC1  -  exosome component 1<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-EMC9  -  er membrane protein complex subunit 9<br>
-CRELD2  -  cysteine-rich with egf-like domains 2<br>
-IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-MAGT1  -  magnesium transporter 1<br>
-PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-MESDC2  -  mesoderm development candidate 2<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-KRT10  -  keratin 10<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SEC61G  -  sec61 gamma subunit<br>
-TMEM167A  -  transmembrane protein 167a<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-JTB  -  jumping translocation breakpoint<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-SRP68  -  signal recognition particle 68kda<br>
-SRP19  -  signal recognition particle 19kda<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-MRPL22  -  mitochondrial ribosomal protein l22<br>
-SRP72  -  signal recognition particle 72kda<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-UFM1  -  ubiquitin-fold modifier 1<br>
-RPS19BP1  -  ribosomal protein s19 binding protein 1<br>
-PREB  -  prolactin regulatory element binding<br>
-MRPS14  -  mitochondrial ribosomal protein s14<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SELK  -  selenoprotein k<br>
-MCUR1  -  mitochondrial calcium uniporter regulator 1<br>
-HDLBP  -  high density lipoprotein binding protein<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-RRBP1  -  ribosome binding protein 1<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098796&amp;view=details' target="_blank">GO:0098796</a><a name=0098796></a></td>
-<td>membrane protein complex</td>
-<td  align=center>2.15E-6</td>
-<td  align=center>2.84E-4</td>
-<td  align=center>3.12 (8795,623,95,21)</td>
-<td>
-<a id="ctrl_elements_GO:0098796" href="javascript:toggle('elements_GO:0098796')">[+] Show genes</a><br>
-<div id="elements_GO:0098796" style="display:none"> <font size=1>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-EMC9  -  er membrane protein complex subunit 9<br>
-RPN1  -  ribophorin i<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-ARCN1  -  archain 1<br>
-SEC61B  -  sec61 beta subunit<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-MAGT1  -  magnesium transporter 1<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-SEC61G  -  sec61 gamma subunit<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-DERL2  -  derlin 2<br>
-VCP  -  valosin containing protein<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005793&amp;view=details' target="_blank">GO:0005793</a><a name=0005793></a></td>
-<td>endoplasmic reticulum-Golgi intermediate compartment</td>
-<td  align=center>2.96E-6</td>
-<td  align=center>3.64E-4</td>
-<td  align=center>10.98 (8795,59,95,7)</td>
-<td>
-<a id="ctrl_elements_GO:0005793" href="javascript:toggle('elements_GO:0005793')">[+] Show genes</a><br>
-<div id="elements_GO:0005793" style="display:none"> <font size=1>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-SURF4  -  surfeit 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030176&amp;view=details' target="_blank">GO:0030176</a><a name=0030176></a></td>
-<td>integral component of endoplasmic reticulum membrane</td>
-<td  align=center>3.48E-6</td>
-<td  align=center>3.99E-4</td>
-<td  align=center>7.31 (8795,114,95,9)</td>
-<td>
-<a id="ctrl_elements_GO:0030176" href="javascript:toggle('elements_GO:0030176')">[+] Show genes</a><br>
-<div id="elements_GO:0030176" style="display:none"> <font size=1>
-CALR  -  calreticulin<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-CANX  -  calnexin<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-DERL2  -  derlin 2<br>
-RRBP1  -  ribosome binding protein 1<br>
-PREB  -  prolactin regulatory element binding<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008250&amp;view=details' target="_blank">GO:0008250</a><a name=0008250></a></td>
-<td>oligosaccharyltransferase complex</td>
-<td  align=center>3.98E-6</td>
-<td  align=center>4.28E-4</td>
-<td  align=center>33.67 (8795,11,95,4)</td>
-<td>
-<a id="ctrl_elements_GO:0008250" href="javascript:toggle('elements_GO:0008250')">[+] Show genes</a><br>
-<div id="elements_GO:0008250" style="display:none"> <font size=1>
-MAGT1  -  magnesium transporter 1<br>
-TMEM258  -  transmembrane protein 258<br>
-RPN1  -  ribophorin i<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031227&amp;view=details' target="_blank">GO:0031227</a><a name=0031227></a></td>
-<td>intrinsic component of endoplasmic reticulum membrane</td>
-<td  align=center>4.32E-6</td>
-<td  align=center>4.37E-4</td>
-<td  align=center>7.12 (8795,117,95,9)</td>
-<td>
-<a id="ctrl_elements_GO:0031227" href="javascript:toggle('elements_GO:0031227')">[+] Show genes</a><br>
-<div id="elements_GO:0031227" style="display:none"> <font size=1>
-CALR  -  calreticulin<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-CANX  -  calnexin<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-DERL2  -  derlin 2<br>
-RRBP1  -  ribosome binding protein 1<br>
-PREB  -  prolactin regulatory element binding<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005790&amp;view=details' target="_blank">GO:0005790</a><a name=0005790></a></td>
-<td>smooth endoplasmic reticulum</td>
-<td  align=center>8.48E-6</td>
-<td  align=center>8.11E-4</td>
-<td  align=center>28.49 (8795,13,95,4)</td>
-<td>
-<a id="ctrl_elements_GO:0005790" href="javascript:toggle('elements_GO:0005790')">[+] Show genes</a><br>
-<div id="elements_GO:0005790" style="display:none"> <font size=1>
-CALR  -  calreticulin<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030134&amp;view=details' target="_blank">GO:0030134</a><a name=0030134></a></td>
-<td>COPII-coated ER to Golgi transport vesicle</td>
-<td  align=center>1.8E-5</td>
-<td  align=center>1.63E-3</td>
-<td  align=center>14.93 (8795,31,95,5)</td>
-<td>
-<a id="ctrl_elements_GO:0030134" href="javascript:toggle('elements_GO:0030134')">[+] Show genes</a><br>
-<div id="elements_GO:0030134" style="display:none"> <font size=1>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071682&amp;view=details' target="_blank">GO:0071682</a><a name=0071682></a></td>
-<td>endocytic vesicle lumen</td>
-<td  align=center>2.39E-5</td>
-<td  align=center>2.05E-3</td>
-<td  align=center>46.29 (8795,6,95,3)</td>
-<td>
-<a id="ctrl_elements_GO:0071682" href="javascript:toggle('elements_GO:0071682')">[+] Show genes</a><br>
-<div id="elements_GO:0071682" style="display:none"> <font size=1>
-CALR  -  calreticulin<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071256&amp;view=details' target="_blank">GO:0071256</a><a name=0071256></a></td>
-<td>translocon complex</td>
-<td  align=center>2.39E-5</td>
-<td  align=center>1.95E-3</td>
-<td  align=center>46.29 (8795,6,95,3)</td>
-<td>
-<a id="ctrl_elements_GO:0071256" href="javascript:toggle('elements_GO:0071256')">[+] Show genes</a><br>
-<div id="elements_GO:0071256" style="display:none"> <font size=1>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-SEC61G  -  sec61 gamma subunit<br>
-SEC61B  -  sec61 beta subunit<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005786&amp;view=details' target="_blank">GO:0005786</a><a name=0005786></a></td>
-<td>signal recognition particle, endoplasmic reticulum targeting</td>
-<td  align=center>2.39E-5</td>
-<td  align=center>1.87E-3</td>
-<td  align=center>46.29 (8795,6,95,3)</td>
-<td>
-<a id="ctrl_elements_GO:0005786" href="javascript:toggle('elements_GO:0005786')">[+] Show genes</a><br>
-<div id="elements_GO:0005786" style="display:none"> <font size=1>
-SRP68  -  signal recognition particle 68kda<br>
-SRP19  -  signal recognition particle 19kda<br>
-SRP72  -  signal recognition particle 72kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048500&amp;view=details' target="_blank">GO:0048500</a><a name=0048500></a></td>
-<td>signal recognition particle</td>
-<td  align=center>2.39E-5</td>
-<td  align=center>1.78E-3</td>
-<td  align=center>46.29 (8795,6,95,3)</td>
-<td>
-<a id="ctrl_elements_GO:0048500" href="javascript:toggle('elements_GO:0048500')">[+] Show genes</a><br>
-<div id="elements_GO:0048500" style="display:none"> <font size=1>
-SRP68  -  signal recognition particle 68kda<br>
-SRP19  -  signal recognition particle 19kda<br>
-SRP72  -  signal recognition particle 72kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005798&amp;view=details' target="_blank">GO:0005798</a><a name=0005798></a></td>
-<td>Golgi-associated vesicle</td>
-<td  align=center>3.49E-5</td>
-<td  align=center>2.5E-3</td>
-<td  align=center>9.58 (8795,58,95,6)</td>
-<td>
-<a id="ctrl_elements_GO:0005798" href="javascript:toggle('elements_GO:0005798')">[+] Show genes</a><br>
-<div id="elements_GO:0005798" style="display:none"> <font size=1>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-ARF1  -  adp-ribosylation factor 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044431&amp;view=details' target="_blank">GO:0044431</a><a name=0044431></a></td>
-<td>Golgi apparatus part</td>
-<td  align=center>3.62E-5</td>
-<td  align=center>2.5E-3</td>
-<td  align=center>2.89 (8795,576,95,18)</td>
-<td>
-<a id="ctrl_elements_GO:0044431" href="javascript:toggle('elements_GO:0044431')">[+] Show genes</a><br>
-<div id="elements_GO:0044431" style="display:none"> <font size=1>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-ARCN1  -  archain 1<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-ARF1  -  adp-ribosylation factor 1<br>
-PREB  -  prolactin regulatory element binding<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM167A  -  transmembrane protein 167a<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-CREB3  -  camp responsive element binding protein 3<br>
-SURF4  -  surfeit 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031410&amp;view=details' target="_blank">GO:0031410</a><a name=0031410></a></td>
-<td>cytoplasmic vesicle</td>
-<td  align=center>6.11E-5</td>
-<td  align=center>4.04E-3</td>
-<td  align=center>2.51 (8795,775,95,21)</td>
-<td>
-<a id="ctrl_elements_GO:0031410" href="javascript:toggle('elements_GO:0031410')">[+] Show genes</a><br>
-<div id="elements_GO:0031410" style="display:none"> <font size=1>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-ARCN1  -  archain 1<br>
-CANX  -  calnexin<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-ARF1  -  adp-ribosylation factor 1<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-CALR  -  calreticulin<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-CALU  -  calumenin<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-DERL2  -  derlin 2<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097708&amp;view=details' target="_blank">GO:0097708</a><a name=0097708></a></td>
-<td>intracellular vesicle</td>
-<td  align=center>6.46E-5</td>
-<td  align=center>4.12E-3</td>
-<td  align=center>2.50 (8795,778,95,21)</td>
-<td>
-<a id="ctrl_elements_GO:0097708" href="javascript:toggle('elements_GO:0097708')">[+] Show genes</a><br>
-<div id="elements_GO:0097708" style="display:none"> <font size=1>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-RPN1  -  ribophorin i<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-ARCN1  -  archain 1<br>
-CANX  -  calnexin<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-ARF1  -  adp-ribosylation factor 1<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-CALR  -  calreticulin<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-CALU  -  calumenin<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-DERL2  -  derlin 2<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000139&amp;view=details' target="_blank">GO:0000139</a><a name=0000139></a></td>
-<td>Golgi membrane</td>
-<td  align=center>8.62E-5</td>
-<td  align=center>5.3E-3</td>
-<td  align=center>3.09 (8795,450,95,15)</td>
-<td>
-<a id="ctrl_elements_GO:0000139" href="javascript:toggle('elements_GO:0000139')">[+] Show genes</a><br>
-<div id="elements_GO:0000139" style="display:none"> <font size=1>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-ARCN1  -  archain 1<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-ARF1  -  adp-ribosylation factor 1<br>
-PREB  -  prolactin regulatory element binding<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM167A  -  transmembrane protein 167a<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-CREB3  -  camp responsive element binding protein 3<br>
-SURF4  -  surfeit 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030135&amp;view=details' target="_blank">GO:0030135</a><a name=0030135></a></td>
-<td>coated vesicle</td>
-<td  align=center>1.03E-4</td>
-<td  align=center>6.13E-3</td>
-<td  align=center>6.42 (8795,101,95,7)</td>
-<td>
-<a id="ctrl_elements_GO:0030135" href="javascript:toggle('elements_GO:0030135')">[+] Show genes</a><br>
-<div id="elements_GO:0030135" style="display:none"> <font size=1>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-ARF1  -  adp-ribosylation factor 1<br>
-HAX1  -  hcls1 associated protein x-1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044446&amp;view=details' target="_blank">GO:0044446</a><a name=0044446></a></td>
-<td>intracellular organelle part</td>
-<td  align=center>1.78E-4</td>
-<td  align=center>1.02E-2</td>
-<td  align=center>1.24 (8795,6054,95,81)</td>
-<td>
-<a id="ctrl_elements_GO:0044446" href="javascript:toggle('elements_GO:0044446')">[+] Show genes</a><br>
-<div id="elements_GO:0044446" style="display:none"> <font size=1>
-MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-FTL  -  ferritin, light polypeptide<br>
-CANX  -  calnexin<br>
-SEC61B  -  sec61 beta subunit<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM208  -  transmembrane protein 208<br>
-CHCHD2  -  coiled-coil-helix-coiled-coil-helix domain containing 2<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br>
-MLEC  -  malectin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-MTDH  -  metadherin<br>
-SRSF9  -  serine/arginine-rich splicing factor 9<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br>
-RPN1  -  ribophorin i<br>
-MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
-PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-ARCN1  -  archain 1<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-TMEM214  -  transmembrane protein 214<br>
-ARF1  -  adp-ribosylation factor 1<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
-VCP  -  valosin containing protein<br>
-DERL2  -  derlin 2<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-CREB3  -  camp responsive element binding protein 3<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-EXOSC1  -  exosome component 1<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-EMC9  -  er membrane protein complex subunit 9<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-MAGT1  -  magnesium transporter 1<br>
-PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br>
-MORF4L2  -  mortality factor 4 like 2<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-KRT10  -  keratin 10<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SEC61G  -  sec61 gamma subunit<br>
-TMEM167A  -  transmembrane protein 167a<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-SF3B5  -  splicing factor 3b, subunit 5, 10kda<br>
-JTB  -  jumping translocation breakpoint<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-SRP68  -  signal recognition particle 68kda<br>
-SRP19  -  signal recognition particle 19kda<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-MRPL22  -  mitochondrial ribosomal protein l22<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-RPS19BP1  -  ribosomal protein s19 binding protein 1<br>
-PREB  -  prolactin regulatory element binding<br>
-CDK2AP2  -  cyclin-dependent kinase 2 associated protein 2<br>
-MRPS14  -  mitochondrial ribosomal protein s14<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SELK  -  selenoprotein k<br>
-CCNC  -  cyclin c<br>
-GNL3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
-MCUR1  -  mitochondrial calcium uniporter regulator 1<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-RRBP1  -  ribosome binding protein 1<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042470&amp;view=details' target="_blank">GO:0042470</a><a name=0042470></a></td>
-<td>melanosome</td>
-<td  align=center>1.86E-4</td>
-<td  align=center>1.03E-2</td>
-<td  align=center>7.12 (8795,78,95,6)</td>
-<td>
-<a id="ctrl_elements_GO:0042470" href="javascript:toggle('elements_GO:0042470')">[+] Show genes</a><br>
-<div id="elements_GO:0042470" style="display:none"> <font size=1>
-CALU  -  calumenin<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-RPN1  -  ribophorin i<br>
-CANX  -  calnexin<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048770&amp;view=details' target="_blank">GO:0048770</a><a name=0048770></a></td>
-<td>pigment granule</td>
-<td  align=center>1.86E-4</td>
-<td  align=center>1E-2</td>
-<td  align=center>7.12 (8795,78,95,6)</td>
-<td>
-<a id="ctrl_elements_GO:0048770" href="javascript:toggle('elements_GO:0048770')">[+] Show genes</a><br>
-<div id="elements_GO:0048770" style="display:none"> <font size=1>
-CALU  -  calumenin<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-RPN1  -  ribophorin i<br>
-CANX  -  calnexin<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030126&amp;view=details' target="_blank">GO:0030126</a><a name=0030126></a></td>
-<td>COPI vesicle coat</td>
-<td  align=center>2.5E-4</td>
-<td  align=center>1.31E-2</td>
-<td  align=center>23.14 (8795,12,95,3)</td>
-<td>
-<a id="ctrl_elements_GO:0030126" href="javascript:toggle('elements_GO:0030126')">[+] Show genes</a><br>
-<div id="elements_GO:0030126" style="display:none"> <font size=1>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-ARCN1  -  archain 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044422&amp;view=details' target="_blank">GO:0044422</a><a name=0044422></a></td>
-<td>organelle part</td>
-<td  align=center>2.91E-4</td>
-<td  align=center>1.47E-2</td>
-<td  align=center>1.23 (8795,6112,95,81)</td>
-<td>
-<a id="ctrl_elements_GO:0044422" href="javascript:toggle('elements_GO:0044422')">[+] Show genes</a><br>
-<div id="elements_GO:0044422" style="display:none"> <font size=1>
-MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-FTL  -  ferritin, light polypeptide<br>
-CANX  -  calnexin<br>
-SEC61B  -  sec61 beta subunit<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM208  -  transmembrane protein 208<br>
-CHCHD2  -  coiled-coil-helix-coiled-coil-helix domain containing 2<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br>
-MLEC  -  malectin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-MTDH  -  metadherin<br>
-SRSF9  -  serine/arginine-rich splicing factor 9<br>
-SEC63  -  sec63 homolog (s. cerevisiae)<br>
-PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br>
-RPN1  -  ribophorin i<br>
-MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br>
-PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br>
-SDF2L1  -  stromal cell-derived factor 2-like 1<br>
-ARCN1  -  archain 1<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-TMEM214  -  transmembrane protein 214<br>
-ARF1  -  adp-ribosylation factor 1<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br>
-VCP  -  valosin containing protein<br>
-DERL2  -  derlin 2<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-CREB3  -  camp responsive element binding protein 3<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-EXOSC1  -  exosome component 1<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-TMEM258  -  transmembrane protein 258<br>
-NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br>
-EMC9  -  er membrane protein complex subunit 9<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-MAGT1  -  magnesium transporter 1<br>
-PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br>
-MORF4L2  -  mortality factor 4 like 2<br>
-ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-SRPRB  -  signal recognition particle receptor, b subunit<br>
-KRT10  -  keratin 10<br>
-LRRC59  -  leucine rich repeat containing 59<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-SEC61G  -  sec61 gamma subunit<br>
-TMEM167A  -  transmembrane protein 167a<br>
-SLC35B1  -  solute carrier family 35, member b1<br>
-SF3B5  -  splicing factor 3b, subunit 5, 10kda<br>
-JTB  -  jumping translocation breakpoint<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-SRP68  -  signal recognition particle 68kda<br>
-SRP19  -  signal recognition particle 19kda<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-MRPL22  -  mitochondrial ribosomal protein l22<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-SSR1  -  signal sequence receptor, alpha<br>
-RPS19BP1  -  ribosomal protein s19 binding protein 1<br>
-PREB  -  prolactin regulatory element binding<br>
-CDK2AP2  -  cyclin-dependent kinase 2 associated protein 2<br>
-MRPS14  -  mitochondrial ribosomal protein s14<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-SELK  -  selenoprotein k<br>
-CCNC  -  cyclin c<br>
-GNL3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br>
-MCUR1  -  mitochondrial calcium uniporter regulator 1<br>
-SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br>
-SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-RRBP1  -  ribosome binding protein 1<br>
-OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030133&amp;view=details' target="_blank">GO:0030133</a><a name=0030133></a></td>
-<td>transport vesicle</td>
-<td  align=center>4.48E-4</td>
-<td  align=center>2.2E-2</td>
-<td  align=center>5.06 (8795,128,95,7)</td>
-<td>
-<a id="ctrl_elements_GO:0030133" href="javascript:toggle('elements_GO:0030133')">[+] Show genes</a><br>
-<div id="elements_GO:0030133" style="display:none"> <font size=1>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-ARCN1  -  archain 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-SURF4  -  surfeit 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005794&amp;view=details' target="_blank">GO:0005794</a><a name=0005794></a></td>
-<td>Golgi apparatus</td>
-<td  align=center>4.78E-4</td>
-<td  align=center>2.29E-2</td>
-<td  align=center>2.53 (8795,585,95,16)</td>
-<td>
-<a id="ctrl_elements_GO:0005794" href="javascript:toggle('elements_GO:0005794')">[+] Show genes</a><br>
-<div id="elements_GO:0005794" style="display:none"> <font size=1>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-CRELD2  -  cysteine-rich with egf-like domains 2<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-TMEM214  -  transmembrane protein 214<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-SELK  -  selenoprotein k<br>
-TMEM167A  -  transmembrane protein 167a<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-UBA5  -  ubiquitin-like modifier activating enzyme 5<br>
-SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030120&amp;view=details' target="_blank">GO:0030120</a><a name=0030120></a></td>
-<td>vesicle coat</td>
-<td  align=center>5.18E-4</td>
-<td  align=center>2.41E-2</td>
-<td  align=center>10.58 (8795,35,95,4)</td>
-<td>
-<a id="ctrl_elements_GO:0030120" href="javascript:toggle('elements_GO:0030120')">[+] Show genes</a><br>
-<div id="elements_GO:0030120" style="display:none"> <font size=1>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-ARCN1  -  archain 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030663&amp;view=details' target="_blank">GO:0030663</a><a name=0030663></a></td>
-<td>COPI-coated vesicle membrane</td>
-<td  align=center>6.83E-4</td>
-<td  align=center>3.09E-2</td>
-<td  align=center>46.29 (8795,4,95,2)</td>
-<td>
-<a id="ctrl_elements_GO:0030663" href="javascript:toggle('elements_GO:0030663')">[+] Show genes</a><br>
-<div id="elements_GO:0030663" style="display:none"> <font size=1>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details' target="_blank">GO:0031982</a><a name=0031982></a></td>
-<td>vesicle</td>
-<td  align=center>7.06E-4</td>
-<td  align=center>3.12E-2</td>
-<td  align=center>1.73 (8795,1710,95,32)</td>
-<td>
-<a id="ctrl_elements_GO:0031982" href="javascript:toggle('elements_GO:0031982')">[+] Show genes</a><br>
-<div id="elements_GO:0031982" style="display:none"> <font size=1>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-FTL  -  ferritin, light polypeptide<br>
-CANX  -  calnexin<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-KRT10  -  keratin 10<br>
-AUP1  -  ancient ubiquitous protein 1<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-NANS  -  n-acetylneuraminic acid synthase<br>
-RPN1  -  ribophorin i<br>
-PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br>
-PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br>
-IER3IP1  -  immediate early response 3 interacting protein 1<br>
-ARCN1  -  archain 1<br>
-ARF1  -  adp-ribosylation factor 1<br>
-CALR  -  calreticulin<br>
-CALU  -  calumenin<br>
-GMPPA  -  gdp-mannose pyrophosphorylase a<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br>
-DERL2  -  derlin 2<br>
-VCP  -  valosin containing protein<br>
-PDIA6  -  protein disulfide isomerase family a, member 6<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044433&amp;view=details' target="_blank">GO:0044433</a><a name=0044433></a></td>
-<td>cytoplasmic vesicle part</td>
-<td  align=center>7.13E-4</td>
-<td  align=center>3.07E-2</td>
-<td  align=center>2.16 (8795,859,95,20)</td>
-<td>
-<a id="ctrl_elements_GO:0044433" href="javascript:toggle('elements_GO:0044433')">[+] Show genes</a><br>
-<div id="elements_GO:0044433" style="display:none"> <font size=1>
-MLEC  -  malectin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br>
-FTL  -  ferritin, light polypeptide<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-ARCN1  -  archain 1<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-MAGT1  -  magnesium transporter 1<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-CALR  -  calreticulin<br>
-PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br>
-HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-VCP  -  valosin containing protein<br>
-HYOU1  -  hypoxia up-regulated 1<br>
-SURF4  -  surfeit 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details' target="_blank">GO:0098588</a><a name=0098588></a></td>
-<td>bounding membrane of organelle</td>
-<td  align=center>9.3E-4</td>
-<td  align=center>3.9E-2</td>
-<td  align=center>1.93 (8795,1150,95,24)</td>
-<td>
-<a id="ctrl_elements_GO:0098588" href="javascript:toggle('elements_GO:0098588')">[+] Show genes</a><br>
-<div id="elements_GO:0098588" style="display:none"> <font size=1>
-MLEC  -  malectin<br>
-ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br>
-GORASP2  -  golgi reassembly stacking protein 2, 55kda<br>
-YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br>
-MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br>
-SEC13  -  sec13 homolog (s. cerevisiae)<br>
-SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br>
-CISD2  -  cdgsh iron sulfur domain 2<br>
-ARCN1  -  archain 1<br>
-KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br>
-ARF1  -  adp-ribosylation factor 1<br>
-PREB  -  prolactin regulatory element binding<br>
-GOSR2  -  golgi snap receptor complex member 2<br>
-MAGT1  -  magnesium transporter 1<br>
-COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br>
-CALR  -  calreticulin<br>
-TMED2  -  transmembrane emp24 domain trafficking protein 2<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMED9  -  transmembrane emp24 protein transport domain containing 9<br>
-TMEM167A  -  transmembrane protein 167a<br>
-COPE  -  coatomer protein complex, subunit epsilon<br>
-CREB3  -  camp responsive element binding protein 3<br>
-SURF4  -  surfeit 4<br>
-HAX1  -  hcls1 associated protein x-1<br>
-</FONT></div>
-</td>
-</tr>
-</table>
-<p>Species used: Homo sapiens</p><p>The system has recognized 9126 genes out of 9571 gene terms entered by the user.<br> 9126 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>98 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
-<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
-<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
-The GOrilla database was last updated on Mar 6, 2021</p>
-<p>This results page will be available on this site for one month from now (until 
-Jan 16, 2023
-). You can bookmark this page and come back to it later.
-</p>
-<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
-<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
-<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
-<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
-<p>
-<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
-</p>
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="1720,689,1819,737" href="#0071682" shape="RECT"/>
+<area alt="" coords="1120,413,1245,461" href="#0012506" shape="RECT"/>
+<area alt="" coords="1163,543,1288,591" href="#0030659" shape="RECT"/>
+<area alt="" coords="1792,518,1904,615" href="#0033116" shape="RECT"/>
+<area alt="" coords="1600,543,1717,591" href="#0000139" shape="RECT"/>
+<area alt="" coords="725,197,853,245" href="#0032991" shape="RECT"/>
+<area alt="" coords="828,301,951,349" href="#1990904" shape="RECT"/>
+<area alt="" coords="563,301,677,349" href="#0098796" shape="RECT"/>
+<area alt="" coords="464,301,539,349" href="#1902494" shape="RECT"/>
+<area alt="" coords="691,527,789,607" href="#0034663" shape="RECT"/>
+<area alt="" coords="2117,689,2195,737" href="#0030133" shape="RECT"/>
+<area alt="" coords="1135,197,1217,245" href="#0016020" shape="RECT"/>
+<area alt="" coords="976,413,1096,461" href="#0098805" shape="RECT"/>
+<area alt="" coords="1207,301,1289,349" href="#0031090" shape="RECT"/>
+<area alt="" coords="459,535,557,598" href="#0005789" shape="RECT"/>
+<area alt="" coords="481,197,567,245" href="#0044425" shape="RECT"/>
+<area alt="" coords="133,406,229,469" href="#0031224" shape="RECT"/>
+<area alt="" coords="2219,689,2333,737" href="#0048770" shape="RECT"/>
+<area alt="" coords="2228,827,2324,875" href="#0042470" shape="RECT"/>
+<area alt="" coords="1157,689,1264,737" href="#0030662" shape="RECT"/>
+<area alt="" coords="1503,197,1580,245" href="#0044422" shape="RECT"/>
+<area alt="" coords="1496,294,1587,357" href="#0044446" shape="RECT"/>
+<area alt="" coords="1805,301,1883,349" href="#0043233" shape="RECT"/>
+<area alt="" coords="1745,101,1887,149" href="#0031974" shape="RECT"/>
+<area alt="" coords="1541,5,1424,29" href="#0005575" shape="RECT"/>
+<area alt="" coords="1608,101,1680,149" href="#0044464" shape="RECT"/>
+<area alt="" coords="2160,101,2235,149" href="#0043226" shape="RECT"/>
+<area alt="" coords="653,406,752,469" href="#0044432" shape="RECT"/>
+<area alt="" coords="125,518,237,615" href="#0031227" shape="RECT"/>
+<area alt="" coords="261,543,435,591" href="#0008250" shape="RECT"/>
+<area alt="" coords="581,543,667,591" href="#0071256" shape="RECT"/>
+<area alt="" coords="1363,535,1461,598" href="#0005788" shape="RECT"/>
+<area alt="" coords="5,535,101,598" href="#0016021" shape="RECT"/>
+<area alt="" coords="2019,413,2117,461" href="#0031983" shape="RECT"/>
+<area alt="" coords="1928,543,2027,591" href="#0060205" shape="RECT"/>
+<area alt="" coords="2235,197,2373,245" href="#0043227" shape="RECT"/>
+<area alt="" coords="2268,301,2340,349" href="#0031982" shape="RECT"/>
+<area alt="" coords="2357,406,2496,469" href="#0043231" shape="RECT"/>
+<area alt="" coords="1013,543,1139,591" href="#0030660" shape="RECT"/>
+<area alt="" coords="1381,413,1467,461" href="#0030117" shape="RECT"/>
+<area alt="" coords="1485,543,1576,591" href="#0030120" shape="RECT"/>
+<area alt="" coords="1625,301,1721,349" href="#0044444" shape="RECT"/>
+<area alt="" coords="827,413,952,461" href="#0048500" shape="RECT"/>
+<area alt="" coords="2171,543,2283,591" href="#0005794" shape="RECT"/>
+<area alt="" coords="2307,543,2405,591" href="#0005783" shape="RECT"/>
+<area alt="" coords="2429,527,2541,607" href="#0005793" shape="RECT"/>
+<area alt="" coords="1491,413,1587,461" href="#0044433" shape="RECT"/>
+<area alt="" coords="2051,543,2147,591" href="#0031410" shape="RECT"/>
+<area alt="" coords="1611,413,1728,461" href="#0044431" shape="RECT"/>
+<area alt="" coords="813,518,939,615" href="#0005786" shape="RECT"/>
+<area alt="" coords="1803,406,1893,469" href="#0070013" shape="RECT"/>
+<area alt="" coords="61,665,173,762" href="#0030176" shape="RECT"/>
+<area alt="" coords="2153,301,2244,349" href="#0043229" shape="RECT"/>
+<area alt="" coords="2243,413,2333,461" href="#0097708" shape="RECT"/>
+<area alt="" coords="1989,689,2093,737" href="#0030135" shape="RECT"/>
+<area alt="" coords="1921,811,2023,891" href="#0030134" shape="RECT"/>
+<area alt="" coords="1628,197,1719,245" href="#0044424" shape="RECT"/>
+<area alt="" coords="1088,827,1213,875" href="#0030663" shape="RECT"/>
+<area alt="" coords="1513,689,1612,737" href="#0030126" shape="RECT"/>
+<area alt="" coords="1361,682,1463,745" href="#0033018" shape="RECT"/>
+<area alt="" coords="2357,689,2504,737" href="#0005790" shape="RECT"/>
+<area alt="" coords="1843,689,1965,737" href="#0005798" shape="RECT"/>
+<area alt="" coords="299,413,389,461" href="#1990234" shape="RECT"/>
+<area alt="" coords="1269,406,1357,469" href="#0098588" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data1/go/8/GOCOMPONENT.png" usemap="#goPathImage"/></p>
+<p>Â </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details" target="_blank">GO:0044432</a><a name="0044432"></a></td>
+<td>endoplasmic reticulum part</td>
+<td align="center">1.22E-31</td>
+<td align="center">2.1E-28</td>
+<td align="center">6.32 (8795,776,95,53)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044432')" id="ctrl_elements_GO:0044432">[+] Show genes</a><br/>
+<div id="elements_GO:0044432" style="display:none"> <font size="1">
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+CANX  -  calnexin<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+SURF4  -  surfeit 4<br/>
+
+MLEC  -  malectin<br/>
+
+MTDH  -  metadherin<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+DERL2  -  derlin 2<br/>
+
+VCP  -  valosin containing protein<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+EMC9  -  er membrane protein complex subunit 9<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+SELK  -  selenoprotein k<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005789&amp;view=details" target="_blank">GO:0005789</a><a name="0005789"></a></td>
+<td>endoplasmic reticulum membrane</td>
+<td align="center">9.53E-25</td>
+<td align="center">8.2E-22</td>
+<td align="center">6.56 (8795,593,95,42)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005789')" id="ctrl_elements_GO:0005789">[+] Show genes</a><br/>
+<div id="elements_GO:0005789" style="display:none"> <font size="1">
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+CANX  -  calnexin<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+SURF4  -  surfeit 4<br/>
+
+MLEC  -  malectin<br/>
+
+MTDH  -  metadherin<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+ARCN1  -  archain 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SELK  -  selenoprotein k<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+DERL2  -  derlin 2<br/>
+
+VCP  -  valosin containing protein<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005783&amp;view=details" target="_blank">GO:0005783</a><a name="0005783"></a></td>
+<td>endoplasmic reticulum</td>
+<td align="center">2.46E-22</td>
+<td align="center">1.41E-19</td>
+<td align="center">5.90 (8795,643,95,41)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005783')" id="ctrl_elements_GO:0005783">[+] Show genes</a><br/>
+<div id="elements_GO:0005783" style="display:none"> <font size="1">
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+CRELD2  -  cysteine-rich with egf-like domains 2<br/>
+
+CANX  -  calnexin<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+MESDC2  -  mesoderm development candidate 2<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+
+MLEC  -  malectin<br/>
+
+SRP68  -  signal recognition particle 68kda<br/>
+
+MTDH  -  metadherin<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+SRP72  -  signal recognition particle 72kda<br/>
+
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+UFM1  -  ubiquitin-fold modifier 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+CNPY2  -  canopy fgf signaling regulator 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SELK  -  selenoprotein k<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+DERL2  -  derlin 2<br/>
+
+VCP  -  valosin containing protein<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details" target="_blank">GO:0044425</a><a name="0044425"></a></td>
+<td>membrane part</td>
+<td align="center">1.05E-11</td>
+<td align="center">4.54E-9</td>
+<td align="center">2.16 (8795,2524,95,59)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044425')" id="ctrl_elements_GO:0044425">[+] Show genes</a><br/>
+<div id="elements_GO:0044425" style="display:none"> <font size="1">
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+CANX  -  calnexin<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+TM9SF3  -  transmembrane 9 superfamily member 3<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+
+MLEC  -  malectin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+MTDH  -  metadherin<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DERL2  -  derlin 2<br/>
+
+VCP  -  valosin containing protein<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+EMC9  -  er membrane protein complex subunit 9<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+CLPTM1L  -  clptm1-like<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+JTB  -  jumping translocation breakpoint<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+SELK  -  selenoprotein k<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+MCUR1  -  mitochondrial calcium uniporter regulator 1<br/>
+
+SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details" target="_blank">GO:0016021</a><a name="0016021"></a></td>
+<td>integral component of membrane</td>
+<td align="center">5.26E-11</td>
+<td align="center">1.81E-8</td>
+<td align="center">2.57 (8795,1660,95,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016021')" id="ctrl_elements_GO:0016021">[+] Show genes</a><br/>
+<div id="elements_GO:0016021" style="display:none"> <font size="1">
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br/>
+
+CANX  -  calnexin<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+CLPTM1L  -  clptm1-like<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+TM9SF3  -  transmembrane 9 superfamily member 3<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+JTB  -  jumping translocation breakpoint<br/>
+
+SURF4  -  surfeit 4<br/>
+
+MLEC  -  malectin<br/>
+
+MTDH  -  metadherin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+SELK  -  selenoprotein k<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+MCUR1  -  mitochondrial calcium uniporter regulator 1<br/>
+
+SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+DERL2  -  derlin 2<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details" target="_blank">GO:0031224</a><a name="0031224"></a></td>
+<td>intrinsic component of membrane</td>
+<td align="center">1.06E-10</td>
+<td align="center">3.03E-8</td>
+<td align="center">2.52 (8795,1693,95,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031224')" id="ctrl_elements_GO:0031224">[+] Show genes</a><br/>
+<div id="elements_GO:0031224" style="display:none"> <font size="1">
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br/>
+
+CANX  -  calnexin<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+CLPTM1L  -  clptm1-like<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+TM9SF3  -  transmembrane 9 superfamily member 3<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+JTB  -  jumping translocation breakpoint<br/>
+
+SURF4  -  surfeit 4<br/>
+
+MLEC  -  malectin<br/>
+
+MTDH  -  metadherin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+SELK  -  selenoprotein k<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+MCUR1  -  mitochondrial calcium uniporter regulator 1<br/>
+
+SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+DERL2  -  derlin 2<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033018&amp;view=details" target="_blank">GO:0033018</a><a name="0033018"></a></td>
+<td>sarcoplasmic reticulum lumen</td>
+<td align="center">1.28E-8</td>
+<td align="center">3.14E-6</td>
+<td align="center">92.58 (8795,4,95,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0033018')" id="ctrl_elements_GO:0033018">[+] Show genes</a><br/>
+<div id="elements_GO:0033018" style="display:none"> <font size="1">
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005788&amp;view=details" target="_blank">GO:0005788</a><a name="0005788"></a></td>
+<td>endoplasmic reticulum lumen</td>
+<td align="center">2.08E-8</td>
+<td align="center">4.48E-6</td>
+<td align="center">9.34 (8795,109,95,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005788')" id="ctrl_elements_GO:0005788">[+] Show genes</a><br/>
+<div id="elements_GO:0005788" style="display:none"> <font size="1">
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+CANX  -  calnexin<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details" target="_blank">GO:0016020</a><a name="0016020"></a></td>
+<td>membrane</td>
+<td align="center">3.29E-8</td>
+<td align="center">6.29E-6</td>
+<td align="center">1.65 (8795,3755,95,67)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016020')" id="ctrl_elements_GO:0016020">[+] Show genes</a><br/>
+<div id="elements_GO:0016020" style="display:none"> <font size="1">
+
+MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+FTL  -  ferritin, light polypeptide<br/>
+
+CANX  -  calnexin<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+TM9SF3  -  transmembrane 9 superfamily member 3<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+
+UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br/>
+
+MLEC  -  malectin<br/>
+
+MTDH  -  metadherin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+VCP  -  valosin containing protein<br/>
+
+DERL2  -  derlin 2<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+MORF4L2  -  mortality factor 4 like 2<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+CLPTM1L  -  clptm1-like<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+MESDC2  -  mesoderm development candidate 2<br/>
+
+KRT10  -  keratin 10<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+JTB  -  jumping translocation breakpoint<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+MRPL22  -  mitochondrial ribosomal protein l22<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+MRPS14  -  mitochondrial ribosomal protein s14<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SELK  -  selenoprotein k<br/>
+
+GNL3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br/>
+
+HDLBP  -  high density lipoprotein binding protein<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034663&amp;view=details" target="_blank">GO:0034663</a><a name="0034663"></a></td>
+<td>endoplasmic reticulum chaperone complex</td>
+<td align="center">1.89E-7</td>
+<td align="center">3.24E-5</td>
+<td align="center">61.72 (8795,6,95,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0034663')" id="ctrl_elements_GO:0034663">[+] Show genes</a><br/>
+<div id="elements_GO:0034663" style="display:none"> <font size="1">
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033116&amp;view=details" target="_blank">GO:0033116</a><a name="0033116"></a></td>
+<td>endoplasmic reticulum-Golgi intermediate compartment membrane</td>
+<td align="center">1.24E-6</td>
+<td align="center">1.93E-4</td>
+<td align="center">12.46 (8795,52,95,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0033116')" id="ctrl_elements_GO:0033116">[+] Show genes</a><br/>
+<div id="elements_GO:0033116" style="display:none"> <font size="1">
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+SURF4  -  surfeit 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044444&amp;view=details" target="_blank">GO:0044444</a><a name="0044444"></a></td>
+<td>cytoplasmic part</td>
+<td align="center">1.26E-6</td>
+<td align="center">1.8E-4</td>
+<td align="center">1.33 (8795,5777,95,83)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044444')" id="ctrl_elements_GO:0044444">[+] Show genes</a><br/>
+<div id="elements_GO:0044444" style="display:none"> <font size="1">
+
+MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+FTL  -  ferritin, light polypeptide<br/>
+
+CANX  -  calnexin<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+CHCHD2  -  coiled-coil-helix-coiled-coil-helix domain containing 2<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+
+UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br/>
+
+MLEC  -  malectin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+MTDH  -  metadherin<br/>
+
+NANS  -  n-acetylneuraminic acid synthase<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br/>
+
+RPN1  -  ribophorin i<br/>
+
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+CNPY2  -  canopy fgf signaling regulator 2<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+VCP  -  valosin containing protein<br/>
+
+DERL2  -  derlin 2<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+EXOSC1  -  exosome component 1<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+EMC9  -  er membrane protein complex subunit 9<br/>
+
+CRELD2  -  cysteine-rich with egf-like domains 2<br/>
+
+IFI27L1  -  interferon, alpha-inducible protein 27-like 1<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+MESDC2  -  mesoderm development candidate 2<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+KRT10  -  keratin 10<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+JTB  -  jumping translocation breakpoint<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+SRP68  -  signal recognition particle 68kda<br/>
+
+SRP19  -  signal recognition particle 19kda<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+MRPL22  -  mitochondrial ribosomal protein l22<br/>
+
+SRP72  -  signal recognition particle 72kda<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+UFM1  -  ubiquitin-fold modifier 1<br/>
+
+RPS19BP1  -  ribosomal protein s19 binding protein 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+MRPS14  -  mitochondrial ribosomal protein s14<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SELK  -  selenoprotein k<br/>
+
+MCUR1  -  mitochondrial calcium uniporter regulator 1<br/>
+
+HDLBP  -  high density lipoprotein binding protein<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098796&amp;view=details" target="_blank">GO:0098796</a><a name="0098796"></a></td>
+<td>membrane protein complex</td>
+<td align="center">2.15E-6</td>
+<td align="center">2.84E-4</td>
+<td align="center">3.12 (8795,623,95,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098796')" id="ctrl_elements_GO:0098796">[+] Show genes</a><br/>
+<div id="elements_GO:0098796" style="display:none"> <font size="1">
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+EMC9  -  er membrane protein complex subunit 9<br/>
+
+RPN1  -  ribophorin i<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+ARCN1  -  archain 1<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+DERL2  -  derlin 2<br/>
+
+VCP  -  valosin containing protein<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005793&amp;view=details" target="_blank">GO:0005793</a><a name="0005793"></a></td>
+<td>endoplasmic reticulum-Golgi intermediate compartment</td>
+<td align="center">2.96E-6</td>
+<td align="center">3.64E-4</td>
+<td align="center">10.98 (8795,59,95,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005793')" id="ctrl_elements_GO:0005793">[+] Show genes</a><br/>
+<div id="elements_GO:0005793" style="display:none"> <font size="1">
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+SURF4  -  surfeit 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030176&amp;view=details" target="_blank">GO:0030176</a><a name="0030176"></a></td>
+<td>integral component of endoplasmic reticulum membrane</td>
+<td align="center">3.48E-6</td>
+<td align="center">3.99E-4</td>
+<td align="center">7.31 (8795,114,95,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030176')" id="ctrl_elements_GO:0030176">[+] Show genes</a><br/>
+<div id="elements_GO:0030176" style="display:none"> <font size="1">
+
+CALR  -  calreticulin<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+CANX  -  calnexin<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+DERL2  -  derlin 2<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008250&amp;view=details" target="_blank">GO:0008250</a><a name="0008250"></a></td>
+<td>oligosaccharyltransferase complex</td>
+<td align="center">3.98E-6</td>
+<td align="center">4.28E-4</td>
+<td align="center">33.67 (8795,11,95,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008250')" id="ctrl_elements_GO:0008250">[+] Show genes</a><br/>
+<div id="elements_GO:0008250" style="display:none"> <font size="1">
+
+MAGT1  -  magnesium transporter 1<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+RPN1  -  ribophorin i<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031227&amp;view=details" target="_blank">GO:0031227</a><a name="0031227"></a></td>
+<td>intrinsic component of endoplasmic reticulum membrane</td>
+<td align="center">4.32E-6</td>
+<td align="center">4.37E-4</td>
+<td align="center">7.12 (8795,117,95,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031227')" id="ctrl_elements_GO:0031227">[+] Show genes</a><br/>
+<div id="elements_GO:0031227" style="display:none"> <font size="1">
+
+CALR  -  calreticulin<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+CANX  -  calnexin<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+DERL2  -  derlin 2<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005790&amp;view=details" target="_blank">GO:0005790</a><a name="0005790"></a></td>
+<td>smooth endoplasmic reticulum</td>
+<td align="center">8.48E-6</td>
+<td align="center">8.11E-4</td>
+<td align="center">28.49 (8795,13,95,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005790')" id="ctrl_elements_GO:0005790">[+] Show genes</a><br/>
+<div id="elements_GO:0005790" style="display:none"> <font size="1">
+
+CALR  -  calreticulin<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030134&amp;view=details" target="_blank">GO:0030134</a><a name="0030134"></a></td>
+<td>COPII-coated ER to Golgi transport vesicle</td>
+<td align="center">1.8E-5</td>
+<td align="center">1.63E-3</td>
+<td align="center">14.93 (8795,31,95,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030134')" id="ctrl_elements_GO:0030134">[+] Show genes</a><br/>
+<div id="elements_GO:0030134" style="display:none"> <font size="1">
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071682&amp;view=details" target="_blank">GO:0071682</a><a name="0071682"></a></td>
+<td>endocytic vesicle lumen</td>
+<td align="center">2.39E-5</td>
+<td align="center">2.05E-3</td>
+<td align="center">46.29 (8795,6,95,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071682')" id="ctrl_elements_GO:0071682">[+] Show genes</a><br/>
+<div id="elements_GO:0071682" style="display:none"> <font size="1">
+
+CALR  -  calreticulin<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071256&amp;view=details" target="_blank">GO:0071256</a><a name="0071256"></a></td>
+<td>translocon complex</td>
+<td align="center">2.39E-5</td>
+<td align="center">1.95E-3</td>
+<td align="center">46.29 (8795,6,95,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071256')" id="ctrl_elements_GO:0071256">[+] Show genes</a><br/>
+<div id="elements_GO:0071256" style="display:none"> <font size="1">
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005786&amp;view=details" target="_blank">GO:0005786</a><a name="0005786"></a></td>
+<td>signal recognition particle, endoplasmic reticulum targeting</td>
+<td align="center">2.39E-5</td>
+<td align="center">1.87E-3</td>
+<td align="center">46.29 (8795,6,95,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005786')" id="ctrl_elements_GO:0005786">[+] Show genes</a><br/>
+<div id="elements_GO:0005786" style="display:none"> <font size="1">
+
+SRP68  -  signal recognition particle 68kda<br/>
+
+SRP19  -  signal recognition particle 19kda<br/>
+
+SRP72  -  signal recognition particle 72kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048500&amp;view=details" target="_blank">GO:0048500</a><a name="0048500"></a></td>
+<td>signal recognition particle</td>
+<td align="center">2.39E-5</td>
+<td align="center">1.78E-3</td>
+<td align="center">46.29 (8795,6,95,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048500')" id="ctrl_elements_GO:0048500">[+] Show genes</a><br/>
+<div id="elements_GO:0048500" style="display:none"> <font size="1">
+
+SRP68  -  signal recognition particle 68kda<br/>
+
+SRP19  -  signal recognition particle 19kda<br/>
+
+SRP72  -  signal recognition particle 72kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005798&amp;view=details" target="_blank">GO:0005798</a><a name="0005798"></a></td>
+<td>Golgi-associated vesicle</td>
+<td align="center">3.49E-5</td>
+<td align="center">2.5E-3</td>
+<td align="center">9.58 (8795,58,95,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005798')" id="ctrl_elements_GO:0005798">[+] Show genes</a><br/>
+<div id="elements_GO:0005798" style="display:none"> <font size="1">
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044431&amp;view=details" target="_blank">GO:0044431</a><a name="0044431"></a></td>
+<td>Golgi apparatus part</td>
+<td align="center">3.62E-5</td>
+<td align="center">2.5E-3</td>
+<td align="center">2.89 (8795,576,95,18)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044431')" id="ctrl_elements_GO:0044431">[+] Show genes</a><br/>
+<div id="elements_GO:0044431" style="display:none"> <font size="1">
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+SURF4  -  surfeit 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031410&amp;view=details" target="_blank">GO:0031410</a><a name="0031410"></a></td>
+<td>cytoplasmic vesicle</td>
+<td align="center">6.11E-5</td>
+<td align="center">4.04E-3</td>
+<td align="center">2.51 (8795,775,95,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031410')" id="ctrl_elements_GO:0031410">[+] Show genes</a><br/>
+<div id="elements_GO:0031410" style="display:none"> <font size="1">
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+CANX  -  calnexin<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+CALR  -  calreticulin<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+CALU  -  calumenin<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+DERL2  -  derlin 2<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097708&amp;view=details" target="_blank">GO:0097708</a><a name="0097708"></a></td>
+<td>intracellular vesicle</td>
+<td align="center">6.46E-5</td>
+<td align="center">4.12E-3</td>
+<td align="center">2.50 (8795,778,95,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097708')" id="ctrl_elements_GO:0097708">[+] Show genes</a><br/>
+<div id="elements_GO:0097708" style="display:none"> <font size="1">
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+RPN1  -  ribophorin i<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+CANX  -  calnexin<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+CALR  -  calreticulin<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+CALU  -  calumenin<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+DERL2  -  derlin 2<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000139&amp;view=details" target="_blank">GO:0000139</a><a name="0000139"></a></td>
+<td>Golgi membrane</td>
+<td align="center">8.62E-5</td>
+<td align="center">5.3E-3</td>
+<td align="center">3.09 (8795,450,95,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000139')" id="ctrl_elements_GO:0000139">[+] Show genes</a><br/>
+<div id="elements_GO:0000139" style="display:none"> <font size="1">
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+ARCN1  -  archain 1<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+SURF4  -  surfeit 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030135&amp;view=details" target="_blank">GO:0030135</a><a name="0030135"></a></td>
+<td>coated vesicle</td>
+<td align="center">1.03E-4</td>
+<td align="center">6.13E-3</td>
+<td align="center">6.42 (8795,101,95,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030135')" id="ctrl_elements_GO:0030135">[+] Show genes</a><br/>
+<div id="elements_GO:0030135" style="display:none"> <font size="1">
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044446&amp;view=details" target="_blank">GO:0044446</a><a name="0044446"></a></td>
+<td>intracellular organelle part</td>
+<td align="center">1.78E-4</td>
+<td align="center">1.02E-2</td>
+<td align="center">1.24 (8795,6054,95,81)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044446')" id="ctrl_elements_GO:0044446">[+] Show genes</a><br/>
+<div id="elements_GO:0044446" style="display:none"> <font size="1">
+
+MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+FTL  -  ferritin, light polypeptide<br/>
+
+CANX  -  calnexin<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+CHCHD2  -  coiled-coil-helix-coiled-coil-helix domain containing 2<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+
+UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br/>
+
+MLEC  -  malectin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+MTDH  -  metadherin<br/>
+
+SRSF9  -  serine/arginine-rich splicing factor 9<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br/>
+
+RPN1  -  ribophorin i<br/>
+
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+VCP  -  valosin containing protein<br/>
+
+DERL2  -  derlin 2<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+EXOSC1  -  exosome component 1<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+EMC9  -  er membrane protein complex subunit 9<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br/>
+
+MORF4L2  -  mortality factor 4 like 2<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+KRT10  -  keratin 10<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+SF3B5  -  splicing factor 3b, subunit 5, 10kda<br/>
+
+JTB  -  jumping translocation breakpoint<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+SRP68  -  signal recognition particle 68kda<br/>
+
+SRP19  -  signal recognition particle 19kda<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+MRPL22  -  mitochondrial ribosomal protein l22<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+RPS19BP1  -  ribosomal protein s19 binding protein 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+CDK2AP2  -  cyclin-dependent kinase 2 associated protein 2<br/>
+
+MRPS14  -  mitochondrial ribosomal protein s14<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SELK  -  selenoprotein k<br/>
+
+CCNC  -  cyclin c<br/>
+
+GNL3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br/>
+
+MCUR1  -  mitochondrial calcium uniporter regulator 1<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042470&amp;view=details" target="_blank">GO:0042470</a><a name="0042470"></a></td>
+<td>melanosome</td>
+<td align="center">1.86E-4</td>
+<td align="center">1.03E-2</td>
+<td align="center">7.12 (8795,78,95,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042470')" id="ctrl_elements_GO:0042470">[+] Show genes</a><br/>
+<div id="elements_GO:0042470" style="display:none"> <font size="1">
+
+CALU  -  calumenin<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+RPN1  -  ribophorin i<br/>
+
+CANX  -  calnexin<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048770&amp;view=details" target="_blank">GO:0048770</a><a name="0048770"></a></td>
+<td>pigment granule</td>
+<td align="center">1.86E-4</td>
+<td align="center">1E-2</td>
+<td align="center">7.12 (8795,78,95,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048770')" id="ctrl_elements_GO:0048770">[+] Show genes</a><br/>
+<div id="elements_GO:0048770" style="display:none"> <font size="1">
+
+CALU  -  calumenin<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+RPN1  -  ribophorin i<br/>
+
+CANX  -  calnexin<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030126&amp;view=details" target="_blank">GO:0030126</a><a name="0030126"></a></td>
+<td>COPI vesicle coat</td>
+<td align="center">2.5E-4</td>
+<td align="center">1.31E-2</td>
+<td align="center">23.14 (8795,12,95,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030126')" id="ctrl_elements_GO:0030126">[+] Show genes</a><br/>
+<div id="elements_GO:0030126" style="display:none"> <font size="1">
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+ARCN1  -  archain 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044422&amp;view=details" target="_blank">GO:0044422</a><a name="0044422"></a></td>
+<td>organelle part</td>
+<td align="center">2.91E-4</td>
+<td align="center">1.47E-2</td>
+<td align="center">1.23 (8795,6112,95,81)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044422')" id="ctrl_elements_GO:0044422">[+] Show genes</a><br/>
+<div id="elements_GO:0044422" style="display:none"> <font size="1">
+
+MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+FTL  -  ferritin, light polypeptide<br/>
+
+CANX  -  calnexin<br/>
+
+SEC61B  -  sec61 beta subunit<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM208  -  transmembrane protein 208<br/>
+
+CHCHD2  -  coiled-coil-helix-coiled-coil-helix domain containing 2<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+
+UAP1  -  udp-n-acteylglucosamine pyrophosphorylase 1<br/>
+
+MLEC  -  malectin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+MTDH  -  metadherin<br/>
+
+SRSF9  -  serine/arginine-rich splicing factor 9<br/>
+
+SEC63  -  sec63 homolog (s. cerevisiae)<br/>
+
+PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br/>
+
+RPN1  -  ribophorin i<br/>
+
+MANF  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br/>
+
+SDF2L1  -  stromal cell-derived factor 2-like 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+DNAJB11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+VCP  -  valosin containing protein<br/>
+
+DERL2  -  derlin 2<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+
+EXOSC1  -  exosome component 1<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+TMEM258  -  transmembrane protein 258<br/>
+
+NUS1  -  nuclear undecaprenyl pyrophosphate synthase 1 homolog (s. cerevisiae)<br/>
+
+EMC9  -  er membrane protein complex subunit 9<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br/>
+
+MORF4L2  -  mortality factor 4 like 2<br/>
+
+ALG14  -  alg14, udp-n-acetylglucosaminyltransferase subunit<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+SRPRB  -  signal recognition particle receptor, b subunit<br/>
+
+KRT10  -  keratin 10<br/>
+
+LRRC59  -  leucine rich repeat containing 59<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+SEC61G  -  sec61 gamma subunit<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+SLC35B1  -  solute carrier family 35, member b1<br/>
+
+SF3B5  -  splicing factor 3b, subunit 5, 10kda<br/>
+
+JTB  -  jumping translocation breakpoint<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+SRP68  -  signal recognition particle 68kda<br/>
+
+SRP19  -  signal recognition particle 19kda<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+MRPL22  -  mitochondrial ribosomal protein l22<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+SSR1  -  signal sequence receptor, alpha<br/>
+
+RPS19BP1  -  ribosomal protein s19 binding protein 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+CDK2AP2  -  cyclin-dependent kinase 2 associated protein 2<br/>
+
+MRPS14  -  mitochondrial ribosomal protein s14<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+SELK  -  selenoprotein k<br/>
+
+CCNC  -  cyclin c<br/>
+
+GNL3  -  guanine nucleotide binding protein-like 3 (nucleolar)<br/>
+
+MCUR1  -  mitochondrial calcium uniporter regulator 1<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+SLC25A4  -  solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+
+RRBP1  -  ribosome binding protein 1<br/>
+
+OSTC  -  oligosaccharyltransferase complex subunit (non-catalytic)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030133&amp;view=details" target="_blank">GO:0030133</a><a name="0030133"></a></td>
+<td>transport vesicle</td>
+<td align="center">4.48E-4</td>
+<td align="center">2.2E-2</td>
+<td align="center">5.06 (8795,128,95,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030133')" id="ctrl_elements_GO:0030133">[+] Show genes</a><br/>
+<div id="elements_GO:0030133" style="display:none"> <font size="1">
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+ARCN1  -  archain 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+SURF4  -  surfeit 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005794&amp;view=details" target="_blank">GO:0005794</a><a name="0005794"></a></td>
+<td>Golgi apparatus</td>
+<td align="center">4.78E-4</td>
+<td align="center">2.29E-2</td>
+<td align="center">2.53 (8795,585,95,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005794')" id="ctrl_elements_GO:0005794">[+] Show genes</a><br/>
+<div id="elements_GO:0005794" style="display:none"> <font size="1">
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+CRELD2  -  cysteine-rich with egf-like domains 2<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+TMEM214  -  transmembrane protein 214<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+SELK  -  selenoprotein k<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+UBA5  -  ubiquitin-like modifier activating enzyme 5<br/>
+
+SLC39A7  -  solute carrier family 39 (zinc transporter), member 7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030120&amp;view=details" target="_blank">GO:0030120</a><a name="0030120"></a></td>
+<td>vesicle coat</td>
+<td align="center">5.18E-4</td>
+<td align="center">2.41E-2</td>
+<td align="center">10.58 (8795,35,95,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030120')" id="ctrl_elements_GO:0030120">[+] Show genes</a><br/>
+<div id="elements_GO:0030120" style="display:none"> <font size="1">
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+ARCN1  -  archain 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030663&amp;view=details" target="_blank">GO:0030663</a><a name="0030663"></a></td>
+<td>COPI-coated vesicle membrane</td>
+<td align="center">6.83E-4</td>
+<td align="center">3.09E-2</td>
+<td align="center">46.29 (8795,4,95,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030663')" id="ctrl_elements_GO:0030663">[+] Show genes</a><br/>
+<div id="elements_GO:0030663" style="display:none"> <font size="1">
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details" target="_blank">GO:0031982</a><a name="0031982"></a></td>
+<td>vesicle</td>
+<td align="center">7.06E-4</td>
+<td align="center">3.12E-2</td>
+<td align="center">1.73 (8795,1710,95,32)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031982')" id="ctrl_elements_GO:0031982">[+] Show genes</a><br/>
+<div id="elements_GO:0031982" style="display:none"> <font size="1">
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+FTL  -  ferritin, light polypeptide<br/>
+
+CANX  -  calnexin<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+KRT10  -  keratin 10<br/>
+
+AUP1  -  ancient ubiquitous protein 1<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+
+NANS  -  n-acetylneuraminic acid synthase<br/>
+
+RPN1  -  ribophorin i<br/>
+
+PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br/>
+
+PSMA3  -  proteasome (prosome, macropain) subunit, alpha type, 3<br/>
+
+IER3IP1  -  immediate early response 3 interacting protein 1<br/>
+
+ARCN1  -  archain 1<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+CALR  -  calreticulin<br/>
+
+CALU  -  calumenin<br/>
+
+GMPPA  -  gdp-mannose pyrophosphorylase a<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+HSPA5  -  heat shock 70kda protein 5 (glucose-regulated protein, 78kda)<br/>
+
+DERL2  -  derlin 2<br/>
+
+VCP  -  valosin containing protein<br/>
+
+PDIA6  -  protein disulfide isomerase family a, member 6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044433&amp;view=details" target="_blank">GO:0044433</a><a name="0044433"></a></td>
+<td>cytoplasmic vesicle part</td>
+<td align="center">7.13E-4</td>
+<td align="center">3.07E-2</td>
+<td align="center">2.16 (8795,859,95,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044433')" id="ctrl_elements_GO:0044433">[+] Show genes</a><br/>
+<div id="elements_GO:0044433" style="display:none"> <font size="1">
+
+MLEC  -  malectin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+PSMA5  -  proteasome (prosome, macropain) subunit, alpha type, 5<br/>
+
+FTL  -  ferritin, light polypeptide<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+ARCN1  -  archain 1<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+CALR  -  calreticulin<br/>
+
+PDXK  -  pyridoxal (pyridoxine, vitamin b6) kinase<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+DNAJC3  -  dnaj (hsp40) homolog, subfamily c, member 3<br/>
+
+HSP90B1  -  heat shock protein 90kda beta (grp94), member 1<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+VCP  -  valosin containing protein<br/>
+
+HYOU1  -  hypoxia up-regulated 1<br/>
+
+SURF4  -  surfeit 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details" target="_blank">GO:0098588</a><a name="0098588"></a></td>
+<td>bounding membrane of organelle</td>
+<td align="center">9.3E-4</td>
+<td align="center">3.9E-2</td>
+<td align="center">1.93 (8795,1150,95,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098588')" id="ctrl_elements_GO:0098588">[+] Show genes</a><br/>
+<div id="elements_GO:0098588" style="display:none"> <font size="1">
+
+MLEC  -  malectin<br/>
+
+ATP6V0B  -  atpase, h+ transporting, lysosomal 21kda, v0 subunit b<br/>
+
+GORASP2  -  golgi reassembly stacking protein 2, 55kda<br/>
+
+YIF1B  -  yip1 interacting factor homolog b (s. cerevisiae)<br/>
+
+MSTO1  -  misato 1, mitochondrial distribution and morphology regulator<br/>
+
+SEC13  -  sec13 homolog (s. cerevisiae)<br/>
+
+SLC17A9  -  solute carrier family 17 (vesicular nucleotide transporter), member 9<br/>
+
+CISD2  -  cdgsh iron sulfur domain 2<br/>
+
+ARCN1  -  archain 1<br/>
+
+KDELR2  -  kdel (lys-asp-glu-leu) endoplasmic reticulum protein retention receptor 2<br/>
+
+ARF1  -  adp-ribosylation factor 1<br/>
+
+PREB  -  prolactin regulatory element binding<br/>
+
+GOSR2  -  golgi snap receptor complex member 2<br/>
+
+MAGT1  -  magnesium transporter 1<br/>
+
+COPB2  -  coatomer protein complex, subunit beta 2 (beta prime)<br/>
+
+CALR  -  calreticulin<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMED9  -  transmembrane emp24 protein transport domain containing 9<br/>
+
+TMEM167A  -  transmembrane protein 167a<br/>
+
+COPE  -  coatomer protein complex, subunit epsilon<br/>
+
+CREB3  -  camp responsive element binding protein 3<br/>
+
+SURF4  -  surfeit 4<br/>
+
+HAX1  -  hcls1 associated protein x-1<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9126 genes out of 9571 gene terms entered by the user.<br/> 9126 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>98 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br/>Only 8795 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOCOMPONENT.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 16, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,5250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="457,513,540,593" href="#0071310" shape="RECT"/>
+<area alt="" coords="300,668,425,748" href="#0071417" shape="RECT"/>
+<area alt="" coords="164,522,289,585" href="#0010243" shape="RECT"/>
+<area alt="" coords="665,684,764,732" href="#0043200" shape="RECT"/>
+<area alt="" coords="4285,513,4408,593" href="#0051094" shape="RECT"/>
+<area alt="" coords="4537,831,4641,911" href="#1904018" shape="RECT"/>
+<area alt="" coords="2220,529,2337,577" href="#0002376" shape="RECT"/>
+<area alt="" coords="2148,839,2233,902" href="#0002253" shape="RECT"/>
+<area alt="" coords="1644,684,1769,732" href="#0006955" shape="RECT"/>
+<area alt="" coords="1964,847,2081,895" href="#0002252" shape="RECT"/>
+<area alt="" coords="6869,1269,6992,1349" href="#0010518" shape="RECT"/>
+<area alt="" coords="6796,1407,6918,1487" href="#0010863" shape="RECT"/>
+<area alt="" coords="705,117,790,165" href="#0050896" shape="RECT"/>
+<area alt="" coords="709,255,786,303" href="#0006950" shape="RECT"/>
+<area alt="" coords="153,684,276,732" href="#0072376" shape="RECT"/>
+<area alt="" coords="810,247,896,310" href="#0051716" shape="RECT"/>
+<area alt="" coords="548,255,636,303" href="#0042221" shape="RECT"/>
+<area alt="" coords="221,247,330,310" href="#0009719" shape="RECT"/>
+<area alt="" coords="149,839,280,902" href="#0072378" shape="RECT"/>
+<area alt="" coords="5658,1269,5770,1349" href="#0001934" shape="RECT"/>
+<area alt="" coords="5164,1415,5289,1478" href="#0043410" shape="RECT"/>
+<area alt="" coords="926,392,1017,440" href="#0009611" shape="RECT"/>
+<area alt="" coords="1521,513,1622,593" href="#1901136" shape="RECT"/>
+<area alt="" coords="1268,677,1366,739" href="#0006026" shape="RECT"/>
+<area alt="" coords="3208,522,3301,585" href="#0080134" shape="RECT"/>
+<area alt="" coords="3257,677,3342,739" href="#0031347" shape="RECT"/>
+<area alt="" coords="3022,677,3116,739" href="#1903034" shape="RECT"/>
+<area alt="" coords="3020,831,3105,911" href="#0031348" shape="RECT"/>
+<area alt="" coords="6353,1553,6508,1650" href="#0043552" shape="RECT"/>
+<area alt="" coords="5028,677,5153,739" href="#0008284" shape="RECT"/>
+<area alt="" coords="4000,513,4109,593" href="#2000026" shape="RECT"/>
+<area alt="" coords="3862,677,3996,739" href="#0070167" shape="RECT"/>
+<area alt="" coords="4401,677,4505,739" href="#1901342" shape="RECT"/>
+<area alt="" coords="6690,529,6848,577" href="#0048705" shape="RECT"/>
+<area alt="" coords="6814,677,6972,739" href="#0048704" shape="RECT"/>
+<area alt="" coords="617,831,721,911" href="#0071230" shape="RECT"/>
+<area alt="" coords="6408,1269,6490,1349" href="#0033674" shape="RECT"/>
+<area alt="" coords="6378,1407,6482,1487" href="#0090218" shape="RECT"/>
+<area alt="" coords="5948,822,6030,919" href="#0051247" shape="RECT"/>
+<area alt="" coords="5842,977,5968,1074" href="#0032270" shape="RECT"/>
+<area alt="" coords="3861,1269,3962,1349" href="#0010595" shape="RECT"/>
+<area alt="" coords="3790,1407,3902,1487" href="#2001028" shape="RECT"/>
+<area alt="" coords="2842,513,2957,593" href="#0002684" shape="RECT"/>
+<area alt="" coords="2758,668,2844,748" href="#0050778" shape="RECT"/>
+<area alt="" coords="3809,1141,3910,1203" href="#0010594" shape="RECT"/>
+<area alt="" coords="3674,1278,3786,1341" href="#2001026" shape="RECT"/>
+<area alt="" coords="3737,684,3838,732" href="#0030278" shape="RECT"/>
+<area alt="" coords="3836,847,3982,895" href="#0030500" shape="RECT"/>
+<area alt="" coords="1832,1001,1928,1049" href="#0006956" shape="RECT"/>
+<area alt="" coords="1832,1132,1928,1212" href="#0006958" shape="RECT"/>
+<area alt="" coords="2981,529,3112,577" href="#0007165" shape="RECT"/>
+<area alt="" coords="2868,684,2998,732" href="#0035556" shape="RECT"/>
+<area alt="" coords="6200,831,6298,911" href="#0019220" shape="RECT"/>
+<area alt="" coords="6141,977,6240,1074" href="#0045937" shape="RECT"/>
+<area alt="" coords="5992,1001,6117,1049" href="#0042325" shape="RECT"/>
+<area alt="" coords="6410,985,6522,1065" href="#1903725" shape="RECT"/>
+<area alt="" coords="3140,668,3233,748" href="#0048585" shape="RECT"/>
+<area alt="" coords="3129,822,3222,919" href="#0032102" shape="RECT"/>
+<area alt="" coords="2902,831,2996,911" href="#1903035" shape="RECT"/>
+<area alt="" coords="1382,522,1497,585" href="#0009057" shape="RECT"/>
+<area alt="" coords="4596,392,4697,440" href="#0032879" shape="RECT"/>
+<area alt="" coords="4730,513,4821,593" href="#0051270" shape="RECT"/>
+<area alt="" coords="756,385,902,447" href="#1901700" shape="RECT"/>
+<area alt="" coords="756,513,902,593" href="#1901701" shape="RECT"/>
+<area alt="" coords="7042,392,7152,440" href="#0035107" shape="RECT"/>
+<area alt="" coords="7042,522,7152,585" href="#0035113" shape="RECT"/>
+<area alt="" coords="7176,529,7314,577" href="#0035108" shape="RECT"/>
+<area alt="" coords="1924,385,2020,447" href="#0043062" shape="RECT"/>
+<area alt="" coords="1870,529,2001,577" href="#0030198" shape="RECT"/>
+<area alt="" coords="4020,677,4118,739" href="#0040017" shape="RECT"/>
+<area alt="" coords="3674,994,3776,1057" href="#0050921" shape="RECT"/>
+<area alt="" coords="4193,839,4294,902" href="#2000147" shape="RECT"/>
+<area alt="" coords="4300,376,4393,456" href="#0048518" shape="RECT"/>
+<area alt="" coords="5045,513,5128,593" href="#0048522" shape="RECT"/>
+<area alt="" coords="3528,513,3621,593" href="#0048584" shape="RECT"/>
+<area alt="" coords="4630,659,4740,757" href="#0051240" shape="RECT"/>
+<area alt="" coords="5909,513,6005,593" href="#0009893" shape="RECT"/>
+<area alt="" coords="5152,522,5237,585" href="#0023056" shape="RECT"/>
+<area alt="" coords="6776,994,6858,1057" href="#0060191" shape="RECT"/>
+<area alt="" coords="6889,1132,6972,1212" href="#0060193" shape="RECT"/>
+<area alt="" coords="6742,1141,6865,1203" href="#0010517" shape="RECT"/>
+<area alt="" coords="5374,839,5505,902" href="#1902531" shape="RECT"/>
+<area alt="" coords="5033,1285,5158,1333" href="#0043408" shape="RECT"/>
+<area alt="" coords="5120,985,5250,1065" href="#1902533" shape="RECT"/>
+<area alt="" coords="5274,985,5429,1065" href="#0014066" shape="RECT"/>
+<area alt="" coords="5453,994,5581,1057" href="#0051896" shape="RECT"/>
+<area alt="" coords="2046,117,2118,165" href="#0009987" shape="RECT"/>
+<area alt="" coords="2050,247,2141,310" href="#0016043" shape="RECT"/>
+<area alt="" coords="1914,239,2002,319" href="#0006928" shape="RECT"/>
+<area alt="" coords="2444,247,2550,310" href="#0048869" shape="RECT"/>
+<area alt="" coords="6514,1278,6618,1341" href="#0043550" shape="RECT"/>
+<area alt="" coords="6506,1407,6661,1487" href="#0043551" shape="RECT"/>
+<area alt="" coords="2713,985,2798,1065" href="#0002697" shape="RECT"/>
+<area alt="" coords="3249,1141,3358,1203" href="#0030449" shape="RECT"/>
+<area alt="" coords="2364,813,2478,928" href="#0003337" shape="RECT"/>
+<area alt="" coords="6256,392,6389,440" href="#0009888" shape="RECT"/>
+<area alt="" coords="6256,529,6389,577" href="#0031214" shape="RECT"/>
+<area alt="" coords="6413,529,6536,577" href="#0030324" shape="RECT"/>
+<area alt="" coords="1793,684,1910,732" href="#0085029" shape="RECT"/>
+<area alt="" coords="1828,847,1918,895" href="#0048251" shape="RECT"/>
+<area alt="" coords="497,376,590,456" href="#0070887" shape="RECT"/>
+<area alt="" coords="5714,385,5810,447" href="#0019222" shape="RECT"/>
+<area alt="" coords="5541,513,5669,593" href="#0060255" shape="RECT"/>
+<area alt="" coords="5693,505,5778,602" href="#0051171" shape="RECT"/>
+<area alt="" coords="5802,513,5885,593" href="#0031323" shape="RECT"/>
+<area alt="" coords="6029,513,6112,593" href="#0080090" shape="RECT"/>
+<area alt="" coords="4845,529,4970,577" href="#0042127" shape="RECT"/>
+<area alt="" coords="4764,677,4889,739" href="#0008285" shape="RECT"/>
+<area alt="" coords="5101,1561,5210,1641" href="#0070374" shape="RECT"/>
+<area alt="" coords="5030,1415,5140,1478" href="#0070372" shape="RECT"/>
+<area alt="" coords="4057,847,4169,895" href="#0030334" shape="RECT"/>
+<area alt="" coords="3956,994,4054,1057" href="#0010632" shape="RECT"/>
+<area alt="" coords="4081,994,4193,1057" href="#0030335" shape="RECT"/>
+<area alt="" coords="3800,985,3930,1065" href="#1904847" shape="RECT"/>
+<area alt="" coords="54,513,140,593" href="#1901699" shape="RECT"/>
+<area alt="" coords="5268,839,5350,902" href="#1903317" shape="RECT"/>
+<area alt="" coords="4960,994,5045,1057" href="#0070613" shape="RECT"/>
+<area alt="" coords="4148,385,4270,447" href="#0050793" shape="RECT"/>
+<area alt="" coords="4268,668,4377,748" href="#0022603" shape="RECT"/>
+<area alt="" coords="5228,677,5374,739" href="#0010647" shape="RECT"/>
+<area alt="" coords="5828,659,5910,757" href="#0031325" shape="RECT"/>
+<area alt="" coords="4913,659,5004,757" href="#0051272" shape="RECT"/>
+<area alt="" coords="5438,1132,5566,1212" href="#0051897" shape="RECT"/>
+<area alt="" coords="3609,847,3710,895" href="#0050920" shape="RECT"/>
+<area alt="" coords="1126,522,1225,585" href="#0006022" shape="RECT"/>
+<area alt="" coords="1108,677,1244,739" href="#0030203" shape="RECT"/>
+<area alt="" coords="3934,1123,4065,1221" href="#1904849" shape="RECT"/>
+<area alt="" coords="2044,385,2172,447" href="#0043933" shape="RECT"/>
+<area alt="" coords="1934,684,2052,732" href="#0030199" shape="RECT"/>
+<area alt="" coords="1809,385,1900,447" href="#0022607" shape="RECT"/>
+<area alt="" coords="2076,529,2196,577" href="#0097435" shape="RECT"/>
+<area alt="" coords="6420,392,6518,440" href="#0048513" shape="RECT"/>
+<area alt="" coords="7162,684,7301,732" href="#0030326" shape="RECT"/>
+<area alt="" coords="6722,1278,6845,1341" href="#1900274" shape="RECT"/>
+<area alt="" coords="4089,1132,4188,1212" href="#0010634" shape="RECT"/>
+<area alt="" coords="6034,1141,6160,1203" href="#0042327" shape="RECT"/>
+<area alt="" coords="4734,385,4817,447" href="#0050794" shape="RECT"/>
+<area alt="" coords="5261,529,5408,577" href="#0010646" shape="RECT"/>
+<area alt="" coords="3645,505,3752,602" href="#0090287" shape="RECT"/>
+<area alt="" coords="4624,513,4706,593" href="#0048523" shape="RECT"/>
+<area alt="" coords="3841,376,3934,456" href="#0048519" shape="RECT"/>
+<area alt="" coords="1674,847,1797,895" href="#0006959" shape="RECT"/>
+<area alt="" coords="1228,385,1342,447" href="#0043170" shape="RECT"/>
+<area alt="" coords="977,529,1102,577" href="#0019538" shape="RECT"/>
+<area alt="" coords="2772,839,2878,902" href="#0048017" shape="RECT"/>
+<area alt="" coords="5934,659,6062,757" href="#0010604" shape="RECT"/>
+<area alt="" coords="6264,985,6386,1065" href="#0045834" shape="RECT"/>
+<area alt="" coords="6221,1123,6333,1221" href="#1903727" shape="RECT"/>
+<area alt="" coords="5516,684,5646,732" href="#0010468" shape="RECT"/>
+<area alt="" coords="6394,839,6517,902" href="#0019216" shape="RECT"/>
+<area alt="" coords="1697,529,1796,577" href="#0016477" shape="RECT"/>
+<area alt="" coords="6196,668,6302,748" href="#0051174" shape="RECT"/>
+<area alt="" coords="6069,822,6176,919" href="#0010562" shape="RECT"/>
+<area alt="" coords="6672,839,6768,902" href="#0051336" shape="RECT"/>
+<area alt="" coords="6882,985,6978,1065" href="#0051345" shape="RECT"/>
+<area alt="" coords="5722,994,5818,1057" href="#0052547" shape="RECT"/>
+<area alt="" coords="5144,831,5237,911" href="#0009967" shape="RECT"/>
+<area alt="" coords="3385,822,3478,919" href="#0032103" shape="RECT"/>
+<area alt="" coords="4482,522,4600,585" href="#0010810" shape="RECT"/>
+<area alt="" coords="6086,651,6172,765" href="#0051173" shape="RECT"/>
+<area alt="" coords="28,376,137,456" href="#0071495" shape="RECT"/>
+<area alt="" coords="4397,847,4509,895" href="#0045765" shape="RECT"/>
+<area alt="" coords="2192,5,2079,29" href="#0008150" shape="RECT"/>
+<area alt="" coords="4237,117,4317,165" href="#0065007" shape="RECT"/>
+<area alt="" coords="2142,101,2241,181" href="#0071840" shape="RECT"/>
+<area alt="" coords="1441,117,1524,165" href="#0008152" shape="RECT"/>
+<area alt="" coords="5961,117,6068,165" href="#0032502" shape="RECT"/>
+<area alt="" coords="6474,117,6554,165" href="#0022610" shape="RECT"/>
+<area alt="" coords="1880,117,1965,165" href="#0040011" shape="RECT"/>
+<area alt="" coords="313,522,433,585" href="#0014070" shape="RECT"/>
+<area alt="" coords="3649,1398,3766,1495" href="#2000544" shape="RECT"/>
+<area alt="" coords="564,522,681,585" href="#0071229" shape="RECT"/>
+<area alt="" coords="4445,392,4557,440" href="#0030155" shape="RECT"/>
+<area alt="" coords="3776,529,3874,577" href="#0040012" shape="RECT"/>
+<area alt="" coords="4142,684,4244,732" href="#2000145" shape="RECT"/>
+<area alt="" coords="6194,247,6288,310" href="#0048856" shape="RECT"/>
+<area alt="" coords="6090,392,6232,440" href="#0048731" shape="RECT"/>
+<area alt="" coords="6424,1141,6506,1203" href="#0043549" shape="RECT"/>
+<area alt="" coords="5249,1123,5404,1221" href="#0014068" shape="RECT"/>
+<area alt="" coords="6544,839,6648,902" href="#0051338" shape="RECT"/>
+<area alt="" coords="6648,985,6752,1065" href="#0051347" shape="RECT"/>
+<area alt="" coords="184,385,269,447" href="#1901698" shape="RECT"/>
+<area alt="" coords="2436,392,2558,440" href="#0030154" shape="RECT"/>
+<area alt="" coords="2508,513,2633,593" href="#0061005" shape="RECT"/>
+<area alt="" coords="2361,529,2484,577" href="#0030855" shape="RECT"/>
+<area alt="" coords="6560,677,6648,739" href="#0050790" shape="RECT"/>
+<area alt="" coords="6792,831,6880,911" href="#0043085" shape="RECT"/>
+<area alt="" coords="1513,255,1590,303" href="#0009056" shape="RECT"/>
+<area alt="" coords="1492,385,1622,447" href="#1901575" shape="RECT"/>
+<area alt="" coords="3788,1544,3905,1659" href="#2000546" shape="RECT"/>
+<area alt="" coords="5398,677,5492,739" href="#0009966" shape="RECT"/>
+<area alt="" coords="6904,839,7021,902" href="#0048701" shape="RECT"/>
+<area alt="" coords="1697,392,1785,440" href="#0048870" shape="RECT"/>
+<area alt="" coords="5670,668,5753,748" href="#0051246" shape="RECT"/>
+<area alt="" coords="6136,522,6232,585" href="#0065009" shape="RECT"/>
+<area alt="" coords="4230,247,4324,310" href="#0050789" shape="RECT"/>
+<area alt="" coords="6848,255,6946,303" href="#0007155" shape="RECT"/>
+<area alt="" coords="361,385,444,447" href="#0010033" shape="RECT"/>
+<area alt="" coords="614,392,732,440" href="#0001101" shape="RECT"/>
+<area alt="" coords="3502,831,3585,911" href="#2000257" shape="RECT"/>
+<area alt="" coords="5728,831,5853,911" href="#0032268" shape="RECT"/>
+<area alt="" coords="5605,847,5704,895" href="#0030162" shape="RECT"/>
+<area alt="" coords="2508,668,2633,748" href="#0072202" shape="RECT"/>
+<area alt="" coords="2358,659,2484,757" href="#0035850" shape="RECT"/>
+<area alt="" coords="6686,668,6782,748" href="#0044093" shape="RECT"/>
+<area alt="" coords="3246,839,3361,902" href="#0050727" shape="RECT"/>
+<area alt="" coords="3229,994,3378,1057" href="#0002673" shape="RECT"/>
+<area alt="" coords="6890,392,7000,440" href="#0048598" shape="RECT"/>
+<area alt="" coords="6872,529,7018,577" href="#0048562" shape="RECT"/>
+<area alt="" coords="1017,255,1145,303" href="#0044238" shape="RECT"/>
+<area alt="" coords="1178,839,1314,902" href="#0006027" shape="RECT"/>
+<area alt="" coords="4009,376,4118,456" href="#0051239" shape="RECT"/>
+<area alt="" coords="2228,677,2334,739" href="#0060231" shape="RECT"/>
+<area alt="" coords="5596,1141,5708,1203" href="#0001932" shape="RECT"/>
+<area alt="" coords="6996,677,7134,739" href="#0048557" shape="RECT"/>
+<area alt="" coords="6714,247,6824,310" href="#0009653" shape="RECT"/>
+<area alt="" coords="6714,392,6824,440" href="#0009887" shape="RECT"/>
+<area alt="" coords="3366,668,3460,748" href="#0032101" shape="RECT"/>
+<area alt="" coords="1218,239,1304,319" href="#0006807" shape="RECT"/>
+<area alt="" coords="1352,247,1482,310" href="#0071704" shape="RECT"/>
+<area alt="" coords="1697,247,1780,310" href="#0032963" shape="RECT"/>
+<area alt="" coords="1249,513,1358,593" href="#1901565" shape="RECT"/>
+<area alt="" coords="1094,376,1204,456" href="#1901564" shape="RECT"/>
+<area alt="" coords="5953,230,6076,327" href="#0048646" shape="RECT"/>
+<area alt="" coords="5732,1123,5825,1221" href="#0031401" shape="RECT"/>
+<area alt="" coords="3444,385,3537,447" href="#0048583" shape="RECT"/>
+<area alt="" coords="2733,522,2818,585" href="#0050776" shape="RECT"/>
+<area alt="" coords="6560,529,6666,577" href="#0042476" shape="RECT"/>
+<area alt="" coords="1366,376,1468,456" href="#1901135" shape="RECT"/>
+<area alt="" coords="4464,994,4576,1057" href="#0045766" shape="RECT"/>
+<area alt="" coords="2909,994,3034,1057" href="#0002920" shape="RECT"/>
+<area alt="" coords="5605,985,5698,1065" href="#0031399" shape="RECT"/>
+<area alt="" coords="5152,392,5237,440" href="#0023051" shape="RECT"/>
+<area alt="" coords="2762,385,2877,447" href="#0002682" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data5/go/28/GOPROCESS.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030198&amp;view=details" target="_blank">GO:0030198</a><a name="0030198"></a></td>
+<td>extracellular matrix organization</td>
+<td align="center">5.87E-18</td>
+<td align="center">8.83E-14</td>
+<td align="center">12.80 (15353,323,78,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030198')" id="ctrl_elements_GO:0030198">[+] Show genes</a><br/>
+<div id="elements_GO:0030198" style="display:none"> <font size="1">
+
+CTSK  -  cathepsin k<br/>
+
+COL6A2  -  collagen, type vi, alpha 2<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+COL4A4  -  collagen, type iv, alpha 4<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+VIT  -  vitrin<br/>
+
+CCDC80  -  coiled-coil domain containing 80<br/>
+
+COL14A1  -  collagen, type xiv, alpha 1<br/>
+
+TNXB  -  tenascin xb<br/>
+
+DPT  -  dermatopontin<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043062&amp;view=details" target="_blank">GO:0043062</a><a name="0043062"></a></td>
+<td>extracellular structure organization</td>
+<td align="center">8.85E-17</td>
+<td align="center">6.66E-13</td>
+<td align="center">11.20 (15353,369,78,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043062')" id="ctrl_elements_GO:0043062">[+] Show genes</a><br/>
+<div id="elements_GO:0043062" style="display:none"> <font size="1">
+
+CTSK  -  cathepsin k<br/>
+
+COL6A2  -  collagen, type vi, alpha 2<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+COL4A4  -  collagen, type iv, alpha 4<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+VIT  -  vitrin<br/>
+
+CCDC80  -  coiled-coil domain containing 80<br/>
+
+COL14A1  -  collagen, type xiv, alpha 1<br/>
+
+TNXB  -  tenascin xb<br/>
+
+DPT  -  dermatopontin<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030199&amp;view=details" target="_blank">GO:0030199</a><a name="0030199"></a></td>
+<td>collagen fibril organization</td>
+<td align="center">6.41E-8</td>
+<td align="center">3.22E-4</td>
+<td align="center">28.12 (15353,42,78,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030199')" id="ctrl_elements_GO:0030199">[+] Show genes</a><br/>
+<div id="elements_GO:0030199" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+COL14A1  -  collagen, type xiv, alpha 1<br/>
+
+TNXB  -  tenascin xb<br/>
+
+DPT  -  dermatopontin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097435&amp;view=details" target="_blank">GO:0097435</a><a name="0097435"></a></td>
+<td>supramolecular fiber organization</td>
+<td align="center">1.15E-7</td>
+<td align="center">4.33E-4</td>
+<td align="center">6.32 (15353,405,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097435')" id="ctrl_elements_GO:0097435">[+] Show genes</a><br/>
+<div id="elements_GO:0097435" style="display:none"> <font size="1">
+
+TMOD1  -  tropomodulin 1<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+COL14A1  -  collagen, type xiv, alpha 1<br/>
+
+TNXB  -  tenascin xb<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+
+DPT  -  dermatopontin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072376&amp;view=details" target="_blank">GO:0072376</a><a name="0072376"></a></td>
+<td>protein activation cascade</td>
+<td align="center">1.86E-7</td>
+<td align="center">5.6E-4</td>
+<td align="center">16.80 (15353,82,78,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0072376')" id="ctrl_elements_GO:0072376">[+] Show genes</a><br/>
+<div id="elements_GO:0072376" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042127&amp;view=details" target="_blank">GO:0042127</a><a name="0042127"></a></td>
+<td>regulation of cell proliferation</td>
+<td align="center">2E-7</td>
+<td align="center">5.01E-4</td>
+<td align="center">3.28 (15353,1382,78,23)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042127')" id="ctrl_elements_GO:0042127">[+] Show genes</a><br/>
+<div id="elements_GO:0042127" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+OGN  -  osteoglycin<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PODN  -  podocan<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+DPT  -  dermatopontin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007155&amp;view=details" target="_blank">GO:0007155</a><a name="0007155"></a></td>
+<td>cell adhesion</td>
+<td align="center">7.4E-7</td>
+<td align="center">1.59E-3</td>
+<td align="center">4.01 (15353,835,78,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007155')" id="ctrl_elements_GO:0007155">[+] Show genes</a><br/>
+<div id="elements_GO:0007155" style="display:none"> <font size="1">
+
+COL6A2  -  collagen, type vi, alpha 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+PCDH10  -  protocadherin 10<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+OMD  -  osteomodulin<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+MFGE8  -  milk fat globule-egf factor 8 protein<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+SPARCL1  -  sparc-like 1 (hevin)<br/>
+
+COL14A1  -  collagen, type xiv, alpha 1<br/>
+
+TNXB  -  tenascin xb<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+DPT  -  dermatopontin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022610&amp;view=details" target="_blank">GO:0022610</a><a name="0022610"></a></td>
+<td>biological adhesion</td>
+<td align="center">8.17E-7</td>
+<td align="center">1.54E-3</td>
+<td align="center">3.98 (15353,841,78,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0022610')" id="ctrl_elements_GO:0022610">[+] Show genes</a><br/>
+<div id="elements_GO:0022610" style="display:none"> <font size="1">
+
+COL6A2  -  collagen, type vi, alpha 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+PCDH10  -  protocadherin 10<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+OMD  -  osteomodulin<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+MFGE8  -  milk fat globule-egf factor 8 protein<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+SPARCL1  -  sparc-like 1 (hevin)<br/>
+
+COL14A1  -  collagen, type xiv, alpha 1<br/>
+
+TNXB  -  tenascin xb<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+DPT  -  dermatopontin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009653&amp;view=details" target="_blank">GO:0009653</a><a name="0009653"></a></td>
+<td>anatomical structure morphogenesis</td>
+<td align="center">1.61E-6</td>
+<td align="center">2.69E-3</td>
+<td align="center">3.27 (15353,1204,78,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009653')" id="ctrl_elements_GO:0009653">[+] Show genes</a><br/>
+<div id="elements_GO:0009653" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009887&amp;view=details" target="_blank">GO:0009887</a><a name="0009887"></a></td>
+<td>animal organ morphogenesis</td>
+<td align="center">1.93E-6</td>
+<td align="center">2.9E-3</td>
+<td align="center">5.41 (15353,437,78,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009887')" id="ctrl_elements_GO:0009887">[+] Show genes</a><br/>
+<div id="elements_GO:0009887" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010863&amp;view=details" target="_blank">GO:0010863</a><a name="0010863"></a></td>
+<td>positive regulation of phospholipase C activity</td>
+<td align="center">1.93E-6</td>
+<td align="center">2.64E-3</td>
+<td align="center">24.00 (15353,41,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010863')" id="ctrl_elements_GO:0010863">[+] Show genes</a><br/>
+<div id="elements_GO:0010863" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1900274&amp;view=details" target="_blank">GO:1900274</a><a name="1900274"></a></td>
+<td>regulation of phospholipase C activity</td>
+<td align="center">2.46E-6</td>
+<td align="center">3.08E-3</td>
+<td align="center">22.89 (15353,43,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1900274')" id="ctrl_elements_GO:1900274">[+] Show genes</a><br/>
+<div id="elements_GO:1900274" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048731&amp;view=details" target="_blank">GO:0048731</a><a name="0048731"></a></td>
+<td>system development</td>
+<td align="center">2.58E-6</td>
+<td align="center">2.99E-3</td>
+<td align="center">4.43 (15353,622,78,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048731')" id="ctrl_elements_GO:0048731">[+] Show genes</a><br/>
+<div id="elements_GO:0048731" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+GSN  -  gelsolin<br/>
+
+SHC3  -  shc (src homology 2 domain containing) transforming protein 3<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043408&amp;view=details" target="_blank">GO:0043408</a><a name="0043408"></a></td>
+<td>regulation of MAPK cascade</td>
+<td align="center">3.34E-6</td>
+<td align="center">3.59E-3</td>
+<td align="center">4.33 (15353,636,78,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043408')" id="ctrl_elements_GO:0043408">[+] Show genes</a><br/>
+<div id="elements_GO:0043408" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000145&amp;view=details" target="_blank">GO:2000145</a><a name="2000145"></a></td>
+<td>regulation of cell motility</td>
+<td align="center">3.48E-6</td>
+<td align="center">3.49E-3</td>
+<td align="center">3.79 (15353,832,78,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000145')" id="ctrl_elements_GO:2000145">[+] Show genes</a><br/>
+<div id="elements_GO:2000145" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PODN  -  podocan<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048584&amp;view=details" target="_blank">GO:0048584</a><a name="0048584"></a></td>
+<td>positive regulation of response to stimulus</td>
+<td align="center">4.31E-6</td>
+<td align="center">4.05E-3</td>
+<td align="center">2.51 (15353,2036,78,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048584')" id="ctrl_elements_GO:0048584">[+] Show genes</a><br/>
+<div id="elements_GO:0048584" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+CTSK  -  cathepsin k<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030449&amp;view=details" target="_blank">GO:0030449</a><a name="0030449"></a></td>
+<td>regulation of complement activation</td>
+<td align="center">5.27E-6</td>
+<td align="center">4.66E-3</td>
+<td align="center">19.68 (15353,50,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030449')" id="ctrl_elements_GO:0030449">[+] Show genes</a><br/>
+<div id="elements_GO:0030449" style="display:none"> <font size="1">
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032101&amp;view=details" target="_blank">GO:0032101</a><a name="0032101"></a></td>
+<td>regulation of response to external stimulus</td>
+<td align="center">5.32E-6</td>
+<td align="center">4.45E-3</td>
+<td align="center">3.89 (15353,759,78,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032101')" id="ctrl_elements_GO:0032101">[+] Show genes</a><br/>
+<div id="elements_GO:0032101" style="display:none"> <font size="1">
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000026&amp;view=details" target="_blank">GO:2000026</a><a name="2000026"></a></td>
+<td>regulation of multicellular organismal development</td>
+<td align="center">5.51E-6</td>
+<td align="center">4.36E-3</td>
+<td align="center">2.63 (15353,1799,78,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000026')" id="ctrl_elements_GO:2000026">[+] Show genes</a><br/>
+<div id="elements_GO:2000026" style="display:none"> <font size="1">
+
+CTSK  -  cathepsin k<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+OMD  -  osteomodulin<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+MGP  -  matrix gla protein<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000257&amp;view=details" target="_blank">GO:2000257</a><a name="2000257"></a></td>
+<td>regulation of protein activation cascade</td>
+<td align="center">5.82E-6</td>
+<td align="center">4.38E-3</td>
+<td align="center">19.30 (15353,51,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000257')" id="ctrl_elements_GO:2000257">[+] Show genes</a><br/>
+<div id="elements_GO:2000257" style="display:none"> <font size="1">
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010810&amp;view=details" target="_blank">GO:0010810</a><a name="0010810"></a></td>
+<td>regulation of cell-substrate adhesion</td>
+<td align="center">6.68E-6</td>
+<td align="center">4.78E-3</td>
+<td align="center">8.03 (15353,196,78,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010810')" id="ctrl_elements_GO:0010810">[+] Show genes</a><br/>
+<div id="elements_GO:0010810" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+VIT  -  vitrin<br/>
+
+FN1  -  fibronectin 1<br/>
+
+CCDC80  -  coiled-coil domain containing 80<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030334&amp;view=details" target="_blank">GO:0030334</a><a name="0030334"></a></td>
+<td>regulation of cell migration</td>
+<td align="center">7.87E-6</td>
+<td align="center">5.38E-3</td>
+<td align="center">3.77 (15353,784,78,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030334')" id="ctrl_elements_GO:0030334">[+] Show genes</a><br/>
+<div id="elements_GO:0030334" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PODN  -  podocan<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045765&amp;view=details" target="_blank">GO:0045765</a><a name="0045765"></a></td>
+<td>regulation of angiogenesis</td>
+<td align="center">8.13E-6</td>
+<td align="center">5.32E-3</td>
+<td align="center">6.63 (15353,267,78,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045765')" id="ctrl_elements_GO:0045765">[+] Show genes</a><br/>
+<div id="elements_GO:0045765" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0040012&amp;view=details" target="_blank">GO:0040012</a><a name="0040012"></a></td>
+<td>regulation of locomotion</td>
+<td align="center">8.44E-6</td>
+<td align="center">5.29E-3</td>
+<td align="center">3.53 (15353,892,78,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0040012')" id="ctrl_elements_GO:0040012">[+] Show genes</a><br/>
+<div id="elements_GO:0040012" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PODN  -  podocan<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006027&amp;view=details" target="_blank">GO:0006027</a><a name="0006027"></a></td>
+<td>glycosaminoglycan catabolic process</td>
+<td align="center">8.48E-6</td>
+<td align="center">5.1E-3</td>
+<td align="center">17.89 (15353,55,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006027')" id="ctrl_elements_GO:0006027">[+] Show genes</a><br/>
+<div id="elements_GO:0006027" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+SDC3  -  syndecan 3<br/>
+
+OGN  -  osteoglycin<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+OMD  -  osteomodulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010518&amp;view=details" target="_blank">GO:0010518</a><a name="0010518"></a></td>
+<td>positive regulation of phospholipase activity</td>
+<td align="center">9.27E-6</td>
+<td align="center">5.37E-3</td>
+<td align="center">17.57 (15353,56,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010518')" id="ctrl_elements_GO:0010518">[+] Show genes</a><br/>
+<div id="elements_GO:0010518" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051270&amp;view=details" target="_blank">GO:0051270</a><a name="0051270"></a></td>
+<td>regulation of cellular component movement</td>
+<td align="center">9.45E-6</td>
+<td align="center">5.26E-3</td>
+<td align="center">3.50 (15353,900,78,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051270')" id="ctrl_elements_GO:0051270">[+] Show genes</a><br/>
+<div id="elements_GO:0051270" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PODN  -  podocan<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048856&amp;view=details" target="_blank">GO:0048856</a><a name="0048856"></a></td>
+<td>anatomical structure development</td>
+<td align="center">9.64E-6</td>
+<td align="center">5.18E-3</td>
+<td align="center">2.15 (15353,2842,78,31)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048856')" id="ctrl_elements_GO:0048856">[+] Show genes</a><br/>
+<div id="elements_GO:0048856" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+GSN  -  gelsolin<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+SPARCL1  -  sparc-like 1 (hevin)<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+COL4A4  -  collagen, type iv, alpha 4<br/>
+
+SHC3  -  shc (src homology 2 domain containing) transforming protein 3<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+VIT  -  vitrin<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045766&amp;view=details" target="_blank">GO:0045766</a><a name="0045766"></a></td>
+<td>positive regulation of angiogenesis</td>
+<td align="center">1.14E-5</td>
+<td align="center">5.92E-3</td>
+<td align="center">9.12 (15353,151,78,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045766')" id="ctrl_elements_GO:0045766">[+] Show genes</a><br/>
+<div id="elements_GO:0045766" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070613&amp;view=details" target="_blank">GO:0070613</a><a name="0070613"></a></td>
+<td>regulation of protein processing</td>
+<td align="center">1.29E-5</td>
+<td align="center">6.49E-3</td>
+<td align="center">11.58 (15353,102,78,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070613')" id="ctrl_elements_GO:0070613">[+] Show genes</a><br/>
+<div id="elements_GO:0070613" style="display:none"> <font size="1">
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+GSN  -  gelsolin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006956&amp;view=details" target="_blank">GO:0006956</a><a name="0006956"></a></td>
+<td>complement activation</td>
+<td align="center">1.31E-5</td>
+<td align="center">6.33E-3</td>
+<td align="center">16.40 (15353,60,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006956')" id="ctrl_elements_GO:0006956">[+] Show genes</a><br/>
+<div id="elements_GO:0006956" style="display:none"> <font size="1">
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006026&amp;view=details" target="_blank">GO:0006026</a><a name="0006026"></a></td>
+<td>aminoglycan catabolic process</td>
+<td align="center">1.31E-5</td>
+<td align="center">6.14E-3</td>
+<td align="center">16.40 (15353,60,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006026')" id="ctrl_elements_GO:0006026">[+] Show genes</a><br/>
+<div id="elements_GO:0006026" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+SDC3  -  syndecan 3<br/>
+
+OGN  -  osteoglycin<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+OMD  -  osteomodulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903317&amp;view=details" target="_blank">GO:1903317</a><a name="1903317"></a></td>
+<td>regulation of protein maturation</td>
+<td align="center">1.45E-5</td>
+<td align="center">6.59E-3</td>
+<td align="center">11.36 (15353,104,78,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1903317')" id="ctrl_elements_GO:1903317">[+] Show genes</a><br/>
+<div id="elements_GO:1903317" style="display:none"> <font size="1">
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+GSN  -  gelsolin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002682&amp;view=details" target="_blank">GO:0002682</a><a name="0002682"></a></td>
+<td>regulation of immune system process</td>
+<td align="center">1.62E-5</td>
+<td align="center">7.19E-3</td>
+<td align="center">2.81 (15353,1403,78,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002682')" id="ctrl_elements_GO:0002682">[+] Show genes</a><br/>
+<div id="elements_GO:0002682" style="display:none"> <font size="1">
+
+CTSK  -  cathepsin k<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+GSN  -  gelsolin<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010517&amp;view=details" target="_blank">GO:0010517</a><a name="0010517"></a></td>
+<td>regulation of phospholipase activity</td>
+<td align="center">1.79E-5</td>
+<td align="center">7.71E-3</td>
+<td align="center">15.38 (15353,64,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010517')" id="ctrl_elements_GO:0010517">[+] Show genes</a><br/>
+<div id="elements_GO:0010517" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032102&amp;view=details" target="_blank">GO:0032102</a><a name="0032102"></a></td>
+<td>negative regulation of response to external stimulus</td>
+<td align="center">1.85E-5</td>
+<td align="center">7.74E-3</td>
+<td align="center">5.98 (15353,296,78,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032102')" id="ctrl_elements_GO:0032102">[+] Show genes</a><br/>
+<div id="elements_GO:0032102" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060193&amp;view=details" target="_blank">GO:0060193</a><a name="0060193"></a></td>
+<td>positive regulation of lipase activity</td>
+<td align="center">2.09E-5</td>
+<td align="center">8.48E-3</td>
+<td align="center">14.91 (15353,66,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060193')" id="ctrl_elements_GO:0060193">[+] Show genes</a><br/>
+<div id="elements_GO:0060193" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901342&amp;view=details" target="_blank">GO:1901342</a><a name="1901342"></a></td>
+<td>regulation of vasculature development</td>
+<td align="center">2.12E-5</td>
+<td align="center">8.38E-3</td>
+<td align="center">5.89 (15353,301,78,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1901342')" id="ctrl_elements_GO:1901342">[+] Show genes</a><br/>
+<div id="elements_GO:1901342" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904018&amp;view=details" target="_blank">GO:1904018</a><a name="1904018"></a></td>
+<td>positive regulation of vasculature development</td>
+<td align="center">2.56E-5</td>
+<td align="center">9.86E-3</td>
+<td align="center">8.06 (15353,171,78,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1904018')" id="ctrl_elements_GO:1904018">[+] Show genes</a><br/>
+<div id="elements_GO:1904018" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002920&amp;view=details" target="_blank">GO:0002920</a><a name="0002920"></a></td>
+<td>regulation of humoral immune response</td>
+<td align="center">2.59E-5</td>
+<td align="center">9.75E-3</td>
+<td align="center">14.26 (15353,69,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002920')" id="ctrl_elements_GO:0002920">[+] Show genes</a><br/>
+<div id="elements_GO:0002920" style="display:none"> <font size="1">
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030162&amp;view=details" target="_blank">GO:0030162</a><a name="0030162"></a></td>
+<td>regulation of proteolysis</td>
+<td align="center">2.63E-5</td>
+<td align="center">9.65E-3</td>
+<td align="center">3.87 (15353,662,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030162')" id="ctrl_elements_GO:0030162">[+] Show genes</a><br/>
+<div id="elements_GO:0030162" style="display:none"> <font size="1">
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+GSN  -  gelsolin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043410&amp;view=details" target="_blank">GO:0043410</a><a name="0043410"></a></td>
+<td>positive regulation of MAPK cascade</td>
+<td align="center">2.65E-5</td>
+<td align="center">9.5E-3</td>
+<td align="center">4.56 (15353,475,78,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043410')" id="ctrl_elements_GO:0043410">[+] Show genes</a><br/>
+<div id="elements_GO:0043410" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050793&amp;view=details" target="_blank">GO:0050793</a><a name="0050793"></a></td>
+<td>regulation of developmental process</td>
+<td align="center">2.68E-5</td>
+<td align="center">9.37E-3</td>
+<td align="center">2.27 (15353,2251,78,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050793')" id="ctrl_elements_GO:0050793">[+] Show genes</a><br/>
+<div id="elements_GO:0050793" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+CTSK  -  cathepsin k<br/>
+
+OMD  -  osteomodulin<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+MGP  -  matrix gla protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048513&amp;view=details" target="_blank">GO:0048513</a><a name="0048513"></a></td>
+<td>animal organ development</td>
+<td align="center">2.71E-5</td>
+<td align="center">9.26E-3</td>
+<td align="center">3.06 (15353,1093,78,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048513')" id="ctrl_elements_GO:0048513">[+] Show genes</a><br/>
+<div id="elements_GO:0048513" style="display:none"> <font size="1">
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+VIT  -  vitrin<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070372&amp;view=details" target="_blank">GO:0070372</a><a name="0070372"></a></td>
+<td>regulation of ERK1 and ERK2 cascade</td>
+<td align="center">3.99E-5</td>
+<td align="center">1.33E-2</td>
+<td align="center">6.27 (15353,251,78,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070372')" id="ctrl_elements_GO:0070372">[+] Show genes</a><br/>
+<div id="elements_GO:0070372" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FN1  -  fibronectin 1<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048583&amp;view=details" target="_blank">GO:0048583</a><a name="0048583"></a></td>
+<td>regulation of response to stimulus</td>
+<td align="center">4.04E-5</td>
+<td align="center">1.32E-2</td>
+<td align="center">1.87 (15353,3680,78,35)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048583')" id="ctrl_elements_GO:0048583">[+] Show genes</a><br/>
+<div id="elements_GO:0048583" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+CTSK  -  cathepsin k<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032502&amp;view=details" target="_blank">GO:0032502</a><a name="0032502"></a></td>
+<td>developmental process</td>
+<td align="center">4.1E-5</td>
+<td align="center">1.31E-2</td>
+<td align="center">1.79 (15353,4179,78,38)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032502')" id="ctrl_elements_GO:0032502">[+] Show genes</a><br/>
+<div id="elements_GO:0032502" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+GSN  -  gelsolin<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+SPARCL1  -  sparc-like 1 (hevin)<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+COL4A4  -  collagen, type iv, alpha 4<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+SHC3  -  shc (src homology 2 domain containing) transforming protein 3<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+MFGE8  -  milk fat globule-egf factor 8 protein<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+VIT  -  vitrin<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+MGP  -  matrix gla protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051239&amp;view=details" target="_blank">GO:0051239</a><a name="0051239"></a></td>
+<td>regulation of multicellular organismal process</td>
+<td align="center">4.34E-5</td>
+<td align="center">1.36E-2</td>
+<td align="center">2.07 (15353,2753,78,29)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051239')" id="ctrl_elements_GO:0051239">[+] Show genes</a><br/>
+<div id="elements_GO:0051239" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+CLU  -  clusterin<br/>
+
+SCN4A  -  sodium channel, voltage-gated, type iv, alpha subunit<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+CTSK  -  cathepsin k<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+OMD  -  osteomodulin<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+MGP  -  matrix gla protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048557&amp;view=details" target="_blank">GO:0048557</a><a name="0048557"></a></td>
+<td>embryonic digestive tract morphogenesis</td>
+<td align="center">4.41E-5</td>
+<td align="center">1.35E-2</td>
+<td align="center">42.18 (15353,14,78,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048557')" id="ctrl_elements_GO:0048557">[+] Show genes</a><br/>
+<div id="elements_GO:0048557" style="display:none"> <font size="1">
+
+FOXF1  -  forkhead box f1<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048518&amp;view=details" target="_blank">GO:0048518</a><a name="0048518"></a></td>
+<td>positive regulation of biological process</td>
+<td align="center">4.76E-5</td>
+<td align="center">1.43E-2</td>
+<td align="center">1.65 (15353,5256,78,44)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048518')" id="ctrl_elements_GO:0048518">[+] Show genes</a><br/>
+<div id="elements_GO:0048518" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+CCDC80  -  coiled-coil domain containing 80<br/>
+
+RIMS3  -  regulating synaptic membrane exocytosis 3<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+CTSK  -  cathepsin k<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+MFGE8  -  milk fat globule-egf factor 8 protein<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+VIT  -  vitrin<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042476&amp;view=details" target="_blank">GO:0042476</a><a name="0042476"></a></td>
+<td>odontogenesis</td>
+<td align="center">7.1E-5</td>
+<td align="center">2.09E-2</td>
+<td align="center">11.58 (15353,85,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042476')" id="ctrl_elements_GO:0042476">[+] Show genes</a><br/>
+<div id="elements_GO:0042476" style="display:none"> <font size="1">
+
+CA2  -  carbonic anhydrase ii<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060191&amp;view=details" target="_blank">GO:0060191</a><a name="0060191"></a></td>
+<td>regulation of lipase activity</td>
+<td align="center">7.1E-5</td>
+<td align="center">2.05E-2</td>
+<td align="center">11.58 (15353,85,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060191')" id="ctrl_elements_GO:0060191">[+] Show genes</a><br/>
+<div id="elements_GO:0060191" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009967&amp;view=details" target="_blank">GO:0009967</a><a name="0009967"></a></td>
+<td>positive regulation of signal transduction</td>
+<td align="center">8.36E-5</td>
+<td align="center">2.37E-2</td>
+<td align="center">2.59 (15353,1444,78,19)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009967')" id="ctrl_elements_GO:0009967">[+] Show genes</a><br/>
+<div id="elements_GO:0009967" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010647&amp;view=details" target="_blank">GO:0010647</a><a name="0010647"></a></td>
+<td>positive regulation of cell communication</td>
+<td align="center">8.52E-5</td>
+<td align="center">2.37E-2</td>
+<td align="center">2.50 (15353,1575,78,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010647')" id="ctrl_elements_GO:0010647">[+] Show genes</a><br/>
+<div id="elements_GO:0010647" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+GSN  -  gelsolin<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+RIMS3  -  regulating synaptic membrane exocytosis 3<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006958&amp;view=details" target="_blank">GO:0006958</a><a name="0006958"></a></td>
+<td>complement activation, classical pathway</td>
+<td align="center">8.55E-5</td>
+<td align="center">2.34E-2</td>
+<td align="center">17.12 (15353,46,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006958')" id="ctrl_elements_GO:0006958">[+] Show genes</a><br/>
+<div id="elements_GO:0006958" style="display:none"> <font size="1">
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048585&amp;view=details" target="_blank">GO:0048585</a><a name="0048585"></a></td>
+<td>negative regulation of response to stimulus</td>
+<td align="center">8.76E-5</td>
+<td align="center">2.35E-2</td>
+<td align="center">2.58 (15353,1449,78,19)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048585')" id="ctrl_elements_GO:0048585">[+] Show genes</a><br/>
+<div id="elements_GO:0048585" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CLU  -  clusterin<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002673&amp;view=details" target="_blank">GO:0002673</a><a name="0002673"></a></td>
+<td>regulation of acute inflammatory response</td>
+<td align="center">8.84E-5</td>
+<td align="center">2.33E-2</td>
+<td align="center">11.06 (15353,89,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002673')" id="ctrl_elements_GO:0002673">[+] Show genes</a><br/>
+<div id="elements_GO:0002673" style="display:none"> <font size="1">
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902533&amp;view=details" target="_blank">GO:1902533</a><a name="1902533"></a></td>
+<td>positive regulation of intracellular signal transduction</td>
+<td align="center">8.92E-5</td>
+<td align="center">2.31E-2</td>
+<td align="center">3.06 (15353,966,78,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1902533')" id="ctrl_elements_GO:1902533">[+] Show genes</a><br/>
+<div id="elements_GO:1902533" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051246&amp;view=details" target="_blank">GO:0051246</a><a name="0051246"></a></td>
+<td>regulation of protein metabolic process</td>
+<td align="center">9.03E-5</td>
+<td align="center">2.3E-2</td>
+<td align="center">2.12 (15353,2414,78,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051246')" id="ctrl_elements_GO:0051246">[+] Show genes</a><br/>
+<div id="elements_GO:0051246" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0023056&amp;view=details" target="_blank">GO:0023056</a><a name="0023056"></a></td>
+<td>positive regulation of signaling</td>
+<td align="center">9.14E-5</td>
+<td align="center">2.29E-2</td>
+<td align="center">2.49 (15353,1583,78,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0023056')" id="ctrl_elements_GO:0023056">[+] Show genes</a><br/>
+<div id="elements_GO:0023056" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+GSN  -  gelsolin<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+RIMS3  -  regulating synaptic membrane exocytosis 3<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0052547&amp;view=details" target="_blank">GO:0052547</a><a name="0052547"></a></td>
+<td>regulation of peptidase activity</td>
+<td align="center">9.44E-5</td>
+<td align="center">2.33E-2</td>
+<td align="center">4.85 (15353,365,78,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0052547')" id="ctrl_elements_GO:0052547">[+] Show genes</a><br/>
+<div id="elements_GO:0052547" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+GSN  -  gelsolin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050727&amp;view=details" target="_blank">GO:0050727</a><a name="0050727"></a></td>
+<td>regulation of inflammatory response</td>
+<td align="center">9.84E-5</td>
+<td align="center">2.39E-2</td>
+<td align="center">4.83 (15353,367,78,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050727')" id="ctrl_elements_GO:0050727">[+] Show genes</a><br/>
+<div id="elements_GO:0050727" style="display:none"> <font size="1">
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016477&amp;view=details" target="_blank">GO:0016477</a><a name="0016477"></a></td>
+<td>cell migration</td>
+<td align="center">1.1E-4</td>
+<td align="center">2.62E-2</td>
+<td align="center">3.36 (15353,761,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016477')" id="ctrl_elements_GO:0016477">[+] Show genes</a><br/>
+<div id="elements_GO:0016477" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+SDC3  -  syndecan 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008284&amp;view=details" target="_blank">GO:0008284</a><a name="0008284"></a></td>
+<td>positive regulation of cell proliferation</td>
+<td align="center">1.2E-4</td>
+<td align="center">2.82E-2</td>
+<td align="center">3.33 (15353,768,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008284')" id="ctrl_elements_GO:0008284">[+] Show genes</a><br/>
+<div id="elements_GO:0008284" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0085029&amp;view=details" target="_blank">GO:0085029</a><a name="0085029"></a></td>
+<td>extracellular matrix assembly</td>
+<td align="center">1.35E-4</td>
+<td align="center">3.13E-2</td>
+<td align="center">29.53 (15353,20,78,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0085029')" id="ctrl_elements_GO:0085029">[+] Show genes</a><br/>
+<div id="elements_GO:0085029" style="display:none"> <font size="1">
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+TNXB  -  tenascin xb<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030335&amp;view=details" target="_blank">GO:0030335</a><a name="0030335"></a></td>
+<td>positive regulation of cell migration</td>
+<td align="center">1.37E-4</td>
+<td align="center">3.13E-2</td>
+<td align="center">4.15 (15353,474,78,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030335')" id="ctrl_elements_GO:0030335">[+] Show genes</a><br/>
+<div id="elements_GO:0030335" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071230&amp;view=details" target="_blank">GO:0071230</a><a name="0071230"></a></td>
+<td>cellular response to amino acid stimulus</td>
+<td align="center">1.49E-4</td>
+<td align="center">3.36E-2</td>
+<td align="center">14.86 (15353,53,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071230')" id="ctrl_elements_GO:0071230">[+] Show genes</a><br/>
+<div id="elements_GO:0071230" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000546&amp;view=details" target="_blank">GO:2000546</a><a name="2000546"></a></td>
+<td>positive regulation of endothelial cell chemotaxis to fibroblast growth factor</td>
+<td align="center">1.52E-4</td>
+<td align="center">3.36E-2</td>
+<td align="center">98.42 (15353,4,78,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000546')" id="ctrl_elements_GO:2000546">[+] Show genes</a><br/>
+<div id="elements_GO:2000546" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904849&amp;view=details" target="_blank">GO:1904849</a><a name="1904849"></a></td>
+<td>positive regulation of cell chemotaxis to fibroblast growth factor</td>
+<td align="center">1.52E-4</td>
+<td align="center">3.31E-2</td>
+<td align="center">98.42 (15353,4,78,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1904849')" id="ctrl_elements_GO:1904849">[+] Show genes</a><br/>
+<div id="elements_GO:1904849" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032963&amp;view=details" target="_blank">GO:0032963</a><a name="0032963"></a></td>
+<td>collagen metabolic process</td>
+<td align="center">1.61E-4</td>
+<td align="center">3.46E-2</td>
+<td align="center">14.58 (15353,54,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032963')" id="ctrl_elements_GO:0032963">[+] Show genes</a><br/>
+<div id="elements_GO:0032963" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+CTSK  -  cathepsin k<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+TNXB  -  tenascin xb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032270&amp;view=details" target="_blank">GO:0032270</a><a name="0032270"></a></td>
+<td>positive regulation of cellular protein metabolic process</td>
+<td align="center">1.71E-4</td>
+<td align="center">3.61E-2</td>
+<td align="center">2.54 (15353,1394,78,18)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032270')" id="ctrl_elements_GO:0032270">[+] Show genes</a><br/>
+<div id="elements_GO:0032270" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000147&amp;view=details" target="_blank">GO:2000147</a><a name="2000147"></a></td>
+<td>positive regulation of cell motility</td>
+<td align="center">1.74E-4</td>
+<td align="center">3.64E-2</td>
+<td align="center">4.03 (15353,488,78,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000147')" id="ctrl_elements_GO:2000147">[+] Show genes</a><br/>
+<div id="elements_GO:2000147" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902531&amp;view=details" target="_blank">GO:1902531</a><a name="1902531"></a></td>
+<td>regulation of intracellular signal transduction</td>
+<td align="center">1.91E-4</td>
+<td align="center">3.93E-2</td>
+<td align="center">2.36 (15353,1670,78,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1902531')" id="ctrl_elements_GO:1902531">[+] Show genes</a><br/>
+<div id="elements_GO:1902531" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CLU  -  clusterin<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010033&amp;view=details" target="_blank">GO:0010033</a><a name="0010033"></a></td>
+<td>response to organic substance</td>
+<td align="center">2.06E-4</td>
+<td align="center">4.19E-2</td>
+<td align="center">2.28 (15353,1816,78,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010033')" id="ctrl_elements_GO:0010033">[+] Show genes</a><br/>
+<div id="elements_GO:0010033" style="display:none"> <font size="1">
+
+COL6A2  -  collagen, type vi, alpha 2<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+GSN  -  gelsolin<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+GFPT2  -  glutamine-fructose-6-phosphate transaminase 2<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0040011&amp;view=details" target="_blank">GO:0040011</a><a name="0040011"></a></td>
+<td>locomotion</td>
+<td align="center">2.1E-4</td>
+<td align="center">4.2E-2</td>
+<td align="center">2.98 (15353,926,78,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0040011')" id="ctrl_elements_GO:0040011">[+] Show genes</a><br/>
+<div id="elements_GO:0040011" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+SDC3  -  syndecan 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051272&amp;view=details" target="_blank">GO:0051272</a><a name="0051272"></a></td>
+<td>positive regulation of cellular component movement</td>
+<td align="center">2.19E-4</td>
+<td align="center">4.33E-2</td>
+<td align="center">3.92 (15353,502,78,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051272')" id="ctrl_elements_GO:0051272">[+] Show genes</a><br/>
+<div id="elements_GO:0051272" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030500&amp;view=details" target="_blank">GO:0030500</a><a name="0030500"></a></td>
+<td>regulation of bone mineralization</td>
+<td align="center">2.27E-4</td>
+<td align="center">4.43E-2</td>
+<td align="center">13.34 (15353,59,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030500')" id="ctrl_elements_GO:0030500">[+] Show genes</a><br/>
+<div id="elements_GO:0030500" style="display:none"> <font size="1">
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+MGP  -  matrix gla protein<br/>
+
+OMD  -  osteomodulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048646&amp;view=details" target="_blank">GO:0048646</a><a name="0048646"></a></td>
+<td>anatomical structure formation involved in morphogenesis</td>
+<td align="center">2.39E-4</td>
+<td align="center">4.62E-2</td>
+<td align="center">3.56 (15353,608,78,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048646')" id="ctrl_elements_GO:0048646">[+] Show genes</a><br/>
+<div id="elements_GO:0048646" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+FN1  -  fibronectin 1<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+MFGE8  -  milk fat globule-egf factor 8 protein<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032268&amp;view=details" target="_blank">GO:0032268</a><a name="0032268"></a></td>
+<td>regulation of cellular protein metabolic process</td>
+<td align="center">2.4E-4</td>
+<td align="center">4.57E-2</td>
+<td align="center">2.09 (15353,2263,78,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032268')" id="ctrl_elements_GO:0032268">[+] Show genes</a><br/>
+<div id="elements_GO:0032268" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+GSN  -  gelsolin<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072378&amp;view=details" target="_blank">GO:0072378</a><a name="0072378"></a></td>
+<td>blood coagulation, fibrin clot formation</td>
+<td align="center">2.52E-4</td>
+<td align="center">4.74E-2</td>
+<td align="center">78.73 (15353,5,78,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0072378')" id="ctrl_elements_GO:0072378">[+] Show genes</a><br/>
+<div id="elements_GO:0072378" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070374&amp;view=details" target="_blank">GO:0070374</a><a name="0070374"></a></td>
+<td>positive regulation of ERK1 and ERK2 cascade</td>
+<td align="center">2.62E-4</td>
+<td align="center">4.87E-2</td>
+<td align="center">6.75 (15353,175,78,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070374')" id="ctrl_elements_GO:0070374">[+] Show genes</a><br/>
+<div id="elements_GO:0070374" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0040017&amp;view=details" target="_blank">GO:0040017</a><a name="0040017"></a></td>
+<td>positive regulation of locomotion</td>
+<td align="center">2.68E-4</td>
+<td align="center">4.92E-2</td>
+<td align="center">3.82 (15353,515,78,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0040017')" id="ctrl_elements_GO:0040017">[+] Show genes</a><br/>
+<div id="elements_GO:0040017" style="display:none"> <font size="1">
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051094&amp;view=details" target="_blank">GO:0051094</a><a name="0051094"></a></td>
+<td>positive regulation of developmental process</td>
+<td align="center">2.75E-4</td>
+<td align="center">4.99E-2</td>
+<td align="center">2.64 (15353,1193,78,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051094')" id="ctrl_elements_GO:0051094">[+] Show genes</a><br/>
+<div id="elements_GO:0051094" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009611&amp;view=details" target="_blank">GO:0009611</a><a name="0009611"></a></td>
+<td>response to wounding</td>
+<td align="center">2.96E-4</td>
+<td align="center">5.3E-2</td>
+<td align="center">6.60 (15353,179,78,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009611')" id="ctrl_elements_GO:0009611">[+] Show genes</a><br/>
+<div id="elements_GO:0009611" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FN1  -  fibronectin 1<br/>
+
+GSN  -  gelsolin<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048870&amp;view=details" target="_blank">GO:0048870</a><a name="0048870"></a></td>
+<td>cell motility</td>
+<td align="center">3E-4</td>
+<td align="center">5.31E-2</td>
+<td align="center">3.04 (15353,843,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048870')" id="ctrl_elements_GO:0048870">[+] Show genes</a><br/>
+<div id="elements_GO:0048870" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+SDC3  -  syndecan 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051247&amp;view=details" target="_blank">GO:0051247</a><a name="0051247"></a></td>
+<td>positive regulation of protein metabolic process</td>
+<td align="center">3.19E-4</td>
+<td align="center">5.58E-2</td>
+<td align="center">2.42 (15353,1466,78,18)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051247')" id="ctrl_elements_GO:0051247">[+] Show genes</a><br/>
+<div id="elements_GO:0051247" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031347&amp;view=details" target="_blank">GO:0031347</a><a name="0031347"></a></td>
+<td>regulation of defense response</td>
+<td align="center">3.22E-4</td>
+<td align="center">5.57E-2</td>
+<td align="center">3.20 (15353,737,78,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031347')" id="ctrl_elements_GO:0031347">[+] Show genes</a><br/>
+<div id="elements_GO:0031347" style="display:none"> <font size="1">
+
+CTSK  -  cathepsin k<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048598&amp;view=details" target="_blank">GO:0048598</a><a name="0048598"></a></td>
+<td>embryonic morphogenesis</td>
+<td align="center">3.37E-4</td>
+<td align="center">5.77E-2</td>
+<td align="center">4.60 (15353,342,78,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048598')" id="ctrl_elements_GO:0048598">[+] Show genes</a><br/>
+<div id="elements_GO:0048598" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014070&amp;view=details" target="_blank">GO:0014070</a><a name="0014070"></a></td>
+<td>response to organic cyclic compound</td>
+<td align="center">3.61E-4</td>
+<td align="center">6.11E-2</td>
+<td align="center">3.39 (15353,638,78,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0014070')" id="ctrl_elements_GO:0014070">[+] Show genes</a><br/>
+<div id="elements_GO:0014070" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+GSN  -  gelsolin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+FOXF1  -  forkhead box f1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048701&amp;view=details" target="_blank">GO:0048701</a><a name="0048701"></a></td>
+<td>embryonic cranial skeleton morphogenesis</td>
+<td align="center">3.77E-4</td>
+<td align="center">6.3E-2</td>
+<td align="center">21.09 (15353,28,78,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048701')" id="ctrl_elements_GO:0048701">[+] Show genes</a><br/>
+<div id="elements_GO:0048701" style="display:none"> <font size="1">
+
+PRRX1  -  paired related homeobox 1<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003337&amp;view=details" target="_blank">GO:0003337</a><a name="0003337"></a></td>
+<td>mesenchymal to epithelial transition involved in metanephros morphogenesis</td>
+<td align="center">3.77E-4</td>
+<td align="center">6.24E-2</td>
+<td align="center">65.61 (15353,6,78,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003337')" id="ctrl_elements_GO:0003337">[+] Show genes</a><br/>
+<div id="elements_GO:0003337" style="display:none"> <font size="1">
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+SIX2  -  six homeobox 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006928&amp;view=details" target="_blank">GO:0006928</a><a name="0006928"></a></td>
+<td>movement of cell or subcellular component</td>
+<td align="center">3.92E-4</td>
+<td align="center">6.41E-2</td>
+<td align="center">2.56 (15353,1231,78,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006928')" id="ctrl_elements_GO:0006928">[+] Show genes</a><br/>
+<div id="elements_GO:0006928" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+GSN  -  gelsolin<br/>
+
+SHC3  -  shc (src homology 2 domain containing) transforming protein 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+SDC3  -  syndecan 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030326&amp;view=details" target="_blank">GO:0030326</a><a name="0030326"></a></td>
+<td>embryonic limb morphogenesis</td>
+<td align="center">3.92E-4</td>
+<td align="center">6.35E-2</td>
+<td align="center">11.58 (15353,68,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030326')" id="ctrl_elements_GO:0030326">[+] Show genes</a><br/>
+<div id="elements_GO:0030326" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035113&amp;view=details" target="_blank">GO:0035113</a><a name="0035113"></a></td>
+<td>embryonic appendage morphogenesis</td>
+<td align="center">3.92E-4</td>
+<td align="center">6.28E-2</td>
+<td align="center">11.58 (15353,68,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035113')" id="ctrl_elements_GO:0035113">[+] Show genes</a><br/>
+<div id="elements_GO:0035113" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048523&amp;view=details" target="_blank">GO:0048523</a><a name="0048523"></a></td>
+<td>negative regulation of cellular process</td>
+<td align="center">4.01E-4</td>
+<td align="center">6.36E-2</td>
+<td align="center">1.68 (15353,4097,78,35)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048523')" id="ctrl_elements_GO:0048523">[+] Show genes</a><br/>
+<div id="elements_GO:0048523" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+AEBP1  -  ae binding protein 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+DPT  -  dermatopontin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+OGN  -  osteoglycin<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+
+PODN  -  podocan<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030155&amp;view=details" target="_blank">GO:0030155</a><a name="0030155"></a></td>
+<td>regulation of cell adhesion</td>
+<td align="center">4.07E-4</td>
+<td align="center">6.38E-2</td>
+<td align="center">3.35 (15353,647,78,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030155')" id="ctrl_elements_GO:0030155">[+] Show genes</a><br/>
+<div id="elements_GO:0030155" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+FN1  -  fibronectin 1<br/>
+
+VIT  -  vitrin<br/>
+
+CCDC80  -  coiled-coil domain containing 80<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+GSN  -  gelsolin<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031348&amp;view=details" target="_blank">GO:0031348</a><a name="0031348"></a></td>
+<td>negative regulation of defense response</td>
+<td align="center">4.19E-4</td>
+<td align="center">6.49E-2</td>
+<td align="center">6.18 (15353,191,78,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031348')" id="ctrl_elements_GO:0031348">[+] Show genes</a><br/>
+<div id="elements_GO:0031348" style="display:none"> <font size="1">
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001934&amp;view=details" target="_blank">GO:0001934</a><a name="0001934"></a></td>
+<td>positive regulation of protein phosphorylation</td>
+<td align="center">4.2E-4</td>
+<td align="center">6.45E-2</td>
+<td align="center">2.93 (15353,873,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0001934')" id="ctrl_elements_GO:0001934">[+] Show genes</a><br/>
+<div id="elements_GO:0001934" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043552&amp;view=details" target="_blank">GO:0043552</a><a name="0043552"></a></td>
+<td>positive regulation of phosphatidylinositol 3-kinase activity</td>
+<td align="center">4.64E-4</td>
+<td align="center">7.05E-2</td>
+<td align="center">19.68 (15353,30,78,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043552')" id="ctrl_elements_GO:0043552">[+] Show genes</a><br/>
+<div id="elements_GO:0043552" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051240&amp;view=details" target="_blank">GO:0051240</a><a name="0051240"></a></td>
+<td>positive regulation of multicellular organismal process</td>
+<td align="center">4.72E-4</td>
+<td align="center">7.1E-2</td>
+<td align="center">2.34 (15353,1514,78,18)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051240')" id="ctrl_elements_GO:0051240">[+] Show genes</a><br/>
+<div id="elements_GO:0051240" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032879&amp;view=details" target="_blank">GO:0032879</a><a name="0032879"></a></td>
+<td>regulation of localization</td>
+<td align="center">5.12E-4</td>
+<td align="center">7.63E-2</td>
+<td align="center">1.99 (15353,2379,78,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032879')" id="ctrl_elements_GO:0032879">[+] Show genes</a><br/>
+<div id="elements_GO:0032879" style="display:none"> <font size="1">
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+GSN  -  gelsolin<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+MFGE8  -  milk fat globule-egf factor 8 protein<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+RIMS3  -  regulating synaptic membrane exocytosis 3<br/>
+
+CLU  -  clusterin<br/>
+
+SCN4A  -  sodium channel, voltage-gated, type iv, alpha subunit<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PODN  -  podocan<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070167&amp;view=details" target="_blank">GO:0070167</a><a name="0070167"></a></td>
+<td>regulation of biomineral tissue development</td>
+<td align="center">5.14E-4</td>
+<td align="center">7.59E-2</td>
+<td align="center">10.79 (15353,73,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070167')" id="ctrl_elements_GO:0070167">[+] Show genes</a><br/>
+<div id="elements_GO:0070167" style="display:none"> <font size="1">
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+MGP  -  matrix gla protein<br/>
+
+OMD  -  osteomodulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031214&amp;view=details" target="_blank">GO:0031214</a><a name="0031214"></a></td>
+<td>biomineral tissue development</td>
+<td align="center">5.14E-4</td>
+<td align="center">7.51E-2</td>
+<td align="center">10.79 (15353,73,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031214')" id="ctrl_elements_GO:0031214">[+] Show genes</a><br/>
+<div id="elements_GO:0031214" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002697&amp;view=details" target="_blank">GO:0002697</a><a name="0002697"></a></td>
+<td>regulation of immune effector process</td>
+<td align="center">5.2E-4</td>
+<td align="center">7.52E-2</td>
+<td align="center">4.31 (15353,365,78,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002697')" id="ctrl_elements_GO:0002697">[+] Show genes</a><br/>
+<div id="elements_GO:0002697" style="display:none"> <font size="1">
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+CLU  -  clusterin<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001932&amp;view=details" target="_blank">GO:0001932</a><a name="0001932"></a></td>
+<td>regulation of protein phosphorylation</td>
+<td align="center">5.25E-4</td>
+<td align="center">7.52E-2</td>
+<td align="center">2.49 (15353,1264,78,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0001932')" id="ctrl_elements_GO:0001932">[+] Show genes</a><br/>
+<div id="elements_GO:0001932" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000544&amp;view=details" target="_blank">GO:2000544</a><a name="2000544"></a></td>
+<td>regulation of endothelial cell chemotaxis to fibroblast growth factor</td>
+<td align="center">5.26E-4</td>
+<td align="center">7.47E-2</td>
+<td align="center">56.24 (15353,7,78,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000544')" id="ctrl_elements_GO:2000544">[+] Show genes</a><br/>
+<div id="elements_GO:2000544" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904847&amp;view=details" target="_blank">GO:1904847</a><a name="1904847"></a></td>
+<td>regulation of cell chemotaxis to fibroblast growth factor</td>
+<td align="center">5.26E-4</td>
+<td align="center">7.4E-2</td>
+<td align="center">56.24 (15353,7,78,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1904847')" id="ctrl_elements_GO:1904847">[+] Show genes</a><br/>
+<div id="elements_GO:1904847" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030324&amp;view=details" target="_blank">GO:0030324</a><a name="0030324"></a></td>
+<td>lung development</td>
+<td align="center">5.42E-4</td>
+<td align="center">7.55E-2</td>
+<td align="center">10.64 (15353,74,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030324')" id="ctrl_elements_GO:0030324">[+] Show genes</a><br/>
+<div id="elements_GO:0030324" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+PHEX  -  phosphate regulating endopeptidase homolog, x-linked<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048519&amp;view=details" target="_blank">GO:0048519</a><a name="0048519"></a></td>
+<td>negative regulation of biological process</td>
+<td align="center">5.68E-4</td>
+<td align="center">7.84E-2</td>
+<td align="center">1.61 (15353,4514,78,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048519')" id="ctrl_elements_GO:0048519">[+] Show genes</a><br/>
+<div id="elements_GO:0048519" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+AEBP1  -  ae binding protein 1<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+CLU  -  clusterin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+DPT  -  dermatopontin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+OGN  -  osteoglycin<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+
+PODN  -  podocan<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048017&amp;view=details" target="_blank">GO:0048017</a><a name="0048017"></a></td>
+<td>inositol lipid-mediated signaling</td>
+<td align="center">5.99E-4</td>
+<td align="center">8.2E-2</td>
+<td align="center">10.36 (15353,76,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048017')" id="ctrl_elements_GO:0048017">[+] Show genes</a><br/>
+<div id="elements_GO:0048017" style="display:none"> <font size="1">
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001101&amp;view=details" target="_blank">GO:0001101</a><a name="0001101"></a></td>
+<td>response to acid chemical</td>
+<td align="center">6.18E-4</td>
+<td align="center">8.37E-2</td>
+<td align="center">4.82 (15353,286,78,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0001101')" id="ctrl_elements_GO:0001101">[+] Show genes</a><br/>
+<div id="elements_GO:0001101" style="display:none"> <font size="1">
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+GSN  -  gelsolin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050776&amp;view=details" target="_blank">GO:0050776</a><a name="0050776"></a></td>
+<td>regulation of immune response</td>
+<td align="center">6.35E-4</td>
+<td align="center">8.53E-2</td>
+<td align="center">2.81 (15353,912,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050776')" id="ctrl_elements_GO:0050776">[+] Show genes</a><br/>
+<div id="elements_GO:0050776" style="display:none"> <font size="1">
+
+CTSK  -  cathepsin k<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CLU  -  clusterin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030203&amp;view=details" target="_blank">GO:0030203</a><a name="0030203"></a></td>
+<td>glycosaminoglycan metabolic process</td>
+<td align="center">6.59E-4</td>
+<td align="center">8.77E-2</td>
+<td align="center">7.18 (15353,137,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030203')" id="ctrl_elements_GO:0030203">[+] Show genes</a><br/>
+<div id="elements_GO:0030203" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+SDC3  -  syndecan 3<br/>
+
+OGN  -  osteoglycin<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+OMD  -  osteomodulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009966&amp;view=details" target="_blank">GO:0009966</a><a name="0009966"></a></td>
+<td>regulation of signal transduction</td>
+<td align="center">6.59E-4</td>
+<td align="center">8.7E-2</td>
+<td align="center">1.88 (15353,2726,78,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009966')" id="ctrl_elements_GO:0009966">[+] Show genes</a><br/>
+<div id="elements_GO:0009966" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0090218&amp;view=details" target="_blank">GO:0090218</a><a name="0090218"></a></td>
+<td>positive regulation of lipid kinase activity</td>
+<td align="center">6.74E-4</td>
+<td align="center">8.82E-2</td>
+<td align="center">17.37 (15353,34,78,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0090218')" id="ctrl_elements_GO:0090218">[+] Show genes</a><br/>
+<div id="elements_GO:0090218" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903035&amp;view=details" target="_blank">GO:1903035</a><a name="1903035"></a></td>
+<td>negative regulation of response to wounding</td>
+<td align="center">6.94E-4</td>
+<td align="center">9E-2</td>
+<td align="center">9.97 (15353,79,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1903035')" id="ctrl_elements_GO:1903035">[+] Show genes</a><br/>
+<div id="elements_GO:1903035" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010646&amp;view=details" target="_blank">GO:0010646</a><a name="0010646"></a></td>
+<td>regulation of cell communication</td>
+<td align="center">7.03E-4</td>
+<td align="center">9.04E-2</td>
+<td align="center">1.81 (15353,3052,78,28)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010646')" id="ctrl_elements_GO:0010646">[+] Show genes</a><br/>
+<div id="elements_GO:0010646" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+RIMS3  -  regulating synaptic membrane exocytosis 3<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031325&amp;view=details" target="_blank">GO:0031325</a><a name="0031325"></a></td>
+<td>positive regulation of cellular metabolic process</td>
+<td align="center">7.4E-4</td>
+<td align="center">9.44E-2</td>
+<td align="center">1.83 (15353,2903,78,27)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031325')" id="ctrl_elements_GO:0031325">[+] Show genes</a><br/>
+<div id="elements_GO:0031325" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035107&amp;view=details" target="_blank">GO:0035107</a><a name="0035107"></a></td>
+<td>appendage morphogenesis</td>
+<td align="center">7.63E-4</td>
+<td align="center">9.64E-2</td>
+<td align="center">9.72 (15353,81,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035107')" id="ctrl_elements_GO:0035107">[+] Show genes</a><br/>
+<div id="elements_GO:0035107" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035108&amp;view=details" target="_blank">GO:0035108</a><a name="0035108"></a></td>
+<td>limb morphogenesis</td>
+<td align="center">7.63E-4</td>
+<td align="center">9.56E-2</td>
+<td align="center">9.72 (15353,81,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035108')" id="ctrl_elements_GO:0035108">[+] Show genes</a><br/>
+<div id="elements_GO:0035108" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014068&amp;view=details" target="_blank">GO:0014068</a><a name="0014068"></a></td>
+<td>positive regulation of phosphatidylinositol 3-kinase signaling</td>
+<td align="center">7.99E-4</td>
+<td align="center">9.93E-2</td>
+<td align="center">9.60 (15353,82,78,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0014068')" id="ctrl_elements_GO:0014068">[+] Show genes</a><br/>
+<div id="elements_GO:0014068" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051173&amp;view=details" target="_blank">GO:0051173</a><a name="0051173"></a></td>
+<td>positive regulation of nitrogen compound metabolic process</td>
+<td align="center">8.27E-4</td>
+<td align="center">1.02E-1</td>
+<td align="center">1.85 (15353,2766,78,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051173')" id="ctrl_elements_GO:0051173">[+] Show genes</a><br/>
+<div id="elements_GO:0051173" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042327&amp;view=details" target="_blank">GO:0042327</a><a name="0042327"></a></td>
+<td>positive regulation of phosphorylation</td>
+<td align="center">8.5E-4</td>
+<td align="center">1.04E-1</td>
+<td align="center">2.72 (15353,941,78,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042327')" id="ctrl_elements_GO:0042327">[+] Show genes</a><br/>
+<div id="elements_GO:0042327" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0023051&amp;view=details" target="_blank">GO:0023051</a><a name="0023051"></a></td>
+<td>regulation of signaling</td>
+<td align="center">8.62E-4</td>
+<td align="center">1.05E-1</td>
+<td align="center">1.78 (15353,3090,78,28)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0023051')" id="ctrl_elements_GO:0023051">[+] Show genes</a><br/>
+<div id="elements_GO:0023051" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+GSN  -  gelsolin<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+RIMS3  -  regulating synaptic membrane exocytosis 3<br/>
+
+CLU  -  clusterin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048869&amp;view=details" target="_blank">GO:0048869</a><a name="0048869"></a></td>
+<td>cellular developmental process</td>
+<td align="center">8.75E-4</td>
+<td align="center">1.05E-1</td>
+<td align="center">1.95 (15353,2316,78,23)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048869')" id="ctrl_elements_GO:0048869">[+] Show genes</a><br/>
+<div id="elements_GO:0048869" style="display:none"> <font size="1">
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+FN1  -  fibronectin 1<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+GSN  -  gelsolin<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+COL6A1  -  collagen, type vi, alpha 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+CLU  -  clusterin<br/>
+
+MGP  -  matrix gla protein<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048251&amp;view=details" target="_blank">GO:0048251</a><a name="0048251"></a></td>
+<td>elastic fiber assembly</td>
+<td align="center">8.96E-4</td>
+<td align="center">1.07E-1</td>
+<td align="center">43.74 (15353,9,78,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048251')" id="ctrl_elements_GO:0048251">[+] Show genes</a><br/>
+<div id="elements_GO:0048251" style="display:none"> <font size="1">
+
+TNXB  -  tenascin xb<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008285&amp;view=details" target="_blank">GO:0008285</a><a name="0008285"></a></td>
+<td>negative regulation of cell proliferation</td>
+<td align="center">9.08E-4</td>
+<td align="center">1.08E-1</td>
+<td align="center">3.27 (15353,602,78,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008285')" id="ctrl_elements_GO:0008285">[+] Show genes</a><br/>
+<div id="elements_GO:0008285" style="display:none"> <font size="1">
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+OGN  -  osteoglycin<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+PODN  -  podocan<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+DPT  -  dermatopontin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031401&amp;view=details" target="_blank">GO:0031401</a><a name="0031401"></a></td>
+<td>positive regulation of protein modification process</td>
+<td align="center">9.13E-4</td>
+<td align="center">1.07E-1</td>
+<td align="center">2.57 (15353,1072,78,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031401')" id="ctrl_elements_GO:0031401">[+] Show genes</a><br/>
+<div id="elements_GO:0031401" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+CLU  -  clusterin<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050789&amp;view=details" target="_blank">GO:0050789</a><a name="0050789"></a></td>
+<td>regulation of biological process</td>
+<td align="center">9.44E-4</td>
+<td align="center">1.1E-1</td>
+<td align="center">1.27 (15353,9594,78,62)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050789')" id="ctrl_elements_GO:0050789">[+] Show genes</a><br/>
+<div id="elements_GO:0050789" style="display:none"> <font size="1">
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+AEBP1  -  ae binding protein 1<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PRRX1  -  paired related homeobox 1<br/>
+
+PCOLCE2  -  procollagen c-endopeptidase enhancer 2<br/>
+
+MBNL2  -  muscleblind-like splicing regulator 2<br/>
+
+ADRA2C  -  adrenoceptor alpha 2c<br/>
+
+HTRA1  -  htra serine peptidase 1<br/>
+
+GSN  -  gelsolin<br/>
+
+ADRB3  -  adrenoceptor beta 3<br/>
+
+TCF12  -  transcription factor 12<br/>
+
+CCDC80  -  coiled-coil domain containing 80<br/>
+
+GPNMB  -  glycoprotein (transmembrane) nmb<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+DPT  -  dermatopontin<br/>
+
+MBNL1  -  muscleblind-like splicing regulator 1<br/>
+
+CTSK  -  cathepsin k<br/>
+
+TMOD1  -  tropomodulin 1<br/>
+
+FOXF1  -  forkhead box f1<br/>
+
+OMD  -  osteomodulin<br/>
+
+GREM1  -  gremlin 1, dan family bmp antagonist<br/>
+
+VIT  -  vitrin<br/>
+
+IRAK3  -  interleukin-1 receptor-associated kinase 3<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+OGN  -  osteoglycin<br/>
+
+CGNL1  -  cingulin-like 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+PDGFRL  -  platelet-derived growth factor receptor-like<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+
+RHOB  -  ras homolog family member b<br/>
+
+COL1A1  -  collagen, type i, alpha 1<br/>
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+SPARCL1  -  sparc-like 1 (hevin)<br/>
+
+FAM107A  -  family with sequence similarity 107, member a<br/>
+
+BTG2  -  btg family, member 2<br/>
+
+COL1A2  -  collagen, type i, alpha 2<br/>
+
+CA2  -  carbonic anhydrase ii<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+PTGIS  -  prostaglandin i2 (prostacyclin) synthase<br/>
+
+ZNF331  -  zinc finger protein 331<br/>
+
+RIMS3  -  regulating synaptic membrane exocytosis 3<br/>
+
+CLU  -  clusterin<br/>
+
+SCN4A  -  sodium channel, voltage-gated, type iv, alpha subunit<br/>
+
+SERPINF1  -  serpin peptidase inhibitor, clade f (alpha-2 antiplasmin, pigment epithelium derived factor), member 1<br/>
+
+DCLK1  -  doublecortin-like kinase 1<br/>
+
+RGMA  -  rgm domain family, member a<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+SERPING1  -  serpin peptidase inhibitor, clade g (c1 inhibitor), member 1<br/>
+
+IGFBP2  -  insulin-like growth factor binding protein 2, 36kda<br/>
+
+SHC3  -  shc (src homology 2 domain containing) transforming protein 3<br/>
+
+C1R  -  complement component 1, r subcomponent<br/>
+
+IGFBP6  -  insulin-like growth factor binding protein 6<br/>
+
+SIX2  -  six homeobox 2<br/>
+
+C1S  -  complement component 1, s subcomponent<br/>
+
+MFGE8  -  milk fat globule-egf factor 8 protein<br/>
+
+BMPER  -  bmp binding endothelial regulator<br/>
+
+MFAP4  -  microfibrillar-associated protein 4<br/>
+
+RDH10  -  retinol dehydrogenase 10 (all-trans)<br/>
+
+ECM1  -  extracellular matrix protein 1<br/>
+
+C5AR1  -  complement component 5a receptor 1<br/>
+
+PODN  -  podocan<br/>
+
+MGP  -  matrix gla protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051897&amp;view=details" target="_blank">GO:0051897</a><a name="0051897"></a></td>
+<td>positive regulation of protein kinase B signaling</td>
+<td align="center">9.62E-4</td>
+<td align="center">1.11E-1</td>
+<td align="center">6.61 (15353,149,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051897')" id="ctrl_elements_GO:0051897">[+] Show genes</a><br/>
+<div id="elements_GO:0051897" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+ESR1  -  estrogen receptor 1<br/>
+
+FGFR1  -  fibroblast growth factor receptor 1<br/>
+
+TNFAIP8L3  -  tumor necrosis factor, alpha-induced protein 8-like 3<br/>
+
+PDGFRA  -  platelet-derived growth factor receptor, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006022&amp;view=details" target="_blank">GO:0006022</a><a name="0006022"></a></td>
+<td>aminoglycan metabolic process</td>
+<td align="center">9.91E-4</td>
+<td align="center">1.14E-1</td>
+<td align="center">6.56 (15353,150,78,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006022')" id="ctrl_elements_GO:0006022">[+] Show genes</a><br/>
+<div id="elements_GO:0006022" style="display:none"> <font size="1">
+
+FGF2  -  fibroblast growth factor 2 (basic)<br/>
+
+SDC3  -  syndecan 3<br/>
+
+OGN  -  osteoglycin<br/>
+
+LYVE1  -  lymphatic vessel endothelial hyaluronan receptor 1<br/>
+
+OMD  -  osteomodulin<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 15809 genes out of 16564 gene terms entered by the user.<br/> 15809 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>88 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 15721 genes.<br/>Only 15353 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOPROCESS.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 15044 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

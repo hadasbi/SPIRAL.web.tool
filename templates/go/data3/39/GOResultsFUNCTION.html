@@ -1,0 +1,1221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="336,1409,451,1575" href="#0016681" shape="RECT"/>
+<area alt="" coords="400,1650,560,1713" href="#0008121" shape="RECT"/>
+<area alt="" coords="800,1245,920,1342" href="#0042626" shape="RECT"/>
+<area alt="" coords="835,1452,971,1532" href="#0042625" shape="RECT"/>
+<area alt="" coords="440,102,520,165" href="#0005198" shape="RECT"/>
+<area alt="" coords="404,214,495,277" href="#0003735" shape="RECT"/>
+<area alt="" coords="741,214,848,277" href="#0097159" shape="RECT"/>
+<area alt="" coords="859,341,952,389" href="#0003676" shape="RECT"/>
+<area alt="" coords="597,987,717,1035" href="#0042623" shape="RECT"/>
+<area alt="" coords="597,1099,717,1179" href="#0043492" shape="RECT"/>
+<area alt="" coords="601,849,713,897" href="#0016887" shape="RECT"/>
+<area alt="" coords="667,1262,776,1325" href="#0015002" shape="RECT"/>
+<area alt="" coords="604,1657,713,1705" href="#0004129" shape="RECT"/>
+<area alt="" coords="988,1787,1121,1885" href="#0046933" shape="RECT"/>
+<area alt="" coords="872,214,968,277" href="#1901363" shape="RECT"/>
+<area alt="" coords="1092,1657,1225,1705" href="#0019829" shape="RECT"/>
+<area alt="" coords="857,1624,983,1739" href="#0044769" shape="RECT"/>
+<area alt="" coords="761,971,876,1051" href="#0015399" shape="RECT"/>
+<area alt="" coords="741,1099,920,1179" href="#0015405" shape="RECT"/>
+<area alt="" coords="1119,825,1271,922" href="#0015318" shape="RECT"/>
+<area alt="" coords="1073,1099,1228,1179" href="#0022890" shape="RECT"/>
+<area alt="" coords="528,1245,643,1342" href="#0016675" shape="RECT"/>
+<area alt="" coords="571,1426,685,1558" href="#0016676" shape="RECT"/>
+<area alt="" coords="859,487,952,535" href="#0003723" shape="RECT"/>
+<area alt="" coords="856,616,955,664" href="#0019843" shape="RECT"/>
+<area alt="" coords="588,109,663,157" href="#0003824" shape="RECT"/>
+<area alt="" coords="584,221,667,269" href="#0016787" shape="RECT"/>
+<area alt="" coords="447,1115,561,1163" href="#0016491" shape="RECT"/>
+<area alt="" coords="5,1468,160,1516" href="#0003954" shape="RECT"/>
+<area alt="" coords="88,1650,243,1713" href="#0050136" shape="RECT"/>
+<area alt="" coords="593,616,719,664" href="#0016462" shape="RECT"/>
+<area alt="" coords="569,720,745,768" href="#0017111" shape="RECT"/>
+<area alt="" coords="923,842,1059,905" href="#0015075" shape="RECT"/>
+<area alt="" coords="1039,979,1193,1042" href="#0008324" shape="RECT"/>
+<area alt="" coords="900,971,1015,1051" href="#0022853" shape="RECT"/>
+<area alt="" coords="191,1253,305,1333" href="#0016651" shape="RECT"/>
+<area alt="" coords="184,1426,312,1558" href="#0016655" shape="RECT"/>
+<area alt="" coords="995,1461,1149,1523" href="#0015078" shape="RECT"/>
+<area alt="" coords="475,1461,547,1523" href="#0009055" shape="RECT"/>
+<area alt="" coords="995,1245,1149,1342" href="#0015077" shape="RECT"/>
+<area alt="" coords="851,713,965,775" href="#0022857" shape="RECT"/>
+<area alt="" coords="747,842,899,905" href="#0022804" shape="RECT"/>
+<area alt="" coords="733,341,821,389" href="#0005215" shape="RECT"/>
+<area alt="" coords="584,325,696,405" href="#0016817" shape="RECT"/>
+<area alt="" coords="569,453,740,568" href="#0016818" shape="RECT"/>
+<area alt="" coords="337,1227,452,1359" href="#0016679" shape="RECT"/>
+<area alt="" coords="664,5,550,29" href="#0003674" shape="RECT"/>
+<area alt="" coords="759,109,831,157" href="#0005488" shape="RECT"/>
+<area alt="" coords="88,1805,243,1867" href="#0008137" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data3/go/39/GOFUNCTION.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015078&amp;view=details" target="_blank">GO:0015078</a><a name="0015078"></a></td>
+<td>proton transmembrane transporter activity</td>
+<td align="center">7.18E-31</td>
+<td align="center">2.39E-27</td>
+<td align="center">58.41 (17542,91,66,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015078')" id="ctrl_elements_GO:0015078">[+] Show genes</a><br/>
+<div id="elements_GO:0015078" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009055&amp;view=details" target="_blank">GO:0009055</a><a name="0009055"></a></td>
+<td>electron transfer activity</td>
+<td align="center">7.54E-23</td>
+<td align="center">1.25E-19</td>
+<td align="center">68.91 (17542,54,66,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009055')" id="ctrl_elements_GO:0009055">[+] Show genes</a><br/>
+<div id="elements_GO:0009055" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br/>
+
+uqcrfs1  -  ubiquinol-cytochrome c reductase, rieske iron-sulfur polypeptide 1<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+ndufa12  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 12<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+
+etfb  -  electron-transfer-flavoprotein, beta polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015077&amp;view=details" target="_blank">GO:0015077</a><a name="0015077"></a></td>
+<td>monovalent inorganic cation transmembrane transporter activity</td>
+<td align="center">3.98E-20</td>
+<td align="center">4.42E-17</td>
+<td align="center">17.90 (17542,297,66,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015077')" id="ctrl_elements_GO:0015077">[+] Show genes</a><br/>
+<div id="elements_GO:0015077" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004129&amp;view=details" target="_blank">GO:0004129</a><a name="0004129"></a></td>
+<td>cytochrome-c oxidase activity</td>
+<td align="center">4.1E-17</td>
+<td align="center">3.41E-14</td>
+<td align="center">108.73 (17542,22,66,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0004129')" id="ctrl_elements_GO:0004129">[+] Show genes</a><br/>
+<div id="elements_GO:0004129" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016675&amp;view=details" target="_blank">GO:0016675</a><a name="0016675"></a></td>
+<td>oxidoreductase activity, acting on a heme group of donors</td>
+<td align="center">4.1E-17</td>
+<td align="center">2.73E-14</td>
+<td align="center">108.73 (17542,22,66,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016675')" id="ctrl_elements_GO:0016675">[+] Show genes</a><br/>
+<div id="elements_GO:0016675" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016676&amp;view=details" target="_blank">GO:0016676</a><a name="0016676"></a></td>
+<td>oxidoreductase activity, acting on a heme group of donors, oxygen as acceptor</td>
+<td align="center">4.1E-17</td>
+<td align="center">2.27E-14</td>
+<td align="center">108.73 (17542,22,66,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016676')" id="ctrl_elements_GO:0016676">[+] Show genes</a><br/>
+<div id="elements_GO:0016676" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015002&amp;view=details" target="_blank">GO:0015002</a><a name="0015002"></a></td>
+<td>heme-copper terminal oxidase activity</td>
+<td align="center">4.1E-17</td>
+<td align="center">1.95E-14</td>
+<td align="center">108.73 (17542,22,66,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015002')" id="ctrl_elements_GO:0015002">[+] Show genes</a><br/>
+<div id="elements_GO:0015002" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022890&amp;view=details" target="_blank">GO:0022890</a><a name="0022890"></a></td>
+<td>inorganic cation transmembrane transporter activity</td>
+<td align="center">5.57E-16</td>
+<td align="center">2.32E-13</td>
+<td align="center">10.98 (17542,484,66,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0022890')" id="ctrl_elements_GO:0022890">[+] Show genes</a><br/>
+<div id="elements_GO:0022890" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008324&amp;view=details" target="_blank">GO:0008324</a><a name="0008324"></a></td>
+<td>cation transmembrane transporter activity</td>
+<td align="center">3.39E-15</td>
+<td align="center">1.25E-12</td>
+<td align="center">9.99 (17542,532,66,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008324')" id="ctrl_elements_GO:0008324">[+] Show genes</a><br/>
+<div id="elements_GO:0008324" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015318&amp;view=details" target="_blank">GO:0015318</a><a name="0015318"></a></td>
+<td>inorganic molecular entity transmembrane transporter activity</td>
+<td align="center">2.98E-14</td>
+<td align="center">9.93E-12</td>
+<td align="center">8.20 (17542,681,66,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015318')" id="ctrl_elements_GO:0015318">[+] Show genes</a><br/>
+<div id="elements_GO:0015318" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+vdac2  -  voltage-dependent anion channel 2<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015075&amp;view=details" target="_blank">GO:0015075</a><a name="0015075"></a></td>
+<td>ion transmembrane transporter activity</td>
+<td align="center">1.39E-13</td>
+<td align="center">4.22E-11</td>
+<td align="center">7.57 (17542,737,66,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015075')" id="ctrl_elements_GO:0015075">[+] Show genes</a><br/>
+<div id="elements_GO:0015075" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+vdac2  -  voltage-dependent anion channel 2<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016491&amp;view=details" target="_blank">GO:0016491</a><a name="0016491"></a></td>
+<td>oxidoreductase activity</td>
+<td align="center">7.74E-13</td>
+<td align="center">2.14E-10</td>
+<td align="center">7.48 (17542,711,66,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016491')" id="ctrl_elements_GO:0016491">[+] Show genes</a><br/>
+<div id="elements_GO:0016491" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4, (nadh-coenzyme q reductase)<br/>
+
+uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br/>
+
+uqcrfs1  -  ubiquinol-cytochrome c reductase, rieske iron-sulfur polypeptide 1<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7, (nadh-coenzyme q reductase)<br/>
+
+sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+ndufa12  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 12<br/>
+
+ndufb4  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 4<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+zgc:101858  -  zgc:101858<br/>
+
+ndufv2  -  nadh dehydrogenase (ubiquinone) flavoprotein 2<br/>
+
+ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 8<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+
+etfb  -  electron-transfer-flavoprotein, beta polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022857&amp;view=details" target="_blank">GO:0022857</a><a name="0022857"></a></td>
+<td>transmembrane transporter activity</td>
+<td align="center">5.38E-12</td>
+<td align="center">1.38E-9</td>
+<td align="center">5.86 (17542,998,66,22)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0022857')" id="ctrl_elements_GO:0022857">[+] Show genes</a><br/>
+<div id="elements_GO:0022857" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+vdac2  -  voltage-dependent anion channel 2<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+tomm40l  -  translocase of outer mitochondrial membrane 40 homolog, like<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005215&amp;view=details" target="_blank">GO:0005215</a><a name="0005215"></a></td>
+<td>transporter activity</td>
+<td align="center">2.23E-11</td>
+<td align="center">5.3E-9</td>
+<td align="center">5.45 (17542,1073,66,22)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005215')" id="ctrl_elements_GO:0005215">[+] Show genes</a><br/>
+<div id="elements_GO:0005215" style="display:none"> <font size="1">
+
+cox6c  -  cytochrome c oxidase subunit vic<br/>
+
+cox8a  -  cytochrome c oxidase subunit 8a<br/>
+
+cox7c  -  cytochrome c oxidase, subunit viic<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5ib  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit e, duplicate b<br/>
+
+vdac2  -  voltage-dependent anion channel 2<br/>
+
+zgc:86599  -  zgc:86599<br/>
+
+cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+tomm40l  -  translocase of outer mitochondrial membrane 40 homolog, like<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+atp5l  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit g<br/>
+
+cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+cox5aa  -  cytochrome c oxidase subunit vaa<br/>
+
+atp5j  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f6<br/>
+
+cox7b  -  cytochrome c oxidase subunit viib<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5g3b  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit c3 (subunit 9) genome duplicate b<br/>
+
+atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+atp5f1  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit b, isoform 1<br/>
+
+cox7a2a  -  cytochrome c oxidase, subunit viia 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046933&amp;view=details" target="_blank">GO:0046933</a><a name="0046933"></a></td>
+<td>proton-transporting ATP synthase activity, rotational mechanism</td>
+<td align="center">3.59E-11</td>
+<td align="center">7.95E-9</td>
+<td align="center">166.12 (17542,8,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0046933')" id="ctrl_elements_GO:0046933">[+] Show genes</a><br/>
+<div id="elements_GO:0046933" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044769&amp;view=details" target="_blank">GO:0044769</a><a name="0044769"></a></td>
+<td>ATPase activity, coupled to transmembrane movement of ions, rotational mechanism</td>
+<td align="center">2.06E-8</td>
+<td align="center">4.29E-6</td>
+<td align="center">57.78 (17542,23,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044769')" id="ctrl_elements_GO:0044769">[+] Show genes</a><br/>
+<div id="elements_GO:0044769" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003735&amp;view=details" target="_blank">GO:0003735</a><a name="0003735"></a></td>
+<td>structural constituent of ribosome</td>
+<td align="center">6.88E-8</td>
+<td align="center">1.35E-5</td>
+<td align="center">14.66 (17542,145,66,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003735')" id="ctrl_elements_GO:0003735">[+] Show genes</a><br/>
+<div id="elements_GO:0003735" style="display:none"> <font size="1">
+
+mrpl16  -  mitochondrial ribosomal protein l16<br/>
+
+mrpl24  -  mitochondrial ribosomal protein l24<br/>
+
+mrpl20  -  mitochondrial ribosomal protein l20<br/>
+
+mrpl30  -  mitochondrial ribosomal protein l30<br/>
+
+mrps7  -  mitochondrial ribosomal protein s7<br/>
+
+mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+mrps34  -  mitochondrial ribosomal protein s34<br/>
+
+si:dkey-17e16.10  -  si:dkey-17e16.10<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008137&amp;view=details" target="_blank">GO:0008137</a><a name="0008137"></a></td>
+<td>NADH dehydrogenase (ubiquinone) activity</td>
+<td align="center">1.27E-7</td>
+<td align="center">2.35E-5</td>
+<td align="center">81.78 (17542,13,66,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008137')" id="ctrl_elements_GO:0008137">[+] Show genes</a><br/>
+<div id="elements_GO:0008137" style="display:none"> <font size="1">
+
+ndufa12  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 12<br/>
+
+ndufb4  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 4<br/>
+
+ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 8<br/>
+
+ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7, (nadh-coenzyme q reductase)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050136&amp;view=details" target="_blank">GO:0050136</a><a name="0050136"></a></td>
+<td>NADH dehydrogenase (quinone) activity</td>
+<td align="center">1.27E-7</td>
+<td align="center">2.23E-5</td>
+<td align="center">81.78 (17542,13,66,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050136')" id="ctrl_elements_GO:0050136">[+] Show genes</a><br/>
+<div id="elements_GO:0050136" style="display:none"> <font size="1">
+
+ndufa12  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 12<br/>
+
+ndufb4  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 4<br/>
+
+ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 8<br/>
+
+ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7, (nadh-coenzyme q reductase)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016655&amp;view=details" target="_blank">GO:0016655</a><a name="0016655"></a></td>
+<td>oxidoreductase activity, acting on NAD(P)H, quinone or similar compound as acceptor</td>
+<td align="center">2.42E-7</td>
+<td align="center">4.02E-5</td>
+<td align="center">70.88 (17542,15,66,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016655')" id="ctrl_elements_GO:0016655">[+] Show genes</a><br/>
+<div id="elements_GO:0016655" style="display:none"> <font size="1">
+
+ndufa12  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 12<br/>
+
+ndufb4  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 4<br/>
+
+ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 8<br/>
+
+ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7, (nadh-coenzyme q reductase)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003954&amp;view=details" target="_blank">GO:0003954</a><a name="0003954"></a></td>
+<td>NADH dehydrogenase activity</td>
+<td align="center">3.21E-7</td>
+<td align="center">5.09E-5</td>
+<td align="center">66.45 (17542,16,66,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003954')" id="ctrl_elements_GO:0003954">[+] Show genes</a><br/>
+<div id="elements_GO:0003954" style="display:none"> <font size="1">
+
+ndufa12  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 12<br/>
+
+ndufb4  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 4<br/>
+
+ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 8<br/>
+
+ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7, (nadh-coenzyme q reductase)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022853&amp;view=details" target="_blank">GO:0022853</a><a name="0022853"></a></td>
+<td>active ion transmembrane transporter activity</td>
+<td align="center">8.77E-7</td>
+<td align="center">1.33E-4</td>
+<td align="center">28.28 (17542,47,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0022853')" id="ctrl_elements_GO:0022853">[+] Show genes</a><br/>
+<div id="elements_GO:0022853" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042625&amp;view=details" target="_blank">GO:0042625</a><a name="0042625"></a></td>
+<td>ATPase coupled ion transmembrane transporter activity</td>
+<td align="center">8.77E-7</td>
+<td align="center">1.27E-4</td>
+<td align="center">28.28 (17542,47,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042625')" id="ctrl_elements_GO:0042625">[+] Show genes</a><br/>
+<div id="elements_GO:0042625" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019829&amp;view=details" target="_blank">GO:0019829</a><a name="0019829"></a></td>
+<td>cation-transporting ATPase activity</td>
+<td align="center">8.77E-7</td>
+<td align="center">1.22E-4</td>
+<td align="center">28.28 (17542,47,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019829')" id="ctrl_elements_GO:0019829">[+] Show genes</a><br/>
+<div id="elements_GO:0019829" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016651&amp;view=details" target="_blank">GO:0016651</a><a name="0016651"></a></td>
+<td>oxidoreductase activity, acting on NAD(P)H</td>
+<td align="center">1.33E-6</td>
+<td align="center">1.77E-4</td>
+<td align="center">26.06 (17542,51,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016651')" id="ctrl_elements_GO:0016651">[+] Show genes</a><br/>
+<div id="elements_GO:0016651" style="display:none"> <font size="1">
+
+ndufb4  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 4<br/>
+
+ndufa12  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 12<br/>
+
+ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4, (nadh-coenzyme q reductase)<br/>
+
+ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 8<br/>
+
+ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7, (nadh-coenzyme q reductase)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043492&amp;view=details" target="_blank">GO:0043492</a><a name="0043492"></a></td>
+<td>ATPase activity, coupled to movement of substances</td>
+<td align="center">2.6E-5</td>
+<td align="center">3.33E-3</td>
+<td align="center">14.29 (17542,93,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043492')" id="ctrl_elements_GO:0043492">[+] Show genes</a><br/>
+<div id="elements_GO:0043492" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042626&amp;view=details" target="_blank">GO:0042626</a><a name="0042626"></a></td>
+<td>ATPase activity, coupled to transmembrane movement of substances</td>
+<td align="center">2.6E-5</td>
+<td align="center">3.21E-3</td>
+<td align="center">14.29 (17542,93,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042626')" id="ctrl_elements_GO:0042626">[+] Show genes</a><br/>
+<div id="elements_GO:0042626" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015399&amp;view=details" target="_blank">GO:0015399</a><a name="0015399"></a></td>
+<td>primary active transmembrane transporter activity</td>
+<td align="center">3.03E-5</td>
+<td align="center">3.6E-3</td>
+<td align="center">13.84 (17542,96,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015399')" id="ctrl_elements_GO:0015399">[+] Show genes</a><br/>
+<div id="elements_GO:0015399" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015405&amp;view=details" target="_blank">GO:0015405</a><a name="0015405"></a></td>
+<td>P-P-bond-hydrolysis-driven transmembrane transporter activity</td>
+<td align="center">3.03E-5</td>
+<td align="center">3.48E-3</td>
+<td align="center">13.84 (17542,96,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015405')" id="ctrl_elements_GO:0015405">[+] Show genes</a><br/>
+<div id="elements_GO:0015405" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016681&amp;view=details" target="_blank">GO:0016681</a><a name="0016681"></a></td>
+<td>oxidoreductase activity, acting on diphenols and related substances as donors, cytochrome as acceptor</td>
+<td align="center">4.17E-5</td>
+<td align="center">4.63E-3</td>
+<td align="center">177.19 (17542,3,66,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016681')" id="ctrl_elements_GO:0016681">[+] Show genes</a><br/>
+<div id="elements_GO:0016681" style="display:none"> <font size="1">
+
+uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br/>
+
+uqcrfs1  -  ubiquinol-cytochrome c reductase, rieske iron-sulfur polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008121&amp;view=details" target="_blank">GO:0008121</a><a name="0008121"></a></td>
+<td>ubiquinol-cytochrome-c reductase activity</td>
+<td align="center">4.17E-5</td>
+<td align="center">4.48E-3</td>
+<td align="center">177.19 (17542,3,66,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008121')" id="ctrl_elements_GO:0008121">[+] Show genes</a><br/>
+<div id="elements_GO:0008121" style="display:none"> <font size="1">
+
+uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br/>
+
+uqcrfs1  -  ubiquinol-cytochrome c reductase, rieske iron-sulfur polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016679&amp;view=details" target="_blank">GO:0016679</a><a name="0016679"></a></td>
+<td>oxidoreductase activity, acting on diphenols and related substances as donors</td>
+<td align="center">8.32E-5</td>
+<td align="center">8.65E-3</td>
+<td align="center">132.89 (17542,4,66,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016679')" id="ctrl_elements_GO:0016679">[+] Show genes</a><br/>
+<div id="elements_GO:0016679" style="display:none"> <font size="1">
+
+uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br/>
+
+uqcrfs1  -  ubiquinol-cytochrome c reductase, rieske iron-sulfur polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005198&amp;view=details" target="_blank">GO:0005198</a><a name="0005198"></a></td>
+<td>structural molecule activity</td>
+<td align="center">3.19E-4</td>
+<td align="center">3.21E-2</td>
+<td align="center">4.62 (17542,460,66,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005198')" id="ctrl_elements_GO:0005198">[+] Show genes</a><br/>
+<div id="elements_GO:0005198" style="display:none"> <font size="1">
+
+mrpl16  -  mitochondrial ribosomal protein l16<br/>
+
+mrpl24  -  mitochondrial ribosomal protein l24<br/>
+
+mrpl20  -  mitochondrial ribosomal protein l20<br/>
+
+mrpl30  -  mitochondrial ribosomal protein l30<br/>
+
+mrps7  -  mitochondrial ribosomal protein s7<br/>
+
+mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+mrps34  -  mitochondrial ribosomal protein s34<br/>
+
+si:dkey-17e16.10  -  si:dkey-17e16.10<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019843&amp;view=details" target="_blank">GO:0019843</a><a name="0019843"></a></td>
+<td>rRNA binding</td>
+<td align="center">3.32E-4</td>
+<td align="center">3.25E-2</td>
+<td align="center">22.15 (17542,36,66,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019843')" id="ctrl_elements_GO:0019843">[+] Show genes</a><br/>
+<div id="elements_GO:0019843" style="display:none"> <font size="1">
+
+mrpl16  -  mitochondrial ribosomal protein l16<br/>
+
+mrpl20  -  mitochondrial ribosomal protein l20<br/>
+
+mrps7  -  mitochondrial ribosomal protein s7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042623&amp;view=details" target="_blank">GO:0042623</a><a name="0042623"></a></td>
+<td>ATPase activity, coupled</td>
+<td align="center">8.71E-4</td>
+<td align="center">8.28E-2</td>
+<td align="center">6.75 (17542,197,66,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042623')" id="ctrl_elements_GO:0042623">[+] Show genes</a><br/>
+<div id="elements_GO:0042623" style="display:none"> <font size="1">
+
+atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br/>
+
+atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+atp5o  -  atp synthase, h+ transporting, mitochondrial f1 complex, o subunit<br/>
+
+atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24073 genes out of 30176 gene terms entered by the user.<br/> 24073 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>172 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br/>Only 17542 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOFUNCTION.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 3327 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

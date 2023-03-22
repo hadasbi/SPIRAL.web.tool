@@ -1,1759 +1,2631 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title>
-Results
-</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<script type='text/javascript'>
-function toggle(item) {
-obj=document.getElementById(item);
-visible=(obj.style.display!="none")
-key=document.getElementById("ctrl_" + item);
-if (visible) {
-    obj.style.display="none";
-key.innerHTML="[+] Show genes";
-}
-else {
-obj.style.display="block";
-key.innerHTML="[-] Hide genes";
-}
-}
-</script>
-</head>
-<body>
-<p><center><b>
-
-</b></center></p>
-<table border="1" width="80%" id="tab:pval_legend" align=center>
-<CAPTION><EM>P-value color scale</EM></CAPTION>
-<tr>
-	<td  width=140 align=center> > 10<sup>-3</sup></td>
-	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
-	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
-	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
-	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
-</tr >
-</table>
-<MAP NAME='goPathImage'>
-<AREA SHAPE='RECT' COORDS='5,626,123,689' HREF='#1904760' ALT=''>
-<AREA SHAPE='RECT' COORDS='80,824,197,904' HREF='#1904761' ALT=''>
-<AREA SHAPE='RECT' COORDS='2437,1443,2565,1557' HREF='#0007189' ALT=''>
-<AREA SHAPE='RECT' COORDS='2503,1605,2631,1720' HREF='#0071880' ALT=''>
-<AREA SHAPE='RECT' COORDS='4339,626,4437,689' HREF='#0006644' ALT=''>
-<AREA SHAPE='RECT' COORDS='4260,833,4399,895' HREF='#0006650' ALT=''>
-<AREA SHAPE='RECT' COORDS='3157,198,3251,261' HREF='#0065008' ALT=''>
-<AREA SHAPE='RECT' COORDS='3156,325,3252,373' HREF='#0042592' ALT=''>
-<AREA SHAPE='RECT' COORDS='3877,205,4003,253' HREF='#0006955' ALT=''>
-<AREA SHAPE='RECT' COORDS='3877,325,4003,373' HREF='#0002250' ALT=''>
-<AREA SHAPE='RECT' COORDS='3032,1313,3128,1361' HREF='#0055074' ALT=''>
-<AREA SHAPE='RECT' COORDS='3171,1469,3267,1531' HREF='#0006874' ALT=''>
-<AREA SHAPE='RECT' COORDS='1572,815,1668,913' HREF='#0002705' ALT=''>
-<AREA SHAPE='RECT' COORDS='1691,1074,1797,1171' HREF='#0002708' ALT=''>
-<AREA SHAPE='RECT' COORDS='1305,455,1388,535' HREF='#0048522' ALT=''>
-<AREA SHAPE='RECT' COORDS='429,626,565,689' HREF='#0045597' ALT=''>
-<AREA SHAPE='RECT' COORDS='1324,626,1415,689' HREF='#0010942' ALT=''>
-<AREA SHAPE='RECT' COORDS='1261,1469,1384,1531' HREF='#0046640' ALT=''>
-<AREA SHAPE='RECT' COORDS='1333,1623,1456,1703' HREF='#2000564' ALT=''>
-<AREA SHAPE='RECT' COORDS='2185,325,2279,373' HREF='#0031341' ALT=''>
-<AREA SHAPE='RECT' COORDS='2303,455,2399,535' HREF='#0001910' ALT=''>
-<AREA SHAPE='RECT' COORDS='2185,463,2279,526' HREF='#0031343' ALT=''>
-<AREA SHAPE='RECT' COORDS='3509,633,3627,681' HREF='#0035456' ALT=''>
-<AREA SHAPE='RECT' COORDS='3488,833,3605,895' HREF='#0035458' ALT=''>
-<AREA SHAPE='RECT' COORDS='4188,463,4297,526' HREF='#0044255' ALT=''>
-<AREA SHAPE='RECT' COORDS='4207,626,4297,689' HREF='#0046486' ALT=''>
-<AREA SHAPE='RECT' COORDS='4477,198,4608,261' HREF='#0071704' ALT=''>
-<AREA SHAPE='RECT' COORDS='4285,325,4395,373' HREF='#0006629' ALT=''>
-<AREA SHAPE='RECT' COORDS='4495,463,4620,526' HREF='#0019637' ALT=''>
-<AREA SHAPE='RECT' COORDS='2269,840,2461,888' HREF='#0019932' ALT=''>
-<AREA SHAPE='RECT' COORDS='2261,1099,2440,1147' HREF='#0019935' ALT=''>
-<AREA SHAPE='RECT' COORDS='3268,471,3364,519' HREF='#0019725' ALT=''>
-<AREA SHAPE='RECT' COORDS='3275,626,3371,689' HREF='#0055082' ALT=''>
-<AREA SHAPE='RECT' COORDS='3945,471,4068,519' HREF='#0051707' ALT=''>
-<AREA SHAPE='RECT' COORDS='3988,633,4065,681' HREF='#0009615' ALT=''>
-<AREA SHAPE='RECT' COORDS='3836,633,3964,681' HREF='#0098542' ALT=''>
-<AREA SHAPE='RECT' COORDS='3351,101,3423,149' HREF='#0009987' ALT=''>
-<AREA SHAPE='RECT' COORDS='3344,198,3429,261' HREF='#0051716' ALT=''>
-<AREA SHAPE='RECT' COORDS='4219,198,4301,261' HREF='#0044237' ALT=''>
-<AREA SHAPE='RECT' COORDS='2500,471,2631,519' HREF='#0007165' ALT=''>
-<AREA SHAPE='RECT' COORDS='600,1083,731,1163' HREF='#0051056' ALT=''>
-<AREA SHAPE='RECT' COORDS='600,1306,731,1369' HREF='#0046578' ALT=''>
-<AREA SHAPE='RECT' COORDS='1995,309,2104,389' HREF='#0051239' ALT=''>
-<AREA SHAPE='RECT' COORDS='2052,446,2161,543' HREF='#0051240' ALT=''>
-<AREA SHAPE='RECT' COORDS='3768,198,3853,261' HREF='#0009605' ALT=''>
-<AREA SHAPE='RECT' COORDS='3747,318,3853,381' HREF='#0043207' ALT=''>
-<AREA SHAPE='RECT' COORDS='893,1083,1000,1163' HREF='#0051250' ALT=''>
-<AREA SHAPE='RECT' COORDS='808,1297,915,1377' HREF='#0050672' ALT=''>
-<AREA SHAPE='RECT' COORDS='939,1306,1064,1369' HREF='#0050869' ALT=''>
-<AREA SHAPE='RECT' COORDS='755,1083,869,1163' HREF='#0032945' ALT=''>
-<AREA SHAPE='RECT' COORDS='3304,840,3421,888' HREF='#0006873' ALT=''>
-<AREA SHAPE='RECT' COORDS='3148,471,3244,519' HREF='#0048878' ALT=''>
-<AREA SHAPE='RECT' COORDS='3133,633,3251,681' HREF='#0050801' ALT=''>
-<AREA SHAPE='RECT' COORDS='1173,833,1280,895' HREF='#0051249' ALT=''>
-<AREA SHAPE='RECT' COORDS='1304,1099,1429,1147' HREF='#0050863' ALT=''>
-<AREA SHAPE='RECT' COORDS='1173,1091,1280,1154' HREF='#0050670' ALT=''>
-<AREA SHAPE='RECT' COORDS='1024,1099,1149,1147' HREF='#0050864' ALT=''>
-<AREA SHAPE='RECT' COORDS='1823,763,1951,965' HREF='#0002822' ALT=''>
-<AREA SHAPE='RECT' COORDS='1973,1013,2101,1232' HREF='#0002824' ALT=''>
-<AREA SHAPE='RECT' COORDS='1821,1091,1949,1154' HREF='#0002709' ALT=''>
-<AREA SHAPE='RECT' COORDS='1088,1313,1227,1361' HREF='#0030888' ALT=''>
-<AREA SHAPE='RECT' COORDS='932,1469,1071,1531' HREF='#0030889' ALT=''>
-<AREA SHAPE='RECT' COORDS='1408,1460,1523,1540' HREF='#2001185' ALT=''>
-<AREA SHAPE='RECT' COORDS='193,471,329,519' HREF='#0045595' ALT=''>
-<AREA SHAPE='RECT' COORDS='307,626,405,689' HREF='#0045661' ALT=''>
-<AREA SHAPE='RECT' COORDS='147,626,283,689' HREF='#0045596' ALT=''>
-<AREA SHAPE='RECT' COORDS='625,626,719,689' HREF='#0009966' ALT=''>
-<AREA SHAPE='RECT' COORDS='604,833,735,895' HREF='#1902531' ALT=''>
-<AREA SHAPE='RECT' COORDS='1251,1313,1387,1361' HREF='#0042129' ALT=''>
-<AREA SHAPE='RECT' COORDS='3499,471,3584,519' HREF='#0034097' ALT=''>
-<AREA SHAPE='RECT' COORDS='3395,617,3485,697' HREF='#0071345' ALT=''>
-<AREA SHAPE='RECT' COORDS='2501,824,2629,904' HREF='#0007186' ALT=''>
-<AREA SHAPE='RECT' COORDS='2464,1057,2595,1189' HREF='#0007187' ALT=''>
-<AREA SHAPE='RECT' COORDS='2589,1460,2675,1540' HREF='#0071875' ALT=''>
-<AREA SHAPE='RECT' COORDS='1637,198,1731,261' HREF='#0050789' ALT=''>
-<AREA SHAPE='RECT' COORDS='1563,318,1677,381' HREF='#0002682' ALT=''>
-<AREA SHAPE='RECT' COORDS='277,318,400,381' HREF='#0050793' ALT=''>
-<AREA SHAPE='RECT' COORDS='1819,309,1912,389' HREF='#0048518' ALT=''>
-<AREA SHAPE='RECT' COORDS='580,325,665,373' HREF='#0023051' ALT=''>
-<AREA SHAPE='RECT' COORDS='1044,318,1127,381' HREF='#0050794' ALT=''>
-<AREA SHAPE='RECT' COORDS='848,309,941,389' HREF='#0048519' ALT=''>
-<AREA SHAPE='RECT' COORDS='1701,318,1795,381' HREF='#0048583' ALT=''>
-<AREA SHAPE='RECT' COORDS='1203,626,1299,689' HREF='#0002694' ALT=''>
-<AREA SHAPE='RECT' COORDS='1023,824,1119,904' HREF='#0002695' ALT=''>
-<AREA SHAPE='RECT' COORDS='2445,1280,2584,1395' HREF='#0007188' ALT=''>
-<AREA SHAPE='RECT' COORDS='4241,1091,4417,1154' HREF='#0046337' ALT=''>
-<AREA SHAPE='RECT' COORDS='879,471,1004,519' HREF='#0042127' ALT=''>
-<AREA SHAPE='RECT' COORDS='744,626,869,689' HREF='#0008285' ALT=''>
-<AREA SHAPE='RECT' COORDS='893,626,989,689' HREF='#0070663' ALT=''>
-<AREA SHAPE='RECT' COORDS='3360,309,3453,389' HREF='#0070887' ALT=''>
-<AREA SHAPE='RECT' COORDS='3392,455,3475,535' HREF='#0071310' ALT=''>
-<AREA SHAPE='RECT' COORDS='2661,833,2792,895' HREF='#0019221' ALT=''>
-<AREA SHAPE='RECT' COORDS='2669,1091,2784,1154' HREF='#0060337' ALT=''>
-<AREA SHAPE='RECT' COORDS='2808,1091,2989,1154' HREF='#0060333' ALT=''>
-<AREA SHAPE='RECT' COORDS='764,824,860,904' HREF='#0070664' ALT=''>
-<AREA SHAPE='RECT' COORDS='1577,455,1663,535' HREF='#0002697' ALT=''>
-<AREA SHAPE='RECT' COORDS='1575,617,1671,697' HREF='#0002703' ALT=''>
-<AREA SHAPE='RECT' COORDS='1695,609,1780,706' HREF='#0002699' ALT=''>
-<AREA SHAPE='RECT' COORDS='1439,626,1551,689' HREF='#0043067' ALT=''>
-<AREA SHAPE='RECT' COORDS='1453,833,1547,895' HREF='#0042981' ALT=''>
-<AREA SHAPE='RECT' COORDS='1317,824,1429,904' HREF='#0043068' ALT=''>
-<AREA SHAPE='RECT' COORDS='3171,1099,3267,1147' HREF='#0055065' ALT=''>
-<AREA SHAPE='RECT' COORDS='3309,1306,3405,1369' HREF='#0006875' ALT=''>
-<AREA SHAPE='RECT' COORDS='4959,309,5092,389' HREF='#0019884' ALT=''>
-<AREA SHAPE='RECT' COORDS='4959,455,5092,535' HREF='#0002478' ALT=''>
-<AREA SHAPE='RECT' COORDS='413,824,512,904' HREF='#0045663' ALT=''>
-<AREA SHAPE='RECT' COORDS='1411,1306,1520,1369' HREF='#0046634' ALT=''>
-<AREA SHAPE='RECT' COORDS='3667,198,3744,261' HREF='#0009607' ALT=''>
-<AREA SHAPE='RECT' COORDS='3857,101,3967,149' HREF='#0051704' ALT=''>
-<AREA SHAPE='RECT' COORDS='1955,617,2040,697' HREF='#0050778' ALT=''>
-<AREA SHAPE='RECT' COORDS='1975,824,2100,904' HREF='#0002821' ALT=''>
-<AREA SHAPE='RECT' COORDS='1687,455,1801,535' HREF='#0002684' ALT=''>
-<AREA SHAPE='RECT' COORDS='1825,463,1911,526' HREF='#0050776' ALT=''>
-<AREA SHAPE='RECT' COORDS='1167,455,1281,535' HREF='#0002683' ALT=''>
-<AREA SHAPE='RECT' COORDS='4919,600,5052,715' HREF='#0042590' ALT=''>
-<AREA SHAPE='RECT' COORDS='4801,437,4935,552' HREF='#0002474' ALT=''>
-<AREA SHAPE='RECT' COORDS='4683,600,4816,715' HREF='#0019885' ALT=''>
-<AREA SHAPE='RECT' COORDS='2091,609,2187,706' HREF='#0001912' ALT=''>
-<AREA SHAPE='RECT' COORDS='1973,1306,2101,1369' HREF='#0001914' ALT=''>
-<AREA SHAPE='RECT' COORDS='353,455,476,535' HREF='#0051094' ALT=''>
-<AREA SHAPE='RECT' COORDS='47,455,169,535' HREF='#0051093' ALT=''>
-<AREA SHAPE='RECT' COORDS='3291,1099,3424,1147' HREF='#0030003' ALT=''>
-<AREA SHAPE='RECT' COORDS='3152,1297,3285,1377' HREF='#0072503' ALT=''>
-<AREA SHAPE='RECT' COORDS='3169,1769,3268,1866' HREF='#0007204' ALT=''>
-<AREA SHAPE='RECT' COORDS='3155,1915,3283,2117' HREF='#0051482' ALT=''>
-<AREA SHAPE='RECT' COORDS='4683,807,4816,921' HREF='#0002484' ALT=''>
-<AREA SHAPE='RECT' COORDS='4683,1057,4816,1189' HREF='#0002486' ALT=''>
-<AREA SHAPE='RECT' COORDS='4709,205,4843,253' HREF='#0019882' ALT=''>
-<AREA SHAPE='RECT' COORDS='4801,309,4935,389' HREF='#0048002' ALT=''>
-<AREA SHAPE='RECT' COORDS='4644,309,4777,389' HREF='#0019883' ALT=''>
-<AREA SHAPE='RECT' COORDS='1692,824,1799,904' HREF='#0002706' ALT=''>
-<AREA SHAPE='RECT' COORDS='1821,1297,1949,1377' HREF='#0002711' ALT=''>
-<AREA SHAPE='RECT' COORDS='600,1469,731,1531' HREF='#0035023' ALT=''>
-<AREA SHAPE='RECT' COORDS='1973,1460,2101,1540' HREF='#0001916' ALT=''>
-<AREA SHAPE='RECT' COORDS='3147,840,3280,888' HREF='#0055080' ALT=''>
-<AREA SHAPE='RECT' COORDS='3005,840,3123,888' HREF='#0098771' ALT=''>
-<AREA SHAPE='RECT' COORDS='884,833,999,895' HREF='#0032944' ALT=''>
-<AREA SHAPE='RECT' COORDS='3164,101,3244,149' HREF='#0065007' ALT=''>
-<AREA SHAPE='RECT' COORDS='3477,318,3560,381' HREF='#0010033' ALT=''>
-<AREA SHAPE='RECT' COORDS='4644,455,4777,535' HREF='#0002483' ALT=''>
-<AREA SHAPE='RECT' COORDS='1028,471,1143,519' HREF='#0050865' ALT=''>
-<AREA SHAPE='RECT' COORDS='1013,626,1128,689' HREF='#0050866' ALT=''>
-<AREA SHAPE='RECT' COORDS='3592,325,3715,373' HREF='#0006952' ALT=''>
-<AREA SHAPE='RECT' COORDS='1463,471,1553,519' HREF='#0010941' ALT=''>
-<AREA SHAPE='RECT' COORDS='3663,101,3748,149' HREF='#0050896' ALT=''>
-<AREA SHAPE='RECT' COORDS='3453,205,3541,253' HREF='#0042221' ALT=''>
-<AREA SHAPE='RECT' COORDS='3565,205,3643,253' HREF='#0006950' ALT=''>
-<AREA SHAPE='RECT' COORDS='1453,1083,1547,1163' HREF='#0043065' ALT=''>
-<AREA SHAPE='RECT' COORDS='1571,1083,1667,1163' HREF='#2000106' ALT=''>
-<AREA SHAPE='RECT' COORDS='3013,1091,3147,1154' HREF='#0072507' ALT=''>
-<AREA SHAPE='RECT' COORDS='3808,5,3695,29' HREF='#0008150' ALT=''>
-<AREA SHAPE='RECT' COORDS='4283,101,4365,149' HREF='#0008152' ALT=''>
-<AREA SHAPE='RECT' COORDS='4033,101,4151,149' HREF='#0002376' ALT=''>
-<AREA SHAPE='RECT' COORDS='3169,1623,3268,1703' HREF='#0051480' ALT=''>
-<AREA SHAPE='RECT' COORDS='4325,205,4453,253' HREF='#0044238' ALT=''>
-<AREA SHAPE='RECT' COORDS='2349,633,2480,681' HREF='#0035556' ALT=''>
-<AREA SHAPE='RECT' COORDS='4419,318,4512,381' HREF='#0006793' ALT=''>
-<AREA SHAPE='RECT' COORDS='2297,1313,2415,1361' HREF='#0019933' ALT=''>
-<AREA SHAPE='RECT' COORDS='1935,455,2028,535' HREF='#0048584' ALT=''>
-<AREA SHAPE='RECT' COORDS='3963,840,4091,888' HREF='#0051607' ALT=''>
-<AREA SHAPE='RECT' COORDS='4919,807,5052,921' HREF='#0002480' ALT=''>
-<AREA SHAPE='RECT' COORDS='657,471,804,519' HREF='#0010646' ALT=''>
-<AREA SHAPE='RECT' COORDS='551,455,633,535' HREF='#0048523' ALT=''>
-<AREA SHAPE='RECT' COORDS='4077,205,4195,253' HREF='#0002252' ALT=''>
-<AREA SHAPE='RECT' COORDS='1805,626,1931,689' HREF='#0002819' ALT=''>
-<AREA SHAPE='RECT' COORDS='4321,455,4471,535' HREF='#0006796' ALT=''>
-<AREA SHAPE='RECT' COORDS='2641,617,2732,697' HREF='#0007166' ALT=''>
-</MAP>
-<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
-<p>&nbsp;</p>
-<table border='1' width='100%' id='table1'>
-	<tr>
-		<td Align=center ><b>GO term</b></td>
-		<td Align=center><b>Description</b></td>
-		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
-		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
-		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
-		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
-	</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060337&amp;view=details' target="_blank">GO:0060337</a><a name=0060337></a></td>
-<td>type I interferon signaling pathway</td>
-<td  align=center>1.11E-9</td>
-<td  align=center>1.41E-5</td>
-<td  align=center>10.15 (8795,46,226,12)</td>
-<td>
-<a id="ctrl_elements_GO:0060337" href="javascript:toggle('elements_GO:0060337')">[+] Show genes</a><br>
-<div id="elements_GO:0060337" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-IRF1  -  interferon regulatory factor 1<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-IRF7  -  interferon regulatory factor 7<br>
-IRF9  -  interferon regulatory factor 9<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-SP100  -  sp100 nuclear antigen<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035456&amp;view=details' target="_blank">GO:0035456</a><a name=0035456></a></td>
-<td>response to interferon-beta</td>
-<td  align=center>8.28E-7</td>
-<td  align=center>5.23E-3</td>
-<td  align=center>12.38 (8795,22,226,7)</td>
-<td>
-<a id="ctrl_elements_GO:0035456" href="javascript:toggle('elements_GO:0035456')">[+] Show genes</a><br>
-<div id="elements_GO:0035456" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-IRF1  -  interferon regulatory factor 1<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-AIM2  -  absent in melanoma 2<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060333&amp;view=details' target="_blank">GO:0060333</a><a name=0060333></a></td>
-<td>interferon-gamma-mediated signaling pathway</td>
-<td  align=center>6.9E-6</td>
-<td  align=center>2.91E-2</td>
-<td  align=center>6.61 (8795,53,226,9)</td>
-<td>
-<a id="ctrl_elements_GO:0060333" href="javascript:toggle('elements_GO:0060333')">[+] Show genes</a><br>
-<div id="elements_GO:0060333" style="display:none"> <font size=1>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-IRF1  -  interferon regulatory factor 1<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-IRF7  -  interferon regulatory factor 7<br>
-IRF9  -  interferon regulatory factor 9<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-SP100  -  sp100 nuclear antigen<br>
-B2M  -  beta-2-microglobulin<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002480&amp;view=details' target="_blank">GO:0002480</a><a name=0002480></a></td>
-<td>antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-independent</td>
-<td  align=center>1.4E-5</td>
-<td  align=center>4.42E-2</td>
-<td  align=center>22.24 (8795,7,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0002480" href="javascript:toggle('elements_GO:0002480')">[+] Show genes</a><br>
-<div id="elements_GO:0002480" style="display:none"> <font size=1>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-B2M  -  beta-2-microglobulin<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904761&amp;view=details' target="_blank">GO:1904761</a><a name=1904761></a></td>
-<td>negative regulation of myofibroblast differentiation</td>
-<td  align=center>1.67E-5</td>
-<td  align=center>4.23E-2</td>
-<td  align=center>38.92 (8795,3,226,3)</td>
-<td>
-<a id="ctrl_elements_GO:1904761" href="javascript:toggle('elements_GO:1904761')">[+] Show genes</a><br>
-<div id="elements_GO:1904761" style="display:none"> <font size=1>
-RB1  -  retinoblastoma 1<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007166&amp;view=details' target="_blank">GO:0007166</a><a name=0007166></a></td>
-<td>cell surface receptor signaling pathway</td>
-<td  align=center>1.9E-5</td>
-<td  align=center>4E-2</td>
-<td  align=center>1.85 (8795,990,226,47)</td>
-<td>
-<a id="ctrl_elements_GO:0007166" href="javascript:toggle('elements_GO:0007166')">[+] Show genes</a><br>
-<div id="elements_GO:0007166" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
-HBP1  -  hmg-box transcription factor 1<br>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-ABI1  -  abl-interactor 1<br>
-IRF9  -  interferon regulatory factor 9<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-ARID5B  -  at rich interactive domain 5b (mrf1-like)<br>
-SDCBP  -  syndecan binding protein (syntenin)<br>
-B2M  -  beta-2-microglobulin<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-APH1B  -  aph1b gamma secretase subunit<br>
-BTLA  -  b and t lymphocyte associated<br>
-TNRC6B  -  trinucleotide repeat containing 6b<br>
-SP100  -  sp100 nuclear antigen<br>
-AIM2  -  absent in melanoma 2<br>
-CALCOCO1  -  calcium binding and coiled-coil domain 1<br>
-ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-EVL  -  enah/vasp-like<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-LMBR1L  -  limb development membrane protein 1-like<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-LY96  -  lymphocyte antigen 96<br>
-CD27  -  cd27 molecule<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-IRF1  -  interferon regulatory factor 1<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-CSNK1G3  -  casein kinase 1, gamma 3<br>
-CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-TNKS2  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase 2<br>
-SETX  -  senataxin<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-DGKD  -  diacylglycerol kinase, delta 130kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002376&amp;view=details' target="_blank">GO:0002376</a><a name=0002376></a></td>
-<td>immune system process</td>
-<td  align=center>2.38E-5</td>
-<td  align=center>4.29E-2</td>
-<td  align=center>1.72 (8795,1242,226,55)</td>
-<td>
-<a id="ctrl_elements_GO:0002376" href="javascript:toggle('elements_GO:0002376')">[+] Show genes</a><br>
-<div id="elements_GO:0002376" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-ABI1  -  abl-interactor 1<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
-SDCBP  -  syndecan binding protein (syntenin)<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-ATM  -  ataxia telangiectasia mutated<br>
-BTLA  -  b and t lymphocyte associated<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
-AIM2  -  absent in melanoma 2<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-TLR7  -  toll-like receptor 7<br>
-CD53  -  cd53 molecule<br>
-HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-CTSS  -  cathepsin s<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-CD27  -  cd27 molecule<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
-S1PR4  -  sphingosine-1-phosphate receptor 4<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-IRF9  -  interferon regulatory factor 9<br>
-YPEL5  -  yippee-like 5 (drosophila)<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-LRMP  -  lymphoid-restricted membrane protein<br>
-METTL7A  -  methyltransferase like 7a<br>
-B2M  -  beta-2-microglobulin<br>
-FAIM3  -  fas apoptotic inhibitory molecule 3<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-GLG1  -  golgi glycoprotein 1<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-SCIMP  -  slp adaptor and csk interacting membrane protein<br>
-IGBP1  -  immunoglobulin (cd79a) binding protein 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-DPP7  -  dipeptidyl-peptidase 7<br>
-KMT2E  -  lysine (k)-specific methyltransferase 2e<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-LMBR1L  -  limb development membrane protein 1-like<br>
-CDK13  -  cyclin-dependent kinase 13<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-LY96  -  lymphocyte antigen 96<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-IRF1  -  interferon regulatory factor 1<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002252&amp;view=details' target="_blank">GO:0002252</a><a name=0002252></a></td>
-<td>immune effector process</td>
-<td  align=center>3.14E-5</td>
-<td  align=center>4.96E-2</td>
-<td  align=center>2.11 (8795,608,226,33)</td>
-<td>
-<a id="ctrl_elements_GO:0002252" href="javascript:toggle('elements_GO:0002252')">[+] Show genes</a><br>
-<div id="elements_GO:0002252" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-ABI1  -  abl-interactor 1<br>
-IRF9  -  interferon regulatory factor 9<br>
-YPEL5  -  yippee-like 5 (drosophila)<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-LRMP  -  lymphoid-restricted membrane protein<br>
-METTL7A  -  methyltransferase like 7a<br>
-ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
-SDCBP  -  syndecan binding protein (syntenin)<br>
-B2M  -  beta-2-microglobulin<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-DPP7  -  dipeptidyl-peptidase 7<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-TLR7  -  toll-like receptor 7<br>
-KMT2E  -  lysine (k)-specific methyltransferase 2e<br>
-CD53  -  cd53 molecule<br>
-CDK13  -  cyclin-dependent kinase 13<br>
-CTSS  -  cathepsin s<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-CD27  -  cd27 molecule<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-IRF7  -  interferon regulatory factor 7<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007165&amp;view=details' target="_blank">GO:0007165</a><a name=0007165></a></td>
-<td>signal transduction</td>
-<td  align=center>3.2E-5</td>
-<td  align=center>4.5E-2</td>
-<td  align=center>1.53 (8795,1903,226,75)</td>
-<td>
-<a id="ctrl_elements_GO:0007165" href="javascript:toggle('elements_GO:0007165')">[+] Show genes</a><br>
-<div id="elements_GO:0007165" style="display:none"> <font size=1>
-P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-ABI1  -  abl-interactor 1<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-ARID5B  -  at rich interactive domain 5b (mrf1-like)<br>
-SDCBP  -  syndecan binding protein (syntenin)<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-LPAR6  -  lysophosphatidic acid receptor 6<br>
-APH1B  -  aph1b gamma secretase subunit<br>
-ATM  -  ataxia telangiectasia mutated<br>
-PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br>
-BTLA  -  b and t lymphocyte associated<br>
-TNRC6B  -  trinucleotide repeat containing 6b<br>
-SP100  -  sp100 nuclear antigen<br>
-AIM2  -  absent in melanoma 2<br>
-NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
-ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-TLR7  -  toll-like receptor 7<br>
-HSH2D  -  hematopoietic sh2 domain containing<br>
-EVL  -  enah/vasp-like<br>
-DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br>
-CD53  -  cd53 molecule<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-CTSS  -  cathepsin s<br>
-CD27  -  cd27 molecule<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-S1PR4  -  sphingosine-1-phosphate receptor 4<br>
-TNKS2  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase 2<br>
-DGKD  -  diacylglycerol kinase, delta 130kda<br>
-HBP1  -  hmg-box transcription factor 1<br>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-PDE7A  -  phosphodiesterase 7a<br>
-IRF9  -  interferon regulatory factor 9<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-MDM4  -  mdm4 p53 binding protein homolog (mouse)<br>
-FGD2  -  fyve, rhogef and ph domain containing 2<br>
-B2M  -  beta-2-microglobulin<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-SCIMP  -  slp adaptor and csk interacting membrane protein<br>
-RALGPS2  -  ral gef with ph domain and sh3 binding motif 2<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-TPP1  -  tripeptidyl peptidase i<br>
-CREBRF  -  creb3 regulatory factor<br>
-CALCOCO1  -  calcium binding and coiled-coil domain 1<br>
-IGBP1  -  immunoglobulin (cd79a) binding protein 1<br>
-GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-ADD1  -  adducin 1 (alpha)<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-OGT  -  o-linked n-acetylglucosamine (glcnac) transferase<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-RB1  -  retinoblastoma 1<br>
-LMBR1L  -  limb development membrane protein 1-like<br>
-S100A6  -  s100 calcium binding protein a6<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-LY96  -  lymphocyte antigen 96<br>
-RHOBTB2  -  rho-related btb domain containing 2<br>
-IRF1  -  interferon regulatory factor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-CSNK1G3  -  casein kinase 1, gamma 3<br>
-SETX  -  senataxin<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-TYMP  -  thymidine phosphorylase<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051607&amp;view=details' target="_blank">GO:0051607</a><a name=0051607></a></td>
-<td>defense response to virus</td>
-<td  align=center>4.13E-5</td>
-<td  align=center>5.21E-2</td>
-<td  align=center>3.75 (8795,135,226,13)</td>
-<td>
-<a id="ctrl_elements_GO:0051607" href="javascript:toggle('elements_GO:0051607')">[+] Show genes</a><br>
-<div id="elements_GO:0051607" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-TLR7  -  toll-like receptor 7<br>
-IRF9  -  interferon regulatory factor 9<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-IRF1  -  interferon regulatory factor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042127&amp;view=details' target="_blank">GO:0042127</a><a name=0042127></a></td>
-<td>regulation of cell proliferation</td>
-<td  align=center>5.02E-5</td>
-<td  align=center>5.76E-2</td>
-<td  align=center>2.01 (8795,678,226,35)</td>
-<td>
-<a id="ctrl_elements_GO:0042127" href="javascript:toggle('elements_GO:0042127')">[+] Show genes</a><br>
-<div id="elements_GO:0042127" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-ABI1  -  abl-interactor 1<br>
-SYF2  -  syf2 pre-mrna-splicing factor<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-N4BP2L2  -  nedd4 binding protein 2-like 2<br>
-MDM4  -  mdm4 p53 binding protein homolog (mouse)<br>
-SDCBP  -  syndecan binding protein (syntenin)<br>
-B2M  -  beta-2-microglobulin<br>
-TOB2  -  transducer of erbb2, 2<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-ATM  -  ataxia telangiectasia mutated<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-RB1  -  retinoblastoma 1<br>
-MALAT1  -  metastasis associated lung adenocarcinoma transcript 1 (non-protein coding)<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-CDK13  -  cyclin-dependent kinase 13<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-S100A6  -  s100 calcium binding protein a6<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-NEAT1  -  nuclear paraspeckle assembly transcript 1 (non-protein coding)<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-TXNIP  -  thioredoxin interacting protein<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002250&amp;view=details' target="_blank">GO:0002250</a><a name=0002250></a></td>
-<td>adaptive immune response</td>
-<td  align=center>5.64E-5</td>
-<td  align=center>5.94E-2</td>
-<td  align=center>3.89 (8795,120,226,12)</td>
-<td>
-<a id="ctrl_elements_GO:0002250" href="javascript:toggle('elements_GO:0002250')">[+] Show genes</a><br>
-<div id="elements_GO:0002250" style="display:none"> <font size=1>
-CD27  -  cd27 molecule<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-IRF7  -  interferon regulatory factor 7<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
-BTLA  -  b and t lymphocyte associated<br>
-CTSS  -  cathepsin s<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904760&amp;view=details' target="_blank">GO:1904760</a><a name=1904760></a></td>
-<td>regulation of myofibroblast differentiation</td>
-<td  align=center>6.57E-5</td>
-<td  align=center>6.39E-2</td>
-<td  align=center>29.19 (8795,4,226,3)</td>
-<td>
-<a id="ctrl_elements_GO:1904760" href="javascript:toggle('elements_GO:1904760')">[+] Show genes</a><br>
-<div id="elements_GO:1904760" style="display:none"> <font size=1>
-RB1  -  retinoblastoma 1<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030888&amp;view=details' target="_blank">GO:0030888</a><a name=0030888></a></td>
-<td>regulation of B cell proliferation</td>
-<td  align=center>7.2E-5</td>
-<td  align=center>6.49E-2</td>
-<td  align=center>6.64 (8795,41,226,7)</td>
-<td>
-<a id="ctrl_elements_GO:0030888" href="javascript:toggle('elements_GO:0030888')">[+] Show genes</a><br>
-<div id="elements_GO:0030888" style="display:none"> <font size=1>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-ATM  -  ataxia telangiectasia mutated<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008285&amp;view=details' target="_blank">GO:0008285</a><a name=0008285></a></td>
-<td>negative regulation of cell proliferation</td>
-<td  align=center>7.93E-5</td>
-<td  align=center>6.68E-2</td>
-<td  align=center>2.61 (8795,298,226,20)</td>
-<td>
-<a id="ctrl_elements_GO:0008285" href="javascript:toggle('elements_GO:0008285')">[+] Show genes</a><br>
-<div id="elements_GO:0008285" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-ABI1  -  abl-interactor 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-RB1  -  retinoblastoma 1<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-MDM4  -  mdm4 p53 binding protein homolog (mouse)<br>
-B2M  -  beta-2-microglobulin<br>
-TOB2  -  transducer of erbb2, 2<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-ATM  -  ataxia telangiectasia mutated<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046640&amp;view=details' target="_blank">GO:0046640</a><a name=0046640></a></td>
-<td>regulation of alpha-beta T cell proliferation</td>
-<td  align=center>1.56E-4</td>
-<td  align=center>1.23E-1</td>
-<td  align=center>9.27 (8795,21,226,5)</td>
-<td>
-<a id="ctrl_elements_GO:0046640" href="javascript:toggle('elements_GO:0046640')">[+] Show genes</a><br>
-<div id="elements_GO:0046640" style="display:none"> <font size=1>
-IRF1  -  interferon regulatory factor 1<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051240&amp;view=details' target="_blank">GO:0051240</a><a name=0051240></a></td>
-<td>positive regulation of multicellular organismal process</td>
-<td  align=center>1.59E-4</td>
-<td  align=center>1.18E-1</td>
-<td  align=center>1.88 (8795,747,226,36)</td>
-<td>
-<a id="ctrl_elements_GO:0051240" href="javascript:toggle('elements_GO:0051240')">[+] Show genes</a><br>
-<div id="elements_GO:0051240" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-N4BP2L2  -  nedd4 binding protein 2-like 2<br>
-LPIN1  -  lipin 1<br>
-SDCBP  -  syndecan binding protein (syntenin)<br>
-B2M  -  beta-2-microglobulin<br>
-TOB2  -  transducer of erbb2, 2<br>
-RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-SCIMP  -  slp adaptor and csk interacting membrane protein<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-GPM6B  -  glycoprotein m6b<br>
-AIM2  -  absent in melanoma 2<br>
-NCOA3  -  nuclear receptor coactivator 3<br>
-NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
-TLR7  -  toll-like receptor 7<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-OGT  -  o-linked n-acetylglucosamine (glcnac) transferase<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-RB1  -  retinoblastoma 1<br>
-EVI2B  -  ecotropic viral integration site 2b<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-LY96  -  lymphocyte antigen 96<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-CD27  -  cd27 molecule<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-SETX  -  senataxin<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-CPNE5  -  copine v<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002486&amp;view=details' target="_blank">GO:0002486</a><a name=0002486></a></td>
-<td>antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway, TAP-independent</td>
-<td  align=center>1.61E-4</td>
-<td  align=center>1.13E-1</td>
-<td  align=center>23.35 (8795,5,226,3)</td>
-<td>
-<a id="ctrl_elements_GO:0002486" href="javascript:toggle('elements_GO:0002486')">[+] Show genes</a><br>
-<div id="elements_GO:0002486" style="display:none"> <font size=1>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002484&amp;view=details' target="_blank">GO:0002484</a><a name=0002484></a></td>
-<td>antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway</td>
-<td  align=center>1.61E-4</td>
-<td  align=center>1.07E-1</td>
-<td  align=center>23.35 (8795,5,226,3)</td>
-<td>
-<a id="ctrl_elements_GO:0002484" href="javascript:toggle('elements_GO:0002484')">[+] Show genes</a><br>
-<div id="elements_GO:0002484" style="display:none"> <font size=1>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042221&amp;view=details' target="_blank">GO:0042221</a><a name=0042221></a></td>
-<td>response to chemical</td>
-<td  align=center>1.9E-4</td>
-<td  align=center>1.2E-1</td>
-<td  align=center>1.61 (8795,1307,226,54)</td>
-<td>
-<a id="ctrl_elements_GO:0042221" href="javascript:toggle('elements_GO:0042221')">[+] Show genes</a><br>
-<div id="elements_GO:0042221" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br>
-ARID5B  -  at rich interactive domain 5b (mrf1-like)<br>
-MAN1B1  -  mannosidase, alpha, class 1b, member 1<br>
-ATM  -  ataxia telangiectasia mutated<br>
-VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br>
-SP100  -  sp100 nuclear antigen<br>
-AIM2  -  absent in melanoma 2<br>
-GLTSCR2  -  glioma tumor suppressor candidate region gene 2<br>
-NCOA3  -  nuclear receptor coactivator 3<br>
-ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br>
-MALAT1  -  metastasis associated lung adenocarcinoma transcript 1 (non-protein coding)<br>
-FAM65B  -  family with sequence similarity 65, member b<br>
-CTSS  -  cathepsin s<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-CD27  -  cd27 molecule<br>
-TMUB2  -  transmembrane and ubiquitin-like domain containing 2<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-UBXN6  -  ubx domain protein 6<br>
-DGKD  -  diacylglycerol kinase, delta 130kda<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-LPIN1  -  lipin 1<br>
-MDM4  -  mdm4 p53 binding protein homolog (mouse)<br>
-B2M  -  beta-2-microglobulin<br>
-CORO1B  -  coronin, actin binding protein, 1b<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-SCIMP  -  slp adaptor and csk interacting membrane protein<br>
-ZNF277  -  zinc finger protein 277<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-IGBP1  -  immunoglobulin (cd79a) binding protein 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-ADD1  -  adducin 1 (alpha)<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-OGT  -  o-linked n-acetylglucosamine (glcnac) transferase<br>
-RB1  -  retinoblastoma 1<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br>
-DNAJC4  -  dnaj (hsp40) homolog, subfamily c, member 4<br>
-LY96  -  lymphocyte antigen 96<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-IRF1  -  interferon regulatory factor 1<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-MBD4  -  methyl-cpg binding domain protein 4<br>
-CUTA  -  cuta divalent cation tolerance homolog (e. coli)<br>
-SETX  -  senataxin<br>
-CARF  -  calcium responsive transcription factor<br>
-CCDC115  -  coiled-coil domain containing 115<br>
-CPNE5  -  copine v<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042981&amp;view=details' target="_blank">GO:0042981</a><a name=0042981></a></td>
-<td>regulation of apoptotic process</td>
-<td  align=center>1.92E-4</td>
-<td  align=center>1.15E-1</td>
-<td  align=center>1.82 (8795,813,226,38)</td>
-<td>
-<a id="ctrl_elements_GO:0042981" href="javascript:toggle('elements_GO:0042981')">[+] Show genes</a><br>
-<div id="elements_GO:0042981" style="display:none"> <font size=1>
-TMBIM4  -  transmembrane bax inhibitor motif containing 4<br>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
-MDM4  -  mdm4 p53 binding protein homolog (mouse)<br>
-FGD2  -  fyve, rhogef and ph domain containing 2<br>
-FAIM3  -  fas apoptotic inhibitory molecule 3<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-APH1B  -  aph1b gamma secretase subunit<br>
-ATM  -  ataxia telangiectasia mutated<br>
-PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-SP100  -  sp100 nuclear antigen<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-GLTSCR2  -  glioma tumor suppressor candidate region gene 2<br>
-IGBP1  -  immunoglobulin (cd79a) binding protein 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-RB1  -  retinoblastoma 1<br>
-DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br>
-EVI2B  -  ecotropic viral integration site 2b<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-CD27  -  cd27 molecule<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-TMEM219  -  transmembrane protein 219<br>
-IRF7  -  interferon regulatory factor 7<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-SETX  -  senataxin<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050670&amp;view=details' target="_blank">GO:0050670</a><a name=0050670></a></td>
-<td>regulation of lymphocyte proliferation</td>
-<td  align=center>2.33E-4</td>
-<td  align=center>1.34E-1</td>
-<td  align=center>3.60 (8795,119,226,11)</td>
-<td>
-<a id="ctrl_elements_GO:0050670" href="javascript:toggle('elements_GO:0050670')">[+] Show genes</a><br>
-<div id="elements_GO:0050670" style="display:none"> <font size=1>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-ATM  -  ataxia telangiectasia mutated<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032944&amp;view=details' target="_blank">GO:0032944</a><a name=0032944></a></td>
-<td>regulation of mononuclear cell proliferation</td>
-<td  align=center>2.51E-4</td>
-<td  align=center>1.38E-1</td>
-<td  align=center>3.57 (8795,120,226,11)</td>
-<td>
-<a id="ctrl_elements_GO:0032944" href="javascript:toggle('elements_GO:0032944')">[+] Show genes</a><br>
-<div id="elements_GO:0032944" style="display:none"> <font size=1>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-ATM  -  ataxia telangiectasia mutated<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001916&amp;view=details' target="_blank">GO:0001916</a><a name=0001916></a></td>
-<td>positive regulation of T cell mediated cytotoxicity</td>
-<td  align=center>2.53E-4</td>
-<td  align=center>1.33E-1</td>
-<td  align=center>11.97 (8795,13,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0001916" href="javascript:toggle('elements_GO:0001916')">[+] Show genes</a><br>
-<div id="elements_GO:0001916" style="display:none"> <font size=1>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-B2M  -  beta-2-microglobulin<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035458&amp;view=details' target="_blank">GO:0035458</a><a name=0035458></a></td>
-<td>cellular response to interferon-beta</td>
-<td  align=center>2.53E-4</td>
-<td  align=center>1.28E-1</td>
-<td  align=center>11.97 (8795,13,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0035458" href="javascript:toggle('elements_GO:0035458')">[+] Show genes</a><br>
-<div id="elements_GO:0035458" style="display:none"> <font size=1>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-AIM2  -  absent in melanoma 2<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019885&amp;view=details' target="_blank">GO:0019885</a><a name=0019885></a></td>
-<td>antigen processing and presentation of endogenous peptide antigen via MHC class I</td>
-<td  align=center>2.53E-4</td>
-<td  align=center>1.23E-1</td>
-<td  align=center>11.97 (8795,13,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0019885" href="javascript:toggle('elements_GO:0019885')">[+] Show genes</a><br>
-<div id="elements_GO:0019885" style="display:none"> <font size=1>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-B2M  -  beta-2-microglobulin<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043067&amp;view=details' target="_blank">GO:0043067</a><a name=0043067></a></td>
-<td>regulation of programmed cell death</td>
-<td  align=center>2.65E-4</td>
-<td  align=center>1.24E-1</td>
-<td  align=center>1.79 (8795,826,226,38)</td>
-<td>
-<a id="ctrl_elements_GO:0043067" href="javascript:toggle('elements_GO:0043067')">[+] Show genes</a><br>
-<div id="elements_GO:0043067" style="display:none"> <font size=1>
-TMBIM4  -  transmembrane bax inhibitor motif containing 4<br>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
-MDM4  -  mdm4 p53 binding protein homolog (mouse)<br>
-FGD2  -  fyve, rhogef and ph domain containing 2<br>
-FAIM3  -  fas apoptotic inhibitory molecule 3<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-APH1B  -  aph1b gamma secretase subunit<br>
-ATM  -  ataxia telangiectasia mutated<br>
-PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-SP100  -  sp100 nuclear antigen<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-GLTSCR2  -  glioma tumor suppressor candidate region gene 2<br>
-IGBP1  -  immunoglobulin (cd79a) binding protein 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-RB1  -  retinoblastoma 1<br>
-DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br>
-EVI2B  -  ecotropic viral integration site 2b<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-CD27  -  cd27 molecule<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-TMEM219  -  transmembrane protein 219<br>
-IRF7  -  interferon regulatory factor 7<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-SETX  -  senataxin<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019221&amp;view=details' target="_blank">GO:0019221</a><a name=0019221></a></td>
-<td>cytokine-mediated signaling pathway</td>
-<td  align=center>2.77E-4</td>
-<td  align=center>1.25E-1</td>
-<td  align=center>2.26 (8795,378,226,22)</td>
-<td>
-<a id="ctrl_elements_GO:0019221" href="javascript:toggle('elements_GO:0019221')">[+] Show genes</a><br>
-<div id="elements_GO:0019221" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-IRF9  -  interferon regulatory factor 9<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-B2M  -  beta-2-microglobulin<br>
-CD27  -  cd27 molecule<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-IRF1  -  interferon regulatory factor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-SP100  -  sp100 nuclear antigen<br>
-AIM2  -  absent in melanoma 2<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019932&amp;view=details' target="_blank">GO:0019932</a><a name=0019932></a></td>
-<td>second-messenger-mediated signaling</td>
-<td  align=center>3.14E-4</td>
-<td  align=center>1.37E-1</td>
-<td  align=center>4.12 (8795,85,226,9)</td>
-<td>
-<a id="ctrl_elements_GO:0019932" href="javascript:toggle('elements_GO:0019932')">[+] Show genes</a><br>
-<div id="elements_GO:0019932" style="display:none"> <font size=1>
-PDE7A  -  phosphodiesterase 7a<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-S1PR4  -  sphingosine-1-phosphate receptor 4<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br>
-PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-DGKD  -  diacylglycerol kinase, delta 130kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000564&amp;view=details' target="_blank">GO:2000564</a><a name=2000564></a></td>
-<td>regulation of CD8-positive, alpha-beta T cell proliferation</td>
-<td  align=center>3.16E-4</td>
-<td  align=center>1.33E-1</td>
-<td  align=center>19.46 (8795,6,226,3)</td>
-<td>
-<a id="ctrl_elements_GO:2000564" href="javascript:toggle('elements_GO:2000564')">[+] Show genes</a><br>
-<div id="elements_GO:2000564" style="display:none"> <font size=1>
-IRF1  -  interferon regulatory factor 1<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030889&amp;view=details' target="_blank">GO:0030889</a><a name=0030889></a></td>
-<td>negative regulation of B cell proliferation</td>
-<td  align=center>3.47E-4</td>
-<td  align=center>1.41E-1</td>
-<td  align=center>11.12 (8795,14,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0030889" href="javascript:toggle('elements_GO:0030889')">[+] Show genes</a><br>
-<div id="elements_GO:0030889" style="display:none"> <font size=1>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-ATM  -  ataxia telangiectasia mutated<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070663&amp;view=details' target="_blank">GO:0070663</a><a name=0070663></a></td>
-<td>regulation of leukocyte proliferation</td>
-<td  align=center>3.58E-4</td>
-<td  align=center>1.41E-1</td>
-<td  align=center>3.42 (8795,125,226,11)</td>
-<td>
-<a id="ctrl_elements_GO:0070663" href="javascript:toggle('elements_GO:0070663')">[+] Show genes</a><br>
-<div id="elements_GO:0070663" style="display:none"> <font size=1>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-ATM  -  ataxia telangiectasia mutated<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002683&amp;view=details' target="_blank">GO:0002683</a><a name=0002683></a></td>
-<td>negative regulation of immune system process</td>
-<td  align=center>3.72E-4</td>
-<td  align=center>1.42E-1</td>
-<td  align=center>2.64 (8795,236,226,16)</td>
-<td>
-<a id="ctrl_elements_GO:0002683" href="javascript:toggle('elements_GO:0002683')">[+] Show genes</a><br>
-<div id="elements_GO:0002683" style="display:none"> <font size=1>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
-FAM65B  -  family with sequence similarity 65, member b<br>
-N4BP2L2  -  nedd4 binding protein 2-like 2<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-LY96  -  lymphocyte antigen 96<br>
-TOB2  -  transducer of erbb2, 2<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-ATM  -  ataxia telangiectasia mutated<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019933&amp;view=details' target="_blank">GO:0019933</a><a name=0019933></a></td>
-<td>cAMP-mediated signaling</td>
-<td  align=center>3.74E-4</td>
-<td  align=center>1.39E-1</td>
-<td  align=center>7.78 (8795,25,226,5)</td>
-<td>
-<a id="ctrl_elements_GO:0019933" href="javascript:toggle('elements_GO:0019933')">[+] Show genes</a><br>
-<div id="elements_GO:0019933" style="display:none"> <font size=1>
-PDE7A  -  phosphodiesterase 7a<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-S1PR4  -  sphingosine-1-phosphate receptor 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035023&amp;view=details' target="_blank">GO:0035023</a><a name=0035023></a></td>
-<td>regulation of Rho protein signal transduction</td>
-<td  align=center>4.32E-4</td>
-<td  align=center>1.56E-1</td>
-<td  align=center>5.99 (8795,39,226,6)</td>
-<td>
-<a id="ctrl_elements_GO:0035023" href="javascript:toggle('elements_GO:0035023')">[+] Show genes</a><br>
-<div id="elements_GO:0035023" style="display:none"> <font size=1>
-P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
-LPAR6  -  lysophosphatidic acid receptor 6<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-FAM65B  -  family with sequence similarity 65, member b<br>
-CDC42SE2  -  cdc42 small effector 2<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002695&amp;view=details' target="_blank">GO:0002695</a><a name=0002695></a></td>
-<td>negative regulation of leukocyte activation</td>
-<td  align=center>4.44E-4</td>
-<td  align=center>1.56E-1</td>
-<td  align=center>3.94 (8795,89,226,9)</td>
-<td>
-<a id="ctrl_elements_GO:0002695" href="javascript:toggle('elements_GO:0002695')">[+] Show genes</a><br>
-<div id="elements_GO:0002695" style="display:none"> <font size=1>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-ATM  -  ataxia telangiectasia mutated<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-FAM65B  -  family with sequence similarity 65, member b<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019935&amp;view=details' target="_blank">GO:0019935</a><a name=0019935></a></td>
-<td>cyclic-nucleotide-mediated signaling</td>
-<td  align=center>4.53E-4</td>
-<td  align=center>1.55E-1</td>
-<td  align=center>7.48 (8795,26,226,5)</td>
-<td>
-<a id="ctrl_elements_GO:0019935" href="javascript:toggle('elements_GO:0019935')">[+] Show genes</a><br>
-<div id="elements_GO:0019935" style="display:none"> <font size=1>
-PDE7A  -  phosphodiesterase 7a<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-S1PR4  -  sphingosine-1-phosphate receptor 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006955&amp;view=details' target="_blank">GO:0006955</a><a name=0006955></a></td>
-<td>immune response</td>
-<td  align=center>4.62E-4</td>
-<td  align=center>1.53E-1</td>
-<td  align=center>2.06 (8795,473,226,25)</td>
-<td>
-<a id="ctrl_elements_GO:0006955" href="javascript:toggle('elements_GO:0006955')">[+] Show genes</a><br>
-<div id="elements_GO:0006955" style="display:none"> <font size=1>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-B2M  -  beta-2-microglobulin<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-BTLA  -  b and t lymphocyte associated<br>
-AIM2  -  absent in melanoma 2<br>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-TLR7  -  toll-like receptor 7<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-HLA-DOB  -  major histocompatibility complex, class ii, do beta<br>
-CTSS  -  cathepsin s<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-LY96  -  lymphocyte antigen 96<br>
-CD27  -  cd27 molecule<br>
-IRF7  -  interferon regulatory factor 7<br>
-CYSLTR1  -  cysteinyl leukotriene receptor 1<br>
-S1PR4  -  sphingosine-1-phosphate receptor 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002483&amp;view=details' target="_blank">GO:0002483</a><a name=0002483></a></td>
-<td>antigen processing and presentation of endogenous peptide antigen</td>
-<td  align=center>4.64E-4</td>
-<td  align=center>1.5E-1</td>
-<td  align=center>10.38 (8795,15,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0002483" href="javascript:toggle('elements_GO:0002483')">[+] Show genes</a><br>
-<div id="elements_GO:0002483" style="display:none"> <font size=1>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-B2M  -  beta-2-microglobulin<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046337&amp;view=details' target="_blank">GO:0046337</a><a name=0046337></a></td>
-<td>phosphatidylethanolamine metabolic process</td>
-<td  align=center>4.64E-4</td>
-<td  align=center>1.46E-1</td>
-<td  align=center>10.38 (8795,15,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0046337" href="javascript:toggle('elements_GO:0046337')">[+] Show genes</a><br>
-<div id="elements_GO:0046337" style="display:none"> <font size=1>
-RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br>
-LPIN1  -  lipin 1<br>
-PNPLA8  -  patatin-like phospholipase domain containing 8<br>
-NAAA  -  n-acylethanolamine acid amidase<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098542&amp;view=details' target="_blank">GO:0098542</a><a name=0098542></a></td>
-<td>defense response to other organism</td>
-<td  align=center>5.08E-4</td>
-<td  align=center>1.57E-1</td>
-<td  align=center>2.67 (8795,219,226,15)</td>
-<td>
-<a id="ctrl_elements_GO:0098542" href="javascript:toggle('elements_GO:0098542')">[+] Show genes</a><br>
-<div id="elements_GO:0098542" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-TLR7  -  toll-like receptor 7<br>
-IRF9  -  interferon regulatory factor 9<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-IRF1  -  interferon regulatory factor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045663&amp;view=details' target="_blank">GO:0045663</a><a name=0045663></a></td>
-<td>positive regulation of myoblast differentiation</td>
-<td  align=center>5.43E-4</td>
-<td  align=center>1.63E-1</td>
-<td  align=center>16.68 (8795,7,226,3)</td>
-<td>
-<a id="ctrl_elements_GO:0045663" href="javascript:toggle('elements_GO:0045663')">[+] Show genes</a><br>
-<div id="elements_GO:0045663" style="display:none"> <font size=1>
-MEF2C  -  myocyte enhancer factor 2c<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-FAM65B  -  family with sequence similarity 65, member b<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043065&amp;view=details' target="_blank">GO:0043065</a><a name=0043065></a></td>
-<td>positive regulation of apoptotic process</td>
-<td  align=center>5.73E-4</td>
-<td  align=center>1.68E-1</td>
-<td  align=center>2.20 (8795,372,226,21)</td>
-<td>
-<a id="ctrl_elements_GO:0043065" href="javascript:toggle('elements_GO:0043065')">[+] Show genes</a><br>
-<div id="elements_GO:0043065" style="display:none"> <font size=1>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-FGD2  -  fyve, rhogef and ph domain containing 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-APH1B  -  aph1b gamma secretase subunit<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-ATM  -  ataxia telangiectasia mutated<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009607&amp;view=details' target="_blank">GO:0009607</a><a name=0009607></a></td>
-<td>response to biotic stimulus</td>
-<td  align=center>6.01E-4</td>
-<td  align=center>1.72E-1</td>
-<td  align=center>2.06 (8795,454,226,24)</td>
-<td>
-<a id="ctrl_elements_GO:0009607" href="javascript:toggle('elements_GO:0009607')">[+] Show genes</a><br>
-<div id="elements_GO:0009607" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-TLR7  -  toll-like receptor 7<br>
-IRF9  -  interferon regulatory factor 9<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-LY96  -  lymphocyte antigen 96<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-B2M  -  beta-2-microglobulin<br>
-IRF1  -  interferon regulatory factor 1<br>
-TXNIP  -  thioredoxin interacting protein<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-IRF7  -  interferon regulatory factor 7<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-SCIMP  -  slp adaptor and csk interacting membrane protein<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001914&amp;view=details' target="_blank">GO:0001914</a><a name=0001914></a></td>
-<td>regulation of T cell mediated cytotoxicity</td>
-<td  align=center>6.06E-4</td>
-<td  align=center>1.7E-1</td>
-<td  align=center>9.73 (8795,16,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0001914" href="javascript:toggle('elements_GO:0001914')">[+] Show genes</a><br>
-<div id="elements_GO:0001914" style="display:none"> <font size=1>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-B2M  -  beta-2-microglobulin<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050866&amp;view=details' target="_blank">GO:0050866</a><a name=0050866></a></td>
-<td>negative regulation of cell activation</td>
-<td  align=center>6.15E-4</td>
-<td  align=center>1.69E-1</td>
-<td  align=center>3.77 (8795,93,226,9)</td>
-<td>
-<a id="ctrl_elements_GO:0050866" href="javascript:toggle('elements_GO:0050866')">[+] Show genes</a><br>
-<div id="elements_GO:0050866" style="display:none"> <font size=1>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-ATM  -  ataxia telangiectasia mutated<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-FAM65B  -  family with sequence similarity 65, member b<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010942&amp;view=details' target="_blank">GO:0010942</a><a name=0010942></a></td>
-<td>positive regulation of cell death</td>
-<td  align=center>6.44E-4</td>
-<td  align=center>1.73E-1</td>
-<td  align=center>2.13 (8795,402,226,22)</td>
-<td>
-<a id="ctrl_elements_GO:0010942" href="javascript:toggle('elements_GO:0010942')">[+] Show genes</a><br>
-<div id="elements_GO:0010942" style="display:none"> <font size=1>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-FGD2  -  fyve, rhogef and ph domain containing 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-APH1B  -  aph1b gamma secretase subunit<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-ATM  -  ataxia telangiectasia mutated<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071880&amp;view=details' target="_blank">GO:0071880</a><a name=0071880></a></td>
-<td>adenylate cyclase-activating adrenergic receptor signaling pathway</td>
-<td  align=center>6.57E-4</td>
-<td  align=center>1.73E-1</td>
-<td  align=center>38.92 (8795,2,226,2)</td>
-<td>
-<a id="ctrl_elements_GO:0071880" href="javascript:toggle('elements_GO:0071880')">[+] Show genes</a><br>
-<div id="elements_GO:0071880" style="display:none"> <font size=1>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043068&amp;view=details' target="_blank">GO:0043068</a><a name=0043068></a></td>
-<td>positive regulation of programmed cell death</td>
-<td  align=center>6.82E-4</td>
-<td  align=center>1.76E-1</td>
-<td  align=center>2.17 (8795,377,226,21)</td>
-<td>
-<a id="ctrl_elements_GO:0043068" href="javascript:toggle('elements_GO:0043068')">[+] Show genes</a><br>
-<div id="elements_GO:0043068" style="display:none"> <font size=1>
-UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br>
-FGD2  -  fyve, rhogef and ph domain containing 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-TXNIP  -  thioredoxin interacting protein<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-APH1B  -  aph1b gamma secretase subunit<br>
-MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br>
-ATM  -  ataxia telangiectasia mutated<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br>
-PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br>
-BTG1  -  b-cell translocation gene 1, anti-proliferative<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043207&amp;view=details' target="_blank">GO:0043207</a><a name=0043207></a></td>
-<td>response to external biotic stimulus</td>
-<td  align=center>7.56E-4</td>
-<td  align=center>1.91E-1</td>
-<td  align=center>2.06 (8795,434,226,23)</td>
-<td>
-<a id="ctrl_elements_GO:0043207" href="javascript:toggle('elements_GO:0043207')">[+] Show genes</a><br>
-<div id="elements_GO:0043207" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-TLR7  -  toll-like receptor 7<br>
-IRF9  -  interferon regulatory factor 9<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-LY96  -  lymphocyte antigen 96<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-B2M  -  beta-2-microglobulin<br>
-IRF1  -  interferon regulatory factor 1<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-IRF7  -  interferon regulatory factor 7<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-SCIMP  -  slp adaptor and csk interacting membrane protein<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019883&amp;view=details' target="_blank">GO:0019883</a><a name=0019883></a></td>
-<td>antigen processing and presentation of endogenous antigen</td>
-<td  align=center>7.76E-4</td>
-<td  align=center>1.92E-1</td>
-<td  align=center>9.16 (8795,17,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0019883" href="javascript:toggle('elements_GO:0019883')">[+] Show genes</a><br>
-<div id="elements_GO:0019883" style="display:none"> <font size=1>
-HLA-C  -  major histocompatibility complex, class i, c<br>
-HLA-B  -  major histocompatibility complex, class i, b<br>
-HLA-E  -  major histocompatibility complex, class i, e<br>
-B2M  -  beta-2-microglobulin<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051482&amp;view=details' target="_blank">GO:0051482</a><a name=0051482></a></td>
-<td>positive regulation of cytosolic calcium ion concentration involved in phospholipase C-activating G protein-coupled signaling pathway</td>
-<td  align=center>8.52E-4</td>
-<td  align=center>2.07E-1</td>
-<td  align=center>14.59 (8795,8,226,3)</td>
-<td>
-<a id="ctrl_elements_GO:0051482" href="javascript:toggle('elements_GO:0051482')">[+] Show genes</a><br>
-<div id="elements_GO:0051482" style="display:none"> <font size=1>
-P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-LPAR6  -  lysophosphatidic acid receptor 6<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009615&amp;view=details' target="_blank">GO:0009615</a><a name=0009615></a></td>
-<td>response to virus</td>
-<td  align=center>8.82E-4</td>
-<td  align=center>2.1E-1</td>
-<td  align=center>2.63 (8795,207,226,14)</td>
-<td>
-<a id="ctrl_elements_GO:0009615" href="javascript:toggle('elements_GO:0009615')">[+] Show genes</a><br>
-<div id="elements_GO:0009615" style="display:none"> <font size=1>
-IFITM1  -  interferon induced transmembrane protein 1<br>
-IFITM3  -  interferon induced transmembrane protein 3<br>
-TLR7  -  toll-like receptor 7<br>
-IRF9  -  interferon regulatory factor 9<br>
-STAT2  -  signal transducer and activator of transcription 2, 113kda<br>
-STAT1  -  signal transducer and activator of transcription 1, 91kda<br>
-IFITM2  -  interferon induced transmembrane protein 2<br>
-NLRP1  -  nlr family, pyrin domain containing 1<br>
-IRF1  -  interferon regulatory factor 1<br>
-IRF7  -  interferon regulatory factor 7<br>
-RNASE6  -  ribonuclease, rnase a family, k6<br>
-IFI44L  -  interferon-induced protein 44-like<br>
-PTPRC  -  protein tyrosine phosphatase, receptor type, c<br>
-SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000106&amp;view=details' target="_blank">GO:2000106</a><a name=2000106></a></td>
-<td>regulation of leukocyte apoptotic process</td>
-<td  align=center>9.49E-4</td>
-<td  align=center>2.22E-1</td>
-<td  align=center>5.19 (8795,45,226,6)</td>
-<td>
-<a id="ctrl_elements_GO:2000106" href="javascript:toggle('elements_GO:2000106')">[+] Show genes</a><br>
-<div id="elements_GO:2000106" style="display:none"> <font size=1>
-CD27  -  cd27 molecule<br>
-MEF2C  -  myocyte enhancer factor 2c<br>
-IRF7  -  interferon regulatory factor 7<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-ORMDL3  -  orm1-like 3 (s. cerevisiae)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007189&amp;view=details' target="_blank">GO:0007189</a><a name=0007189></a></td>
-<td>adenylate cyclase-activating G protein-coupled receptor signaling pathway</td>
-<td  align=center>9.78E-4</td>
-<td  align=center>2.25E-1</td>
-<td  align=center>8.65 (8795,18,226,4)</td>
-<td>
-<a id="ctrl_elements_GO:0007189" href="javascript:toggle('elements_GO:0007189')">[+] Show genes</a><br>
-<div id="elements_GO:0007189" style="display:none"> <font size=1>
-S1PR1  -  sphingosine-1-phosphate receptor 1<br>
-RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br>
-AKAP13  -  a kinase (prka) anchor protein 13<br>
-S1PR4  -  sphingosine-1-phosphate receptor 4<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051250&amp;view=details' target="_blank">GO:0051250</a><a name=0051250></a></td>
-<td>negative regulation of lymphocyte activation</td>
-<td  align=center>9.91E-4</td>
-<td  align=center>2.24E-1</td>
-<td  align=center>3.89 (8795,80,226,8)</td>
-<td>
-<a id="ctrl_elements_GO:0051250" href="javascript:toggle('elements_GO:0051250')">[+] Show genes</a><br>
-<div id="elements_GO:0051250" style="display:none"> <font size=1>
-MNDA  -  myeloid cell nuclear differentiation antigen<br>
-IRF1  -  interferon regulatory factor 1<br>
-PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br>
-TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br>
-ATM  -  ataxia telangiectasia mutated<br>
-BLK  -  b lymphoid tyrosine kinase<br>
-FAM65B  -  family with sequence similarity 65, member b<br>
-INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br>
-</FONT></div>
-</td>
-</tr>
-</table>
-<p>Species used: Homo sapiens</p><p>The system has recognized 9267 genes out of 9727 gene terms entered by the user.<br> 9267 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>239 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
-<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
-<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
-The GOrilla database was last updated on Mar 6, 2021</p>
-<p>This results page will be available on this site for one month from now (until 
-Jan 16, 2023
-). You can bookmark this page and come back to it later.
-</p>
-<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br>
-<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
-<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
-<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
-<p>
-<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
-</p>
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="5,626,123,689" href="#1904760" shape="RECT"/>
+<area alt="" coords="80,824,197,904" href="#1904761" shape="RECT"/>
+<area alt="" coords="2437,1443,2565,1557" href="#0007189" shape="RECT"/>
+<area alt="" coords="2503,1605,2631,1720" href="#0071880" shape="RECT"/>
+<area alt="" coords="4339,626,4437,689" href="#0006644" shape="RECT"/>
+<area alt="" coords="4260,833,4399,895" href="#0006650" shape="RECT"/>
+<area alt="" coords="3157,198,3251,261" href="#0065008" shape="RECT"/>
+<area alt="" coords="3156,325,3252,373" href="#0042592" shape="RECT"/>
+<area alt="" coords="3877,205,4003,253" href="#0006955" shape="RECT"/>
+<area alt="" coords="3877,325,4003,373" href="#0002250" shape="RECT"/>
+<area alt="" coords="3032,1313,3128,1361" href="#0055074" shape="RECT"/>
+<area alt="" coords="3171,1469,3267,1531" href="#0006874" shape="RECT"/>
+<area alt="" coords="1572,815,1668,913" href="#0002705" shape="RECT"/>
+<area alt="" coords="1691,1074,1797,1171" href="#0002708" shape="RECT"/>
+<area alt="" coords="1305,455,1388,535" href="#0048522" shape="RECT"/>
+<area alt="" coords="429,626,565,689" href="#0045597" shape="RECT"/>
+<area alt="" coords="1324,626,1415,689" href="#0010942" shape="RECT"/>
+<area alt="" coords="1261,1469,1384,1531" href="#0046640" shape="RECT"/>
+<area alt="" coords="1333,1623,1456,1703" href="#2000564" shape="RECT"/>
+<area alt="" coords="2185,325,2279,373" href="#0031341" shape="RECT"/>
+<area alt="" coords="2303,455,2399,535" href="#0001910" shape="RECT"/>
+<area alt="" coords="2185,463,2279,526" href="#0031343" shape="RECT"/>
+<area alt="" coords="3509,633,3627,681" href="#0035456" shape="RECT"/>
+<area alt="" coords="3488,833,3605,895" href="#0035458" shape="RECT"/>
+<area alt="" coords="4188,463,4297,526" href="#0044255" shape="RECT"/>
+<area alt="" coords="4207,626,4297,689" href="#0046486" shape="RECT"/>
+<area alt="" coords="4477,198,4608,261" href="#0071704" shape="RECT"/>
+<area alt="" coords="4285,325,4395,373" href="#0006629" shape="RECT"/>
+<area alt="" coords="4495,463,4620,526" href="#0019637" shape="RECT"/>
+<area alt="" coords="2269,840,2461,888" href="#0019932" shape="RECT"/>
+<area alt="" coords="2261,1099,2440,1147" href="#0019935" shape="RECT"/>
+<area alt="" coords="3268,471,3364,519" href="#0019725" shape="RECT"/>
+<area alt="" coords="3275,626,3371,689" href="#0055082" shape="RECT"/>
+<area alt="" coords="3945,471,4068,519" href="#0051707" shape="RECT"/>
+<area alt="" coords="3988,633,4065,681" href="#0009615" shape="RECT"/>
+<area alt="" coords="3836,633,3964,681" href="#0098542" shape="RECT"/>
+<area alt="" coords="3351,101,3423,149" href="#0009987" shape="RECT"/>
+<area alt="" coords="3344,198,3429,261" href="#0051716" shape="RECT"/>
+<area alt="" coords="4219,198,4301,261" href="#0044237" shape="RECT"/>
+<area alt="" coords="2500,471,2631,519" href="#0007165" shape="RECT"/>
+<area alt="" coords="600,1083,731,1163" href="#0051056" shape="RECT"/>
+<area alt="" coords="600,1306,731,1369" href="#0046578" shape="RECT"/>
+<area alt="" coords="1995,309,2104,389" href="#0051239" shape="RECT"/>
+<area alt="" coords="2052,446,2161,543" href="#0051240" shape="RECT"/>
+<area alt="" coords="3768,198,3853,261" href="#0009605" shape="RECT"/>
+<area alt="" coords="3747,318,3853,381" href="#0043207" shape="RECT"/>
+<area alt="" coords="893,1083,1000,1163" href="#0051250" shape="RECT"/>
+<area alt="" coords="808,1297,915,1377" href="#0050672" shape="RECT"/>
+<area alt="" coords="939,1306,1064,1369" href="#0050869" shape="RECT"/>
+<area alt="" coords="755,1083,869,1163" href="#0032945" shape="RECT"/>
+<area alt="" coords="3304,840,3421,888" href="#0006873" shape="RECT"/>
+<area alt="" coords="3148,471,3244,519" href="#0048878" shape="RECT"/>
+<area alt="" coords="3133,633,3251,681" href="#0050801" shape="RECT"/>
+<area alt="" coords="1173,833,1280,895" href="#0051249" shape="RECT"/>
+<area alt="" coords="1304,1099,1429,1147" href="#0050863" shape="RECT"/>
+<area alt="" coords="1173,1091,1280,1154" href="#0050670" shape="RECT"/>
+<area alt="" coords="1024,1099,1149,1147" href="#0050864" shape="RECT"/>
+<area alt="" coords="1823,763,1951,965" href="#0002822" shape="RECT"/>
+<area alt="" coords="1973,1013,2101,1232" href="#0002824" shape="RECT"/>
+<area alt="" coords="1821,1091,1949,1154" href="#0002709" shape="RECT"/>
+<area alt="" coords="1088,1313,1227,1361" href="#0030888" shape="RECT"/>
+<area alt="" coords="932,1469,1071,1531" href="#0030889" shape="RECT"/>
+<area alt="" coords="1408,1460,1523,1540" href="#2001185" shape="RECT"/>
+<area alt="" coords="193,471,329,519" href="#0045595" shape="RECT"/>
+<area alt="" coords="307,626,405,689" href="#0045661" shape="RECT"/>
+<area alt="" coords="147,626,283,689" href="#0045596" shape="RECT"/>
+<area alt="" coords="625,626,719,689" href="#0009966" shape="RECT"/>
+<area alt="" coords="604,833,735,895" href="#1902531" shape="RECT"/>
+<area alt="" coords="1251,1313,1387,1361" href="#0042129" shape="RECT"/>
+<area alt="" coords="3499,471,3584,519" href="#0034097" shape="RECT"/>
+<area alt="" coords="3395,617,3485,697" href="#0071345" shape="RECT"/>
+<area alt="" coords="2501,824,2629,904" href="#0007186" shape="RECT"/>
+<area alt="" coords="2464,1057,2595,1189" href="#0007187" shape="RECT"/>
+<area alt="" coords="2589,1460,2675,1540" href="#0071875" shape="RECT"/>
+<area alt="" coords="1637,198,1731,261" href="#0050789" shape="RECT"/>
+<area alt="" coords="1563,318,1677,381" href="#0002682" shape="RECT"/>
+<area alt="" coords="277,318,400,381" href="#0050793" shape="RECT"/>
+<area alt="" coords="1819,309,1912,389" href="#0048518" shape="RECT"/>
+<area alt="" coords="580,325,665,373" href="#0023051" shape="RECT"/>
+<area alt="" coords="1044,318,1127,381" href="#0050794" shape="RECT"/>
+<area alt="" coords="848,309,941,389" href="#0048519" shape="RECT"/>
+<area alt="" coords="1701,318,1795,381" href="#0048583" shape="RECT"/>
+<area alt="" coords="1203,626,1299,689" href="#0002694" shape="RECT"/>
+<area alt="" coords="1023,824,1119,904" href="#0002695" shape="RECT"/>
+<area alt="" coords="2445,1280,2584,1395" href="#0007188" shape="RECT"/>
+<area alt="" coords="4241,1091,4417,1154" href="#0046337" shape="RECT"/>
+<area alt="" coords="879,471,1004,519" href="#0042127" shape="RECT"/>
+<area alt="" coords="744,626,869,689" href="#0008285" shape="RECT"/>
+<area alt="" coords="893,626,989,689" href="#0070663" shape="RECT"/>
+<area alt="" coords="3360,309,3453,389" href="#0070887" shape="RECT"/>
+<area alt="" coords="3392,455,3475,535" href="#0071310" shape="RECT"/>
+<area alt="" coords="2661,833,2792,895" href="#0019221" shape="RECT"/>
+<area alt="" coords="2669,1091,2784,1154" href="#0060337" shape="RECT"/>
+<area alt="" coords="2808,1091,2989,1154" href="#0060333" shape="RECT"/>
+<area alt="" coords="764,824,860,904" href="#0070664" shape="RECT"/>
+<area alt="" coords="1577,455,1663,535" href="#0002697" shape="RECT"/>
+<area alt="" coords="1575,617,1671,697" href="#0002703" shape="RECT"/>
+<area alt="" coords="1695,609,1780,706" href="#0002699" shape="RECT"/>
+<area alt="" coords="1439,626,1551,689" href="#0043067" shape="RECT"/>
+<area alt="" coords="1453,833,1547,895" href="#0042981" shape="RECT"/>
+<area alt="" coords="1317,824,1429,904" href="#0043068" shape="RECT"/>
+<area alt="" coords="3171,1099,3267,1147" href="#0055065" shape="RECT"/>
+<area alt="" coords="3309,1306,3405,1369" href="#0006875" shape="RECT"/>
+<area alt="" coords="4959,309,5092,389" href="#0019884" shape="RECT"/>
+<area alt="" coords="4959,455,5092,535" href="#0002478" shape="RECT"/>
+<area alt="" coords="413,824,512,904" href="#0045663" shape="RECT"/>
+<area alt="" coords="1411,1306,1520,1369" href="#0046634" shape="RECT"/>
+<area alt="" coords="3667,198,3744,261" href="#0009607" shape="RECT"/>
+<area alt="" coords="3857,101,3967,149" href="#0051704" shape="RECT"/>
+<area alt="" coords="1955,617,2040,697" href="#0050778" shape="RECT"/>
+<area alt="" coords="1975,824,2100,904" href="#0002821" shape="RECT"/>
+<area alt="" coords="1687,455,1801,535" href="#0002684" shape="RECT"/>
+<area alt="" coords="1825,463,1911,526" href="#0050776" shape="RECT"/>
+<area alt="" coords="1167,455,1281,535" href="#0002683" shape="RECT"/>
+<area alt="" coords="4919,600,5052,715" href="#0042590" shape="RECT"/>
+<area alt="" coords="4801,437,4935,552" href="#0002474" shape="RECT"/>
+<area alt="" coords="4683,600,4816,715" href="#0019885" shape="RECT"/>
+<area alt="" coords="2091,609,2187,706" href="#0001912" shape="RECT"/>
+<area alt="" coords="1973,1306,2101,1369" href="#0001914" shape="RECT"/>
+<area alt="" coords="353,455,476,535" href="#0051094" shape="RECT"/>
+<area alt="" coords="47,455,169,535" href="#0051093" shape="RECT"/>
+<area alt="" coords="3291,1099,3424,1147" href="#0030003" shape="RECT"/>
+<area alt="" coords="3152,1297,3285,1377" href="#0072503" shape="RECT"/>
+<area alt="" coords="3169,1769,3268,1866" href="#0007204" shape="RECT"/>
+<area alt="" coords="3155,1915,3283,2117" href="#0051482" shape="RECT"/>
+<area alt="" coords="4683,807,4816,921" href="#0002484" shape="RECT"/>
+<area alt="" coords="4683,1057,4816,1189" href="#0002486" shape="RECT"/>
+<area alt="" coords="4709,205,4843,253" href="#0019882" shape="RECT"/>
+<area alt="" coords="4801,309,4935,389" href="#0048002" shape="RECT"/>
+<area alt="" coords="4644,309,4777,389" href="#0019883" shape="RECT"/>
+<area alt="" coords="1692,824,1799,904" href="#0002706" shape="RECT"/>
+<area alt="" coords="1821,1297,1949,1377" href="#0002711" shape="RECT"/>
+<area alt="" coords="600,1469,731,1531" href="#0035023" shape="RECT"/>
+<area alt="" coords="1973,1460,2101,1540" href="#0001916" shape="RECT"/>
+<area alt="" coords="3147,840,3280,888" href="#0055080" shape="RECT"/>
+<area alt="" coords="3005,840,3123,888" href="#0098771" shape="RECT"/>
+<area alt="" coords="884,833,999,895" href="#0032944" shape="RECT"/>
+<area alt="" coords="3164,101,3244,149" href="#0065007" shape="RECT"/>
+<area alt="" coords="3477,318,3560,381" href="#0010033" shape="RECT"/>
+<area alt="" coords="4644,455,4777,535" href="#0002483" shape="RECT"/>
+<area alt="" coords="1028,471,1143,519" href="#0050865" shape="RECT"/>
+<area alt="" coords="1013,626,1128,689" href="#0050866" shape="RECT"/>
+<area alt="" coords="3592,325,3715,373" href="#0006952" shape="RECT"/>
+<area alt="" coords="1463,471,1553,519" href="#0010941" shape="RECT"/>
+<area alt="" coords="3663,101,3748,149" href="#0050896" shape="RECT"/>
+<area alt="" coords="3453,205,3541,253" href="#0042221" shape="RECT"/>
+<area alt="" coords="3565,205,3643,253" href="#0006950" shape="RECT"/>
+<area alt="" coords="1453,1083,1547,1163" href="#0043065" shape="RECT"/>
+<area alt="" coords="1571,1083,1667,1163" href="#2000106" shape="RECT"/>
+<area alt="" coords="3013,1091,3147,1154" href="#0072507" shape="RECT"/>
+<area alt="" coords="3808,5,3695,29" href="#0008150" shape="RECT"/>
+<area alt="" coords="4283,101,4365,149" href="#0008152" shape="RECT"/>
+<area alt="" coords="4033,101,4151,149" href="#0002376" shape="RECT"/>
+<area alt="" coords="3169,1623,3268,1703" href="#0051480" shape="RECT"/>
+<area alt="" coords="4325,205,4453,253" href="#0044238" shape="RECT"/>
+<area alt="" coords="2349,633,2480,681" href="#0035556" shape="RECT"/>
+<area alt="" coords="4419,318,4512,381" href="#0006793" shape="RECT"/>
+<area alt="" coords="2297,1313,2415,1361" href="#0019933" shape="RECT"/>
+<area alt="" coords="1935,455,2028,535" href="#0048584" shape="RECT"/>
+<area alt="" coords="3963,840,4091,888" href="#0051607" shape="RECT"/>
+<area alt="" coords="4919,807,5052,921" href="#0002480" shape="RECT"/>
+<area alt="" coords="657,471,804,519" href="#0010646" shape="RECT"/>
+<area alt="" coords="551,455,633,535" href="#0048523" shape="RECT"/>
+<area alt="" coords="4077,205,4195,253" href="#0002252" shape="RECT"/>
+<area alt="" coords="1805,626,1931,689" href="#0002819" shape="RECT"/>
+<area alt="" coords="4321,455,4471,535" href="#0006796" shape="RECT"/>
+<area alt="" coords="2641,617,2732,697" href="#0007166" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data1/go/10/GOPROCESS.png" usemap="#goPathImage"/></p>
+<p>Â </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060337&amp;view=details" target="_blank">GO:0060337</a><a name="0060337"></a></td>
+<td>type I interferon signaling pathway</td>
+<td align="center">1.11E-9</td>
+<td align="center">1.41E-5</td>
+<td align="center">10.15 (8795,46,226,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060337')" id="ctrl_elements_GO:0060337">[+] Show genes</a><br/>
+<div id="elements_GO:0060337" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035456&amp;view=details" target="_blank">GO:0035456</a><a name="0035456"></a></td>
+<td>response to interferon-beta</td>
+<td align="center">8.28E-7</td>
+<td align="center">5.23E-3</td>
+<td align="center">12.38 (8795,22,226,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035456')" id="ctrl_elements_GO:0035456">[+] Show genes</a><br/>
+<div id="elements_GO:0035456" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060333&amp;view=details" target="_blank">GO:0060333</a><a name="0060333"></a></td>
+<td>interferon-gamma-mediated signaling pathway</td>
+<td align="center">6.9E-6</td>
+<td align="center">2.91E-2</td>
+<td align="center">6.61 (8795,53,226,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060333')" id="ctrl_elements_GO:0060333">[+] Show genes</a><br/>
+<div id="elements_GO:0060333" style="display:none"> <font size="1">
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002480&amp;view=details" target="_blank">GO:0002480</a><a name="0002480"></a></td>
+<td>antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-independent</td>
+<td align="center">1.4E-5</td>
+<td align="center">4.42E-2</td>
+<td align="center">22.24 (8795,7,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002480')" id="ctrl_elements_GO:0002480">[+] Show genes</a><br/>
+<div id="elements_GO:0002480" style="display:none"> <font size="1">
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904761&amp;view=details" target="_blank">GO:1904761</a><a name="1904761"></a></td>
+<td>negative regulation of myofibroblast differentiation</td>
+<td align="center">1.67E-5</td>
+<td align="center">4.23E-2</td>
+<td align="center">38.92 (8795,3,226,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1904761')" id="ctrl_elements_GO:1904761">[+] Show genes</a><br/>
+<div id="elements_GO:1904761" style="display:none"> <font size="1">
+
+RB1  -  retinoblastoma 1<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007166&amp;view=details" target="_blank">GO:0007166</a><a name="0007166"></a></td>
+<td>cell surface receptor signaling pathway</td>
+<td align="center">1.9E-5</td>
+<td align="center">4E-2</td>
+<td align="center">1.85 (8795,990,226,47)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007166')" id="ctrl_elements_GO:0007166">[+] Show genes</a><br/>
+<div id="elements_GO:0007166" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br/>
+
+HBP1  -  hmg-box transcription factor 1<br/>
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+ABI1  -  abl-interactor 1<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+ARID5B  -  at rich interactive domain 5b (mrf1-like)<br/>
+
+SDCBP  -  syndecan binding protein (syntenin)<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+APH1B  -  aph1b gamma secretase subunit<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+TNRC6B  -  trinucleotide repeat containing 6b<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+
+CALCOCO1  -  calcium binding and coiled-coil domain 1<br/>
+
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+EVL  -  enah/vasp-like<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+LMBR1L  -  limb development membrane protein 1-like<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+CD27  -  cd27 molecule<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+CSNK1G3  -  casein kinase 1, gamma 3<br/>
+
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+TNKS2  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase 2<br/>
+
+SETX  -  senataxin<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002376&amp;view=details" target="_blank">GO:0002376</a><a name="0002376"></a></td>
+<td>immune system process</td>
+<td align="center">2.38E-5</td>
+<td align="center">4.29E-2</td>
+<td align="center">1.72 (8795,1242,226,55)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002376')" id="ctrl_elements_GO:0002376">[+] Show genes</a><br/>
+<div id="elements_GO:0002376" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+ABI1  -  abl-interactor 1<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br/>
+
+SDCBP  -  syndecan binding protein (syntenin)<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+CD53  -  cd53 molecule<br/>
+
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+CTSS  -  cathepsin s<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+CD27  -  cd27 molecule<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br/>
+
+S1PR4  -  sphingosine-1-phosphate receptor 4<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+YPEL5  -  yippee-like 5 (drosophila)<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+LRMP  -  lymphoid-restricted membrane protein<br/>
+
+METTL7A  -  methyltransferase like 7a<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+FAIM3  -  fas apoptotic inhibitory molecule 3<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+GLG1  -  golgi glycoprotein 1<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+SCIMP  -  slp adaptor and csk interacting membrane protein<br/>
+
+IGBP1  -  immunoglobulin (cd79a) binding protein 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+DPP7  -  dipeptidyl-peptidase 7<br/>
+
+KMT2E  -  lysine (k)-specific methyltransferase 2e<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+LMBR1L  -  limb development membrane protein 1-like<br/>
+
+CDK13  -  cyclin-dependent kinase 13<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002252&amp;view=details" target="_blank">GO:0002252</a><a name="0002252"></a></td>
+<td>immune effector process</td>
+<td align="center">3.14E-5</td>
+<td align="center">4.96E-2</td>
+<td align="center">2.11 (8795,608,226,33)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002252')" id="ctrl_elements_GO:0002252">[+] Show genes</a><br/>
+<div id="elements_GO:0002252" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+ABI1  -  abl-interactor 1<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+YPEL5  -  yippee-like 5 (drosophila)<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+LRMP  -  lymphoid-restricted membrane protein<br/>
+
+METTL7A  -  methyltransferase like 7a<br/>
+
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br/>
+
+SDCBP  -  syndecan binding protein (syntenin)<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+DPP7  -  dipeptidyl-peptidase 7<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+KMT2E  -  lysine (k)-specific methyltransferase 2e<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CDK13  -  cyclin-dependent kinase 13<br/>
+
+CTSS  -  cathepsin s<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+CD27  -  cd27 molecule<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007165&amp;view=details" target="_blank">GO:0007165</a><a name="0007165"></a></td>
+<td>signal transduction</td>
+<td align="center">3.2E-5</td>
+<td align="center">4.5E-2</td>
+<td align="center">1.53 (8795,1903,226,75)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007165')" id="ctrl_elements_GO:0007165">[+] Show genes</a><br/>
+<div id="elements_GO:0007165" style="display:none"> <font size="1">
+
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br/>
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+ABI1  -  abl-interactor 1<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+ARID5B  -  at rich interactive domain 5b (mrf1-like)<br/>
+
+SDCBP  -  syndecan binding protein (syntenin)<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+LPAR6  -  lysophosphatidic acid receptor 6<br/>
+
+APH1B  -  aph1b gamma secretase subunit<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+TNRC6B  -  trinucleotide repeat containing 6b<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br/>
+
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+HSH2D  -  hematopoietic sh2 domain containing<br/>
+
+EVL  -  enah/vasp-like<br/>
+
+DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br/>
+
+CD53  -  cd53 molecule<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+CTSS  -  cathepsin s<br/>
+
+CD27  -  cd27 molecule<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+S1PR4  -  sphingosine-1-phosphate receptor 4<br/>
+
+TNKS2  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase 2<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+HBP1  -  hmg-box transcription factor 1<br/>
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+PDE7A  -  phosphodiesterase 7a<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+MDM4  -  mdm4 p53 binding protein homolog (mouse)<br/>
+
+FGD2  -  fyve, rhogef and ph domain containing 2<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+SCIMP  -  slp adaptor and csk interacting membrane protein<br/>
+
+RALGPS2  -  ral gef with ph domain and sh3 binding motif 2<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+TPP1  -  tripeptidyl peptidase i<br/>
+
+CREBRF  -  creb3 regulatory factor<br/>
+
+CALCOCO1  -  calcium binding and coiled-coil domain 1<br/>
+
+IGBP1  -  immunoglobulin (cd79a) binding protein 1<br/>
+
+GNG7  -  guanine nucleotide binding protein (g protein), gamma 7<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+ADD1  -  adducin 1 (alpha)<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+OGT  -  o-linked n-acetylglucosamine (glcnac) transferase<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+RB1  -  retinoblastoma 1<br/>
+
+LMBR1L  -  limb development membrane protein 1-like<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+RHOBTB2  -  rho-related btb domain containing 2<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+CSNK1G3  -  casein kinase 1, gamma 3<br/>
+
+SETX  -  senataxin<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+TYMP  -  thymidine phosphorylase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051607&amp;view=details" target="_blank">GO:0051607</a><a name="0051607"></a></td>
+<td>defense response to virus</td>
+<td align="center">4.13E-5</td>
+<td align="center">5.21E-2</td>
+<td align="center">3.75 (8795,135,226,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051607')" id="ctrl_elements_GO:0051607">[+] Show genes</a><br/>
+<div id="elements_GO:0051607" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042127&amp;view=details" target="_blank">GO:0042127</a><a name="0042127"></a></td>
+<td>regulation of cell proliferation</td>
+<td align="center">5.02E-5</td>
+<td align="center">5.76E-2</td>
+<td align="center">2.01 (8795,678,226,35)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042127')" id="ctrl_elements_GO:0042127">[+] Show genes</a><br/>
+<div id="elements_GO:0042127" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+ABI1  -  abl-interactor 1<br/>
+
+SYF2  -  syf2 pre-mrna-splicing factor<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+N4BP2L2  -  nedd4 binding protein 2-like 2<br/>
+
+MDM4  -  mdm4 p53 binding protein homolog (mouse)<br/>
+
+SDCBP  -  syndecan binding protein (syntenin)<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+TOB2  -  transducer of erbb2, 2<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+RB1  -  retinoblastoma 1<br/>
+
+MALAT1  -  metastasis associated lung adenocarcinoma transcript 1 (non-protein coding)<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+CDK13  -  cyclin-dependent kinase 13<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+NEAT1  -  nuclear paraspeckle assembly transcript 1 (non-protein coding)<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002250&amp;view=details" target="_blank">GO:0002250</a><a name="0002250"></a></td>
+<td>adaptive immune response</td>
+<td align="center">5.64E-5</td>
+<td align="center">5.94E-2</td>
+<td align="center">3.89 (8795,120,226,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002250')" id="ctrl_elements_GO:0002250">[+] Show genes</a><br/>
+<div id="elements_GO:0002250" style="display:none"> <font size="1">
+
+CD27  -  cd27 molecule<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+CTSS  -  cathepsin s<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904760&amp;view=details" target="_blank">GO:1904760</a><a name="1904760"></a></td>
+<td>regulation of myofibroblast differentiation</td>
+<td align="center">6.57E-5</td>
+<td align="center">6.39E-2</td>
+<td align="center">29.19 (8795,4,226,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1904760')" id="ctrl_elements_GO:1904760">[+] Show genes</a><br/>
+<div id="elements_GO:1904760" style="display:none"> <font size="1">
+
+RB1  -  retinoblastoma 1<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030888&amp;view=details" target="_blank">GO:0030888</a><a name="0030888"></a></td>
+<td>regulation of B cell proliferation</td>
+<td align="center">7.2E-5</td>
+<td align="center">6.49E-2</td>
+<td align="center">6.64 (8795,41,226,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030888')" id="ctrl_elements_GO:0030888">[+] Show genes</a><br/>
+<div id="elements_GO:0030888" style="display:none"> <font size="1">
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008285&amp;view=details" target="_blank">GO:0008285</a><a name="0008285"></a></td>
+<td>negative regulation of cell proliferation</td>
+<td align="center">7.93E-5</td>
+<td align="center">6.68E-2</td>
+<td align="center">2.61 (8795,298,226,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008285')" id="ctrl_elements_GO:0008285">[+] Show genes</a><br/>
+<div id="elements_GO:0008285" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+ABI1  -  abl-interactor 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+RB1  -  retinoblastoma 1<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+MDM4  -  mdm4 p53 binding protein homolog (mouse)<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+TOB2  -  transducer of erbb2, 2<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046640&amp;view=details" target="_blank">GO:0046640</a><a name="0046640"></a></td>
+<td>regulation of alpha-beta T cell proliferation</td>
+<td align="center">1.56E-4</td>
+<td align="center">1.23E-1</td>
+<td align="center">9.27 (8795,21,226,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0046640')" id="ctrl_elements_GO:0046640">[+] Show genes</a><br/>
+<div id="elements_GO:0046640" style="display:none"> <font size="1">
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051240&amp;view=details" target="_blank">GO:0051240</a><a name="0051240"></a></td>
+<td>positive regulation of multicellular organismal process</td>
+<td align="center">1.59E-4</td>
+<td align="center">1.18E-1</td>
+<td align="center">1.88 (8795,747,226,36)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051240')" id="ctrl_elements_GO:0051240">[+] Show genes</a><br/>
+<div id="elements_GO:0051240" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+N4BP2L2  -  nedd4 binding protein 2-like 2<br/>
+
+LPIN1  -  lipin 1<br/>
+
+SDCBP  -  syndecan binding protein (syntenin)<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+TOB2  -  transducer of erbb2, 2<br/>
+
+RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+SCIMP  -  slp adaptor and csk interacting membrane protein<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+GPM6B  -  glycoprotein m6b<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+
+NCOA3  -  nuclear receptor coactivator 3<br/>
+
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+OGT  -  o-linked n-acetylglucosamine (glcnac) transferase<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+RB1  -  retinoblastoma 1<br/>
+
+EVI2B  -  ecotropic viral integration site 2b<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+CD27  -  cd27 molecule<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+SETX  -  senataxin<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+CPNE5  -  copine v<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002486&amp;view=details" target="_blank">GO:0002486</a><a name="0002486"></a></td>
+<td>antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway, TAP-independent</td>
+<td align="center">1.61E-4</td>
+<td align="center">1.13E-1</td>
+<td align="center">23.35 (8795,5,226,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002486')" id="ctrl_elements_GO:0002486">[+] Show genes</a><br/>
+<div id="elements_GO:0002486" style="display:none"> <font size="1">
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002484&amp;view=details" target="_blank">GO:0002484</a><a name="0002484"></a></td>
+<td>antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway</td>
+<td align="center">1.61E-4</td>
+<td align="center">1.07E-1</td>
+<td align="center">23.35 (8795,5,226,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002484')" id="ctrl_elements_GO:0002484">[+] Show genes</a><br/>
+<div id="elements_GO:0002484" style="display:none"> <font size="1">
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042221&amp;view=details" target="_blank">GO:0042221</a><a name="0042221"></a></td>
+<td>response to chemical</td>
+<td align="center">1.9E-4</td>
+<td align="center">1.2E-1</td>
+<td align="center">1.61 (8795,1307,226,54)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042221')" id="ctrl_elements_GO:0042221">[+] Show genes</a><br/>
+<div id="elements_GO:0042221" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+ATP2B1  -  atpase, ca++ transporting, plasma membrane 1<br/>
+
+ARID5B  -  at rich interactive domain 5b (mrf1-like)<br/>
+
+MAN1B1  -  mannosidase, alpha, class 1b, member 1<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+VAMP2  -  vesicle-associated membrane protein 2 (synaptobrevin 2)<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+
+GLTSCR2  -  glioma tumor suppressor candidate region gene 2<br/>
+
+NCOA3  -  nuclear receptor coactivator 3<br/>
+
+ATP6V1G1  -  atpase, h+ transporting, lysosomal 13kda, v1 subunit g1<br/>
+
+MALAT1  -  metastasis associated lung adenocarcinoma transcript 1 (non-protein coding)<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+CTSS  -  cathepsin s<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+CD27  -  cd27 molecule<br/>
+
+TMUB2  -  transmembrane and ubiquitin-like domain containing 2<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+UBXN6  -  ubx domain protein 6<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+LPIN1  -  lipin 1<br/>
+
+MDM4  -  mdm4 p53 binding protein homolog (mouse)<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+CORO1B  -  coronin, actin binding protein, 1b<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+SCIMP  -  slp adaptor and csk interacting membrane protein<br/>
+
+ZNF277  -  zinc finger protein 277<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+IGBP1  -  immunoglobulin (cd79a) binding protein 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+ADD1  -  adducin 1 (alpha)<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+OGT  -  o-linked n-acetylglucosamine (glcnac) transferase<br/>
+
+RB1  -  retinoblastoma 1<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br/>
+
+DNAJC4  -  dnaj (hsp40) homolog, subfamily c, member 4<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+MBD4  -  methyl-cpg binding domain protein 4<br/>
+
+CUTA  -  cuta divalent cation tolerance homolog (e. coli)<br/>
+
+SETX  -  senataxin<br/>
+
+CARF  -  calcium responsive transcription factor<br/>
+
+CCDC115  -  coiled-coil domain containing 115<br/>
+
+CPNE5  -  copine v<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042981&amp;view=details" target="_blank">GO:0042981</a><a name="0042981"></a></td>
+<td>regulation of apoptotic process</td>
+<td align="center">1.92E-4</td>
+<td align="center">1.15E-1</td>
+<td align="center">1.82 (8795,813,226,38)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042981')" id="ctrl_elements_GO:0042981">[+] Show genes</a><br/>
+<div id="elements_GO:0042981" style="display:none"> <font size="1">
+
+TMBIM4  -  transmembrane bax inhibitor motif containing 4<br/>
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br/>
+
+MDM4  -  mdm4 p53 binding protein homolog (mouse)<br/>
+
+FGD2  -  fyve, rhogef and ph domain containing 2<br/>
+
+FAIM3  -  fas apoptotic inhibitory molecule 3<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+APH1B  -  aph1b gamma secretase subunit<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+GLTSCR2  -  glioma tumor suppressor candidate region gene 2<br/>
+
+IGBP1  -  immunoglobulin (cd79a) binding protein 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+RB1  -  retinoblastoma 1<br/>
+
+DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br/>
+
+EVI2B  -  ecotropic viral integration site 2b<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+CD27  -  cd27 molecule<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+TMEM219  -  transmembrane protein 219<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+SETX  -  senataxin<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050670&amp;view=details" target="_blank">GO:0050670</a><a name="0050670"></a></td>
+<td>regulation of lymphocyte proliferation</td>
+<td align="center">2.33E-4</td>
+<td align="center">1.34E-1</td>
+<td align="center">3.60 (8795,119,226,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050670')" id="ctrl_elements_GO:0050670">[+] Show genes</a><br/>
+<div id="elements_GO:0050670" style="display:none"> <font size="1">
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032944&amp;view=details" target="_blank">GO:0032944</a><a name="0032944"></a></td>
+<td>regulation of mononuclear cell proliferation</td>
+<td align="center">2.51E-4</td>
+<td align="center">1.38E-1</td>
+<td align="center">3.57 (8795,120,226,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032944')" id="ctrl_elements_GO:0032944">[+] Show genes</a><br/>
+<div id="elements_GO:0032944" style="display:none"> <font size="1">
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001916&amp;view=details" target="_blank">GO:0001916</a><a name="0001916"></a></td>
+<td>positive regulation of T cell mediated cytotoxicity</td>
+<td align="center">2.53E-4</td>
+<td align="center">1.33E-1</td>
+<td align="center">11.97 (8795,13,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0001916')" id="ctrl_elements_GO:0001916">[+] Show genes</a><br/>
+<div id="elements_GO:0001916" style="display:none"> <font size="1">
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035458&amp;view=details" target="_blank">GO:0035458</a><a name="0035458"></a></td>
+<td>cellular response to interferon-beta</td>
+<td align="center">2.53E-4</td>
+<td align="center">1.28E-1</td>
+<td align="center">11.97 (8795,13,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035458')" id="ctrl_elements_GO:0035458">[+] Show genes</a><br/>
+<div id="elements_GO:0035458" style="display:none"> <font size="1">
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019885&amp;view=details" target="_blank">GO:0019885</a><a name="0019885"></a></td>
+<td>antigen processing and presentation of endogenous peptide antigen via MHC class I</td>
+<td align="center">2.53E-4</td>
+<td align="center">1.23E-1</td>
+<td align="center">11.97 (8795,13,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019885')" id="ctrl_elements_GO:0019885">[+] Show genes</a><br/>
+<div id="elements_GO:0019885" style="display:none"> <font size="1">
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043067&amp;view=details" target="_blank">GO:0043067</a><a name="0043067"></a></td>
+<td>regulation of programmed cell death</td>
+<td align="center">2.65E-4</td>
+<td align="center">1.24E-1</td>
+<td align="center">1.79 (8795,826,226,38)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043067')" id="ctrl_elements_GO:0043067">[+] Show genes</a><br/>
+<div id="elements_GO:0043067" style="display:none"> <font size="1">
+
+TMBIM4  -  transmembrane bax inhibitor motif containing 4<br/>
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br/>
+
+MDM4  -  mdm4 p53 binding protein homolog (mouse)<br/>
+
+FGD2  -  fyve, rhogef and ph domain containing 2<br/>
+
+FAIM3  -  fas apoptotic inhibitory molecule 3<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+APH1B  -  aph1b gamma secretase subunit<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+GLTSCR2  -  glioma tumor suppressor candidate region gene 2<br/>
+
+IGBP1  -  immunoglobulin (cd79a) binding protein 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+RB1  -  retinoblastoma 1<br/>
+
+DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br/>
+
+EVI2B  -  ecotropic viral integration site 2b<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+CD27  -  cd27 molecule<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+TMEM219  -  transmembrane protein 219<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+PPP1R10  -  protein phosphatase 1, regulatory subunit 10<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+SETX  -  senataxin<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019221&amp;view=details" target="_blank">GO:0019221</a><a name="0019221"></a></td>
+<td>cytokine-mediated signaling pathway</td>
+<td align="center">2.77E-4</td>
+<td align="center">1.25E-1</td>
+<td align="center">2.26 (8795,378,226,22)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019221')" id="ctrl_elements_GO:0019221">[+] Show genes</a><br/>
+<div id="elements_GO:0019221" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+CD27  -  cd27 molecule<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+SP100  -  sp100 nuclear antigen<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019932&amp;view=details" target="_blank">GO:0019932</a><a name="0019932"></a></td>
+<td>second-messenger-mediated signaling</td>
+<td align="center">3.14E-4</td>
+<td align="center">1.37E-1</td>
+<td align="center">4.12 (8795,85,226,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019932')" id="ctrl_elements_GO:0019932">[+] Show genes</a><br/>
+<div id="elements_GO:0019932" style="display:none"> <font size="1">
+
+PDE7A  -  phosphodiesterase 7a<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+S1PR4  -  sphingosine-1-phosphate receptor 4<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+DDAH2  -  dimethylarginine dimethylaminohydrolase 2<br/>
+
+PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000564&amp;view=details" target="_blank">GO:2000564</a><a name="2000564"></a></td>
+<td>regulation of CD8-positive, alpha-beta T cell proliferation</td>
+<td align="center">3.16E-4</td>
+<td align="center">1.33E-1</td>
+<td align="center">19.46 (8795,6,226,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000564')" id="ctrl_elements_GO:2000564">[+] Show genes</a><br/>
+<div id="elements_GO:2000564" style="display:none"> <font size="1">
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030889&amp;view=details" target="_blank">GO:0030889</a><a name="0030889"></a></td>
+<td>negative regulation of B cell proliferation</td>
+<td align="center">3.47E-4</td>
+<td align="center">1.41E-1</td>
+<td align="center">11.12 (8795,14,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030889')" id="ctrl_elements_GO:0030889">[+] Show genes</a><br/>
+<div id="elements_GO:0030889" style="display:none"> <font size="1">
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070663&amp;view=details" target="_blank">GO:0070663</a><a name="0070663"></a></td>
+<td>regulation of leukocyte proliferation</td>
+<td align="center">3.58E-4</td>
+<td align="center">1.41E-1</td>
+<td align="center">3.42 (8795,125,226,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070663')" id="ctrl_elements_GO:0070663">[+] Show genes</a><br/>
+<div id="elements_GO:0070663" style="display:none"> <font size="1">
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002683&amp;view=details" target="_blank">GO:0002683</a><a name="0002683"></a></td>
+<td>negative regulation of immune system process</td>
+<td align="center">3.72E-4</td>
+<td align="center">1.42E-1</td>
+<td align="center">2.64 (8795,236,226,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002683')" id="ctrl_elements_GO:0002683">[+] Show genes</a><br/>
+<div id="elements_GO:0002683" style="display:none"> <font size="1">
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+N4BP2L2  -  nedd4 binding protein 2-like 2<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+TOB2  -  transducer of erbb2, 2<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+NR1H2  -  nuclear receptor subfamily 1, group h, member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019933&amp;view=details" target="_blank">GO:0019933</a><a name="0019933"></a></td>
+<td>cAMP-mediated signaling</td>
+<td align="center">3.74E-4</td>
+<td align="center">1.39E-1</td>
+<td align="center">7.78 (8795,25,226,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019933')" id="ctrl_elements_GO:0019933">[+] Show genes</a><br/>
+<div id="elements_GO:0019933" style="display:none"> <font size="1">
+
+PDE7A  -  phosphodiesterase 7a<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+S1PR4  -  sphingosine-1-phosphate receptor 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035023&amp;view=details" target="_blank">GO:0035023</a><a name="0035023"></a></td>
+<td>regulation of Rho protein signal transduction</td>
+<td align="center">4.32E-4</td>
+<td align="center">1.56E-1</td>
+<td align="center">5.99 (8795,39,226,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035023')" id="ctrl_elements_GO:0035023">[+] Show genes</a><br/>
+<div id="elements_GO:0035023" style="display:none"> <font size="1">
+
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br/>
+
+LPAR6  -  lysophosphatidic acid receptor 6<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+CDC42SE2  -  cdc42 small effector 2<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002695&amp;view=details" target="_blank">GO:0002695</a><a name="0002695"></a></td>
+<td>negative regulation of leukocyte activation</td>
+<td align="center">4.44E-4</td>
+<td align="center">1.56E-1</td>
+<td align="center">3.94 (8795,89,226,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002695')" id="ctrl_elements_GO:0002695">[+] Show genes</a><br/>
+<div id="elements_GO:0002695" style="display:none"> <font size="1">
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019935&amp;view=details" target="_blank">GO:0019935</a><a name="0019935"></a></td>
+<td>cyclic-nucleotide-mediated signaling</td>
+<td align="center">4.53E-4</td>
+<td align="center">1.55E-1</td>
+<td align="center">7.48 (8795,26,226,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019935')" id="ctrl_elements_GO:0019935">[+] Show genes</a><br/>
+<div id="elements_GO:0019935" style="display:none"> <font size="1">
+
+PDE7A  -  phosphodiesterase 7a<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+S1PR4  -  sphingosine-1-phosphate receptor 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006955&amp;view=details" target="_blank">GO:0006955</a><a name="0006955"></a></td>
+<td>immune response</td>
+<td align="center">4.62E-4</td>
+<td align="center">1.53E-1</td>
+<td align="center">2.06 (8795,473,226,25)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006955')" id="ctrl_elements_GO:0006955">[+] Show genes</a><br/>
+<div id="elements_GO:0006955" style="display:none"> <font size="1">
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+TNFRSF13C  -  tumor necrosis factor receptor superfamily, member 13c<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+AIM2  -  absent in melanoma 2<br/>
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+HLA-DOB  -  major histocompatibility complex, class ii, do beta<br/>
+
+CTSS  -  cathepsin s<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+CD27  -  cd27 molecule<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+CYSLTR1  -  cysteinyl leukotriene receptor 1<br/>
+
+S1PR4  -  sphingosine-1-phosphate receptor 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002483&amp;view=details" target="_blank">GO:0002483</a><a name="0002483"></a></td>
+<td>antigen processing and presentation of endogenous peptide antigen</td>
+<td align="center">4.64E-4</td>
+<td align="center">1.5E-1</td>
+<td align="center">10.38 (8795,15,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002483')" id="ctrl_elements_GO:0002483">[+] Show genes</a><br/>
+<div id="elements_GO:0002483" style="display:none"> <font size="1">
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046337&amp;view=details" target="_blank">GO:0046337</a><a name="0046337"></a></td>
+<td>phosphatidylethanolamine metabolic process</td>
+<td align="center">4.64E-4</td>
+<td align="center">1.46E-1</td>
+<td align="center">10.38 (8795,15,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0046337')" id="ctrl_elements_GO:0046337">[+] Show genes</a><br/>
+<div id="elements_GO:0046337" style="display:none"> <font size="1">
+
+RARRES3  -  retinoic acid receptor responder (tazarotene induced) 3<br/>
+
+LPIN1  -  lipin 1<br/>
+
+PNPLA8  -  patatin-like phospholipase domain containing 8<br/>
+
+NAAA  -  n-acylethanolamine acid amidase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098542&amp;view=details" target="_blank">GO:0098542</a><a name="0098542"></a></td>
+<td>defense response to other organism</td>
+<td align="center">5.08E-4</td>
+<td align="center">1.57E-1</td>
+<td align="center">2.67 (8795,219,226,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098542')" id="ctrl_elements_GO:0098542">[+] Show genes</a><br/>
+<div id="elements_GO:0098542" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045663&amp;view=details" target="_blank">GO:0045663</a><a name="0045663"></a></td>
+<td>positive regulation of myoblast differentiation</td>
+<td align="center">5.43E-4</td>
+<td align="center">1.63E-1</td>
+<td align="center">16.68 (8795,7,226,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045663')" id="ctrl_elements_GO:0045663">[+] Show genes</a><br/>
+<div id="elements_GO:0045663" style="display:none"> <font size="1">
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043065&amp;view=details" target="_blank">GO:0043065</a><a name="0043065"></a></td>
+<td>positive regulation of apoptotic process</td>
+<td align="center">5.73E-4</td>
+<td align="center">1.68E-1</td>
+<td align="center">2.20 (8795,372,226,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043065')" id="ctrl_elements_GO:0043065">[+] Show genes</a><br/>
+<div id="elements_GO:0043065" style="display:none"> <font size="1">
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+FGD2  -  fyve, rhogef and ph domain containing 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+APH1B  -  aph1b gamma secretase subunit<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009607&amp;view=details" target="_blank">GO:0009607</a><a name="0009607"></a></td>
+<td>response to biotic stimulus</td>
+<td align="center">6.01E-4</td>
+<td align="center">1.72E-1</td>
+<td align="center">2.06 (8795,454,226,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009607')" id="ctrl_elements_GO:0009607">[+] Show genes</a><br/>
+<div id="elements_GO:0009607" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+SCIMP  -  slp adaptor and csk interacting membrane protein<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001914&amp;view=details" target="_blank">GO:0001914</a><a name="0001914"></a></td>
+<td>regulation of T cell mediated cytotoxicity</td>
+<td align="center">6.06E-4</td>
+<td align="center">1.7E-1</td>
+<td align="center">9.73 (8795,16,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0001914')" id="ctrl_elements_GO:0001914">[+] Show genes</a><br/>
+<div id="elements_GO:0001914" style="display:none"> <font size="1">
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050866&amp;view=details" target="_blank">GO:0050866</a><a name="0050866"></a></td>
+<td>negative regulation of cell activation</td>
+<td align="center">6.15E-4</td>
+<td align="center">1.69E-1</td>
+<td align="center">3.77 (8795,93,226,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050866')" id="ctrl_elements_GO:0050866">[+] Show genes</a><br/>
+<div id="elements_GO:0050866" style="display:none"> <font size="1">
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010942&amp;view=details" target="_blank">GO:0010942</a><a name="0010942"></a></td>
+<td>positive regulation of cell death</td>
+<td align="center">6.44E-4</td>
+<td align="center">1.73E-1</td>
+<td align="center">2.13 (8795,402,226,22)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010942')" id="ctrl_elements_GO:0010942">[+] Show genes</a><br/>
+<div id="elements_GO:0010942" style="display:none"> <font size="1">
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+UCP2  -  uncoupling protein 2 (mitochondrial, proton carrier)<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+FGD2  -  fyve, rhogef and ph domain containing 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+APH1B  -  aph1b gamma secretase subunit<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071880&amp;view=details" target="_blank">GO:0071880</a><a name="0071880"></a></td>
+<td>adenylate cyclase-activating adrenergic receptor signaling pathway</td>
+<td align="center">6.57E-4</td>
+<td align="center">1.73E-1</td>
+<td align="center">38.92 (8795,2,226,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071880')" id="ctrl_elements_GO:0071880">[+] Show genes</a><br/>
+<div id="elements_GO:0071880" style="display:none"> <font size="1">
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043068&amp;view=details" target="_blank">GO:0043068</a><a name="0043068"></a></td>
+<td>positive regulation of programmed cell death</td>
+<td align="center">6.82E-4</td>
+<td align="center">1.76E-1</td>
+<td align="center">2.17 (8795,377,226,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043068')" id="ctrl_elements_GO:0043068">[+] Show genes</a><br/>
+<div id="elements_GO:0043068" style="display:none"> <font size="1">
+
+UBA52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+TP53INP1  -  tumor protein p53 inducible nuclear protein 1<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+
+ARHGEF2  -  rho/rac guanine nucleotide exchange factor (gef) 2<br/>
+
+FGD2  -  fyve, rhogef and ph domain containing 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+APH1B  -  aph1b gamma secretase subunit<br/>
+
+MCL1  -  myeloid cell leukemia sequence 1 (bcl2-related)<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+PPP3CC  -  protein phosphatase 3, catalytic subunit, gamma isozyme<br/>
+
+BTG1  -  b-cell translocation gene 1, anti-proliferative<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043207&amp;view=details" target="_blank">GO:0043207</a><a name="0043207"></a></td>
+<td>response to external biotic stimulus</td>
+<td align="center">7.56E-4</td>
+<td align="center">1.91E-1</td>
+<td align="center">2.06 (8795,434,226,23)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043207')" id="ctrl_elements_GO:0043207">[+] Show genes</a><br/>
+<div id="elements_GO:0043207" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+PDCD4  -  programmed cell death 4 (neoplastic transformation inhibitor)<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+LY96  -  lymphocyte antigen 96<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+SCIMP  -  slp adaptor and csk interacting membrane protein<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019883&amp;view=details" target="_blank">GO:0019883</a><a name="0019883"></a></td>
+<td>antigen processing and presentation of endogenous antigen</td>
+<td align="center">7.76E-4</td>
+<td align="center">1.92E-1</td>
+<td align="center">9.16 (8795,17,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019883')" id="ctrl_elements_GO:0019883">[+] Show genes</a><br/>
+<div id="elements_GO:0019883" style="display:none"> <font size="1">
+
+HLA-C  -  major histocompatibility complex, class i, c<br/>
+
+HLA-B  -  major histocompatibility complex, class i, b<br/>
+
+HLA-E  -  major histocompatibility complex, class i, e<br/>
+
+B2M  -  beta-2-microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051482&amp;view=details" target="_blank">GO:0051482</a><a name="0051482"></a></td>
+<td>positive regulation of cytosolic calcium ion concentration involved in phospholipase C-activating G protein-coupled signaling pathway</td>
+<td align="center">8.52E-4</td>
+<td align="center">2.07E-1</td>
+<td align="center">14.59 (8795,8,226,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051482')" id="ctrl_elements_GO:0051482">[+] Show genes</a><br/>
+<div id="elements_GO:0051482" style="display:none"> <font size="1">
+
+P2RY10  -  purinergic receptor p2y, g-protein coupled, 10<br/>
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+LPAR6  -  lysophosphatidic acid receptor 6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009615&amp;view=details" target="_blank">GO:0009615</a><a name="0009615"></a></td>
+<td>response to virus</td>
+<td align="center">8.82E-4</td>
+<td align="center">2.1E-1</td>
+<td align="center">2.63 (8795,207,226,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009615')" id="ctrl_elements_GO:0009615">[+] Show genes</a><br/>
+<div id="elements_GO:0009615" style="display:none"> <font size="1">
+
+IFITM1  -  interferon induced transmembrane protein 1<br/>
+
+IFITM3  -  interferon induced transmembrane protein 3<br/>
+
+TLR7  -  toll-like receptor 7<br/>
+
+IRF9  -  interferon regulatory factor 9<br/>
+
+STAT2  -  signal transducer and activator of transcription 2, 113kda<br/>
+
+STAT1  -  signal transducer and activator of transcription 1, 91kda<br/>
+
+IFITM2  -  interferon induced transmembrane protein 2<br/>
+
+NLRP1  -  nlr family, pyrin domain containing 1<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+RNASE6  -  ribonuclease, rnase a family, k6<br/>
+
+IFI44L  -  interferon-induced protein 44-like<br/>
+
+PTPRC  -  protein tyrosine phosphatase, receptor type, c<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000106&amp;view=details" target="_blank">GO:2000106</a><a name="2000106"></a></td>
+<td>regulation of leukocyte apoptotic process</td>
+<td align="center">9.49E-4</td>
+<td align="center">2.22E-1</td>
+<td align="center">5.19 (8795,45,226,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000106')" id="ctrl_elements_GO:2000106">[+] Show genes</a><br/>
+<div id="elements_GO:2000106" style="display:none"> <font size="1">
+
+CD27  -  cd27 molecule<br/>
+
+MEF2C  -  myocyte enhancer factor 2c<br/>
+
+IRF7  -  interferon regulatory factor 7<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+ORMDL3  -  orm1-like 3 (s. cerevisiae)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007189&amp;view=details" target="_blank">GO:0007189</a><a name="0007189"></a></td>
+<td>adenylate cyclase-activating G protein-coupled receptor signaling pathway</td>
+<td align="center">9.78E-4</td>
+<td align="center">2.25E-1</td>
+<td align="center">8.65 (8795,18,226,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007189')" id="ctrl_elements_GO:0007189">[+] Show genes</a><br/>
+<div id="elements_GO:0007189" style="display:none"> <font size="1">
+
+S1PR1  -  sphingosine-1-phosphate receptor 1<br/>
+
+RAPGEF2  -  rap guanine nucleotide exchange factor (gef) 2<br/>
+
+AKAP13  -  a kinase (prka) anchor protein 13<br/>
+
+S1PR4  -  sphingosine-1-phosphate receptor 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051250&amp;view=details" target="_blank">GO:0051250</a><a name="0051250"></a></td>
+<td>negative regulation of lymphocyte activation</td>
+<td align="center">9.91E-4</td>
+<td align="center">2.24E-1</td>
+<td align="center">3.89 (8795,80,226,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051250')" id="ctrl_elements_GO:0051250">[+] Show genes</a><br/>
+<div id="elements_GO:0051250" style="display:none"> <font size="1">
+
+MNDA  -  myeloid cell nuclear differentiation antigen<br/>
+
+IRF1  -  interferon regulatory factor 1<br/>
+
+PTPN22  -  protein tyrosine phosphatase, non-receptor type 22 (lymphoid)<br/>
+
+TNFRSF14  -  tumor necrosis factor receptor superfamily, member 14<br/>
+
+ATM  -  ataxia telangiectasia mutated<br/>
+
+BLK  -  b lymphoid tyrosine kinase<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+INPP5D  -  inositol polyphosphate-5-phosphatase, 145kda<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9267 genes out of 9727 gene terms entered by the user.<br/> 9267 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>239 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br/>Only 8795 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOPROCESS.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 16, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

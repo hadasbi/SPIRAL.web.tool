@@ -1,0 +1,5056 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="943,5,825,29" href="#0005575" shape="RECT"/>
+<area alt="" coords="801,101,873,149" href="#0044464" shape="RECT"/>
+<area alt="" coords="373,101,448,149" href="#0043226" shape="RECT"/>
+<area alt="" coords="1008,101,1085,149" href="#0044422" shape="RECT"/>
+<area alt="" coords="1320,197,1448,245" href="#0032991" shape="RECT"/>
+<area alt="" coords="901,101,984,149" href="#0016020" shape="RECT"/>
+<area alt="" coords="1643,301,1728,349" href="#0044425" shape="RECT"/>
+<area alt="" coords="621,101,717,149" href="#0044456" shape="RECT"/>
+<area alt="" coords="128,543,229,591" href="#0005739" shape="RECT"/>
+<area alt="" coords="1853,413,1939,461" href="#0070469" shape="RECT"/>
+<area alt="" coords="885,837,1000,899" href="#0005762" shape="RECT"/>
+<area alt="" coords="673,197,759,245" href="#0097458" shape="RECT"/>
+<area alt="" coords="464,301,563,349" href="#0014069" shape="RECT"/>
+<area alt="" coords="845,301,968,349" href="#1990904" shape="RECT"/>
+<area alt="" coords="701,413,784,461" href="#0044391" shape="RECT"/>
+<area alt="" coords="891,413,968,461" href="#0005844" shape="RECT"/>
+<area alt="" coords="253,543,328,591" href="#0005840" shape="RECT"/>
+<area alt="" coords="600,413,677,461" href="#0044445" shape="RECT"/>
+<area alt="" coords="353,682,471,745" href="#0022627" shape="RECT"/>
+<area alt="" coords="495,682,609,745" href="#0022625" shape="RECT"/>
+<area alt="" coords="733,543,843,591" href="#0031082" shape="RECT"/>
+<area alt="" coords="1535,406,1633,469" href="#0044432" shape="RECT"/>
+<area alt="" coords="1541,543,1640,591" href="#0042825" shape="RECT"/>
+<area alt="" coords="1664,535,1779,598" href="#0042824" shape="RECT"/>
+<area alt="" coords="707,301,821,349" href="#0019866" shape="RECT"/>
+<area alt="" coords="916,689,1031,737" href="#0005743" shape="RECT"/>
+<area alt="" coords="1091,689,1184,737" href="#0000502" shape="RECT"/>
+<area alt="" coords="1144,543,1253,591" href="#1905369" shape="RECT"/>
+<area alt="" coords="1723,682,1856,745" href="#0045259" shape="RECT"/>
+<area alt="" coords="1761,828,1895,908" href="#0005753" shape="RECT"/>
+<area alt="" coords="2296,828,2405,908" href="#0005747" shape="RECT"/>
+<area alt="" coords="2013,413,2128,461" href="#1990204" shape="RECT"/>
+<area alt="" coords="528,197,629,245" href="#0099572" shape="RECT"/>
+<area alt="" coords="792,197,880,245" href="#0005622" shape="RECT"/>
+<area alt="" coords="1011,197,1101,245" href="#0044424" shape="RECT"/>
+<area alt="" coords="1197,413,1299,461" href="#0044429" shape="RECT"/>
+<area alt="" coords="917,543,1019,591" href="#0031966" shape="RECT"/>
+<area alt="" coords="1416,535,1517,598" href="#0044455" shape="RECT"/>
+<area alt="" coords="1277,543,1392,591" href="#0098798" shape="RECT"/>
+<area alt="" coords="772,689,892,737" href="#0031083" shape="RECT"/>
+<area alt="" coords="80,197,219,245" href="#0043227" shape="RECT"/>
+<area alt="" coords="45,406,184,469" href="#0043231" shape="RECT"/>
+<area alt="" coords="1323,413,1405,461" href="#1905368" shape="RECT"/>
+<area alt="" coords="1144,294,1235,357" href="#0044446" shape="RECT"/>
+<area alt="" coords="2168,543,2275,591" href="#0098803" shape="RECT"/>
+<area alt="" coords="2296,682,2405,745" href="#0045271" shape="RECT"/>
+<area alt="" coords="403,543,520,591" href="#0015935" shape="RECT"/>
+<area alt="" coords="595,543,709,591" href="#0015934" shape="RECT"/>
+<area alt="" coords="328,197,493,245" href="#0043228" shape="RECT"/>
+<area alt="" coords="245,301,336,349" href="#0043229" shape="RECT"/>
+<area alt="" coords="2011,518,2144,615" href="#0033178" shape="RECT"/>
+<area alt="" coords="2037,665,2171,762" href="#0045261" shape="RECT"/>
+<area alt="" coords="904,197,987,245" href="#0031090" shape="RECT"/>
+<area alt="" coords="244,689,329,737" href="#0042788" shape="RECT"/>
+<area alt="" coords="1880,682,2013,745" href="#0098800" shape="RECT"/>
+<area alt="" coords="1959,811,2092,925" href="#0000275" shape="RECT"/>
+<area alt="" coords="633,682,748,745" href="#0000315" shape="RECT"/>
+<area alt="" coords="1664,413,1779,461" href="#0098796" shape="RECT"/>
+<area alt="" coords="1752,301,1827,349" href="#1902494" shape="RECT"/>
+<area alt="" coords="208,406,373,469" href="#0043232" shape="RECT"/>
+<area alt="" coords="2349,543,2504,591" href="#0030964" shape="RECT"/>
+<area alt="" coords="1803,535,1936,598" href="#0016469" shape="RECT"/>
+<area alt="" coords="5,543,104,591" href="#0005783" shape="RECT"/>
+<area alt="" coords="587,301,683,349" href="#0044444" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data6/go/20/GOCOMPONENT.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098798&amp;view=details" target="_blank">GO:0098798</a><a name="0098798"></a></td>
+<td>mitochondrial protein complex</td>
+<td align="center">7.31E-24</td>
+<td align="center">1.42E-20</td>
+<td align="center">11.23 (16005,244,181,31)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098798')" id="ctrl_elements_GO:0098798">[+] Show genes</a><br/>
+<div id="elements_GO:0098798" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044429&amp;view=details" target="_blank">GO:0044429</a><a name="0044429"></a></td>
+<td>mitochondrial part</td>
+<td align="center">1.88E-21</td>
+<td align="center">1.82E-18</td>
+<td align="center">5.22 (16005,796,181,47)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044429')" id="ctrl_elements_GO:0044429">[+] Show genes</a><br/>
+<div id="elements_GO:0044429" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Tspo  -  translocator protein<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044455&amp;view=details" target="_blank">GO:0044455</a><a name="0044455"></a></td>
+<td>mitochondrial membrane part</td>
+<td align="center">3.73E-20</td>
+<td align="center">2.42E-17</td>
+<td align="center">11.27 (16005,204,181,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044455')" id="ctrl_elements_GO:0044455">[+] Show genes</a><br/>
+<div id="elements_GO:0044455" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098800&amp;view=details" target="_blank">GO:0098800</a><a name="0098800"></a></td>
+<td>inner mitochondrial membrane protein complex</td>
+<td align="center">7.06E-20</td>
+<td align="center">3.43E-17</td>
+<td align="center">16.29 (16005,114,181,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098800')" id="ctrl_elements_GO:0098800">[+] Show genes</a><br/>
+<div id="elements_GO:0098800" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044444&amp;view=details" target="_blank">GO:0044444</a><a name="0044444"></a></td>
+<td>cytoplasmic part</td>
+<td align="center">9.78E-20</td>
+<td align="center">3.8E-17</td>
+<td align="center">1.67 (16005,7796,181,147)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044444')" id="ctrl_elements_GO:0044444">[+] Show genes</a><br/>
+<div id="elements_GO:0044444" style="display:none"> <font size="1">
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Tbcb  -  tubulin folding cofactor b<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Praf2  -  pra1 domain family 2<br/>
+
+Ubl7  -  ubiquitin-like 7 (bone marrow stromal cell-derived)<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Isoc1  -  isochorismatase domain containing 1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Alad  -  aminolevulinate, delta-, dehydratase<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Qars  -  glutaminyl-trna synthetase<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Adprh  -  adp-ribosylarginine hydrolase<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Tbc1d13  -  tbc1 domain family, member 13<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Rinl  -  ras and rab interactor-like<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Pmm1  -  phosphomannomutase 1<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Pgm2  -  phosphoglucomutase 2<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Gpi1  -  glucose phosphate isomerase 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Hmbs  -  hydroxymethylbilane synthase<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Slc9a3r1  -  solute carrier family 9 (sodium/hydrogen exchanger), member 3 regulator 1<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Tpgs1  -  tubulin polyglutamylase complex subunit 1<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005840&amp;view=details" target="_blank">GO:0005840</a><a name="0005840"></a></td>
+<td>ribosome</td>
+<td align="center">6.24E-19</td>
+<td align="center">2.02E-16</td>
+<td align="center">13.51 (16005,144,181,22)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005840')" id="ctrl_elements_GO:0005840">[+] Show genes</a><br/>
+<div id="elements_GO:0005840" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019866&amp;view=details" target="_blank">GO:0019866</a><a name="0019866"></a></td>
+<td>organelle inner membrane</td>
+<td align="center">1.92E-18</td>
+<td align="center">5.32E-16</td>
+<td align="center">7.07 (16005,400,181,32)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019866')" id="ctrl_elements_GO:0019866">[+] Show genes</a><br/>
+<div id="elements_GO:0019866" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005739&amp;view=details" target="_blank">GO:0005739</a><a name="0005739"></a></td>
+<td>mitochondrion</td>
+<td align="center">2.14E-18</td>
+<td align="center">5.2E-16</td>
+<td align="center">3.38 (16005,1598,181,61)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005739')" id="ctrl_elements_GO:0005739">[+] Show genes</a><br/>
+<div id="elements_GO:0005739" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+Tspo  -  translocator protein<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031966&amp;view=details" target="_blank">GO:0031966</a><a name="0031966"></a></td>
+<td>mitochondrial membrane</td>
+<td align="center">1.78E-17</td>
+<td align="center">3.83E-15</td>
+<td align="center">5.84 (16005,530,181,35)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031966')" id="ctrl_elements_GO:0031966">[+] Show genes</a><br/>
+<div id="elements_GO:0031966" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Tspo  -  translocator protein<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005743&amp;view=details" target="_blank">GO:0005743</a><a name="0005743"></a></td>
+<td>mitochondrial inner membrane</td>
+<td align="center">1.86E-17</td>
+<td align="center">3.62E-15</td>
+<td align="center">7.15 (16005,371,181,30)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005743')" id="ctrl_elements_GO:0005743">[+] Show genes</a><br/>
+<div id="elements_GO:0005743" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044391&amp;view=details" target="_blank">GO:0044391</a><a name="0044391"></a></td>
+<td>ribosomal subunit</td>
+<td align="center">1.1E-15</td>
+<td align="center">1.94E-13</td>
+<td align="center">12.26 (16005,137,181,19)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044391')" id="ctrl_elements_GO:0044391">[+] Show genes</a><br/>
+<div id="elements_GO:0044391" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098803&amp;view=details" target="_blank">GO:0098803</a><a name="0098803"></a></td>
+<td>respiratory chain complex</td>
+<td align="center">1.96E-14</td>
+<td align="center">3.16E-12</td>
+<td align="center">18.48 (16005,67,181,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098803')" id="ctrl_elements_GO:0098803">[+] Show genes</a><br/>
+<div id="elements_GO:0098803" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070469&amp;view=details" target="_blank">GO:0070469</a><a name="0070469"></a></td>
+<td>respiratory chain</td>
+<td align="center">1.04E-13</td>
+<td align="center">1.56E-11</td>
+<td align="center">19.16 (16005,60,181,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070469')" id="ctrl_elements_GO:0070469">[+] Show genes</a><br/>
+<div id="elements_GO:0070469" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030964&amp;view=details" target="_blank">GO:0030964</a><a name="0030964"></a></td>
+<td>NADH dehydrogenase complex</td>
+<td align="center">9E-13</td>
+<td align="center">1.25E-10</td>
+<td align="center">23.16 (16005,42,181,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030964')" id="ctrl_elements_GO:0030964">[+] Show genes</a><br/>
+<div id="elements_GO:0030964" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045271&amp;view=details" target="_blank">GO:0045271</a><a name="0045271"></a></td>
+<td>respiratory chain complex I</td>
+<td align="center">9E-13</td>
+<td align="center">1.16E-10</td>
+<td align="center">23.16 (16005,42,181,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045271')" id="ctrl_elements_GO:0045271">[+] Show genes</a><br/>
+<div id="elements_GO:0045271" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005747&amp;view=details" target="_blank">GO:0005747</a><a name="0005747"></a></td>
+<td>mitochondrial respiratory chain complex I</td>
+<td align="center">9E-13</td>
+<td align="center">1.09E-10</td>
+<td align="center">23.16 (16005,42,181,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005747')" id="ctrl_elements_GO:0005747">[+] Show genes</a><br/>
+<div id="elements_GO:0005747" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032991&amp;view=details" target="_blank">GO:0032991</a><a name="0032991"></a></td>
+<td>protein-containing complex</td>
+<td align="center">1.32E-12</td>
+<td align="center">1.51E-10</td>
+<td align="center">1.85 (16005,4738,181,99)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032991')" id="ctrl_elements_GO:0032991">[+] Show genes</a><br/>
+<div id="elements_GO:0032991" style="display:none"> <font size="1">
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Pfdn1  -  prefoldin 1<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Qars  -  glutaminyl-trna synthetase<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ccdc12  -  coiled-coil domain containing 12<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Slc9a3r1  -  solute carrier family 9 (sodium/hydrogen exchanger), member 3 regulator 1<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Nat9  -  n-acetyltransferase 9 (gcn5-related, putative)<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990204&amp;view=details" target="_blank">GO:1990204</a><a name="1990204"></a></td>
+<td>oxidoreductase complex</td>
+<td align="center">3.11E-12</td>
+<td align="center">3.35E-10</td>
+<td align="center">13.03 (16005,95,181,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1990204')" id="ctrl_elements_GO:1990204">[+] Show genes</a><br/>
+<div id="elements_GO:1990204" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031090&amp;view=details" target="_blank">GO:0031090</a><a name="0031090"></a></td>
+<td>organelle membrane</td>
+<td align="center">6.26E-12</td>
+<td align="center">6.39E-10</td>
+<td align="center">2.91 (16005,1457,181,48)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031090')" id="ctrl_elements_GO:0031090">[+] Show genes</a><br/>
+<div id="elements_GO:0031090" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Gpi1  -  glucose phosphate isomerase 1<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Tspo  -  translocator protein<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044422&amp;view=details" target="_blank">GO:0044422</a><a name="0044422"></a></td>
+<td>organelle part</td>
+<td align="center">1.47E-11</td>
+<td align="center">1.43E-9</td>
+<td align="center">1.55 (16005,7199,181,126)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044422')" id="ctrl_elements_GO:0044422">[+] Show genes</a><br/>
+<div id="elements_GO:0044422" style="display:none"> <font size="1">
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Tbcb  -  tubulin folding cofactor b<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ccdc12  -  coiled-coil domain containing 12<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Pgm2  -  phosphoglucomutase 2<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Gpi1  -  glucose phosphate isomerase 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Slc9a3r1  -  solute carrier family 9 (sodium/hydrogen exchanger), member 3 regulator 1<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Tpgs1  -  tubulin polyglutamylase complex subunit 1<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098796&amp;view=details" target="_blank">GO:0098796</a><a name="0098796"></a></td>
+<td>membrane protein complex</td>
+<td align="center">7.65E-11</td>
+<td align="center">7.07E-9</td>
+<td align="center">3.32 (16005,986,181,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098796')" id="ctrl_elements_GO:0098796">[+] Show genes</a><br/>
+<div id="elements_GO:0098796" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Slc9a3r1  -  solute carrier family 9 (sodium/hydrogen exchanger), member 3 regulator 1<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044446&amp;view=details" target="_blank">GO:0044446</a><a name="0044446"></a></td>
+<td>intracellular organelle part</td>
+<td align="center">8.7E-11</td>
+<td align="center">7.68E-9</td>
+<td align="center">1.55 (16005,6905,181,121)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044446')" id="ctrl_elements_GO:0044446">[+] Show genes</a><br/>
+<div id="elements_GO:0044446" style="display:none"> <font size="1">
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Tbcb  -  tubulin folding cofactor b<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ccdc12  -  coiled-coil domain containing 12<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Gpi1  -  glucose phosphate isomerase 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Tpgs1  -  tubulin polyglutamylase complex subunit 1<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015934&amp;view=details" target="_blank">GO:0015934</a><a name="0015934"></a></td>
+<td>large ribosomal subunit</td>
+<td align="center">1.69E-10</td>
+<td align="center">1.43E-8</td>
+<td align="center">12.63 (16005,84,181,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015934')" id="ctrl_elements_GO:0015934">[+] Show genes</a><br/>
+<div id="elements_GO:0015934" style="display:none"> <font size="1">
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043229&amp;view=details" target="_blank">GO:0043229</a><a name="0043229"></a></td>
+<td>intracellular organelle</td>
+<td align="center">1.3E-9</td>
+<td align="center">1.05E-7</td>
+<td align="center">1.32 (16005,10100,181,151)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043229')" id="ctrl_elements_GO:0043229">[+] Show genes</a><br/>
+<div id="elements_GO:0043229" style="display:none"> <font size="1">
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Tbcb  -  tubulin folding cofactor b<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Praf2  -  pra1 domain family 2<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Maz  -  myc-associated zinc finger protein (purine-binding transcription factor)<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Isoc1  -  isochorismatase domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mlf2  -  myeloid leukemia factor 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Pkig  -  protein kinase inhibitor, gamma<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Rinl  -  ras and rab interactor-like<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Samd1  -  sterile alpha motif domain containing 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Hmbs  -  hydroxymethylbilane synthase<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Tpgs1  -  tubulin polyglutamylase complex subunit 1<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043226&amp;view=details" target="_blank">GO:0043226</a><a name="0043226"></a></td>
+<td>organelle</td>
+<td align="center">3.21E-9</td>
+<td align="center">2.49E-7</td>
+<td align="center">1.31 (16005,10299,181,152)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043226')" id="ctrl_elements_GO:0043226">[+] Show genes</a><br/>
+<div id="elements_GO:0043226" style="display:none"> <font size="1">
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Tbcb  -  tubulin folding cofactor b<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Praf2  -  pra1 domain family 2<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Maz  -  myc-associated zinc finger protein (purine-binding transcription factor)<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Isoc1  -  isochorismatase domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mlf2  -  myeloid leukemia factor 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Pkig  -  protein kinase inhibitor, gamma<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Rinl  -  ras and rab interactor-like<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Samd1  -  sterile alpha motif domain containing 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Hmbs  -  hydroxymethylbilane synthase<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Tpgs1  -  tubulin polyglutamylase complex subunit 1<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044424&amp;view=details" target="_blank">GO:0044424</a><a name="0044424"></a></td>
+<td>intracellular part</td>
+<td align="center">4.26E-9</td>
+<td align="center">3.18E-7</td>
+<td align="center">1.22 (16005,12098,181,167)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044424')" id="ctrl_elements_GO:0044424">[+] Show genes</a><br/>
+<div id="elements_GO:0044424" style="display:none"> <font size="1">
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Capn5  -  calpain 5<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Tbcb  -  tubulin folding cofactor b<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Praf2  -  pra1 domain family 2<br/>
+
+Ubl7  -  ubiquitin-like 7 (bone marrow stromal cell-derived)<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Maz  -  myc-associated zinc finger protein (purine-binding transcription factor)<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Isoc1  -  isochorismatase domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mlf2  -  myeloid leukemia factor 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Pfdn1  -  prefoldin 1<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Alad  -  aminolevulinate, delta-, dehydratase<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Qars  -  glutaminyl-trna synthetase<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Pkig  -  protein kinase inhibitor, gamma<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Adprh  -  adp-ribosylarginine hydrolase<br/>
+
+Tbc1d13  -  tbc1 domain family, member 13<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Rinl  -  ras and rab interactor-like<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ccdc12  -  coiled-coil domain containing 12<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Pmm1  -  phosphomannomutase 1<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Pgm2  -  phosphoglucomutase 2<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Gpi1  -  glucose phosphate isomerase 1<br/>
+
+Samd1  -  sterile alpha motif domain containing 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Hmbs  -  hydroxymethylbilane synthase<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Slc9a3r1  -  solute carrier family 9 (sodium/hydrogen exchanger), member 3 regulator 1<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Aarsd1  -  alanyl-trna synthetase domain containing 1<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Tpgs1  -  tubulin polyglutamylase complex subunit 1<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990904&amp;view=details" target="_blank">GO:1990904</a><a name="1990904"></a></td>
+<td>ribonucleoprotein complex</td>
+<td align="center">6.56E-9</td>
+<td align="center">4.71E-7</td>
+<td align="center">3.41 (16005,753,181,29)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1990904')" id="ctrl_elements_GO:1990904">[+] Show genes</a><br/>
+<div id="elements_GO:1990904" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Ccdc12  -  coiled-coil domain containing 12<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022625&amp;view=details" target="_blank">GO:0022625</a><a name="0022625"></a></td>
+<td>cytosolic large ribosomal subunit</td>
+<td align="center">2.04E-8</td>
+<td align="center">1.41E-6</td>
+<td align="center">22.11 (16005,28,181,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0022625')" id="ctrl_elements_GO:0022625">[+] Show genes</a><br/>
+<div id="elements_GO:0022625" style="display:none"> <font size="1">
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044445&amp;view=details" target="_blank">GO:0044445</a><a name="0044445"></a></td>
+<td>cytosolic part</td>
+<td align="center">4.97E-8</td>
+<td align="center">3.32E-6</td>
+<td align="center">6.32 (16005,196,181,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044445')" id="ctrl_elements_GO:0044445">[+] Show genes</a><br/>
+<div id="elements_GO:0044445" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043227&amp;view=details" target="_blank">GO:0043227</a><a name="0043227"></a></td>
+<td>membrane-bounded organelle</td>
+<td align="center">2.48E-7</td>
+<td align="center">1.6E-5</td>
+<td align="center">1.31 (16005,9317,181,138)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043227')" id="ctrl_elements_GO:0043227">[+] Show genes</a><br/>
+<div id="elements_GO:0043227" style="display:none"> <font size="1">
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Praf2  -  pra1 domain family 2<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Maz  -  myc-associated zinc finger protein (purine-binding transcription factor)<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Isoc1  -  isochorismatase domain containing 1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mlf2  -  myeloid leukemia factor 2<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Pkig  -  protein kinase inhibitor, gamma<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Rinl  -  ras and rab interactor-like<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Samd1  -  sterile alpha motif domain containing 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Hmbs  -  hydroxymethylbilane synthase<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043231&amp;view=details" target="_blank">GO:0043231</a><a name="0043231"></a></td>
+<td>intracellular membrane-bounded organelle</td>
+<td align="center">4.78E-7</td>
+<td align="center">2.99E-5</td>
+<td align="center">1.33 (16005,8713,181,131)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043231')" id="ctrl_elements_GO:0043231">[+] Show genes</a><br/>
+<div id="elements_GO:0043231" style="display:none"> <font size="1">
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Maz  -  myc-associated zinc finger protein (purine-binding transcription factor)<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Isoc1  -  isochorismatase domain containing 1<br/>
+
+Mlf2  -  myeloid leukemia factor 2<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Pkig  -  protein kinase inhibitor, gamma<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Samd1  -  sterile alpha motif domain containing 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Hmbs  -  hydroxymethylbilane synthase<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045259&amp;view=details" target="_blank">GO:0045259</a><a name="0045259"></a></td>
+<td>proton-transporting ATP synthase complex</td>
+<td align="center">4.8E-7</td>
+<td align="center">2.91E-5</td>
+<td align="center">29.48 (16005,15,181,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045259')" id="ctrl_elements_GO:0045259">[+] Show genes</a><br/>
+<div id="elements_GO:0045259" style="display:none"> <font size="1">
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005753&amp;view=details" target="_blank">GO:0005753</a><a name="0005753"></a></td>
+<td>mitochondrial proton-transporting ATP synthase complex</td>
+<td align="center">4.8E-7</td>
+<td align="center">2.82E-5</td>
+<td align="center">29.48 (16005,15,181,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005753')" id="ctrl_elements_GO:0005753">[+] Show genes</a><br/>
+<div id="elements_GO:0005753" style="display:none"> <font size="1">
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015935&amp;view=details" target="_blank">GO:0015935</a><a name="0015935"></a></td>
+<td>small ribosomal subunit</td>
+<td align="center">3.06E-6</td>
+<td align="center">1.75E-4</td>
+<td align="center">11.05 (16005,56,181,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015935')" id="ctrl_elements_GO:0015935">[+] Show genes</a><br/>
+<div id="elements_GO:0015935" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902494&amp;view=details" target="_blank">GO:1902494</a><a name="1902494"></a></td>
+<td>catalytic complex</td>
+<td align="center">1.03E-5</td>
+<td align="center">5.72E-4</td>
+<td align="center">2.26 (16005,1251,181,32)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1902494')" id="ctrl_elements_GO:1902494">[+] Show genes</a><br/>
+<div id="elements_GO:1902494" style="display:none"> <font size="1">
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000275&amp;view=details" target="_blank">GO:0000275</a><a name="0000275"></a></td>
+<td>mitochondrial proton-transporting ATP synthase complex, catalytic core F(1)</td>
+<td align="center">1.4E-5</td>
+<td align="center">7.54E-4</td>
+<td align="center">53.06 (16005,5,181,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000275')" id="ctrl_elements_GO:0000275">[+] Show genes</a><br/>
+<div id="elements_GO:0000275" style="display:none"> <font size="1">
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045261&amp;view=details" target="_blank">GO:0045261</a><a name="0045261"></a></td>
+<td>proton-transporting ATP synthase complex, catalytic core F(1)</td>
+<td align="center">1.4E-5</td>
+<td align="center">7.34E-4</td>
+<td align="center">53.06 (16005,5,181,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045261')" id="ctrl_elements_GO:0045261">[+] Show genes</a><br/>
+<div id="elements_GO:0045261" style="display:none"> <font size="1">
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016469&amp;view=details" target="_blank">GO:0016469</a><a name="0016469"></a></td>
+<td>proton-transporting two-sector ATPase complex</td>
+<td align="center">2.75E-5</td>
+<td align="center">1.41E-3</td>
+<td align="center">13.82 (16005,32,181,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016469')" id="ctrl_elements_GO:0016469">[+] Show genes</a><br/>
+<div id="elements_GO:0016469" style="display:none"> <font size="1">
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042788&amp;view=details" target="_blank">GO:0042788</a><a name="0042788"></a></td>
+<td>polysomal ribosome</td>
+<td align="center">5.37E-5</td>
+<td align="center">2.67E-3</td>
+<td align="center">18.62 (16005,19,181,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042788')" id="ctrl_elements_GO:0042788">[+] Show genes</a><br/>
+<div id="elements_GO:0042788" style="display:none"> <font size="1">
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005622&amp;view=details" target="_blank">GO:0005622</a><a name="0005622"></a></td>
+<td>intracellular</td>
+<td align="center">8.02E-5</td>
+<td align="center">3.89E-3</td>
+<td align="center">3.35 (16005,369,181,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005622')" id="ctrl_elements_GO:0005622">[+] Show genes</a><br/>
+<div id="elements_GO:0005622" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Ly6a  -  lymphocyte antigen 6 complex, locus a<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Capn5  -  calpain 5<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022627&amp;view=details" target="_blank">GO:0022627</a><a name="0022627"></a></td>
+<td>cytosolic small ribosomal subunit</td>
+<td align="center">1.95E-4</td>
+<td align="center">9.22E-3</td>
+<td align="center">13.60 (16005,26,181,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0022627')" id="ctrl_elements_GO:0022627">[+] Show genes</a><br/>
+<div id="elements_GO:0022627" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005783&amp;view=details" target="_blank">GO:0005783</a><a name="0005783"></a></td>
+<td>endoplasmic reticulum</td>
+<td align="center">2.33E-4</td>
+<td align="center">1.08E-2</td>
+<td align="center">1.95 (16005,1406,181,31)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005783')" id="ctrl_elements_GO:0005783">[+] Show genes</a><br/>
+<div id="elements_GO:0005783" style="display:none"> <font size="1">
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044464&amp;view=details" target="_blank">GO:0044464</a><a name="0044464"></a></td>
+<td>cell part</td>
+<td align="center">2.42E-4</td>
+<td align="center">1.09E-2</td>
+<td align="center">1.10 (16005,13536,181,169)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044464')" id="ctrl_elements_GO:0044464">[+] Show genes</a><br/>
+<div id="elements_GO:0044464" style="display:none"> <font size="1">
+
+Ddx41  -  dead (asp-glu-ala-asp) box polypeptide 41<br/>
+
+Tmem160  -  transmembrane protein 160<br/>
+
+Idh3b  -  isocitrate dehydrogenase 3 (nad+) beta<br/>
+
+Ly6i  -  lymphocyte antigen 6 complex, locus i<br/>
+
+Capn5  -  calpain 5<br/>
+
+Aco2  -  aconitase 2, mitochondrial<br/>
+
+Tbcb  -  tubulin folding cofactor b<br/>
+
+Ndufa7  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 7 (b14.5a)<br/>
+
+Tmem258  -  transmembrane protein 258<br/>
+
+Tbc1d7  -  tbc1 domain family, member 7<br/>
+
+Tubg1  -  tubulin, gamma 1<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Nudt1  -  nudix (nucleoside diphosphate linked moiety x)-type motif 1<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+
+Praf2  -  pra1 domain family 2<br/>
+
+Chchd3  -  coiled-coil-helix-coiled-coil-helix domain containing 3<br/>
+
+Ubl7  -  ubiquitin-like 7 (bone marrow stromal cell-derived)<br/>
+
+Romo1  -  reactive oxygen species modulator 1<br/>
+
+Ndufb5  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 5<br/>
+
+Nabp2  -  nucleic acid binding protein 2<br/>
+
+Mvb12a  -  multivesicular body subunit 12a<br/>
+
+Dnajb11  -  dnaj (hsp40) homolog, subfamily b, member 11<br/>
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br/>
+
+Rpl27  -  ribosomal protein l27<br/>
+
+Maz  -  myc-associated zinc finger protein (purine-binding transcription factor)<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Sdhc  -  succinate dehydrogenase complex, subunit c, integral membrane protein<br/>
+
+Pdia4  -  protein disulfide isomerase associated 4<br/>
+
+Map2k2  -  mitogen-activated protein kinase kinase 2<br/>
+
+Nmral1  -  nmra-like family domain containing 1<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Isoc1  -  isochorismatase domain containing 1<br/>
+
+Stx8  -  syntaxin 8<br/>
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mlf2  -  myeloid leukemia factor 2<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Actn4  -  actinin alpha 4<br/>
+
+Gbp3  -  guanylate binding protein 3<br/>
+
+Flywch1  -  flywch-type zinc finger 1<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+
+Babam1  -  brisc and brca1 a complex member 1<br/>
+
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br/>
+
+Gatad1  -  gata zinc finger domain containing 1<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Fbxl6  -  f-box and leucine-rich repeat protein 6<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Suclg1  -  succinate-coa ligase, gdp-forming, alpha subunit<br/>
+
+Pfdn1  -  prefoldin 1<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Alad  -  aminolevulinate, delta-, dehydratase<br/>
+
+Idh3g  -  isocitrate dehydrogenase 3 (nad+), gamma<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Copz1  -  coatomer protein complex, subunit zeta 1<br/>
+
+Tmbim6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+Ppp2r4  -  protein phosphatase 2a, regulatory subunit b (pr 53)<br/>
+
+Qars  -  glutaminyl-trna synthetase<br/>
+
+Auh  -  au rna binding protein/enoyl-coenzyme a hydratase<br/>
+
+G6pdx  -  glucose-6-phosphate dehydrogenase x-linked<br/>
+
+Erp44  -  endoplasmic reticulum protein 44<br/>
+
+Pkig  -  protein kinase inhibitor, gamma<br/>
+
+Park7  -  parkinson disease (autosomal recessive, early onset) 7<br/>
+
+Eif3k  -  eukaryotic translation initiation factor 3, subunit k<br/>
+
+Adprh  -  adp-ribosylarginine hydrolase<br/>
+
+Tbc1d13  -  tbc1 domain family, member 13<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Ifi27  -  interferon, alpha-inducible protein 27<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+
+Msh2  -  muts homolog 2 (e. coli)<br/>
+
+Rinl  -  ras and rab interactor-like<br/>
+
+Manf  -  mesencephalic astrocyte-derived neurotrophic factor<br/>
+
+Pygo2  -  pygopus 2<br/>
+
+Snx17  -  sorting nexin 17<br/>
+
+Atp5k  -  atp synthase, h+ transporting, mitochondrial f1f0 complex, subunit e<br/>
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+2410015M20Rik  -  riken cdna 2410015m20 gene<br/>
+
+Gsk3a  -  glycogen synthase kinase 3 alpha<br/>
+
+Ndufc1  -  nadh dehydrogenase (ubiquinone) 1, subcomplex unknown, 1<br/>
+
+Lrwd1  -  leucine-rich repeats and wd repeat domain containing 1<br/>
+
+Cmc1  -  cox assembly mitochondrial protein 1<br/>
+
+Etfb  -  electron transferring flavoprotein, beta polypeptide<br/>
+
+Gipc1  -  gipc pdz domain containing family, member 1<br/>
+
+Ndufa8  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 8<br/>
+
+Ccdc12  -  coiled-coil domain containing 12<br/>
+
+Bckdk  -  branched chain ketoacid dehydrogenase kinase<br/>
+
+Pmm1  -  phosphomannomutase 1<br/>
+
+Mrps21  -  mitochondrial ribosomal protein s21<br/>
+
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br/>
+
+Coa3  -  cytochrome c oxidase assembly factor 3<br/>
+
+Ap2s1  -  adaptor-related protein complex 2, sigma 1 subunit<br/>
+
+Pgm2  -  phosphoglucomutase 2<br/>
+
+Dut  -  deoxyuridine triphosphatase<br/>
+
+Gpi1  -  glucose phosphate isomerase 1<br/>
+
+Samd1  -  sterile alpha motif domain containing 1<br/>
+
+Ndufa1  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 1<br/>
+
+Ly6a  -  lymphocyte antigen 6 complex, locus a<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br/>
+
+Dcps  -  decapping enzyme, scavenger<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Rfk  -  riboflavin kinase<br/>
+
+Got2  -  glutamate oxaloacetate transaminase 2, mitochondrial<br/>
+
+Hmbs  -  hydroxymethylbilane synthase<br/>
+
+Shisa5  -  shisa homolog 5 (xenopus laevis)<br/>
+
+Npc2  -  niemann pick type c2<br/>
+
+Slc9a3r1  -  solute carrier family 9 (sodium/hydrogen exchanger), member 3 regulator 1<br/>
+
+Uqcr11  -  ubiquinol-cytochrome c reductase, complex iii subunit xi<br/>
+
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br/>
+
+Bak1  -  bcl2-antagonist/killer 1<br/>
+
+Ndufv1  -  nadh dehydrogenase (ubiquinone) flavoprotein 1<br/>
+
+Mark4  -  map/microtubule affinity-regulating kinase 4<br/>
+
+Sfxn2  -  sideroflexin 2<br/>
+
+Ssr2  -  signal sequence receptor, beta<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Tfpt  -  tcf3 (e2a) fusion partner<br/>
+
+Cox7a2  -  cytochrome c oxidase subunit viia 2<br/>
+
+Vps45  -  vacuolar protein sorting 45 (yeast)<br/>
+
+Nono  -  non-pou-domain-containing, octamer binding protein<br/>
+
+Poll  -  polymerase (dna directed), lambda<br/>
+
+Mrps16  -  mitochondrial ribosomal protein s16<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+
+Rnaseh2a  -  ribonuclease h2, large subunit<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Hmox2  -  heme oxygenase (decycling) 2<br/>
+
+Ndufs2  -  nadh dehydrogenase (ubiquinone) fe-s protein 2<br/>
+
+Aarsd1  -  alanyl-trna synthetase domain containing 1<br/>
+
+Ifi27l2a  -  interferon, alpha-inducible protein 27 like 2a<br/>
+
+Tm7sf2  -  transmembrane 7 superfamily member 2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Rpl36al  -  ribosomal protein l36a-like<br/>
+
+Glul  -  glutamate-ammonia ligase (glutamine synthetase)<br/>
+
+Hagh  -  hydroxyacyl glutathione hydrolase<br/>
+
+Bola1  -  bola-like 1 (e. coli)<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Prdx4  -  peroxiredoxin 4<br/>
+
+Fam20b  -  family with sequence similarity 20, member b<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+BC004004  -  cdna sequence bc004004<br/>
+
+Cfl1  -  cofilin 1, non-muscle<br/>
+
+Scamp3  -  secretory carrier membrane protein 3<br/>
+
+Ndufs8  -  nadh dehydrogenase (ubiquinone) fe-s protein 8<br/>
+
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+Pigs  -  phosphatidylinositol glycan anchor biosynthesis, class s<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Polr2g  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+Ino80b  -  ino80 complex subunit b<br/>
+
+Ei24  -  etoposide induced 2.4 mrna<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Ost4  -  oligosaccharyltransferase 4 homolog (s. cerevisiae)<br/>
+
+Tspo  -  translocator protein<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Tpgs1  -  tubulin polyglutamylase complex subunit 1<br/>
+
+Arl3  -  adp-ribosylation factor-like 3<br/>
+
+Cox6b1  -  cytochrome c oxidase, subunit vib polypeptide 1<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Commd1  -  comm domain containing 1<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042824&amp;view=details" target="_blank">GO:0042824</a><a name="0042824"></a></td>
+<td>MHC class I peptide loading complex</td>
+<td align="center">2.9E-4</td>
+<td align="center">1.28E-2</td>
+<td align="center">22.11 (16005,12,181,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042824')" id="ctrl_elements_GO:0042824">[+] Show genes</a><br/>
+<div id="elements_GO:0042824" style="display:none"> <font size="1">
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+
+B2m  -  beta-2 microglobulin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042825&amp;view=details" target="_blank">GO:0042825</a><a name="0042825"></a></td>
+<td>TAP complex</td>
+<td align="center">3.79E-4</td>
+<td align="center">1.63E-2</td>
+<td align="center">58.95 (16005,3,181,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042825')" id="ctrl_elements_GO:0042825">[+] Show genes</a><br/>
+<div id="elements_GO:0042825" style="display:none"> <font size="1">
+
+Tap2  -  transporter 2, atp-binding cassette, sub-family b (mdr/tap)<br/>
+
+Pdia3  -  protein disulfide isomerase associated 3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1905368&amp;view=details" target="_blank">GO:1905368</a><a name="1905368"></a></td>
+<td>peptidase complex</td>
+<td align="center">4.02E-4</td>
+<td align="center">1.7E-2</td>
+<td align="center">6.24 (16005,85,181,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1905368')" id="ctrl_elements_GO:1905368">[+] Show genes</a><br/>
+<div id="elements_GO:1905368" style="display:none"> <font size="1">
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+
+Spcs2  -  signal peptidase complex subunit 2 homolog (s. cerevisiae)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000315&amp;view=details" target="_blank">GO:0000315</a><a name="0000315"></a></td>
+<td>organellar large ribosomal subunit</td>
+<td align="center">4.55E-4</td>
+<td align="center">1.88E-2</td>
+<td align="center">7.76 (16005,57,181,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000315')" id="ctrl_elements_GO:0000315">[+] Show genes</a><br/>
+<div id="elements_GO:0000315" style="display:none"> <font size="1">
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005762&amp;view=details" target="_blank">GO:0005762</a><a name="0005762"></a></td>
+<td>mitochondrial large ribosomal subunit</td>
+<td align="center">4.55E-4</td>
+<td align="center">1.84E-2</td>
+<td align="center">7.76 (16005,57,181,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005762')" id="ctrl_elements_GO:0005762">[+] Show genes</a><br/>
+<div id="elements_GO:0005762" style="display:none"> <font size="1">
+
+Mpv17l2  -  mpv17 mitochondrial membrane protein-like 2<br/>
+
+Mrpl18  -  mitochondrial ribosomal protein l18<br/>
+
+Mrpl34  -  mitochondrial ribosomal protein l34<br/>
+
+Mrpl28  -  mitochondrial ribosomal protein l28<br/>
+
+Mrpl14  -  mitochondrial ribosomal protein l14<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014069&amp;view=details" target="_blank">GO:0014069</a><a name="0014069"></a></td>
+<td>postsynaptic density</td>
+<td align="center">4.72E-4</td>
+<td align="center">1.87E-2</td>
+<td align="center">3.35 (16005,290,181,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0014069')" id="ctrl_elements_GO:0014069">[+] Show genes</a><br/>
+<div id="elements_GO:0014069" style="display:none"> <font size="1">
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031083&amp;view=details" target="_blank">GO:0031083</a><a name="0031083"></a></td>
+<td>BLOC-1 complex</td>
+<td align="center">4.72E-4</td>
+<td align="center">1.83E-2</td>
+<td align="center">18.95 (16005,14,181,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031083')" id="ctrl_elements_GO:0031083">[+] Show genes</a><br/>
+<div id="elements_GO:0031083" style="display:none"> <font size="1">
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Kxd1  -  kxdl motif containing 1<br/>
+
+Bloc1s3  -  biogenesis of lysosome-related organelles complex-1, subunit 3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033178&amp;view=details" target="_blank">GO:0033178</a><a name="0033178"></a></td>
+<td>proton-transporting two-sector ATPase complex, catalytic domain</td>
+<td align="center">4.72E-4</td>
+<td align="center">1.8E-2</td>
+<td align="center">18.95 (16005,14,181,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0033178')" id="ctrl_elements_GO:0033178">[+] Show genes</a><br/>
+<div id="elements_GO:0033178" style="display:none"> <font size="1">
+
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br/>
+
+Atp5e  -  atp synthase, h+ transporting, mitochondrial f1 complex, epsilon subunit<br/>
+
+Atp5c1  -  atp synthase, h+ transporting, mitochondrial f1 complex, gamma polypeptide 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099572&amp;view=details" target="_blank">GO:0099572</a><a name="0099572"></a></td>
+<td>postsynaptic specialization</td>
+<td align="center">5.6E-4</td>
+<td align="center">2.09E-2</td>
+<td align="center">3.29 (16005,296,181,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0099572')" id="ctrl_elements_GO:0099572">[+] Show genes</a><br/>
+<div id="elements_GO:0099572" style="display:none"> <font size="1">
+
+Rpl8  -  ribosomal protein l8<br/>
+
+Snap47  -  synaptosomal-associated protein, 47<br/>
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Clstn1  -  calsyntenin 1<br/>
+
+Bnip3  -  bcl2/adenovirus e1b interacting protein 3<br/>
+
+Dbnl  -  drebrin-like<br/>
+
+Rab8a  -  rab8a, member ras oncogene family<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Rps18  -  ribosomal protein s18<br/>
+
+Rpl38  -  ribosomal protein l38<br/>
+
+Rpl6  -  ribosomal protein l6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000502&amp;view=details" target="_blank">GO:0000502</a><a name="0000502"></a></td>
+<td>proteasome complex</td>
+<td align="center">6.24E-4</td>
+<td align="center">2.28E-2</td>
+<td align="center">7.25 (16005,61,181,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000502')" id="ctrl_elements_GO:0000502">[+] Show genes</a><br/>
+<div id="elements_GO:0000502" style="display:none"> <font size="1">
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1905369&amp;view=details" target="_blank">GO:1905369</a><a name="1905369"></a></td>
+<td>endopeptidase complex</td>
+<td align="center">6.72E-4</td>
+<td align="center">2.42E-2</td>
+<td align="center">7.13 (16005,62,181,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1905369')" id="ctrl_elements_GO:1905369">[+] Show genes</a><br/>
+<div id="elements_GO:1905369" style="display:none"> <font size="1">
+
+Shfm1  -  split hand/foot malformation (ectrodactyly) type 1<br/>
+
+Psmb1  -  proteasome (prosome, macropain) subunit, beta type 1<br/>
+
+Psme1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+Psmb9  -  proteasome (prosome, macropain) subunit, beta type 9 (large multifunctional peptidase 2)<br/>
+
+Psmb8  -  proteasome (prosome, macropain) subunit, beta type 8 (large multifunctional peptidase 7)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005844&amp;view=details" target="_blank">GO:0005844</a><a name="0005844"></a></td>
+<td>polysome</td>
+<td align="center">8.65E-4</td>
+<td align="center">3.05E-2</td>
+<td align="center">9.31 (16005,38,181,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005844')" id="ctrl_elements_GO:0005844">[+] Show genes</a><br/>
+<div id="elements_GO:0005844" style="display:none"> <font size="1">
+
+Rpl7  -  ribosomal protein l7<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+Lsmd1  -  lsm domain containing 1<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 16841 genes out of 31009 gene terms entered by the user.<br/> 381 genes were recognized by gene symbol and 16460 genes by other gene IDs .<br/>223 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 16618 genes.<br/>Only 16005 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOCOMPONENT.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1941 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -6,7 +6,7 @@ import seaborn as sns
 from scipy.stats import pearsonr, norm
 from scipy import sparse
 from time import time
-import pickle
+import pickle5 as pickle
 import json
 import codecs
 import multiprocessing as mp

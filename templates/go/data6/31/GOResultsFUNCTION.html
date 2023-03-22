@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="579,221,685,269" href="#0005515" shape="RECT"/>
+<area alt="" coords="573,341,685,389" href="#0019899" shape="RECT"/>
+<area alt="" coords="141,848,253,896" href="#0016887" shape="RECT"/>
+<area alt="" coords="140,968,260,1016" href="#0042623" shape="RECT"/>
+<area alt="" coords="563,617,664,679" href="#0031625" shape="RECT"/>
+<area alt="" coords="448,214,555,277" href="#0097159" shape="RECT"/>
+<area alt="" coords="455,341,548,389" href="#0003676" shape="RECT"/>
+<area alt="" coords="555,841,691,903" href="#0015075" shape="RECT"/>
+<area alt="" coords="456,952,571,1032" href="#0022853" shape="RECT"/>
+<area alt="" coords="539,1098,693,1161" href="#0008324" shape="RECT"/>
+<area alt="" coords="285,1089,464,1169" href="#0015405" shape="RECT"/>
+<area alt="" coords="315,1227,435,1325" href="#0042626" shape="RECT"/>
+<area alt="" coords="317,952,432,1032" href="#0015399" shape="RECT"/>
+<area alt="" coords="60,221,143,269" href="#0016787" shape="RECT"/>
+<area alt="" coords="33,325,145,405" href="#0016817" shape="RECT"/>
+<area alt="" coords="141,1089,261,1169" href="#0043492" shape="RECT"/>
+<area alt="" coords="179,221,304,269" href="#0030234" shape="RECT"/>
+<area alt="" coords="169,341,289,389" href="#0004857" shape="RECT"/>
+<area alt="" coords="313,325,431,405" href="#0055106" shape="RECT"/>
+<area alt="" coords="117,109,192,157" href="#0003824" shape="RECT"/>
+<area alt="" coords="248,617,357,679" href="#1990948" shape="RECT"/>
+<area alt="" coords="624,1521,779,1583" href="#0015078" shape="RECT"/>
+<area alt="" coords="508,1795,641,1875" href="#0046961" shape="RECT"/>
+<area alt="" coords="5,453,176,568" href="#0016818" shape="RECT"/>
+<area alt="" coords="96,624,221,672" href="#0016462" shape="RECT"/>
+<area alt="" coords="99,736,275,784" href="#0017111" shape="RECT"/>
+<area alt="" coords="368,1383,504,1463" href="#0042625" shape="RECT"/>
+<area alt="" coords="617,1374,772,1471" href="#0015077" shape="RECT"/>
+<area alt="" coords="717,1081,869,1178" href="#0015318" shape="RECT"/>
+<area alt="" coords="565,1236,720,1316" href="#0022890" shape="RECT"/>
+<area alt="" coords="280,102,363,165" href="#0098772" shape="RECT"/>
+<area alt="" coords="367,1632,492,1747" href="#0044769" shape="RECT"/>
+<area alt="" coords="465,109,537,157" href="#0005488" shape="RECT"/>
+<area alt="" coords="328,214,424,277" href="#1901363" shape="RECT"/>
+<area alt="" coords="440,624,539,672" href="#0019843" shape="RECT"/>
+<area alt="" coords="431,736,548,784" href="#0008097" shape="RECT"/>
+<area alt="" coords="379,841,531,903" href="#0022804" shape="RECT"/>
+<area alt="" coords="552,5,438,29" href="#0003674" shape="RECT"/>
+<area alt="" coords="561,109,644,157" href="#0031386" shape="RECT"/>
+<area alt="" coords="688,487,776,535" href="#0005215" shape="RECT"/>
+<area alt="" coords="763,102,843,165" href="#0005198" shape="RECT"/>
+<area alt="" coords="467,1528,600,1576" href="#0019829" shape="RECT"/>
+<area alt="" coords="563,479,664,542" href="#0044389" shape="RECT"/>
+<area alt="" coords="244,471,361,551" href="#0055105" shape="RECT"/>
+<area alt="" coords="587,729,701,791" href="#0022857" shape="RECT"/>
+<area alt="" coords="444,487,537,535" href="#0003723" shape="RECT"/>
+<area alt="" coords="760,214,851,277" href="#0003735" shape="RECT"/>
+<area alt="" coords="516,1665,633,1713" href="#0036442" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data6/go/31/GOFUNCTION.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003735&amp;view=details" target="_blank">GO:0003735</a><a name="0003735"></a></td>
+<td>structural constituent of ribosome</td>
+<td align="center">2.33E-15</td>
+<td align="center">1.03E-11</td>
+<td align="center">31.49 (16005,107,57,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003735')" id="ctrl_elements_GO:0003735">[+] Show genes</a><br/>
+<div id="elements_GO:0003735" style="display:none"> <font size="1">
+
+Gm13826  -  predicted gene 13826<br/>
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Rps28  -  ribosomal protein s28<br/>
+
+Rpl18a  -  ribosomal protein l18a<br/>
+
+Rps7  -  ribosomal protein s7<br/>
+
+Rps10  -  ribosomal protein s10<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005198&amp;view=details" target="_blank">GO:0005198</a><a name="0005198"></a></td>
+<td>structural molecule activity</td>
+<td align="center">6.02E-8</td>
+<td align="center">1.34E-4</td>
+<td align="center">7.32 (16005,460,57,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005198')" id="ctrl_elements_GO:0005198">[+] Show genes</a><br/>
+<div id="elements_GO:0005198" style="display:none"> <font size="1">
+
+Rps3a1  -  ribosomal protein s3a1<br/>
+
+Gm13826  -  predicted gene 13826<br/>
+
+Rpl41  -  ribosomal protein l41<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Rpl18a  -  ribosomal protein l18a<br/>
+
+Rps10  -  ribosomal protein s10<br/>
+
+Rps7  -  ribosomal protein s7<br/>
+
+Rps28  -  ribosomal protein s28<br/>
+
+Rpl26  -  ribosomal protein l26<br/>
+
+Rplp2  -  ribosomal protein, large p2<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019843&amp;view=details" target="_blank">GO:0019843</a><a name="0019843"></a></td>
+<td>rRNA binding</td>
+<td align="center">2.07E-6</td>
+<td align="center">3.06E-3</td>
+<td align="center">23.80 (16005,59,57,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019843')" id="ctrl_elements_GO:0019843">[+] Show genes</a><br/>
+<div id="elements_GO:0019843" style="display:none"> <font size="1">
+
+Gm13826  -  predicted gene 13826<br/>
+
+Rps5  -  ribosomal protein s5<br/>
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015078&amp;view=details" target="_blank">GO:0015078</a><a name="0015078"></a></td>
+<td>proton transmembrane transporter activity</td>
+<td align="center">2.79E-5</td>
+<td align="center">3.09E-2</td>
+<td align="center">14.04 (16005,100,57,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015078')" id="ctrl_elements_GO:0015078">[+] Show genes</a><br/>
+<div id="elements_GO:0015078" style="display:none"> <font size="1">
+
+Atp6v0d1  -  atpase, h+ transporting, lysosomal v0 subunit d1<br/>
+
+Atp6v1h  -  atpase, h+ transporting, lysosomal v1 subunit h<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+
+Cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br/>
+
+Cox4i1  -  cytochrome c oxidase subunit iv isoform 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031625&amp;view=details" target="_blank">GO:0031625</a><a name="0031625"></a></td>
+<td>ubiquitin protein ligase binding</td>
+<td align="center">6.09E-5</td>
+<td align="center">5.41E-2</td>
+<td align="center">6.97 (16005,282,57,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031625')" id="ctrl_elements_GO:0031625">[+] Show genes</a><br/>
+<div id="elements_GO:0031625" style="display:none"> <font size="1">
+
+Ube2a  -  ubiquitin-conjugating enzyme e2a<br/>
+
+Uba52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+Tnfrsf1b  -  tumor necrosis factor receptor superfamily, member 1b<br/>
+
+Sumo1  -  smt3 suppressor of mif two 3 homolog 1 (yeast)<br/>
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Prkar1a  -  protein kinase, camp dependent regulatory, type i, alpha<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046961&amp;view=details" target="_blank">GO:0046961</a><a name="0046961"></a></td>
+<td>proton-transporting ATPase activity, rotational mechanism</td>
+<td align="center">7.21E-5</td>
+<td align="center">5.33E-2</td>
+<td align="center">36.62 (16005,23,57,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0046961')" id="ctrl_elements_GO:0046961">[+] Show genes</a><br/>
+<div id="elements_GO:0046961" style="display:none"> <font size="1">
+
+Atp6v0d1  -  atpase, h+ transporting, lysosomal v0 subunit d1<br/>
+
+Atp6v1h  -  atpase, h+ transporting, lysosomal v1 subunit h<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044389&amp;view=details" target="_blank">GO:0044389</a><a name="0044389"></a></td>
+<td>ubiquitin-like protein ligase binding</td>
+<td align="center">8.61E-5</td>
+<td align="center">5.46E-2</td>
+<td align="center">6.60 (16005,298,57,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044389')" id="ctrl_elements_GO:0044389">[+] Show genes</a><br/>
+<div id="elements_GO:0044389" style="display:none"> <font size="1">
+
+Ube2a  -  ubiquitin-conjugating enzyme e2a<br/>
+
+Uba52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+Tnfrsf1b  -  tumor necrosis factor receptor superfamily, member 1b<br/>
+
+Sumo1  -  smt3 suppressor of mif two 3 homolog 1 (yeast)<br/>
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Prkar1a  -  protein kinase, camp dependent regulatory, type i, alpha<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990948&amp;view=details" target="_blank">GO:1990948</a><a name="1990948"></a></td>
+<td>ubiquitin ligase inhibitor activity</td>
+<td align="center">1.24E-4</td>
+<td align="center">6.86E-2</td>
+<td align="center">112.32 (16005,5,57,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1990948')" id="ctrl_elements_GO:1990948">[+] Show genes</a><br/>
+<div id="elements_GO:1990948" style="display:none"> <font size="1">
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Rps7  -  ribosomal protein s7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036442&amp;view=details" target="_blank">GO:0036442</a><a name="0036442"></a></td>
+<td>proton-exporting ATPase activity</td>
+<td align="center">1.62E-4</td>
+<td align="center">8.01E-2</td>
+<td align="center">28.08 (16005,30,57,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0036442')" id="ctrl_elements_GO:0036442">[+] Show genes</a><br/>
+<div id="elements_GO:0036442" style="display:none"> <font size="1">
+
+Atp6v0d1  -  atpase, h+ transporting, lysosomal v0 subunit d1<br/>
+
+Atp6v1h  -  atpase, h+ transporting, lysosomal v1 subunit h<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0055105&amp;view=details" target="_blank">GO:0055105</a><a name="0055105"></a></td>
+<td>ubiquitin-protein transferase inhibitor activity</td>
+<td align="center">1.85E-4</td>
+<td align="center">8.22E-2</td>
+<td align="center">93.60 (16005,6,57,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0055105')" id="ctrl_elements_GO:0055105">[+] Show genes</a><br/>
+<div id="elements_GO:0055105" style="display:none"> <font size="1">
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Rps7  -  ribosomal protein s7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044769&amp;view=details" target="_blank">GO:0044769</a><a name="0044769"></a></td>
+<td>ATPase activity, coupled to transmembrane movement of ions, rotational mechanism</td>
+<td align="center">2.17E-4</td>
+<td align="center">8.74E-2</td>
+<td align="center">25.53 (16005,33,57,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044769')" id="ctrl_elements_GO:0044769">[+] Show genes</a><br/>
+<div id="elements_GO:0044769" style="display:none"> <font size="1">
+
+Atp6v0d1  -  atpase, h+ transporting, lysosomal v0 subunit d1<br/>
+
+Atp6v1h  -  atpase, h+ transporting, lysosomal v1 subunit h<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031386&amp;view=details" target="_blank">GO:0031386</a><a name="0031386"></a></td>
+<td>protein tag</td>
+<td align="center">4.41E-4</td>
+<td align="center">1.63E-1</td>
+<td align="center">62.40 (16005,9,57,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031386')" id="ctrl_elements_GO:0031386">[+] Show genes</a><br/>
+<div id="elements_GO:0031386" style="display:none"> <font size="1">
+
+Uba52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+Sumo1  -  smt3 suppressor of mif two 3 homolog 1 (yeast)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015405&amp;view=details" target="_blank">GO:0015405</a><a name="0015405"></a></td>
+<td>P-P-bond-hydrolysis-driven transmembrane transporter activity</td>
+<td align="center">4.57E-4</td>
+<td align="center">1.56E-1</td>
+<td align="center">11.12 (16005,101,57,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015405')" id="ctrl_elements_GO:0015405">[+] Show genes</a><br/>
+<div id="elements_GO:0015405" style="display:none"> <font size="1">
+
+Atp6v0d1  -  atpase, h+ transporting, lysosomal v0 subunit d1<br/>
+
+Timm17b  -  translocase of inner mitochondrial membrane 17b<br/>
+
+Atp6v1h  -  atpase, h+ transporting, lysosomal v1 subunit h<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015399&amp;view=details" target="_blank">GO:0015399</a><a name="0015399"></a></td>
+<td>primary active transmembrane transporter activity</td>
+<td align="center">4.74E-4</td>
+<td align="center">1.5E-1</td>
+<td align="center">11.01 (16005,102,57,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0015399')" id="ctrl_elements_GO:0015399">[+] Show genes</a><br/>
+<div id="elements_GO:0015399" style="display:none"> <font size="1">
+
+Atp6v0d1  -  atpase, h+ transporting, lysosomal v0 subunit d1<br/>
+
+Timm17b  -  translocase of inner mitochondrial membrane 17b<br/>
+
+Atp6v1h  -  atpase, h+ transporting, lysosomal v1 subunit h<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008097&amp;view=details" target="_blank">GO:0008097</a><a name="0008097"></a></td>
+<td>5S rRNA binding</td>
+<td align="center">8.04E-4</td>
+<td align="center">2.38E-1</td>
+<td align="center">46.80 (16005,12,57,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008097')" id="ctrl_elements_GO:0008097">[+] Show genes</a><br/>
+<div id="elements_GO:0008097" style="display:none"> <font size="1">
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019899&amp;view=details" target="_blank">GO:0019899</a><a name="0019899"></a></td>
+<td>enzyme binding</td>
+<td align="center">9.9E-4</td>
+<td align="center">2.75E-1</td>
+<td align="center">2.22 (16005,2155,57,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019899')" id="ctrl_elements_GO:0019899">[+] Show genes</a><br/>
+<div id="elements_GO:0019899" style="display:none"> <font size="1">
+
+Ube2a  -  ubiquitin-conjugating enzyme e2a<br/>
+
+Ehd1  -  eh-domain containing 1<br/>
+
+Gnb2l1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2 like 1<br/>
+
+Tnfrsf1b  -  tumor necrosis factor receptor superfamily, member 1b<br/>
+
+Sumo1  -  smt3 suppressor of mif two 3 homolog 1 (yeast)<br/>
+
+Rpl11  -  ribosomal protein l11<br/>
+
+Arhgdia  -  rho gdp dissociation inhibitor (gdi) alpha<br/>
+
+Rps7  -  ribosomal protein s7<br/>
+
+Ppp2ca  -  protein phosphatase 2 (formerly 2a), catalytic subunit, alpha isoform<br/>
+
+Lamp1  -  lysosomal-associated membrane protein 1<br/>
+
+Eef2  -  eukaryotic translation elongation factor 2<br/>
+
+Lamtor1  -  late endosomal/lysosomal adaptor, mapk and mtor activator 1<br/>
+
+Uba52  -  ubiquitin a-52 residue ribosomal protein fusion product 1<br/>
+
+Atp6v0c  -  atpase, h+ transporting, lysosomal v0 subunit c<br/>
+
+Prkar1a  -  protein kinase, camp dependent regulatory, type i, alpha<br/>
+
+Ppp1r11  -  protein phosphatase 1, regulatory (inhibitor) subunit 11<br/>
+
+Rps3  -  ribosomal protein s3<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 16712 genes out of 30874 gene terms entered by the user.<br/> 382 genes were recognized by gene symbol and 16330 genes by other gene IDs .<br/>94 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 16618 genes.<br/>Only 16005 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOFUNCTION.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 4437 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

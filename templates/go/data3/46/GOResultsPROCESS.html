@@ -1,0 +1,3041 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="1701,495,1840,543" href="#0009952" shape="RECT"/>
+<area alt="" coords="307,222,413,285" href="#0048869" shape="RECT"/>
+<area alt="" coords="155,357,277,405" href="#0030154" shape="RECT"/>
+<area alt="" coords="301,357,419,405" href="#0048468" shape="RECT"/>
+<area alt="" coords="969,341,1063,421" href="#0048518" shape="RECT"/>
+<area alt="" coords="968,479,1064,559" href="#0009893" shape="RECT"/>
+<area alt="" coords="1195,479,1277,559" href="#0048522" shape="RECT"/>
+<area alt="" coords="1035,942,1149,1039" href="#2000112" shape="RECT"/>
+<area alt="" coords="1035,1088,1149,1203" href="#2000113" shape="RECT"/>
+<area alt="" coords="683,1269,797,1331" href="#0006355" shape="RECT"/>
+<area alt="" coords="825,1397,940,1477" href="#0045892" shape="RECT"/>
+<area alt="" coords="1087,341,1180,421" href="#0048519" shape="RECT"/>
+<area alt="" coords="848,479,944,559" href="#0009892" shape="RECT"/>
+<area alt="" coords="1301,479,1384,559" href="#0048523" shape="RECT"/>
+<area alt="" coords="544,787,672,885" href="#0010605" shape="RECT"/>
+<area alt="" coords="883,942,1011,1039" href="#0010558" shape="RECT"/>
+<area alt="" coords="568,951,693,1031" href="#0051253" shape="RECT"/>
+<area alt="" coords="413,959,544,1022" href="#0010629" shape="RECT"/>
+<area alt="" coords="685,1105,795,1185" href="#1903506" shape="RECT"/>
+<area alt="" coords="828,1251,937,1349" href="#1903507" shape="RECT"/>
+<area alt="" coords="1385,642,1527,705" href="#0051960" shape="RECT"/>
+<area alt="" coords="1480,812,1592,860" href="#0050767" shape="RECT"/>
+<area alt="" coords="819,1105,960,1185" href="#1902679" shape="RECT"/>
+<area alt="" coords="1311,341,1420,421" href="#0051239" shape="RECT"/>
+<area alt="" coords="1408,479,1517,559" href="#2000026" shape="RECT"/>
+<area alt="" coords="1541,495,1677,543" href="#0045595" shape="RECT"/>
+<area alt="" coords="1551,649,1681,697" href="#0060284" shape="RECT"/>
+<area alt="" coords="571,222,680,285" href="#0009653" shape="RECT"/>
+<area alt="" coords="897,642,1007,705" href="#0009889" shape="RECT"/>
+<area alt="" coords="1173,796,1269,876" href="#0031326" shape="RECT"/>
+<area alt="" coords="1040,796,1149,876" href="#0009890" shape="RECT"/>
+<area alt="" coords="888,796,1016,876" href="#0010556" shape="RECT"/>
+<area alt="" coords="660,1397,801,1477" href="#0006357" shape="RECT"/>
+<area alt="" coords="15,495,121,543" href="#0007411" shape="RECT"/>
+<area alt="" coords="1420,229,1561,277" href="#0007389" shape="RECT"/>
+<area alt="" coords="1655,357,1759,405" href="#0003002" shape="RECT"/>
+<area alt="" coords="5,357,131,405" href="#0097485" shape="RECT"/>
+<area alt="" coords="736,1526,877,1623" href="#0000122" shape="RECT"/>
+<area alt="" coords="324,109,396,157" href="#0009987" shape="RECT"/>
+<area alt="" coords="109,213,197,293" href="#0006928" shape="RECT"/>
+<area alt="" coords="395,805,520,867" href="#0051252" shape="RECT"/>
+<area alt="" coords="717,959,859,1022" href="#2001141" shape="RECT"/>
+<area alt="" coords="1081,625,1164,722" href="#0031325" shape="RECT"/>
+<area alt="" coords="1173,942,1269,1039" href="#0031327" shape="RECT"/>
+<area alt="" coords="393,633,521,713" href="#0060255" shape="RECT"/>
+<area alt="" coords="240,812,371,860" href="#0010468" shape="RECT"/>
+<area alt="" coords="453,109,560,157" href="#0032502" shape="RECT"/>
+<area alt="" coords="453,222,547,285" href="#0048856" shape="RECT"/>
+<area alt="" coords="696,779,864,893" href="#0045934" shape="RECT"/>
+<area alt="" coords="731,350,824,413" href="#0007275" shape="RECT"/>
+<area alt="" coords="565,357,707,405" href="#0048731" shape="RECT"/>
+<area alt="" coords="443,357,541,405" href="#0048513" shape="RECT"/>
+<area alt="" coords="1188,625,1271,722" href="#0031324" shape="RECT"/>
+<area alt="" coords="737,616,823,731" href="#0051172" shape="RECT"/>
+<area alt="" coords="1444,350,1567,413" href="#0050793" shape="RECT"/>
+<area alt="" coords="1487,959,1585,1022" href="#0045664" shape="RECT"/>
+<area alt="" coords="1087,222,1180,285" href="#0050789" shape="RECT"/>
+<area alt="" coords="848,350,944,413" href="#0019222" shape="RECT"/>
+<area alt="" coords="1204,350,1287,413" href="#0050794" shape="RECT"/>
+<area alt="" coords="688,470,773,567" href="#0051171" shape="RECT"/>
+<area alt="" coords="545,625,713,722" href="#0019219" shape="RECT"/>
+<area alt="" coords="612,109,692,157" href="#0065007" shape="RECT"/>
+<area alt="" coords="381,495,507,543" href="#0007420" shape="RECT"/>
+<area alt="" coords="579,5,466,29" href="#0008150" shape="RECT"/>
+<area alt="" coords="731,102,824,165" href="#0032501" shape="RECT"/>
+<area alt="" coords="581,479,664,559" href="#0080090" shape="RECT"/>
+<area alt="" coords="1088,479,1171,559" href="#0031323" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data3/go/46/GOPROCESS.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006357&amp;view=details" target="_blank">GO:0006357</a><a name="0006357"></a></td>
+<td>regulation of transcription by RNA polymerase II</td>
+<td align="center">1.42E-15</td>
+<td align="center">1.26E-11</td>
+<td align="center">4.45 (17542,1670,85,36)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006357')" id="ctrl_elements_GO:0006357">[+] Show genes</a><br/>
+<div id="elements_GO:0006357" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019219&amp;view=details" target="_blank">GO:0019219</a><a name="0019219"></a></td>
+<td>regulation of nucleobase-containing compound metabolic process</td>
+<td align="center">4.32E-14</td>
+<td align="center">1.91E-10</td>
+<td align="center">3.53 (17542,2336,85,40)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019219')" id="ctrl_elements_GO:0019219">[+] Show genes</a><br/>
+<div id="elements_GO:0019219" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051252&amp;view=details" target="_blank">GO:0051252</a><a name="0051252"></a></td>
+<td>regulation of RNA metabolic process</td>
+<td align="center">7.47E-14</td>
+<td align="center">2.2E-10</td>
+<td align="center">3.58 (17542,2251,85,39)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051252')" id="ctrl_elements_GO:0051252">[+] Show genes</a><br/>
+<div id="elements_GO:0051252" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051171&amp;view=details" target="_blank">GO:0051171</a><a name="0051171"></a></td>
+<td>regulation of nitrogen compound metabolic process</td>
+<td align="center">2.93E-13</td>
+<td align="center">6.47E-10</td>
+<td align="center">3.02 (17542,3007,85,44)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051171')" id="ctrl_elements_GO:0051171">[+] Show genes</a><br/>
+<div id="elements_GO:0051171" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006355&amp;view=details" target="_blank">GO:0006355</a><a name="0006355"></a></td>
+<td>regulation of transcription, DNA-templated</td>
+<td align="center">2.98E-13</td>
+<td align="center">5.27E-10</td>
+<td align="center">3.63 (17542,2104,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006355')" id="ctrl_elements_GO:0006355">[+] Show genes</a><br/>
+<div id="elements_GO:0006355" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903506&amp;view=details" target="_blank">GO:1903506</a><a name="1903506"></a></td>
+<td>regulation of nucleic acid-templated transcription</td>
+<td align="center">3.02E-13</td>
+<td align="center">4.46E-10</td>
+<td align="center">3.63 (17542,2105,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1903506')" id="ctrl_elements_GO:1903506">[+] Show genes</a><br/>
+<div id="elements_GO:1903506" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2001141&amp;view=details" target="_blank">GO:2001141</a><a name="2001141"></a></td>
+<td>regulation of RNA biosynthetic process</td>
+<td align="center">3.07E-13</td>
+<td align="center">3.88E-10</td>
+<td align="center">3.63 (17542,2106,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2001141')" id="ctrl_elements_GO:2001141">[+] Show genes</a><br/>
+<div id="elements_GO:2001141" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031323&amp;view=details" target="_blank">GO:0031323</a><a name="0031323"></a></td>
+<td>regulation of cellular metabolic process</td>
+<td align="center">3.9E-13</td>
+<td align="center">4.31E-10</td>
+<td align="center">2.93 (17542,3172,85,45)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031323')" id="ctrl_elements_GO:0031323">[+] Show genes</a><br/>
+<div id="elements_GO:0031323" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0080090&amp;view=details" target="_blank">GO:0080090</a><a name="0080090"></a></td>
+<td>regulation of primary metabolic process</td>
+<td align="center">6.17E-13</td>
+<td align="center">6.07E-10</td>
+<td align="center">2.96 (17542,3070,85,44)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0080090')" id="ctrl_elements_GO:0080090">[+] Show genes</a><br/>
+<div id="elements_GO:0080090" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019222&amp;view=details" target="_blank">GO:0019222</a><a name="0019222"></a></td>
+<td>regulation of metabolic process</td>
+<td align="center">1.61E-12</td>
+<td align="center">1.42E-9</td>
+<td align="center">2.76 (17542,3444,85,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019222')" id="ctrl_elements_GO:0019222">[+] Show genes</a><br/>
+<div id="elements_GO:0019222" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060255&amp;view=details" target="_blank">GO:0060255</a><a name="0060255"></a></td>
+<td>regulation of macromolecule metabolic process</td>
+<td align="center">2.96E-12</td>
+<td align="center">2.38E-9</td>
+<td align="center">2.83 (17542,3208,85,44)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060255')" id="ctrl_elements_GO:0060255">[+] Show genes</a><br/>
+<div id="elements_GO:0060255" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000112&amp;view=details" target="_blank">GO:2000112</a><a name="2000112"></a></td>
+<td>regulation of cellular macromolecule biosynthetic process</td>
+<td align="center">3.51E-12</td>
+<td align="center">2.58E-9</td>
+<td align="center">3.35 (17542,2280,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000112')" id="ctrl_elements_GO:2000112">[+] Show genes</a><br/>
+<div id="elements_GO:2000112" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010556&amp;view=details" target="_blank">GO:0010556</a><a name="0010556"></a></td>
+<td>regulation of macromolecule biosynthetic process</td>
+<td align="center">3.75E-12</td>
+<td align="center">2.55E-9</td>
+<td align="center">3.34 (17542,2285,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010556')" id="ctrl_elements_GO:0010556">[+] Show genes</a><br/>
+<div id="elements_GO:0010556" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031326&amp;view=details" target="_blank">GO:0031326</a><a name="0031326"></a></td>
+<td>regulation of cellular biosynthetic process</td>
+<td align="center">5.86E-12</td>
+<td align="center">3.7E-9</td>
+<td align="center">3.29 (17542,2319,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031326')" id="ctrl_elements_GO:0031326">[+] Show genes</a><br/>
+<div id="elements_GO:0031326" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010468&amp;view=details" target="_blank">GO:0010468</a><a name="0010468"></a></td>
+<td>regulation of gene expression</td>
+<td align="center">6.13E-12</td>
+<td align="center">3.62E-9</td>
+<td align="center">3.12 (17542,2581,85,39)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0010468')" id="ctrl_elements_GO:0010468">[+] Show genes</a><br/>
+<div id="elements_GO:0010468" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009889&amp;view=details" target="_blank">GO:0009889</a><a name="0009889"></a></td>
+<td>regulation of biosynthetic process</td>
+<td align="center">7.12E-12</td>
+<td align="center">3.94E-9</td>
+<td align="center">3.27 (17542,2334,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009889')" id="ctrl_elements_GO:0009889">[+] Show genes</a><br/>
+<div id="elements_GO:0009889" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032502&amp;view=details" target="_blank">GO:0032502</a><a name="0032502"></a></td>
+<td>developmental process</td>
+<td align="center">2.55E-11</td>
+<td align="center">1.32E-8</td>
+<td align="center">2.56 (17542,3714,85,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032502')" id="ctrl_elements_GO:0032502">[+] Show genes</a><br/>
+<div id="elements_GO:0032502" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+uba1  -  ubiquitin-like modifier activating enzyme 1<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+cdh7  -  cadherin 7, type 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+cadm1a  -  cell adhesion molecule 1a<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+dpysl5a  -  dihydropyrimidinase-like 5a<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+hapln1a  -  hyaluronan and proteoglycan link protein 1a<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+msi1  -  musashi homolog 1 (drosophila)<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+tubb5  -  tubulin, beta 5<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+angptl4  -  angiopoietin-like 4<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dacha  -  dachshund a<br/>
+
+fabp3  -  fatty acid binding protein 3, muscle and heart<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050767&amp;view=details" target="_blank">GO:0050767</a><a name="0050767"></a></td>
+<td>regulation of neurogenesis</td>
+<td align="center">9.98E-10</td>
+<td align="center">4.91E-7</td>
+<td align="center">9.48 (17542,283,85,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050767')" id="ctrl_elements_GO:0050767">[+] Show genes</a><br/>
+<div id="elements_GO:0050767" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+her13  -  hairy-related 13<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048856&amp;view=details" target="_blank">GO:0048856</a><a name="0048856"></a></td>
+<td>anatomical structure development</td>
+<td align="center">1.09E-9</td>
+<td align="center">5.05E-7</td>
+<td align="center">2.76 (17542,2769,85,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048856')" id="ctrl_elements_GO:0048856">[+] Show genes</a><br/>
+<div id="elements_GO:0048856" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+cdh7  -  cadherin 7, type 2<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+cadm1a  -  cell adhesion molecule 1a<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+dpysl5a  -  dihydropyrimidinase-like 5a<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+hapln1a  -  hyaluronan and proteoglycan link protein 1a<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+msi1  -  musashi homolog 1 (drosophila)<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+tubb5  -  tubulin, beta 5<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dacha  -  dachshund a<br/>
+
+fabp3  -  fatty acid binding protein 3, muscle and heart<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051960&amp;view=details" target="_blank">GO:0051960</a><a name="0051960"></a></td>
+<td>regulation of nervous system development</td>
+<td align="center">3.13E-9</td>
+<td align="center">1.39E-6</td>
+<td align="center">8.63 (17542,311,85,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051960')" id="ctrl_elements_GO:0051960">[+] Show genes</a><br/>
+<div id="elements_GO:0051960" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+her13  -  hairy-related 13<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060284&amp;view=details" target="_blank">GO:0060284</a><a name="0060284"></a></td>
+<td>regulation of cell development</td>
+<td align="center">3.26E-9</td>
+<td align="center">1.37E-6</td>
+<td align="center">8.60 (17542,312,85,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060284')" id="ctrl_elements_GO:0060284">[+] Show genes</a><br/>
+<div id="elements_GO:0060284" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+her13  -  hairy-related 13<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050794&amp;view=details" target="_blank">GO:0050794</a><a name="0050794"></a></td>
+<td>regulation of cellular process</td>
+<td align="center">7.18E-9</td>
+<td align="center">2.89E-6</td>
+<td align="center">1.83 (17542,6554,85,58)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050794')" id="ctrl_elements_GO:0050794">[+] Show genes</a><br/>
+<div id="elements_GO:0050794" style="display:none"> <font size="1">
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+wsb1  -  wd repeat and socs box-containing 1<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+angptl4  -  angiopoietin-like 4<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+ophn1  -  oligophrenin 1<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+lppr3a  -  lipid phosphate phosphatase-related protein type 3a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+adam10b  -  a disintegrin and metalloprotease domain 10b<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+magi1a  -  membrane associated guanylate kinase, ww and pdz domain containing 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045595&amp;view=details" target="_blank">GO:0045595</a><a name="0045595"></a></td>
+<td>regulation of cell differentiation</td>
+<td align="center">9.52E-9</td>
+<td align="center">3.66E-6</td>
+<td align="center">6.42 (17542,482,85,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045595')" id="ctrl_elements_GO:0045595">[+] Show genes</a><br/>
+<div id="elements_GO:0045595" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+her13  -  hairy-related 13<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048869&amp;view=details" target="_blank">GO:0048869</a><a name="0048869"></a></td>
+<td>cellular developmental process</td>
+<td align="center">3.17E-8</td>
+<td align="center">1.17E-5</td>
+<td align="center">3.27 (17542,1642,85,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048869')" id="ctrl_elements_GO:0048869">[+] Show genes</a><br/>
+<div id="elements_GO:0048869" style="display:none"> <font size="1">
+
+uba1  -  ubiquitin-like modifier activating enzyme 1<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+cdh7  -  cadherin 7, type 2<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+cadm1a  -  cell adhesion molecule 1a<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050789&amp;view=details" target="_blank">GO:0050789</a><a name="0050789"></a></td>
+<td>regulation of biological process</td>
+<td align="center">5.34E-8</td>
+<td align="center">1.89E-5</td>
+<td align="center">1.72 (17542,7078,85,59)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050789')" id="ctrl_elements_GO:0050789">[+] Show genes</a><br/>
+<div id="elements_GO:0050789" style="display:none"> <font size="1">
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+wsb1  -  wd repeat and socs box-containing 1<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+si:dkey-8k3.2  -  si:dkey-8k3.2<br/>
+
+angptl4  -  angiopoietin-like 4<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+ophn1  -  oligophrenin 1<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+lppr3a  -  lipid phosphate phosphatase-related protein type 3a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+adam10b  -  a disintegrin and metalloprotease domain 10b<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+magi1a  -  membrane associated guanylate kinase, ww and pdz domain containing 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000026&amp;view=details" target="_blank">GO:2000026</a><a name="2000026"></a></td>
+<td>regulation of multicellular organismal development</td>
+<td align="center">1.09E-7</td>
+<td align="center">3.71E-5</td>
+<td align="center">4.95 (17542,667,85,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000026')" id="ctrl_elements_GO:2000026">[+] Show genes</a><br/>
+<div id="elements_GO:2000026" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+her13  -  hairy-related 13<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007420&amp;view=details" target="_blank">GO:0007420</a><a name="0007420"></a></td>
+<td>brain development</td>
+<td align="center">3.01E-7</td>
+<td align="center">9.85E-5</td>
+<td align="center">9.93 (17542,187,85,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007420')" id="ctrl_elements_GO:0007420">[+] Show genes</a><br/>
+<div id="elements_GO:0007420" style="display:none"> <font size="1">
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0065007&amp;view=details" target="_blank">GO:0065007</a><a name="0065007"></a></td>
+<td>biological regulation</td>
+<td align="center">4.05E-7</td>
+<td align="center">1.28E-4</td>
+<td align="center">1.62 (17542,7641,85,60)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0065007')" id="ctrl_elements_GO:0065007">[+] Show genes</a><br/>
+<div id="elements_GO:0065007" style="display:none"> <font size="1">
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+hmgb3a  -  high-mobility group box 3a<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+wsb1  -  wd repeat and socs box-containing 1<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+si:dkey-8k3.2  -  si:dkey-8k3.2<br/>
+
+angptl4  -  angiopoietin-like 4<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dacha  -  dachshund a<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+tox2  -  tox high mobility group box family member 2<br/>
+
+hoxa2b  -  homeo box a2b<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+zfhx4  -  zinc finger homeobox 4<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+tox3  -  tox high mobility group box family member 3<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+ophn1  -  oligophrenin 1<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+dusp1  -  dual specificity phosphatase 1<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+lppr3a  -  lipid phosphate phosphatase-related protein type 3a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+adam10b  -  a disintegrin and metalloprotease domain 10b<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+nova2  -  neuro-oncological ventral antigen 2<br/>
+
+magi1a  -  membrane associated guanylate kinase, ww and pdz domain containing 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007275&amp;view=details" target="_blank">GO:0007275</a><a name="0007275"></a></td>
+<td>multicellular organism development</td>
+<td align="center">5.11E-7</td>
+<td align="center">1.56E-4</td>
+<td align="center">4.41 (17542,748,85,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007275')" id="ctrl_elements_GO:0007275">[+] Show genes</a><br/>
+<div id="elements_GO:0007275" style="display:none"> <font size="1">
+
+hoxa2b  -  homeo box a2b<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+fabp3  -  fatty acid binding protein 3, muscle and heart<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050793&amp;view=details" target="_blank">GO:0050793</a><a name="0050793"></a></td>
+<td>regulation of developmental process</td>
+<td align="center">1.46E-6</td>
+<td align="center">4.3E-4</td>
+<td align="center">4.08 (17542,810,85,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050793')" id="ctrl_elements_GO:0050793">[+] Show genes</a><br/>
+<div id="elements_GO:0050793" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+her13  -  hairy-related 13<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030154&amp;view=details" target="_blank">GO:0030154</a><a name="0030154"></a></td>
+<td>cell differentiation</td>
+<td align="center">2.9E-6</td>
+<td align="center">8.28E-4</td>
+<td align="center">3.47 (17542,1070,85,18)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030154')" id="ctrl_elements_GO:0030154">[+] Show genes</a><br/>
+<div id="elements_GO:0030154" style="display:none"> <font size="1">
+
+nkx6.2  -  nk6 homeobox 2<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+cdh7  -  cadherin 7, type 2<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+tox  -  thymocyte selection-associated high mobility group box<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051239&amp;view=details" target="_blank">GO:0051239</a><a name="0051239"></a></td>
+<td>regulation of multicellular organismal process</td>
+<td align="center">5.2E-6</td>
+<td align="center">1.44E-3</td>
+<td align="center">3.69 (17542,894,85,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051239')" id="ctrl_elements_GO:0051239">[+] Show genes</a><br/>
+<div id="elements_GO:0051239" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+her13  -  hairy-related 13<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+zbtb16a  -  zinc finger and btb domain containing 16a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045664&amp;view=details" target="_blank">GO:0045664</a><a name="0045664"></a></td>
+<td>regulation of neuron differentiation</td>
+<td align="center">7.52E-6</td>
+<td align="center">2.02E-3</td>
+<td align="center">7.94 (17542,208,85,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045664')" id="ctrl_elements_GO:0045664">[+] Show genes</a><br/>
+<div id="elements_GO:0045664" style="display:none"> <font size="1">
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032501&amp;view=details" target="_blank">GO:0032501</a><a name="0032501"></a></td>
+<td>multicellular organismal process</td>
+<td align="center">2.08E-5</td>
+<td align="center">5.42E-3</td>
+<td align="center">2.52 (17542,1882,85,23)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032501')" id="ctrl_elements_GO:0032501">[+] Show genes</a><br/>
+<div id="elements_GO:0032501" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+hoxa2b  -  homeo box a2b<br/>
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+prtga  -  protogenin homolog a (gallus gallus)<br/>
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+her13  -  hairy-related 13<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+dbx1a  -  developing brain homeobox 1a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+hoxb2a  -  homeo box b2a<br/>
+
+fabp3  -  fatty acid binding protein 3, muscle and heart<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048468&amp;view=details" target="_blank">GO:0048468</a><a name="0048468"></a></td>
+<td>cell development</td>
+<td align="center">1.52E-4</td>
+<td align="center">3.83E-2</td>
+<td align="center">4.12 (17542,501,85,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048468')" id="ctrl_elements_GO:0048468">[+] Show genes</a><br/>
+<div id="elements_GO:0048468" style="display:none"> <font size="1">
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+gpr56  -  g protein-coupled receptor 56<br/>
+
+cadm1a  -  cell adhesion molecule 1a<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009952&amp;view=details" target="_blank">GO:0009952</a><a name="0009952"></a></td>
+<td>anterior/posterior pattern specification</td>
+<td align="center">1.71E-4</td>
+<td align="center">4.19E-2</td>
+<td align="center">7.33 (17542,169,85,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009952')" id="ctrl_elements_GO:0009952">[+] Show genes</a><br/>
+<div id="elements_GO:0009952" style="display:none"> <font size="1">
+
+her8.2  -  hairy-related 8.2<br/>
+
+her13  -  hairy-related 13<br/>
+
+eng2b  -  engrailed 2b<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048731&amp;view=details" target="_blank">GO:0048731</a><a name="0048731"></a></td>
+<td>system development</td>
+<td align="center">2.35E-4</td>
+<td align="center">5.62E-2</td>
+<td align="center">3.90 (17542,529,85,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048731')" id="ctrl_elements_GO:0048731">[+] Show genes</a><br/>
+<div id="elements_GO:0048731" style="display:none"> <font size="1">
+
+hapln1a  -  hyaluronan and proteoglycan link protein 1a<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+dpysl5a  -  dihydropyrimidinase-like 5a<br/>
+
+msi1  -  musashi homolog 1 (drosophila)<br/>
+
+irx5a  -  iroquois homeobox protein 5a<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009653&amp;view=details" target="_blank">GO:0009653</a><a name="0009653"></a></td>
+<td>anatomical structure morphogenesis</td>
+<td align="center">2.41E-4</td>
+<td align="center">5.61E-2</td>
+<td align="center">2.69 (17542,1229,85,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009653')" id="ctrl_elements_GO:0009653">[+] Show genes</a><br/>
+<div id="elements_GO:0009653" style="display:none"> <font size="1">
+
+uba1  -  ubiquitin-like modifier activating enzyme 1<br/>
+
+sp8b  -  sp8 transcription factor b<br/>
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+zeb2a  -  zinc finger e-box binding homeobox 2a<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+kdm2bb  -  lysine (k)-specific demethylase 2bb<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+pacsin1b  -  protein kinase c and casein kinase substrate in neurons 1b<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+auts2  -  autism susceptibility candidate 2<br/>
+
+fabp3  -  fatty acid binding protein 3, muscle and heart<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000122&amp;view=details" target="_blank">GO:0000122</a><a name="0000122"></a></td>
+<td>negative regulation of transcription by RNA polymerase II</td>
+<td align="center">2.78E-4</td>
+<td align="center">6.31E-2</td>
+<td align="center">6.69 (17542,185,85,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000122')" id="ctrl_elements_GO:0000122">[+] Show genes</a><br/>
+<div id="elements_GO:0000122" style="display:none"> <font size="1">
+
+nr2f2  -  nuclear receptor subfamily 2, group f, member 2<br/>
+
+nr2f6b  -  nuclear receptor subfamily 2, group f, member 6b<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+foxp4  -  forkhead box p4<br/>
+
+phf21aa  -  phd finger protein 21aa<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007411&amp;view=details" target="_blank">GO:0007411</a><a name="0007411"></a></td>
+<td>axon guidance</td>
+<td align="center">6.33E-4</td>
+<td align="center">1.4E-1</td>
+<td align="center">5.73 (17542,216,85,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007411')" id="ctrl_elements_GO:0007411">[+] Show genes</a><br/>
+<div id="elements_GO:0007411" style="display:none"> <font size="1">
+
+epha4a  -  eph receptor a4a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dpysl5a  -  dihydropyrimidinase-like 5a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097485&amp;view=details" target="_blank">GO:0097485</a><a name="0097485"></a></td>
+<td>neuron projection guidance</td>
+<td align="center">6.49E-4</td>
+<td align="center">1.4E-1</td>
+<td align="center">5.71 (17542,217,85,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097485')" id="ctrl_elements_GO:0097485">[+] Show genes</a><br/>
+<div id="elements_GO:0097485" style="display:none"> <font size="1">
+
+epha4a  -  eph receptor a4a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+dpysl5a  -  dihydropyrimidinase-like 5a<br/>
+
+robo2  -  roundabout homolog 2<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+odz4  -  odd oz/ten-m homolog 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031325&amp;view=details" target="_blank">GO:0031325</a><a name="0031325"></a></td>
+<td>positive regulation of cellular metabolic process</td>
+<td align="center">8.25E-4</td>
+<td align="center">1.74E-1</td>
+<td align="center">2.74 (17542,979,85,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031325')" id="ctrl_elements_GO:0031325">[+] Show genes</a><br/>
+<div id="elements_GO:0031325" style="display:none"> <font size="1">
+
+fgfr3  -  fibroblast growth factor receptor 3<br/>
+
+prdm12b  -  pr domain containing 12b<br/>
+
+LOC100149391  -  trinucleotide repeat-containing gene 6c protein-like<br/>
+
+fam168a  -  family with sequence similarity 168, member a<br/>
+
+st5  -  suppression of tumorigenicity 5<br/>
+
+mllt10  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 10<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+hmgn3  -  high mobility group nucleosomal binding domain 3<br/>
+
+LOC571662  -  novel protein similar to vertebrate serta domain containing 2 (sertad2)<br/>
+
+epha4a  -  eph receptor a4a<br/>
+
+cyfip2  -  cytoplasmic fmr1 interacting protein 2<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+
+nr2f1a  -  nuclear receptor subfamily 2, group f, member 1a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048513&amp;view=details" target="_blank">GO:0048513</a><a name="0048513"></a></td>
+<td>animal organ development</td>
+<td align="center">9.99E-4</td>
+<td align="center">2.06E-1</td>
+<td align="center">2.56 (17542,1129,85,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048513')" id="ctrl_elements_GO:0048513">[+] Show genes</a><br/>
+<div id="elements_GO:0048513" style="display:none"> <font size="1">
+
+pou3f3b  -  pou class 3 homeobox 3b<br/>
+
+cdh7  -  cadherin 7, type 2<br/>
+
+pou3f2a  -  pou class 3 homeobox 2a<br/>
+
+si:ch73-386h18.1  -  si:ch73-386h18.1<br/>
+
+ascl1b  -  achaete-scute complex-like 1b (drosophila)<br/>
+
+s1pr1  -  sphingosine-1-phosphate receptor 1<br/>
+
+pou3f2b  -  pou class 3 homeobox 2b<br/>
+
+pou3f1  -  pou class 3 homeobox 1<br/>
+
+irx1a  -  iroquois homeobox protein 1, a<br/>
+
+zfhx3  -  zinc finger homeobox 3<br/>
+
+scube2  -  signal peptide, cub domain, egf-like 2<br/>
+
+fabp3  -  fatty acid binding protein 3, muscle and heart<br/>
+
+dpysl2b  -  dihydropyrimidinase-like 2b<br/>
+
+meis2a  -  myeloid ecotropic viral integration site 2a<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Danio rerio (Zebrafish)</p><p>The system has recognized 24099 genes out of 30208 gene terms entered by the user.<br/> 24099 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>198 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 23901 genes.<br/>Only 17542 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOPROCESS.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 8849 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

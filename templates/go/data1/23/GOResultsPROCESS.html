@@ -1,172 +1,277 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title>
-Results
-</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<script type='text/javascript'>
-function toggle(item) {
-obj=document.getElementById(item);
-visible=(obj.style.display!="none")
-key=document.getElementById("ctrl_" + item);
-if (visible) {
-    obj.style.display="none";
-key.innerHTML="[+] Show genes";
-}
-else {
-obj.style.display="block";
-key.innerHTML="[-] Hide genes";
-}
-}
-</script>
-</head>
-<body>
-<p><center><b>
-
-</b></center></p>
-<table border="1" width="80%" id="tab:pval_legend" align=center>
-<CAPTION><EM>P-value color scale</EM></CAPTION>
-<tr>
-	<td  width=140 align=center> > 10<sup>-3</sup></td>
-	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
-	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
-	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
-	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
-</tr >
-</table>
-<MAP NAME='goPathImage'>
-<AREA SHAPE='RECT' COORDS='25,205,97,253' HREF='#0009987' ALT=''>
-<AREA SHAPE='RECT' COORDS='52,421,183,469' HREF='#0007165' ALT=''>
-<AREA SHAPE='RECT' COORDS='72,517,163,597' HREF='#0007166' ALT=''>
-<AREA SHAPE='RECT' COORDS='120,101,200,149' HREF='#0065007' ALT=''>
-<AREA SHAPE='RECT' COORDS='121,198,215,261' HREF='#0050789' ALT=''>
-<AREA SHAPE='RECT' COORDS='119,310,201,373' HREF='#0050794' ALT=''>
-<AREA SHAPE='RECT' COORDS='117,5,5,29' HREF='#0008150' ALT=''>
-</MAP>
-<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
-<p>&nbsp;</p>
-<table border='1' width='100%' id='table1'>
-	<tr>
-		<td Align=center ><b>GO term</b></td>
-		<td Align=center><b>Description</b></td>
-		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
-		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
-		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
-		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
-	</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007166&amp;view=details' target="_blank">GO:0007166</a><a name=0007166></a></td>
-<td>cell surface receptor signaling pathway</td>
-<td  align=center>1.75E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>1.46 (8795,990,518,85)</td>
-<td>
-<a id="ctrl_elements_GO:0007166" href="javascript:toggle('elements_GO:0007166')">[+] Show genes</a><br>
-<div id="elements_GO:0007166" style="display:none"> <font size=1>
-NCBP2  -  nuclear cap binding protein subunit 2, 20kda<br>
-AP2B1  -  adaptor-related protein complex 2, beta 1 subunit<br>
-IFIT3  -  interferon-induced protein with tetratricopeptide repeats 3<br>
-DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br>
-CLEC2D  -  c-type lectin domain family 2, member d<br>
-DDX3X  -  dead (asp-glu-ala-asp) box helicase 3, x-linked<br>
-DTX3L  -  deltex 3-like (drosophila)<br>
-HLA-F  -  major histocompatibility complex, class i, f<br>
-IKBKG  -  inhibitor of kappa light polypeptide gene enhancer in b-cells, kinase gamma<br>
-IFI35  -  interferon-induced protein 35<br>
-PLXNC1  -  plexin c1<br>
-BLNK  -  b-cell linker<br>
-TICAM1  -  toll-like receptor adaptor molecule 1<br>
-C1orf186  -  chromosome 1 open reading frame 186<br>
-TLE3  -  transducin-like enhancer of split 3 (e(sp1) homolog, drosophila)<br>
-SNW1  -  snw domain containing 1<br>
-PIK3R3  -  phosphoinositide-3-kinase, regulatory subunit 3 (gamma)<br>
-ELMO1  -  engulfment and cell motility 1<br>
-BST2  -  bone marrow stromal cell antigen 2<br>
-EP300  -  e1a binding protein p300<br>
-TRIM26  -  tripartite motif containing 26<br>
-ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br>
-NMI  -  n-myc (and stat) interactor<br>
-WASF2  -  was protein family, member 2<br>
-FOXO1  -  forkhead box o1<br>
-HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br>
-CCR10  -  chemokine (c-c motif) receptor 10<br>
-FOXO3  -  forkhead box o3<br>
-BTN3A2  -  butyrophilin, subfamily 3, member a2<br>
-CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
-BTN2A1  -  butyrophilin, subfamily 2, member a1<br>
-ATP6V1E1  -  atpase, h+ transporting, lysosomal 31kda, v1 subunit e1<br>
-OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
-TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
-SKIL  -  ski-like oncogene<br>
-IL2RG  -  interleukin 2 receptor, gamma<br>
-PSMB10  -  proteasome (prosome, macropain) subunit, beta type, 10<br>
-PSMB9  -  proteasome (prosome, macropain) subunit, beta type, 9<br>
-DVL3  -  dishevelled segment polarity protein 3<br>
-PSMC6  -  proteasome (prosome, macropain) 26s subunit, atpase, 6<br>
-CCM2  -  cerebral cavernous malformation 2<br>
-IL10RA  -  interleukin 10 receptor, alpha<br>
-TNFRSF1A  -  tumor necrosis factor receptor superfamily, member 1a<br>
-IGKV1-12  -  immunoglobulin kappa variable 1-12<br>
-LDB1  -  lim domain binding 1<br>
-USP34  -  ubiquitin specific peptidase 34<br>
-BAG6  -  bcl2-associated athanogene 6<br>
-CREBBP  -  creb binding protein<br>
-PSMD7  -  proteasome (prosome, macropain) 26s subunit, non-atpase, 7<br>
-GRK5  -  g protein-coupled receptor kinase 5<br>
-RTF1  -  rtf1, paf1/rna polymerase ii complex component, homolog (s. cerevisiae)<br>
-PSME1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br>
-IGKC  -  immunoglobulin kappa constant<br>
-UBC  -  ubiquitin c<br>
-SQSTM1  -  sequestosome 1<br>
-IP6K2  -  inositol hexakisphosphate kinase 2<br>
-RIPK1  -  receptor (tnfrsf)-interacting serine-threonine kinase 1<br>
-AMFR  -  autocrine motility factor receptor, e3 ubiquitin protein ligase<br>
-SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
-NFATC3  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 3<br>
-TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
-BTN3A3  -  butyrophilin, subfamily 3, member a3<br>
-FER  -  fer (fps/fes related) tyrosine kinase<br>
-IL27RA  -  interleukin 27 receptor, alpha<br>
-TRAC  -  t cell receptor alpha constant<br>
-NCSTN  -  nicastrin<br>
-TSPAN12  -  tetraspanin 12<br>
-GBP2  -  guanylate binding protein 2, interferon-inducible<br>
-IL17RB  -  interleukin 17 receptor b<br>
-BCL10  -  b-cell cll/lymphoma 10<br>
-PTPN1  -  protein tyrosine phosphatase, non-receptor type 1<br>
-TIPARP  -  tcdd-inducible poly(adp-ribose) polymerase<br>
-ANXA4  -  annexin a4<br>
-IRF3  -  interferon regulatory factor 3<br>
-PIM1  -  pim-1 oncogene<br>
-P2RY8  -  purinergic receptor p2y, g-protein coupled, 8<br>
-BCL2  -  b-cell cll/lymphoma 2<br>
-PTPRA  -  protein tyrosine phosphatase, receptor type, a<br>
-CABIN1  -  calcineurin binding protein 1<br>
-CUL3  -  cullin 3<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br>
-POLR2G  -  polymerase (rna) ii (dna directed) polypeptide g<br>
-POLR2C  -  polymerase (rna) ii (dna directed) polypeptide c, 33kda<br>
-PDE4B  -  phosphodiesterase 4b, camp-specific<br>
-</FONT></div>
-</td>
-</tr>
-</table>
-<p>Species used: Homo sapiens</p><p>The system has recognized 9567 genes out of 10036 gene terms entered by the user.<br> 9567 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>539 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
-<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
-<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
-The GOrilla database was last updated on Mar 6, 2021</p>
-<p>This results page will be available on this site for one month from now (until 
-Jan 16, 2023
-). You can bookmark this page and come back to it later.
-</p>
-<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br>
-<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
-<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
-<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
-<p>
-<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
-</p>
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="25,205,97,253" href="#0009987" shape="RECT"/>
+<area alt="" coords="52,421,183,469" href="#0007165" shape="RECT"/>
+<area alt="" coords="72,517,163,597" href="#0007166" shape="RECT"/>
+<area alt="" coords="120,101,200,149" href="#0065007" shape="RECT"/>
+<area alt="" coords="121,198,215,261" href="#0050789" shape="RECT"/>
+<area alt="" coords="119,310,201,373" href="#0050794" shape="RECT"/>
+<area alt="" coords="117,5,5,29" href="#0008150" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data1/go/23/GOPROCESS.png" usemap="#goPathImage"/></p>
+<p>Â </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007166&amp;view=details" target="_blank">GO:0007166</a><a name="0007166"></a></td>
+<td>cell surface receptor signaling pathway</td>
+<td align="center">1.75E-4</td>
+<td align="center">1E0</td>
+<td align="center">1.46 (8795,990,518,85)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007166')" id="ctrl_elements_GO:0007166">[+] Show genes</a><br/>
+<div id="elements_GO:0007166" style="display:none"> <font size="1">
+
+NCBP2  -  nuclear cap binding protein subunit 2, 20kda<br/>
+
+AP2B1  -  adaptor-related protein complex 2, beta 1 subunit<br/>
+
+IFIT3  -  interferon-induced protein with tetratricopeptide repeats 3<br/>
+
+DDX5  -  dead (asp-glu-ala-asp) box helicase 5<br/>
+
+CLEC2D  -  c-type lectin domain family 2, member d<br/>
+
+DDX3X  -  dead (asp-glu-ala-asp) box helicase 3, x-linked<br/>
+
+DTX3L  -  deltex 3-like (drosophila)<br/>
+
+HLA-F  -  major histocompatibility complex, class i, f<br/>
+
+IKBKG  -  inhibitor of kappa light polypeptide gene enhancer in b-cells, kinase gamma<br/>
+
+IFI35  -  interferon-induced protein 35<br/>
+
+PLXNC1  -  plexin c1<br/>
+
+BLNK  -  b-cell linker<br/>
+
+TICAM1  -  toll-like receptor adaptor molecule 1<br/>
+
+C1orf186  -  chromosome 1 open reading frame 186<br/>
+
+TLE3  -  transducin-like enhancer of split 3 (e(sp1) homolog, drosophila)<br/>
+
+SNW1  -  snw domain containing 1<br/>
+
+PIK3R3  -  phosphoinositide-3-kinase, regulatory subunit 3 (gamma)<br/>
+
+ELMO1  -  engulfment and cell motility 1<br/>
+
+BST2  -  bone marrow stromal cell antigen 2<br/>
+
+EP300  -  e1a binding protein p300<br/>
+
+TRIM26  -  tripartite motif containing 26<br/>
+
+ATP6V0D1  -  atpase, h+ transporting, lysosomal 38kda, v0 subunit d1<br/>
+
+NMI  -  n-myc (and stat) interactor<br/>
+
+WASF2  -  was protein family, member 2<br/>
+
+FOXO1  -  forkhead box o1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CCR10  -  chemokine (c-c motif) receptor 10<br/>
+
+FOXO3  -  forkhead box o3<br/>
+
+BTN3A2  -  butyrophilin, subfamily 3, member a2<br/>
+
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br/>
+
+BTN2A1  -  butyrophilin, subfamily 2, member a1<br/>
+
+ATP6V1E1  -  atpase, h+ transporting, lysosomal 31kda, v1 subunit e1<br/>
+
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br/>
+
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br/>
+
+SKIL  -  ski-like oncogene<br/>
+
+IL2RG  -  interleukin 2 receptor, gamma<br/>
+
+PSMB10  -  proteasome (prosome, macropain) subunit, beta type, 10<br/>
+
+PSMB9  -  proteasome (prosome, macropain) subunit, beta type, 9<br/>
+
+DVL3  -  dishevelled segment polarity protein 3<br/>
+
+PSMC6  -  proteasome (prosome, macropain) 26s subunit, atpase, 6<br/>
+
+CCM2  -  cerebral cavernous malformation 2<br/>
+
+IL10RA  -  interleukin 10 receptor, alpha<br/>
+
+TNFRSF1A  -  tumor necrosis factor receptor superfamily, member 1a<br/>
+
+IGKV1-12  -  immunoglobulin kappa variable 1-12<br/>
+
+LDB1  -  lim domain binding 1<br/>
+
+USP34  -  ubiquitin specific peptidase 34<br/>
+
+BAG6  -  bcl2-associated athanogene 6<br/>
+
+CREBBP  -  creb binding protein<br/>
+
+PSMD7  -  proteasome (prosome, macropain) 26s subunit, non-atpase, 7<br/>
+
+GRK5  -  g protein-coupled receptor kinase 5<br/>
+
+RTF1  -  rtf1, paf1/rna polymerase ii complex component, homolog (s. cerevisiae)<br/>
+
+PSME1  -  proteasome (prosome, macropain) activator subunit 1 (pa28 alpha)<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+UBC  -  ubiquitin c<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+IP6K2  -  inositol hexakisphosphate kinase 2<br/>
+
+RIPK1  -  receptor (tnfrsf)-interacting serine-threonine kinase 1<br/>
+
+AMFR  -  autocrine motility factor receptor, e3 ubiquitin protein ligase<br/>
+
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br/>
+
+NFATC3  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 3<br/>
+
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br/>
+
+BTN3A3  -  butyrophilin, subfamily 3, member a3<br/>
+
+FER  -  fer (fps/fes related) tyrosine kinase<br/>
+
+IL27RA  -  interleukin 27 receptor, alpha<br/>
+
+TRAC  -  t cell receptor alpha constant<br/>
+
+NCSTN  -  nicastrin<br/>
+
+TSPAN12  -  tetraspanin 12<br/>
+
+GBP2  -  guanylate binding protein 2, interferon-inducible<br/>
+
+IL17RB  -  interleukin 17 receptor b<br/>
+
+BCL10  -  b-cell cll/lymphoma 10<br/>
+
+PTPN1  -  protein tyrosine phosphatase, non-receptor type 1<br/>
+
+TIPARP  -  tcdd-inducible poly(adp-ribose) polymerase<br/>
+
+ANXA4  -  annexin a4<br/>
+
+IRF3  -  interferon regulatory factor 3<br/>
+
+PIM1  -  pim-1 oncogene<br/>
+
+P2RY8  -  purinergic receptor p2y, g-protein coupled, 8<br/>
+
+BCL2  -  b-cell cll/lymphoma 2<br/>
+
+PTPRA  -  protein tyrosine phosphatase, receptor type, a<br/>
+
+CABIN1  -  calcineurin binding protein 1<br/>
+
+CUL3  -  cullin 3<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+
+ATP6V0E1  -  atpase, h+ transporting, lysosomal 9kda, v0 subunit e1<br/>
+
+POLR2G  -  polymerase (rna) ii (dna directed) polypeptide g<br/>
+
+POLR2C  -  polymerase (rna) ii (dna directed) polypeptide c, 33kda<br/>
+
+PDE4B  -  phosphodiesterase 4b, camp-specific<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9567 genes out of 10036 gene terms entered by the user.<br/> 9567 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>539 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br/>Only 8795 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOPROCESS.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 16, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

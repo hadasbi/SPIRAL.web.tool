@@ -1,0 +1,1741 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="527,591,652,639" href="#0030659" shape="RECT"/>
+<area alt="" coords="829,737,955,785" href="#0030666" shape="RECT"/>
+<area alt="" coords="397,737,504,785" href="#0030662" shape="RECT"/>
+<area alt="" coords="528,737,653,785" href="#0030658" shape="RECT"/>
+<area alt="" coords="677,737,805,785" href="#0030667" shape="RECT"/>
+<area alt="" coords="932,591,1031,639" href="#0060205" shape="RECT"/>
+<area alt="" coords="821,446,912,509" href="#0070013" shape="RECT"/>
+<area alt="" coords="1105,591,1177,639" href="#0005775" shape="RECT"/>
+<area alt="" coords="1248,892,1379,940" href="#0032588" shape="RECT"/>
+<area alt="" coords="1179,453,1251,501" href="#0044437" shape="RECT"/>
+<area alt="" coords="1128,737,1211,785" href="#0005774" shape="RECT"/>
+<area alt="" coords="163,309,253,389" href="#0031226" shape="RECT"/>
+<area alt="" coords="176,437,267,517" href="#0005887" shape="RECT"/>
+<area alt="" coords="15,205,129,253" href="#0098796" shape="RECT"/>
+<area alt="" coords="5,325,139,373" href="#0098797" shape="RECT"/>
+<area alt="" coords="1417,325,1508,373" href="#0043229" shape="RECT"/>
+<area alt="" coords="1467,446,1605,509" href="#0043231" shape="RECT"/>
+<area alt="" coords="900,205,977,253" href="#0044422" shape="RECT"/>
+<area alt="" coords="793,325,876,373" href="#0031090" shape="RECT"/>
+<area alt="" coords="1052,318,1143,381" href="#0044446" shape="RECT"/>
+<area alt="" coords="900,325,977,373" href="#0043233" shape="RECT"/>
+<area alt="" coords="1255,737,1372,785" href="#0000139" shape="RECT"/>
+<area alt="" coords="569,1022,695,1085" href="#0030669" shape="RECT"/>
+<area alt="" coords="1456,591,1528,639" href="#0005773" shape="RECT"/>
+<area alt="" coords="1445,737,1539,785" href="#0000323" shape="RECT"/>
+<area alt="" coords="936,446,1035,509" href="#0044432" shape="RECT"/>
+<area alt="" coords="355,566,467,663" href="#0031227" shape="RECT"/>
+<area alt="" coords="235,859,376,973" href="#0071556" shape="RECT"/>
+<area alt="" coords="400,892,525,940" href="#0030665" shape="RECT"/>
+<area alt="" coords="820,583,908,646" href="#0098588" shape="RECT"/>
+<area alt="" coords="979,737,1104,785" href="#0030660" shape="RECT"/>
+<area alt="" coords="549,885,675,947" href="#0012507" shape="RECT"/>
+<area alt="" coords="741,101,883,149" href="#0031974" shape="RECT"/>
+<area alt="" coords="1001,205,1092,253" href="#0044424" shape="RECT"/>
+<area alt="" coords="1167,325,1263,373" href="#0044444" shape="RECT"/>
+<area alt="" coords="641,325,769,373" href="#0005886" shape="RECT"/>
+<area alt="" coords="1637,325,1709,373" href="#0031982" shape="RECT"/>
+<area alt="" coords="1629,453,1725,501" href="#1903561" shape="RECT"/>
+<area alt="" coords="1453,892,1531,940" href="#0005764" shape="RECT"/>
+<area alt="" coords="448,453,573,501" href="#0012506" shape="RECT"/>
+<area alt="" coords="1121,892,1217,940" href="#0098852" shape="RECT"/>
+<area alt="" coords="1527,205,1665,253" href="#0043227" shape="RECT"/>
+<area alt="" coords="1059,453,1155,501" href="#0044433" shape="RECT"/>
+<area alt="" coords="27,583,117,646" href="#0042613" shape="RECT"/>
+<area alt="" coords="1629,591,1725,639" href="#0070062" shape="RECT"/>
+<area alt="" coords="261,713,373,810" href="#0030176" shape="RECT"/>
+<area alt="" coords="311,198,407,261" href="#0031224" shape="RECT"/>
+<area alt="" coords="277,318,373,381" href="#0016021" shape="RECT"/>
+<area alt="" coords="52,101,180,149" href="#0032991" shape="RECT"/>
+<area alt="" coords="1275,453,1392,501" href="#0044431" shape="RECT"/>
+<area alt="" coords="1129,101,1225,149" href="#0044421" shape="RECT"/>
+<area alt="" coords="1348,205,1444,253" href="#0043230" shape="RECT"/>
+<area alt="" coords="1228,205,1324,253" href="#0005615" shape="RECT"/>
+<area alt="" coords="23,453,121,501" href="#0042611" shape="RECT"/>
+<area alt="" coords="664,205,747,253" href="#0016020" shape="RECT"/>
+<area alt="" coords="676,591,796,639" href="#0098805" shape="RECT"/>
+<area alt="" coords="699,453,797,501" href="#0031983" shape="RECT"/>
+<area alt="" coords="1127,1029,1212,1077" href="#0005765" shape="RECT"/>
+<area alt="" coords="247,101,332,149" href="#0044425" shape="RECT"/>
+<area alt="" coords="153,205,287,253" href="#0044459" shape="RECT"/>
+<area alt="" coords="907,101,979,149" href="#0044464" shape="RECT"/>
+<area alt="" coords="1116,205,1204,253" href="#0009986" shape="RECT"/>
+<area alt="" coords="1249,101,1345,149" href="#0005576" shape="RECT"/>
+<area alt="" coords="1401,101,1476,149" href="#0043226" shape="RECT"/>
+<area alt="" coords="943,5,825,29" href="#0005575" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data5/go/34/GOCOMPONENT.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009986&amp;view=details" target="_blank">GO:0009986</a><a name="0009986"></a></td>
+<td>cell surface</td>
+<td align="center">1.01E-9</td>
+<td align="center">1.94E-6</td>
+<td align="center">6.32 (15353,510,81,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009986')" id="ctrl_elements_GO:0009986">[+] Show genes</a><br/>
+<div id="elements_GO:0009986" style="display:none"> <font size="1">
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+BGN  -  biglycan<br/>
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+ACHE  -  acetylcholinesterase<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+C3  -  complement component 3<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+LTF  -  lactotransferrin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042613&amp;view=details" target="_blank">GO:0042613</a><a name="0042613"></a></td>
+<td>MHC class II protein complex</td>
+<td align="center">6.96E-9</td>
+<td align="center">6.71E-6</td>
+<td align="center">67.69 (15353,14,81,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042613')" id="ctrl_elements_GO:0042613">[+] Show genes</a><br/>
+<div id="elements_GO:0042613" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044421&amp;view=details" target="_blank">GO:0044421</a><a name="0044421"></a></td>
+<td>extracellular region part</td>
+<td align="center">2.13E-8</td>
+<td align="center">1.37E-5</td>
+<td align="center">2.46 (15353,2856,81,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044421')" id="ctrl_elements_GO:0044421">[+] Show genes</a><br/>
+<div id="elements_GO:0044421" style="display:none"> <font size="1">
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+ADAMTSL2  -  adamts-like 2<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+SOSTDC1  -  sclerostin domain containing 1<br/>
+
+HIST1H2BH  -  histone cluster 1, h2bh<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+ARPC1B  -  actin related protein 2/3 complex, subunit 1b, 41kda<br/>
+
+LTF  -  lactotransferrin<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+BGN  -  biglycan<br/>
+
+CXCL14  -  chemokine (c-x-c motif) ligand 14<br/>
+
+ACHE  -  acetylcholinesterase<br/>
+
+CTSB  -  cathepsin b<br/>
+
+SAA2  -  serum amyloid a2<br/>
+
+CFB  -  complement factor b<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+IGFBP3  -  insulin-like growth factor binding protein 3<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+TRBC1  -  t cell receptor beta constant 1<br/>
+
+C3  -  complement component 3<br/>
+
+CLCF1  -  cardiotrophin-like cytokine factor 1<br/>
+
+CFH  -  complement factor h<br/>
+
+VASH1  -  vasohibin 1<br/>
+
+SPOCK2  -  sparc/osteonectin, cwcv and kazal-like domains proteoglycan (testican) 2<br/>
+
+SOD2  -  superoxide dismutase 2, mitochondrial<br/>
+
+TNFAIP2  -  tumor necrosis factor, alpha-induced protein 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+FCGBP  -  fc fragment of igg binding protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+DOCK10  -  dedicator of cytokinesis 10<br/>
+
+COL10A1  -  collagen, type x, alpha 1<br/>
+
+CST1  -  cystatin sn<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042611&amp;view=details" target="_blank">GO:0042611</a><a name="0042611"></a></td>
+<td>MHC protein complex</td>
+<td align="center">6.87E-8</td>
+<td align="center">3.31E-5</td>
+<td align="center">45.13 (15353,21,81,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042611')" id="ctrl_elements_GO:0042611">[+] Show genes</a><br/>
+<div id="elements_GO:0042611" style="display:none"> <font size="1">
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044437&amp;view=details" target="_blank">GO:0044437</a><a name="0044437"></a></td>
+<td>vacuolar part</td>
+<td align="center">1.01E-7</td>
+<td align="center">3.9E-5</td>
+<td align="center">5.34 (15353,532,81,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044437')" id="ctrl_elements_GO:0044437">[+] Show genes</a><br/>
+<div id="elements_GO:0044437" style="display:none"> <font size="1">
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+BGN  -  biglycan<br/>
+
+CTSB  -  cathepsin b<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+C3  -  complement component 3<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+
+PYCARD  -  pyd and card domain containing<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071556&amp;view=details" target="_blank">GO:0071556</a><a name="0071556"></a></td>
+<td>integral component of lumenal side of endoplasmic reticulum membrane</td>
+<td align="center">1.76E-7</td>
+<td align="center">5.67E-5</td>
+<td align="center">37.91 (15353,25,81,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071556')" id="ctrl_elements_GO:0071556">[+] Show genes</a><br/>
+<div id="elements_GO:0071556" style="display:none"> <font size="1">
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032588&amp;view=details" target="_blank">GO:0032588</a><a name="0032588"></a></td>
+<td>trans-Golgi network membrane</td>
+<td align="center">2.85E-7</td>
+<td align="center">7.86E-5</td>
+<td align="center">15.80 (15353,84,81,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0032588')" id="ctrl_elements_GO:0032588">[+] Show genes</a><br/>
+<div id="elements_GO:0032588" style="display:none"> <font size="1">
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+PLD4  -  phospholipase d family, member 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030669&amp;view=details" target="_blank">GO:0030669</a><a name="0030669"></a></td>
+<td>clathrin-coated endocytic vesicle membrane</td>
+<td align="center">5.5E-7</td>
+<td align="center">1.33E-4</td>
+<td align="center">30.57 (15353,31,81,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030669')" id="ctrl_elements_GO:0030669">[+] Show genes</a><br/>
+<div id="elements_GO:0030669" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044433&amp;view=details" target="_blank">GO:0044433</a><a name="0044433"></a></td>
+<td>cytoplasmic vesicle part</td>
+<td align="center">1.44E-6</td>
+<td align="center">3.08E-4</td>
+<td align="center">3.05 (15353,1367,81,22)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044433')" id="ctrl_elements_GO:0044433">[+] Show genes</a><br/>
+<div id="elements_GO:0044433" style="display:none"> <font size="1">
+
+CTSB  -  cathepsin b<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+GPR18  -  g protein-coupled receptor 18<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+C3  -  complement component 3<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+PYCARD  -  pyd and card domain containing<br/>
+
+LTF  -  lactotransferrin<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030660&amp;view=details" target="_blank">GO:0030660</a><a name="0030660"></a></td>
+<td>Golgi-associated vesicle membrane</td>
+<td align="center">1.64E-6</td>
+<td align="center">3.17E-4</td>
+<td align="center">16.48 (15353,69,81,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030660')" id="ctrl_elements_GO:0030660">[+] Show genes</a><br/>
+<div id="elements_GO:0030660" style="display:none"> <font size="1">
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044459&amp;view=details" target="_blank">GO:0044459</a><a name="0044459"></a></td>
+<td>plasma membrane part</td>
+<td align="center">1.86E-6</td>
+<td align="center">3.27E-4</td>
+<td align="center">2.33 (15353,2521,81,31)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044459')" id="ctrl_elements_GO:0044459">[+] Show genes</a><br/>
+<div id="elements_GO:0044459" style="display:none"> <font size="1">
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+NKD2  -  naked cuticle homolog 2 (drosophila)<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+EFNA5  -  ephrin-a5<br/>
+
+GABRP  -  gamma-aminobutyric acid (gaba) a receptor, pi<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+CTSB  -  cathepsin b<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+SLC40A1  -  solute carrier family 40 (iron-regulated transporter), member 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+AIF1  -  allograft inflammatory factor 1<br/>
+
+GPR18  -  g protein-coupled receptor 18<br/>
+
+TREM2  -  triggering receptor expressed on myeloid cells 2<br/>
+
+TRBC1  -  t cell receptor beta constant 1<br/>
+
+RGS1  -  regulator of g-protein signaling 1<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+SYTL2  -  synaptotagmin-like 2<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+APBB1IP  -  amyloid beta (a4) precursor protein-binding, family b, member 1 interacting protein<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+
+SLCO2B1  -  solute carrier organic anion transporter family, member 2b1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070062&amp;view=details" target="_blank">GO:0070062</a><a name="0070062"></a></td>
+<td>extracellular exosome</td>
+<td align="center">2.63E-6</td>
+<td align="center">4.22E-4</td>
+<td align="center">2.67 (15353,1776,81,25)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070062')" id="ctrl_elements_GO:0070062">[+] Show genes</a><br/>
+<div id="elements_GO:0070062" style="display:none"> <font size="1">
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HIST1H2BH  -  histone cluster 1, h2bh<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+ARPC1B  -  actin related protein 2/3 complex, subunit 1b, 41kda<br/>
+
+LTF  -  lactotransferrin<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+BGN  -  biglycan<br/>
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+CTSB  -  cathepsin b<br/>
+
+SAA2  -  serum amyloid a2<br/>
+
+CFB  -  complement factor b<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+C3  -  complement component 3<br/>
+
+CFH  -  complement factor h<br/>
+
+SOD2  -  superoxide dismutase 2, mitochondrial<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+FCGBP  -  fc fragment of igg binding protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+DOCK10  -  dedicator of cytokinesis 10<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043230&amp;view=details" target="_blank">GO:0043230</a><a name="0043230"></a></td>
+<td>extracellular organelle</td>
+<td align="center">3.13E-6</td>
+<td align="center">4.64E-4</td>
+<td align="center">2.64 (15353,1793,81,25)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043230')" id="ctrl_elements_GO:0043230">[+] Show genes</a><br/>
+<div id="elements_GO:0043230" style="display:none"> <font size="1">
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HIST1H2BH  -  histone cluster 1, h2bh<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+ARPC1B  -  actin related protein 2/3 complex, subunit 1b, 41kda<br/>
+
+LTF  -  lactotransferrin<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+BGN  -  biglycan<br/>
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+CTSB  -  cathepsin b<br/>
+
+SAA2  -  serum amyloid a2<br/>
+
+CFB  -  complement factor b<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+C3  -  complement component 3<br/>
+
+CFH  -  complement factor h<br/>
+
+SOD2  -  superoxide dismutase 2, mitochondrial<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+FCGBP  -  fc fragment of igg binding protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+DOCK10  -  dedicator of cytokinesis 10<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903561&amp;view=details" target="_blank">GO:1903561</a><a name="1903561"></a></td>
+<td>extracellular vesicle</td>
+<td align="center">3.13E-6</td>
+<td align="center">4.3E-4</td>
+<td align="center">2.64 (15353,1793,81,25)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1903561')" id="ctrl_elements_GO:1903561">[+] Show genes</a><br/>
+<div id="elements_GO:1903561" style="display:none"> <font size="1">
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HIST1H2BH  -  histone cluster 1, h2bh<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+ARPC1B  -  actin related protein 2/3 complex, subunit 1b, 41kda<br/>
+
+LTF  -  lactotransferrin<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+BGN  -  biglycan<br/>
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+CTSB  -  cathepsin b<br/>
+
+SAA2  -  serum amyloid a2<br/>
+
+CFB  -  complement factor b<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+C3  -  complement component 3<br/>
+
+CFH  -  complement factor h<br/>
+
+SOD2  -  superoxide dismutase 2, mitochondrial<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+FCGBP  -  fc fragment of igg binding protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+DOCK10  -  dedicator of cytokinesis 10<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005615&amp;view=details" target="_blank">GO:0005615</a><a name="0005615"></a></td>
+<td>extracellular space</td>
+<td align="center">4.1E-6</td>
+<td align="center">5.27E-4</td>
+<td align="center">3.09 (15353,1228,81,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005615')" id="ctrl_elements_GO:0005615">[+] Show genes</a><br/>
+<div id="elements_GO:0005615" style="display:none"> <font size="1">
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+BGN  -  biglycan<br/>
+
+CXCL14  -  chemokine (c-x-c motif) ligand 14<br/>
+
+CTSB  -  cathepsin b<br/>
+
+ACHE  -  acetylcholinesterase<br/>
+
+CFB  -  complement factor b<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+IGFBP3  -  insulin-like growth factor binding protein 3<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+C3  -  complement component 3<br/>
+
+CFH  -  complement factor h<br/>
+
+VASH1  -  vasohibin 1<br/>
+
+SOSTDC1  -  sclerostin domain containing 1<br/>
+
+TNFAIP2  -  tumor necrosis factor, alpha-induced protein 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+FCGBP  -  fc fragment of igg binding protein<br/>
+
+COL10A1  -  collagen, type x, alpha 1<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+CST1  -  cystatin sn<br/>
+
+LTF  -  lactotransferrin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0012507&amp;view=details" target="_blank">GO:0012507</a><a name="0012507"></a></td>
+<td>ER to Golgi transport vesicle membrane</td>
+<td align="center">4.65E-6</td>
+<td align="center">5.6E-4</td>
+<td align="center">20.16 (15353,47,81,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0012507')" id="ctrl_elements_GO:0012507">[+] Show genes</a><br/>
+<div id="elements_GO:0012507" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details" target="_blank">GO:0031982</a><a name="0031982"></a></td>
+<td>vesicle</td>
+<td align="center">5.45E-6</td>
+<td align="center">6.18E-4</td>
+<td align="center">2.17 (15353,2791,81,32)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031982')" id="ctrl_elements_GO:0031982">[+] Show genes</a><br/>
+<div id="elements_GO:0031982" style="display:none"> <font size="1">
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+NKD2  -  naked cuticle homolog 2 (drosophila)<br/>
+
+PLD4  -  phospholipase d family, member 4<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HIST1H2BH  -  histone cluster 1, h2bh<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+ARPC1B  -  actin related protein 2/3 complex, subunit 1b, 41kda<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+
+LTF  -  lactotransferrin<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+BGN  -  biglycan<br/>
+
+CTSB  -  cathepsin b<br/>
+
+SAA2  -  serum amyloid a2<br/>
+
+CFB  -  complement factor b<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+C3  -  complement component 3<br/>
+
+CFH  -  complement factor h<br/>
+
+SYTL2  -  synaptotagmin-like 2<br/>
+
+SOD2  -  superoxide dismutase 2, mitochondrial<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+FCGBP  -  fc fragment of igg binding protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+DOCK10  -  dedicator of cytokinesis 10<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030665&amp;view=details" target="_blank">GO:0030665</a><a name="0030665"></a></td>
+<td>clathrin-coated vesicle membrane</td>
+<td align="center">6.42E-6</td>
+<td align="center">6.88E-4</td>
+<td align="center">13.07 (15353,87,81,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030665')" id="ctrl_elements_GO:0030665">[+] Show genes</a><br/>
+<div id="elements_GO:0030665" style="display:none"> <font size="1">
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030659&amp;view=details" target="_blank">GO:0030659</a><a name="0030659"></a></td>
+<td>cytoplasmic vesicle membrane</td>
+<td align="center">6.81E-6</td>
+<td align="center">6.91E-4</td>
+<td align="center">4.08 (15353,650,81,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030659')" id="ctrl_elements_GO:0030659">[+] Show genes</a><br/>
+<div id="elements_GO:0030659" style="display:none"> <font size="1">
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+GPR18  -  g protein-coupled receptor 18<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0012506&amp;view=details" target="_blank">GO:0012506</a><a name="0012506"></a></td>
+<td>vesicle membrane</td>
+<td align="center">9.61E-6</td>
+<td align="center">9.27E-4</td>
+<td align="center">3.96 (15353,670,81,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0012506')" id="ctrl_elements_GO:0012506">[+] Show genes</a><br/>
+<div id="elements_GO:0012506" style="display:none"> <font size="1">
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+GPR18  -  g protein-coupled receptor 18<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030666&amp;view=details" target="_blank">GO:0030666</a><a name="0030666"></a></td>
+<td>endocytic vesicle membrane</td>
+<td align="center">1.23E-5</td>
+<td align="center">1.13E-3</td>
+<td align="center">9.03 (15353,147,81,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030666')" id="ctrl_elements_GO:0030666">[+] Show genes</a><br/>
+<div id="elements_GO:0030666" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005886&amp;view=details" target="_blank">GO:0005886</a><a name="0005886"></a></td>
+<td>plasma membrane</td>
+<td align="center">2.9E-5</td>
+<td align="center">2.54E-3</td>
+<td align="center">1.85 (15353,3783,81,37)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005886')" id="ctrl_elements_GO:0005886">[+] Show genes</a><br/>
+<div id="elements_GO:0005886" style="display:none"> <font size="1">
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+PIP4K2A  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br/>
+
+NKD2  -  naked cuticle homolog 2 (drosophila)<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+LY6E  -  lymphocyte antigen 6 complex, locus e<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+CLEC10A  -  c-type lectin domain family 10, member a<br/>
+
+EFNA5  -  ephrin-a5<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+LTF  -  lactotransferrin<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+
+ROBO2  -  roundabout, axon guidance receptor, homolog 2 (drosophila)<br/>
+
+BGN  -  biglycan<br/>
+
+ACHE  -  acetylcholinesterase<br/>
+
+CFB  -  complement factor b<br/>
+
+UBE2C  -  ubiquitin-conjugating enzyme e2c<br/>
+
+CD53  -  cd53 molecule<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+SLC40A1  -  solute carrier family 40 (iron-regulated transporter), member 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+GPR18  -  g protein-coupled receptor 18<br/>
+
+TREM2  -  triggering receptor expressed on myeloid cells 2<br/>
+
+TRBC1  -  t cell receptor beta constant 1<br/>
+
+C3  -  complement component 3<br/>
+
+BCL3  -  b-cell cll/lymphoma 3<br/>
+
+RGS1  -  regulator of g-protein signaling 1<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+SYTL2  -  synaptotagmin-like 2<br/>
+
+APBB1IP  -  amyloid beta (a4) precursor protein-binding, family b, member 1 interacting protein<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+
+SLCO2B1  -  solute carrier organic anion transporter family, member 2b1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005774&amp;view=details" target="_blank">GO:0005774</a><a name="0005774"></a></td>
+<td>vacuolar membrane</td>
+<td align="center">3.08E-5</td>
+<td align="center">2.58E-3</td>
+<td align="center">4.97 (15353,381,81,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005774')" id="ctrl_elements_GO:0005774">[+] Show genes</a><br/>
+<div id="elements_GO:0005774" style="display:none"> <font size="1">
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030662&amp;view=details" target="_blank">GO:0030662</a><a name="0030662"></a></td>
+<td>coated vesicle membrane</td>
+<td align="center">5.32E-5</td>
+<td align="center">4.27E-3</td>
+<td align="center">9.03 (15353,126,81,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030662')" id="ctrl_elements_GO:0030662">[+] Show genes</a><br/>
+<div id="elements_GO:0030662" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030176&amp;view=details" target="_blank">GO:0030176</a><a name="0030176"></a></td>
+<td>integral component of endoplasmic reticulum membrane</td>
+<td align="center">6.07E-5</td>
+<td align="center">4.68E-3</td>
+<td align="center">8.82 (15353,129,81,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030176')" id="ctrl_elements_GO:0030176">[+] Show genes</a><br/>
+<div id="elements_GO:0030176" style="display:none"> <font size="1">
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005773&amp;view=details" target="_blank">GO:0005773</a><a name="0005773"></a></td>
+<td>vacuole</td>
+<td align="center">7.07E-5</td>
+<td align="center">5.24E-3</td>
+<td align="center">5.05 (15353,338,81,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005773')" id="ctrl_elements_GO:0005773">[+] Show genes</a><br/>
+<div id="elements_GO:0005773" style="display:none"> <font size="1">
+
+TMEM173  -  transmembrane protein 173<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+CTSB  -  cathepsin b<br/>
+
+PIP4K2A  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098852&amp;view=details" target="_blank">GO:0098852</a><a name="0098852"></a></td>
+<td>lytic vacuole membrane</td>
+<td align="center">7.91E-5</td>
+<td align="center">5.65E-3</td>
+<td align="center">4.97 (15353,343,81,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098852')" id="ctrl_elements_GO:0098852">[+] Show genes</a><br/>
+<div id="elements_GO:0098852" style="display:none"> <font size="1">
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005765&amp;view=details" target="_blank">GO:0005765</a><a name="0005765"></a></td>
+<td>lysosomal membrane</td>
+<td align="center">7.91E-5</td>
+<td align="center">5.45E-3</td>
+<td align="center">4.97 (15353,343,81,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005765')" id="ctrl_elements_GO:0005765">[+] Show genes</a><br/>
+<div id="elements_GO:0005765" style="display:none"> <font size="1">
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031227&amp;view=details" target="_blank">GO:0031227</a><a name="0031227"></a></td>
+<td>intrinsic component of endoplasmic reticulum membrane</td>
+<td align="center">8.14E-5</td>
+<td align="center">5.41E-3</td>
+<td align="center">8.36 (15353,136,81,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031227')" id="ctrl_elements_GO:0031227">[+] Show genes</a><br/>
+<div id="elements_GO:0031227" style="display:none"> <font size="1">
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005775&amp;view=details" target="_blank">GO:0005775</a><a name="0005775"></a></td>
+<td>vacuolar lumen</td>
+<td align="center">1.67E-4</td>
+<td align="center">1.07E-2</td>
+<td align="center">7.34 (15353,155,81,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005775')" id="ctrl_elements_GO:0005775">[+] Show genes</a><br/>
+<div id="elements_GO:0005775" style="display:none"> <font size="1">
+
+C3  -  complement component 3<br/>
+
+BGN  -  biglycan<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+CTSB  -  cathepsin b<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+PYCARD  -  pyd and card domain containing<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098797&amp;view=details" target="_blank">GO:0098797</a><a name="0098797"></a></td>
+<td>plasma membrane protein complex</td>
+<td align="center">3.26E-4</td>
+<td align="center">2.03E-2</td>
+<td align="center">3.44 (15353,606,81,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098797')" id="ctrl_elements_GO:0098797">[+] Show genes</a><br/>
+<div id="elements_GO:0098797" style="display:none"> <font size="1">
+
+TRBC1  -  t cell receptor beta constant 1<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+APBB1IP  -  amyloid beta (a4) precursor protein-binding, family b, member 1 interacting protein<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+
+CTNNB1  -  catenin (cadherin-associated protein), beta 1, 88kda<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031226&amp;view=details" target="_blank">GO:0031226</a><a name="0031226"></a></td>
+<td>intrinsic component of plasma membrane</td>
+<td align="center">4.07E-4</td>
+<td align="center">2.45E-2</td>
+<td align="center">2.46 (15353,1310,81,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031226')" id="ctrl_elements_GO:0031226">[+] Show genes</a><br/>
+<div id="elements_GO:0031226" style="display:none"> <font size="1">
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+SLC40A1  -  solute carrier family 40 (iron-regulated transporter), member 1<br/>
+
+GPR18  -  g protein-coupled receptor 18<br/>
+
+TREM2  -  triggering receptor expressed on myeloid cells 2<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+GABRP  -  gamma-aminobutyric acid (gaba) a receptor, pi<br/>
+
+EFNA5  -  ephrin-a5<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+SLCO2B1  -  solute carrier organic anion transporter family, member 2b1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005576&amp;view=details" target="_blank">GO:0005576</a><a name="0005576"></a></td>
+<td>extracellular region</td>
+<td align="center">4.63E-4</td>
+<td align="center">2.71E-2</td>
+<td align="center">2.35 (15353,1452,81,18)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005576')" id="ctrl_elements_GO:0005576">[+] Show genes</a><br/>
+<div id="elements_GO:0005576" style="display:none"> <font size="1">
+
+BGN  -  biglycan<br/>
+
+MMP7  -  matrix metallopeptidase 7 (matrilysin, uterine)<br/>
+
+ACHE  -  acetylcholinesterase<br/>
+
+CTSB  -  cathepsin b<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+CFB  -  complement factor b<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+TREM2  -  triggering receptor expressed on myeloid cells 2<br/>
+
+IGFBP3  -  insulin-like growth factor binding protein 3<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+CLCF1  -  cardiotrophin-like cytokine factor 1<br/>
+
+C3  -  complement component 3<br/>
+
+LY6E  -  lymphocyte antigen 6 complex, locus e<br/>
+
+CFH  -  complement factor h<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+COL10A1  -  collagen, type x, alpha 1<br/>
+
+PYCARD  -  pyd and card domain containing<br/>
+
+LTF  -  lactotransferrin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030667&amp;view=details" target="_blank">GO:0030667</a><a name="0030667"></a></td>
+<td>secretory granule membrane</td>
+<td align="center">5.17E-4</td>
+<td align="center">2.93E-2</td>
+<td align="center">4.97 (15353,267,81,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030667')" id="ctrl_elements_GO:0030667">[+] Show genes</a><br/>
+<div id="elements_GO:0030667" style="display:none"> <font size="1">
+
+TMEM173  -  transmembrane protein 173<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+CD53  -  cd53 molecule<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000323&amp;view=details" target="_blank">GO:0000323</a><a name="0000323"></a></td>
+<td>lytic vacuole</td>
+<td align="center">6.43E-4</td>
+<td align="center">3.54E-2</td>
+<td align="center">4.79 (15353,277,81,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000323')" id="ctrl_elements_GO:0000323">[+] Show genes</a><br/>
+<div id="elements_GO:0000323" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+CTSB  -  cathepsin b<br/>
+
+PIP4K2A  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005764&amp;view=details" target="_blank">GO:0005764</a><a name="0005764"></a></td>
+<td>lysosome</td>
+<td align="center">6.43E-4</td>
+<td align="center">3.44E-2</td>
+<td align="center">4.79 (15353,277,81,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005764')" id="ctrl_elements_GO:0005764">[+] Show genes</a><br/>
+<div id="elements_GO:0005764" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CXCR4  -  chemokine (c-x-c motif) receptor 4<br/>
+
+CTSB  -  cathepsin b<br/>
+
+PIP4K2A  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005887&amp;view=details" target="_blank">GO:0005887</a><a name="0005887"></a></td>
+<td>integral component of plasma membrane</td>
+<td align="center">6.48E-4</td>
+<td align="center">3.38E-2</td>
+<td align="center">2.45 (15353,1238,81,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005887')" id="ctrl_elements_GO:0005887">[+] Show genes</a><br/>
+<div id="elements_GO:0005887" style="display:none"> <font size="1">
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+SLC40A1  -  solute carrier family 40 (iron-regulated transporter), member 1<br/>
+
+GPR18  -  g protein-coupled receptor 18<br/>
+
+TREM2  -  triggering receptor expressed on myeloid cells 2<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+GABRP  -  gamma-aminobutyric acid (gaba) a receptor, pi<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+SLCO2B1  -  solute carrier organic anion transporter family, member 2b1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030658&amp;view=details" target="_blank">GO:0030658</a><a name="0030658"></a></td>
+<td>transport vesicle membrane</td>
+<td align="center">6.61E-4</td>
+<td align="center">3.36E-2</td>
+<td align="center">7.18 (15353,132,81,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030658')" id="ctrl_elements_GO:0030658">[+] Show genes</a><br/>
+<div id="elements_GO:0030658" style="display:none"> <font size="1">
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details" target="_blank">GO:0098588</a><a name="0098588"></a></td>
+<td>bounding membrane of organelle</td>
+<td align="center">8.66E-4</td>
+<td align="center">4.28E-2</td>
+<td align="center">2.11 (15353,1800,81,20)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098588')" id="ctrl_elements_GO:0098588">[+] Show genes</a><br/>
+<div id="elements_GO:0098588" style="display:none"> <font size="1">
+
+GPR137B  -  g protein-coupled receptor 137b<br/>
+
+HLA-DPA1  -  major histocompatibility complex, class ii, dp alpha 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+LST1  -  leukocyte specific transcript 1<br/>
+
+HLA-DPB1  -  major histocompatibility complex, class ii, dp beta 1<br/>
+
+PLD4  -  phospholipase d family, member 4<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+
+TMEM173  -  transmembrane protein 173<br/>
+
+HLA-DRA  -  major histocompatibility complex, class ii, dr alpha<br/>
+
+CD74  -  cd74 molecule, major histocompatibility complex, class ii invariant chain<br/>
+
+FCER1G  -  fc fragment of ige, high affinity i, receptor for; gamma polypeptide<br/>
+
+CXCR2  -  chemokine (c-x-c motif) receptor 2<br/>
+
+TLR2  -  toll-like receptor 2<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+PIGR  -  polymeric immunoglobulin receptor<br/>
+
+HLA-DRB5  -  major histocompatibility complex, class ii, dr beta 5<br/>
+
+LAPTM5  -  lysosomal protein transmembrane 5<br/>
+
+CFTR  -  cystic fibrosis transmembrane conductance regulator (atp-binding cassette sub-family c, member 7)<br/>
+
+PYCARD  -  pyd and card domain containing<br/>
+
+CYBA  -  cytochrome b-245, alpha polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060205&amp;view=details" target="_blank">GO:0060205</a><a name="0060205"></a></td>
+<td>cytoplasmic vesicle lumen</td>
+<td align="center">9.12E-4</td>
+<td align="center">4.39E-2</td>
+<td align="center">4.51 (15353,294,81,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060205')" id="ctrl_elements_GO:0060205">[+] Show genes</a><br/>
+<div id="elements_GO:0060205" style="display:none"> <font size="1">
+
+C3  -  complement component 3<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+LTF  -  lactotransferrin<br/>
+
+PYCARD  -  pyd and card domain containing<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031983&amp;view=details" target="_blank">GO:0031983</a><a name="0031983"></a></td>
+<td>vesicle lumen</td>
+<td align="center">9.3E-4</td>
+<td align="center">4.37E-2</td>
+<td align="center">4.50 (15353,295,81,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031983')" id="ctrl_elements_GO:0031983">[+] Show genes</a><br/>
+<div id="elements_GO:0031983" style="display:none"> <font size="1">
+
+C3  -  complement component 3<br/>
+
+SAA1  -  serum amyloid a1<br/>
+
+APP  -  amyloid beta (a4) precursor protein<br/>
+
+NPC2  -  niemann-pick disease, type c2<br/>
+
+LTF  -  lactotransferrin<br/>
+
+PYCARD  -  pyd and card domain containing<br/>
+
+SERPINA1  -  serpin peptidase inhibitor, clade a (alpha-1 antiproteinase, antitrypsin), member 1<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 15811 genes out of 16567 gene terms entered by the user.<br/> 15811 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>90 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 15721 genes.<br/>Only 15353 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOCOMPONENT.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1928 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

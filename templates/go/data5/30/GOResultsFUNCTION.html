@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="789,472,960,587" href="#0016818" shape="RECT"/>
+<area alt="" coords="805,635,931,683" href="#0016462" shape="RECT"/>
+<area alt="" coords="972,326,1055,423" href="#0016798" shape="RECT"/>
+<area alt="" coords="984,481,1075,578" href="#0016799" shape="RECT"/>
+<area alt="" coords="472,213,579,261" href="#0005515" shape="RECT"/>
+<area alt="" coords="475,343,576,406" href="#0050839" shape="RECT"/>
+<area alt="" coords="451,635,555,683" href="#0043559" shape="RECT"/>
+<area alt="" coords="356,101,428,149" href="#0005488" shape="RECT"/>
+<area alt="" coords="228,213,329,261" href="#0033218" shape="RECT"/>
+<area alt="" coords="333,351,451,399" href="#0042562" shape="RECT"/>
+<area alt="" coords="124,739,239,802" href="#0022857" shape="RECT"/>
+<area alt="" coords="5,1134,157,1231" href="#0015318" shape="RECT"/>
+<area alt="" coords="303,877,455,939" href="#0022804" shape="RECT"/>
+<area alt="" coords="143,877,279,939" href="#0015075" shape="RECT"/>
+<area alt="" coords="392,5,278,29" href="#0003674" shape="RECT"/>
+<area alt="" coords="768,101,843,149" href="#0003824" shape="RECT"/>
+<area alt="" coords="181,101,269,149" href="#0005215" shape="RECT"/>
+<area alt="" coords="129,1289,284,1369" href="#0022890" shape="RECT"/>
+<area alt="" coords="967,731,1105,811" href="#0000700" shape="RECT"/>
+<area alt="" coords="967,859,1105,957" href="#0000701" shape="RECT"/>
+<area alt="" coords="275,1581,408,1629" href="#0019829" shape="RECT"/>
+<area alt="" coords="103,1427,257,1525" href="#0015077" shape="RECT"/>
+<area alt="" coords="819,335,931,415" href="#0016817" shape="RECT"/>
+<area alt="" coords="371,1436,507,1516" href="#0042625" shape="RECT"/>
+<area alt="" coords="365,1685,525,1800" href="#0015662" shape="RECT"/>
+<area alt="" coords="223,1848,343,1928" href="#0008553" shape="RECT"/>
+<area alt="" coords="200,351,309,399" href="#0042277" shape="RECT"/>
+<area alt="" coords="96,1574,251,1637" href="#0015078" shape="RECT"/>
+<area alt="" coords="448,1005,563,1085" href="#0015399" shape="RECT"/>
+<area alt="" coords="309,1005,424,1085" href="#0022853" shape="RECT"/>
+<area alt="" coords="224,1719,341,1767" href="#0036442" shape="RECT"/>
+<area alt="" coords="717,747,893,795" href="#0017111" shape="RECT"/>
+<area alt="" coords="724,884,836,932" href="#0016887" shape="RECT"/>
+<area alt="" coords="488,505,563,553" href="#0045296" shape="RECT"/>
+<area alt="" coords="331,505,453,553" href="#0017046" shape="RECT"/>
+<area alt="" coords="1007,197,1084,277" href="#0140097" shape="RECT"/>
+<area alt="" coords="833,213,916,261" href="#0016787" shape="RECT"/>
+<area alt="" coords="680,213,795,261" href="#0016491" shape="RECT"/>
+<area alt="" coords="181,1151,336,1214" href="#0008324" shape="RECT"/>
+<area alt="" coords="664,1021,784,1069" href="#0042623" shape="RECT"/>
+<area alt="" coords="636,1143,756,1223" href="#0043492" shape="RECT"/>
+<area alt="" coords="445,1281,565,1378" href="#0042626" shape="RECT"/>
+<area alt="" coords="416,1143,595,1223" href="#0015405" shape="RECT"/>
+<area alt="" coords="967,635,1105,683" href="#0019104" shape="RECT"/>
+<area alt="" coords="651,498,765,561" href="#0003995" shape="RECT"/>
+<area alt="" coords="665,326,780,423" href="#0016627" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data5/go/30/GOFUNCTION.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045296&amp;view=details" target="_blank">GO:0045296</a><a name="0045296"></a></td>
+<td>cadherin binding</td>
+<td align="center">4.12E-5</td>
+<td align="center">1.86E-1</td>
+<td align="center">2.54 (15353,288,482,23)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045296')" id="ctrl_elements_GO:0045296">[+] Show genes</a><br/>
+<div id="elements_GO:0045296" style="display:none"> <font size="1">
+
+GAPVD1  -  gtpase activating protein and vps9 domains 1<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+EEF1G  -  eukaryotic translation elongation factor 1 gamma<br/>
+
+BZW1  -  basic leucine zipper and w2 domains 1<br/>
+
+TMPO  -  thymopoietin<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+EVPL  -  envoplakin<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+CD2AP  -  cd2-associated protein<br/>
+
+SLC3A2  -  solute carrier family 3 (amino acid transporter heavy chain), member 2<br/>
+
+TBC1D2  -  tbc1 domain family, member 2<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+HDLBP  -  high density lipoprotein binding protein<br/>
+
+PAK4  -  p21 protein (cdc42/rac)-activated kinase 4<br/>
+
+PACSIN2  -  protein kinase c and casein kinase substrate in neurons 2<br/>
+
+CDH13  -  cadherin 13, h-cadherin (heart)<br/>
+
+CTNND1  -  catenin (cadherin-associated protein), delta 1<br/>
+
+PPP1CA  -  protein phosphatase 1, catalytic subunit, alpha isozyme<br/>
+
+ARHGEF16  -  rho guanine nucleotide exchange factor (gef) 16<br/>
+
+ITGA6  -  integrin, alpha 6<br/>
+
+EHD4  -  eh-domain containing 4<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050839&amp;view=details" target="_blank">GO:0050839</a><a name="0050839"></a></td>
+<td>cell adhesion molecule binding</td>
+<td align="center">2.1E-4</td>
+<td align="center">4.74E-1</td>
+<td align="center">2.05 (15353,450,482,29)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050839')" id="ctrl_elements_GO:0050839">[+] Show genes</a><br/>
+<div id="elements_GO:0050839" style="display:none"> <font size="1">
+
+DST  -  dystonin<br/>
+
+EMP2  -  epithelial membrane protein 2<br/>
+
+GAPVD1  -  gtpase activating protein and vps9 domains 1<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+EEF1G  -  eukaryotic translation elongation factor 1 gamma<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+CD2AP  -  cd2-associated protein<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+PACSIN2  -  protein kinase c and casein kinase substrate in neurons 2<br/>
+
+PAK4  -  p21 protein (cdc42/rac)-activated kinase 4<br/>
+
+CD9  -  cd9 molecule<br/>
+
+CTNND1  -  catenin (cadherin-associated protein), delta 1<br/>
+
+ARHGEF16  -  rho guanine nucleotide exchange factor (gef) 16<br/>
+
+KRT18  -  keratin 18<br/>
+
+BZW1  -  basic leucine zipper and w2 domains 1<br/>
+
+TMPO  -  thymopoietin<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+EVPL  -  envoplakin<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+SLC3A2  -  solute carrier family 3 (amino acid transporter heavy chain), member 2<br/>
+
+TBC1D2  -  tbc1 domain family, member 2<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+HDLBP  -  high density lipoprotein binding protein<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+PPP1CA  -  protein phosphatase 1, catalytic subunit, alpha isozyme<br/>
+
+CDH13  -  cadherin 13, h-cadherin (heart)<br/>
+
+ITGA6  -  integrin, alpha 6<br/>
+
+EHD4  -  eh-domain containing 4<br/>
+
+PTPRF  -  protein tyrosine phosphatase, receptor type, f<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003995&amp;view=details" target="_blank">GO:0003995</a><a name="0003995"></a></td>
+<td>acyl-CoA dehydrogenase activity</td>
+<td align="center">2.66E-4</td>
+<td align="center">4E-1</td>
+<td align="center">11.58 (15353,11,482,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003995')" id="ctrl_elements_GO:0003995">[+] Show genes</a><br/>
+<div id="elements_GO:0003995" style="display:none"> <font size="1">
+
+ACAD8  -  acyl-coa dehydrogenase family, member 8<br/>
+
+GCDH  -  glutaryl-coa dehydrogenase<br/>
+
+ACADM  -  acyl-coa dehydrogenase, c-4 to c-12 straight chain<br/>
+
+ACADVL  -  acyl-coa dehydrogenase, very long chain<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043559&amp;view=details" target="_blank">GO:0043559</a><a name="0043559"></a></td>
+<td>insulin binding</td>
+<td align="center">2.93E-4</td>
+<td align="center">3.31E-1</td>
+<td align="center">19.11 (15353,5,482,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043559')" id="ctrl_elements_GO:0043559">[+] Show genes</a><br/>
+<div id="elements_GO:0043559" style="display:none"> <font size="1">
+
+IGF1R  -  insulin-like growth factor 1 receptor<br/>
+
+INSR  -  insulin receptor<br/>
+
+PIK3R1  -  phosphoinositide-3-kinase, regulatory subunit 1 (alpha)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008553&amp;view=details" target="_blank">GO:0008553</a><a name="0008553"></a></td>
+<td>proton-exporting ATPase activity, phosphorylative mechanism</td>
+<td align="center">9.79E-4</td>
+<td align="center">8.85E-1</td>
+<td align="center">13.65 (15353,7,482,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008553')" id="ctrl_elements_GO:0008553">[+] Show genes</a><br/>
+<div id="elements_GO:0008553" style="display:none"> <font size="1">
+
+ATP2C1  -  atpase, ca++ transporting, type 2c, member 1<br/>
+
+ATP6V1E2  -  atpase, h+ transporting, lysosomal 31kda, v1 subunit e2<br/>
+
+ATP2C2  -  atpase, ca++ transporting, type 2c, member 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000701&amp;view=details" target="_blank">GO:0000701</a><a name="0000701"></a></td>
+<td>purine-specific mismatch base pair DNA N-glycosylase activity</td>
+<td align="center">9.84E-4</td>
+<td align="center">7.41E-1</td>
+<td align="center">31.85 (15353,2,482,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000701')" id="ctrl_elements_GO:0000701">[+] Show genes</a><br/>
+<div id="elements_GO:0000701" style="display:none"> <font size="1">
+
+PCNA  -  proliferating cell nuclear antigen<br/>
+
+MUTYH  -  muty homolog (e. coli)<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 16220 genes out of 16992 gene terms entered by the user.<br/> 16220 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>499 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 15721 genes.<br/>Only 15353 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOFUNCTION.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 4519 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

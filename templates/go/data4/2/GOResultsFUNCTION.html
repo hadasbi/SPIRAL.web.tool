@@ -1,0 +1,5358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="36,229,137,277" href="#0030246" shape="RECT"/>
+<area alt="" coords="5,367,120,415" href="#0070492" shape="RECT"/>
+<area alt="" coords="645,367,757,415" href="#0019899" shape="RECT"/>
+<area alt="" coords="833,504,932,552" href="#0019902" shape="RECT"/>
+<area alt="" coords="607,504,711,552" href="#0019900" shape="RECT"/>
+<area alt="" coords="735,504,809,552" href="#0002020" shape="RECT"/>
+<area alt="" coords="2343,497,2425,559" href="#0030414" shape="RECT"/>
+<area alt="" coords="2300,625,2409,687" href="#0004866" shape="RECT"/>
+<area alt="" coords="213,616,328,696" href="#0098641" shape="RECT"/>
+<area alt="" coords="296,359,397,422" href="#0050839" shape="RECT"/>
+<area alt="" coords="223,504,295,552" href="#0005178" shape="RECT"/>
+<area alt="" coords="319,504,393,552" href="#0045296" shape="RECT"/>
+<area alt="" coords="812,632,953,680" href="#0019903" shape="RECT"/>
+<area alt="" coords="2072,222,2192,285" href="#0005201" shape="RECT"/>
+<area alt="" coords="1869,213,1947,293" href="#0140096" shape="RECT"/>
+<area alt="" coords="1773,632,1880,680" href="#0004672" shape="RECT"/>
+<area alt="" coords="1769,760,1884,808" href="#0004713" shape="RECT"/>
+<area alt="" coords="1839,872,1953,952" href="#0004714" shape="RECT"/>
+<area alt="" coords="1383,504,1476,552" href="#0003779" shape="RECT"/>
+<area alt="" coords="1908,744,2023,824" href="#0019199" shape="RECT"/>
+<area alt="" coords="611,632,717,680" href="#0019901" shape="RECT"/>
+<area alt="" coords="1952,351,2067,431" href="#0004888" shape="RECT"/>
+<area alt="" coords="2016,497,2091,559" href="#0004896" shape="RECT"/>
+<area alt="" coords="683,109,755,157" href="#0005488" shape="RECT"/>
+<area alt="" coords="344,222,445,285" href="#0098631" shape="RECT"/>
+<area alt="" coords="561,229,689,277" href="#0044877" shape="RECT"/>
+<area alt="" coords="1215,229,1297,277" href="#0043167" shape="RECT"/>
+<area alt="" coords="759,229,865,277" href="#0005515" shape="RECT"/>
+<area alt="" coords="2128,625,2261,687" href="#0004897" shape="RECT"/>
+<area alt="" coords="2140,744,2249,824" href="#0004923" shape="RECT"/>
+<area alt="" coords="1509,504,1587,552" href="#0046872" shape="RECT"/>
+<area alt="" coords="1503,632,1593,680" href="#0005509" shape="RECT"/>
+<area alt="" coords="1773,504,1877,552" href="#0016301" shape="RECT"/>
+<area alt="" coords="1723,342,1877,439" href="#0016772" shape="RECT"/>
+<area alt="" coords="1611,488,1749,568" href="#0016773" shape="RECT"/>
+<area alt="" coords="144,351,221,431" href="#0098632" shape="RECT"/>
+<area alt="" coords="2216,229,2341,277" href="#0030234" shape="RECT"/>
+<area alt="" coords="2329,367,2449,415" href="#0004857" shape="RECT"/>
+<area alt="" coords="2223,359,2305,422" href="#0061134" shape="RECT"/>
+<area alt="" coords="1507,367,1608,415" href="#0043169" shape="RECT"/>
+<area alt="" coords="1971,222,2048,285" href="#0038023" shape="RECT"/>
+<area alt="" coords="2209,497,2319,559" href="#0061135" shape="RECT"/>
+<area alt="" coords="485,616,587,696" href="#0005160" shape="RECT"/>
+<area alt="" coords="781,367,888,415" href="#0042802" shape="RECT"/>
+<area alt="" coords="1968,102,2053,165" href="#0060089" shape="RECT"/>
+<area alt="" coords="912,367,997,415" href="#0001968" shape="RECT"/>
+<area alt="" coords="2003,625,2104,687" href="#0004924" shape="RECT"/>
+<area alt="" coords="1021,367,1120,415" href="#0019838" shape="RECT"/>
+<area alt="" coords="1819,1001,1973,1098" href="#0005021" shape="RECT"/>
+<area alt="" coords="1144,367,1219,415" href="#0019955" shape="RECT"/>
+<area alt="" coords="1243,359,1352,422" href="#0019904" shape="RECT"/>
+<area alt="" coords="544,359,621,422" href="#0005102" shape="RECT"/>
+<area alt="" coords="1376,367,1483,415" href="#0008092" shape="RECT"/>
+<area alt="" coords="421,367,520,415" href="#0044548" shape="RECT"/>
+<area alt="" coords="2011,5,1897,29" href="#0003674" shape="RECT"/>
+<area alt="" coords="2085,102,2165,165" href="#0005198" shape="RECT"/>
+<area alt="" coords="2213,102,2296,165" href="#0098772" shape="RECT"/>
+<area alt="" coords="1869,109,1944,157" href="#0003824" shape="RECT"/>
+<area alt="" coords="503,497,577,559" href="#0005126" shape="RECT"/>
+<area alt="" coords="1755,229,1845,277" href="#0016740" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data4/go/2/GOFUNCTION.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050839&amp;view=details" target="_blank">GO:0050839</a><a name="0050839"></a></td>
+<td>cell adhesion molecule binding</td>
+<td align="center">2.57E-13</td>
+<td align="center">1.16E-9</td>
+<td align="center">3.49 (15889,464,442,45)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050839')" id="ctrl_elements_GO:0050839">[+] Show genes</a><br/>
+<div id="elements_GO:0050839" style="display:none"> <font size="1">
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+EFHD2  -  ef-hand domain family, member d2<br/>
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+PHLDB2  -  pleckstrin homology-like domain, family b, member 2<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+LGALS8  -  lectin, galactoside-binding, soluble, 8<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+GPRC5A  -  g protein-coupled receptor, family c, group 5, member a<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+TLN1  -  talin 1<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+CD151  -  cd151 molecule (raph blood group)<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+PPFIBP1  -  ptprf interacting protein, binding protein 1 (liprin beta 1)<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+CAST  -  calpastatin<br/>
+
+KRT18  -  keratin 18<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+PPAP2B  -  phosphatidic acid phosphatase type 2b<br/>
+
+FAM129B  -  family with sequence similarity 129, member b<br/>
+
+ANXA1  -  annexin a1<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+PTPRD  -  protein tyrosine phosphatase, receptor type, d<br/>
+
+CALD1  -  caldesmon 1<br/>
+
+RTN4  -  reticulon 4<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+MSN  -  moesin<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045296&amp;view=details" target="_blank">GO:0045296</a><a name="0045296"></a></td>
+<td>cadherin binding</td>
+<td align="center">3.27E-10</td>
+<td align="center">7.39E-7</td>
+<td align="center">3.71 (15889,300,442,31)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045296')" id="ctrl_elements_GO:0045296">[+] Show genes</a><br/>
+<div id="elements_GO:0045296" style="display:none"> <font size="1">
+
+EFHD2  -  ef-hand domain family, member d2<br/>
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+PHLDB2  -  pleckstrin homology-like domain, family b, member 2<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+GPRC5A  -  g protein-coupled receptor, family c, group 5, member a<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+TLN1  -  talin 1<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+PPFIBP1  -  ptprf interacting protein, binding protein 1 (liprin beta 1)<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+CAST  -  calpastatin<br/>
+
+KRT18  -  keratin 18<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+ANXA1  -  annexin a1<br/>
+
+FAM129B  -  family with sequence similarity 129, member b<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+CALD1  -  caldesmon 1<br/>
+
+RTN4  -  reticulon 4<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019899&amp;view=details" target="_blank">GO:0019899</a><a name="0019899"></a></td>
+<td>enzyme binding</td>
+<td align="center">4.5E-9</td>
+<td align="center">6.79E-6</td>
+<td align="center">1.82 (15889,1860,442,94)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019899')" id="ctrl_elements_GO:0019899">[+] Show genes</a><br/>
+<div id="elements_GO:0019899" style="display:none"> <font size="1">
+
+LGALS9  -  lectin, galactoside-binding, soluble, 9<br/>
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+TBC1D20  -  tbc1 domain family, member 20<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+RHOD  -  ras homolog family member d<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+CST3  -  cystatin c<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+EXPH5  -  exophilin 5<br/>
+
+GSN  -  gelsolin<br/>
+
+PSAP  -  prosaposin<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+RIN2  -  ras and rab interactor 2<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+SDC4  -  syndecan 4<br/>
+
+LYST  -  lysosomal trafficking regulator<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+TOR1AIP2  -  torsin a interacting protein 2<br/>
+
+CYTH2  -  cytohesin 2<br/>
+
+KCNN4  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 4<br/>
+
+SIRT2  -  sirtuin 2<br/>
+
+ZFHX3  -  zinc finger homeobox 3<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+DVL3  -  dishevelled segment polarity protein 3<br/>
+
+TNFAIP1  -  tumor necrosis factor, alpha-induced protein 1 (endothelial)<br/>
+
+SLC4A2  -  solute carrier family 4 (anion exchanger), member 2<br/>
+
+PLAUR  -  plasminogen activator, urokinase receptor<br/>
+
+RHOBTB1  -  rho-related btb domain containing 1<br/>
+
+BCAR1  -  breast cancer anti-estrogen resistance 1<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+MSN  -  moesin<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+TAX1BP1  -  tax1 (human t-cell leukemia virus type i) binding protein 1<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+CCND3  -  cyclin d3<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+SPHK1  -  sphingosine kinase 1<br/>
+
+NEDD9  -  neural precursor cell expressed, developmentally down-regulated 9<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+UBC  -  ubiquitin c<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+STAT6  -  signal transducer and activator of transcription 6, interleukin-4 induced<br/>
+
+TOM1L2  -  target of myb1-like 2 (chicken)<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+NUCB2  -  nucleobindin 2<br/>
+
+LTBR  -  lymphotoxin beta receptor (tnfr superfamily, member 3)<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+EVI5  -  ecotropic viral integration site 5<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+NFATC2  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 2<br/>
+
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br/>
+
+MAP3K1  -  mitogen-activated protein kinase kinase kinase 1, e3 ubiquitin protein ligase<br/>
+
+LAMP2  -  lysosomal-associated membrane protein 2<br/>
+
+LAMP1  -  lysosomal-associated membrane protein 1<br/>
+
+ARHGEF17  -  rho guanine nucleotide exchange factor (gef) 17<br/>
+
+GATA4  -  gata binding protein 4<br/>
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+SERINC1  -  serine incorporator 1<br/>
+
+MVP  -  major vault protein<br/>
+
+TSPAN15  -  tetraspanin 15<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+SLC12A7  -  solute carrier family 12 (potassium/chloride transporter), member 7<br/>
+
+ANXA2  -  annexin a2<br/>
+
+ARHGEF40  -  rho guanine nucleotide exchange factor (gef) 40<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+LEF1  -  lymphoid enhancer-binding factor 1<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+HMOX1  -  heme oxygenase (decycling) 1<br/>
+
+RTN4  -  reticulon 4<br/>
+
+OPTN  -  optineurin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005515&amp;view=details" target="_blank">GO:0005515</a><a name="0005515"></a></td>
+<td>protein binding</td>
+<td align="center">5.82E-9</td>
+<td align="center">6.58E-6</td>
+<td align="center">1.15 (15889,11859,442,379)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005515')" id="ctrl_elements_GO:0005515">[+] Show genes</a><br/>
+<div id="elements_GO:0005515" style="display:none"> <font size="1">
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+LGALS9  -  lectin, galactoside-binding, soluble, 9<br/>
+
+TBC1D20  -  tbc1 domain family, member 20<br/>
+
+YAF2  -  yy1 associated factor 2<br/>
+
+AGAP3  -  arfgap with gtpase domain, ankyrin repeat and ph domain 3<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+EMP3  -  epithelial membrane protein 3<br/>
+
+LGALS8  -  lectin, galactoside-binding, soluble, 8<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+
+ELK3  -  elk3, ets-domain protein (srf accessory protein 2)<br/>
+
+CCNL2  -  cyclin l2<br/>
+
+SERINC3  -  serine incorporator 3<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+FAM114A1  -  family with sequence similarity 114, member a1<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+LGALS1  -  lectin, galactoside-binding, soluble, 1<br/>
+
+NAGK  -  n-acetylglucosamine kinase<br/>
+
+DNAJC15  -  dnaj (hsp40) homolog, subfamily c, member 15<br/>
+
+SIRT2  -  sirtuin 2<br/>
+
+ACADVL  -  acyl-coa dehydrogenase, very long chain<br/>
+
+ENG  -  endoglin<br/>
+
+RIT1  -  ras-like without caax 1<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+TMEM88  -  transmembrane protein 88<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+RBM5  -  rna binding motif protein 5<br/>
+
+GJA5  -  gap junction protein, alpha 5, 40kda<br/>
+
+MAGED2  -  melanoma antigen family d, 2<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+NAB1  -  ngfi-a binding protein 1 (egr1 binding protein 1)<br/>
+
+HPCAL1  -  hippocalcin-like 1<br/>
+
+LOXL2  -  lysyl oxidase-like 2<br/>
+
+SCMH1  -  sex comb on midleg homolog 1 (drosophila)<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+BMI1  -  bmi1 polycomb ring finger oncogene<br/>
+
+CRHBP  -  corticotropin releasing hormone binding protein<br/>
+
+PLAUR  -  plasminogen activator, urokinase receptor<br/>
+
+BCAR1  -  breast cancer anti-estrogen resistance 1<br/>
+
+PRR5  -  proline rich 5 (renal)<br/>
+
+SMPDL3A  -  sphingomyelin phosphodiesterase, acid-like 3a<br/>
+
+RGS3  -  regulator of g-protein signaling 3<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+MYO1D  -  myosin id<br/>
+
+SOAT1  -  sterol o-acyltransferase 1<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+TRIM8  -  tripartite motif containing 8<br/>
+
+TMEM9B  -  tmem9 domain family, member b<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+CADM1  -  cell adhesion molecule 1<br/>
+
+SGPL1  -  sphingosine-1-phosphate lyase 1<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+SCAMP2  -  secretory carrier membrane protein 2<br/>
+
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br/>
+
+TAX1BP1  -  tax1 (human t-cell leukemia virus type i) binding protein 1<br/>
+
+SCARA3  -  scavenger receptor class a, member 3<br/>
+
+RHOU  -  ras homolog family member u<br/>
+
+PTTG1IP  -  pituitary tumor-transforming 1 interacting protein<br/>
+
+MAPKBP1  -  mitogen-activated protein kinase binding protein 1<br/>
+
+SPHK1  -  sphingosine kinase 1<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+KRT7  -  keratin 7<br/>
+
+TUBB6  -  tubulin, beta 6 class v<br/>
+
+EFNB2  -  ephrin-b2<br/>
+
+SH3BGRL3  -  sh3 domain binding glutamic acid-rich protein like 3<br/>
+
+PTGES  -  prostaglandin e synthase<br/>
+
+RNH1  -  ribonuclease/angiogenin inhibitor 1<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+PALLD  -  palladin, cytoskeletal associated protein<br/>
+
+KRT18  -  keratin 18<br/>
+
+PPARD  -  peroxisome proliferator-activated receptor delta<br/>
+
+LAMP2  -  lysosomal-associated membrane protein 2<br/>
+
+PON2  -  paraoxonase 2<br/>
+
+LAMP1  -  lysosomal-associated membrane protein 1<br/>
+
+ARPC2  -  actin related protein 2/3 complex, subunit 2, 34kda<br/>
+
+LAMC2  -  laminin, gamma 2<br/>
+
+LCAT  -  lecithin-cholesterol acyltransferase<br/>
+
+ROCK2  -  rho-associated, coiled-coil containing protein kinase 2<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+COL5A2  -  collagen, type v, alpha 2<br/>
+
+PLD3  -  phospholipase d family, member 3<br/>
+
+SMARCA2  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+SNAI2  -  snail family zinc finger 2<br/>
+
+GNA11  -  guanine nucleotide binding protein (g protein), alpha 11 (gq class)<br/>
+
+SLC22A3  -  solute carrier family 22 (organic cation transporter), member 3<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+COPA  -  coatomer protein complex, subunit alpha<br/>
+
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br/>
+
+MBD2  -  methyl-cpg binding domain protein 2<br/>
+
+STX12  -  syntaxin 12<br/>
+
+ECE1  -  endothelin converting enzyme 1<br/>
+
+GRAMD2  -  gram domain containing 2<br/>
+
+COLEC11  -  collectin sub-family member 11<br/>
+
+OPTN  -  optineurin<br/>
+
+TYMP  -  thymidine phosphorylase<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+
+PTPN21  -  protein tyrosine phosphatase, non-receptor type 21<br/>
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+CST6  -  cystatin e/m<br/>
+
+CST3  -  cystatin c<br/>
+
+LOXL4  -  lysyl oxidase-like 4<br/>
+
+LMF2  -  lipase maturation factor 2<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+EXPH5  -  exophilin 5<br/>
+
+RNF207  -  ring finger protein 207<br/>
+
+LRRN4  -  leucine rich repeat neuronal 4<br/>
+
+CERCAM  -  cerebral endothelial cell adhesion molecule<br/>
+
+SUN2  -  sad1 and unc84 domain containing 2<br/>
+
+FKBP14  -  fk506 binding protein 14, 22 kda<br/>
+
+TOR1AIP2  -  torsin a interacting protein 2<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+KCNN4  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 4<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+KCNMA1  -  potassium large conductance calcium-activated channel, subfamily m, alpha member 1<br/>
+
+CAST  -  calpastatin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+CTSL  -  cathepsin l<br/>
+
+REEP1  -  receptor accessory protein 1<br/>
+
+PEA15  -  phosphoprotein enriched in astrocytes 15<br/>
+
+NCCRP1  -  non-specific cytotoxic cell receptor protein 1 homolog (zebrafish)<br/>
+
+LAMA1  -  laminin, alpha 1<br/>
+
+PLXND1  -  plexin d1<br/>
+
+TOM1  -  target of myb1 (chicken)<br/>
+
+STOML1  -  stomatin (epb72)-like 1<br/>
+
+CTSB  -  cathepsin b<br/>
+
+NXF1  -  nuclear rna export factor 1<br/>
+
+VIM  -  vimentin<br/>
+
+EXT1  -  exostosin glycosyltransferase 1<br/>
+
+CALU  -  calumenin<br/>
+
+CALD1  -  caldesmon 1<br/>
+
+STK10  -  serine/threonine kinase 10<br/>
+
+TBC1D9  -  tbc1 domain family, member 9 (with gram domain)<br/>
+
+FZD2  -  frizzled family receptor 2<br/>
+
+MSN  -  moesin<br/>
+
+JOSD1  -  josephin domain containing 1<br/>
+
+GALE  -  udp-galactose-4-epimerase<br/>
+
+SLC35F6  -  solute carrier family 35, member f6<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+SEPT8  -  septin 8<br/>
+
+ABTB2  -  ankyrin repeat and btb (poz) domain containing 2<br/>
+
+CCND3  -  cyclin d3<br/>
+
+JUNB  -  jun b proto-oncogene<br/>
+
+UBC  -  ubiquitin c<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+HOXB9  -  homeobox b9<br/>
+
+STAT6  -  signal transducer and activator of transcription 6, interleukin-4 induced<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+JOSD2  -  josephin domain containing 2<br/>
+
+HOXA5  -  homeobox a5<br/>
+
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br/>
+
+RAB31  -  rab31, member ras oncogene family<br/>
+
+HOXA7  -  homeobox a7<br/>
+
+FBXO32  -  f-box protein 32<br/>
+
+PLEKHM2  -  pleckstrin homology domain containing, family m (with run domain) member 2<br/>
+
+C1QTNF6  -  c1q and tumor necrosis factor related protein 6<br/>
+
+CBFB  -  core-binding factor, beta subunit<br/>
+
+CD164  -  cd164 molecule, sialomucin<br/>
+
+ZNF503  -  zinc finger protein 503<br/>
+
+GATA4  -  gata binding protein 4<br/>
+
+MVP  -  major vault protein<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+DOK4  -  docking protein 4<br/>
+
+MYL9  -  myosin, light chain 9, regulatory<br/>
+
+FBXL17  -  f-box and leucine-rich repeat protein 17<br/>
+
+GBP2  -  guanylate binding protein 2, interferon-inducible<br/>
+
+SSFA2  -  sperm specific antigen 2<br/>
+
+MYOF  -  myoferlin<br/>
+
+BAMBI  -  bmp and activin membrane-bound inhibitor<br/>
+
+LRRC32  -  leucine rich repeat containing 32<br/>
+
+MYADM  -  myeloid-associated differentiation marker<br/>
+
+WBP5  -  ww domain binding protein 5<br/>
+
+VAMP3  -  vesicle-associated membrane protein 3<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CLMN  -  calmin (calponin-like, transmembrane)<br/>
+
+ARHGEF40  -  rho guanine nucleotide exchange factor (gef) 40<br/>
+
+SFT2D2  -  sft2 domain containing 2<br/>
+
+CLIP1  -  cap-gly domain containing linker protein 1<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+FAM129B  -  family with sequence similarity 129, member b<br/>
+
+ANXA1  -  annexin a1<br/>
+
+LEF1  -  lymphoid enhancer-binding factor 1<br/>
+
+RTN4  -  reticulon 4<br/>
+
+CSRP1  -  cysteine and glycine-rich protein 1<br/>
+
+HMOX1  -  heme oxygenase (decycling) 1<br/>
+
+RRAD  -  ras-related associated with diabetes<br/>
+
+CMTM6  -  cklf-like marvel transmembrane domain containing 6<br/>
+
+RRAS  -  related ras viral (r-ras) oncogene homolog<br/>
+
+MED12  -  mediator complex subunit 12<br/>
+
+PACS1  -  phosphofurin acidic cluster sorting protein 1<br/>
+
+TNFRSF9  -  tumor necrosis factor receptor superfamily, member 9<br/>
+
+PHLDB2  -  pleckstrin homology-like domain, family b, member 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FLT1  -  fms-related tyrosine kinase 1<br/>
+
+STK40  -  serine/threonine kinase 40<br/>
+
+GSN  -  gelsolin<br/>
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+PSAP  -  prosaposin<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+MGAT4B  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase, isozyme b<br/>
+
+RIN2  -  ras and rab interactor 2<br/>
+
+SDC4  -  syndecan 4<br/>
+
+LY6G6C  -  lymphocyte antigen 6 complex, locus g6c<br/>
+
+PCED1A  -  pc-esterase domain containing 1a<br/>
+
+FLNC  -  filamin c, gamma<br/>
+
+CD63  -  cd63 molecule<br/>
+
+CYTH2  -  cytohesin 2<br/>
+
+DCTN3  -  dynactin 3 (p22)<br/>
+
+CD151  -  cd151 molecule (raph blood group)<br/>
+
+PPFIBP1  -  ptprf interacting protein, binding protein 1 (liprin beta 1)<br/>
+
+MLLT1  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 1<br/>
+
+CD97  -  cd97 molecule<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br/>
+
+SCAMP4  -  secretory carrier membrane protein 4<br/>
+
+MME  -  membrane metallo-endopeptidase<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CYB5R1  -  cytochrome b5 reductase 1<br/>
+
+C5orf24  -  chromosome 5 open reading frame 24<br/>
+
+CD47  -  cd47 molecule<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+CCL2  -  chemokine (c-c motif) ligand 2<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+MORC4  -  morc family cw-type zinc finger 4<br/>
+
+ZHX1  -  zinc fingers and homeoboxes 1<br/>
+
+IL11  -  interleukin 11<br/>
+
+GDF6  -  growth differentiation factor 6<br/>
+
+ARL8B  -  adp-ribosylation factor-like 8b<br/>
+
+RHOBTB1  -  rho-related btb domain containing 1<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+MOV10  -  mov10, moloney leukemia virus 10, homolog (mouse)<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+IL32  -  interleukin 32<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+TAGLN  -  transgelin<br/>
+
+C15orf38  -  chromosome 15 open reading frame 38<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+MDK  -  midkine (neurite growth-promoting factor 2)<br/>
+
+KIF26B  -  kinesin family member 26b<br/>
+
+SGMS2  -  sphingomyelin synthase 2<br/>
+
+RNF103  -  ring finger protein 103<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+SETBP1  -  set binding protein 1<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+UACA  -  uveal autoantigen with coiled-coil domains and ankyrin repeats<br/>
+
+TNFRSF21  -  tumor necrosis factor receptor superfamily, member 21<br/>
+
+MCFD2  -  multiple coagulation factor deficiency 2<br/>
+
+APPBP2  -  amyloid beta precursor protein (cytoplasmic tail) binding protein 2<br/>
+
+HEG1  -  heart development protein with egf-like domains 1<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+NUCB2  -  nucleobindin 2<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+FAM65A  -  family with sequence similarity 65, member a<br/>
+
+EVI5  -  ecotropic viral integration site 5<br/>
+
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br/>
+
+LRP10  -  low density lipoprotein receptor-related protein 10<br/>
+
+PIEZO1  -  piezo-type mechanosensitive ion channel component 1<br/>
+
+MAP3K1  -  mitogen-activated protein kinase kinase kinase 1, e3 ubiquitin protein ligase<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+ARHGEF17  -  rho guanine nucleotide exchange factor (gef) 17<br/>
+
+SERINC1  -  serine incorporator 1<br/>
+
+ARHGAP31  -  rho gtpase activating protein 31<br/>
+
+PCDH17  -  protocadherin 17<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+S100A10  -  s100 calcium binding protein a10<br/>
+
+DAP  -  death-associated protein<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+ODF3B  -  outer dense fiber of sperm tails 3b<br/>
+
+ARL6IP5  -  adp-ribosylation-like factor 6 interacting protein 5<br/>
+
+HEXA  -  hexosaminidase a (alpha polypeptide)<br/>
+
+DAB2  -  dab, mitogen-responsive phosphoprotein, homolog 2 (drosophila)<br/>
+
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+PPAP2B  -  phosphatidic acid phosphatase type 2b<br/>
+
+PTPRD  -  protein tyrosine phosphatase, receptor type, d<br/>
+
+PLA2G4C  -  phospholipase a2, group ivc (cytosolic, calcium-independent)<br/>
+
+ERBB2IP  -  erbb2 interacting protein<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+RHOD  -  ras homolog family member d<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+SLC39A2  -  solute carrier family 39 (zinc transporter), member 2<br/>
+
+CCDC92  -  coiled-coil domain containing 92<br/>
+
+RFK  -  riboflavin kinase<br/>
+
+ZBTB1  -  zinc finger and btb domain containing 1<br/>
+
+GNS  -  glucosamine (n-acetyl)-6-sulfatase<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+AGO3  -  argonaute risc catalytic component 3<br/>
+
+KCTD20  -  potassium channel tetramerization domain containing 20<br/>
+
+PLK2  -  polo-like kinase 2<br/>
+
+TLN1  -  talin 1<br/>
+
+LYST  -  lysosomal trafficking regulator<br/>
+
+SPSB1  -  spla/ryanodine receptor domain and socs box containing 1<br/>
+
+LEPROT  -  leptin receptor overlapping transcript<br/>
+
+PLEKHA6  -  pleckstrin homology domain containing, family a member 6<br/>
+
+SIRT7  -  sirtuin 7<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+LMCD1  -  lim and cysteine-rich domains 1<br/>
+
+ZFHX3  -  zinc finger homeobox 3<br/>
+
+AMOTL1  -  angiomotin like 1<br/>
+
+ZC3H12A  -  zinc finger ccch-type containing 12a<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br/>
+
+CUEDC1  -  cue domain containing 1<br/>
+
+RAB2A  -  rab2a, member ras oncogene family<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+NFKB1  -  nuclear factor of kappa light polypeptide gene enhancer in b-cells 1<br/>
+
+ARHGAP21  -  rho gtpase activating protein 21<br/>
+
+DVL3  -  dishevelled segment polarity protein 3<br/>
+
+TNFAIP1  -  tumor necrosis factor, alpha-induced protein 1 (endothelial)<br/>
+
+SLC4A2  -  solute carrier family 4 (anion exchanger), member 2<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+BCL9L  -  b-cell cll/lymphoma 9-like<br/>
+
+MCHR1  -  melanin-concentrating hormone receptor 1<br/>
+
+IKBIP  -  ikbkb interacting protein<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+RAB11FIP5  -  rab11 family interacting protein 5 (class i)<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+DIP2B  -  dip2 disco-interacting protein 2 homolog b (drosophila)<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+TINAGL1  -  tubulointerstitial nephritis antigen-like 1<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+NDFIP2  -  nedd4 family interacting protein 2<br/>
+
+EFHD2  -  ef-hand domain family, member d2<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+NEU1  -  sialidase 1 (lysosomal sialidase)<br/>
+
+PITX1  -  paired-like homeodomain 1<br/>
+
+SLC7A6  -  solute carrier family 7 (amino acid transporter light chain, y+l system), member 6<br/>
+
+COPG1  -  coatomer protein complex, subunit gamma 1<br/>
+
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br/>
+
+GPRC5A  -  g protein-coupled receptor, family c, group 5, member a<br/>
+
+NEDD9  -  neural precursor cell expressed, developmentally down-regulated 9<br/>
+
+CCR1  -  chemokine (c-c motif) receptor 1<br/>
+
+CPEB4  -  cytoplasmic polyadenylation element binding protein 4<br/>
+
+TOM1L2  -  target of myb1-like 2 (chicken)<br/>
+
+PLAT  -  plasminogen activator, tissue<br/>
+
+AXL  -  axl receptor tyrosine kinase<br/>
+
+ASXL1  -  additional sex combs like 1 (drosophila)<br/>
+
+CLTB  -  clathrin, light chain b<br/>
+
+LTBR  -  lymphotoxin beta receptor (tnfr superfamily, member 3)<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+NQO1  -  nad(p)h dehydrogenase, quinone 1<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+NFATC2  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 2<br/>
+
+SYNPO  -  synaptopodin<br/>
+
+CALCOCO1  -  calcium binding and coiled-coil domain 1<br/>
+
+ANKRD52  -  ankyrin repeat domain 52<br/>
+
+MGLL  -  monoglyceride lipase<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+MED15  -  mediator complex subunit 15<br/>
+
+SOCS3  -  suppressor of cytokine signaling 3<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+CLIC3  -  chloride intracellular channel 3<br/>
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+TGFB1I1  -  transforming growth factor beta 1 induced transcript 1<br/>
+
+TSPAN15  -  tetraspanin 15<br/>
+
+TGM2  -  transglutaminase 2<br/>
+
+BCL6  -  b-cell cll/lymphoma 6<br/>
+
+PHKG2  -  phosphorylase kinase, gamma 2 (testis)<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+GRINA  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+FOSL2  -  fos-like antigen 2<br/>
+
+CPNE2  -  copine ii<br/>
+
+SLC12A7  -  solute carrier family 12 (potassium/chloride transporter), member 7<br/>
+
+PLOD3  -  procollagen-lysine, 2-oxoglutarate 5-dioxygenase 3<br/>
+
+SYTL5  -  synaptotagmin-like 5<br/>
+
+LYPD3  -  ly6/plaur domain containing 3<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098631&amp;view=details" target="_blank">GO:0098631</a><a name="0098631"></a></td>
+<td>cell adhesion mediator activity</td>
+<td align="center">1.81E-7</td>
+<td align="center">1.64E-4</td>
+<td align="center">7.46 (15889,53,442,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098631')" id="ctrl_elements_GO:0098631">[+] Show genes</a><br/>
+<div id="elements_GO:0098631" style="display:none"> <font size="1">
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+ANXA2  -  annexin a2<br/>
+
+ANXA1  -  annexin a1<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+CD47  -  cd47 molecule<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+PALLD  -  palladin, cytoskeletal associated protein<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019900&amp;view=details" target="_blank">GO:0019900</a><a name="0019900"></a></td>
+<td>kinase binding</td>
+<td align="center">2.06E-7</td>
+<td align="center">1.55E-4</td>
+<td align="center">2.34 (15889,661,442,43)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019900')" id="ctrl_elements_GO:0019900">[+] Show genes</a><br/>
+<div id="elements_GO:0019900" style="display:none"> <font size="1">
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+RHOD  -  ras homolog family member d<br/>
+
+TAX1BP1  -  tax1 (human t-cell leukemia virus type i) binding protein 1<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+GSN  -  gelsolin<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+CCND3  -  cyclin d3<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+NEDD9  -  neural precursor cell expressed, developmentally down-regulated 9<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+SDC4  -  syndecan 4<br/>
+
+TOM1L2  -  target of myb1-like 2 (chicken)<br/>
+
+LYST  -  lysosomal trafficking regulator<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br/>
+
+MAP3K1  -  mitogen-activated protein kinase kinase kinase 1, e3 ubiquitin protein ligase<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+GATA4  -  gata binding protein 4<br/>
+
+MVP  -  major vault protein<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+SLC12A7  -  solute carrier family 12 (potassium/chloride transporter), member 7<br/>
+
+RHOBTB1  -  rho-related btb domain containing 1<br/>
+
+BCAR1  -  breast cancer anti-estrogen resistance 1<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+MSN  -  moesin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005102&amp;view=details" target="_blank">GO:0005102</a><a name="0005102"></a></td>
+<td>signaling receptor binding</td>
+<td align="center">3.03E-7</td>
+<td align="center">1.96E-4</td>
+<td align="center">1.87 (15889,1304,442,68)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005102')" id="ctrl_elements_GO:0005102">[+] Show genes</a><br/>
+<div id="elements_GO:0005102" style="display:none"> <font size="1">
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+LGALS8  -  lectin, galactoside-binding, soluble, 8<br/>
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+
+TLN1  -  talin 1<br/>
+
+LEPROT  -  leptin receptor overlapping transcript<br/>
+
+CD151  -  cd151 molecule (raph blood group)<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+ENG  -  endoglin<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+REEP1  -  receptor accessory protein 1<br/>
+
+LAMA1  -  laminin, alpha 1<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+CCL2  -  chemokine (c-c motif) ligand 2<br/>
+
+DVL3  -  dishevelled segment polarity protein 3<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+IL11  -  interleukin 11<br/>
+
+GDF6  -  growth differentiation factor 6<br/>
+
+PLAUR  -  plasminogen activator, urokinase receptor<br/>
+
+MCHR1  -  melanin-concentrating hormone receptor 1<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+IL32  -  interleukin 32<br/>
+
+MSN  -  moesin<br/>
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+CADM1  -  cell adhesion molecule 1<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+MDK  -  midkine (neurite growth-promoting factor 2)<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+PLAT  -  plasminogen activator, tissue<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+ASXL1  -  additional sex combs like 1 (drosophila)<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+EFNB2  -  ephrin-b2<br/>
+
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br/>
+
+LAMC2  -  laminin, gamma 2<br/>
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+TGFB1I1  -  transforming growth factor beta 1 induced transcript 1<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+SSFA2  -  sperm specific antigen 2<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+BAMBI  -  bmp and activin membrane-bound inhibitor<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+SYTL5  -  synaptotagmin-like 5<br/>
+
+GNA11  -  guanine nucleotide binding protein (g protein), alpha 11 (gq class)<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+PPAP2B  -  phosphatidic acid phosphatase type 2b<br/>
+
+ANXA1  -  annexin a1<br/>
+
+COPA  -  coatomer protein complex, subunit alpha<br/>
+
+PTPRD  -  protein tyrosine phosphatase, receptor type, d<br/>
+
+LEF1  -  lymphoid enhancer-binding factor 1<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+MED12  -  mediator complex subunit 12<br/>
+
+ERBB2IP  -  erbb2 interacting protein<br/>
+
+TYMP  -  thymidine phosphorylase<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019838&amp;view=details" target="_blank">GO:0019838</a><a name="0019838"></a></td>
+<td>growth factor binding</td>
+<td align="center">3.4E-7</td>
+<td align="center">1.92E-4</td>
+<td align="center">4.64 (15889,124,442,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019838')" id="ctrl_elements_GO:0019838">[+] Show genes</a><br/>
+<div id="elements_GO:0019838" style="display:none"> <font size="1">
+
+FLT1  -  fms-related tyrosine kinase 1<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+LRRC32  -  leucine rich repeat containing 32<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+ENG  -  endoglin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098632&amp;view=details" target="_blank">GO:0098632</a><a name="0098632"></a></td>
+<td>cell-cell adhesion mediator activity</td>
+<td align="center">4.17E-7</td>
+<td align="center">2.09E-4</td>
+<td align="center">7.81 (15889,46,442,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098632')" id="ctrl_elements_GO:0098632">[+] Show genes</a><br/>
+<div id="elements_GO:0098632" style="display:none"> <font size="1">
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+ANXA1  -  annexin a1<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+CD47  -  cd47 molecule<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+PALLD  -  palladin, cytoskeletal associated protein<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044877&amp;view=details" target="_blank">GO:0044877</a><a name="0044877"></a></td>
+<td>protein-containing complex binding</td>
+<td align="center">5.78E-7</td>
+<td align="center">2.61E-4</td>
+<td align="center">1.98 (15889,1036,442,57)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044877')" id="ctrl_elements_GO:0044877">[+] Show genes</a><br/>
+<div id="elements_GO:0044877" style="display:none"> <font size="1">
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+LEPREL4  -  leprecan-like 4<br/>
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+LGALS8  -  lectin, galactoside-binding, soluble, 8<br/>
+
+GSN  -  gelsolin<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+TLN1  -  talin 1<br/>
+
+PLK2  -  polo-like kinase 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+CD151  -  cd151 molecule (raph blood group)<br/>
+
+ENG  -  endoglin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+CTSL  -  cathepsin l<br/>
+
+ZC3H12A  -  zinc finger ccch-type containing 12a<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+CTSB  -  cathepsin b<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+VIM  -  vimentin<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+MYO1D  -  myosin id<br/>
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+TAGLN  -  transgelin<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+CPEB4  -  cytoplasmic polyadenylation element binding protein 4<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+ARPC2  -  actin related protein 2/3 complex, subunit 2, 34kda<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+SSFA2  -  sperm specific antigen 2<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+GNA11  -  guanine nucleotide binding protein (g protein), alpha 11 (gq class)<br/>
+
+CLMN  -  calmin (calponin-like, transmembrane)<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+PPAP2B  -  phosphatidic acid phosphatase type 2b<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+RRAS  -  related ras viral (r-ras) oncogene homolog<br/>
+
+MBD2  -  methyl-cpg binding domain protein 2<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005178&amp;view=details" target="_blank">GO:0005178</a><a name="0005178"></a></td>
+<td>integrin binding</td>
+<td align="center">5.86E-7</td>
+<td align="center">2.41E-4</td>
+<td align="center">4.46 (15889,129,442,16)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005178')" id="ctrl_elements_GO:0005178">[+] Show genes</a><br/>
+<div id="elements_GO:0005178" style="display:none"> <font size="1">
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+FN1  -  fibronectin 1<br/>
+
+LGALS8  -  lectin, galactoside-binding, soluble, 8<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+TLN1  -  talin 1<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+PPAP2B  -  phosphatidic acid phosphatase type 2b<br/>
+
+CD151  -  cd151 molecule (raph blood group)<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019901&amp;view=details" target="_blank">GO:0019901</a><a name="0019901"></a></td>
+<td>protein kinase binding</td>
+<td align="center">1.18E-6</td>
+<td align="center">4.44E-4</td>
+<td align="center">2.33 (15889,586,442,38)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019901')" id="ctrl_elements_GO:0019901">[+] Show genes</a><br/>
+<div id="elements_GO:0019901" style="display:none"> <font size="1">
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+RHOD  -  ras homolog family member d<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+CCND3  -  cyclin d3<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+NEDD9  -  neural precursor cell expressed, developmentally down-regulated 9<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+SDC4  -  syndecan 4<br/>
+
+TOM1L2  -  target of myb1-like 2 (chicken)<br/>
+
+LYST  -  lysosomal trafficking regulator<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+MAP3K1  -  mitogen-activated protein kinase kinase kinase 1, e3 ubiquitin protein ligase<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+GATA4  -  gata binding protein 4<br/>
+
+MVP  -  major vault protein<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+SLC12A7  -  solute carrier family 12 (potassium/chloride transporter), member 7<br/>
+
+RHOBTB1  -  rho-related btb domain containing 1<br/>
+
+BCAR1  -  breast cancer anti-estrogen resistance 1<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+MSN  -  moesin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002020&amp;view=details" target="_blank">GO:0002020</a><a name="0002020"></a></td>
+<td>protease binding</td>
+<td align="center">1.95E-6</td>
+<td align="center">6.78E-4</td>
+<td align="center">4.62 (15889,109,442,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002020')" id="ctrl_elements_GO:0002020">[+] Show genes</a><br/>
+<div id="elements_GO:0002020" style="display:none"> <font size="1">
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+CST3  -  cystatin c<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PSAP  -  prosaposin<br/>
+
+UBC  -  ubiquitin c<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+DVL3  -  dishevelled segment polarity protein 3<br/>
+
+ANXA2  -  annexin a2<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030234&amp;view=details" target="_blank">GO:0030234</a><a name="0030234"></a></td>
+<td>enzyme regulator activity</td>
+<td align="center">3.93E-6</td>
+<td align="center">1.27E-3</td>
+<td align="center">1.96 (15889,917,442,50)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030234')" id="ctrl_elements_GO:0030234">[+] Show genes</a><br/>
+<div id="elements_GO:0030234" style="display:none"> <font size="1">
+
+TBC1D20  -  tbc1 domain family, member 20<br/>
+
+CST6  -  cystatin e/m<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+CST3  -  cystatin c<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+AGAP3  -  arfgap with gtpase domain, ankyrin repeat and ph domain 3<br/>
+
+FN1  -  fibronectin 1<br/>
+
+PSAP  -  prosaposin<br/>
+
+RIN2  -  ras and rab interactor 2<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+CCNL2  -  cyclin l2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+TOR1AIP2  -  torsin a interacting protein 2<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+DNAJC15  -  dnaj (hsp40) homolog, subfamily c, member 15<br/>
+
+CAST  -  calpastatin<br/>
+
+SIPA1L2  -  signal-induced proliferation-associated 1 like 2<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+ARHGAP21  -  rho gtpase activating protein 21<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+RGS3  -  regulator of g-protein signaling 3<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+TBC1D9  -  tbc1 domain family, member 9 (with gram domain)<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+CCND3  -  cyclin d3<br/>
+
+GPRC5A  -  g protein-coupled receptor, family c, group 5, member a<br/>
+
+PRSS22  -  protease, serine, 22<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+EVI5  -  ecotropic viral integration site 5<br/>
+
+RNH1  -  ribonuclease/angiogenin inhibitor 1<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+SOCS3  -  suppressor of cytokine signaling 3<br/>
+
+ARHGAP31  -  rho gtpase activating protein 31<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+ANXA2  -  annexin a2<br/>
+
+ANXA1  -  annexin a1<br/>
+
+ACAP3  -  arfgap with coiled-coil, ankyrin repeat and ph domains 3<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098641&amp;view=details" target="_blank">GO:0098641</a><a name="0098641"></a></td>
+<td>cadherin binding involved in cell-cell adhesion</td>
+<td align="center">6.26E-6</td>
+<td align="center">1.89E-3</td>
+<td align="center">11.98 (15889,18,442,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098641')" id="ctrl_elements_GO:0098641">[+] Show genes</a><br/>
+<div id="elements_GO:0098641" style="display:none"> <font size="1">
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+ANXA1  -  annexin a1<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005488&amp;view=details" target="_blank">GO:0005488</a><a name="0005488"></a></td>
+<td>binding</td>
+<td align="center">6.54E-6</td>
+<td align="center">1.85E-3</td>
+<td align="center">1.08 (15889,13678,442,410)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005488')" id="ctrl_elements_GO:0005488">[+] Show genes</a><br/>
+<div id="elements_GO:0005488" style="display:none"> <font size="1">
+
+LGALS9  -  lectin, galactoside-binding, soluble, 9<br/>
+
+C9orf3  -  chromosome 9 open reading frame 3<br/>
+
+AGAP3  -  arfgap with gtpase domain, ankyrin repeat and ph domain 3<br/>
+
+LGALS8  -  lectin, galactoside-binding, soluble, 8<br/>
+
+PHLDA3  -  pleckstrin homology-like domain, family a, member 3<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+
+SERINC3  -  serine incorporator 3<br/>
+
+LGALS1  -  lectin, galactoside-binding, soluble, 1<br/>
+
+NAGK  -  n-acetylglucosamine kinase<br/>
+
+ACADVL  -  acyl-coa dehydrogenase, very long chain<br/>
+
+GJA5  -  gap junction protein, alpha 5, 40kda<br/>
+
+MAGED2  -  melanoma antigen family d, 2<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+LOXL2  -  lysyl oxidase-like 2<br/>
+
+CRHBP  -  corticotropin releasing hormone binding protein<br/>
+
+PLAUR  -  plasminogen activator, urokinase receptor<br/>
+
+BCAR1  -  breast cancer anti-estrogen resistance 1<br/>
+
+H6PD  -  hexose-6-phosphate dehydrogenase (glucose 1-dehydrogenase)<br/>
+
+SMPDL3A  -  sphingomyelin phosphodiesterase, acid-like 3a<br/>
+
+PRR5  -  proline rich 5 (renal)<br/>
+
+SOAT1  -  sterol o-acyltransferase 1<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+CADM1  -  cell adhesion molecule 1<br/>
+
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br/>
+
+SCARA3  -  scavenger receptor class a, member 3<br/>
+
+RHOU  -  ras homolog family member u<br/>
+
+KRT7  -  keratin 7<br/>
+
+TUBB6  -  tubulin, beta 6 class v<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+PTGES  -  prostaglandin e synthase<br/>
+
+PPARD  -  peroxisome proliferator-activated receptor delta<br/>
+
+KRT18  -  keratin 18<br/>
+
+LAMP2  -  lysosomal-associated membrane protein 2<br/>
+
+PON2  -  paraoxonase 2<br/>
+
+LAMP1  -  lysosomal-associated membrane protein 1<br/>
+
+LAMC2  -  laminin, gamma 2<br/>
+
+LCAT  -  lecithin-cholesterol acyltransferase<br/>
+
+ROCK2  -  rho-associated, coiled-coil containing protein kinase 2<br/>
+
+COL5A2  -  collagen, type v, alpha 2<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+SMARCA2  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2<br/>
+
+PLD3  -  phospholipase d family, member 3<br/>
+
+SNAI2  -  snail family zinc finger 2<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+GNA11  -  guanine nucleotide binding protein (g protein), alpha 11 (gq class)<br/>
+
+SLC22A3  -  solute carrier family 22 (organic cation transporter), member 3<br/>
+
+COPA  -  coatomer protein complex, subunit alpha<br/>
+
+ACAP3  -  arfgap with coiled-coil, ankyrin repeat and ph domains 3<br/>
+
+COL27A1  -  collagen, type xxvii, alpha 1<br/>
+
+STX12  -  syntaxin 12<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+
+CST6  -  cystatin e/m<br/>
+
+PTPN21  -  protein tyrosine phosphatase, non-receptor type 21<br/>
+
+CST3  -  cystatin c<br/>
+
+LOXL4  -  lysyl oxidase-like 4<br/>
+
+LRRN4  -  leucine rich repeat neuronal 4<br/>
+
+CERCAM  -  cerebral endothelial cell adhesion molecule<br/>
+
+SUN2  -  sad1 and unc84 domain containing 2<br/>
+
+TOR1AIP2  -  torsin a interacting protein 2<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+HIVEP3  -  human immunodeficiency virus type i enhancer binding protein 3<br/>
+
+KCNN4  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 4<br/>
+
+KCNMA1  -  potassium large conductance calcium-activated channel, subfamily m, alpha member 1<br/>
+
+CTSL  -  cathepsin l<br/>
+
+STOML1  -  stomatin (epb72)-like 1<br/>
+
+CTSB  -  cathepsin b<br/>
+
+LIPG  -  lipase, endothelial<br/>
+
+ABHD2  -  abhydrolase domain containing 2<br/>
+
+STK10  -  serine/threonine kinase 10<br/>
+
+FZD2  -  frizzled family receptor 2<br/>
+
+GALE  -  udp-galactose-4-epimerase<br/>
+
+MIR22  -  microrna 22<br/>
+
+ABTB2  -  ankyrin repeat and btb (poz) domain containing 2<br/>
+
+JUNB  -  jun b proto-oncogene<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+STAT6  -  signal transducer and activator of transcription 6, interleukin-4 induced<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br/>
+
+MAST4  -  microtubule associated serine/threonine kinase family member 4<br/>
+
+RAB31  -  rab31, member ras oncogene family<br/>
+
+FBXO32  -  f-box protein 32<br/>
+
+C1QTNF6  -  c1q and tumor necrosis factor related protein 6<br/>
+
+ZNF503  -  zinc finger protein 503<br/>
+
+GATA4  -  gata binding protein 4<br/>
+
+DOK4  -  docking protein 4<br/>
+
+SSFA2  -  sperm specific antigen 2<br/>
+
+GBP2  -  guanylate binding protein 2, interferon-inducible<br/>
+
+BAMBI  -  bmp and activin membrane-bound inhibitor<br/>
+
+LRRC32  -  leucine rich repeat containing 32<br/>
+
+VAMP3  -  vesicle-associated membrane protein 3<br/>
+
+WBP5  -  ww domain binding protein 5<br/>
+
+ANXA2  -  annexin a2<br/>
+
+SFT2D2  -  sft2 domain containing 2<br/>
+
+ARHGEF40  -  rho guanine nucleotide exchange factor (gef) 40<br/>
+
+CLMN  -  calmin (calponin-like, transmembrane)<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+ANXA1  -  annexin a1<br/>
+
+LEF1  -  lymphoid enhancer-binding factor 1<br/>
+
+CSRP1  -  cysteine and glycine-rich protein 1<br/>
+
+PACS1  -  phosphofurin acidic cluster sorting protein 1<br/>
+
+PHLDB2  -  pleckstrin homology-like domain, family b, member 2<br/>
+
+GSN  -  gelsolin<br/>
+
+STK40  -  serine/threonine kinase 40<br/>
+
+MGAT4B  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase, isozyme b<br/>
+
+SDC4  -  syndecan 4<br/>
+
+CYTH2  -  cytohesin 2<br/>
+
+DCTN3  -  dynactin 3 (p22)<br/>
+
+MLLT1  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 1<br/>
+
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+MME  -  membrane metallo-endopeptidase<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CYB5R1  -  cytochrome b5 reductase 1<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+CCL2  -  chemokine (c-c motif) ligand 2<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+ZHX1  -  zinc fingers and homeoboxes 1<br/>
+
+MORC4  -  morc family cw-type zinc finger 4<br/>
+
+ARL8B  -  adp-ribosylation factor-like 8b<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+ZNF70  -  zinc finger protein 70<br/>
+
+MOV10  -  mov10, moloney leukemia virus 10, homolog (mouse)<br/>
+
+CMPK1  -  cytidine monophosphate (ump-cmp) kinase 1, cytosolic<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+IL32  -  interleukin 32<br/>
+
+C15orf38  -  chromosome 15 open reading frame 38<br/>
+
+MDK  -  midkine (neurite growth-promoting factor 2)<br/>
+
+KIF26B  -  kinesin family member 26b<br/>
+
+SGMS2  -  sphingomyelin synthase 2<br/>
+
+STS  -  steroid sulfatase (microsomal), isozyme s<br/>
+
+RNF103  -  ring finger protein 103<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+SETBP1  -  set binding protein 1<br/>
+
+UACA  -  uveal autoantigen with coiled-coil domains and ankyrin repeats<br/>
+
+MCFD2  -  multiple coagulation factor deficiency 2<br/>
+
+HEG1  -  heart development protein with egf-like domains 1<br/>
+
+EVI5  -  ecotropic viral integration site 5<br/>
+
+FAM65A  -  family with sequence similarity 65, member a<br/>
+
+LRP10  -  low density lipoprotein receptor-related protein 10<br/>
+
+MAP3K1  -  mitogen-activated protein kinase kinase kinase 1, e3 ubiquitin protein ligase<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+SERINC1  -  serine incorporator 1<br/>
+
+ARHGAP31  -  rho gtpase activating protein 31<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+S100A10  -  s100 calcium binding protein a10<br/>
+
+DAP  -  death-associated protein<br/>
+
+ODF3B  -  outer dense fiber of sperm tails 3b<br/>
+
+HEXA  -  hexosaminidase a (alpha polypeptide)<br/>
+
+DAB2  -  dab, mitogen-responsive phosphoprotein, homolog 2 (drosophila)<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+MAN2A2  -  mannosidase, alpha, class 2a, member 2<br/>
+
+RFK  -  riboflavin kinase<br/>
+
+ZBTB1  -  zinc finger and btb domain containing 1<br/>
+
+GNS  -  glucosamine (n-acetyl)-6-sulfatase<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+AGO3  -  argonaute risc catalytic component 3<br/>
+
+PLEKHA6  -  pleckstrin homology domain containing, family a member 6<br/>
+
+SIRT7  -  sirtuin 7<br/>
+
+ZFHX3  -  zinc finger homeobox 3<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br/>
+
+PCDH10  -  protocadherin 10<br/>
+
+ARHGAP21  -  rho gtpase activating protein 21<br/>
+
+DVL3  -  dishevelled segment polarity protein 3<br/>
+
+SLC4A2  -  solute carrier family 4 (anion exchanger), member 2<br/>
+
+MCHR1  -  melanin-concentrating hormone receptor 1<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+IKBIP  -  ikbkb interacting protein<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+RAB11FIP5  -  rab11 family interacting protein 5 (class i)<br/>
+
+DIP2B  -  dip2 disco-interacting protein 2 homolog b (drosophila)<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+EFHD2  -  ef-hand domain family, member d2<br/>
+
+PITX1  -  paired-like homeodomain 1<br/>
+
+SLC7A6  -  solute carrier family 7 (amino acid transporter light chain, y+l system), member 6<br/>
+
+CRISPLD2  -  cysteine-rich secretory protein lccl domain containing 2<br/>
+
+COPG1  -  coatomer protein complex, subunit gamma 1<br/>
+
+GPRC5A  -  g protein-coupled receptor, family c, group 5, member a<br/>
+
+TOM1L2  -  target of myb1-like 2 (chicken)<br/>
+
+PLAT  -  plasminogen activator, tissue<br/>
+
+AXL  -  axl receptor tyrosine kinase<br/>
+
+ASXL1  -  additional sex combs like 1 (drosophila)<br/>
+
+LTBR  -  lymphotoxin beta receptor (tnfr superfamily, member 3)<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+NQO1  -  nad(p)h dehydrogenase, quinone 1<br/>
+
+SYNPO  -  synaptopodin<br/>
+
+CALCOCO1  -  calcium binding and coiled-coil domain 1<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+MGLL  -  monoglyceride lipase<br/>
+
+MED15  -  mediator complex subunit 15<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+SOCS3  -  suppressor of cytokine signaling 3<br/>
+
+CLIC3  -  chloride intracellular channel 3<br/>
+
+PHKG2  -  phosphorylase kinase, gamma 2 (testis)<br/>
+
+BCL6  -  b-cell cll/lymphoma 6<br/>
+
+GRINA  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+PLOD3  -  procollagen-lysine, 2-oxoglutarate 5-dioxygenase 3<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+TBC1D20  -  tbc1 domain family, member 20<br/>
+
+YAF2  -  yy1 associated factor 2<br/>
+
+EMP3  -  epithelial membrane protein 3<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+MBNL2  -  muscleblind-like splicing regulator 2<br/>
+
+ELK3  -  elk3, ets-domain protein (srf accessory protein 2)<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+CCNL2  -  cyclin l2<br/>
+
+FAM114A1  -  family with sequence similarity 114, member a1<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+DNAJC15  -  dnaj (hsp40) homolog, subfamily c, member 15<br/>
+
+SIRT2  -  sirtuin 2<br/>
+
+ENG  -  endoglin<br/>
+
+RIT1  -  ras-like without caax 1<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+TMEM88  -  transmembrane protein 88<br/>
+
+RBM5  -  rna binding motif protein 5<br/>
+
+NAB1  -  ngfi-a binding protein 1 (egr1 binding protein 1)<br/>
+
+HPCAL1  -  hippocalcin-like 1<br/>
+
+SCMH1  -  sex comb on midleg homolog 1 (drosophila)<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+BMI1  -  bmi1 polycomb ring finger oncogene<br/>
+
+HMGXB3  -  hmg box domain containing 3<br/>
+
+RGS3  -  regulator of g-protein signaling 3<br/>
+
+SLC2A4RG  -  slc2a4 regulator<br/>
+
+MYO1D  -  myosin id<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+TRIM8  -  tripartite motif containing 8<br/>
+
+TMEM9B  -  tmem9 domain family, member b<br/>
+
+SGPL1  -  sphingosine-1-phosphate lyase 1<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+SCAMP2  -  secretory carrier membrane protein 2<br/>
+
+TAX1BP1  -  tax1 (human t-cell leukemia virus type i) binding protein 1<br/>
+
+ADAMTS9  -  adam metallopeptidase with thrombospondin type 1 motif, 9<br/>
+
+ZNF362  -  zinc finger protein 362<br/>
+
+PTTG1IP  -  pituitary tumor-transforming 1 interacting protein<br/>
+
+MAPKBP1  -  mitogen-activated protein kinase binding protein 1<br/>
+
+SPHK1  -  sphingosine kinase 1<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+EFNB2  -  ephrin-b2<br/>
+
+SH3BGRL3  -  sh3 domain binding glutamic acid-rich protein like 3<br/>
+
+RNH1  -  ribonuclease/angiogenin inhibitor 1<br/>
+
+PALLD  -  palladin, cytoskeletal associated protein<br/>
+
+ZSWIM8  -  zinc finger, swim-type containing 8<br/>
+
+ARPC2  -  actin related protein 2/3 complex, subunit 2, 34kda<br/>
+
+HIPK3  -  homeodomain interacting protein kinase 3<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br/>
+
+MBD2  -  methyl-cpg binding domain protein 2<br/>
+
+GRAMD2  -  gram domain containing 2<br/>
+
+ECE1  -  endothelin converting enzyme 1<br/>
+
+COLEC11  -  collectin sub-family member 11<br/>
+
+OPTN  -  optineurin<br/>
+
+TYMP  -  thymidine phosphorylase<br/>
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+LMF2  -  lipase maturation factor 2<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+RNF207  -  ring finger protein 207<br/>
+
+EXPH5  -  exophilin 5<br/>
+
+FKBP14  -  fk506 binding protein 14, 22 kda<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+CAST  -  calpastatin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+REEP1  -  receptor accessory protein 1<br/>
+
+NCCRP1  -  non-specific cytotoxic cell receptor protein 1 homolog (zebrafish)<br/>
+
+PEA15  -  phosphoprotein enriched in astrocytes 15<br/>
+
+LAMA1  -  laminin, alpha 1<br/>
+
+TOM1  -  target of myb1 (chicken)<br/>
+
+PLXND1  -  plexin d1<br/>
+
+NXF1  -  nuclear rna export factor 1<br/>
+
+VIM  -  vimentin<br/>
+
+EXT1  -  exostosin glycosyltransferase 1<br/>
+
+CALU  -  calumenin<br/>
+
+CALD1  -  caldesmon 1<br/>
+
+TBC1D9  -  tbc1 domain family, member 9 (with gram domain)<br/>
+
+MSN  -  moesin<br/>
+
+JOSD1  -  josephin domain containing 1<br/>
+
+SLC35F6  -  solute carrier family 35, member f6<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+HOXB4  -  homeobox b4<br/>
+
+SEPT8  -  septin 8<br/>
+
+CCND3  -  cyclin d3<br/>
+
+UBC  -  ubiquitin c<br/>
+
+HOXB9  -  homeobox b9<br/>
+
+JOSD2  -  josephin domain containing 2<br/>
+
+HOXA5  -  homeobox a5<br/>
+
+HOXA7  -  homeobox a7<br/>
+
+PLEKHM2  -  pleckstrin homology domain containing, family m (with run domain) member 2<br/>
+
+CBFB  -  core-binding factor, beta subunit<br/>
+
+CD164  -  cd164 molecule, sialomucin<br/>
+
+MVP  -  major vault protein<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+MYL9  -  myosin, light chain 9, regulatory<br/>
+
+FBXL17  -  f-box and leucine-rich repeat protein 17<br/>
+
+MYOF  -  myoferlin<br/>
+
+MYADM  -  myeloid-associated differentiation marker<br/>
+
+CLIP1  -  cap-gly domain containing linker protein 1<br/>
+
+ZBTB7C  -  zinc finger and btb domain containing 7c<br/>
+
+FAM129B  -  family with sequence similarity 129, member b<br/>
+
+HMOX1  -  heme oxygenase (decycling) 1<br/>
+
+RTN4  -  reticulon 4<br/>
+
+RRAD  -  ras-related associated with diabetes<br/>
+
+RRAS  -  related ras viral (r-ras) oncogene homolog<br/>
+
+CMTM6  -  cklf-like marvel transmembrane domain containing 6<br/>
+
+MED12  -  mediator complex subunit 12<br/>
+
+TNFRSF9  -  tumor necrosis factor receptor superfamily, member 9<br/>
+
+LEPREL4  -  leprecan-like 4<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FLT1  -  fms-related tyrosine kinase 1<br/>
+
+PSAP  -  prosaposin<br/>
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+RIN2  -  ras and rab interactor 2<br/>
+
+PCED1A  -  pc-esterase domain containing 1a<br/>
+
+LY6G6C  -  lymphocyte antigen 6 complex, locus g6c<br/>
+
+FNDC3B  -  fibronectin type iii domain containing 3b<br/>
+
+CD63  -  cd63 molecule<br/>
+
+FLNC  -  filamin c, gamma<br/>
+
+CD151  -  cd151 molecule (raph blood group)<br/>
+
+CREB3L2  -  camp responsive element binding protein 3-like 2<br/>
+
+PPFIBP1  -  ptprf interacting protein, binding protein 1 (liprin beta 1)<br/>
+
+CD97  -  cd97 molecule<br/>
+
+SCAMP4  -  secretory carrier membrane protein 4<br/>
+
+CD47  -  cd47 molecule<br/>
+
+C5orf24  -  chromosome 5 open reading frame 24<br/>
+
+IL11  -  interleukin 11<br/>
+
+GDF6  -  growth differentiation factor 6<br/>
+
+RHOBTB1  -  rho-related btb domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+TAGLN  -  transgelin<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+TNFRSF21  -  tumor necrosis factor receptor superfamily, member 21<br/>
+
+APPBP2  -  amyloid beta precursor protein (cytoplasmic tail) binding protein 2<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+NUCB2  -  nucleobindin 2<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br/>
+
+PIEZO1  -  piezo-type mechanosensitive ion channel component 1<br/>
+
+ARHGEF17  -  rho guanine nucleotide exchange factor (gef) 17<br/>
+
+SUSD1  -  sushi domain containing 1<br/>
+
+PCDH17  -  protocadherin 17<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+ARL6IP5  -  adp-ribosylation-like factor 6 interacting protein 5<br/>
+
+ZCCHC24  -  zinc finger, cchc domain containing 24<br/>
+
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br/>
+
+PPAP2B  -  phosphatidic acid phosphatase type 2b<br/>
+
+PTPRD  -  protein tyrosine phosphatase, receptor type, d<br/>
+
+PLA2G4C  -  phospholipase a2, group ivc (cytosolic, calcium-independent)<br/>
+
+ERBB2IP  -  erbb2 interacting protein<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+RHOD  -  ras homolog family member d<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+SLC39A2  -  solute carrier family 39 (zinc transporter), member 2<br/>
+
+CCDC92  -  coiled-coil domain containing 92<br/>
+
+KCTD20  -  potassium channel tetramerization domain containing 20<br/>
+
+TLN1  -  talin 1<br/>
+
+LYST  -  lysosomal trafficking regulator<br/>
+
+PLK2  -  polo-like kinase 2<br/>
+
+LEPROT  -  leptin receptor overlapping transcript<br/>
+
+SPSB1  -  spla/ryanodine receptor domain and socs box containing 1<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+LMCD1  -  lim and cysteine-rich domains 1<br/>
+
+AMOTL1  -  angiomotin like 1<br/>
+
+ZC3H12A  -  zinc finger ccch-type containing 12a<br/>
+
+CUEDC1  -  cue domain containing 1<br/>
+
+RAB2A  -  rab2a, member ras oncogene family<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+NFKB1  -  nuclear factor of kappa light polypeptide gene enhancer in b-cells 1<br/>
+
+TNFAIP1  -  tumor necrosis factor, alpha-induced protein 1 (endothelial)<br/>
+
+BCL9L  -  b-cell cll/lymphoma 9-like<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+RNF145  -  ring finger protein 145<br/>
+
+TINAGL1  -  tubulointerstitial nephritis antigen-like 1<br/>
+
+NDFIP2  -  nedd4 family interacting protein 2<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+NEU1  -  sialidase 1 (lysosomal sialidase)<br/>
+
+NEDD9  -  neural precursor cell expressed, developmentally down-regulated 9<br/>
+
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br/>
+
+CCR1  -  chemokine (c-c motif) receptor 1<br/>
+
+CPEB4  -  cytoplasmic polyadenylation element binding protein 4<br/>
+
+CLTB  -  clathrin, light chain b<br/>
+
+NFATC2  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 2<br/>
+
+ANKRD52  -  ankyrin repeat domain 52<br/>
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+TGFB1I1  -  transforming growth factor beta 1 induced transcript 1<br/>
+
+TSPAN15  -  tetraspanin 15<br/>
+
+TGM2  -  transglutaminase 2<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+CPNE2  -  copine ii<br/>
+
+FOSL2  -  fos-like antigen 2<br/>
+
+SLC12A7  -  solute carrier family 12 (potassium/chloride transporter), member 7<br/>
+
+SYTL5  -  synaptotagmin-like 5<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+LYPD3  -  ly6/plaur domain containing 3<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019199&amp;view=details" target="_blank">GO:0019199</a><a name="0019199"></a></td>
+<td>transmembrane receptor protein kinase activity</td>
+<td align="center">7.66E-6</td>
+<td align="center">2.04E-3</td>
+<td align="center">5.20 (15889,76,442,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019199')" id="ctrl_elements_GO:0019199">[+] Show genes</a><br/>
+<div id="elements_GO:0019199" style="display:none"> <font size="1">
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+AXL  -  axl receptor tyrosine kinase<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+FLT1  -  fms-related tyrosine kinase 1<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+ENG  -  endoglin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061134&amp;view=details" target="_blank">GO:0061134</a><a name="0061134"></a></td>
+<td>peptidase regulator activity</td>
+<td align="center">7.96E-6</td>
+<td align="center">2E-3</td>
+<td align="center">3.49 (15889,175,442,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0061134')" id="ctrl_elements_GO:0061134">[+] Show genes</a><br/>
+<div id="elements_GO:0061134" style="display:none"> <font size="1">
+
+CST6  -  cystatin e/m<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+CST3  -  cystatin c<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+PRSS22  -  protease, serine, 22<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+
+CAST  -  calpastatin<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004857&amp;view=details" target="_blank">GO:0004857</a><a name="0004857"></a></td>
+<td>enzyme inhibitor activity</td>
+<td align="center">8.51E-6</td>
+<td align="center">2.03E-3</td>
+<td align="center">2.74 (15889,315,442,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0004857')" id="ctrl_elements_GO:0004857">[+] Show genes</a><br/>
+<div id="elements_GO:0004857" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+CST6  -  cystatin e/m<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+CST3  -  cystatin c<br/>
+
+SOCS3  -  suppressor of cytokine signaling 3<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+ANXA2  -  annexin a2<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+ANXA1  -  annexin a1<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+RNH1  -  ribonuclease/angiogenin inhibitor 1<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+
+CAST  -  calpastatin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004866&amp;view=details" target="_blank">GO:0004866</a><a name="0004866"></a></td>
+<td>endopeptidase inhibitor activity</td>
+<td align="center">1.71E-5</td>
+<td align="center">3.86E-3</td>
+<td align="center">3.84 (15889,131,442,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0004866')" id="ctrl_elements_GO:0004866">[+] Show genes</a><br/>
+<div id="elements_GO:0004866" style="display:none"> <font size="1">
+
+CST6  -  cystatin e/m<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+CST3  -  cystatin c<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+CAST  -  calpastatin<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008092&amp;view=details" target="_blank">GO:0008092</a><a name="0008092"></a></td>
+<td>cytoskeletal protein binding</td>
+<td align="center">2.21E-5</td>
+<td align="center">4.75E-3</td>
+<td align="center">1.90 (15889,871,442,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008092')" id="ctrl_elements_GO:0008092">[+] Show genes</a><br/>
+<div id="elements_GO:0008092" style="display:none"> <font size="1">
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+TAGLN  -  transgelin<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+KIF26B  -  kinesin family member 26b<br/>
+
+GSN  -  gelsolin<br/>
+
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+TLN1  -  talin 1<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+AXL  -  axl receptor tyrosine kinase<br/>
+
+SUN2  -  sad1 and unc84 domain containing 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+FLNC  -  filamin c, gamma<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+SYNPO  -  synaptopodin<br/>
+
+KCNMA1  -  potassium large conductance calcium-activated channel, subfamily m, alpha member 1<br/>
+
+PALLD  -  palladin, cytoskeletal associated protein<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+PLEKHM2  -  pleckstrin homology domain containing, family m (with run domain) member 2<br/>
+
+REEP1  -  receptor accessory protein 1<br/>
+
+ARPC2  -  actin related protein 2/3 complex, subunit 2, 34kda<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+MYL9  -  myosin, light chain 9, regulatory<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+NFKB1  -  nuclear factor of kappa light polypeptide gene enhancer in b-cells 1<br/>
+
+ROCK2  -  rho-associated, coiled-coil containing protein kinase 2<br/>
+
+SSFA2  -  sperm specific antigen 2<br/>
+
+ANXA2  -  annexin a2<br/>
+
+ARL8B  -  adp-ribosylation factor-like 8b<br/>
+
+CLMN  -  calmin (calponin-like, transmembrane)<br/>
+
+CLIP1  -  cap-gly domain containing linker protein 1<br/>
+
+RAB11FIP5  -  rab11 family interacting protein 5 (class i)<br/>
+
+MYO1D  -  myosin id<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+CALD1  -  caldesmon 1<br/>
+
+DIP2B  -  dip2 disco-interacting protein 2 homolog b (drosophila)<br/>
+
+CSRP1  -  cysteine and glycine-rich protein 1<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+MSN  -  moesin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030414&amp;view=details" target="_blank">GO:0030414</a><a name="0030414"></a></td>
+<td>peptidase inhibitor activity</td>
+<td align="center">2.84E-5</td>
+<td align="center">5.83E-3</td>
+<td align="center">3.67 (15889,137,442,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030414')" id="ctrl_elements_GO:0030414">[+] Show genes</a><br/>
+<div id="elements_GO:0030414" style="display:none"> <font size="1">
+
+CST6  -  cystatin e/m<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+CST3  -  cystatin c<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+ANXA2  -  annexin a2<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+CAST  -  calpastatin<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019955&amp;view=details" target="_blank">GO:0019955</a><a name="0019955"></a></td>
+<td>cytokine binding</td>
+<td align="center">3.16E-5</td>
+<td align="center">6.21E-3</td>
+<td align="center">4.15 (15889,104,442,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019955')" id="ctrl_elements_GO:0019955">[+] Show genes</a><br/>
+<div id="elements_GO:0019955" style="display:none"> <font size="1">
+
+LRRC32  -  leucine rich repeat containing 32<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+TNFRSF9  -  tumor necrosis factor receptor superfamily, member 9<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+CCR1  -  chemokine (c-c motif) receptor 1<br/>
+
+ENG  -  endoglin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061135&amp;view=details" target="_blank">GO:0061135</a><a name="0061135"></a></td>
+<td>endopeptidase regulator activity</td>
+<td align="center">4.23E-5</td>
+<td align="center">7.98E-3</td>
+<td align="center">3.54 (15889,142,442,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0061135')" id="ctrl_elements_GO:0061135">[+] Show genes</a><br/>
+<div id="elements_GO:0061135" style="display:none"> <font size="1">
+
+CST6  -  cystatin e/m<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+CST3  -  cystatin c<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+ANXA2  -  annexin a2<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+CAST  -  calpastatin<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019904&amp;view=details" target="_blank">GO:0019904</a><a name="0019904"></a></td>
+<td>protein domain specific binding</td>
+<td align="center">4.75E-5</td>
+<td align="center">8.59E-3</td>
+<td align="center">2.08 (15889,588,442,34)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019904')" id="ctrl_elements_GO:0019904">[+] Show genes</a><br/>
+<div id="elements_GO:0019904" style="display:none"> <font size="1">
+
+CADM1  -  cell adhesion molecule 1<br/>
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+FN1  -  fibronectin 1<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+TLN1  -  talin 1<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+LAMP2  -  lysosomal-associated membrane protein 2<br/>
+
+CALCOCO1  -  calcium binding and coiled-coil domain 1<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+LAMP1  -  lysosomal-associated membrane protein 1<br/>
+
+TMEM88  -  transmembrane protein 88<br/>
+
+PLXND1  -  plexin d1<br/>
+
+ARHGAP31  -  rho gtpase activating protein 31<br/>
+
+VIM  -  vimentin<br/>
+
+GJA5  -  gap junction protein, alpha 5, 40kda<br/>
+
+TGM2  -  transglutaminase 2<br/>
+
+DAP  -  death-associated protein<br/>
+
+BMI1  -  bmi1 polycomb ring finger oncogene<br/>
+
+WBP5  -  ww domain binding protein 5<br/>
+
+PLAUR  -  plasminogen activator, urokinase receptor<br/>
+
+BCAR1  -  breast cancer anti-estrogen resistance 1<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+LEF1  -  lymphoid enhancer-binding factor 1<br/>
+
+MYO1D  -  myosin id<br/>
+
+MBD2  -  methyl-cpg binding domain protein 2<br/>
+
+MED12  -  mediator complex subunit 12<br/>
+
+NDFIP2  -  nedd4 family interacting protein 2<br/>
+
+FZD2  -  frizzled family receptor 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001968&amp;view=details" target="_blank">GO:0001968</a><a name="0001968"></a></td>
+<td>fibronectin binding</td>
+<td align="center">5.06E-5</td>
+<td align="center">8.8E-3</td>
+<td align="center">8.63 (15889,25,442,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0001968')" id="ctrl_elements_GO:0001968">[+] Show genes</a><br/>
+<div id="elements_GO:0001968" style="display:none"> <font size="1">
+
+CTSL  -  cathepsin l<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+SDC4  -  syndecan 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003779&amp;view=details" target="_blank">GO:0003779</a><a name="0003779"></a></td>
+<td>actin binding</td>
+<td align="center">6.82E-5</td>
+<td align="center">1.14E-2</td>
+<td align="center">2.36 (15889,381,442,25)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003779')" id="ctrl_elements_GO:0003779">[+] Show genes</a><br/>
+<div id="elements_GO:0003779" style="display:none"> <font size="1">
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+TAGLN  -  transgelin<br/>
+
+GSN  -  gelsolin<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+TLN1  -  talin 1<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+FLNC  -  filamin c, gamma<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+KCNMA1  -  potassium large conductance calcium-activated channel, subfamily m, alpha member 1<br/>
+
+SYNPO  -  synaptopodin<br/>
+
+PALLD  -  palladin, cytoskeletal associated protein<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+ARPC2  -  actin related protein 2/3 complex, subunit 2, 34kda<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+SSFA2  -  sperm specific antigen 2<br/>
+
+CLMN  -  calmin (calponin-like, transmembrane)<br/>
+
+CALD1  -  caldesmon 1<br/>
+
+MYO1D  -  myosin id<br/>
+
+MSN  -  moesin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019903&amp;view=details" target="_blank">GO:0019903</a><a name="0019903"></a></td>
+<td>protein phosphatase binding</td>
+<td align="center">6.83E-5</td>
+<td align="center">1.1E-2</td>
+<td align="center">3.59 (15889,130,442,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019903')" id="ctrl_elements_GO:0019903">[+] Show genes</a><br/>
+<div id="elements_GO:0019903" style="display:none"> <font size="1">
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+MVP  -  major vault protein<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+SPHK1  -  sphingosine kinase 1<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+STAT6  -  signal transducer and activator of transcription 6, interleukin-4 induced<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+KCNN4  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005509&amp;view=details" target="_blank">GO:0005509</a><a name="0005509"></a></td>
+<td>calcium ion binding</td>
+<td align="center">8.59E-5</td>
+<td align="center">1.34E-2</td>
+<td align="center">2.02 (15889,606,442,34)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005509')" id="ctrl_elements_GO:0005509">[+] Show genes</a><br/>
+<div id="elements_GO:0005509" style="display:none"> <font size="1">
+
+EFHD2  -  ef-hand domain family, member d2<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+GSN  -  gelsolin<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+MCFD2  -  multiple coagulation factor deficiency 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+FKBP14  -  fk506 binding protein 14, 22 kda<br/>
+
+HEG1  -  heart development protein with egf-like domains 1<br/>
+
+NUCB2  -  nucleobindin 2<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+CD97  -  cd97 molecule<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+PCDH10  -  protocadherin 10<br/>
+
+SUSD1  -  sushi domain containing 1<br/>
+
+PCDH17  -  protocadherin 17<br/>
+
+MYL9  -  myosin, light chain 9, regulatory<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+S100A10  -  s100 calcium binding protein a10<br/>
+
+LOXL2  -  lysyl oxidase-like 2<br/>
+
+HPCAL1  -  hippocalcin-like 1<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+CALU  -  calumenin<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br/>
+
+ANXA1  -  annexin a1<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+TBC1D9  -  tbc1 domain family, member 9 (with gram domain)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+PLA2G4C  -  phospholipase a2, group ivc (cytosolic, calcium-independent)<br/>
+
+COLEC11  -  collectin sub-family member 11<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019902&amp;view=details" target="_blank">GO:0019902</a><a name="0019902"></a></td>
+<td>phosphatase binding</td>
+<td align="center">9.41E-5</td>
+<td align="center">1.42E-2</td>
+<td align="center">3.13 (15889,172,442,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019902')" id="ctrl_elements_GO:0019902">[+] Show genes</a><br/>
+<div id="elements_GO:0019902" style="display:none"> <font size="1">
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+MVP  -  major vault protein<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+SPHK1  -  sphingosine kinase 1<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+STAT6  -  signal transducer and activator of transcription 6, interleukin-4 induced<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+KCNN4  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 4<br/>
+
+NFATC2  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005198&amp;view=details" target="_blank">GO:0005198</a><a name="0005198"></a></td>
+<td>structural molecule activity</td>
+<td align="center">1.27E-4</td>
+<td align="center">1.86E-2</td>
+<td align="center">2.00 (15889,593,442,33)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005198')" id="ctrl_elements_GO:0005198">[+] Show genes</a><br/>
+<div id="elements_GO:0005198" style="display:none"> <font size="1">
+
+TPM4  -  tropomyosin 4<br/>
+
+FN1  -  fibronectin 1<br/>
+
+MFAP5  -  microfibrillar associated protein 5<br/>
+
+COPG1  -  coatomer protein complex, subunit gamma 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+TLN1  -  talin 1<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+CLTB  -  clathrin, light chain b<br/>
+
+DCTN3  -  dynactin 3 (p22)<br/>
+
+TUBB6  -  tubulin, beta 6 class v<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+KRT18  -  keratin 18<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+LAMC2  -  laminin, gamma 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+ARPC2  -  actin related protein 2/3 complex, subunit 2, 34kda<br/>
+
+LAMA1  -  laminin, alpha 1<br/>
+
+VIM  -  vimentin<br/>
+
+MYL9  -  myosin, light chain 9, regulatory<br/>
+
+ROCK2  -  rho-associated, coiled-coil containing protein kinase 2<br/>
+
+COL5A2  -  collagen, type v, alpha 2<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+NCMAP  -  noncompact myelin associated protein<br/>
+
+COPA  -  coatomer protein complex, subunit alpha<br/>
+
+MXRA5  -  matrix-remodelling associated 5<br/>
+
+HMOX1  -  heme oxygenase (decycling) 1<br/>
+
+CSRP1  -  cysteine and glycine-rich protein 1<br/>
+
+COL27A1  -  collagen, type xxvii, alpha 1<br/>
+
+TINAGL1  -  tubulointerstitial nephritis antigen-like 1<br/>
+
+ERBB2IP  -  erbb2 interacting protein<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+
+MSN  -  moesin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004714&amp;view=details" target="_blank">GO:0004714</a><a name="0004714"></a></td>
+<td>transmembrane receptor protein tyrosine kinase activity</td>
+<td align="center">1.91E-4</td>
+<td align="center">2.69E-2</td>
+<td align="center">4.96 (15889,58,442,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0004714')" id="ctrl_elements_GO:0004714">[+] Show genes</a><br/>
+<div id="elements_GO:0004714" style="display:none"> <font size="1">
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+AXL  -  axl receptor tyrosine kinase<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+FLT1  -  fms-related tyrosine kinase 1<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005201&amp;view=details" target="_blank">GO:0005201</a><a name="0005201"></a></td>
+<td>extracellular matrix structural constituent</td>
+<td align="center">1.93E-4</td>
+<td align="center">2.65E-2</td>
+<td align="center">3.25 (15889,144,442,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005201')" id="ctrl_elements_GO:0005201">[+] Show genes</a><br/>
+<div id="elements_GO:0005201" style="display:none"> <font size="1">
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+LAMC2  -  laminin, gamma 2<br/>
+
+LAMA1  -  laminin, alpha 1<br/>
+
+FN1  -  fibronectin 1<br/>
+
+MFAP5  -  microfibrillar associated protein 5<br/>
+
+COL5A2  -  collagen, type v, alpha 2<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+MXRA5  -  matrix-remodelling associated 5<br/>
+
+COL27A1  -  collagen, type xxvii, alpha 1<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+TINAGL1  -  tubulointerstitial nephritis antigen-like 1<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004924&amp;view=details" target="_blank">GO:0004924</a><a name="0004924"></a></td>
+<td>oncostatin-M receptor activity</td>
+<td align="center">2.05E-4</td>
+<td align="center">2.73E-2</td>
+<td align="center">21.57 (15889,5,442,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0004924')" id="ctrl_elements_GO:0004924">[+] Show genes</a><br/>
+<div id="elements_GO:0004924" style="display:none"> <font size="1">
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004923&amp;view=details" target="_blank">GO:0004923</a><a name="0004923"></a></td>
+<td>leukemia inhibitory factor receptor activity</td>
+<td align="center">2.05E-4</td>
+<td align="center">2.65E-2</td>
+<td align="center">21.57 (15889,5,442,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0004923')" id="ctrl_elements_GO:0004923">[+] Show genes</a><br/>
+<div id="elements_GO:0004923" style="display:none"> <font size="1">
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005160&amp;view=details" target="_blank">GO:0005160</a><a name="0005160"></a></td>
+<td>transforming growth factor beta receptor binding</td>
+<td align="center">2.29E-4</td>
+<td align="center">2.88E-2</td>
+<td align="center">8.56 (15889,21,442,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005160')" id="ctrl_elements_GO:0005160">[+] Show genes</a><br/>
+<div id="elements_GO:0005160" style="display:none"> <font size="1">
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+BAMBI  -  bmp and activin membrane-bound inhibitor<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+ENG  -  endoglin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044548&amp;view=details" target="_blank">GO:0044548</a><a name="0044548"></a></td>
+<td>S100 protein binding</td>
+<td align="center">3.46E-4</td>
+<td align="center">4.23E-2</td>
+<td align="center">11.06 (15889,13,442,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044548')" id="ctrl_elements_GO:0044548">[+] Show genes</a><br/>
+<div id="elements_GO:0044548" style="display:none"> <font size="1">
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+ANXA2  -  annexin a2<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098772&amp;view=details" target="_blank">GO:0098772</a><a name="0098772"></a></td>
+<td>molecular function regulator</td>
+<td align="center">3.74E-4</td>
+<td align="center">4.45E-2</td>
+<td align="center">1.52 (15889,1533,442,65)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098772')" id="ctrl_elements_GO:0098772">[+] Show genes</a><br/>
+<div id="elements_GO:0098772" style="display:none"> <font size="1">
+
+TBC1D20  -  tbc1 domain family, member 20<br/>
+
+CST6  -  cystatin e/m<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+CST3  -  cystatin c<br/>
+
+FN1  -  fibronectin 1<br/>
+
+AGAP3  -  arfgap with gtpase domain, ankyrin repeat and ph domain 3<br/>
+
+PSAP  -  prosaposin<br/>
+
+RIN2  -  ras and rab interactor 2<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+CCNL2  -  cyclin l2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+TOR1AIP2  -  torsin a interacting protein 2<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+CYTH2  -  cytohesin 2<br/>
+
+DNAJC15  -  dnaj (hsp40) homolog, subfamily c, member 15<br/>
+
+CAST  -  calpastatin<br/>
+
+SIPA1L2  -  signal-induced proliferation-associated 1 like 2<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+CCL2  -  chemokine (c-c motif) ligand 2<br/>
+
+ARHGAP21  -  rho gtpase activating protein 21<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+IL11  -  interleukin 11<br/>
+
+GDF6  -  growth differentiation factor 6<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+RGS3  -  regulator of g-protein signaling 3<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+TBC1D9  -  tbc1 domain family, member 9 (with gram domain)<br/>
+
+IL32  -  interleukin 32<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+MDK  -  midkine (neurite growth-promoting factor 2)<br/>
+
+CCND3  -  cyclin d3<br/>
+
+GPRC5A  -  g protein-coupled receptor, family c, group 5, member a<br/>
+
+PRSS22  -  protease, serine, 22<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+NUCB2  -  nucleobindin 2<br/>
+
+EVI5  -  ecotropic viral integration site 5<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+RNH1  -  ribonuclease/angiogenin inhibitor 1<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+
+ARHGEF17  -  rho guanine nucleotide exchange factor (gef) 17<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+SOCS3  -  suppressor of cytokine signaling 3<br/>
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+ARHGAP31  -  rho gtpase activating protein 31<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+ANXA2  -  annexin a2<br/>
+
+ARHGEF40  -  rho guanine nucleotide exchange factor (gef) 40<br/>
+
+ANXA1  -  annexin a1<br/>
+
+COPA  -  coatomer protein complex, subunit alpha<br/>
+
+ACAP3  -  arfgap with coiled-coil, ankyrin repeat and ph domains 3<br/>
+
+RRAD  -  ras-related associated with diabetes<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+
+TYMP  -  thymidine phosphorylase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070492&amp;view=details" target="_blank">GO:0070492</a><a name="0070492"></a></td>
+<td>oligosaccharide binding</td>
+<td align="center">4.74E-4</td>
+<td align="center">5.5E-2</td>
+<td align="center">10.27 (15889,14,442,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070492')" id="ctrl_elements_GO:0070492">[+] Show genes</a><br/>
+<div id="elements_GO:0070492" style="display:none"> <font size="1">
+
+LGALS9  -  lectin, galactoside-binding, soluble, 9<br/>
+
+LGALS1  -  lectin, galactoside-binding, soluble, 1<br/>
+
+COLEC11  -  collectin sub-family member 11<br/>
+
+LOXL2  -  lysyl oxidase-like 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042802&amp;view=details" target="_blank">GO:0042802</a><a name="0042802"></a></td>
+<td>identical protein binding</td>
+<td align="center">4.78E-4</td>
+<td align="center">5.41E-2</td>
+<td align="center">1.49 (15889,1667,442,69)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042802')" id="ctrl_elements_GO:0042802">[+] Show genes</a><br/>
+<div id="elements_GO:0042802" style="display:none"> <font size="1">
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+CST3  -  cystatin c<br/>
+
+FN1  -  fibronectin 1<br/>
+
+CCDC92  -  coiled-coil domain containing 92<br/>
+
+ZBTB1  -  zinc finger and btb domain containing 1<br/>
+
+PSAP  -  prosaposin<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+SDC4  -  syndecan 4<br/>
+
+LY6G6C  -  lymphocyte antigen 6 complex, locus g6c<br/>
+
+CERCAM  -  cerebral endothelial cell adhesion molecule<br/>
+
+KCTD20  -  potassium channel tetramerization domain containing 20<br/>
+
+SUN2  -  sad1 and unc84 domain containing 2<br/>
+
+LGALS1  -  lectin, galactoside-binding, soluble, 1<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+ACADVL  -  acyl-coa dehydrogenase, very long chain<br/>
+
+AMOTL1  -  angiomotin like 1<br/>
+
+ENG  -  endoglin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+MME  -  membrane metallo-endopeptidase<br/>
+
+VIM  -  vimentin<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+NFKB1  -  nuclear factor of kappa light polypeptide gene enhancer in b-cells 1<br/>
+
+EXT1  -  exostosin glycosyltransferase 1<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+TNFAIP1  -  tumor necrosis factor, alpha-induced protein 1 (endothelial)<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+STK10  -  serine/threonine kinase 10<br/>
+
+TRIM8  -  tripartite motif containing 8<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+CADM1  -  cell adhesion molecule 1<br/>
+
+GALE  -  udp-galactose-4-epimerase<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+STAT6  -  signal transducer and activator of transcription 6, interleukin-4 induced<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+LTBR  -  lymphotoxin beta receptor (tnfr superfamily, member 3)<br/>
+
+NQO1  -  nad(p)h dehydrogenase, quinone 1<br/>
+
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br/>
+
+PON2  -  paraoxonase 2<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+C1QTNF6  -  c1q and tumor necrosis factor related protein 6<br/>
+
+MGLL  -  monoglyceride lipase<br/>
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+MVP  -  major vault protein<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+TGM2  -  transglutaminase 2<br/>
+
+BCL6  -  b-cell cll/lymphoma 6<br/>
+
+GBP2  -  guanylate binding protein 2, interferon-inducible<br/>
+
+S100A10  -  s100 calcium binding protein a10<br/>
+
+ANXA2  -  annexin a2<br/>
+
+ANXA1  -  annexin a1<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+HMOX1  -  heme oxygenase (decycling) 1<br/>
+
+ECE1  -  endothelin converting enzyme 1<br/>
+
+OPTN  -  optineurin<br/>
+
+TYMP  -  thymidine phosphorylase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004897&amp;view=details" target="_blank">GO:0004897</a><a name="0004897"></a></td>
+<td>ciliary neurotrophic factor receptor activity</td>
+<td align="center">6.88E-4</td>
+<td align="center">7.6E-2</td>
+<td align="center">15.41 (15889,7,442,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0004897')" id="ctrl_elements_GO:0004897">[+] Show genes</a><br/>
+<div id="elements_GO:0004897" style="display:none"> <font size="1">
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005021&amp;view=details" target="_blank">GO:0005021</a><a name="0005021"></a></td>
+<td>vascular endothelial growth factor-activated receptor activity</td>
+<td align="center">6.88E-4</td>
+<td align="center">7.42E-2</td>
+<td align="center">15.41 (15889,7,442,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005021')" id="ctrl_elements_GO:0005021">[+] Show genes</a><br/>
+<div id="elements_GO:0005021" style="display:none"> <font size="1">
+
+NRP1  -  neuropilin 1<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+FLT1  -  fms-related tyrosine kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003674&amp;view=details" target="_blank">GO:0003674</a><a name="0003674"></a></td>
+<td>molecular_function</td>
+<td align="center">7.54E-4</td>
+<td align="center">7.93E-2</td>
+<td align="center">1.04 (15889,14875,442,429)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003674')" id="ctrl_elements_GO:0003674">[+] Show genes</a><br/>
+<div id="elements_GO:0003674" style="display:none"> <font size="1">
+
+LGALS9  -  lectin, galactoside-binding, soluble, 9<br/>
+
+C9orf3  -  chromosome 9 open reading frame 3<br/>
+
+AGAP3  -  arfgap with gtpase domain, ankyrin repeat and ph domain 3<br/>
+
+LGALS8  -  lectin, galactoside-binding, soluble, 8<br/>
+
+PHLDA3  -  pleckstrin homology-like domain, family a, member 3<br/>
+
+LIFR  -  leukemia inhibitory factor receptor alpha<br/>
+
+SERINC3  -  serine incorporator 3<br/>
+
+LGALS1  -  lectin, galactoside-binding, soluble, 1<br/>
+
+NAGK  -  n-acetylglucosamine kinase<br/>
+
+ACADVL  -  acyl-coa dehydrogenase, very long chain<br/>
+
+GJA5  -  gap junction protein, alpha 5, 40kda<br/>
+
+MAGED2  -  melanoma antigen family d, 2<br/>
+
+H2AFY  -  h2a histone family, member y<br/>
+
+LOXL2  -  lysyl oxidase-like 2<br/>
+
+CRHBP  -  corticotropin releasing hormone binding protein<br/>
+
+PLAUR  -  plasminogen activator, urokinase receptor<br/>
+
+BCAR1  -  breast cancer anti-estrogen resistance 1<br/>
+
+H6PD  -  hexose-6-phosphate dehydrogenase (glucose 1-dehydrogenase)<br/>
+
+SMPDL3A  -  sphingomyelin phosphodiesterase, acid-like 3a<br/>
+
+PRR5  -  proline rich 5 (renal)<br/>
+
+SOAT1  -  sterol o-acyltransferase 1<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+HGSNAT  -  heparan-alpha-glucosaminide n-acetyltransferase<br/>
+
+CADM1  -  cell adhesion molecule 1<br/>
+
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br/>
+
+SCARA3  -  scavenger receptor class a, member 3<br/>
+
+RHOU  -  ras homolog family member u<br/>
+
+KRT7  -  keratin 7<br/>
+
+TUBB6  -  tubulin, beta 6 class v<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+PTGES  -  prostaglandin e synthase<br/>
+
+PPARD  -  peroxisome proliferator-activated receptor delta<br/>
+
+KRT18  -  keratin 18<br/>
+
+LAMP2  -  lysosomal-associated membrane protein 2<br/>
+
+PON2  -  paraoxonase 2<br/>
+
+LAMP1  -  lysosomal-associated membrane protein 1<br/>
+
+LAMC2  -  laminin, gamma 2<br/>
+
+COL6A3  -  collagen, type vi, alpha 3<br/>
+
+LCAT  -  lecithin-cholesterol acyltransferase<br/>
+
+ROCK2  -  rho-associated, coiled-coil containing protein kinase 2<br/>
+
+COL5A2  -  collagen, type v, alpha 2<br/>
+
+PPP1R15A  -  protein phosphatase 1, regulatory subunit 15a<br/>
+
+SMARCA2  -  swi/snf related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2<br/>
+
+PLD3  -  phospholipase d family, member 3<br/>
+
+SNAI2  -  snail family zinc finger 2<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+SLCO2A1  -  solute carrier organic anion transporter family, member 2a1<br/>
+
+GNA11  -  guanine nucleotide binding protein (g protein), alpha 11 (gq class)<br/>
+
+SLC22A3  -  solute carrier family 22 (organic cation transporter), member 3<br/>
+
+COPA  -  coatomer protein complex, subunit alpha<br/>
+
+ACAP3  -  arfgap with coiled-coil, ankyrin repeat and ph domains 3<br/>
+
+COL27A1  -  collagen, type xxvii, alpha 1<br/>
+
+STX12  -  syntaxin 12<br/>
+
+LAMB1  -  laminin, beta 1<br/>
+
+CST6  -  cystatin e/m<br/>
+
+PTPN21  -  protein tyrosine phosphatase, non-receptor type 21<br/>
+
+CST3  -  cystatin c<br/>
+
+LOXL4  -  lysyl oxidase-like 4<br/>
+
+LRRN4  -  leucine rich repeat neuronal 4<br/>
+
+CERCAM  -  cerebral endothelial cell adhesion molecule<br/>
+
+SUN2  -  sad1 and unc84 domain containing 2<br/>
+
+TOR1AIP2  -  torsin a interacting protein 2<br/>
+
+PARVA  -  parvin, alpha<br/>
+
+HIVEP3  -  human immunodeficiency virus type i enhancer binding protein 3<br/>
+
+KCNN4  -  potassium intermediate/small conductance calcium-activated channel, subfamily n, member 4<br/>
+
+KCNMA1  -  potassium large conductance calcium-activated channel, subfamily m, alpha member 1<br/>
+
+CTSL  -  cathepsin l<br/>
+
+STOML1  -  stomatin (epb72)-like 1<br/>
+
+CTSB  -  cathepsin b<br/>
+
+LIPG  -  lipase, endothelial<br/>
+
+ABHD2  -  abhydrolase domain containing 2<br/>
+
+STK10  -  serine/threonine kinase 10<br/>
+
+FZD2  -  frizzled family receptor 2<br/>
+
+GALE  -  udp-galactose-4-epimerase<br/>
+
+MIR22  -  microrna 22<br/>
+
+MFAP5  -  microfibrillar associated protein 5<br/>
+
+ABTB2  -  ankyrin repeat and btb (poz) domain containing 2<br/>
+
+JUNB  -  jun b proto-oncogene<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+STAT6  -  signal transducer and activator of transcription 6, interleukin-4 induced<br/>
+
+CRIM1  -  cysteine rich transmembrane bmp regulator 1 (chordin-like)<br/>
+
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br/>
+
+MAST4  -  microtubule associated serine/threonine kinase family member 4<br/>
+
+RAB31  -  rab31, member ras oncogene family<br/>
+
+FBXO32  -  f-box protein 32<br/>
+
+C1QTNF6  -  c1q and tumor necrosis factor related protein 6<br/>
+
+ZNF503  -  zinc finger protein 503<br/>
+
+GATA4  -  gata binding protein 4<br/>
+
+DOK4  -  docking protein 4<br/>
+
+SSFA2  -  sperm specific antigen 2<br/>
+
+GBP2  -  guanylate binding protein 2, interferon-inducible<br/>
+
+BAMBI  -  bmp and activin membrane-bound inhibitor<br/>
+
+LRRC32  -  leucine rich repeat containing 32<br/>
+
+VAMP3  -  vesicle-associated membrane protein 3<br/>
+
+WBP5  -  ww domain binding protein 5<br/>
+
+ANXA2  -  annexin a2<br/>
+
+SFT2D2  -  sft2 domain containing 2<br/>
+
+ARHGEF40  -  rho guanine nucleotide exchange factor (gef) 40<br/>
+
+CLMN  -  calmin (calponin-like, transmembrane)<br/>
+
+SRC  -  v-src avian sarcoma (schmidt-ruppin a-2) viral oncogene homolog<br/>
+
+ANXA1  -  annexin a1<br/>
+
+LEF1  -  lymphoid enhancer-binding factor 1<br/>
+
+CSRP1  -  cysteine and glycine-rich protein 1<br/>
+
+PACS1  -  phosphofurin acidic cluster sorting protein 1<br/>
+
+PHLDB2  -  pleckstrin homology-like domain, family b, member 2<br/>
+
+GSN  -  gelsolin<br/>
+
+STK40  -  serine/threonine kinase 40<br/>
+
+MGAT4B  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase, isozyme b<br/>
+
+SDC4  -  syndecan 4<br/>
+
+CYTH2  -  cytohesin 2<br/>
+
+DCTN3  -  dynactin 3 (p22)<br/>
+
+MLLT1  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 1<br/>
+
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+MME  -  membrane metallo-endopeptidase<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CYB5R1  -  cytochrome b5 reductase 1<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+CCL2  -  chemokine (c-c motif) ligand 2<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+ZHX1  -  zinc fingers and homeoboxes 1<br/>
+
+MORC4  -  morc family cw-type zinc finger 4<br/>
+
+ARL8B  -  adp-ribosylation factor-like 8b<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+SERPINE1  -  serpin peptidase inhibitor, clade e (nexin, plasminogen activator inhibitor type 1), member 1<br/>
+
+MXRA5  -  matrix-remodelling associated 5<br/>
+
+ZNF70  -  zinc finger protein 70<br/>
+
+MOV10  -  mov10, moloney leukemia virus 10, homolog (mouse)<br/>
+
+CMPK1  -  cytidine monophosphate (ump-cmp) kinase 1, cytosolic<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+IL32  -  interleukin 32<br/>
+
+C15orf38  -  chromosome 15 open reading frame 38<br/>
+
+MDK  -  midkine (neurite growth-promoting factor 2)<br/>
+
+KIF26B  -  kinesin family member 26b<br/>
+
+SGMS2  -  sphingomyelin synthase 2<br/>
+
+STS  -  steroid sulfatase (microsomal), isozyme s<br/>
+
+RNF103  -  ring finger protein 103<br/>
+
+PDGFRB  -  platelet-derived growth factor receptor, beta polypeptide<br/>
+
+SETBP1  -  set binding protein 1<br/>
+
+UACA  -  uveal autoantigen with coiled-coil domains and ankyrin repeats<br/>
+
+MCFD2  -  multiple coagulation factor deficiency 2<br/>
+
+HEG1  -  heart development protein with egf-like domains 1<br/>
+
+EVI5  -  ecotropic viral integration site 5<br/>
+
+FAM65A  -  family with sequence similarity 65, member a<br/>
+
+LRP10  -  low density lipoprotein receptor-related protein 10<br/>
+
+MAP3K1  -  mitogen-activated protein kinase kinase kinase 1, e3 ubiquitin protein ligase<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+SERINC1  -  serine incorporator 1<br/>
+
+ARHGAP31  -  rho gtpase activating protein 31<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+S100A10  -  s100 calcium binding protein a10<br/>
+
+DAP  -  death-associated protein<br/>
+
+ODF3B  -  outer dense fiber of sperm tails 3b<br/>
+
+HEXA  -  hexosaminidase a (alpha polypeptide)<br/>
+
+DAB2  -  dab, mitogen-responsive phosphoprotein, homolog 2 (drosophila)<br/>
+
+CDC42EP1  -  cdc42 effector protein (rho gtpase binding) 1<br/>
+
+MAN2A2  -  mannosidase, alpha, class 2a, member 2<br/>
+
+RFK  -  riboflavin kinase<br/>
+
+ZBTB1  -  zinc finger and btb domain containing 1<br/>
+
+SLC7A4  -  solute carrier family 7, member 4<br/>
+
+UEVLD  -  uev and lactate/malate dehyrogenase domains<br/>
+
+GNS  -  glucosamine (n-acetyl)-6-sulfatase<br/>
+
+ATP1B1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br/>
+
+AGO3  -  argonaute risc catalytic component 3<br/>
+
+PLEKHA6  -  pleckstrin homology domain containing, family a member 6<br/>
+
+SIRT7  -  sirtuin 7<br/>
+
+SIPA1L2  -  signal-induced proliferation-associated 1 like 2<br/>
+
+ZFHX3  -  zinc finger homeobox 3<br/>
+
+TNKS1BP1  -  tankyrase 1 binding protein 1, 182kda<br/>
+
+UBE2J1  -  ubiquitin-conjugating enzyme e2, j1<br/>
+
+PCDH10  -  protocadherin 10<br/>
+
+ARHGAP21  -  rho gtpase activating protein 21<br/>
+
+DVL3  -  dishevelled segment polarity protein 3<br/>
+
+SLC4A2  -  solute carrier family 4 (anion exchanger), member 2<br/>
+
+MCHR1  -  melanin-concentrating hormone receptor 1<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+IKBIP  -  ikbkb interacting protein<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+RAB11FIP5  -  rab11 family interacting protein 5 (class i)<br/>
+
+DIP2B  -  dip2 disco-interacting protein 2 homolog b (drosophila)<br/>
+
+DUSP3  -  dual specificity phosphatase 3<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+EFHD2  -  ef-hand domain family, member d2<br/>
+
+PITX1  -  paired-like homeodomain 1<br/>
+
+USP40  -  ubiquitin specific peptidase 40<br/>
+
+SLC7A6  -  solute carrier family 7 (amino acid transporter light chain, y+l system), member 6<br/>
+
+CRISPLD2  -  cysteine-rich secretory protein lccl domain containing 2<br/>
+
+COPG1  -  coatomer protein complex, subunit gamma 1<br/>
+
+GPRC5A  -  g protein-coupled receptor, family c, group 5, member a<br/>
+
+TOM1L2  -  target of myb1-like 2 (chicken)<br/>
+
+PLAT  -  plasminogen activator, tissue<br/>
+
+AXL  -  axl receptor tyrosine kinase<br/>
+
+ASXL1  -  additional sex combs like 1 (drosophila)<br/>
+
+ST3GAL1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br/>
+
+LTBR  -  lymphotoxin beta receptor (tnfr superfamily, member 3)<br/>
+
+PKP2  -  plakophilin 2<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+NQO1  -  nad(p)h dehydrogenase, quinone 1<br/>
+
+SYNPO  -  synaptopodin<br/>
+
+CALCOCO1  -  calcium binding and coiled-coil domain 1<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+MGLL  -  monoglyceride lipase<br/>
+
+MED15  -  mediator complex subunit 15<br/>
+
+SERPINB8  -  serpin peptidase inhibitor, clade b (ovalbumin), member 8<br/>
+
+SOCS3  -  suppressor of cytokine signaling 3<br/>
+
+CLIC3  -  chloride intracellular channel 3<br/>
+
+PHKG2  -  phosphorylase kinase, gamma 2 (testis)<br/>
+
+BCL6  -  b-cell cll/lymphoma 6<br/>
+
+GRINA  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br/>
+
+PLOD3  -  procollagen-lysine, 2-oxoglutarate 5-dioxygenase 3<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+BOK  -  bcl2-related ovarian killer<br/>
+
+TBC1D20  -  tbc1 domain family, member 20<br/>
+
+YAF2  -  yy1 associated factor 2<br/>
+
+PQLC2  -  pq loop repeat containing 2<br/>
+
+EMP3  -  epithelial membrane protein 3<br/>
+
+KIFAP3  -  kinesin-associated protein 3<br/>
+
+MBNL2  -  muscleblind-like splicing regulator 2<br/>
+
+ELK3  -  elk3, ets-domain protein (srf accessory protein 2)<br/>
+
+FAM114A1  -  family with sequence similarity 114, member a1<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+CCNL2  -  cyclin l2<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+DNAJC15  -  dnaj (hsp40) homolog, subfamily c, member 15<br/>
+
+SIRT2  -  sirtuin 2<br/>
+
+ENG  -  endoglin<br/>
+
+RIT1  -  ras-like without caax 1<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+TMEM88  -  transmembrane protein 88<br/>
+
+CEACAM1  -  carcinoembryonic antigen-related cell adhesion molecule 1 (biliary glycoprotein)<br/>
+
+RBM5  -  rna binding motif protein 5<br/>
+
+NAB1  -  ngfi-a binding protein 1 (egr1 binding protein 1)<br/>
+
+HPCAL1  -  hippocalcin-like 1<br/>
+
+SCMH1  -  sex comb on midleg homolog 1 (drosophila)<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+BMI1  -  bmi1 polycomb ring finger oncogene<br/>
+
+HMGXB3  -  hmg box domain containing 3<br/>
+
+RGS3  -  regulator of g-protein signaling 3<br/>
+
+SLC2A4RG  -  slc2a4 regulator<br/>
+
+MYO1D  -  myosin id<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+TRIM8  -  tripartite motif containing 8<br/>
+
+TMEM9B  -  tmem9 domain family, member b<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+SGPL1  -  sphingosine-1-phosphate lyase 1<br/>
+
+SCAMP2  -  secretory carrier membrane protein 2<br/>
+
+TAX1BP1  -  tax1 (human t-cell leukemia virus type i) binding protein 1<br/>
+
+ADAMTS9  -  adam metallopeptidase with thrombospondin type 1 motif, 9<br/>
+
+ZNF362  -  zinc finger protein 362<br/>
+
+PTTG1IP  -  pituitary tumor-transforming 1 interacting protein<br/>
+
+MAPKBP1  -  mitogen-activated protein kinase binding protein 1<br/>
+
+SPHK1  -  sphingosine kinase 1<br/>
+
+MYH9  -  myosin, heavy chain 9, non-muscle<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+EFNB2  -  ephrin-b2<br/>
+
+SH3BGRL3  -  sh3 domain binding glutamic acid-rich protein like 3<br/>
+
+RNH1  -  ribonuclease/angiogenin inhibitor 1<br/>
+
+PALLD  -  palladin, cytoskeletal associated protein<br/>
+
+ZSWIM8  -  zinc finger, swim-type containing 8<br/>
+
+ARPC2  -  actin related protein 2/3 complex, subunit 2, 34kda<br/>
+
+HIPK3  -  homeodomain interacting protein kinase 3<br/>
+
+SFXN3  -  sideroflexin 3<br/>
+
+SEC61A1  -  sec61 alpha 1 subunit (s. cerevisiae)<br/>
+
+FSTL3  -  follistatin-like 3 (secreted glycoprotein)<br/>
+
+MBD2  -  methyl-cpg binding domain protein 2<br/>
+
+GRAMD2  -  gram domain containing 2<br/>
+
+ECE1  -  endothelin converting enzyme 1<br/>
+
+COLEC11  -  collectin sub-family member 11<br/>
+
+OPTN  -  optineurin<br/>
+
+TYMP  -  thymidine phosphorylase<br/>
+
+CAPZA1  -  capping protein (actin filament) muscle z-line, alpha 1<br/>
+
+LMF2  -  lipase maturation factor 2<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+RNF207  -  ring finger protein 207<br/>
+
+EXPH5  -  exophilin 5<br/>
+
+FKBP14  -  fk506 binding protein 14, 22 kda<br/>
+
+BAIAP2  -  bai1-associated protein 2<br/>
+
+CAST  -  calpastatin<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+REEP1  -  receptor accessory protein 1<br/>
+
+NCCRP1  -  non-specific cytotoxic cell receptor protein 1 homolog (zebrafish)<br/>
+
+PEA15  -  phosphoprotein enriched in astrocytes 15<br/>
+
+LAMA1  -  laminin, alpha 1<br/>
+
+TOM1  -  target of myb1 (chicken)<br/>
+
+PLXND1  -  plexin d1<br/>
+
+NXF1  -  nuclear rna export factor 1<br/>
+
+VIM  -  vimentin<br/>
+
+EXT1  -  exostosin glycosyltransferase 1<br/>
+
+CALU  -  calumenin<br/>
+
+CALD1  -  caldesmon 1<br/>
+
+TBC1D9  -  tbc1 domain family, member 9 (with gram domain)<br/>
+
+MSN  -  moesin<br/>
+
+JOSD1  -  josephin domain containing 1<br/>
+
+SLC35F6  -  solute carrier family 35, member f6<br/>
+
+TRADD  -  tnfrsf1a-associated via death domain<br/>
+
+HOXB4  -  homeobox b4<br/>
+
+SEPT8  -  septin 8<br/>
+
+CCND3  -  cyclin d3<br/>
+
+UBC  -  ubiquitin c<br/>
+
+HOXB9  -  homeobox b9<br/>
+
+JOSD2  -  josephin domain containing 2<br/>
+
+HOXA5  -  homeobox a5<br/>
+
+HOXA7  -  homeobox a7<br/>
+
+PLEKHM2  -  pleckstrin homology domain containing, family m (with run domain) member 2<br/>
+
+CBFB  -  core-binding factor, beta subunit<br/>
+
+CD164  -  cd164 molecule, sialomucin<br/>
+
+MVP  -  major vault protein<br/>
+
+EPHB2  -  eph receptor b2<br/>
+
+MYL9  -  myosin, light chain 9, regulatory<br/>
+
+FBXL17  -  f-box and leucine-rich repeat protein 17<br/>
+
+ST3GAL6  -  st3 beta-galactoside alpha-2,3-sialyltransferase 6<br/>
+
+MYOF  -  myoferlin<br/>
+
+NCMAP  -  noncompact myelin associated protein<br/>
+
+MYADM  -  myeloid-associated differentiation marker<br/>
+
+CLIP1  -  cap-gly domain containing linker protein 1<br/>
+
+ZBTB7C  -  zinc finger and btb domain containing 7c<br/>
+
+FAM129B  -  family with sequence similarity 129, member b<br/>
+
+HMOX1  -  heme oxygenase (decycling) 1<br/>
+
+RTN4  -  reticulon 4<br/>
+
+RRAD  -  ras-related associated with diabetes<br/>
+
+RRAS  -  related ras viral (r-ras) oncogene homolog<br/>
+
+CMTM6  -  cklf-like marvel transmembrane domain containing 6<br/>
+
+MED12  -  mediator complex subunit 12<br/>
+
+TNFRSF9  -  tumor necrosis factor receptor superfamily, member 9<br/>
+
+LEPREL4  -  leprecan-like 4<br/>
+
+FN1  -  fibronectin 1<br/>
+
+FLT1  -  fms-related tyrosine kinase 1<br/>
+
+PSAP  -  prosaposin<br/>
+
+IL13RA1  -  interleukin 13 receptor, alpha 1<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+RIN2  -  ras and rab interactor 2<br/>
+
+PCED1A  -  pc-esterase domain containing 1a<br/>
+
+LY6G6C  -  lymphocyte antigen 6 complex, locus g6c<br/>
+
+FNDC3B  -  fibronectin type iii domain containing 3b<br/>
+
+CD63  -  cd63 molecule<br/>
+
+FLNC  -  filamin c, gamma<br/>
+
+CD151  -  cd151 molecule (raph blood group)<br/>
+
+CREB3L2  -  camp responsive element binding protein 3-like 2<br/>
+
+PPFIBP1  -  ptprf interacting protein, binding protein 1 (liprin beta 1)<br/>
+
+CD97  -  cd97 molecule<br/>
+
+SCAMP4  -  secretory carrier membrane protein 4<br/>
+
+TTYH3  -  tweety homolog 3 (drosophila)<br/>
+
+C5orf24  -  chromosome 5 open reading frame 24<br/>
+
+CD47  -  cd47 molecule<br/>
+
+IL11  -  interleukin 11<br/>
+
+GDF6  -  growth differentiation factor 6<br/>
+
+RHOBTB1  -  rho-related btb domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+TAGLN  -  transgelin<br/>
+
+DAZAP2  -  daz associated protein 2<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+TNFRSF21  -  tumor necrosis factor receptor superfamily, member 21<br/>
+
+APPBP2  -  amyloid beta precursor protein (cytoplasmic tail) binding protein 2<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+NUCB2  -  nucleobindin 2<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+CEBPB  -  ccaat/enhancer binding protein (c/ebp), beta<br/>
+
+PIEZO1  -  piezo-type mechanosensitive ion channel component 1<br/>
+
+ARHGEF17  -  rho guanine nucleotide exchange factor (gef) 17<br/>
+
+SUSD1  -  sushi domain containing 1<br/>
+
+PCDH17  -  protocadherin 17<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+CDKN2B  -  cyclin-dependent kinase inhibitor 2b (p15, inhibits cdk4)<br/>
+
+ARL6IP5  -  adp-ribosylation-like factor 6 interacting protein 5<br/>
+
+ZCCHC24  -  zinc finger, cchc domain containing 24<br/>
+
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br/>
+
+PPAP2B  -  phosphatidic acid phosphatase type 2b<br/>
+
+PTPRD  -  protein tyrosine phosphatase, receptor type, d<br/>
+
+PLA2G4C  -  phospholipase a2, group ivc (cytosolic, calcium-independent)<br/>
+
+ERBB2IP  -  erbb2 interacting protein<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+RHOD  -  ras homolog family member d<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+SLC39A2  -  solute carrier family 39 (zinc transporter), member 2<br/>
+
+CCDC92  -  coiled-coil domain containing 92<br/>
+
+KCTD20  -  potassium channel tetramerization domain containing 20<br/>
+
+TLN1  -  talin 1<br/>
+
+LYST  -  lysosomal trafficking regulator<br/>
+
+PLK2  -  polo-like kinase 2<br/>
+
+LEPROT  -  leptin receptor overlapping transcript<br/>
+
+SPSB1  -  spla/ryanodine receptor domain and socs box containing 1<br/>
+
+SEC62  -  sec62 homolog (s. cerevisiae)<br/>
+
+GIPC1  -  gipc pdz domain containing family, member 1<br/>
+
+LMCD1  -  lim and cysteine-rich domains 1<br/>
+
+AMOTL1  -  angiomotin like 1<br/>
+
+ZC3H12A  -  zinc finger ccch-type containing 12a<br/>
+
+CUEDC1  -  cue domain containing 1<br/>
+
+RAB2A  -  rab2a, member ras oncogene family<br/>
+
+FAM65B  -  family with sequence similarity 65, member b<br/>
+
+NFKB1  -  nuclear factor of kappa light polypeptide gene enhancer in b-cells 1<br/>
+
+TNFAIP1  -  tumor necrosis factor, alpha-induced protein 1 (endothelial)<br/>
+
+BCL9L  -  b-cell cll/lymphoma 9-like<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+RNF145  -  ring finger protein 145<br/>
+
+TINAGL1  -  tubulointerstitial nephritis antigen-like 1<br/>
+
+NDFIP2  -  nedd4 family interacting protein 2<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+NEU1  -  sialidase 1 (lysosomal sialidase)<br/>
+
+NEDD9  -  neural precursor cell expressed, developmentally down-regulated 9<br/>
+
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br/>
+
+CCR1  -  chemokine (c-c motif) receptor 1<br/>
+
+PRSS22  -  protease, serine, 22<br/>
+
+CPEB4  -  cytoplasmic polyadenylation element binding protein 4<br/>
+
+CLTB  -  clathrin, light chain b<br/>
+
+NFATC2  -  nuclear factor of activated t-cells, cytoplasmic, calcineurin-dependent 2<br/>
+
+TFPI  -  tissue factor pathway inhibitor (lipoprotein-associated coagulation inhibitor)<br/>
+
+ANKRD52  -  ankyrin repeat domain 52<br/>
+
+TGFB1  -  transforming growth factor, beta 1<br/>
+
+TGFB1I1  -  transforming growth factor beta 1 induced transcript 1<br/>
+
+TSPAN15  -  tetraspanin 15<br/>
+
+TGM2  -  transglutaminase 2<br/>
+
+HCAR2  -  hydroxycarboxylic acid receptor 2<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+CPNE2  -  copine ii<br/>
+
+FOSL2  -  fos-like antigen 2<br/>
+
+SLC12A7  -  solute carrier family 12 (potassium/chloride transporter), member 7<br/>
+
+SYTL5  -  synaptotagmin-like 5<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+LYPD3  -  ly6/plaur domain containing 3<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046872&amp;view=details" target="_blank">GO:0046872</a><a name="0046872"></a></td>
+<td>metal ion binding</td>
+<td align="center">8.41E-4</td>
+<td align="center">8.65E-2</td>
+<td align="center">1.28 (15889,3712,442,132)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0046872')" id="ctrl_elements_GO:0046872">[+] Show genes</a><br/>
+<div id="elements_GO:0046872" style="display:none"> <font size="1">
+
+YAF2  -  yy1 associated factor 2<br/>
+
+C9orf3  -  chromosome 9 open reading frame 3<br/>
+
+AGAP3  -  arfgap with gtpase domain, ankyrin repeat and ph domain 3<br/>
+
+MBNL2  -  muscleblind-like splicing regulator 2<br/>
+
+GSN  -  gelsolin<br/>
+
+CDH2  -  cadherin 2, type 1, n-cadherin (neuronal)<br/>
+
+MGAT4B  -  mannosyl (alpha-1,3-)-glycoprotein beta-1,4-n-acetylglucosaminyltransferase, isozyme b<br/>
+
+NRP1  -  neuropilin 1<br/>
+
+NRP2  -  neuropilin 2<br/>
+
+IQGAP1  -  iq motif containing gtpase activating protein 1<br/>
+
+SIRT2  -  sirtuin 2<br/>
+
+CD97  -  cd97 molecule<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+MMP2  -  matrix metallopeptidase 2 (gelatinase a, 72kda gelatinase, 72kda type iv collagenase)<br/>
+
+MYO9B  -  myosin ixb<br/>
+
+MME  -  membrane metallo-endopeptidase<br/>
+
+RBM5  -  rna binding motif protein 5<br/>
+
+MMP14  -  matrix metallopeptidase 14 (membrane-inserted)<br/>
+
+HPCAL1  -  hippocalcin-like 1<br/>
+
+LOXL2  -  lysyl oxidase-like 2<br/>
+
+FURIN  -  furin (paired basic amino acid cleaving enzyme)<br/>
+
+MORC4  -  morc family cw-type zinc finger 4<br/>
+
+ZHX1  -  zinc fingers and homeoboxes 1<br/>
+
+BMP1  -  bone morphogenetic protein 1<br/>
+
+BMI1  -  bmi1 polycomb ring finger oncogene<br/>
+
+SMPDL3A  -  sphingomyelin phosphodiesterase, acid-like 3a<br/>
+
+SLC2A4RG  -  slc2a4 regulator<br/>
+
+B4GALT1  -  udp-gal:betaglcnac beta 1,4- galactosyltransferase, polypeptide 1<br/>
+
+CRB2  -  crumbs homolog 2 (drosophila)<br/>
+
+ZNF70  -  zinc finger protein 70<br/>
+
+BMPR2  -  bone morphogenetic protein receptor, type ii (serine/threonine kinase)<br/>
+
+TRIM8  -  tripartite motif containing 8<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+DGKD  -  diacylglycerol kinase, delta 130kda<br/>
+
+PAM  -  peptidylglycine alpha-amidating monooxygenase<br/>
+
+ITGA5  -  integrin, alpha 5 (fibronectin receptor, alpha polypeptide)<br/>
+
+TPM4  -  tropomyosin 4<br/>
+
+ADAMTS1  -  adam metallopeptidase with thrombospondin type 1 motif, 1<br/>
+
+TAX1BP1  -  tax1 (human t-cell leukemia virus type i) binding protein 1<br/>
+
+ADAMTS9  -  adam metallopeptidase with thrombospondin type 1 motif, 9<br/>
+
+ZNF362  -  zinc finger protein 362<br/>
+
+RHOU  -  ras homolog family member u<br/>
+
+STS  -  steroid sulfatase (microsomal), isozyme s<br/>
+
+RNF103  -  ring finger protein 103<br/>
+
+SPHK1  -  sphingosine kinase 1<br/>
+
+SQSTM1  -  sequestosome 1<br/>
+
+ITGA1  -  integrin, alpha 1<br/>
+
+ITGA3  -  integrin, alpha 3 (antigen cd49c, alpha 3 subunit of vla-3 receptor)<br/>
+
+MCFD2  -  multiple coagulation factor deficiency 2<br/>
+
+PDLIM4  -  pdz and lim domain 4<br/>
+
+HEG1  -  heart development protein with egf-like domains 1<br/>
+
+NUCB2  -  nucleobindin 2<br/>
+
+ITGAV  -  integrin, alpha v<br/>
+
+SMPD1  -  sphingomyelin phosphodiesterase 1, acid lysosomal<br/>
+
+MAP3K1  -  mitogen-activated protein kinase kinase kinase 1, e3 ubiquitin protein ligase<br/>
+
+PPARD  -  peroxisome proliferator-activated receptor delta<br/>
+
+ZSWIM8  -  zinc finger, swim-type containing 8<br/>
+
+PON2  -  paraoxonase 2<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+SUSD1  -  sushi domain containing 1<br/>
+
+PCDH17  -  protocadherin 17<br/>
+
+MAP3K13  -  mitogen-activated protein kinase kinase kinase 13<br/>
+
+S100A6  -  s100 calcium binding protein a6<br/>
+
+ROCK2  -  rho-associated, coiled-coil containing protein kinase 2<br/>
+
+CDKN1A  -  cyclin-dependent kinase inhibitor 1a (p21, cip1)<br/>
+
+COL5A2  -  collagen, type v, alpha 2<br/>
+
+S100A10  -  s100 calcium binding protein a10<br/>
+
+COL5A1  -  collagen, type v, alpha 1<br/>
+
+SNAI2  -  snail family zinc finger 2<br/>
+
+ZCCHC24  -  zinc finger, cchc domain containing 24<br/>
+
+GNA11  -  guanine nucleotide binding protein (g protein), alpha 11 (gq class)<br/>
+
+CDH11  -  cadherin 11, type 2, ob-cadherin (osteoblast)<br/>
+
+ACAP3  -  arfgap with coiled-coil, ankyrin repeat and ph domains 3<br/>
+
+COL27A1  -  collagen, type xxvii, alpha 1<br/>
+
+ECE1  -  endothelin converting enzyme 1<br/>
+
+PLA2G4C  -  phospholipase a2, group ivc (cytosolic, calcium-independent)<br/>
+
+COLEC11  -  collectin sub-family member 11<br/>
+
+OPTN  -  optineurin<br/>
+
+MAN2A2  -  mannosidase, alpha, class 2a, member 2<br/>
+
+TIMP1  -  timp metallopeptidase inhibitor 1<br/>
+
+TIMP2  -  timp metallopeptidase inhibitor 2<br/>
+
+TIMP3  -  timp metallopeptidase inhibitor 3<br/>
+
+LOXL4  -  lysyl oxidase-like 4<br/>
+
+CAPN2  -  calpain 2, (m/ii) large subunit<br/>
+
+RNF207  -  ring finger protein 207<br/>
+
+RFK  -  riboflavin kinase<br/>
+
+ZBTB1  -  zinc finger and btb domain containing 1<br/>
+
+GNS  -  glucosamine (n-acetyl)-6-sulfatase<br/>
+
+AGO3  -  argonaute risc catalytic component 3<br/>
+
+FKBP14  -  fk506 binding protein 14, 22 kda<br/>
+
+HIVEP3  -  human immunodeficiency virus type i enhancer binding protein 3<br/>
+
+SIRT7  -  sirtuin 7<br/>
+
+LMCD1  -  lim and cysteine-rich domains 1<br/>
+
+KCNMA1  -  potassium large conductance calcium-activated channel, subfamily m, alpha member 1<br/>
+
+FBLN1  -  fibulin 1<br/>
+
+ZFHX3  -  zinc finger homeobox 3<br/>
+
+ZC3H12A  -  zinc finger ccch-type containing 12a<br/>
+
+PCDH10  -  protocadherin 10<br/>
+
+EXT1  -  exostosin glycosyltransferase 1<br/>
+
+CALU  -  calumenin<br/>
+
+TNFAIP3  -  tumor necrosis factor, alpha-induced protein 3<br/>
+
+PFKP  -  phosphofructokinase, platelet<br/>
+
+TBC1D9  -  tbc1 domain family, member 9 (with gram domain)<br/>
+
+RNF145  -  ring finger protein 145<br/>
+
+PITPNM2  -  phosphatidylinositol transfer protein, membrane-associated 2<br/>
+
+EFHD2  -  ef-hand domain family, member d2<br/>
+
+MICAL2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br/>
+
+CPEB4  -  cytoplasmic polyadenylation element binding protein 4<br/>
+
+ASXL1  -  additional sex combs like 1 (drosophila)<br/>
+
+STT3A  -  stt3a, subunit of the oligosaccharyltransferase complex (catalytic)<br/>
+
+LTBP2  -  latent transforming growth factor beta binding protein 2<br/>
+
+MAST4  -  microtubule associated serine/threonine kinase family member 4<br/>
+
+CALCOCO1  -  calcium binding and coiled-coil domain 1<br/>
+
+ZNF503  -  zinc finger protein 503<br/>
+
+GATA4  -  gata binding protein 4<br/>
+
+TGFB1I1  -  transforming growth factor beta 1 induced transcript 1<br/>
+
+MYL9  -  myosin, light chain 9, regulatory<br/>
+
+TGM2  -  transglutaminase 2<br/>
+
+BCL6  -  b-cell cll/lymphoma 6<br/>
+
+TGFBR2  -  transforming growth factor, beta receptor ii (70/80kda)<br/>
+
+MYOF  -  myoferlin<br/>
+
+CPNE2  -  copine ii<br/>
+
+PLOD3  -  procollagen-lysine, 2-oxoglutarate 5-dioxygenase 3<br/>
+
+SYTL5  -  synaptotagmin-like 5<br/>
+
+ANXA2  -  annexin a2<br/>
+
+CLIP1  -  cap-gly domain containing linker protein 1<br/>
+
+ZBTB7C  -  zinc finger and btb domain containing 7c<br/>
+
+ANXA1  -  annexin a1<br/>
+
+HMOX1  -  heme oxygenase (decycling) 1<br/>
+
+CSRP1  -  cysteine and glycine-rich protein 1<br/>
+
+SMAD3  -  smad family member 3<br/>
+
+ASAP1  -  arfgap with sh3 domain, ankyrin repeat and ph domain 1<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<h1 style="color:red"> Note that only 47.64% of the terms you entered were used in the analysis</h1><p>Species used: Homo sapiens</p><p>The system has recognized 18440 genes out of 33351 gene terms entered by the user.<br/> 0 genes were recognized by gene symbol and 18440 genes by other gene IDs .<br/>457 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 17983 genes.<br/>Only 15889 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOFUNCTION.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 4524 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

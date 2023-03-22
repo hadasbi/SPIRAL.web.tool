@@ -1,212 +1,252 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title>
-Results
-</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<script type='text/javascript'>
-function toggle(item) {
-obj=document.getElementById(item);
-visible=(obj.style.display!="none")
-key=document.getElementById("ctrl_" + item);
-if (visible) {
-    obj.style.display="none";
-key.innerHTML="[+] Show genes";
-}
-else {
-obj.style.display="block";
-key.innerHTML="[-] Hide genes";
-}
-}
-</script>
-</head>
-<body>
-<p><center><b>
-
-</b></center></p>
-<table border="1" width="80%" id="tab:pval_legend" align=center>
-<CAPTION><EM>P-value color scale</EM></CAPTION>
-<tr>
-	<td  width=140 align=center> > 10<sup>-3</sup></td>
-	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
-	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
-	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
-	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
-</tr >
-</table>
-<MAP NAME='goPathImage'>
-<AREA SHAPE='RECT' COORDS='600,583,720,646' HREF='#0031344' ALT=''>
-<AREA SHAPE='RECT' COORDS='695,729,815,809' HREF='#0031346' ALT=''>
-<AREA SHAPE='RECT' COORDS='572,712,671,827' HREF='#0120035' ALT=''>
-<AREA SHAPE='RECT' COORDS='668,198,761,261' HREF='#0050789' ALT=''>
-<AREA SHAPE='RECT' COORDS='435,318,557,381' HREF='#0050793' ALT=''>
-<AREA SHAPE='RECT' COORDS='756,309,849,389' HREF='#0048518' ALT=''>
-<AREA SHAPE='RECT' COORDS='104,325,216,373' HREF='#0030155' ALT=''>
-<AREA SHAPE='RECT' COORDS='951,318,1065,381' HREF='#0002682' ALT=''>
-<AREA SHAPE='RECT' COORDS='1144,318,1237,381' HREF='#0048583' ALT=''>
-<AREA SHAPE='RECT' COORDS='649,318,732,381' HREF='#0050794' ALT=''>
-<AREA SHAPE='RECT' COORDS='293,309,384,389' HREF='#0044087' ALT=''>
-<AREA SHAPE='RECT' COORDS='585,1003,703,1083' HREF='#1902745' ALT=''>
-<AREA SHAPE='RECT' COORDS='73,446,191,509' HREF='#0010810' ALT=''>
-<AREA SHAPE='RECT' COORDS='5,738,104,801' HREF='#0001952' ALT=''>
-<AREA SHAPE='RECT' COORDS='1156,205,1273,253' HREF='#0002376' ALT=''>
-<AREA SHAPE='RECT' COORDS='1116,738,1201,801' HREF='#0002253' ALT=''>
-<AREA SHAPE='RECT' COORDS='1248,875,1373,955' HREF='#0045089' ALT=''>
-<AREA SHAPE='RECT' COORDS='1117,1011,1243,1074' HREF='#0002218' ALT=''>
-<AREA SHAPE='RECT' COORDS='444,1011,561,1074' HREF='#2000392' ALT=''>
-<AREA SHAPE='RECT' COORDS='444,1131,561,1211' HREF='#2000394' ALT=''>
-<AREA SHAPE='RECT' COORDS='1053,1139,1189,1202' HREF='#0002758' ALT=''>
-<AREA SHAPE='RECT' COORDS='441,437,551,517' HREF='#0022603' ALT=''>
-<AREA SHAPE='RECT' COORDS='429,591,576,639' HREF='#0022604' ALT=''>
-<AREA SHAPE='RECT' COORDS='1199,437,1292,517' HREF='#0048584' ALT=''>
-<AREA SHAPE='RECT' COORDS='1145,575,1231,655' HREF='#0050778' ALT=''>
-<AREA SHAPE='RECT' COORDS='1425,729,1511,809' HREF='#0031349' ALT=''>
-<AREA SHAPE='RECT' COORDS='699,101,779,149' HREF='#0065007' ALT=''>
-<AREA SHAPE='RECT' COORDS='295,437,417,517' HREF='#0051094' ALT=''>
-<AREA SHAPE='RECT' COORDS='851,101,923,149' HREF='#0009987' ALT=''>
-<AREA SHAPE='RECT' COORDS='796,453,927,501' HREF='#0007165' ALT=''>
-<AREA SHAPE='RECT' COORDS='1427,583,1512,646' HREF='#0031347' ALT=''>
-<AREA SHAPE='RECT' COORDS='1276,738,1401,801' HREF='#0045088' ALT=''>
-<AREA SHAPE='RECT' COORDS='575,437,665,517' HREF='#0051128' ALT=''>
-<AREA SHAPE='RECT' COORDS='195,583,304,646' HREF='#1901888' ALT=''>
-<AREA SHAPE='RECT' COORDS='269,729,363,809' HREF='#1903391' ALT=''>
-<AREA SHAPE='RECT' COORDS='744,566,835,663' HREF='#0051130' ALT=''>
-<AREA SHAPE='RECT' COORDS='1131,1662,1256,1759' HREF='#0035668' ALT=''>
-<AREA SHAPE='RECT' COORDS='1065,1809,1191,1906' HREF='#0035669' ALT=''>
-<AREA SHAPE='RECT' COORDS='128,729,245,809' HREF='#0090109' ALT=''>
-<AREA SHAPE='RECT' COORDS='1316,446,1409,509' HREF='#0080134' ALT=''>
-<AREA SHAPE='RECT' COORDS='956,891,1143,939' HREF='#0002757' ALT=''>
-<AREA SHAPE='RECT' COORDS='689,437,772,517' HREF='#0048522' ALT=''>
-<AREA SHAPE='RECT' COORDS='1055,1259,1188,1339' HREF='#0002221' ALT=''>
-<AREA SHAPE='RECT' COORDS='1083,1387,1160,1467' HREF='#0002224' ALT=''>
-<AREA SHAPE='RECT' COORDS='125,883,248,946' HREF='#0051893' ALT=''>
-<AREA SHAPE='RECT' COORDS='951,437,1065,517' HREF='#0002684' ALT=''>
-<AREA SHAPE='RECT' COORDS='1019,1671,1107,1751' HREF='#0034142' ALT=''>
-<AREA SHAPE='RECT' COORDS='1089,446,1175,509' HREF='#0050776' ALT=''>
-<AREA SHAPE='RECT' COORDS='932,583,1121,646' HREF='#0002764' ALT=''>
-<AREA SHAPE='RECT' COORDS='1116,1515,1257,1613' HREF='#0002756' ALT=''>
-<AREA SHAPE='RECT' COORDS='563,883,680,946' HREF='#1902743' ALT=''>
-<AREA SHAPE='RECT' COORDS='887,5,774,29' HREF='#0008150' ALT=''>
-</MAP>
-<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
-<p>&nbsp;</p>
-<table border='1' width='100%' id='table1'>
-	<tr>
-		<td Align=center ><b>GO term</b></td>
-		<td Align=center><b>Description</b></td>
-		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
-		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
-		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
-		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
-	</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000394&amp;view=details' target="_blank">GO:2000394</a><a name=2000394></a></td>
-<td>positive regulation of lamellipodium morphogenesis</td>
-<td  align=center>1.37E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>24.66 (8795,5,214,3)</td>
-<td>
-<a id="ctrl_elements_GO:2000394" href="javascript:toggle('elements_GO:2000394')">[+] Show genes</a><br>
-<div id="elements_GO:2000394" style="display:none"> <font size=1>
-CORO1B  -  coronin, actin binding protein, 1b<br>
-RREB1  -  ras responsive element binding protein 1<br>
-CORO1C  -  coronin, actin binding protein, 1c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000392&amp;view=details' target="_blank">GO:2000392</a><a name=2000392></a></td>
-<td>regulation of lamellipodium morphogenesis</td>
-<td  align=center>2.69E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>20.55 (8795,6,214,3)</td>
-<td>
-<a id="ctrl_elements_GO:2000392" href="javascript:toggle('elements_GO:2000392')">[+] Show genes</a><br>
-<div id="elements_GO:2000392" style="display:none"> <font size=1>
-CORO1B  -  coronin, actin binding protein, 1b<br>
-RREB1  -  ras responsive element binding protein 1<br>
-CORO1C  -  coronin, actin binding protein, 1c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051893&amp;view=details' target="_blank">GO:0051893</a><a name=0051893></a></td>
-<td>regulation of focal adhesion assembly</td>
-<td  align=center>5.07E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>7.34 (8795,28,214,5)</td>
-<td>
-<a id="ctrl_elements_GO:0051893" href="javascript:toggle('elements_GO:0051893')">[+] Show genes</a><br>
-<div id="elements_GO:0051893" style="display:none"> <font size=1>
-DUSP22  -  dual specificity phosphatase 22<br>
-ABL1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
-PTPRA  -  protein tyrosine phosphatase, receptor type, a<br>
-CORO1C  -  coronin, actin binding protein, 1c<br>
-PPM1F  -  protein phosphatase, mg2+/mn2+ dependent, 1f<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0090109&amp;view=details' target="_blank">GO:0090109</a><a name=0090109></a></td>
-<td>regulation of cell-substrate junction assembly</td>
-<td  align=center>5.07E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>7.34 (8795,28,214,5)</td>
-<td>
-<a id="ctrl_elements_GO:0090109" href="javascript:toggle('elements_GO:0090109')">[+] Show genes</a><br>
-<div id="elements_GO:0090109" style="display:none"> <font size=1>
-DUSP22  -  dual specificity phosphatase 22<br>
-ABL1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br>
-PTPRA  -  protein tyrosine phosphatase, receptor type, a<br>
-PPM1F  -  protein phosphatase, mg2+/mn2+ dependent, 1f<br>
-CORO1C  -  coronin, actin binding protein, 1c<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035668&amp;view=details' target="_blank">GO:0035668</a><a name=0035668></a></td>
-<td>TRAM-dependent toll-like receptor signaling pathway</td>
-<td  align=center>5.89E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>41.10 (8795,2,214,2)</td>
-<td>
-<a id="ctrl_elements_GO:0035668" href="javascript:toggle('elements_GO:0035668')">[+] Show genes</a><br>
-<div id="elements_GO:0035668" style="display:none"> <font size=1>
-RAB11FIP2  -  rab11 family interacting protein 2 (class i)<br>
-PRKCE  -  protein kinase c, epsilon<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035669&amp;view=details' target="_blank">GO:0035669</a><a name=0035669></a></td>
-<td>TRAM-dependent toll-like receptor 4 signaling pathway</td>
-<td  align=center>5.89E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>41.10 (8795,2,214,2)</td>
-<td>
-<a id="ctrl_elements_GO:0035669" href="javascript:toggle('elements_GO:0035669')">[+] Show genes</a><br>
-<div id="elements_GO:0035669" style="display:none"> <font size=1>
-RAB11FIP2  -  rab11 family interacting protein 2 (class i)<br>
-PRKCE  -  protein kinase c, epsilon<br>
-</FONT></div>
-</td>
-</tr>
-</table>
-<p>Species used: Homo sapiens</p><p>The system has recognized 9255 genes out of 9717 gene terms entered by the user.<br> 9255 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>227 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
-<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
-<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
-The GOrilla database was last updated on Mar 6, 2021</p>
-<p>This results page will be available on this site for one month from now (until 
-Jan 16, 2023
-). You can bookmark this page and come back to it later.
-</p>
-<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br>
-<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
-<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
-<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
-<p>
-<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
-</p>
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="600,583,720,646" href="#0031344" shape="RECT"/>
+<area alt="" coords="695,729,815,809" href="#0031346" shape="RECT"/>
+<area alt="" coords="572,712,671,827" href="#0120035" shape="RECT"/>
+<area alt="" coords="668,198,761,261" href="#0050789" shape="RECT"/>
+<area alt="" coords="435,318,557,381" href="#0050793" shape="RECT"/>
+<area alt="" coords="756,309,849,389" href="#0048518" shape="RECT"/>
+<area alt="" coords="104,325,216,373" href="#0030155" shape="RECT"/>
+<area alt="" coords="951,318,1065,381" href="#0002682" shape="RECT"/>
+<area alt="" coords="1144,318,1237,381" href="#0048583" shape="RECT"/>
+<area alt="" coords="649,318,732,381" href="#0050794" shape="RECT"/>
+<area alt="" coords="293,309,384,389" href="#0044087" shape="RECT"/>
+<area alt="" coords="585,1003,703,1083" href="#1902745" shape="RECT"/>
+<area alt="" coords="73,446,191,509" href="#0010810" shape="RECT"/>
+<area alt="" coords="5,738,104,801" href="#0001952" shape="RECT"/>
+<area alt="" coords="1156,205,1273,253" href="#0002376" shape="RECT"/>
+<area alt="" coords="1116,738,1201,801" href="#0002253" shape="RECT"/>
+<area alt="" coords="1248,875,1373,955" href="#0045089" shape="RECT"/>
+<area alt="" coords="1117,1011,1243,1074" href="#0002218" shape="RECT"/>
+<area alt="" coords="444,1011,561,1074" href="#2000392" shape="RECT"/>
+<area alt="" coords="444,1131,561,1211" href="#2000394" shape="RECT"/>
+<area alt="" coords="1053,1139,1189,1202" href="#0002758" shape="RECT"/>
+<area alt="" coords="441,437,551,517" href="#0022603" shape="RECT"/>
+<area alt="" coords="429,591,576,639" href="#0022604" shape="RECT"/>
+<area alt="" coords="1199,437,1292,517" href="#0048584" shape="RECT"/>
+<area alt="" coords="1145,575,1231,655" href="#0050778" shape="RECT"/>
+<area alt="" coords="1425,729,1511,809" href="#0031349" shape="RECT"/>
+<area alt="" coords="699,101,779,149" href="#0065007" shape="RECT"/>
+<area alt="" coords="295,437,417,517" href="#0051094" shape="RECT"/>
+<area alt="" coords="851,101,923,149" href="#0009987" shape="RECT"/>
+<area alt="" coords="796,453,927,501" href="#0007165" shape="RECT"/>
+<area alt="" coords="1427,583,1512,646" href="#0031347" shape="RECT"/>
+<area alt="" coords="1276,738,1401,801" href="#0045088" shape="RECT"/>
+<area alt="" coords="575,437,665,517" href="#0051128" shape="RECT"/>
+<area alt="" coords="195,583,304,646" href="#1901888" shape="RECT"/>
+<area alt="" coords="269,729,363,809" href="#1903391" shape="RECT"/>
+<area alt="" coords="744,566,835,663" href="#0051130" shape="RECT"/>
+<area alt="" coords="1131,1662,1256,1759" href="#0035668" shape="RECT"/>
+<area alt="" coords="1065,1809,1191,1906" href="#0035669" shape="RECT"/>
+<area alt="" coords="128,729,245,809" href="#0090109" shape="RECT"/>
+<area alt="" coords="1316,446,1409,509" href="#0080134" shape="RECT"/>
+<area alt="" coords="956,891,1143,939" href="#0002757" shape="RECT"/>
+<area alt="" coords="689,437,772,517" href="#0048522" shape="RECT"/>
+<area alt="" coords="1055,1259,1188,1339" href="#0002221" shape="RECT"/>
+<area alt="" coords="1083,1387,1160,1467" href="#0002224" shape="RECT"/>
+<area alt="" coords="125,883,248,946" href="#0051893" shape="RECT"/>
+<area alt="" coords="951,437,1065,517" href="#0002684" shape="RECT"/>
+<area alt="" coords="1019,1671,1107,1751" href="#0034142" shape="RECT"/>
+<area alt="" coords="1089,446,1175,509" href="#0050776" shape="RECT"/>
+<area alt="" coords="932,583,1121,646" href="#0002764" shape="RECT"/>
+<area alt="" coords="1116,1515,1257,1613" href="#0002756" shape="RECT"/>
+<area alt="" coords="563,883,680,946" href="#1902743" shape="RECT"/>
+<area alt="" coords="887,5,774,29" href="#0008150" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data1/go/40/GOPROCESS.png" usemap="#goPathImage"/></p>
+<p>Â </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000394&amp;view=details" target="_blank">GO:2000394</a><a name="2000394"></a></td>
+<td>positive regulation of lamellipodium morphogenesis</td>
+<td align="center">1.37E-4</td>
+<td align="center">1E0</td>
+<td align="center">24.66 (8795,5,214,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000394')" id="ctrl_elements_GO:2000394">[+] Show genes</a><br/>
+<div id="elements_GO:2000394" style="display:none"> <font size="1">
+
+CORO1B  -  coronin, actin binding protein, 1b<br/>
+
+RREB1  -  ras responsive element binding protein 1<br/>
+
+CORO1C  -  coronin, actin binding protein, 1c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000392&amp;view=details" target="_blank">GO:2000392</a><a name="2000392"></a></td>
+<td>regulation of lamellipodium morphogenesis</td>
+<td align="center">2.69E-4</td>
+<td align="center">1E0</td>
+<td align="center">20.55 (8795,6,214,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000392')" id="ctrl_elements_GO:2000392">[+] Show genes</a><br/>
+<div id="elements_GO:2000392" style="display:none"> <font size="1">
+
+CORO1B  -  coronin, actin binding protein, 1b<br/>
+
+RREB1  -  ras responsive element binding protein 1<br/>
+
+CORO1C  -  coronin, actin binding protein, 1c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051893&amp;view=details" target="_blank">GO:0051893</a><a name="0051893"></a></td>
+<td>regulation of focal adhesion assembly</td>
+<td align="center">5.07E-4</td>
+<td align="center">1E0</td>
+<td align="center">7.34 (8795,28,214,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051893')" id="ctrl_elements_GO:0051893">[+] Show genes</a><br/>
+<div id="elements_GO:0051893" style="display:none"> <font size="1">
+
+DUSP22  -  dual specificity phosphatase 22<br/>
+
+ABL1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br/>
+
+PTPRA  -  protein tyrosine phosphatase, receptor type, a<br/>
+
+CORO1C  -  coronin, actin binding protein, 1c<br/>
+
+PPM1F  -  protein phosphatase, mg2+/mn2+ dependent, 1f<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0090109&amp;view=details" target="_blank">GO:0090109</a><a name="0090109"></a></td>
+<td>regulation of cell-substrate junction assembly</td>
+<td align="center">5.07E-4</td>
+<td align="center">1E0</td>
+<td align="center">7.34 (8795,28,214,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0090109')" id="ctrl_elements_GO:0090109">[+] Show genes</a><br/>
+<div id="elements_GO:0090109" style="display:none"> <font size="1">
+
+DUSP22  -  dual specificity phosphatase 22<br/>
+
+ABL1  -  c-abl oncogene 1, non-receptor tyrosine kinase<br/>
+
+PTPRA  -  protein tyrosine phosphatase, receptor type, a<br/>
+
+PPM1F  -  protein phosphatase, mg2+/mn2+ dependent, 1f<br/>
+
+CORO1C  -  coronin, actin binding protein, 1c<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035668&amp;view=details" target="_blank">GO:0035668</a><a name="0035668"></a></td>
+<td>TRAM-dependent toll-like receptor signaling pathway</td>
+<td align="center">5.89E-4</td>
+<td align="center">1E0</td>
+<td align="center">41.10 (8795,2,214,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035668')" id="ctrl_elements_GO:0035668">[+] Show genes</a><br/>
+<div id="elements_GO:0035668" style="display:none"> <font size="1">
+
+RAB11FIP2  -  rab11 family interacting protein 2 (class i)<br/>
+
+PRKCE  -  protein kinase c, epsilon<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035669&amp;view=details" target="_blank">GO:0035669</a><a name="0035669"></a></td>
+<td>TRAM-dependent toll-like receptor 4 signaling pathway</td>
+<td align="center">5.89E-4</td>
+<td align="center">1E0</td>
+<td align="center">41.10 (8795,2,214,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0035669')" id="ctrl_elements_GO:0035669">[+] Show genes</a><br/>
+<div id="elements_GO:0035669" style="display:none"> <font size="1">
+
+RAB11FIP2  -  rab11 family interacting protein 2 (class i)<br/>
+
+PRKCE  -  protein kinase c, epsilon<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9255 genes out of 9717 gene terms entered by the user.<br/> 9255 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>227 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br/>Only 8795 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOPROCESS.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 16, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

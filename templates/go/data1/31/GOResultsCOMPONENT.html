@@ -1,1560 +1,2673 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title>
-Results
-</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<script type='text/javascript'>
-function toggle(item) {
-obj=document.getElementById(item);
-visible=(obj.style.display!="none")
-key=document.getElementById("ctrl_" + item);
-if (visible) {
-    obj.style.display="none";
-key.innerHTML="[+] Show genes";
-}
-else {
-obj.style.display="block";
-key.innerHTML="[-] Hide genes";
-}
-}
-</script>
-</head>
-<body>
-<p><center><b>
-
-</b></center></p>
-<table border="1" width="80%" id="tab:pval_legend" align=center>
-<CAPTION><EM>P-value color scale</EM></CAPTION>
-<tr>
-	<td  width=140 align=center> > 10<sup>-3</sup></td>
-	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
-	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
-	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
-	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
-</tr >
-</table>
-<MAP NAME='goPathImage'>
-<AREA SHAPE='RECT' COORDS='144,205,240,253' HREF='#0005615' ALT=''>
-<AREA SHAPE='RECT' COORDS='597,205,680,253' HREF='#0016020' ALT=''>
-<AREA SHAPE='RECT' COORDS='597,325,680,373' HREF='#0031090' ALT=''>
-<AREA SHAPE='RECT' COORDS='445,325,573,373' HREF='#0005886' ALT=''>
-<AREA SHAPE='RECT' COORDS='341,573,461,621' HREF='#0098805' ALT=''>
-<AREA SHAPE='RECT' COORDS='1179,309,1269,389' HREF='#0031300' ALT=''>
-<AREA SHAPE='RECT' COORDS='1297,677,1415,757' HREF='#0098573' ALT=''>
-<AREA SHAPE='RECT' COORDS='1429,437,1520,517' HREF='#0031301' ALT=''>
-<AREA SHAPE='RECT' COORDS='1021,205,1107,253' HREF='#0097458' ALT=''>
-<AREA SHAPE='RECT' COORDS='484,693,612,741' HREF='#0030667' ALT=''>
-<AREA SHAPE='RECT' COORDS='1061,453,1179,501' HREF='#0044431' ALT=''>
-<AREA SHAPE='RECT' COORDS='764,573,881,621' HREF='#0000139' ALT=''>
-<AREA SHAPE='RECT' COORDS='1243,198,1339,261' HREF='#0031224' ALT=''>
-<AREA SHAPE='RECT' COORDS='1293,318,1389,381' HREF='#0016021' ALT=''>
-<AREA SHAPE='RECT' COORDS='1413,309,1504,389' HREF='#0031226' ALT=''>
-<AREA SHAPE='RECT' COORDS='1345,933,1463,1013' HREF='#0031307' ALT=''>
-<AREA SHAPE='RECT' COORDS='907,205,997,253' HREF='#0044424' ALT=''>
-<AREA SHAPE='RECT' COORDS='704,325,795,373' HREF='#0043229' ALT=''>
-<AREA SHAPE='RECT' COORDS='925,318,1016,381' HREF='#0044446' ALT=''>
-<AREA SHAPE='RECT' COORDS='1040,325,1136,373' HREF='#0044444' ALT=''>
-<AREA SHAPE='RECT' COORDS='1253,566,1355,629' HREF='#0044455' ALT=''>
-<AREA SHAPE='RECT' COORDS='805,205,883,253' HREF='#0044422' ALT=''>
-<AREA SHAPE='RECT' COORDS='1427,101,1523,149' HREF='#0005576' ALT=''>
-<AREA SHAPE='RECT' COORDS='297,325,369,373' HREF='#0031982' ALT=''>
-<AREA SHAPE='RECT' COORDS='704,453,795,501' HREF='#0097708' ALT=''>
-<AREA SHAPE='RECT' COORDS='216,453,312,501' HREF='#1903561' ALT=''>
-<AREA SHAPE='RECT' COORDS='216,573,312,621' HREF='#0070062' ALT=''>
-<AREA SHAPE='RECT' COORDS='435,205,573,253' HREF='#0043227' ALT=''>
-<AREA SHAPE='RECT' COORDS='1064,693,1144,741' HREF='#0099503' ALT=''>
-<AREA SHAPE='RECT' COORDS='1317,101,1403,149' HREF='#0044425' ALT=''>
-<AREA SHAPE='RECT' COORDS='1520,205,1645,253' HREF='#0098552' ALT=''>
-<AREA SHAPE='RECT' COORDS='1363,205,1496,253' HREF='#0044459' ALT=''>
-<AREA SHAPE='RECT' COORDS='1416,805,1533,885' HREF='#0032592' ALT=''>
-<AREA SHAPE='RECT' COORDS='1275,805,1392,885' HREF='#0031306' ALT=''>
-<AREA SHAPE='RECT' COORDS='485,573,611,621' HREF='#0030659' ALT=''>
-<AREA SHAPE='RECT' COORDS='1528,318,1637,381' HREF='#0009897' ALT=''>
-<AREA SHAPE='RECT' COORDS='40,101,168,149' HREF='#0032991' ALT=''>
-<AREA SHAPE='RECT' COORDS='5,205,120,253' HREF='#0019814' ALT=''>
-<AREA SHAPE='RECT' COORDS='939,446,1037,509' HREF='#0044432' ALT=''>
-<AREA SHAPE='RECT' COORDS='56,318,171,381' HREF='#0042571' ALT=''>
-<AREA SHAPE='RECT' COORDS='721,5,604,29' HREF='#0005575' ALT=''>
-<AREA SHAPE='RECT' COORDS='972,101,1044,149' HREF='#0044464' ALT=''>
-<AREA SHAPE='RECT' COORDS='273,101,369,149' HREF='#0044421' ALT=''>
-<AREA SHAPE='RECT' COORDS='516,101,591,149' HREF='#0043226' ALT=''>
-<AREA SHAPE='RECT' COORDS='443,453,568,501' HREF='#0012506' ALT=''>
-<AREA SHAPE='RECT' COORDS='592,446,680,509' HREF='#0098588' ALT=''>
-<AREA SHAPE='RECT' COORDS='1056,573,1152,621' HREF='#0031410' ALT=''>
-<AREA SHAPE='RECT' COORDS='1131,205,1219,253' HREF='#0009986' ALT=''>
-<AREA SHAPE='RECT' COORDS='819,453,915,501' HREF='#0044433' ALT=''>
-<AREA SHAPE='RECT' COORDS='1253,453,1355,501' HREF='#0044429' ALT=''>
-<AREA SHAPE='RECT' COORDS='315,205,411,253' HREF='#0043230' ALT=''>
-</MAP>
-<p align="center"><img border="0" src="GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
-<p>&nbsp;</p>
-<table border='1' width='100%' id='table1'>
-	<tr>
-		<td Align=center ><b>GO term</b></td>
-		<td Align=center><b>Description</b></td>
-		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
-		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
-		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
-		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
-	</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
-<td>membrane part</td>
-<td  align=center>1.29E-8</td>
-<td  align=center>2.21E-5</td>
-<td  align=center>1.62 (8795,2524,217,101)</td>
-<td>
-<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
-<div id="elements_GO:0044425" style="display:none"> <font size=1>
-TMEM87B  -  transmembrane protein 87b<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
-TSPAN14  -  tetraspanin 14<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-SFT2D1  -  sft2 domain containing 1<br>
-GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
-BSG  -  basigin (ok blood group)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-BTLA  -  b and t lymphocyte associated<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
-DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br>
-GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
-EMC7  -  er membrane protein complex subunit 7<br>
-CERS6  -  ceramide synthase 6<br>
-SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-EMC3  -  er membrane protein complex subunit 3<br>
-OSBPL2  -  oxysterol binding protein-like 2<br>
-SELT  -  selenoprotein t<br>
-TMPRSS3  -  transmembrane protease, serine 3<br>
-BBS7  -  bardet-biedl syndrome 7<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-FXYD5  -  fxyd domain containing ion transport regulator 5<br>
-TMEM248  -  transmembrane protein 248<br>
-TMEM45A  -  transmembrane protein 45a<br>
-ITGB7  -  integrin, beta 7<br>
-TMEM59  -  transmembrane protein 59<br>
-NOMO2  -  nodal modulator 2<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-ADA  -  adenosine deaminase<br>
-MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
-GPR183  -  g protein-coupled receptor 183<br>
-INSIG1  -  insulin induced gene 1<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
-PLXNB2  -  plexin b2<br>
-MFF  -  mitochondrial fission factor<br>
-KIDINS220  -  kinase d-interacting substrate, 220kda<br>
-NCSTN  -  nicastrin<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-FUNDC1  -  fun14 domain containing 1<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-NCLN  -  nicalin<br>
-TMEM30A  -  transmembrane protein 30a<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-C1orf186  -  chromosome 1 open reading frame 186<br>
-ERO1L  -  ero1-like (s. cerevisiae)<br>
-PTK2B  -  protein tyrosine kinase 2 beta<br>
-ITM2A  -  integral membrane protein 2a<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-FZD3  -  frizzled family receptor 3<br>
-PEX14  -  peroxisomal biogenesis factor 14<br>
-NMT2  -  n-myristoyltransferase 2<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-REEP5  -  receptor accessory protein 5<br>
-ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
-SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
-TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
-B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-TIMD4  -  t-cell immunoglobulin and mucin domain containing 4<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-TRAM2  -  translocation associated membrane protein 2<br>
-REEP3  -  receptor accessory protein 3<br>
-EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
-MPZL1  -  myelin protein zero-like 1<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
-TSPAN12  -  tetraspanin 12<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-RHOT1  -  ras homolog family member t1<br>
-ATP13A1  -  atpase type 13a1<br>
-IMPAD1  -  inositol monophosphatase domain containing 1<br>
-CD300A  -  cd300a molecule<br>
-TPST2  -  tyrosylprotein sulfotransferase 2<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-TMEM123  -  transmembrane protein 123<br>
-PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details' target="_blank">GO:0016021</a><a name=0016021></a></td>
-<td>integral component of membrane</td>
-<td  align=center>2.26E-8</td>
-<td  align=center>1.94E-5</td>
-<td  align=center>1.83 (8795,1660,217,75)</td>
-<td>
-<a id="ctrl_elements_GO:0016021" href="javascript:toggle('elements_GO:0016021')">[+] Show genes</a><br>
-<div id="elements_GO:0016021" style="display:none"> <font size=1>
-TMEM30A  -  transmembrane protein 30a<br>
-TMEM87B  -  transmembrane protein 87b<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
-TSPAN14  -  tetraspanin 14<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-C1orf186  -  chromosome 1 open reading frame 186<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-SFT2D1  -  sft2 domain containing 1<br>
-BSG  -  basigin (ok blood group)<br>
-GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-BTLA  -  b and t lymphocyte associated<br>
-ITM2A  -  integral membrane protein 2a<br>
-DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-FZD3  -  frizzled family receptor 3<br>
-GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
-EMC7  -  er membrane protein complex subunit 7<br>
-CERS6  -  ceramide synthase 6<br>
-PEX14  -  peroxisomal biogenesis factor 14<br>
-CD53  -  cd53 molecule<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-REEP5  -  receptor accessory protein 5<br>
-ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
-EMC3  -  er membrane protein complex subunit 3<br>
-SELT  -  selenoprotein t<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
-TMPRSS3  -  transmembrane protease, serine 3<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
-FXYD5  -  fxyd domain containing ion transport regulator 5<br>
-TMEM248  -  transmembrane protein 248<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
-B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
-TMEM45A  -  transmembrane protein 45a<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-TIMD4  -  t-cell immunoglobulin and mucin domain containing 4<br>
-TMEM59  -  transmembrane protein 59<br>
-NOMO2  -  nodal modulator 2<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-GPR183  -  g protein-coupled receptor 183<br>
-TRAM2  -  translocation associated membrane protein 2<br>
-REEP3  -  receptor accessory protein 3<br>
-EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
-SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
-MPZL1  -  myelin protein zero-like 1<br>
-PLXNB2  -  plexin b2<br>
-KIDINS220  -  kinase d-interacting substrate, 220kda<br>
-MFF  -  mitochondrial fission factor<br>
-NCSTN  -  nicastrin<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-TSPAN12  -  tetraspanin 12<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-RHOT1  -  ras homolog family member t1<br>
-ATP13A1  -  atpase type 13a1<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-FUNDC1  -  fun14 domain containing 1<br>
-IMPAD1  -  inositol monophosphatase domain containing 1<br>
-TPST2  -  tyrosylprotein sulfotransferase 2<br>
-CD300A  -  cd300a molecule<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-NCLN  -  nicalin<br>
-PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br>
-TMEM123  -  transmembrane protein 123<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details' target="_blank">GO:0031224</a><a name=0031224></a></td>
-<td>intrinsic component of membrane</td>
-<td  align=center>2.29E-8</td>
-<td  align=center>1.31E-5</td>
-<td  align=center>1.82 (8795,1693,217,76)</td>
-<td>
-<a id="ctrl_elements_GO:0031224" href="javascript:toggle('elements_GO:0031224')">[+] Show genes</a><br>
-<div id="elements_GO:0031224" style="display:none"> <font size=1>
-TMEM30A  -  transmembrane protein 30a<br>
-TMEM87B  -  transmembrane protein 87b<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
-TSPAN14  -  tetraspanin 14<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-C1orf186  -  chromosome 1 open reading frame 186<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-SFT2D1  -  sft2 domain containing 1<br>
-BSG  -  basigin (ok blood group)<br>
-GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-BTLA  -  b and t lymphocyte associated<br>
-ITM2A  -  integral membrane protein 2a<br>
-DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-FZD3  -  frizzled family receptor 3<br>
-GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
-EMC7  -  er membrane protein complex subunit 7<br>
-CERS6  -  ceramide synthase 6<br>
-PEX14  -  peroxisomal biogenesis factor 14<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-REEP5  -  receptor accessory protein 5<br>
-ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
-EMC3  -  er membrane protein complex subunit 3<br>
-SELT  -  selenoprotein t<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
-TMPRSS3  -  transmembrane protease, serine 3<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
-FXYD5  -  fxyd domain containing ion transport regulator 5<br>
-TMEM248  -  transmembrane protein 248<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
-B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
-TMEM45A  -  transmembrane protein 45a<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-TIMD4  -  t-cell immunoglobulin and mucin domain containing 4<br>
-TMEM59  -  transmembrane protein 59<br>
-NOMO2  -  nodal modulator 2<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-GPR183  -  g protein-coupled receptor 183<br>
-TRAM2  -  translocation associated membrane protein 2<br>
-REEP3  -  receptor accessory protein 3<br>
-EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
-SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
-MPZL1  -  myelin protein zero-like 1<br>
-PLXNB2  -  plexin b2<br>
-KIDINS220  -  kinase d-interacting substrate, 220kda<br>
-MFF  -  mitochondrial fission factor<br>
-NCSTN  -  nicastrin<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-TSPAN12  -  tetraspanin 12<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-RHOT1  -  ras homolog family member t1<br>
-ATP13A1  -  atpase type 13a1<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-FUNDC1  -  fun14 domain containing 1<br>
-IMPAD1  -  inositol monophosphatase domain containing 1<br>
-TPST2  -  tyrosylprotein sulfotransferase 2<br>
-CD300A  -  cd300a molecule<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-NCLN  -  nicalin<br>
-PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br>
-TMEM123  -  transmembrane protein 123<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044459&amp;view=details' target="_blank">GO:0044459</a><a name=0044459></a></td>
-<td>plasma membrane part</td>
-<td  align=center>1.33E-6</td>
-<td  align=center>5.74E-4</td>
-<td  align=center>2.12 (8795,821,217,43)</td>
-<td>
-<a id="ctrl_elements_GO:0044459" href="javascript:toggle('elements_GO:0044459')">[+] Show genes</a><br>
-<div id="elements_GO:0044459" style="display:none"> <font size=1>
-TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
-TMEM30A  -  transmembrane protein 30a<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-TSPAN14  -  tetraspanin 14<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-ITGB7  -  integrin, beta 7<br>
-BSG  -  basigin (ok blood group)<br>
-PTK2B  -  protein tyrosine kinase 2 beta<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-ADA  -  adenosine deaminase<br>
-BTLA  -  b and t lymphocyte associated<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-FZD3  -  frizzled family receptor 3<br>
-GPR183  -  g protein-coupled receptor 183<br>
-SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
-MPZL1  -  myelin protein zero-like 1<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-PLXNB2  -  plexin b2<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-NCSTN  -  nicastrin<br>
-EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-TSPAN12  -  tetraspanin 12<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-OSBPL2  -  oxysterol binding protein-like 2<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-BBS7  -  bardet-biedl syndrome 7<br>
-IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-TMEM123  -  transmembrane protein 123<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009897&amp;view=details' target="_blank">GO:0009897</a><a name=0009897></a></td>
-<td>external side of plasma membrane</td>
-<td  align=center>2.81E-6</td>
-<td  align=center>9.68E-4</td>
-<td  align=center>4.79 (8795,110,217,13)</td>
-<td>
-<a id="ctrl_elements_GO:0009897" href="javascript:toggle('elements_GO:0009897')">[+] Show genes</a><br>
-<div id="elements_GO:0009897" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-ADA  -  adenosine deaminase<br>
-IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
-TMEM123  -  transmembrane protein 123<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details' target="_blank">GO:0044432</a><a name=0044432></a></td>
-<td>endoplasmic reticulum part</td>
-<td  align=center>2.89E-5</td>
-<td  align=center>8.28E-3</td>
-<td  align=center>1.98 (8795,776,217,38)</td>
-<td>
-<a id="ctrl_elements_GO:0044432" href="javascript:toggle('elements_GO:0044432')">[+] Show genes</a><br>
-<div id="elements_GO:0044432" style="display:none"> <font size=1>
-TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
-TSPAN14  -  tetraspanin 14<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-ERO1L  -  ero1-like (s. cerevisiae)<br>
-BSG  -  basigin (ok blood group)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-NOMO2  -  nodal modulator 2<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br>
-MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
-TRAM2  -  translocation associated membrane protein 2<br>
-EMC7  -  er membrane protein complex subunit 7<br>
-INSIG1  -  insulin induced gene 1<br>
-REEP3  -  receptor accessory protein 3<br>
-EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br>
-CERS6  -  ceramide synthase 6<br>
-UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-TFG  -  trk-fused gene<br>
-REEP5  -  receptor accessory protein 5<br>
-ATP13A1  -  atpase type 13a1<br>
-EMC3  -  er membrane protein complex subunit 3<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-SELT  -  selenoprotein t<br>
-TMPRSS3  -  transmembrane protease, serine 3<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-NCLN  -  nicalin<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details' target="_blank">GO:0098588</a><a name=0098588></a></td>
-<td>bounding membrane of organelle</td>
-<td  align=center>3.29E-5</td>
-<td  align=center>8.1E-3</td>
-<td  align=center>1.76 (8795,1150,217,50)</td>
-<td>
-<a id="ctrl_elements_GO:0098588" href="javascript:toggle('elements_GO:0098588')">[+] Show genes</a><br>
-<div id="elements_GO:0098588" style="display:none"> <font size=1>
-TMEM30A  -  transmembrane protein 30a<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-TMEM87B  -  transmembrane protein 87b<br>
-BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
-COG3  -  component of oligomeric golgi complex 3<br>
-TSPAN14  -  tetraspanin 14<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-BSG  -  basigin (ok blood group)<br>
-GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
-PEX14  -  peroxisomal biogenesis factor 14<br>
-CD53  -  cd53 molecule<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-TFG  -  trk-fused gene<br>
-ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
-FNIP2  -  folliculin interacting protein 2<br>
-SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
-BBS7  -  bardet-biedl syndrome 7<br>
-EHD1  -  eh-domain containing 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
-B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-TMEM59  -  transmembrane protein 59<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-MFF  -  mitochondrial fission factor<br>
-NCSTN  -  nicastrin<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-RHOT1  -  ras homolog family member t1<br>
-FUNDC1  -  fun14 domain containing 1<br>
-IMPAD1  -  inositol monophosphatase domain containing 1<br>
-CD300A  -  cd300a molecule<br>
-TPST2  -  tyrosylprotein sulfotransferase 2<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044421&amp;view=details' target="_blank">GO:0044421</a><a name=0044421></a></td>
-<td>extracellular region part</td>
-<td  align=center>3.85E-5</td>
-<td  align=center>8.29E-3</td>
-<td  align=center>1.66 (8795,1417,217,58)</td>
-<td>
-<a id="ctrl_elements_GO:0044421" href="javascript:toggle('elements_GO:0044421')">[+] Show genes</a><br>
-<div id="elements_GO:0044421" style="display:none"> <font size=1>
-DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
-PRDX6  -  peroxiredoxin 6<br>
-CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
-LGMN  -  legumain<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-HIST1H3G  -  histone cluster 1, h3g<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-SDF4  -  stromal cell derived factor 4<br>
-BSG  -  basigin (ok blood group)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-CTSH  -  cathepsin h<br>
-TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
-UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
-CD53  -  cd53 molecule<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-CD48  -  cd48 molecule<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-CCL3  -  chemokine (c-c motif) ligand 3<br>
-IL10  -  interleukin 10<br>
-SUB1  -  sub1 homolog (s. cerevisiae)<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-GLRX  -  glutaredoxin (thioltransferase)<br>
-ITGB7  -  integrin, beta 7<br>
-TMEM59  -  transmembrane protein 59<br>
-ADA  -  adenosine deaminase<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-PLXNB2  -  plexin b2<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-NCSTN  -  nicastrin<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-CUL4B  -  cullin 4b<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-CD300A  -  cd300a molecule<br>
-IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005576&amp;view=details' target="_blank">GO:0005576</a><a name=0005576></a></td>
-<td>extracellular region</td>
-<td  align=center>3.96E-5</td>
-<td  align=center>7.57E-3</td>
-<td  align=center>2.35 (8795,448,217,26)</td>
-<td>
-<a id="ctrl_elements_GO:0005576" href="javascript:toggle('elements_GO:0005576')">[+] Show genes</a><br>
-<div id="elements_GO:0005576" style="display:none"> <font size=1>
-PRDX6  -  peroxiredoxin 6<br>
-CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
-LGMN  -  legumain<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-HIST1H3G  -  histone cluster 1, h3g<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
-ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
-PLIN2  -  perilipin 2<br>
-CTSH  -  cathepsin h<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-CCL3  -  chemokine (c-c motif) ligand 3<br>
-IL10  -  interleukin 10<br>
-IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030667&amp;view=details' target="_blank">GO:0030667</a><a name=0030667></a></td>
-<td>secretory granule membrane</td>
-<td  align=center>4.78E-5</td>
-<td  align=center>8.23E-3</td>
-<td  align=center>3.48 (8795,163,217,14)</td>
-<td>
-<a id="ctrl_elements_GO:0030667" href="javascript:toggle('elements_GO:0030667')">[+] Show genes</a><br>
-<div id="elements_GO:0030667" style="display:none"> <font size=1>
-TMEM30A  -  transmembrane protein 30a<br>
-TSPAN14  -  tetraspanin 14<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-CD53  -  cd53 molecule<br>
-NCSTN  -  nicastrin<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-BSG  -  basigin (ok blood group)<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-CD300A  -  cd300a molecule<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005615&amp;view=details' target="_blank">GO:0005615</a><a name=0005615></a></td>
-<td>extracellular space</td>
-<td  align=center>6.24E-5</td>
-<td  align=center>9.76E-3</td>
-<td  align=center>2.58 (8795,330,217,21)</td>
-<td>
-<a id="ctrl_elements_GO:0005615" href="javascript:toggle('elements_GO:0005615')">[+] Show genes</a><br>
-<div id="elements_GO:0005615" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
-ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
-PRDX6  -  peroxiredoxin 6<br>
-CTSH  -  cathepsin h<br>
-CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br>
-TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-CCL3  -  chemokine (c-c motif) ligand 3<br>
-IL10  -  interleukin 10<br>
-IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ADA  -  adenosine deaminase<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005886&amp;view=details' target="_blank">GO:0005886</a><a name=0005886></a></td>
-<td>plasma membrane</td>
-<td  align=center>6.8E-5</td>
-<td  align=center>9.76E-3</td>
-<td  align=center>1.61 (8795,1512,217,60)</td>
-<td>
-<a id="ctrl_elements_GO:0005886" href="javascript:toggle('elements_GO:0005886')">[+] Show genes</a><br>
-<div id="elements_GO:0005886" style="display:none"> <font size=1>
-TMEM30A  -  transmembrane protein 30a<br>
-COG3  -  component of oligomeric golgi complex 3<br>
-TSPAN14  -  tetraspanin 14<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-CDK14  -  cyclin-dependent kinase 14<br>
-C1orf186  -  chromosome 1 open reading frame 186<br>
-PHKA2  -  phosphorylase kinase, alpha 2 (liver)<br>
-SDF4  -  stromal cell derived factor 4<br>
-BSG  -  basigin (ok blood group)<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-BTLA  -  b and t lymphocyte associated<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-ITM2A  -  integral membrane protein 2a<br>
-MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
-FZD3  -  frizzled family receptor 3<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-GRAP2  -  grb2-related adaptor protein 2<br>
-TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
-SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
-RIC8B  -  ric8 guanine nucleotide exchange factor b<br>
-NMT2  -  n-myristoyltransferase 2<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-RAB40C  -  rab40c, member ras oncogene family<br>
-CENPJ  -  centromere protein j<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-DEF6  -  differentially expressed in fdcp 6 homolog (mouse)<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-ITGB7  -  integrin, beta 7<br>
-MESDC2  -  mesoderm development candidate 2<br>
-TMEM59  -  transmembrane protein 59<br>
-FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-ADA  -  adenosine deaminase<br>
-CSDE1  -  cold shock domain containing e1, rna-binding<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-BFSP2  -  beaded filament structural protein 2, phakinin<br>
-GPR183  -  g protein-coupled receptor 183<br>
-PLIN2  -  perilipin 2<br>
-SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
-NCSTN  -  nicastrin<br>
-EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-RHOT1  -  ras homolog family member t1<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
-GCSAM  -  germinal center-associated, signaling and motility<br>
-CD300A  -  cd300a molecule<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details' target="_blank">GO:0031982</a><a name=0031982></a></td>
-<td>vesicle</td>
-<td  align=center>1.14E-4</td>
-<td  align=center>1.5E-2</td>
-<td  align=center>1.54 (8795,1710,217,65)</td>
-<td>
-<a id="ctrl_elements_GO:0031982" href="javascript:toggle('elements_GO:0031982')">[+] Show genes</a><br>
-<div id="elements_GO:0031982" style="display:none"> <font size=1>
-DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
-PRDX6  -  peroxiredoxin 6<br>
-LGMN  -  legumain<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-HIST1H3G  -  histone cluster 1, h3g<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-SDF4  -  stromal cell derived factor 4<br>
-BSG  -  basigin (ok blood group)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-GRAP2  -  grb2-related adaptor protein 2<br>
-CTSH  -  cathepsin h<br>
-TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
-STARD4  -  star-related lipid transfer (start) domain containing 4<br>
-UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
-CD53  -  cd53 molecule<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-CD48  -  cd48 molecule<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-RAB40C  -  rab40c, member ras oncogene family<br>
-SUB1  -  sub1 homolog (s. cerevisiae)<br>
-VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-GLRX  -  glutaredoxin (thioltransferase)<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-ITGB7  -  integrin, beta 7<br>
-TMEM59  -  transmembrane protein 59<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-SEPT1  -  septin 1<br>
-HEATR5B  -  heat repeat containing 5b<br>
-ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-PLXNB2  -  plexin b2<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-KIDINS220  -  kinase d-interacting substrate, 220kda<br>
-MFF  -  mitochondrial fission factor<br>
-NCSTN  -  nicastrin<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-CUL4B  -  cullin 4b<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-CD300A  -  cd300a molecule<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-TMEM123  -  transmembrane protein 123<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031410&amp;view=details' target="_blank">GO:0031410</a><a name=0031410></a></td>
-<td>cytoplasmic vesicle</td>
-<td  align=center>1.43E-4</td>
-<td  align=center>1.76E-2</td>
-<td  align=center>1.88 (8795,775,217,36)</td>
-<td>
-<a id="ctrl_elements_GO:0031410" href="javascript:toggle('elements_GO:0031410')">[+] Show genes</a><br>
-<div id="elements_GO:0031410" style="display:none"> <font size=1>
-LGMN  -  legumain<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-SDF4  -  stromal cell derived factor 4<br>
-BSG  -  basigin (ok blood group)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM59  -  transmembrane protein 59<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-SEPT1  -  septin 1<br>
-ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
-HEATR5B  -  heat repeat containing 5b<br>
-GRAP2  -  grb2-related adaptor protein 2<br>
-CTSH  -  cathepsin h<br>
-TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
-STARD4  -  star-related lipid transfer (start) domain containing 4<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-NCSTN  -  nicastrin<br>
-MFF  -  mitochondrial fission factor<br>
-KIDINS220  -  kinase d-interacting substrate, 220kda<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-RAB40C  -  rab40c, member ras oncogene family<br>
-VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-EHD1  -  eh-domain containing 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-TMEM123  -  transmembrane protein 123<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097708&amp;view=details' target="_blank">GO:0097708</a><a name=0097708></a></td>
-<td>intracellular vesicle</td>
-<td  align=center>1.55E-4</td>
-<td  align=center>1.78E-2</td>
-<td  align=center>1.88 (8795,778,217,36)</td>
-<td>
-<a id="ctrl_elements_GO:0097708" href="javascript:toggle('elements_GO:0097708')">[+] Show genes</a><br>
-<div id="elements_GO:0097708" style="display:none"> <font size=1>
-LGMN  -  legumain<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-SDF4  -  stromal cell derived factor 4<br>
-BSG  -  basigin (ok blood group)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM59  -  transmembrane protein 59<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-SEPT1  -  septin 1<br>
-ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
-HEATR5B  -  heat repeat containing 5b<br>
-GRAP2  -  grb2-related adaptor protein 2<br>
-CTSH  -  cathepsin h<br>
-TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
-STARD4  -  star-related lipid transfer (start) domain containing 4<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-NCSTN  -  nicastrin<br>
-MFF  -  mitochondrial fission factor<br>
-KIDINS220  -  kinase d-interacting substrate, 220kda<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-RAB40C  -  rab40c, member ras oncogene family<br>
-VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-EHD1  -  eh-domain containing 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-TMEM123  -  transmembrane protein 123<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098552&amp;view=details' target="_blank">GO:0098552</a><a name=0098552></a></td>
-<td>side of membrane</td>
-<td  align=center>2.7E-4</td>
-<td  align=center>2.91E-2</td>
-<td  align=center>3.12 (8795,169,217,13)</td>
-<td>
-<a id="ctrl_elements_GO:0098552" href="javascript:toggle('elements_GO:0098552')">[+] Show genes</a><br>
-<div id="elements_GO:0098552" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-ADA  -  adenosine deaminase<br>
-IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br>
-TMEM123  -  transmembrane protein 123<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009986&amp;view=details' target="_blank">GO:0009986</a><a name=0009986></a></td>
-<td>cell surface</td>
-<td  align=center>3.03E-4</td>
-<td  align=center>3.07E-2</td>
-<td  align=center>3.08 (8795,171,217,13)</td>
-<td>
-<a id="ctrl_elements_GO:0009986" href="javascript:toggle('elements_GO:0009986')">[+] Show genes</a><br>
-<div id="elements_GO:0009986" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-MPZL1  -  myelin protein zero-like 1<br>
-TSPAN14  -  tetraspanin 14<br>
-PLXNB2  -  plexin b2<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-CD53  -  cd53 molecule<br>
-ITGB7  -  integrin, beta 7<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ADA  -  adenosine deaminase<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-FZD3  -  frizzled family receptor 3<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019814&amp;view=details' target="_blank">GO:0019814</a><a name=0019814></a></td>
-<td>immunoglobulin complex</td>
-<td  align=center>3.76E-4</td>
-<td  align=center>3.6E-2</td>
-<td  align=center>7.79 (8795,26,217,5)</td>
-<td>
-<a id="ctrl_elements_GO:0019814" href="javascript:toggle('elements_GO:0019814')">[+] Show genes</a><br>
-<div id="elements_GO:0019814" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031307&amp;view=details' target="_blank">GO:0031307</a><a name=0031307></a></td>
-<td>integral component of mitochondrial outer membrane</td>
-<td  align=center>3.97E-4</td>
-<td  align=center>3.6E-2</td>
-<td  align=center>10.81 (8795,15,217,4)</td>
-<td>
-<a id="ctrl_elements_GO:0031307" href="javascript:toggle('elements_GO:0031307')">[+] Show genes</a><br>
-<div id="elements_GO:0031307" style="display:none"> <font size=1>
-RHOT1  -  ras homolog family member t1<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-FUNDC1  -  fun14 domain containing 1<br>
-MFF  -  mitochondrial fission factor<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099503&amp;view=details' target="_blank">GO:0099503</a><a name=0099503></a></td>
-<td>secretory vesicle</td>
-<td  align=center>4.32E-4</td>
-<td  align=center>3.72E-2</td>
-<td  align=center>3.35 (8795,133,217,11)</td>
-<td>
-<a id="ctrl_elements_GO:0099503" href="javascript:toggle('elements_GO:0099503')">[+] Show genes</a><br>
-<div id="elements_GO:0099503" style="display:none"> <font size=1>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-CTSH  -  cathepsin h<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-RAB40C  -  rab40c, member ras oncogene family<br>
-IGF1  -  insulin-like growth factor 1 (somatomedin c)<br>
-NCSTN  -  nicastrin<br>
-MFF  -  mitochondrial fission factor<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-SEPT1  -  septin 1<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
-<td>membrane</td>
-<td  align=center>4.92E-4</td>
-<td  align=center>4.03E-2</td>
-<td  align=center>1.26 (8795,3755,217,117)</td>
-<td>
-<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
-<div id="elements_GO:0016020" style="display:none"> <font size=1>
-MAD2L1BP  -  mad2l1 binding protein<br>
-PRDX6  -  peroxiredoxin 6<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-TMEM87B  -  transmembrane protein 87b<br>
-BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br>
-TSPAN14  -  tetraspanin 14<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br>
-CNIH4  -  cornichon homolog 4 (drosophila)<br>
-BSG  -  basigin (ok blood group)<br>
-GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br>
-BTLA  -  b and t lymphocyte associated<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br>
-DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br>
-GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
-CPT2  -  carnitine palmitoyltransferase 2<br>
-CERS6  -  ceramide synthase 6<br>
-RIC8B  -  ric8 guanine nucleotide exchange factor b<br>
-SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-TFG  -  trk-fused gene<br>
-OSBPL2  -  oxysterol binding protein-like 2<br>
-SELT  -  selenoprotein t<br>
-RAB40C  -  rab40c, member ras oncogene family<br>
-CENPJ  -  centromere protein j<br>
-TMPRSS3  -  transmembrane protease, serine 3<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-BBS7  -  bardet-biedl syndrome 7<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-EHD1  -  eh-domain containing 1<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-ETNK1  -  ethanolamine kinase 1<br>
-ITGB7  -  integrin, beta 7<br>
-TMEM59  -  transmembrane protein 59<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-NOMO2  -  nodal modulator 2<br>
-ADA  -  adenosine deaminase<br>
-CSDE1  -  cold shock domain containing e1, rna-binding<br>
-MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
-GPR183  -  g protein-coupled receptor 183<br>
-PLIN2  -  perilipin 2<br>
-INSIG1  -  insulin induced gene 1<br>
-SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
-NCSTN  -  nicastrin<br>
-KIDINS220  -  kinase d-interacting substrate, 220kda<br>
-MFF  -  mitochondrial fission factor<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-XAB2  -  xpa binding protein 2<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-FUNDC1  -  fun14 domain containing 1<br>
-IGLV6-57  -  immunoglobulin lambda variable 6-57<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br>
-NCLN  -  nicalin<br>
-TMEM30A  -  transmembrane protein 30a<br>
-COG3  -  component of oligomeric golgi complex 3<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-CDK14  -  cyclin-dependent kinase 14<br>
-HIST1H3G  -  histone cluster 1, h3g<br>
-C1orf186  -  chromosome 1 open reading frame 186<br>
-PHKA2  -  phosphorylase kinase, alpha 2 (liver)<br>
-SDF4  -  stromal cell derived factor 4<br>
-ERO1L  -  ero1-like (s. cerevisiae)<br>
-PTK2B  -  protein tyrosine kinase 2 beta<br>
-ITM2A  -  integral membrane protein 2a<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-FZD3  -  frizzled family receptor 3<br>
-GRAP2  -  grb2-related adaptor protein 2<br>
-TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br>
-PEX14  -  peroxisomal biogenesis factor 14<br>
-NMT2  -  n-myristoyltransferase 2<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-FNIP2  -  folliculin interacting protein 2<br>
-ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
-SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
-DGAT1  -  diacylglycerol o-acyltransferase 1<br>
-VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-IGHM  -  immunoglobulin heavy constant mu<br>
-TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
-B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
-DEF6  -  differentially expressed in fdcp 6 homolog (mouse)<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-MESDC2  -  mesoderm development candidate 2<br>
-FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-BFSP2  -  beaded filament structural protein 2, phakinin<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-HEATR5B  -  heat repeat containing 5b<br>
-REEP3  -  receptor accessory protein 3<br>
-EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
-TSPAN12  -  tetraspanin 12<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-RHOT1  -  ras homolog family member t1<br>
-ATP13A1  -  atpase type 13a1<br>
-IMPAD1  -  inositol monophosphatase domain containing 1<br>
-GCSAM  -  germinal center-associated, signaling and motility<br>
-TPST2  -  tyrosylprotein sulfotransferase 2<br>
-CD300A  -  cd300a molecule<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070062&amp;view=details' target="_blank">GO:0070062</a><a name=0070062></a></td>
-<td>extracellular exosome</td>
-<td  align=center>5.07E-4</td>
-<td  align=center>3.97E-2</td>
-<td  align=center>1.62 (8795,1149,217,46)</td>
-<td>
-<a id="ctrl_elements_GO:0070062" href="javascript:toggle('elements_GO:0070062')">[+] Show genes</a><br>
-<div id="elements_GO:0070062" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
-PRDX6  -  peroxiredoxin 6<br>
-LGMN  -  legumain<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-GLRX  -  glutaredoxin (thioltransferase)<br>
-HIST1H3G  -  histone cluster 1, h3g<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-SDF4  -  stromal cell derived factor 4<br>
-ITGB7  -  integrin, beta 7<br>
-BSG  -  basigin (ok blood group)<br>
-TMEM59  -  transmembrane protein 59<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-CTSH  -  cathepsin h<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-PLXNB2  -  plexin b2<br>
-UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
-NCSTN  -  nicastrin<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-CUL4B  -  cullin 4b<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-SUB1  -  sub1 homolog (s. cerevisiae)<br>
-CD300A  -  cd300a molecule<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031306&amp;view=details' target="_blank">GO:0031306</a><a name=0031306></a></td>
-<td>intrinsic component of mitochondrial outer membrane</td>
-<td  align=center>5.2E-4</td>
-<td  align=center>3.89E-2</td>
-<td  align=center>10.13 (8795,16,217,4)</td>
-<td>
-<a id="ctrl_elements_GO:0031306" href="javascript:toggle('elements_GO:0031306')">[+] Show genes</a><br>
-<div id="elements_GO:0031306" style="display:none"> <font size=1>
-RHOT1  -  ras homolog family member t1<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-FUNDC1  -  fun14 domain containing 1<br>
-MFF  -  mitochondrial fission factor<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043230&amp;view=details' target="_blank">GO:0043230</a><a name=0043230></a></td>
-<td>extracellular organelle</td>
-<td  align=center>5.37E-4</td>
-<td  align=center>3.85E-2</td>
-<td  align=center>1.62 (8795,1152,217,46)</td>
-<td>
-<a id="ctrl_elements_GO:0043230" href="javascript:toggle('elements_GO:0043230')">[+] Show genes</a><br>
-<div id="elements_GO:0043230" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
-PRDX6  -  peroxiredoxin 6<br>
-LGMN  -  legumain<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-GLRX  -  glutaredoxin (thioltransferase)<br>
-HIST1H3G  -  histone cluster 1, h3g<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-SDF4  -  stromal cell derived factor 4<br>
-ITGB7  -  integrin, beta 7<br>
-BSG  -  basigin (ok blood group)<br>
-TMEM59  -  transmembrane protein 59<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-CTSH  -  cathepsin h<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-PLXNB2  -  plexin b2<br>
-UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
-NCSTN  -  nicastrin<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-CUL4B  -  cullin 4b<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-SUB1  -  sub1 homolog (s. cerevisiae)<br>
-CD300A  -  cd300a molecule<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903561&amp;view=details' target="_blank">GO:1903561</a><a name=1903561></a></td>
-<td>extracellular vesicle</td>
-<td  align=center>5.37E-4</td>
-<td  align=center>3.7E-2</td>
-<td  align=center>1.62 (8795,1152,217,46)</td>
-<td>
-<a id="ctrl_elements_GO:1903561" href="javascript:toggle('elements_GO:1903561')">[+] Show genes</a><br>
-<div id="elements_GO:1903561" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
-PRDX6  -  peroxiredoxin 6<br>
-LGMN  -  legumain<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-CREG1  -  cellular repressor of e1a-stimulated genes 1<br>
-CAMP  -  cathelicidin antimicrobial peptide<br>
-GLRX  -  glutaredoxin (thioltransferase)<br>
-HIST1H3G  -  histone cluster 1, h3g<br>
-FUCA2  -  fucosidase, alpha-l- 2, plasma<br>
-SDF4  -  stromal cell derived factor 4<br>
-ITGB7  -  integrin, beta 7<br>
-BSG  -  basigin (ok blood group)<br>
-TMEM59  -  transmembrane protein 59<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-RAP1B  -  rap1b, member of ras oncogene family<br>
-MAN2B2  -  mannosidase, alpha, class 2b, member 2<br>
-LGALS3  -  lectin, galactoside-binding, soluble, 3<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br>
-CTSH  -  cathepsin h<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-PLXNB2  -  plexin b2<br>
-UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br>
-NCSTN  -  nicastrin<br>
-P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br>
-CD53  -  cd53 molecule<br>
-CD48  -  cd48 molecule<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-SND1  -  staphylococcal nuclease and tudor domain containing 1<br>
-ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br>
-CUL4B  -  cullin 4b<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-HEXB  -  hexosaminidase b (beta polypeptide)<br>
-ERP44  -  endoplasmic reticulum protein 44<br>
-SUB1  -  sub1 homolog (s. cerevisiae)<br>
-CD300A  -  cd300a molecule<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-EHD1  -  eh-domain containing 1<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-SPPL2A  -  signal peptide peptidase like 2a<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097458&amp;view=details' target="_blank">GO:0097458</a><a name=0097458></a></td>
-<td>neuron part</td>
-<td  align=center>6.03E-4</td>
-<td  align=center>3.99E-2</td>
-<td  align=center>1.85 (8795,680,217,31)</td>
-<td>
-<a id="ctrl_elements_GO:0097458" href="javascript:toggle('elements_GO:0097458')">[+] Show genes</a><br>
-<div id="elements_GO:0097458" style="display:none"> <font size=1>
-ZMYND8  -  zinc finger, mynd-type containing 8<br>
-DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br>
-BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br>
-SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br>
-LAMP5  -  lysosomal-associated membrane protein family, member 5<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-ERO1L  -  ero1-like (s. cerevisiae)<br>
-BSG  -  basigin (ok blood group)<br>
-PTK2B  -  protein tyrosine kinase 2 beta<br>
-FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br>
-MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br>
-ADA  -  adenosine deaminase<br>
-ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br>
-FZD3  -  frizzled family receptor 3<br>
-SEPT1  -  septin 1<br>
-ANG  -  angiogenin, ribonuclease, rnase a family, 5<br>
-NCSTN  -  nicastrin<br>
-EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br>
-MFF  -  mitochondrial fission factor<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-CRIPT  -  cysteine-rich pdz-binding protein<br>
-ATXN1L  -  ataxin 1-like<br>
-AUTS2  -  autism susceptibility candidate 2<br>
-RAB40C  -  rab40c, member ras oncogene family<br>
-TMPRSS3  -  transmembrane protease, serine 3<br>
-BBS7  -  bardet-biedl syndrome 7<br>
-ARIH1  -  ariadne homolog, ubiquitin-conjugating enzyme e2 binding protein, 1 (drosophila)<br>
-MYO5A  -  myosin va (heavy chain 12, myoxin)<br>
-IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000139&amp;view=details' target="_blank">GO:0000139</a><a name=0000139></a></td>
-<td>Golgi membrane</td>
-<td  align=center>7.06E-4</td>
-<td  align=center>4.5E-2</td>
-<td  align=center>2.07 (8795,450,217,23)</td>
-<td>
-<a id="ctrl_elements_GO:0000139" href="javascript:toggle('elements_GO:0000139')">[+] Show genes</a><br>
-<div id="elements_GO:0000139" style="display:none"> <font size=1>
-GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br>
-TMEM87B  -  transmembrane protein 87b<br>
-COG3  -  component of oligomeric golgi complex 3<br>
-IL15RA  -  interleukin 15 receptor, alpha<br>
-QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br>
-GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br>
-SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br>
-B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br>
-NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br>
-TFG  -  trk-fused gene<br>
-ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br>
-CLN3  -  ceroid-lipofuscinosis, neuronal 3<br>
-ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br>
-IMPAD1  -  inositol monophosphatase domain containing 1<br>
-GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br>
-BSG  -  basigin (ok blood group)<br>
-SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-TMEM59  -  transmembrane protein 59<br>
-TPST2  -  tyrosylprotein sulfotransferase 2<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-LMAN1  -  lectin, mannose-binding, 1<br>
-RHOBTB3  -  rho-related btb domain containing 3<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042571&amp;view=details' target="_blank">GO:0042571</a><a name=0042571></a></td>
-<td>immunoglobulin complex, circulating</td>
-<td  align=center>8.4E-4</td>
-<td  align=center>5.16E-2</td>
-<td  align=center>9.01 (8795,18,217,4)</td>
-<td>
-<a id="ctrl_elements_GO:0042571" href="javascript:toggle('elements_GO:0042571')">[+] Show genes</a><br>
-<div id="elements_GO:0042571" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-IGLL5  -  immunoglobulin lambda-like polypeptide 5<br>
-IGHV1-24  -  immunoglobulin heavy variable 1-24<br>
-IGHV3-23  -  immunoglobulin heavy variable 3-23<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031226&amp;view=details' target="_blank">GO:0031226</a><a name=0031226></a></td>
-<td>intrinsic component of plasma membrane</td>
-<td  align=center>8.94E-4</td>
-<td  align=center>5.31E-2</td>
-<td  align=center>2.29 (8795,319,217,18)</td>
-<td>
-<a id="ctrl_elements_GO:0031226" href="javascript:toggle('elements_GO:0031226')">[+] Show genes</a><br>
-<div id="elements_GO:0031226" style="display:none"> <font size=1>
-TMBIM6  -  transmembrane bax inhibitor motif containing 6<br>
-GPR183  -  g protein-coupled receptor 183<br>
-MPZL1  -  myelin protein zero-like 1<br>
-SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br>
-TSPAN14  -  tetraspanin 14<br>
-PLXNB2  -  plexin b2<br>
-CD53  -  cd53 molecule<br>
-NCSTN  -  nicastrin<br>
-CD48  -  cd48 molecule<br>
-LMTK2  -  lemur tyrosine kinase 2<br>
-TSPAN12  -  tetraspanin 12<br>
-FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br>
-FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br>
-BSG  -  basigin (ok blood group)<br>
-LMAN2  -  lectin, mannose-binding 2<br>
-BCAP31  -  b-cell receptor-associated protein 31<br>
-BTLA  -  b and t lymphocyte associated<br>
-TM9SF2  -  transmembrane 9 superfamily member 2<br>
-</FONT></div>
-</td>
-</tr>
-</table>
-<p>Species used: Homo sapiens</p><p>The system has recognized 9253 genes out of 9706 gene terms entered by the user.<br> 9253 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>225 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
-<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
-<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
-The GOrilla database was last updated on Mar 6, 2021</p>
-<p>This results page will be available on this site for one month from now (until 
-Jan 16, 2023
-). You can bookmark this page and come back to it later.
-</p>
-<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br>
-<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
-<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
-<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
-<p>
-<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
-</p>
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="144,205,240,253" href="#0005615" shape="RECT"/>
+<area alt="" coords="597,205,680,253" href="#0016020" shape="RECT"/>
+<area alt="" coords="597,325,680,373" href="#0031090" shape="RECT"/>
+<area alt="" coords="445,325,573,373" href="#0005886" shape="RECT"/>
+<area alt="" coords="341,573,461,621" href="#0098805" shape="RECT"/>
+<area alt="" coords="1179,309,1269,389" href="#0031300" shape="RECT"/>
+<area alt="" coords="1297,677,1415,757" href="#0098573" shape="RECT"/>
+<area alt="" coords="1429,437,1520,517" href="#0031301" shape="RECT"/>
+<area alt="" coords="1021,205,1107,253" href="#0097458" shape="RECT"/>
+<area alt="" coords="484,693,612,741" href="#0030667" shape="RECT"/>
+<area alt="" coords="1061,453,1179,501" href="#0044431" shape="RECT"/>
+<area alt="" coords="764,573,881,621" href="#0000139" shape="RECT"/>
+<area alt="" coords="1243,198,1339,261" href="#0031224" shape="RECT"/>
+<area alt="" coords="1293,318,1389,381" href="#0016021" shape="RECT"/>
+<area alt="" coords="1413,309,1504,389" href="#0031226" shape="RECT"/>
+<area alt="" coords="1345,933,1463,1013" href="#0031307" shape="RECT"/>
+<area alt="" coords="907,205,997,253" href="#0044424" shape="RECT"/>
+<area alt="" coords="704,325,795,373" href="#0043229" shape="RECT"/>
+<area alt="" coords="925,318,1016,381" href="#0044446" shape="RECT"/>
+<area alt="" coords="1040,325,1136,373" href="#0044444" shape="RECT"/>
+<area alt="" coords="1253,566,1355,629" href="#0044455" shape="RECT"/>
+<area alt="" coords="805,205,883,253" href="#0044422" shape="RECT"/>
+<area alt="" coords="1427,101,1523,149" href="#0005576" shape="RECT"/>
+<area alt="" coords="297,325,369,373" href="#0031982" shape="RECT"/>
+<area alt="" coords="704,453,795,501" href="#0097708" shape="RECT"/>
+<area alt="" coords="216,453,312,501" href="#1903561" shape="RECT"/>
+<area alt="" coords="216,573,312,621" href="#0070062" shape="RECT"/>
+<area alt="" coords="435,205,573,253" href="#0043227" shape="RECT"/>
+<area alt="" coords="1064,693,1144,741" href="#0099503" shape="RECT"/>
+<area alt="" coords="1317,101,1403,149" href="#0044425" shape="RECT"/>
+<area alt="" coords="1520,205,1645,253" href="#0098552" shape="RECT"/>
+<area alt="" coords="1363,205,1496,253" href="#0044459" shape="RECT"/>
+<area alt="" coords="1416,805,1533,885" href="#0032592" shape="RECT"/>
+<area alt="" coords="1275,805,1392,885" href="#0031306" shape="RECT"/>
+<area alt="" coords="485,573,611,621" href="#0030659" shape="RECT"/>
+<area alt="" coords="1528,318,1637,381" href="#0009897" shape="RECT"/>
+<area alt="" coords="40,101,168,149" href="#0032991" shape="RECT"/>
+<area alt="" coords="5,205,120,253" href="#0019814" shape="RECT"/>
+<area alt="" coords="939,446,1037,509" href="#0044432" shape="RECT"/>
+<area alt="" coords="56,318,171,381" href="#0042571" shape="RECT"/>
+<area alt="" coords="721,5,604,29" href="#0005575" shape="RECT"/>
+<area alt="" coords="972,101,1044,149" href="#0044464" shape="RECT"/>
+<area alt="" coords="273,101,369,149" href="#0044421" shape="RECT"/>
+<area alt="" coords="516,101,591,149" href="#0043226" shape="RECT"/>
+<area alt="" coords="443,453,568,501" href="#0012506" shape="RECT"/>
+<area alt="" coords="592,446,680,509" href="#0098588" shape="RECT"/>
+<area alt="" coords="1056,573,1152,621" href="#0031410" shape="RECT"/>
+<area alt="" coords="1131,205,1219,253" href="#0009986" shape="RECT"/>
+<area alt="" coords="819,453,915,501" href="#0044433" shape="RECT"/>
+<area alt="" coords="1253,453,1355,501" href="#0044429" shape="RECT"/>
+<area alt="" coords="315,205,411,253" href="#0043230" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data1/go/31/GOCOMPONENT.png" usemap="#goPathImage"/></p>
+<p>Â </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details" target="_blank">GO:0044425</a><a name="0044425"></a></td>
+<td>membrane part</td>
+<td align="center">1.29E-8</td>
+<td align="center">2.21E-5</td>
+<td align="center">1.62 (8795,2524,217,101)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044425')" id="ctrl_elements_GO:0044425">[+] Show genes</a><br/>
+<div id="elements_GO:0044425" style="display:none"> <font size="1">
+
+TMEM87B  -  transmembrane protein 87b<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+SFT2D1  -  sft2 domain containing 1<br/>
+
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br/>
+
+DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+EMC7  -  er membrane protein complex subunit 7<br/>
+
+CERS6  -  ceramide synthase 6<br/>
+
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+EMC3  -  er membrane protein complex subunit 3<br/>
+
+OSBPL2  -  oxysterol binding protein-like 2<br/>
+
+SELT  -  selenoprotein t<br/>
+
+TMPRSS3  -  transmembrane protease, serine 3<br/>
+
+BBS7  -  bardet-biedl syndrome 7<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+FXYD5  -  fxyd domain containing ion transport regulator 5<br/>
+
+TMEM248  -  transmembrane protein 248<br/>
+
+TMEM45A  -  transmembrane protein 45a<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+NOMO2  -  nodal modulator 2<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+GPR183  -  g protein-coupled receptor 183<br/>
+
+INSIG1  -  insulin induced gene 1<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+KIDINS220  -  kinase d-interacting substrate, 220kda<br/>
+
+NCSTN  -  nicastrin<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+FUNDC1  -  fun14 domain containing 1<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+NCLN  -  nicalin<br/>
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+C1orf186  -  chromosome 1 open reading frame 186<br/>
+
+ERO1L  -  ero1-like (s. cerevisiae)<br/>
+
+PTK2B  -  protein tyrosine kinase 2 beta<br/>
+
+ITM2A  -  integral membrane protein 2a<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+
+PEX14  -  peroxisomal biogenesis factor 14<br/>
+
+NMT2  -  n-myristoyltransferase 2<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+REEP5  -  receptor accessory protein 5<br/>
+
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br/>
+
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br/>
+
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+TIMD4  -  t-cell immunoglobulin and mucin domain containing 4<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+TRAM2  -  translocation associated membrane protein 2<br/>
+
+REEP3  -  receptor accessory protein 3<br/>
+
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br/>
+
+TSPAN12  -  tetraspanin 12<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+RHOT1  -  ras homolog family member t1<br/>
+
+ATP13A1  -  atpase type 13a1<br/>
+
+IMPAD1  -  inositol monophosphatase domain containing 1<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+TPST2  -  tyrosylprotein sulfotransferase 2<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+
+PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016021&amp;view=details" target="_blank">GO:0016021</a><a name="0016021"></a></td>
+<td>integral component of membrane</td>
+<td align="center">2.26E-8</td>
+<td align="center">1.94E-5</td>
+<td align="center">1.83 (8795,1660,217,75)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016021')" id="ctrl_elements_GO:0016021">[+] Show genes</a><br/>
+<div id="elements_GO:0016021" style="display:none"> <font size="1">
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+TMEM87B  -  transmembrane protein 87b<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+C1orf186  -  chromosome 1 open reading frame 186<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+SFT2D1  -  sft2 domain containing 1<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+ITM2A  -  integral membrane protein 2a<br/>
+
+DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+EMC7  -  er membrane protein complex subunit 7<br/>
+
+CERS6  -  ceramide synthase 6<br/>
+
+PEX14  -  peroxisomal biogenesis factor 14<br/>
+
+CD53  -  cd53 molecule<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+REEP5  -  receptor accessory protein 5<br/>
+
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br/>
+
+EMC3  -  er membrane protein complex subunit 3<br/>
+
+SELT  -  selenoprotein t<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br/>
+
+TMPRSS3  -  transmembrane protease, serine 3<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+FXYD5  -  fxyd domain containing ion transport regulator 5<br/>
+
+TMEM248  -  transmembrane protein 248<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br/>
+
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br/>
+
+TMEM45A  -  transmembrane protein 45a<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+TIMD4  -  t-cell immunoglobulin and mucin domain containing 4<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+NOMO2  -  nodal modulator 2<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+GPR183  -  g protein-coupled receptor 183<br/>
+
+TRAM2  -  translocation associated membrane protein 2<br/>
+
+REEP3  -  receptor accessory protein 3<br/>
+
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br/>
+
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+KIDINS220  -  kinase d-interacting substrate, 220kda<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+NCSTN  -  nicastrin<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+TSPAN12  -  tetraspanin 12<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+RHOT1  -  ras homolog family member t1<br/>
+
+ATP13A1  -  atpase type 13a1<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+FUNDC1  -  fun14 domain containing 1<br/>
+
+IMPAD1  -  inositol monophosphatase domain containing 1<br/>
+
+TPST2  -  tyrosylprotein sulfotransferase 2<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+NCLN  -  nicalin<br/>
+
+PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031224&amp;view=details" target="_blank">GO:0031224</a><a name="0031224"></a></td>
+<td>intrinsic component of membrane</td>
+<td align="center">2.29E-8</td>
+<td align="center">1.31E-5</td>
+<td align="center">1.82 (8795,1693,217,76)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031224')" id="ctrl_elements_GO:0031224">[+] Show genes</a><br/>
+<div id="elements_GO:0031224" style="display:none"> <font size="1">
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+TMEM87B  -  transmembrane protein 87b<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+C1orf186  -  chromosome 1 open reading frame 186<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+SFT2D1  -  sft2 domain containing 1<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+ITM2A  -  integral membrane protein 2a<br/>
+
+DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+EMC7  -  er membrane protein complex subunit 7<br/>
+
+CERS6  -  ceramide synthase 6<br/>
+
+PEX14  -  peroxisomal biogenesis factor 14<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+REEP5  -  receptor accessory protein 5<br/>
+
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br/>
+
+EMC3  -  er membrane protein complex subunit 3<br/>
+
+SELT  -  selenoprotein t<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br/>
+
+TMPRSS3  -  transmembrane protease, serine 3<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+FXYD5  -  fxyd domain containing ion transport regulator 5<br/>
+
+TMEM248  -  transmembrane protein 248<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br/>
+
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br/>
+
+TMEM45A  -  transmembrane protein 45a<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+TIMD4  -  t-cell immunoglobulin and mucin domain containing 4<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+NOMO2  -  nodal modulator 2<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+GPR183  -  g protein-coupled receptor 183<br/>
+
+TRAM2  -  translocation associated membrane protein 2<br/>
+
+REEP3  -  receptor accessory protein 3<br/>
+
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br/>
+
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+KIDINS220  -  kinase d-interacting substrate, 220kda<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+NCSTN  -  nicastrin<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+TSPAN12  -  tetraspanin 12<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+RHOT1  -  ras homolog family member t1<br/>
+
+ATP13A1  -  atpase type 13a1<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+FUNDC1  -  fun14 domain containing 1<br/>
+
+IMPAD1  -  inositol monophosphatase domain containing 1<br/>
+
+TPST2  -  tyrosylprotein sulfotransferase 2<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+NCLN  -  nicalin<br/>
+
+PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044459&amp;view=details" target="_blank">GO:0044459</a><a name="0044459"></a></td>
+<td>plasma membrane part</td>
+<td align="center">1.33E-6</td>
+<td align="center">5.74E-4</td>
+<td align="center">2.12 (8795,821,217,43)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044459')" id="ctrl_elements_GO:0044459">[+] Show genes</a><br/>
+<div id="elements_GO:0044459" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+PTK2B  -  protein tyrosine kinase 2 beta<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+
+GPR183  -  g protein-coupled receptor 183<br/>
+
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+NCSTN  -  nicastrin<br/>
+
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+TSPAN12  -  tetraspanin 12<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+OSBPL2  -  oxysterol binding protein-like 2<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+BBS7  -  bardet-biedl syndrome 7<br/>
+
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009897&amp;view=details" target="_blank">GO:0009897</a><a name="0009897"></a></td>
+<td>external side of plasma membrane</td>
+<td align="center">2.81E-6</td>
+<td align="center">9.68E-4</td>
+<td align="center">4.79 (8795,110,217,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009897')" id="ctrl_elements_GO:0009897">[+] Show genes</a><br/>
+<div id="elements_GO:0009897" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044432&amp;view=details" target="_blank">GO:0044432</a><a name="0044432"></a></td>
+<td>endoplasmic reticulum part</td>
+<td align="center">2.89E-5</td>
+<td align="center">8.28E-3</td>
+<td align="center">1.98 (8795,776,217,38)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044432')" id="ctrl_elements_GO:0044432">[+] Show genes</a><br/>
+<div id="elements_GO:0044432" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+ERO1L  -  ero1-like (s. cerevisiae)<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+NOMO2  -  nodal modulator 2<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+TRAM2  -  translocation associated membrane protein 2<br/>
+
+EMC7  -  er membrane protein complex subunit 7<br/>
+
+INSIG1  -  insulin induced gene 1<br/>
+
+REEP3  -  receptor accessory protein 3<br/>
+
+EDEM1  -  er degradation enhancer, mannosidase alpha-like 1<br/>
+
+CERS6  -  ceramide synthase 6<br/>
+
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+TFG  -  trk-fused gene<br/>
+
+REEP5  -  receptor accessory protein 5<br/>
+
+ATP13A1  -  atpase type 13a1<br/>
+
+EMC3  -  er membrane protein complex subunit 3<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+SELT  -  selenoprotein t<br/>
+
+TMPRSS3  -  transmembrane protease, serine 3<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+NCLN  -  nicalin<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+
+PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details" target="_blank">GO:0098588</a><a name="0098588"></a></td>
+<td>bounding membrane of organelle</td>
+<td align="center">3.29E-5</td>
+<td align="center">8.1E-3</td>
+<td align="center">1.76 (8795,1150,217,50)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098588')" id="ctrl_elements_GO:0098588">[+] Show genes</a><br/>
+<div id="elements_GO:0098588" style="display:none"> <font size="1">
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+TMEM87B  -  transmembrane protein 87b<br/>
+
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br/>
+
+COG3  -  component of oligomeric golgi complex 3<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+PEX14  -  peroxisomal biogenesis factor 14<br/>
+
+CD53  -  cd53 molecule<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+TFG  -  trk-fused gene<br/>
+
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br/>
+
+BBS7  -  bardet-biedl syndrome 7<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br/>
+
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+NCSTN  -  nicastrin<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+RHOT1  -  ras homolog family member t1<br/>
+
+FUNDC1  -  fun14 domain containing 1<br/>
+
+IMPAD1  -  inositol monophosphatase domain containing 1<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+TPST2  -  tyrosylprotein sulfotransferase 2<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044421&amp;view=details" target="_blank">GO:0044421</a><a name="0044421"></a></td>
+<td>extracellular region part</td>
+<td align="center">3.85E-5</td>
+<td align="center">8.29E-3</td>
+<td align="center">1.66 (8795,1417,217,58)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044421')" id="ctrl_elements_GO:0044421">[+] Show genes</a><br/>
+<div id="elements_GO:0044421" style="display:none"> <font size="1">
+
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br/>
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br/>
+
+LGMN  -  legumain<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+HIST1H3G  -  histone cluster 1, h3g<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+CTSH  -  cathepsin h<br/>
+
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br/>
+
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CD48  -  cd48 molecule<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+CCL3  -  chemokine (c-c motif) ligand 3<br/>
+
+IL10  -  interleukin 10<br/>
+
+SUB1  -  sub1 homolog (s. cerevisiae)<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+GLRX  -  glutaredoxin (thioltransferase)<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+NCSTN  -  nicastrin<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+CUL4B  -  cullin 4b<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005576&amp;view=details" target="_blank">GO:0005576</a><a name="0005576"></a></td>
+<td>extracellular region</td>
+<td align="center">3.96E-5</td>
+<td align="center">7.57E-3</td>
+<td align="center">2.35 (8795,448,217,26)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005576')" id="ctrl_elements_GO:0005576">[+] Show genes</a><br/>
+<div id="elements_GO:0005576" style="display:none"> <font size="1">
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br/>
+
+LGMN  -  legumain<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+HIST1H3G  -  histone cluster 1, h3g<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br/>
+
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br/>
+
+PLIN2  -  perilipin 2<br/>
+
+CTSH  -  cathepsin h<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+CCL3  -  chemokine (c-c motif) ligand 3<br/>
+
+IL10  -  interleukin 10<br/>
+
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030667&amp;view=details" target="_blank">GO:0030667</a><a name="0030667"></a></td>
+<td>secretory granule membrane</td>
+<td align="center">4.78E-5</td>
+<td align="center">8.23E-3</td>
+<td align="center">3.48 (8795,163,217,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030667')" id="ctrl_elements_GO:0030667">[+] Show genes</a><br/>
+<div id="elements_GO:0030667" style="display:none"> <font size="1">
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NCSTN  -  nicastrin<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005615&amp;view=details" target="_blank">GO:0005615</a><a name="0005615"></a></td>
+<td>extracellular space</td>
+<td align="center">6.24E-5</td>
+<td align="center">9.76E-3</td>
+<td align="center">2.58 (8795,330,217,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005615')" id="ctrl_elements_GO:0005615">[+] Show genes</a><br/>
+<div id="elements_GO:0005615" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+PRKAG2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br/>
+
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br/>
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+CTSH  -  cathepsin h<br/>
+
+CCL3L3  -  chemokine (c-c motif) ligand 3-like 3<br/>
+
+TWSG1  -  twisted gastrulation homolog 1 (drosophila)<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+CCL3  -  chemokine (c-c motif) ligand 3<br/>
+
+IL10  -  interleukin 10<br/>
+
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005886&amp;view=details" target="_blank">GO:0005886</a><a name="0005886"></a></td>
+<td>plasma membrane</td>
+<td align="center">6.8E-5</td>
+<td align="center">9.76E-3</td>
+<td align="center">1.61 (8795,1512,217,60)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0005886')" id="ctrl_elements_GO:0005886">[+] Show genes</a><br/>
+<div id="elements_GO:0005886" style="display:none"> <font size="1">
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+COG3  -  component of oligomeric golgi complex 3<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+CDK14  -  cyclin-dependent kinase 14<br/>
+
+C1orf186  -  chromosome 1 open reading frame 186<br/>
+
+PHKA2  -  phosphorylase kinase, alpha 2 (liver)<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+ITM2A  -  integral membrane protein 2a<br/>
+
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+GRAP2  -  grb2-related adaptor protein 2<br/>
+
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br/>
+
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br/>
+
+RIC8B  -  ric8 guanine nucleotide exchange factor b<br/>
+
+NMT2  -  n-myristoyltransferase 2<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+RAB40C  -  rab40c, member ras oncogene family<br/>
+
+CENPJ  -  centromere protein j<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+DEF6  -  differentially expressed in fdcp 6 homolog (mouse)<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+MESDC2  -  mesoderm development candidate 2<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+CSDE1  -  cold shock domain containing e1, rna-binding<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+BFSP2  -  beaded filament structural protein 2, phakinin<br/>
+
+GPR183  -  g protein-coupled receptor 183<br/>
+
+PLIN2  -  perilipin 2<br/>
+
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br/>
+
+NCSTN  -  nicastrin<br/>
+
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+RHOT1  -  ras homolog family member t1<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br/>
+
+GCSAM  -  germinal center-associated, signaling and motility<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031982&amp;view=details" target="_blank">GO:0031982</a><a name="0031982"></a></td>
+<td>vesicle</td>
+<td align="center">1.14E-4</td>
+<td align="center">1.5E-2</td>
+<td align="center">1.54 (8795,1710,217,65)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031982')" id="ctrl_elements_GO:0031982">[+] Show genes</a><br/>
+<div id="elements_GO:0031982" style="display:none"> <font size="1">
+
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br/>
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+LGMN  -  legumain<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+HIST1H3G  -  histone cluster 1, h3g<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+GRAP2  -  grb2-related adaptor protein 2<br/>
+
+CTSH  -  cathepsin h<br/>
+
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br/>
+
+STARD4  -  star-related lipid transfer (start) domain containing 4<br/>
+
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br/>
+
+CD53  -  cd53 molecule<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CD48  -  cd48 molecule<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+RAB40C  -  rab40c, member ras oncogene family<br/>
+
+SUB1  -  sub1 homolog (s. cerevisiae)<br/>
+
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+GLRX  -  glutaredoxin (thioltransferase)<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+SEPT1  -  septin 1<br/>
+
+HEATR5B  -  heat repeat containing 5b<br/>
+
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+KIDINS220  -  kinase d-interacting substrate, 220kda<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+NCSTN  -  nicastrin<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+CUL4B  -  cullin 4b<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031410&amp;view=details" target="_blank">GO:0031410</a><a name="0031410"></a></td>
+<td>cytoplasmic vesicle</td>
+<td align="center">1.43E-4</td>
+<td align="center">1.76E-2</td>
+<td align="center">1.88 (8795,775,217,36)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031410')" id="ctrl_elements_GO:0031410">[+] Show genes</a><br/>
+<div id="elements_GO:0031410" style="display:none"> <font size="1">
+
+LGMN  -  legumain<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+SEPT1  -  septin 1<br/>
+
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br/>
+
+HEATR5B  -  heat repeat containing 5b<br/>
+
+GRAP2  -  grb2-related adaptor protein 2<br/>
+
+CTSH  -  cathepsin h<br/>
+
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br/>
+
+STARD4  -  star-related lipid transfer (start) domain containing 4<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+NCSTN  -  nicastrin<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+KIDINS220  -  kinase d-interacting substrate, 220kda<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+RAB40C  -  rab40c, member ras oncogene family<br/>
+
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097708&amp;view=details" target="_blank">GO:0097708</a><a name="0097708"></a></td>
+<td>intracellular vesicle</td>
+<td align="center">1.55E-4</td>
+<td align="center">1.78E-2</td>
+<td align="center">1.88 (8795,778,217,36)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097708')" id="ctrl_elements_GO:0097708">[+] Show genes</a><br/>
+<div id="elements_GO:0097708" style="display:none"> <font size="1">
+
+LGMN  -  legumain<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+SEPT1  -  septin 1<br/>
+
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br/>
+
+HEATR5B  -  heat repeat containing 5b<br/>
+
+GRAP2  -  grb2-related adaptor protein 2<br/>
+
+CTSH  -  cathepsin h<br/>
+
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br/>
+
+STARD4  -  star-related lipid transfer (start) domain containing 4<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+NCSTN  -  nicastrin<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+KIDINS220  -  kinase d-interacting substrate, 220kda<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+RAB40C  -  rab40c, member ras oncogene family<br/>
+
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098552&amp;view=details" target="_blank">GO:0098552</a><a name="0098552"></a></td>
+<td>side of membrane</td>
+<td align="center">2.7E-4</td>
+<td align="center">2.91E-2</td>
+<td align="center">3.12 (8795,169,217,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098552')" id="ctrl_elements_GO:0098552">[+] Show genes</a><br/>
+<div id="elements_GO:0098552" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+TMEM123  -  transmembrane protein 123<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009986&amp;view=details" target="_blank">GO:0009986</a><a name="0009986"></a></td>
+<td>cell surface</td>
+<td align="center">3.03E-4</td>
+<td align="center">3.07E-2</td>
+<td align="center">3.08 (8795,171,217,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009986')" id="ctrl_elements_GO:0009986">[+] Show genes</a><br/>
+<div id="elements_GO:0009986" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+CD53  -  cd53 molecule<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019814&amp;view=details" target="_blank">GO:0019814</a><a name="0019814"></a></td>
+<td>immunoglobulin complex</td>
+<td align="center">3.76E-4</td>
+<td align="center">3.6E-2</td>
+<td align="center">7.79 (8795,26,217,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0019814')" id="ctrl_elements_GO:0019814">[+] Show genes</a><br/>
+<div id="elements_GO:0019814" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031307&amp;view=details" target="_blank">GO:0031307</a><a name="0031307"></a></td>
+<td>integral component of mitochondrial outer membrane</td>
+<td align="center">3.97E-4</td>
+<td align="center">3.6E-2</td>
+<td align="center">10.81 (8795,15,217,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031307')" id="ctrl_elements_GO:0031307">[+] Show genes</a><br/>
+<div id="elements_GO:0031307" style="display:none"> <font size="1">
+
+RHOT1  -  ras homolog family member t1<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+FUNDC1  -  fun14 domain containing 1<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099503&amp;view=details" target="_blank">GO:0099503</a><a name="0099503"></a></td>
+<td>secretory vesicle</td>
+<td align="center">4.32E-4</td>
+<td align="center">3.72E-2</td>
+<td align="center">3.35 (8795,133,217,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0099503')" id="ctrl_elements_GO:0099503">[+] Show genes</a><br/>
+<div id="elements_GO:0099503" style="display:none"> <font size="1">
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+CTSH  -  cathepsin h<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+RAB40C  -  rab40c, member ras oncogene family<br/>
+
+IGF1  -  insulin-like growth factor 1 (somatomedin c)<br/>
+
+NCSTN  -  nicastrin<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+SEPT1  -  septin 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details" target="_blank">GO:0016020</a><a name="0016020"></a></td>
+<td>membrane</td>
+<td align="center">4.92E-4</td>
+<td align="center">4.03E-2</td>
+<td align="center">1.26 (8795,3755,217,117)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0016020')" id="ctrl_elements_GO:0016020">[+] Show genes</a><br/>
+<div id="elements_GO:0016020" style="display:none"> <font size="1">
+
+MAD2L1BP  -  mad2l1 binding protein<br/>
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+TMEM87B  -  transmembrane protein 87b<br/>
+
+BNIP3L  -  bcl2/adenovirus e1b 19kda interacting protein 3-like<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+DDOST  -  dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit (non-catalytic)<br/>
+
+CNIH4  -  cornichon homolog 4 (drosophila)<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+SPARC  -  secreted protein, acidic, cysteine-rich (osteonectin)<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+MLLT4  -  myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, drosophila); translocated to, 4<br/>
+
+DHRS9  -  dehydrogenase/reductase (sdr family) member 9<br/>
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+CPT2  -  carnitine palmitoyltransferase 2<br/>
+
+CERS6  -  ceramide synthase 6<br/>
+
+RIC8B  -  ric8 guanine nucleotide exchange factor b<br/>
+
+SMURF2  -  smad specific e3 ubiquitin protein ligase 2<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+TFG  -  trk-fused gene<br/>
+
+OSBPL2  -  oxysterol binding protein-like 2<br/>
+
+SELT  -  selenoprotein t<br/>
+
+RAB40C  -  rab40c, member ras oncogene family<br/>
+
+CENPJ  -  centromere protein j<br/>
+
+TMPRSS3  -  transmembrane protease, serine 3<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+BBS7  -  bardet-biedl syndrome 7<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+ETNK1  -  ethanolamine kinase 1<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+NOMO2  -  nodal modulator 2<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+CSDE1  -  cold shock domain containing e1, rna-binding<br/>
+
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br/>
+
+GPR183  -  g protein-coupled receptor 183<br/>
+
+PLIN2  -  perilipin 2<br/>
+
+INSIG1  -  insulin induced gene 1<br/>
+
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br/>
+
+NCSTN  -  nicastrin<br/>
+
+KIDINS220  -  kinase d-interacting substrate, 220kda<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+XAB2  -  xpa binding protein 2<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+FUNDC1  -  fun14 domain containing 1<br/>
+
+IGLV6-57  -  immunoglobulin lambda variable 6-57<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+PSMF1  -  proteasome (prosome, macropain) inhibitor subunit 1 (pi31)<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+LILRB1  -  leukocyte immunoglobulin-like receptor, subfamily b (with tm and itim domains), member 1<br/>
+
+NCLN  -  nicalin<br/>
+
+TMEM30A  -  transmembrane protein 30a<br/>
+
+COG3  -  component of oligomeric golgi complex 3<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+CDK14  -  cyclin-dependent kinase 14<br/>
+
+HIST1H3G  -  histone cluster 1, h3g<br/>
+
+C1orf186  -  chromosome 1 open reading frame 186<br/>
+
+PHKA2  -  phosphorylase kinase, alpha 2 (liver)<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+ERO1L  -  ero1-like (s. cerevisiae)<br/>
+
+PTK2B  -  protein tyrosine kinase 2 beta<br/>
+
+ITM2A  -  integral membrane protein 2a<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+CASP1  -  caspase 1, apoptosis-related cysteine peptidase<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+
+GRAP2  -  grb2-related adaptor protein 2<br/>
+
+TRAF7  -  tnf receptor-associated factor 7, e3 ubiquitin protein ligase<br/>
+
+PEX14  -  peroxisomal biogenesis factor 14<br/>
+
+NMT2  -  n-myristoyltransferase 2<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+FNIP2  -  folliculin interacting protein 2<br/>
+
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br/>
+
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br/>
+
+DGAT1  -  diacylglycerol o-acyltransferase 1<br/>
+
+VPS33A  -  vacuolar protein sorting 33 homolog a (s. cerevisiae)<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br/>
+
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br/>
+
+DEF6  -  differentially expressed in fdcp 6 homolog (mouse)<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+MESDC2  -  mesoderm development candidate 2<br/>
+
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+BFSP2  -  beaded filament structural protein 2, phakinin<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+HEATR5B  -  heat repeat containing 5b<br/>
+
+REEP3  -  receptor accessory protein 3<br/>
+
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br/>
+
+TSPAN12  -  tetraspanin 12<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+RHOT1  -  ras homolog family member t1<br/>
+
+ATP13A1  -  atpase type 13a1<br/>
+
+IMPAD1  -  inositol monophosphatase domain containing 1<br/>
+
+GCSAM  -  germinal center-associated, signaling and motility<br/>
+
+TPST2  -  tyrosylprotein sulfotransferase 2<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+
+PIGT  -  phosphatidylinositol glycan anchor biosynthesis, class t<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070062&amp;view=details" target="_blank">GO:0070062</a><a name="0070062"></a></td>
+<td>extracellular exosome</td>
+<td align="center">5.07E-4</td>
+<td align="center">3.97E-2</td>
+<td align="center">1.62 (8795,1149,217,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070062')" id="ctrl_elements_GO:0070062">[+] Show genes</a><br/>
+<div id="elements_GO:0070062" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br/>
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+LGMN  -  legumain<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+GLRX  -  glutaredoxin (thioltransferase)<br/>
+
+HIST1H3G  -  histone cluster 1, h3g<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+CTSH  -  cathepsin h<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br/>
+
+NCSTN  -  nicastrin<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+CUL4B  -  cullin 4b<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+SUB1  -  sub1 homolog (s. cerevisiae)<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031306&amp;view=details" target="_blank">GO:0031306</a><a name="0031306"></a></td>
+<td>intrinsic component of mitochondrial outer membrane</td>
+<td align="center">5.2E-4</td>
+<td align="center">3.89E-2</td>
+<td align="center">10.13 (8795,16,217,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031306')" id="ctrl_elements_GO:0031306">[+] Show genes</a><br/>
+<div id="elements_GO:0031306" style="display:none"> <font size="1">
+
+RHOT1  -  ras homolog family member t1<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+FUNDC1  -  fun14 domain containing 1<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043230&amp;view=details" target="_blank">GO:0043230</a><a name="0043230"></a></td>
+<td>extracellular organelle</td>
+<td align="center">5.37E-4</td>
+<td align="center">3.85E-2</td>
+<td align="center">1.62 (8795,1152,217,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0043230')" id="ctrl_elements_GO:0043230">[+] Show genes</a><br/>
+<div id="elements_GO:0043230" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br/>
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+LGMN  -  legumain<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+GLRX  -  glutaredoxin (thioltransferase)<br/>
+
+HIST1H3G  -  histone cluster 1, h3g<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+CTSH  -  cathepsin h<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br/>
+
+NCSTN  -  nicastrin<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+CUL4B  -  cullin 4b<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+SUB1  -  sub1 homolog (s. cerevisiae)<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903561&amp;view=details" target="_blank">GO:1903561</a><a name="1903561"></a></td>
+<td>extracellular vesicle</td>
+<td align="center">5.37E-4</td>
+<td align="center">3.7E-2</td>
+<td align="center">1.62 (8795,1152,217,46)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1903561')" id="ctrl_elements_GO:1903561">[+] Show genes</a><br/>
+<div id="elements_GO:1903561" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br/>
+
+PRDX6  -  peroxiredoxin 6<br/>
+
+LGMN  -  legumain<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+CREG1  -  cellular repressor of e1a-stimulated genes 1<br/>
+
+CAMP  -  cathelicidin antimicrobial peptide<br/>
+
+GLRX  -  glutaredoxin (thioltransferase)<br/>
+
+HIST1H3G  -  histone cluster 1, h3g<br/>
+
+FUCA2  -  fucosidase, alpha-l- 2, plasma<br/>
+
+SDF4  -  stromal cell derived factor 4<br/>
+
+ITGB7  -  integrin, beta 7<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+RAP1B  -  rap1b, member of ras oncogene family<br/>
+
+MAN2B2  -  mannosidase, alpha, class 2b, member 2<br/>
+
+LGALS3  -  lectin, galactoside-binding, soluble, 3<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+
+ENPP4  -  ectonucleotide pyrophosphatase/phosphodiesterase 4 (putative)<br/>
+
+CTSH  -  cathepsin h<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+UGGT1  -  udp-glucose glycoprotein glucosyltransferase 1<br/>
+
+NCSTN  -  nicastrin<br/>
+
+P4HB  -  prolyl 4-hydroxylase, beta polypeptide<br/>
+
+CD53  -  cd53 molecule<br/>
+
+CD48  -  cd48 molecule<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+SND1  -  staphylococcal nuclease and tudor domain containing 1<br/>
+
+ATP6V0C  -  atpase, h+ transporting, lysosomal 16kda, v0 subunit c<br/>
+
+CUL4B  -  cullin 4b<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+HEXB  -  hexosaminidase b (beta polypeptide)<br/>
+
+ERP44  -  endoplasmic reticulum protein 44<br/>
+
+SUB1  -  sub1 homolog (s. cerevisiae)<br/>
+
+CD300A  -  cd300a molecule<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+EHD1  -  eh-domain containing 1<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+
+SPPL2A  -  signal peptide peptidase like 2a<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097458&amp;view=details" target="_blank">GO:0097458</a><a name="0097458"></a></td>
+<td>neuron part</td>
+<td align="center">6.03E-4</td>
+<td align="center">3.99E-2</td>
+<td align="center">1.85 (8795,680,217,31)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097458')" id="ctrl_elements_GO:0097458">[+] Show genes</a><br/>
+<div id="elements_GO:0097458" style="display:none"> <font size="1">
+
+ZMYND8  -  zinc finger, mynd-type containing 8<br/>
+
+DHX36  -  deah (asp-glu-ala-his) box polypeptide 36<br/>
+
+BNIP3  -  bcl2/adenovirus e1b 19kda interacting protein 3<br/>
+
+SLC9A3R1  -  solute carrier family 9, subfamily a (nhe3, cation proton antiporter 3), member 3 regulator 1<br/>
+
+LAMP5  -  lysosomal-associated membrane protein family, member 5<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+ERO1L  -  ero1-like (s. cerevisiae)<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+PTK2B  -  protein tyrosine kinase 2 beta<br/>
+
+FEZ1  -  fasciculation and elongation protein zeta 1 (zygin i)<br/>
+
+MX1  -  myxovirus (influenza virus) resistance 1, interferon-inducible protein p78 (mouse)<br/>
+
+ADA  -  adenosine deaminase<br/>
+
+ATP6AP2  -  atpase, h+ transporting, lysosomal accessory protein 2<br/>
+
+FZD3  -  frizzled family receptor 3<br/>
+
+SEPT1  -  septin 1<br/>
+
+ANG  -  angiogenin, ribonuclease, rnase a family, 5<br/>
+
+NCSTN  -  nicastrin<br/>
+
+EPB41L5  -  erythrocyte membrane protein band 4.1 like 5<br/>
+
+MFF  -  mitochondrial fission factor<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+CRIPT  -  cysteine-rich pdz-binding protein<br/>
+
+ATXN1L  -  ataxin 1-like<br/>
+
+AUTS2  -  autism susceptibility candidate 2<br/>
+
+RAB40C  -  rab40c, member ras oncogene family<br/>
+
+TMPRSS3  -  transmembrane protease, serine 3<br/>
+
+BBS7  -  bardet-biedl syndrome 7<br/>
+
+ARIH1  -  ariadne homolog, ubiquitin-conjugating enzyme e2 binding protein, 1 (drosophila)<br/>
+
+MYO5A  -  myosin va (heavy chain 12, myoxin)<br/>
+
+IL6ST  -  interleukin 6 signal transducer (gp130, oncostatin m receptor)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000139&amp;view=details" target="_blank">GO:0000139</a><a name="0000139"></a></td>
+<td>Golgi membrane</td>
+<td align="center">7.06E-4</td>
+<td align="center">4.5E-2</td>
+<td align="center">2.07 (8795,450,217,23)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000139')" id="ctrl_elements_GO:0000139">[+] Show genes</a><br/>
+<div id="elements_GO:0000139" style="display:none"> <font size="1">
+
+GALNT6  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 6 (galnac-t6)<br/>
+
+TMEM87B  -  transmembrane protein 87b<br/>
+
+COG3  -  component of oligomeric golgi complex 3<br/>
+
+IL15RA  -  interleukin 15 receptor, alpha<br/>
+
+QSOX1  -  quiescin q6 sulfhydryl oxidase 1<br/>
+
+GALNT2  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 2 (galnac-t2)<br/>
+
+SLC30A6  -  solute carrier family 30 (zinc transporter), member 6<br/>
+
+B3GNT2  -  udp-glcnac:betagal beta-1,3-n-acetylglucosaminyltransferase 2<br/>
+
+NAPA  -  n-ethylmaleimide-sensitive factor attachment protein, alpha<br/>
+
+TFG  -  trk-fused gene<br/>
+
+ST6GAL1  -  st6 beta-galactosamide alpha-2,6-sialyltranferase 1<br/>
+
+CLN3  -  ceroid-lipofuscinosis, neuronal 3<br/>
+
+ST8SIA4  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 4<br/>
+
+IMPAD1  -  inositol monophosphatase domain containing 1<br/>
+
+GALNT10  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 10 (galnac-t10)<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+SLC35A3  -  solute carrier family 35 (udp-n-acetylglucosamine (udp-glcnac) transporter), member a3<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+TMEM59  -  transmembrane protein 59<br/>
+
+TPST2  -  tyrosylprotein sulfotransferase 2<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+LMAN1  -  lectin, mannose-binding, 1<br/>
+
+RHOBTB3  -  rho-related btb domain containing 3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042571&amp;view=details" target="_blank">GO:0042571</a><a name="0042571"></a></td>
+<td>immunoglobulin complex, circulating</td>
+<td align="center">8.4E-4</td>
+<td align="center">5.16E-2</td>
+<td align="center">9.01 (8795,18,217,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042571')" id="ctrl_elements_GO:0042571">[+] Show genes</a><br/>
+<div id="elements_GO:0042571" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+IGLL5  -  immunoglobulin lambda-like polypeptide 5<br/>
+
+IGHV1-24  -  immunoglobulin heavy variable 1-24<br/>
+
+IGHV3-23  -  immunoglobulin heavy variable 3-23<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031226&amp;view=details" target="_blank">GO:0031226</a><a name="0031226"></a></td>
+<td>intrinsic component of plasma membrane</td>
+<td align="center">8.94E-4</td>
+<td align="center">5.31E-2</td>
+<td align="center">2.29 (8795,319,217,18)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031226')" id="ctrl_elements_GO:0031226">[+] Show genes</a><br/>
+<div id="elements_GO:0031226" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+GPR183  -  g protein-coupled receptor 183<br/>
+
+MPZL1  -  myelin protein zero-like 1<br/>
+
+SLCO5A1  -  solute carrier organic anion transporter family, member 5a1<br/>
+
+TSPAN14  -  tetraspanin 14<br/>
+
+PLXNB2  -  plexin b2<br/>
+
+CD53  -  cd53 molecule<br/>
+
+NCSTN  -  nicastrin<br/>
+
+CD48  -  cd48 molecule<br/>
+
+LMTK2  -  lemur tyrosine kinase 2<br/>
+
+TSPAN12  -  tetraspanin 12<br/>
+
+FCGR2B  -  fc fragment of igg, low affinity iib, receptor (cd32)<br/>
+
+FCER2  -  fc fragment of ige, low affinity ii, receptor for (cd23)<br/>
+
+BSG  -  basigin (ok blood group)<br/>
+
+LMAN2  -  lectin, mannose-binding 2<br/>
+
+BCAP31  -  b-cell receptor-associated protein 31<br/>
+
+BTLA  -  b and t lymphocyte associated<br/>
+
+TM9SF2  -  transmembrane 9 superfamily member 2<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9253 genes out of 9706 gene terms entered by the user.<br/> 9253 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>225 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br/>Only 8795 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOCOMPONENT.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 16, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1721 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

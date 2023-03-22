@@ -1,0 +1,2585 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="976,495,1072,543" href="#0048878" shape="RECT"/>
+<area alt="" coords="1071,649,1188,697" href="#0050801" shape="RECT"/>
+<area alt="" coords="916,649,1047,697" href="#0030104" shape="RECT"/>
+<area alt="" coords="3724,230,3833,293" href="#0045103" shape="RECT"/>
+<area alt="" coords="3827,633,3925,713" href="#0045104" shape="RECT"/>
+<area alt="" coords="4355,357,4432,405" href="#0042493" shape="RECT"/>
+<area alt="" coords="4243,487,4363,550" href="#0097327" shape="RECT"/>
+<area alt="" coords="4484,788,4609,868" href="#0071383" shape="RECT"/>
+<area alt="" coords="4493,943,4611,1023" href="#0071384" shape="RECT"/>
+<area alt="" coords="1685,1345,1800,1442" href="#0098911" shape="RECT"/>
+<area alt="" coords="3051,230,3144,293" href="#0048856" shape="RECT"/>
+<area alt="" coords="2981,357,3099,405" href="#0048468" shape="RECT"/>
+<area alt="" coords="2587,487,2680,550" href="#0080134" shape="RECT"/>
+<area alt="" coords="2385,633,2468,713" href="#0080135" shape="RECT"/>
+<area alt="" coords="3168,230,3277,293" href="#0009653" shape="RECT"/>
+<area alt="" coords="3191,350,3300,413" href="#0032989" shape="RECT"/>
+<area alt="" coords="3043,804,3152,852" href="#0048598" shape="RECT"/>
+<area alt="" coords="331,804,408,852" href="#0030001" shape="RECT"/>
+<area alt="" coords="267,959,355,1007" href="#0006814" shape="RECT"/>
+<area alt="" coords="1392,350,1488,413" href="#0019222" shape="RECT"/>
+<area alt="" coords="1203,479,1285,559" href="#0080090" shape="RECT"/>
+<area alt="" coords="1309,470,1395,567" href="#0051171" shape="RECT"/>
+<area alt="" coords="1419,479,1547,559" href="#0060255" shape="RECT"/>
+<area alt="" coords="2561,788,2660,868" href="#2000810" shape="RECT"/>
+<area alt="" coords="2369,779,2484,877" href="#1905897" shape="RECT"/>
+<area alt="" coords="2464,925,2579,1040" href="#1903573" shape="RECT"/>
+<area alt="" coords="5335,779,5481,877" href="#0086073" shape="RECT"/>
+<area alt="" coords="4811,230,4888,293" href="#0009628" shape="RECT"/>
+<area alt="" coords="4960,350,5045,413" href="#0006970" shape="RECT"/>
+<area alt="" coords="2987,117,3080,165" href="#0022414" shape="RECT"/>
+<area alt="" coords="2907,230,3027,293" href="#0003006" shape="RECT"/>
+<area alt="" coords="1420,117,1505,165" href="#0051179" shape="RECT"/>
+<area alt="" coords="739,237,845,285" href="#0051234" shape="RECT"/>
+<area alt="" coords="3712,495,3811,543" href="#0007010" shape="RECT"/>
+<area alt="" coords="1961,1097,2092,1159" href="#0055117" shape="RECT"/>
+<area alt="" coords="1879,1216,1969,1296" href="#0086004" shape="RECT"/>
+<area alt="" coords="485,495,560,543" href="#0046903" shape="RECT"/>
+<area alt="" coords="541,649,621,697" href="#0007589" shape="RECT"/>
+<area alt="" coords="331,649,408,697" href="#0032941" shape="RECT"/>
+<area alt="" coords="4189,633,4280,713" href="#0032870" shape="RECT"/>
+<area alt="" coords="5439,633,5553,713" href="#0086042" shape="RECT"/>
+<area alt="" coords="4541,117,4627,165" href="#0050896" shape="RECT"/>
+<area alt="" coords="4596,237,4684,285" href="#0042221" shape="RECT"/>
+<area alt="" coords="4121,350,4231,413" href="#0009719" shape="RECT"/>
+<area alt="" coords="4487,230,4572,293" href="#0051716" shape="RECT"/>
+<area alt="" coords="4964,237,5041,285" href="#0006950" shape="RECT"/>
+<area alt="" coords="5643,804,5723,852" href="#0030260" shape="RECT"/>
+<area alt="" coords="5643,951,5723,1014" href="#0046718" shape="RECT"/>
+<area alt="" coords="3596,350,3687,413" href="#0022607" shape="RECT"/>
+<area alt="" coords="3595,495,3688,543" href="#0034329" shape="RECT"/>
+<area alt="" coords="1007,804,1124,852" href="#0098771" shape="RECT"/>
+<area alt="" coords="1148,804,1281,852" href="#0055080" shape="RECT"/>
+<area alt="" coords="1388,633,1471,713" href="#0051246" shape="RECT"/>
+<area alt="" coords="3028,934,3167,1031" href="#0060672" shape="RECT"/>
+<area alt="" coords="3448,101,3547,181" href="#0071840" shape="RECT"/>
+<area alt="" coords="3539,230,3629,293" href="#0016043" shape="RECT"/>
+<area alt="" coords="3704,649,3803,697" href="#0120193" shape="RECT"/>
+<area alt="" coords="3679,804,3777,852" href="#0120192" shape="RECT"/>
+<area alt="" coords="5061,495,5139,543" href="#1901654" shape="RECT"/>
+<area alt="" coords="4925,642,5003,705" href="#1901655" shape="RECT"/>
+<area alt="" coords="4979,1104,5083,1152" href="#1904044" shape="RECT"/>
+<area alt="" coords="5188,237,5287,285" href="#0007155" shape="RECT"/>
+<area alt="" coords="5323,357,5397,405" href="#0098609" shape="RECT"/>
+<area alt="" coords="4483,1088,4621,1168" href="#0071389" shape="RECT"/>
+<area alt="" coords="4811,1225,4915,1287" href="#1904045" shape="RECT"/>
+<area alt="" coords="3173,642,3312,705" href="#0000904" shape="RECT"/>
+<area alt="" coords="3176,804,3309,852" href="#0003382" shape="RECT"/>
+<area alt="" coords="3176,495,3309,543" href="#0000902" shape="RECT"/>
+<area alt="" coords="4000,479,4109,559" href="#0071495" shape="RECT"/>
+<area alt="" coords="2981,495,3099,543" href="#0002064" shape="RECT"/>
+<area alt="" coords="2981,649,3099,697" href="#0001885" shape="RECT"/>
+<area alt="" coords="2084,642,2199,705" href="#0090257" shape="RECT"/>
+<area alt="" coords="2019,797,2104,859" href="#0006937" shape="RECT"/>
+<area alt="" coords="584,495,715,543" href="#0071702" shape="RECT"/>
+<area alt="" coords="645,642,747,705" href="#1901264" shape="RECT"/>
+<area alt="" coords="2116,951,2212,1014" href="#0052547" shape="RECT"/>
+<area alt="" coords="128,495,243,543" href="#0003008" shape="RECT"/>
+<area alt="" coords="67,649,168,697" href="#0003014" shape="RECT"/>
+<area alt="" coords="739,487,832,550" href="#0050878" shape="RECT"/>
+<area alt="" coords="813,797,944,859" href="#0050891" shape="RECT"/>
+<area alt="" coords="5587,649,5667,697" href="#0044409" shape="RECT"/>
+<area alt="" coords="1096,487,1179,550" href="#0098900" shape="RECT"/>
+<area alt="" coords="1508,1216,1617,1296" href="#0098901" shape="RECT"/>
+<area alt="" coords="1915,479,2005,559" href="#0051270" shape="RECT"/>
+<area alt="" coords="1883,642,2037,705" href="#1903115" shape="RECT"/>
+<area alt="" coords="5559,357,5644,405" href="#0051701" shape="RECT"/>
+<area alt="" coords="5627,470,5739,567" href="#0051828" shape="RECT"/>
+<area alt="" coords="2587,350,2680,413" href="#0048583" shape="RECT"/>
+<area alt="" coords="2704,479,2797,559" href="#0048585" shape="RECT"/>
+<area alt="" coords="4547,350,4629,413" href="#0010033" shape="RECT"/>
+<area alt="" coords="4531,495,4608,543" href="#0033993" shape="RECT"/>
+<area alt="" coords="4960,495,5037,543" href="#0097305" shape="RECT"/>
+<area alt="" coords="4133,495,4219,543" href="#0009725" shape="RECT"/>
+<area alt="" coords="4632,479,4715,559" href="#0071310" shape="RECT"/>
+<area alt="" coords="4712,642,4800,705" href="#0110096" shape="RECT"/>
+<area alt="" coords="4387,487,4507,550" href="#0014070" shape="RECT"/>
+<area alt="" coords="5691,616,5787,731" href="#0051806" shape="RECT"/>
+<area alt="" coords="4611,642,4688,705" href="#0071396" shape="RECT"/>
+<area alt="" coords="4363,642,4443,705" href="#0048545" shape="RECT"/>
+<area alt="" coords="2855,797,2961,859" href="#0061028" shape="RECT"/>
+<area alt="" coords="1004,951,1137,1014" href="#0055067" shape="RECT"/>
+<area alt="" coords="1092,1104,1188,1152" href="#0055078" shape="RECT"/>
+<area alt="" coords="4653,341,4747,421" href="#0070887" shape="RECT"/>
+<area alt="" coords="4789,350,4936,413" href="#1901700" shape="RECT"/>
+<area alt="" coords="1656,642,1779,705" href="#0030856" shape="RECT"/>
+<area alt="" coords="1564,797,1687,859" href="#0045604" shape="RECT"/>
+<area alt="" coords="487,357,559,405" href="#0006810" shape="RECT"/>
+<area alt="" coords="4824,642,4901,705" href="#0097306" shape="RECT"/>
+<area alt="" coords="3713,357,3804,405" href="#0006996" shape="RECT"/>
+<area alt="" coords="3333,495,3456,543" href="#0030855" shape="RECT"/>
+<area alt="" coords="3336,649,3459,697" href="#0009913" shape="RECT"/>
+<area alt="" coords="4345,804,4460,852" href="#0031960" shape="RECT"/>
+<area alt="" coords="4336,959,4469,1007" href="#0051385" shape="RECT"/>
+<area alt="" coords="1940,357,2041,405" href="#0032879" shape="RECT"/>
+<area alt="" coords="2257,350,2340,413" href="#0050794" shape="RECT"/>
+<area alt="" coords="2029,487,2184,550" href="#0032970" shape="RECT"/>
+<area alt="" coords="1755,495,1891,543" href="#0045595" shape="RECT"/>
+<area alt="" coords="2480,479,2563,559" href="#0048523" shape="RECT"/>
+<area alt="" coords="2365,479,2456,559" href="#0051128" shape="RECT"/>
+<area alt="" coords="3871,237,3948,285" href="#0008219" shape="RECT"/>
+<area alt="" coords="3885,357,3984,405" href="#0012501" shape="RECT"/>
+<area alt="" coords="1393,804,1492,852" href="#0030162" shape="RECT"/>
+<area alt="" coords="2819,350,2907,413" href="#0050790" shape="RECT"/>
+<area alt="" coords="2684,797,2780,859" href="#0051336" shape="RECT"/>
+<area alt="" coords="3169,117,3276,165" href="#0032502" shape="RECT"/>
+<area alt="" coords="3301,230,3408,293" href="#0048869" shape="RECT"/>
+<area alt="" coords="5111,357,5201,405" href="#0009611" shape="RECT"/>
+<area alt="" coords="5163,495,5267,543" href="#0042060" shape="RECT"/>
+<area alt="" coords="3479,357,3572,405" href="#0034330" shape="RECT"/>
+<area alt="" coords="1087,350,1188,413" href="#0042391" shape="RECT"/>
+<area alt="" coords="477,804,595,852" href="#0070254" shape="RECT"/>
+<area alt="" coords="3679,951,3777,1014" href="#0070830" shape="RECT"/>
+<area alt="" coords="1029,230,1123,293" href="#0065008" shape="RECT"/>
+<area alt="" coords="967,357,1063,405" href="#0042592" shape="RECT"/>
+<area alt="" coords="5341,470,5493,567" href="#0098742" shape="RECT"/>
+<area alt="" coords="2208,487,2291,550" href="#0044057" shape="RECT"/>
+<area alt="" coords="2200,804,2331,852" href="#1903522" shape="RECT"/>
+<area alt="" coords="233,350,327,413" href="#0032501" shape="RECT"/>
+<area alt="" coords="5,495,104,543" href="#0031424" shape="RECT"/>
+<area alt="" coords="856,487,952,550" href="#0048871" shape="RECT"/>
+<area alt="" coords="4467,633,4587,713" href="#0071407" shape="RECT"/>
+<area alt="" coords="2383,117,2463,165" href="#0065007" shape="RECT"/>
+<area alt="" coords="2192,230,2285,293" href="#0050789" shape="RECT"/>
+<area alt="" coords="2559,230,2655,293" href="#0065009" shape="RECT"/>
+<area alt="" coords="1161,959,1257,1007" href="#0055065" shape="RECT"/>
+<area alt="" coords="195,649,307,697" href="#0006812" shape="RECT"/>
+<area alt="" coords="195,797,307,859" href="#0015672" shape="RECT"/>
+<area alt="" coords="3480,487,3571,550" href="#0045216" shape="RECT"/>
+<area alt="" coords="3483,649,3579,697" href="#0002934" shape="RECT"/>
+<area alt="" coords="3603,642,3680,705" href="#0007043" shape="RECT"/>
+<area alt="" coords="2855,943,2961,1023" href="#0090557" shape="RECT"/>
+<area alt="" coords="1688,350,1811,413" href="#0050793" shape="RECT"/>
+<area alt="" coords="1621,479,1731,559" href="#2000026" shape="RECT"/>
+<area alt="" coords="1536,642,1632,705" href="#0045682" shape="RECT"/>
+<area alt="" coords="3885,495,3976,543" href="#0070268" shape="RECT"/>
+<area alt="" coords="2704,341,2795,421" href="#0044087" shape="RECT"/>
+<area alt="" coords="2559,642,2668,705" href="#1901888" shape="RECT"/>
+<area alt="" coords="3348,804,3447,852" href="#0030216" shape="RECT"/>
+<area alt="" coords="3360,5,3247,29" href="#0008150" shape="RECT"/>
+<area alt="" coords="4951,117,5031,165" href="#0022610" shape="RECT"/>
+<area alt="" coords="5272,117,5381,165" href="#0051704" shape="RECT"/>
+<area alt="" coords="3633,117,3705,165" href="#0009987" shape="RECT"/>
+<area alt="" coords="2124,341,2233,421" href="#0051239" shape="RECT"/>
+<area alt="" coords="432,642,517,705" href="#0071705" shape="RECT"/>
+<area alt="" coords="2236,959,2369,1007" href="#0008016" shape="RECT"/>
+<area alt="" coords="4789,479,4936,559" href="#1901701" shape="RECT"/>
+<area alt="" coords="2469,341,2563,421" href="#0048519" shape="RECT"/>
+<area alt="" coords="5423,230,5556,293" href="#0044419" shape="RECT"/>
+<area alt="" coords="3508,804,3604,852" href="#0002159" shape="RECT"/>
+<area alt="" coords="5291,642,5381,705" href="#0034113" shape="RECT"/>
+<area alt="" coords="56,804,171,852" href="#0070293" shape="RECT"/>
+<area alt="" coords="3329,357,3452,405" href="#0030154" shape="RECT"/>
+<area alt="" coords="5517,487,5603,550" href="#0034109" shape="RECT"/>
+<area alt="" coords="1961,951,2092,1014" href="#0006942" shape="RECT"/>
+<area alt="" coords="317,495,411,543" href="#0006811" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data5/go/15/GOPROCESS.png" usemap="#goPathImage"/></p>
+<p> </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070268&amp;view=details" target="_blank">GO:0070268</a><a name="0070268"></a></td>
+<td>cornification</td>
+<td align="center">3.06E-10</td>
+<td align="center">4.6E-6</td>
+<td align="center">11.96 (15353,79,195,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070268')" id="ctrl_elements_GO:0070268">[+] Show genes</a><br/>
+<div id="elements_GO:0070268" style="display:none"> <font size="1">
+
+KRT5  -  keratin 5<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+KRT8  -  keratin 8<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+EVPL  -  envoplakin<br/>
+
+PPL  -  periplakin<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034330&amp;view=details" target="_blank">GO:0034330</a><a name="0034330"></a></td>
+<td>cell junction organization</td>
+<td align="center">1.27E-9</td>
+<td align="center">9.58E-6</td>
+<td align="center">6.43 (15353,208,195,17)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0034330')" id="ctrl_elements_GO:0034330">[+] Show genes</a><br/>
+<div id="elements_GO:0034330" style="display:none"> <font size="1">
+
+PKP3  -  plakophilin 3<br/>
+
+CRB3  -  crumbs homolog 3 (drosophila)<br/>
+
+F11R  -  f11 receptor<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+KRT5  -  keratin 5<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CLDN1  -  claudin 1<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CD9  -  cd9 molecule<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+INADL  -  inad-like (drosophila)<br/>
+
+LAMB3  -  laminin, beta 3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045216&amp;view=details" target="_blank">GO:0045216</a><a name="0045216"></a></td>
+<td>cell-cell junction organization</td>
+<td align="center">1.77E-9</td>
+<td align="center">8.87E-6</td>
+<td align="center">8.16 (15353,135,195,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045216')" id="ctrl_elements_GO:0045216">[+] Show genes</a><br/>
+<div id="elements_GO:0045216" style="display:none"> <font size="1">
+
+PKP3  -  plakophilin 3<br/>
+
+F11R  -  f11 receptor<br/>
+
+CRB3  -  crumbs homolog 3 (drosophila)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+CD9  -  cd9 molecule<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+INADL  -  inad-like (drosophila)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098609&amp;view=details" target="_blank">GO:0098609</a><a name="0098609"></a></td>
+<td>cell-cell adhesion</td>
+<td align="center">5.07E-9</td>
+<td align="center">1.9E-5</td>
+<td align="center">4.08 (15353,463,195,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098609')" id="ctrl_elements_GO:0098609">[+] Show genes</a><br/>
+<div id="elements_GO:0098609" style="display:none"> <font size="1">
+
+TRIM29  -  tripartite motif containing 29<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+CDHR1  -  cadherin-related family member 1<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+F11R  -  f11 receptor<br/>
+
+CD44  -  cd44 molecule (indian blood group)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+EPCAM  -  epithelial cell adhesion molecule<br/>
+
+METAP1  -  methionyl aminopeptidase 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLSTN1  -  calsyntenin 1<br/>
+
+CLDN1  -  claudin 1<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+MPZL2  -  myelin protein zero-like 2<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+FAT2  -  fat atypical cadherin 2<br/>
+
+PTPRF  -  protein tyrosine phosphatase, receptor type, f<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022610&amp;view=details" target="_blank">GO:0022610</a><a name="0022610"></a></td>
+<td>biological adhesion</td>
+<td align="center">2.29E-8</td>
+<td align="center">6.89E-5</td>
+<td align="center">3.00 (15353,841,195,32)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0022610')" id="ctrl_elements_GO:0022610">[+] Show genes</a><br/>
+<div id="elements_GO:0022610" style="display:none"> <font size="1">
+
+EFNA1  -  ephrin-a1<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+F11R  -  f11 receptor<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+METAP1  -  methionyl aminopeptidase 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+AZGP1  -  alpha-2-glycoprotein 1, zinc-binding<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+CD9  -  cd9 molecule<br/>
+
+CLSTN1  -  calsyntenin 1<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+PTK7  -  protein tyrosine kinase 7<br/>
+
+KRT18  -  keratin 18<br/>
+
+TRIM29  -  tripartite motif containing 29<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+CDHR1  -  cadherin-related family member 1<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+CLDN3  -  claudin 3<br/>
+
+CD44  -  cd44 molecule (indian blood group)<br/>
+
+EPCAM  -  epithelial cell adhesion molecule<br/>
+
+DDR1  -  discoidin domain receptor tyrosine kinase 1<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+MPZL2  -  myelin protein zero-like 2<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+LAMB3  -  laminin, beta 3<br/>
+
+FAT2  -  fat atypical cadherin 2<br/>
+
+PTPRF  -  protein tyrosine phosphatase, receptor type, f<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002934&amp;view=details" target="_blank">GO:0002934</a><a name="0002934"></a></td>
+<td>desmosome organization</td>
+<td align="center">3.8E-8</td>
+<td align="center">9.52E-5</td>
+<td align="center">43.74 (15353,9,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002934')" id="ctrl_elements_GO:0002934">[+] Show genes</a><br/>
+<div id="elements_GO:0002934" style="display:none"> <font size="1">
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007155&amp;view=details" target="_blank">GO:0007155</a><a name="0007155"></a></td>
+<td>cell adhesion</td>
+<td align="center">6.83E-8</td>
+<td align="center">1.47E-4</td>
+<td align="center">2.92 (15353,835,195,31)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007155')" id="ctrl_elements_GO:0007155">[+] Show genes</a><br/>
+<div id="elements_GO:0007155" style="display:none"> <font size="1">
+
+EFNA1  -  ephrin-a1<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+F11R  -  f11 receptor<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+METAP1  -  methionyl aminopeptidase 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+AZGP1  -  alpha-2-glycoprotein 1, zinc-binding<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+CD9  -  cd9 molecule<br/>
+
+CLSTN1  -  calsyntenin 1<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+KRT18  -  keratin 18<br/>
+
+PTK7  -  protein tyrosine kinase 7<br/>
+
+TRIM29  -  tripartite motif containing 29<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+CDHR1  -  cadherin-related family member 1<br/>
+
+CLDN3  -  claudin 3<br/>
+
+CD44  -  cd44 molecule (indian blood group)<br/>
+
+EPCAM  -  epithelial cell adhesion molecule<br/>
+
+DDR1  -  discoidin domain receptor tyrosine kinase 1<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+MPZL2  -  myelin protein zero-like 2<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+LAMB3  -  laminin, beta 3<br/>
+
+FAT2  -  fat atypical cadherin 2<br/>
+
+PTPRF  -  protein tyrosine phosphatase, receptor type, f<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007043&amp;view=details" target="_blank">GO:0007043</a><a name="0007043"></a></td>
+<td>cell-cell junction assembly</td>
+<td align="center">8.04E-7</td>
+<td align="center">1.51E-3</td>
+<td align="center">7.57 (15353,104,195,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0007043')" id="ctrl_elements_GO:0007043">[+] Show genes</a><br/>
+<div id="elements_GO:0007043" style="display:none"> <font size="1">
+
+PKP3  -  plakophilin 3<br/>
+
+CD9  -  cd9 molecule<br/>
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CRB3  -  crumbs homolog 3 (drosophila)<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+INADL  -  inad-like (drosophila)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0086042&amp;view=details" target="_blank">GO:0086042</a><a name="0086042"></a></td>
+<td>cardiac muscle cell-cardiac muscle cell adhesion</td>
+<td align="center">8.57E-7</td>
+<td align="center">1.43E-3</td>
+<td align="center">44.99 (15353,7,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0086042')" id="ctrl_elements_GO:0086042">[+] Show genes</a><br/>
+<div id="elements_GO:0086042" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034329&amp;view=details" target="_blank">GO:0034329</a><a name="0034329"></a></td>
+<td>cell junction assembly</td>
+<td align="center">1.22E-6</td>
+<td align="center">1.84E-3</td>
+<td align="center">5.76 (15353,164,195,12)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0034329')" id="ctrl_elements_GO:0034329">[+] Show genes</a><br/>
+<div id="elements_GO:0034329" style="display:none"> <font size="1">
+
+KRT5  -  keratin 5<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+CD9  -  cd9 molecule<br/>
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CRB3  -  crumbs homolog 3 (drosophila)<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+LAMB3  -  laminin, beta 3<br/>
+
+INADL  -  inad-like (drosophila)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904045&amp;view=details" target="_blank">GO:1904045</a><a name="1904045"></a></td>
+<td>cellular response to aldosterone</td>
+<td align="center">2.02E-6</td>
+<td align="center">2.76E-3</td>
+<td align="center">78.73 (15353,3,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1904045')" id="ctrl_elements_GO:1904045">[+] Show genes</a><br/>
+<div id="elements_GO:1904045" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0012501&amp;view=details" target="_blank">GO:0012501</a><a name="0012501"></a></td>
+<td>programmed cell death</td>
+<td align="center">2.64E-6</td>
+<td align="center">3.31E-3</td>
+<td align="center">2.83 (15353,696,195,25)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0012501')" id="ctrl_elements_GO:0012501">[+] Show genes</a><br/>
+<div id="elements_GO:0012501" style="display:none"> <font size="1">
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+PPL  -  periplakin<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+FAM3B  -  family with sequence similarity 3, member b<br/>
+
+KRT5  -  keratin 5<br/>
+
+DHCR24  -  24-dehydrocholesterol reductase<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+KRT8  -  keratin 8<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+TNFSF10  -  tumor necrosis factor (ligand) superfamily, member 10<br/>
+
+PIM3  -  pim-3 oncogene<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+KRT18  -  keratin 18<br/>
+
+EVPL  -  envoplakin<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+S100A14  -  s100 calcium binding protein a14<br/>
+
+TP63  -  tumor protein p63<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+BNIPL  -  bcl2/adenovirus e1b 19kd interacting protein like<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+ERBB3  -  v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 3<br/>
+
+TNS4  -  tensin 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008219&amp;view=details" target="_blank">GO:0008219</a><a name="0008219"></a></td>
+<td>cell death</td>
+<td align="center">6.25E-6</td>
+<td align="center">7.23E-3</td>
+<td align="center">2.69 (15353,731,195,25)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0008219')" id="ctrl_elements_GO:0008219">[+] Show genes</a><br/>
+<div id="elements_GO:0008219" style="display:none"> <font size="1">
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+PPL  -  periplakin<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+FAM3B  -  family with sequence similarity 3, member b<br/>
+
+KRT5  -  keratin 5<br/>
+
+DHCR24  -  24-dehydrocholesterol reductase<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+KRT8  -  keratin 8<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+TNFSF10  -  tumor necrosis factor (ligand) superfamily, member 10<br/>
+
+PIM3  -  pim-3 oncogene<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+KRT18  -  keratin 18<br/>
+
+EVPL  -  envoplakin<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+S100A14  -  s100 calcium binding protein a14<br/>
+
+TP63  -  tumor protein p63<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+BNIPL  -  bcl2/adenovirus e1b 19kd interacting protein like<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+ERBB3  -  v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 3<br/>
+
+TNS4  -  tensin 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1904044&amp;view=details" target="_blank">GO:1904044</a><a name="1904044"></a></td>
+<td>response to aldosterone</td>
+<td align="center">8E-6</td>
+<td align="center">8.59E-3</td>
+<td align="center">59.05 (15353,4,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1904044')" id="ctrl_elements_GO:1904044">[+] Show genes</a><br/>
+<div id="elements_GO:1904044" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0110096&amp;view=details" target="_blank">GO:0110096</a><a name="0110096"></a></td>
+<td>cellular response to aldehyde</td>
+<td align="center">8E-6</td>
+<td align="center">8.02E-3</td>
+<td align="center">59.05 (15353,4,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0110096')" id="ctrl_elements_GO:0110096">[+] Show genes</a><br/>
+<div id="elements_GO:0110096" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030104&amp;view=details" target="_blank">GO:0030104</a><a name="0030104"></a></td>
+<td>water homeostasis</td>
+<td align="center">1.17E-5</td>
+<td align="center">1.1E-2</td>
+<td align="center">9.03 (15353,61,195,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030104')" id="ctrl_elements_GO:0030104">[+] Show genes</a><br/>
+<div id="elements_GO:0030104" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+NEDD4L  -  neural precursor cell expressed, developmentally down-regulated 4-like, e3 ubiquitin protein ligase<br/>
+
+CLDN1  -  claudin 1<br/>
+
+TP63  -  tumor protein p63<br/>
+
+SCNN1A  -  sodium channel, non-voltage-gated 1 alpha subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042060&amp;view=details" target="_blank">GO:0042060</a><a name="0042060"></a></td>
+<td>wound healing</td>
+<td align="center">1.22E-5</td>
+<td align="center">1.08E-2</td>
+<td align="center">7.41 (15353,85,195,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042060')" id="ctrl_elements_GO:0042060">[+] Show genes</a><br/>
+<div id="elements_GO:0042060" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SDC1  -  syndecan 1<br/>
+
+DSP  -  desmoplakin<br/>
+
+ERBB3  -  v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 3<br/>
+
+EVPL  -  envoplakin<br/>
+
+PPL  -  periplakin<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+PTK7  -  protein tyrosine kinase 7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006814&amp;view=details" target="_blank">GO:0006814</a><a name="0006814"></a></td>
+<td>sodium ion transport</td>
+<td align="center">1.27E-5</td>
+<td align="center">1.06E-2</td>
+<td align="center">5.58 (15353,141,195,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006814')" id="ctrl_elements_GO:0006814">[+] Show genes</a><br/>
+<div id="elements_GO:0006814" style="display:none"> <font size="1">
+
+SLC3A2  -  solute carrier family 3 (amino acid transporter heavy chain), member 2<br/>
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+FXYD3  -  fxyd domain containing ion transport regulator 3<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+KCNK1  -  potassium channel, subfamily k, member 1<br/>
+
+NEDD4L  -  neural precursor cell expressed, developmentally down-regulated 4-like, e3 ubiquitin protein ligase<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+WNK4  -  wnk lysine deficient protein kinase 4<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+SCNN1A  -  sodium channel, non-voltage-gated 1 alpha subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045104&amp;view=details" target="_blank">GO:0045104</a><a name="0045104"></a></td>
+<td>intermediate filament cytoskeleton organization</td>
+<td align="center">1.39E-5</td>
+<td align="center">1.1E-2</td>
+<td align="center">11.25 (15353,42,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045104')" id="ctrl_elements_GO:0045104">[+] Show genes</a><br/>
+<div id="elements_GO:0045104" style="display:none"> <font size="1">
+
+FAM83H  -  family with sequence similarity 83, member h<br/>
+
+DSP  -  desmoplakin<br/>
+
+EVPL  -  envoplakin<br/>
+
+PPL  -  periplakin<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045103&amp;view=details" target="_blank">GO:0045103</a><a name="0045103"></a></td>
+<td>intermediate filament-based process</td>
+<td align="center">1.6E-5</td>
+<td align="center">1.21E-2</td>
+<td align="center">10.99 (15353,43,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045103')" id="ctrl_elements_GO:0045103">[+] Show genes</a><br/>
+<div id="elements_GO:0045103" style="display:none"> <font size="1">
+
+FAM83H  -  family with sequence similarity 83, member h<br/>
+
+DSP  -  desmoplakin<br/>
+
+EVPL  -  envoplakin<br/>
+
+PPL  -  periplakin<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0055078&amp;view=details" target="_blank">GO:0055078</a><a name="0055078"></a></td>
+<td>sodium ion homeostasis</td>
+<td align="center">2.02E-5</td>
+<td align="center">1.45E-2</td>
+<td align="center">14.58 (15353,27,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0055078')" id="ctrl_elements_GO:0055078">[+] Show genes</a><br/>
+<div id="elements_GO:0055078" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+NEDD4L  -  neural precursor cell expressed, developmentally down-regulated 4-like, e3 ubiquitin protein ligase<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+SCNN1A  -  sodium channel, non-voltage-gated 1 alpha subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031424&amp;view=details" target="_blank">GO:0031424</a><a name="0031424"></a></td>
+<td>keratinization</td>
+<td align="center">2.19E-5</td>
+<td align="center">1.5E-2</td>
+<td align="center">6.85 (15353,92,195,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0031424')" id="ctrl_elements_GO:0031424">[+] Show genes</a><br/>
+<div id="elements_GO:0031424" style="display:none"> <font size="1">
+
+KRT5  -  keratin 5<br/>
+
+PKP3  -  plakophilin 3<br/>
+
+KRT8  -  keratin 8<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+PKP1  -  plakophilin 1 (ectodermal dysplasia/skin fragility syndrome)<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030216&amp;view=details" target="_blank">GO:0030216</a><a name="0030216"></a></td>
+<td>keratinocyte differentiation</td>
+<td align="center">2.39E-5</td>
+<td align="center">1.56E-2</td>
+<td align="center">10.27 (15353,46,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030216')" id="ctrl_elements_GO:0030216">[+] Show genes</a><br/>
+<div id="elements_GO:0030216" style="display:none"> <font size="1">
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+IRF6  -  interferon regulatory factor 6<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+DSP  -  desmoplakin<br/>
+
+EVPL  -  envoplakin<br/>
+
+TP63  -  tumor protein p63<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0086073&amp;view=details" target="_blank">GO:0086073</a><a name="0086073"></a></td>
+<td>bundle of His cell-Purkinje myocyte adhesion involved in cell communication</td>
+<td align="center">3.92E-5</td>
+<td align="center">2.46E-2</td>
+<td align="center">39.37 (15353,6,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0086073')" id="ctrl_elements_GO:0086073">[+] Show genes</a><br/>
+<div id="elements_GO:0086073" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050891&amp;view=details" target="_blank">GO:0050891</a><a name="0050891"></a></td>
+<td>multicellular organismal water homeostasis</td>
+<td align="center">6.05E-5</td>
+<td align="center">3.64E-2</td>
+<td align="center">8.75 (15353,54,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050891')" id="ctrl_elements_GO:0050891">[+] Show genes</a><br/>
+<div id="elements_GO:0050891" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+CLDN1  -  claudin 1<br/>
+
+TP63  -  tumor protein p63<br/>
+
+SCNN1A  -  sodium channel, non-voltage-gated 1 alpha subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034113&amp;view=details" target="_blank">GO:0034113</a><a name="0034113"></a></td>
+<td>heterotypic cell-cell adhesion</td>
+<td align="center">6.48E-5</td>
+<td align="center">3.75E-2</td>
+<td align="center">11.58 (15353,34,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0034113')" id="ctrl_elements_GO:0034113">[+] Show genes</a><br/>
+<div id="elements_GO:0034113" style="display:none"> <font size="1">
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071389&amp;view=details" target="_blank">GO:0071389</a><a name="0071389"></a></td>
+<td>cellular response to mineralocorticoid stimulus</td>
+<td align="center">6.8E-5</td>
+<td align="center">3.79E-2</td>
+<td align="center">33.74 (15353,7,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071389')" id="ctrl_elements_GO:0071389">[+] Show genes</a><br/>
+<div id="elements_GO:0071389" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042493&amp;view=details" target="_blank">GO:0042493</a><a name="0042493"></a></td>
+<td>response to drug</td>
+<td align="center">7.22E-5</td>
+<td align="center">3.88E-2</td>
+<td align="center">2.57 (15353,644,195,21)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0042493')" id="ctrl_elements_GO:0042493">[+] Show genes</a><br/>
+<div id="elements_GO:0042493" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+KCNK1  -  potassium channel, subfamily k, member 1<br/>
+
+P2RY2  -  purinergic receptor p2y, g-protein coupled, 2<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+CLDN3  -  claudin 3<br/>
+
+TGIF1  -  tgfb-induced factor homeobox 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+PPP1R1B  -  protein phosphatase 1, regulatory (inhibitor) subunit 1b<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SDC1  -  syndecan 1<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+CLDN1  -  claudin 1<br/>
+
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br/>
+
+MAPK13  -  mitogen-activated protein kinase 13<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009913&amp;view=details" target="_blank">GO:0009913</a><a name="0009913"></a></td>
+<td>epidermal cell differentiation</td>
+<td align="center">1.21E-4</td>
+<td align="center">6.27E-2</td>
+<td align="center">7.74 (15353,61,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009913')" id="ctrl_elements_GO:0009913">[+] Show genes</a><br/>
+<div id="elements_GO:0009913" style="display:none"> <font size="1">
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+IRF6  -  interferon regulatory factor 6<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+DSP  -  desmoplakin<br/>
+
+EVPL  -  envoplakin<br/>
+
+TP63  -  tumor protein p63<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006970&amp;view=details" target="_blank">GO:0006970</a><a name="0006970"></a></td>
+<td>response to osmotic stress</td>
+<td align="center">1.32E-4</td>
+<td align="center">6.64E-2</td>
+<td align="center">7.62 (15353,62,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006970')" id="ctrl_elements_GO:0006970">[+] Show genes</a><br/>
+<div id="elements_GO:0006970" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+MAP7  -  microtubule-associated protein 7<br/>
+
+CLDN1  -  claudin 1<br/>
+
+TSC22D3  -  tsc22 domain family, member 3<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+MAPK13  -  mitogen-activated protein kinase 13<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051828&amp;view=details" target="_blank">GO:0051828</a><a name="0051828"></a></td>
+<td>entry into other organism involved in symbiotic interaction</td>
+<td align="center">1.37E-4</td>
+<td align="center">6.65E-2</td>
+<td align="center">6.19 (15353,89,195,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051828')" id="ctrl_elements_GO:0051828">[+] Show genes</a><br/>
+<div id="elements_GO:0051828" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+VAMP8  -  vesicle-associated membrane protein 8<br/>
+
+ANPEP  -  alanyl (membrane) aminopeptidase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051806&amp;view=details" target="_blank">GO:0051806</a><a name="0051806"></a></td>
+<td>entry into cell of other organism involved in symbiotic interaction</td>
+<td align="center">1.37E-4</td>
+<td align="center">6.44E-2</td>
+<td align="center">6.19 (15353,89,195,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051806')" id="ctrl_elements_GO:0051806">[+] Show genes</a><br/>
+<div id="elements_GO:0051806" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+VAMP8  -  vesicle-associated membrane protein 8<br/>
+
+ANPEP  -  alanyl (membrane) aminopeptidase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030260&amp;view=details" target="_blank">GO:0030260</a><a name="0030260"></a></td>
+<td>entry into host cell</td>
+<td align="center">1.37E-4</td>
+<td align="center">6.24E-2</td>
+<td align="center">6.19 (15353,89,195,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030260')" id="ctrl_elements_GO:0030260">[+] Show genes</a><br/>
+<div id="elements_GO:0030260" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+VAMP8  -  vesicle-associated membrane protein 8<br/>
+
+ANPEP  -  alanyl (membrane) aminopeptidase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044409&amp;view=details" target="_blank">GO:0044409</a><a name="0044409"></a></td>
+<td>entry into host</td>
+<td align="center">1.37E-4</td>
+<td align="center">6.06E-2</td>
+<td align="center">6.19 (15353,89,195,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0044409')" id="ctrl_elements_GO:0044409">[+] Show genes</a><br/>
+<div id="elements_GO:0044409" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+VAMP8  -  vesicle-associated membrane protein 8<br/>
+
+ANPEP  -  alanyl (membrane) aminopeptidase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901700&amp;view=details" target="_blank">GO:1901700</a><a name="1901700"></a></td>
+<td>response to oxygen-containing compound</td>
+<td align="center">1.49E-4</td>
+<td align="center">6.4E-2</td>
+<td align="center">2.03 (15353,1161,195,30)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1901700')" id="ctrl_elements_GO:1901700">[+] Show genes</a><br/>
+<div id="elements_GO:1901700" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+KRT8  -  keratin 8<br/>
+
+ACACA  -  acetyl-coa carboxylase alpha<br/>
+
+TNFSF10  -  tumor necrosis factor (ligand) superfamily, member 10<br/>
+
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br/>
+
+MAPK13  -  mitogen-activated protein kinase 13<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+PTK7  -  protein tyrosine kinase 7<br/>
+
+KRT18  -  keratin 18<br/>
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+P2RY2  -  purinergic receptor p2y, g-protein coupled, 2<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+CLDN3  -  claudin 3<br/>
+
+S100A14  -  s100 calcium binding protein a14<br/>
+
+SH3BP4  -  sh3-domain binding protein 4<br/>
+
+SDC1  -  syndecan 1<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+CLDN1  -  claudin 1<br/>
+
+FOXA1  -  forkhead box a1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048545&amp;view=details" target="_blank">GO:0048545</a><a name="0048545"></a></td>
+<td>response to steroid hormone</td>
+<td align="center">1.53E-4</td>
+<td align="center">6.38E-2</td>
+<td align="center">4.17 (15353,189,195,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048545')" id="ctrl_elements_GO:0048545">[+] Show genes</a><br/>
+<div id="elements_GO:0048545" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SDC1  -  syndecan 1<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+CLDN1  -  claudin 1<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070254&amp;view=details" target="_blank">GO:0070254</a><a name="0070254"></a></td>
+<td>mucus secretion</td>
+<td align="center">1.61E-4</td>
+<td align="center">6.53E-2</td>
+<td align="center">78.73 (15353,2,195,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070254')" id="ctrl_elements_GO:0070254">[+] Show genes</a><br/>
+<div id="elements_GO:0070254" style="display:none"> <font size="1">
+
+AGR2  -  anterior gradient 2<br/>
+
+VAMP8  -  vesicle-associated membrane protein 8<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:2000810&amp;view=details" target="_blank">GO:2000810</a><a name="2000810"></a></td>
+<td>regulation of bicellular tight junction assembly</td>
+<td align="center">1.85E-4</td>
+<td align="center">7.32E-2</td>
+<td align="center">13.69 (15353,23,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:2000810')" id="ctrl_elements_GO:2000810">[+] Show genes</a><br/>
+<div id="elements_GO:2000810" style="display:none"> <font size="1">
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CLDN3  -  claudin 3<br/>
+
+RUNX1  -  runt-related transcription factor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0090557&amp;view=details" target="_blank">GO:0090557</a><a name="0090557"></a></td>
+<td>establishment of endothelial intestinal barrier</td>
+<td align="center">2.27E-4</td>
+<td align="center">8.75E-2</td>
+<td align="center">23.62 (15353,10,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0090557')" id="ctrl_elements_GO:0090557">[+] Show genes</a><br/>
+<div id="elements_GO:0090557" style="display:none"> <font size="1">
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+FASN  -  fatty acid synthase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050878&amp;view=details" target="_blank">GO:0050878</a><a name="0050878"></a></td>
+<td>regulation of body fluid levels</td>
+<td align="center">2.39E-4</td>
+<td align="center">8.97E-2</td>
+<td align="center">3.19 (15353,321,195,13)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050878')" id="ctrl_elements_GO:0050878">[+] Show genes</a><br/>
+<div id="elements_GO:0050878" style="display:none"> <font size="1">
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+P2RY2  -  purinergic receptor p2y, g-protein coupled, 2<br/>
+
+WNK4  -  wnk lysine deficient protein kinase 4<br/>
+
+F11R  -  f11 receptor<br/>
+
+TP63  -  tumor protein p63<br/>
+
+DDR1  -  discoidin domain receptor tyrosine kinase 1<br/>
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+AGR2  -  anterior gradient 2<br/>
+
+CD9  -  cd9 molecule<br/>
+
+CLDN1  -  claudin 1<br/>
+
+VAMP8  -  vesicle-associated membrane protein 8<br/>
+
+SCNN1A  -  sodium channel, non-voltage-gated 1 alpha subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071383&amp;view=details" target="_blank">GO:0071383</a><a name="0071383"></a></td>
+<td>cellular response to steroid hormone stimulus</td>
+<td align="center">2.4E-4</td>
+<td align="center">8.8E-2</td>
+<td align="center">6.85 (15353,69,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071383')" id="ctrl_elements_GO:0071383">[+] Show genes</a><br/>
+<div id="elements_GO:0071383" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0052547&amp;view=details" target="_blank">GO:0052547</a><a name="0052547"></a></td>
+<td>regulation of peptidase activity</td>
+<td align="center">2.41E-4</td>
+<td align="center">8.64E-2</td>
+<td align="center">3.02 (15353,365,195,14)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0052547')" id="ctrl_elements_GO:0052547">[+] Show genes</a><br/>
+<div id="elements_GO:0052547" style="display:none"> <font size="1">
+
+EFNA1  -  ephrin-a1<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+CLDN3  -  claudin 3<br/>
+
+CD44  -  cd44 molecule (indian blood group)<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+
+TP63  -  tumor protein p63<br/>
+
+PI15  -  peptidase inhibitor 15<br/>
+
+PRSS22  -  protease, serine, 22<br/>
+
+DHCR24  -  24-dehydrocholesterol reductase<br/>
+
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br/>
+
+TNFSF10  -  tumor necrosis factor (ligand) superfamily, member 10<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009653&amp;view=details" target="_blank">GO:0009653</a><a name="0009653"></a></td>
+<td>anatomical structure morphogenesis</td>
+<td align="center">2.8E-4</td>
+<td align="center">9.78E-2</td>
+<td align="center">1.96 (15353,1204,195,30)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009653')" id="ctrl_elements_GO:0009653">[+] Show genes</a><br/>
+<div id="elements_GO:0009653" style="display:none"> <font size="1">
+
+EFNA1  -  ephrin-a1<br/>
+
+RNF165  -  ring finger protein 165<br/>
+
+RAB25  -  rab25, member ras oncogene family<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+WNK4  -  wnk lysine deficient protein kinase 4<br/>
+
+GMNN  -  geminin, dna replication inhibitor<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+PTK7  -  protein tyrosine kinase 7<br/>
+
+KRT18  -  keratin 18<br/>
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+CDHR1  -  cadherin-related family member 1<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+
+CLDN3  -  claudin 3<br/>
+
+TP63  -  tumor protein p63<br/>
+
+TFCP2L1  -  transcription factor cp2-like 1<br/>
+
+DDR1  -  discoidin domain receptor tyrosine kinase 1<br/>
+
+SDC1  -  syndecan 1<br/>
+
+AGR2  -  anterior gradient 2<br/>
+
+IRX5  -  iroquois homeobox 5<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSP  -  desmoplakin<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+MPZL2  -  myelin protein zero-like 2<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+LAMB3  -  laminin, beta 3<br/>
+
+FOXA1  -  forkhead box a1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003382&amp;view=details" target="_blank">GO:0003382</a><a name="0003382"></a></td>
+<td>epithelial cell morphogenesis</td>
+<td align="center">3.03E-4</td>
+<td align="center">1.04E-1</td>
+<td align="center">12.11 (15353,26,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0003382')" id="ctrl_elements_GO:0003382">[+] Show genes</a><br/>
+<div id="elements_GO:0003382" style="display:none"> <font size="1">
+
+RAB25  -  rab25, member ras oncogene family<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901654&amp;view=details" target="_blank">GO:1901654</a><a name="1901654"></a></td>
+<td>response to ketone</td>
+<td align="center">3.25E-4</td>
+<td align="center">1.09E-1</td>
+<td align="center">4.17 (15353,170,195,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1901654')" id="ctrl_elements_GO:1901654">[+] Show genes</a><br/>
+<div id="elements_GO:1901654" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+CLDN1  -  claudin 1<br/>
+
+ACACA  -  acetyl-coa carboxylase alpha<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070830&amp;view=details" target="_blank">GO:0070830</a><a name="0070830"></a></td>
+<td>bicellular tight junction assembly</td>
+<td align="center">3.45E-4</td>
+<td align="center">1.13E-1</td>
+<td align="center">8.20 (15353,48,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070830')" id="ctrl_elements_GO:0070830">[+] Show genes</a><br/>
+<div id="elements_GO:0070830" style="display:none"> <font size="1">
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CRB3  -  crumbs homolog 3 (drosophila)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+INADL  -  inad-like (drosophila)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061028&amp;view=details" target="_blank">GO:0061028</a><a name="0061028"></a></td>
+<td>establishment of endothelial barrier</td>
+<td align="center">3.52E-4</td>
+<td align="center">1.13E-1</td>
+<td align="center">11.66 (15353,27,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0061028')" id="ctrl_elements_GO:0061028">[+] Show genes</a><br/>
+<div id="elements_GO:0061028" style="display:none"> <font size="1">
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CLDN3  -  claudin 3<br/>
+
+FASN  -  fatty acid synthase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030855&amp;view=details" target="_blank">GO:0030855</a><a name="0030855"></a></td>
+<td>epithelial cell differentiation</td>
+<td align="center">3.59E-4</td>
+<td align="center">1.12E-1</td>
+<td align="center">3.46 (15353,250,195,11)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0030855')" id="ctrl_elements_GO:0030855">[+] Show genes</a><br/>
+<div id="elements_GO:0030855" style="display:none"> <font size="1">
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+IRF6  -  interferon regulatory factor 6<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+DSP  -  desmoplakin<br/>
+
+EVPL  -  envoplakin<br/>
+
+EHF  -  ets homologous factor<br/>
+
+TP63  -  tumor protein p63<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+
+FOXA1  -  forkhead box a1<br/>
+
+PTK7  -  protein tyrosine kinase 7<br/>
+
+KRT18  -  keratin 18<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034109&amp;view=details" target="_blank">GO:0034109</a><a name="0034109"></a></td>
+<td>homotypic cell-cell adhesion</td>
+<td align="center">3.8E-4</td>
+<td align="center">1.17E-1</td>
+<td align="center">8.03 (15353,49,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0034109')" id="ctrl_elements_GO:0034109">[+] Show genes</a><br/>
+<div id="elements_GO:0034109" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+METAP1  -  methionyl aminopeptidase 1<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120192&amp;view=details" target="_blank">GO:0120192</a><a name="0120192"></a></td>
+<td>tight junction assembly</td>
+<td align="center">3.8E-4</td>
+<td align="center">1.14E-1</td>
+<td align="center">8.03 (15353,49,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0120192')" id="ctrl_elements_GO:0120192">[+] Show genes</a><br/>
+<div id="elements_GO:0120192" style="display:none"> <font size="1">
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CRB3  -  crumbs homolog 3 (drosophila)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+INADL  -  inad-like (drosophila)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903573&amp;view=details" target="_blank">GO:1903573</a><a name="1903573"></a></td>
+<td>negative regulation of response to endoplasmic reticulum stress</td>
+<td align="center">3.8E-4</td>
+<td align="center">1.12E-1</td>
+<td align="center">8.03 (15353,49,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1903573')" id="ctrl_elements_GO:1903573">[+] Show genes</a><br/>
+<div id="elements_GO:1903573" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+CREB3L1  -  camp responsive element binding protein 3-like 1<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000904&amp;view=details" target="_blank">GO:0000904</a><a name="0000904"></a></td>
+<td>cell morphogenesis involved in differentiation</td>
+<td align="center">4.04E-4</td>
+<td align="center">1.17E-1</td>
+<td align="center">5.20 (15353,106,195,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0000904')" id="ctrl_elements_GO:0000904">[+] Show genes</a><br/>
+<div id="elements_GO:0000904" style="display:none"> <font size="1">
+
+EFNA1  -  ephrin-a1<br/>
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+RAB25  -  rab25, member ras oncogene family<br/>
+
+CDHR1  -  cadherin-related family member 1<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+
+CLDN3  -  claudin 3<br/>
+
+LAMB3  -  laminin, beta 3<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097306&amp;view=details" target="_blank">GO:0097306</a><a name="0097306"></a></td>
+<td>cellular response to alcohol</td>
+<td align="center">4.06E-4</td>
+<td align="center">1.15E-1</td>
+<td align="center">6.22 (15353,76,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097306')" id="ctrl_elements_GO:0097306">[+] Show genes</a><br/>
+<div id="elements_GO:0097306" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+ACACA  -  acetyl-coa carboxylase alpha<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120193&amp;view=details" target="_blank">GO:0120193</a><a name="0120193"></a></td>
+<td>tight junction organization</td>
+<td align="center">4.18E-4</td>
+<td align="center">1.17E-1</td>
+<td align="center">7.87 (15353,50,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0120193')" id="ctrl_elements_GO:0120193">[+] Show genes</a><br/>
+<div id="elements_GO:0120193" style="display:none"> <font size="1">
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CRB3  -  crumbs homolog 3 (drosophila)<br/>
+
+CLDN3  -  claudin 3<br/>
+
+INADL  -  inad-like (drosophila)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051270&amp;view=details" target="_blank">GO:0051270</a><a name="0051270"></a></td>
+<td>regulation of cellular component movement</td>
+<td align="center">4.63E-4</td>
+<td align="center">1.27E-1</td>
+<td align="center">2.10 (15353,900,195,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051270')" id="ctrl_elements_GO:0051270">[+] Show genes</a><br/>
+<div id="elements_GO:0051270" style="display:none"> <font size="1">
+
+EFNA1  -  ephrin-a1<br/>
+
+S100A11  -  s100 calcium binding protein a11<br/>
+
+RAB25  -  rab25, member ras oncogene family<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+TACSTD2  -  tumor-associated calcium signal transducer 2<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+
+CLDN3  -  claudin 3<br/>
+
+S100A14  -  s100 calcium binding protein a14<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+ACVR1B  -  activin a receptor, type ib<br/>
+
+FAM83H  -  family with sequence similarity 83, member h<br/>
+
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SYNE2  -  spectrin repeat containing, nuclear envelope 2<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+DEFB1  -  defensin, beta 1<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+CLDN1  -  claudin 1<br/>
+
+CD9  -  cd9 molecule<br/>
+
+ERBB3  -  v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 3<br/>
+
+DLG5  -  discs, large homolog 5 (drosophila)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0086004&amp;view=details" target="_blank">GO:0086004</a><a name="0086004"></a></td>
+<td>regulation of cardiac muscle cell contraction</td>
+<td align="center">4.67E-4</td>
+<td align="center">1.26E-1</td>
+<td align="center">10.86 (15353,29,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0086004')" id="ctrl_elements_GO:0086004">[+] Show genes</a><br/>
+<div id="elements_GO:0086004" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009611&amp;view=details" target="_blank">GO:0009611</a><a name="0009611"></a></td>
+<td>response to wounding</td>
+<td align="center">4.74E-4</td>
+<td align="center">1.25E-1</td>
+<td align="center">3.96 (15353,179,195,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009611')" id="ctrl_elements_GO:0009611">[+] Show genes</a><br/>
+<div id="elements_GO:0009611" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SDC1  -  syndecan 1<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSP  -  desmoplakin<br/>
+
+ERBB3  -  v-erb-b2 avian erythroblastic leukemia viral oncogene homolog 3<br/>
+
+EVPL  -  envoplakin<br/>
+
+PPL  -  periplakin<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+PTK7  -  protein tyrosine kinase 7<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060672&amp;view=details" target="_blank">GO:0060672</a><a name="0060672"></a></td>
+<td>epithelial cell morphogenesis involved in placental branching</td>
+<td align="center">4.77E-4</td>
+<td align="center">1.24E-1</td>
+<td align="center">52.49 (15353,3,195,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0060672')" id="ctrl_elements_GO:0060672">[+] Show genes</a><br/>
+<div id="elements_GO:0060672" style="display:none"> <font size="1">
+
+ST14  -  suppression of tumorigenicity 14 (colon carcinoma)<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014070&amp;view=details" target="_blank">GO:0014070</a><a name="0014070"></a></td>
+<td>response to organic cyclic compound</td>
+<td align="center">5.03E-4</td>
+<td align="center">1.28E-1</td>
+<td align="center">2.34 (15353,638,195,19)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0014070')" id="ctrl_elements_GO:0014070">[+] Show genes</a><br/>
+<div id="elements_GO:0014070" style="display:none"> <font size="1">
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+P2RY2  -  purinergic receptor p2y, g-protein coupled, 2<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+PPP1R1B  -  protein phosphatase 1, regulatory (inhibitor) subunit 1b<br/>
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SLC3A2  -  solute carrier family 3 (amino acid transporter heavy chain), member 2<br/>
+
+SDC1  -  syndecan 1<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+CLDN1  -  claudin 1<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+FOXA1  -  forkhead box a1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098901&amp;view=details" target="_blank">GO:0098901</a><a name="0098901"></a></td>
+<td>regulation of cardiac muscle cell action potential</td>
+<td align="center">5.34E-4</td>
+<td align="center">1.34E-1</td>
+<td align="center">10.50 (15353,30,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098901')" id="ctrl_elements_GO:0098901">[+] Show genes</a><br/>
+<div id="elements_GO:0098901" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045604&amp;view=details" target="_blank">GO:0045604</a><a name="0045604"></a></td>
+<td>regulation of epidermal cell differentiation</td>
+<td align="center">5.5E-4</td>
+<td align="center">1.36E-1</td>
+<td align="center">7.43 (15353,53,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045604')" id="ctrl_elements_GO:0045604">[+] Show genes</a><br/>
+<div id="elements_GO:0045604" style="display:none"> <font size="1">
+
+ESRP1  -  epithelial splicing regulatory protein 1<br/>
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+SULT2B1  -  sulfotransferase family, cytosolic, 2b, member 1<br/>
+
+TP63  -  tumor protein p63<br/>
+
+RUNX1  -  runt-related transcription factor 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1901655&amp;view=details" target="_blank">GO:1901655</a><a name="1901655"></a></td>
+<td>cellular response to ketone</td>
+<td align="center">5.72E-4</td>
+<td align="center">1.39E-1</td>
+<td align="center">5.83 (15353,81,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1901655')" id="ctrl_elements_GO:1901655">[+] Show genes</a><br/>
+<div id="elements_GO:1901655" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+ACACA  -  acetyl-coa carboxylase alpha<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097327&amp;view=details" target="_blank">GO:0097327</a><a name="0097327"></a></td>
+<td>response to antineoplastic agent</td>
+<td align="center">5.72E-4</td>
+<td align="center">1.37E-1</td>
+<td align="center">5.83 (15353,81,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097327')" id="ctrl_elements_GO:0097327">[+] Show genes</a><br/>
+<div id="elements_GO:0097327" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+CLDN1  -  claudin 1<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+MAPK13  -  mitogen-activated protein kinase 13<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046718&amp;view=details" target="_blank">GO:0046718</a><a name="0046718"></a></td>
+<td>viral entry into host cell</td>
+<td align="center">5.72E-4</td>
+<td align="center">1.35E-1</td>
+<td align="center">5.83 (15353,81,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0046718')" id="ctrl_elements_GO:0046718">[+] Show genes</a><br/>
+<div id="elements_GO:0046718" style="display:none"> <font size="1">
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+VAMP8  -  vesicle-associated membrane protein 8<br/>
+
+ANPEP  -  alanyl (membrane) aminopeptidase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048871&amp;view=details" target="_blank">GO:0048871</a><a name="0048871"></a></td>
+<td>multicellular organismal homeostasis</td>
+<td align="center">5.95E-4</td>
+<td align="center">1.38E-1</td>
+<td align="center">4.88 (15353,113,195,7)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0048871')" id="ctrl_elements_GO:0048871">[+] Show genes</a><br/>
+<div id="elements_GO:0048871" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+CLDN1  -  claudin 1<br/>
+
+IRX3  -  iroquois homeobox 3<br/>
+
+TP63  -  tumor protein p63<br/>
+
+SCNN1A  -  sodium channel, non-voltage-gated 1 alpha subunit<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0001885&amp;view=details" target="_blank">GO:0001885</a><a name="0001885"></a></td>
+<td>endothelial cell development</td>
+<td align="center">6.07E-4</td>
+<td align="center">1.38E-1</td>
+<td align="center">10.16 (15353,31,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0001885')" id="ctrl_elements_GO:0001885">[+] Show genes</a><br/>
+<div id="elements_GO:0001885" style="display:none"> <font size="1">
+
+CLDN1  -  claudin 1<br/>
+
+F11R  -  f11 receptor<br/>
+
+CLDN3  -  claudin 3<br/>
+
+FASN  -  fatty acid synthase<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0071384&amp;view=details" target="_blank">GO:0071384</a><a name="0071384"></a></td>
+<td>cellular response to corticosteroid stimulus</td>
+<td align="center">6.53E-4</td>
+<td align="center">1.47E-1</td>
+<td align="center">7.16 (15353,55,195,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0071384')" id="ctrl_elements_GO:0071384">[+] Show genes</a><br/>
+<div id="elements_GO:0071384" style="display:none"> <font size="1">
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903115&amp;view=details" target="_blank">GO:1903115</a><a name="1903115"></a></td>
+<td>regulation of actin filament-based movement</td>
+<td align="center">7.74E-4</td>
+<td align="center">1.71E-1</td>
+<td align="center">9.54 (15353,33,195,4)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1903115')" id="ctrl_elements_GO:1903115">[+] Show genes</a><br/>
+<div id="elements_GO:1903115" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098742&amp;view=details" target="_blank">GO:0098742</a><a name="0098742"></a></td>
+<td>cell-cell adhesion via plasma-membrane adhesion molecules</td>
+<td align="center">7.77E-4</td>
+<td align="center">1.69E-1</td>
+<td align="center">3.39 (15353,232,195,10)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098742')" id="ctrl_elements_GO:0098742">[+] Show genes</a><br/>
+<div id="elements_GO:0098742" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+CLDN1  -  claudin 1<br/>
+
+CLSTN1  -  calsyntenin 1<br/>
+
+CXADR  -  coxsackie virus and adenovirus receptor<br/>
+
+CDHR1  -  cadherin-related family member 1<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+MPZL2  -  myelin protein zero-like 2<br/>
+
+CLDN3  -  claudin 3<br/>
+
+FAT2  -  fat atypical cadherin 2<br/>
+
+PTPRF  -  protein tyrosine phosphatase, receptor type, f<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098911&amp;view=details" target="_blank">GO:0098911</a><a name="0098911"></a></td>
+<td>regulation of ventricular cardiac muscle cell action potential</td>
+<td align="center">8.2E-4</td>
+<td align="center">1.76E-1</td>
+<td align="center">15.75 (15353,15,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0098911')" id="ctrl_elements_GO:0098911">[+] Show genes</a><br/>
+<div id="elements_GO:0098911" style="display:none"> <font size="1">
+
+DSG2  -  desmoglein 2<br/>
+
+DSP  -  desmoplakin<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070293&amp;view=details" target="_blank">GO:0070293</a><a name="0070293"></a></td>
+<td>renal absorption</td>
+<td align="center">8.2E-4</td>
+<td align="center">1.74E-1</td>
+<td align="center">15.75 (15353,15,195,3)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0070293')" id="ctrl_elements_GO:0070293">[+] Show genes</a><br/>
+<div id="elements_GO:0070293" style="display:none"> <font size="1">
+
+AQP3  -  aquaporin 3 (gill blood group)<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+WNK4  -  wnk lysine deficient protein kinase 4<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051336&amp;view=details" target="_blank">GO:0051336</a><a name="0051336"></a></td>
+<td>regulation of hydrolase activity</td>
+<td align="center">8.25E-4</td>
+<td align="center">1.72E-1</td>
+<td align="center">1.92 (15353,1109,195,27)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0051336')" id="ctrl_elements_GO:0051336">[+] Show genes</a><br/>
+<div id="elements_GO:0051336" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+EFNA1  -  ephrin-a1<br/>
+
+F11R  -  f11 receptor<br/>
+
+PRSS22  -  protease, serine, 22<br/>
+
+DHCR24  -  24-dehydrocholesterol reductase<br/>
+
+PI15  -  peptidase inhibitor 15<br/>
+
+PERP  -  perp, tp53 apoptosis effector<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br/>
+
+PROM2  -  prominin 2<br/>
+
+TNFSF10  -  tumor necrosis factor (ligand) superfamily, member 10<br/>
+
+ARHGEF16  -  rho guanine nucleotide exchange factor (gef) 16<br/>
+
+MAP3K5  -  mitogen-activated protein kinase kinase kinase 5<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+
+HSP90AB1  -  heat shock protein 90kda alpha (cytosolic), class b member 1<br/>
+
+CLDN3  -  claudin 3<br/>
+
+CD44  -  cd44 molecule (indian blood group)<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+
+TP63  -  tumor protein p63<br/>
+
+PPP1R1B  -  protein phosphatase 1, regulatory (inhibitor) subunit 1b<br/>
+
+LLGL2  -  lethal giant larvae homolog 2 (drosophila)<br/>
+
+SORL1  -  sortilin-related receptor, l(dlr class) a repeats containing<br/>
+
+TBC1D8  -  tbc1 domain family, member 8 (with gram domain)<br/>
+
+SH3BP4  -  sh3-domain binding protein 4<br/>
+
+ARHGAP8  -  rho gtpase activating protein 8<br/>
+
+RGS12  -  regulator of g-protein signaling 12<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1905897&amp;view=details" target="_blank">GO:1905897</a><a name="1905897"></a></td>
+<td>regulation of response to endoplasmic reticulum stress</td>
+<td align="center">8.36E-4</td>
+<td align="center">1.72E-1</td>
+<td align="center">5.43 (15353,87,195,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:1905897')" id="ctrl_elements_GO:1905897">[+] Show genes</a><br/>
+<div id="elements_GO:1905897" style="display:none"> <font size="1">
+
+TMBIM6  -  transmembrane bax inhibitor motif containing 6<br/>
+
+CREB3L1  -  camp responsive element binding protein 3-like 1<br/>
+
+TMED2  -  transmembrane emp24 domain trafficking protein 2<br/>
+
+AGR2  -  anterior gradient 2<br/>
+
+HERPUD1  -  homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1<br/>
+
+GNB2L1  -  guanine nucleotide binding protein (g protein), beta polypeptide 2-like 1<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002159&amp;view=details" target="_blank">GO:0002159</a><a name="0002159"></a></td>
+<td>desmosome assembly</td>
+<td align="center">9.47E-4</td>
+<td align="center">1.93E-1</td>
+<td align="center">39.37 (15353,4,195,2)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0002159')" id="ctrl_elements_GO:0002159">[+] Show genes</a><br/>
+<div id="elements_GO:0002159" style="display:none"> <font size="1">
+
+PKP3  -  plakophilin 3<br/>
+
+JUP  -  junction plakoglobin<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009719&amp;view=details" target="_blank">GO:0009719</a><a name="0009719"></a></td>
+<td>response to endogenous stimulus</td>
+<td align="center">9.51E-4</td>
+<td align="center">1.91E-1</td>
+<td align="center">2.03 (15353,891,195,23)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0009719')" id="ctrl_elements_GO:0009719">[+] Show genes</a><br/>
+<div id="elements_GO:0009719" style="display:none"> <font size="1">
+
+DDIT4  -  dna-damage-inducible transcript 4<br/>
+
+P2RY2  -  purinergic receptor p2y, g-protein coupled, 2<br/>
+
+CDH1  -  cadherin 1, type 1, e-cadherin (epithelial)<br/>
+
+ATP1A1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br/>
+
+SPINT2  -  serine peptidase inhibitor, kunitz type, 2<br/>
+
+CD44  -  cd44 molecule (indian blood group)<br/>
+
+JUP  -  junction plakoglobin<br/>
+
+SCNN1G  -  sodium channel, non-voltage-gated 1, gamma subunit<br/>
+
+EGFR  -  epidermal growth factor receptor<br/>
+
+SCNN1B  -  sodium channel, non-voltage-gated 1, beta subunit<br/>
+
+SDC1  -  syndecan 1<br/>
+
+SH3BP4  -  sh3-domain binding protein 4<br/>
+
+TXNIP  -  thioredoxin interacting protein<br/>
+
+FOLR1  -  folate receptor 1 (adult)<br/>
+
+DSG2  -  desmoglein 2<br/>
+
+SGK1  -  serum/glucocorticoid regulated kinase 1<br/>
+
+CLDN1  -  claudin 1<br/>
+
+CD9  -  cd9 molecule<br/>
+
+ACACA  -  acetyl-coa carboxylase alpha<br/>
+
+BCL11A  -  b-cell cll/lymphoma 11a (zinc finger protein)<br/>
+
+TNFSF10  -  tumor necrosis factor (ligand) superfamily, member 10<br/>
+
+MAPK13  -  mitogen-activated protein kinase 13<br/>
+
+FOXA1  -  forkhead box a1<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 15927 genes out of 16690 gene terms entered by the user.<br/> 15927 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>206 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 15721 genes.<br/>Only 15353 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOPROCESS.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 26, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 15044 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

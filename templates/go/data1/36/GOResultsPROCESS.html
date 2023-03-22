@@ -1,320 +1,444 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title>
-Results
-</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<script type='text/javascript'>
-function toggle(item) {
-obj=document.getElementById(item);
-visible=(obj.style.display!="none")
-key=document.getElementById("ctrl_" + item);
-if (visible) {
-    obj.style.display="none";
-key.innerHTML="[+] Show genes";
-}
-else {
-obj.style.display="block";
-key.innerHTML="[-] Hide genes";
-}
-}
-</script>
-</head>
-<body>
-<p><center><b>
-
-</b></center></p>
-<table border="1" width="80%" id="tab:pval_legend" align=center>
-<CAPTION><EM>P-value color scale</EM></CAPTION>
-<tr>
-	<td  width=140 align=center> > 10<sup>-3</sup></td>
-	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
-	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
-	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
-	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
-</tr >
-</table>
-<MAP NAME='goPathImage'>
-<AREA SHAPE='RECT' COORDS='944,581,1035,661' HREF='#0007166' ALT=''>
-<AREA SHAPE='RECT' COORDS='812,710,1002,807' HREF='#0002768' ALT=''>
-<AREA SHAPE='RECT' COORDS='372,961,468,1041' HREF='#0006958' ALT=''>
-<AREA SHAPE='RECT' COORDS='312,735,435,783' HREF='#0006959' ALT=''>
-<AREA SHAPE='RECT' COORDS='372,856,468,904' HREF='#0006956' ALT=''>
-<AREA SHAPE='RECT' COORDS='910,334,992,397' HREF='#0050794' ALT=''>
-<AREA SHAPE='RECT' COORDS='900,469,1031,517' HREF='#0007165' ALT=''>
-<AREA SHAPE='RECT' COORDS='847,101,919,149' HREF='#0009987' ALT=''>
-<AREA SHAPE='RECT' COORDS='172,856,282,904' HREF='#0045087' ALT=''>
-<AREA SHAPE='RECT' COORDS='176,325,286,405' HREF='#1901564' ALT=''>
-<AREA SHAPE='RECT' COORDS='168,469,294,517' HREF='#0019538' ALT=''>
-<AREA SHAPE='RECT' COORDS='390,469,507,517' HREF='#0002376' ALT=''>
-<AREA SHAPE='RECT' COORDS='459,735,576,783' HREF='#0002252' ALT=''>
-<AREA SHAPE='RECT' COORDS='311,597,436,645' HREF='#0006955' ALT=''>
-<AREA SHAPE='RECT' COORDS='603,727,688,790' HREF='#0002253' ALT=''>
-<AREA SHAPE='RECT' COORDS='38,334,152,397' HREF='#0043170' ALT=''>
-<AREA SHAPE='RECT' COORDS='531,453,624,533' HREF='#0048584' ALT=''>
-<AREA SHAPE='RECT' COORDS='610,581,695,661' HREF='#0050778' ALT=''>
-<AREA SHAPE='RECT' COORDS='59,469,144,517' HREF='#0050896' ALT=''>
-<AREA SHAPE='RECT' COORDS='63,597,140,645' HREF='#0006950' ALT=''>
-<AREA SHAPE='RECT' COORDS='164,597,287,645' HREF='#0072376' ALT=''>
-<AREA SHAPE='RECT' COORDS='648,453,763,533' HREF='#0002684' ALT=''>
-<AREA SHAPE='RECT' COORDS='499,5,387,29' HREF='#0008150' ALT=''>
-<AREA SHAPE='RECT' COORDS='291,101,374,149' HREF='#0008152' ALT=''>
-<AREA SHAPE='RECT' COORDS='598,101,678,149' HREF='#0065007' ALT=''>
-<AREA SHAPE='RECT' COORDS='310,334,411,397' HREF='#0097164' ALT=''>
-<AREA SHAPE='RECT' COORDS='682,856,868,904' HREF='#0002757' ALT=''>
-<AREA SHAPE='RECT' COORDS='747,953,934,1050' HREF='#0002429' ALT=''>
-<AREA SHAPE='RECT' COORDS='70,206,200,269' HREF='#0071704' ALT=''>
-<AREA SHAPE='RECT' COORDS='224,197,310,277' HREF='#0006807' ALT=''>
-<AREA SHAPE='RECT' COORDS='334,213,462,261' HREF='#0044238' ALT=''>
-<AREA SHAPE='RECT' COORDS='654,334,747,397' HREF='#0048583' ALT=''>
-<AREA SHAPE='RECT' COORDS='787,462,872,525' HREF='#0050776' ALT=''>
-<AREA SHAPE='RECT' COORDS='52,735,175,783' HREF='#0006952' ALT=''>
-<AREA SHAPE='RECT' COORDS='731,590,920,653' HREF='#0002764' ALT=''>
-<AREA SHAPE='RECT' COORDS='752,1099,928,1162' HREF='#0050851' ALT=''>
-<AREA SHAPE='RECT' COORDS='786,1211,895,1274' HREF='#0050853' ALT=''>
-<AREA SHAPE='RECT' COORDS='654,206,747,269' HREF='#0050789' ALT=''>
-<AREA SHAPE='RECT' COORDS='771,334,886,397' HREF='#0002682' ALT=''>
-<AREA SHAPE='RECT' COORDS='536,325,630,405' HREF='#0048518' ALT=''>
-</MAP>
-<p align="center"><img border="0" src="GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
-<p>&nbsp;</p>
-<table border='1' width='100%' id='table1'>
-	<tr>
-		<td Align=center ><b>GO term</b></td>
-		<td Align=center><b>Description</b></td>
-		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
-		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
-		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
-		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
-	</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006955&amp;view=details' target="_blank">GO:0006955</a><a name=0006955></a></td>
-<td>immune response</td>
-<td  align=center>2.45E-5</td>
-<td  align=center>3.09E-1</td>
-<td  align=center>2.37 (8795,473,212,27)</td>
-<td>
-<a id="ctrl_elements_GO:0006955" href="javascript:toggle('elements_GO:0006955')">[+] Show genes</a><br>
-<div id="elements_GO:0006955" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-CD46  -  cd46 molecule, complement regulatory protein<br>
-C17orf62  -  chromosome 17 open reading frame 62<br>
-TSC1  -  tuberous sclerosis 1<br>
-IGKC  -  immunoglobulin kappa constant<br>
-BLNK  -  b-cell linker<br>
-APOBEC3C  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3c<br>
-SLAMF6  -  slam family member 6<br>
-TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br>
-CCR10  -  chemokine (c-c motif) receptor 10<br>
-TNFRSF13B  -  tumor necrosis factor receptor superfamily, member 13b<br>
-BTN3A2  -  butyrophilin, subfamily 3, member a2<br>
-CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
-HIST1H2BG  -  histone cluster 1, h2bg<br>
-ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
-TRAC  -  t cell receptor alpha constant<br>
-RNASET2  -  ribonuclease t2<br>
-SERPINB9  -  serpin peptidase inhibitor, clade b (ovalbumin), member 9<br>
-PSMB10  -  proteasome (prosome, macropain) subunit, beta type, 10<br>
-APOL1  -  apolipoprotein l, 1<br>
-TRIM61  -  tripartite motif containing 61<br>
-BCL10  -  b-cell cll/lymphoma 10<br>
-PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br>
-CXorf21  -  chromosome x open reading frame 21<br>
-IGKV1-12  -  immunoglobulin kappa variable 1-12<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-POLR3C  -  polymerase (rna) iii (dna directed) polypeptide c (62kd)<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006959&amp;view=details' target="_blank">GO:0006959</a><a name=0006959></a></td>
-<td>humoral immune response</td>
-<td  align=center>1.48E-4</td>
-<td  align=center>9.34E-1</td>
-<td  align=center>4.55 (8795,82,212,9)</td>
-<td>
-<a id="ctrl_elements_GO:0006959" href="javascript:toggle('elements_GO:0006959')">[+] Show genes</a><br>
-<div id="elements_GO:0006959" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-CD46  -  cd46 molecule, complement regulatory protein<br>
-IGKV1-12  -  immunoglobulin kappa variable 1-12<br>
-IGKC  -  immunoglobulin kappa constant<br>
-ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-PSMB10  -  proteasome (prosome, macropain) subunit, beta type, 10<br>
-HIST1H2BG  -  histone cluster 1, h2bg<br>
-BLNK  -  b-cell linker<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006958&amp;view=details' target="_blank">GO:0006958</a><a name=0006958></a></td>
-<td>complement activation, classical pathway</td>
-<td  align=center>2.78E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>8.30 (8795,25,212,5)</td>
-<td>
-<a id="ctrl_elements_GO:0006958" href="javascript:toggle('elements_GO:0006958')">[+] Show genes</a><br>
-<div id="elements_GO:0006958" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-CD46  -  cd46 molecule, complement regulatory protein<br>
-IGKV1-12  -  immunoglobulin kappa variable 1-12<br>
-IGKC  -  immunoglobulin kappa constant<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006956&amp;view=details' target="_blank">GO:0006956</a><a name=0006956></a></td>
-<td>complement activation</td>
-<td  align=center>3.38E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>7.98 (8795,26,212,5)</td>
-<td>
-<a id="ctrl_elements_GO:0006956" href="javascript:toggle('elements_GO:0006956')">[+] Show genes</a><br>
-<div id="elements_GO:0006956" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-CD46  -  cd46 molecule, complement regulatory protein<br>
-IGKV1-12  -  immunoglobulin kappa variable 1-12<br>
-IGKC  -  immunoglobulin kappa constant<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072376&amp;view=details' target="_blank">GO:0072376</a><a name=0072376></a></td>
-<td>protein activation cascade</td>
-<td  align=center>4.85E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>7.41 (8795,28,212,5)</td>
-<td>
-<a id="ctrl_elements_GO:0072376" href="javascript:toggle('elements_GO:0072376')">[+] Show genes</a><br>
-<div id="elements_GO:0072376" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-CD46  -  cd46 molecule, complement regulatory protein<br>
-IGKV1-12  -  immunoglobulin kappa variable 1-12<br>
-IGKC  -  immunoglobulin kappa constant<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097164&amp;view=details' target="_blank">GO:0097164</a><a name=0097164></a></td>
-<td>ammonium ion metabolic process</td>
-<td  align=center>8.35E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>4.00 (8795,83,212,8)</td>
-<td>
-<a id="ctrl_elements_GO:0097164" href="javascript:toggle('elements_GO:0097164')">[+] Show genes</a><br>
-<div id="elements_GO:0097164" style="display:none"> <font size=1>
-MECP2  -  methyl cpg binding protein 2 (rett syndrome)<br>
-SAT1  -  spermidine/spermine n1-acetyltransferase 1<br>
-SGPP1  -  sphingosine-1-phosphate phosphatase 1<br>
-ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br>
-CHKB  -  choline kinase beta<br>
-LPIN1  -  lipin 1<br>
-NAAA  -  n-acylethanolamine acid amidase<br>
-PCTP  -  phosphatidylcholine transfer protein<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050853&amp;view=details' target="_blank">GO:0050853</a><a name=0050853></a></td>
-<td>B cell receptor signaling pathway</td>
-<td  align=center>8.6E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>5.30 (8795,47,212,6)</td>
-<td>
-<a id="ctrl_elements_GO:0050853" href="javascript:toggle('elements_GO:0050853')">[+] Show genes</a><br>
-<div id="elements_GO:0050853" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br>
-IGKC  -  immunoglobulin kappa constant<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-CD79B  -  cd79b molecule, immunoglobulin-associated beta<br>
-BLNK  -  b-cell linker<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006952&amp;view=details' target="_blank">GO:0006952</a><a name=0006952></a></td>
-<td>defense response</td>
-<td  align=center>9.11E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>2.00 (8795,499,212,24)</td>
-<td>
-<a id="ctrl_elements_GO:0006952" href="javascript:toggle('elements_GO:0006952')">[+] Show genes</a><br>
-<div id="elements_GO:0006952" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-CD46  -  cd46 molecule, complement regulatory protein<br>
-PXK  -  px domain containing serine/threonine kinase<br>
-OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br>
-C17orf62  -  chromosome 17 open reading frame 62<br>
-IGKC  -  immunoglobulin kappa constant<br>
-RNASET2  -  ribonuclease t2<br>
-WDR83  -  wd repeat domain 83<br>
-APOL1  -  apolipoprotein l, 1<br>
-BLNK  -  b-cell linker<br>
-TRIM61  -  tripartite motif containing 61<br>
-BCL10  -  b-cell cll/lymphoma 10<br>
-IRF2  -  interferon regulatory factor 2<br>
-MECP2  -  methyl cpg binding protein 2 (rett syndrome)<br>
-APOBEC3C  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3c<br>
-PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br>
-CXorf21  -  chromosome x open reading frame 21<br>
-SLAMF6  -  slam family member 6<br>
-MLKL  -  mixed lineage kinase domain-like<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-POLR3C  -  polymerase (rna) iii (dna directed) polypeptide c (62kd)<br>
-C5orf30  -  chromosome 5 open reading frame 30<br>
-MOV10  -  mov10, moloney leukemia virus 10, homolog (mouse)<br>
-HIST1H2BG  -  histone cluster 1, h2bg<br>
-</FONT></div>
-</td>
-</tr>
-<tr>
-<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045087&amp;view=details' target="_blank">GO:0045087</a><a name=0045087></a></td>
-<td>innate immune response</td>
-<td  align=center>9.89E-4</td>
-<td  align=center>1E0</td>
-<td  align=center>2.50 (8795,249,212,15)</td>
-<td>
-<a id="ctrl_elements_GO:0045087" href="javascript:toggle('elements_GO:0045087')">[+] Show genes</a><br>
-<div id="elements_GO:0045087" style="display:none"> <font size=1>
-IGHM  -  immunoglobulin heavy constant mu<br>
-CD46  -  cd46 molecule, complement regulatory protein<br>
-C17orf62  -  chromosome 17 open reading frame 62<br>
-RNASET2  -  ribonuclease t2<br>
-IGKC  -  immunoglobulin kappa constant<br>
-APOL1  -  apolipoprotein l, 1<br>
-TRIM61  -  tripartite motif containing 61<br>
-BCL10  -  b-cell cll/lymphoma 10<br>
-APOBEC3C  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3c<br>
-PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br>
-CXorf21  -  chromosome x open reading frame 21<br>
-SLAMF6  -  slam family member 6<br>
-IGHD  -  immunoglobulin heavy constant delta<br>
-POLR3C  -  polymerase (rna) iii (dna directed) polypeptide c (62kd)<br>
-HIST1H2BG  -  histone cluster 1, h2bg<br>
-</FONT></div>
-</td>
-</tr>
-</table>
-<p>Species used: Homo sapiens</p><p>The system has recognized 9247 genes out of 9703 gene terms entered by the user.<br> 9247 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>219 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br>Only 8795 of these genes are associated with a GO term.<br></p>
-<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
-<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
-The GOrilla database was last updated on Mar 6, 2021</p>
-<p>This results page will be available on this site for one month from now (until 
-Jan 16, 2023
-). You can bookmark this page and come back to it later.
-</p>
-<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br>
-<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
-<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
-<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
-<p>
-<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
-</p>
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>
+
+Results
+
+</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<script type="text/javascript">
+
+function toggle(item) {
+
+obj=document.getElementById(item);
+
+visible=(obj.style.display!="none")
+
+key=document.getElementById("ctrl_" + item);
+
+if (visible) {
+
+    obj.style.display="none";
+
+key.innerHTML="[+] Show genes";
+
+}
+
+else {
+
+obj.style.display="block";
+
+key.innerHTML="[-] Hide genes";
+
+}
+
+}
+
+</script>
+</head>
+<body>
+<p><center><b>
+</b></center></p>
+<table align="center" border="1" id="tab:pval_legend" width="80%">
+<caption><em>P-value color scale</em></caption>
+<tr>
+<td align="center" width="140"> &gt; 10<sup>-3</sup></td>
+<td align="center" bgcolor="#FFFFCC" width="140"> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+<td align="center" bgcolor="#FFCC66" width="140"> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+<td align="center" bgcolor="#FF9900" width="140"> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+<td align="center" bgcolor="#FF3300" width="140"> &lt; 10<sup>-9</sup></td>
+</tr>
+</table>
+<map name="goPathImage">
+<area alt="" coords="944,581,1035,661" href="#0007166" shape="RECT"/>
+<area alt="" coords="812,710,1002,807" href="#0002768" shape="RECT"/>
+<area alt="" coords="372,961,468,1041" href="#0006958" shape="RECT"/>
+<area alt="" coords="312,735,435,783" href="#0006959" shape="RECT"/>
+<area alt="" coords="372,856,468,904" href="#0006956" shape="RECT"/>
+<area alt="" coords="910,334,992,397" href="#0050794" shape="RECT"/>
+<area alt="" coords="900,469,1031,517" href="#0007165" shape="RECT"/>
+<area alt="" coords="847,101,919,149" href="#0009987" shape="RECT"/>
+<area alt="" coords="172,856,282,904" href="#0045087" shape="RECT"/>
+<area alt="" coords="176,325,286,405" href="#1901564" shape="RECT"/>
+<area alt="" coords="168,469,294,517" href="#0019538" shape="RECT"/>
+<area alt="" coords="390,469,507,517" href="#0002376" shape="RECT"/>
+<area alt="" coords="459,735,576,783" href="#0002252" shape="RECT"/>
+<area alt="" coords="311,597,436,645" href="#0006955" shape="RECT"/>
+<area alt="" coords="603,727,688,790" href="#0002253" shape="RECT"/>
+<area alt="" coords="38,334,152,397" href="#0043170" shape="RECT"/>
+<area alt="" coords="531,453,624,533" href="#0048584" shape="RECT"/>
+<area alt="" coords="610,581,695,661" href="#0050778" shape="RECT"/>
+<area alt="" coords="59,469,144,517" href="#0050896" shape="RECT"/>
+<area alt="" coords="63,597,140,645" href="#0006950" shape="RECT"/>
+<area alt="" coords="164,597,287,645" href="#0072376" shape="RECT"/>
+<area alt="" coords="648,453,763,533" href="#0002684" shape="RECT"/>
+<area alt="" coords="499,5,387,29" href="#0008150" shape="RECT"/>
+<area alt="" coords="291,101,374,149" href="#0008152" shape="RECT"/>
+<area alt="" coords="598,101,678,149" href="#0065007" shape="RECT"/>
+<area alt="" coords="310,334,411,397" href="#0097164" shape="RECT"/>
+<area alt="" coords="682,856,868,904" href="#0002757" shape="RECT"/>
+<area alt="" coords="747,953,934,1050" href="#0002429" shape="RECT"/>
+<area alt="" coords="70,206,200,269" href="#0071704" shape="RECT"/>
+<area alt="" coords="224,197,310,277" href="#0006807" shape="RECT"/>
+<area alt="" coords="334,213,462,261" href="#0044238" shape="RECT"/>
+<area alt="" coords="654,334,747,397" href="#0048583" shape="RECT"/>
+<area alt="" coords="787,462,872,525" href="#0050776" shape="RECT"/>
+<area alt="" coords="52,735,175,783" href="#0006952" shape="RECT"/>
+<area alt="" coords="731,590,920,653" href="#0002764" shape="RECT"/>
+<area alt="" coords="752,1099,928,1162" href="#0050851" shape="RECT"/>
+<area alt="" coords="786,1211,895,1274" href="#0050853" shape="RECT"/>
+<area alt="" coords="654,206,747,269" href="#0050789" shape="RECT"/>
+<area alt="" coords="771,334,886,397" href="#0002682" shape="RECT"/>
+<area alt="" coords="536,325,630,405" href="#0048518" shape="RECT"/>
+</map>
+<p align="center"><img alt="" border="0" src="/static/analysis/data1/go/36/GOPROCESS.png" usemap="#goPathImage"/></p>
+<p>Â </p>
+<table border="1" id="table1" width="100%">
+<tr>
+<td align="center"><b>GO term</b></td>
+<td align="center"><b>Description</b></td>
+<td align="center" width="120"><b><a href="#p_value_info">P-value</a></b></td>
+<td align="center" width="120"><b><a href="#fdr_info">FDR q-value</a></b></td>
+<td align="center" width="230"><b><a href="#enrich_info"> Enrichment (N, B, n, b) </a></b> </td>
+<td align="center"><b><a href="#genes_info"> Genes </a></b></td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006955&amp;view=details" target="_blank">GO:0006955</a><a name="0006955"></a></td>
+<td>immune response</td>
+<td align="center">2.45E-5</td>
+<td align="center">3.09E-1</td>
+<td align="center">2.37 (8795,473,212,27)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006955')" id="ctrl_elements_GO:0006955">[+] Show genes</a><br/>
+<div id="elements_GO:0006955" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+CD46  -  cd46 molecule, complement regulatory protein<br/>
+
+C17orf62  -  chromosome 17 open reading frame 62<br/>
+
+TSC1  -  tuberous sclerosis 1<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+BLNK  -  b-cell linker<br/>
+
+APOBEC3C  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3c<br/>
+
+SLAMF6  -  slam family member 6<br/>
+
+TNFSF12  -  tumor necrosis factor (ligand) superfamily, member 12<br/>
+
+CCR10  -  chemokine (c-c motif) receptor 10<br/>
+
+TNFRSF13B  -  tumor necrosis factor receptor superfamily, member 13b<br/>
+
+BTN3A2  -  butyrophilin, subfamily 3, member a2<br/>
+
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br/>
+
+HIST1H2BG  -  histone cluster 1, h2bg<br/>
+
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br/>
+
+TRAC  -  t cell receptor alpha constant<br/>
+
+RNASET2  -  ribonuclease t2<br/>
+
+SERPINB9  -  serpin peptidase inhibitor, clade b (ovalbumin), member 9<br/>
+
+PSMB10  -  proteasome (prosome, macropain) subunit, beta type, 10<br/>
+
+APOL1  -  apolipoprotein l, 1<br/>
+
+TRIM61  -  tripartite motif containing 61<br/>
+
+BCL10  -  b-cell cll/lymphoma 10<br/>
+
+PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br/>
+
+CXorf21  -  chromosome x open reading frame 21<br/>
+
+IGKV1-12  -  immunoglobulin kappa variable 1-12<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+
+POLR3C  -  polymerase (rna) iii (dna directed) polypeptide c (62kd)<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006959&amp;view=details" target="_blank">GO:0006959</a><a name="0006959"></a></td>
+<td>humoral immune response</td>
+<td align="center">1.48E-4</td>
+<td align="center">9.34E-1</td>
+<td align="center">4.55 (8795,82,212,9)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006959')" id="ctrl_elements_GO:0006959">[+] Show genes</a><br/>
+<div id="elements_GO:0006959" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+CD46  -  cd46 molecule, complement regulatory protein<br/>
+
+IGKV1-12  -  immunoglobulin kappa variable 1-12<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+
+PSMB10  -  proteasome (prosome, macropain) subunit, beta type, 10<br/>
+
+HIST1H2BG  -  histone cluster 1, h2bg<br/>
+
+BLNK  -  b-cell linker<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006958&amp;view=details" target="_blank">GO:0006958</a><a name="0006958"></a></td>
+<td>complement activation, classical pathway</td>
+<td align="center">2.78E-4</td>
+<td align="center">1E0</td>
+<td align="center">8.30 (8795,25,212,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006958')" id="ctrl_elements_GO:0006958">[+] Show genes</a><br/>
+<div id="elements_GO:0006958" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+CD46  -  cd46 molecule, complement regulatory protein<br/>
+
+IGKV1-12  -  immunoglobulin kappa variable 1-12<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006956&amp;view=details" target="_blank">GO:0006956</a><a name="0006956"></a></td>
+<td>complement activation</td>
+<td align="center">3.38E-4</td>
+<td align="center">1E0</td>
+<td align="center">7.98 (8795,26,212,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006956')" id="ctrl_elements_GO:0006956">[+] Show genes</a><br/>
+<div id="elements_GO:0006956" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+CD46  -  cd46 molecule, complement regulatory protein<br/>
+
+IGKV1-12  -  immunoglobulin kappa variable 1-12<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072376&amp;view=details" target="_blank">GO:0072376</a><a name="0072376"></a></td>
+<td>protein activation cascade</td>
+<td align="center">4.85E-4</td>
+<td align="center">1E0</td>
+<td align="center">7.41 (8795,28,212,5)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0072376')" id="ctrl_elements_GO:0072376">[+] Show genes</a><br/>
+<div id="elements_GO:0072376" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+CD46  -  cd46 molecule, complement regulatory protein<br/>
+
+IGKV1-12  -  immunoglobulin kappa variable 1-12<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097164&amp;view=details" target="_blank">GO:0097164</a><a name="0097164"></a></td>
+<td>ammonium ion metabolic process</td>
+<td align="center">8.35E-4</td>
+<td align="center">1E0</td>
+<td align="center">4.00 (8795,83,212,8)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0097164')" id="ctrl_elements_GO:0097164">[+] Show genes</a><br/>
+<div id="elements_GO:0097164" style="display:none"> <font size="1">
+
+MECP2  -  methyl cpg binding protein 2 (rett syndrome)<br/>
+
+SAT1  -  spermidine/spermine n1-acetyltransferase 1<br/>
+
+SGPP1  -  sphingosine-1-phosphate phosphatase 1<br/>
+
+ATP7A  -  atpase, cu++ transporting, alpha polypeptide<br/>
+
+CHKB  -  choline kinase beta<br/>
+
+LPIN1  -  lipin 1<br/>
+
+NAAA  -  n-acylethanolamine acid amidase<br/>
+
+PCTP  -  phosphatidylcholine transfer protein<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050853&amp;view=details" target="_blank">GO:0050853</a><a name="0050853"></a></td>
+<td>B cell receptor signaling pathway</td>
+<td align="center">8.6E-4</td>
+<td align="center">1E0</td>
+<td align="center">5.30 (8795,47,212,6)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0050853')" id="ctrl_elements_GO:0050853">[+] Show genes</a><br/>
+<div id="elements_GO:0050853" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+
+CD79B  -  cd79b molecule, immunoglobulin-associated beta<br/>
+
+BLNK  -  b-cell linker<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006952&amp;view=details" target="_blank">GO:0006952</a><a name="0006952"></a></td>
+<td>defense response</td>
+<td align="center">9.11E-4</td>
+<td align="center">1E0</td>
+<td align="center">2.00 (8795,499,212,24)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0006952')" id="ctrl_elements_GO:0006952">[+] Show genes</a><br/>
+<div id="elements_GO:0006952" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+CD46  -  cd46 molecule, complement regulatory protein<br/>
+
+PXK  -  px domain containing serine/threonine kinase<br/>
+
+OAS3  -  2'-5'-oligoadenylate synthetase 3, 100kda<br/>
+
+C17orf62  -  chromosome 17 open reading frame 62<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+RNASET2  -  ribonuclease t2<br/>
+
+WDR83  -  wd repeat domain 83<br/>
+
+APOL1  -  apolipoprotein l, 1<br/>
+
+BLNK  -  b-cell linker<br/>
+
+TRIM61  -  tripartite motif containing 61<br/>
+
+BCL10  -  b-cell cll/lymphoma 10<br/>
+
+IRF2  -  interferon regulatory factor 2<br/>
+
+MECP2  -  methyl cpg binding protein 2 (rett syndrome)<br/>
+
+APOBEC3C  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3c<br/>
+
+PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br/>
+
+CXorf21  -  chromosome x open reading frame 21<br/>
+
+SLAMF6  -  slam family member 6<br/>
+
+MLKL  -  mixed lineage kinase domain-like<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+
+POLR3C  -  polymerase (rna) iii (dna directed) polypeptide c (62kd)<br/>
+
+C5orf30  -  chromosome 5 open reading frame 30<br/>
+
+MOV10  -  mov10, moloney leukemia virus 10, homolog (mouse)<br/>
+
+HIST1H2BG  -  histone cluster 1, h2bg<br/>
+</font></div>
+</td>
+</tr>
+<tr>
+<td><a href="http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045087&amp;view=details" target="_blank">GO:0045087</a><a name="0045087"></a></td>
+<td>innate immune response</td>
+<td align="center">9.89E-4</td>
+<td align="center">1E0</td>
+<td align="center">2.50 (8795,249,212,15)</td>
+<td>
+<a href="javascript:toggle('elements_GO:0045087')" id="ctrl_elements_GO:0045087">[+] Show genes</a><br/>
+<div id="elements_GO:0045087" style="display:none"> <font size="1">
+
+IGHM  -  immunoglobulin heavy constant mu<br/>
+
+CD46  -  cd46 molecule, complement regulatory protein<br/>
+
+C17orf62  -  chromosome 17 open reading frame 62<br/>
+
+RNASET2  -  ribonuclease t2<br/>
+
+IGKC  -  immunoglobulin kappa constant<br/>
+
+APOL1  -  apolipoprotein l, 1<br/>
+
+TRIM61  -  tripartite motif containing 61<br/>
+
+BCL10  -  b-cell cll/lymphoma 10<br/>
+
+APOBEC3C  -  apolipoprotein b mrna editing enzyme, catalytic polypeptide-like 3c<br/>
+
+PTPN6  -  protein tyrosine phosphatase, non-receptor type 6<br/>
+
+CXorf21  -  chromosome x open reading frame 21<br/>
+
+SLAMF6  -  slam family member 6<br/>
+
+IGHD  -  immunoglobulin heavy constant delta<br/>
+
+POLR3C  -  polymerase (rna) iii (dna directed) polypeptide c (62kd)<br/>
+
+HIST1H2BG  -  histone cluster 1, h2bg<br/>
+</font></div>
+</td>
+</tr>
+</table>
+<p>Species used: Homo sapiens</p><p>The system has recognized 9247 genes out of 9703 gene terms entered by the user.<br/> 9247 genes were recognized by gene symbol and 0 genes by other gene IDs .<br/>219 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 9028 genes.<br/>Only 8795 of these genes are associated with a GO term.<br/></p>
+<br/><a href="GOPROCESS.xls"> Output in Microsoft Excel format</a><br/>
+<p> The GOrilla database is periodically updated using the <a href="http://www.geneontology.org/">GO database</a> and other sources.<br/>
+
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+
+Jan 16, 2023
+
+). You can bookmark this page and come back to it later.
+
+</p>
+<a name="p_value_info"></a><br/><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 12633 GO terms.<br/>
+<a name="fdr_info"></a><br/><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br/>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br/>
+<a name="enrich_info"></a><br/><b>Enrichment (N, B, n, b)</b> is defined as follows:<br/>N - is the total number of genes<br/>B - is the total number of genes associated with a specific GO term<br/>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br/>b - is the number of genes in the intersection<br/>Enrichment = (b/n) / (B/N)<br/>
+<a name="genes_info"></a><br/><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br/>Each gene name is specified by gene symbol followed by a short description of the gene <br/>
+<p>
+<a href="http://cbl-gorilla.cs.technion.ac.il/"> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>
