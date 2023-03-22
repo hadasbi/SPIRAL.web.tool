@@ -1,55 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript">// <![CDATA[
-        function loading(){
-            $("#loading").show();
-            $("#content").hide();
-        }
-// ]]>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</script>
+<script type="text/javascript" src="../static/js/load_data_form.js"></script>
 
 {% extends 'base.html' %}
 
@@ -119,8 +69,23 @@
                 </div>
 
                 <hr>
+                <div id="data_types_selecting" style="margin-bottom: 10px">
+                    <label for="">What is the data type?</label>
+                    <div style="margin-top: 5px">
+                        <input type="radio" name="data_type" value="count-matrix" id="count-matrix">
+                        <label for="count-matrix">Count Matrix</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="data_type" value="visium-10x" id="visium-10x">
+                        <label for="visium-10x">Visium 10X</label>
+                    </div>
+                </div>
 
-                <div class="form-group col-md-6">
+                <div id="data_type_warning"><span style="color: red">You must choose a data type in order to load your data</span>
+                </div>
+
+
+                <div id="count-matrix-input" class="form-group col-md-6" style="display: none">
                     {{ form.csrf_token() }}
                     <label for=""> {{ form.count_matrix.label }}</label>
                     {{ form.count_matrix }}
@@ -129,7 +94,8 @@
                         <li>The file type should be either csv or txt.</li>
                         <li>Gene names should appear in the first column. To be compatible with GOrilla (for the
                             enrichment
-                            step), the supported formats are: gene symbol (preferred), gene and protein RefSeq, Uniprot,
+                            step), the supported formats are: gene symbol (preferred), gene and protein RefSeq,
+                            Uniprot,
                             Unigene and Ensembl.
                         </li>
                         <li>Sample names should appear in the first row. If your dataset has labels (for example:
@@ -138,7 +104,8 @@
                             underscore.
                             For example: 'day1_ACGTGTGA'.
                         </li>
-                        <li>If your data has less than 200 cells\spots\samples, SPIRAL will run on the original data. If
+                        <li>If your data has less than 200 cells\spots\samples, SPIRAL will run on the original
+                            data. If
                             your data has more than that, SPIRAL will run in a repcell-mode.
                         </li>
                         <li>
@@ -147,19 +114,23 @@
                                 <li>Single cell RNA-seq data set of lymphoblastoid cells (<a target="_blank"
                                                                                              href="https://www.sciencedirect.com/science/article/pii/S1097276518308803?via%3Dihub">Zhang
                                     et al. 2019</a>) -
-                                    <td><a href="{{ url_for('download_count_matrix', data_n=1) }}">count matrix</a></td>
+                                    <td><a href="{{ url_for('download_count_matrix', data_n=1) }}">count matrix</a>
+                                    </td>
                                 </li>
-                                <li>Spatial transcriptomics data of a sagittal-posterior section of a mouse brain (<a
-                                        target="_blank"
-                                        href="https://www.10xgenomics.com/resources/datasets/
+                                <li>Spatial transcriptomics data of a sagittal-posterior section of a mouse brain
+                                    (<a
+                                            target="_blank"
+                                            href="https://www.10xgenomics.com/resources/datasets/
 mouse-brain-serial-section-2-sagittal-posterior-1-standard-1-1-0">10x Genomics</a>) -
-                                    <td><a href="{{ url_for('download_count_matrix', data_n=2) }}">count matrix</a></td>
+                                    <td><a href="{{ url_for('download_count_matrix', data_n=2) }}">count matrix</a>
+                                    </td>
                                 </li>
                                 <li>Single cell RNA-seq data set of Zebrafish differentiation at 7 time points (<a
                                         target="_blank"
                                         href="https://www.science.org/doi/full/10.1126/science.aar4362">Wagner
                                     et al. 2018</a>) -
-                                    <td><a href="{{ url_for('download_count_matrix', data_n=3) }}">count matrix</a></td>
+                                    <td><a href="{{ url_for('download_count_matrix', data_n=3) }}">count matrix</a>
+                                    </td>
                                 </li>
                             </ul>
                         </li>
@@ -172,6 +143,61 @@ mouse-brain-serial-section-2-sagittal-posterior-1-standard-1-1-0">10x Genomics</
                         {% endfor %}
                     </ul>
                     {% endif %}
+                </div>
+                <div class="form-group col-md-6" id="visium-10x-input" style="display: none">
+                    {{ form.csrf_token() }}
+                    <label for=""> {{ form.visium_10x_matrix.label }}</label>
+                    {{ form.visium_10x_matrix }}
+                    <p>
+                        <small>
+                            The file type should be mtx.gz.
+                        </small>
+                    </p>
+                    {% if form.visium_10x_matrix.errors %}
+                    <ul class="errors">
+                        {% for error in form.visium_10x_matrix.errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {{ form.csrf_token() }}
+                    <label for=""> {{ form.visium_10x_features.label }}</label>
+                    {{ form.visium_10x_features }}
+                    <p>
+                        <small>
+                            The file type should be tsv.gz.
+                        </small>
+                    </p>
+                    {% if form.visium_10x_features.errors %}
+                    <ul class="errors">
+                        {% for error in form.visium_10x_features.errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {{ form.csrf_token() }}
+                    <label for=""> {{ form.visium_10x_barcodes.label }}</label>
+                    {{ form.visium_10x_barcodes }}
+                    <p>
+                        <small>
+                            The file type should be tsv.gz.
+                        </small>
+                    </p>
+                    {% if form.visium_10x_barcodes.errors %}
+                    <ul class="errors">
+                        {% for error in form.visium_10x_barcodes.errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    <p>
+                        <small>
+                            For more information regarding Feature-Barcode Matrices see <a target="_blank"
+                                                                                           href="https://support.10xgenomics.com/spatial-gene-expression/software/pipelines/latest/output/matrices">here.</a>
+                        </small>
+                    </p>
                 </div>
 
                 <hr>
