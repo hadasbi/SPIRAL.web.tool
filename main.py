@@ -5,6 +5,7 @@ import urllib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
+from werkzeug.datastructures import FileStorage
 from wtforms import StringField, IntegerField, SubmitField, SelectField, SelectMultipleField, IntegerRangeField, \
     ValidationError, BooleanField
 from wtforms.validators import DataRequired, Email, NumberRange, EqualTo
@@ -15,6 +16,8 @@ from flask_mail import Mail, Message
 from SPIRAL_pipeline_funcs import *
 
 from threading import Thread
+
+import gzip
 
 app = Flask(__name__)
 
@@ -36,12 +39,17 @@ ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 # Flask-WTF requires an encryption key - the string can be anything
 app.config['SECRET_KEY'] = open('./Flask-WTF_encription_key.txt', 'r').read()
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
+app.config['UPLOADED_MATRIX_DEST'] = ANALYSIS_FOLDER
+app.config['UPLOADED_BARCODES_DEST'] = ANALYSIS_FOLDER
 
 # Flask-Bootstrap requires this line
 Bootstrap(app)
 
 tables = UploadSet(name='tables', extensions=('txt', 'csv'))
-configure_uploads(app, (tables))
+matrix = UploadSet(name='matrix', extensions='mtx.gz')
+barcodes_features = UploadSet(name='barcodes', extensions='tsv.gz')
+
+configure_uploads(app, (tables, matrix, barcodes_features))
 
 patch_request_class(app, 1024 * 1024 * 1024)
 
@@ -67,11 +75,13 @@ class LoadData(FlaskForm):
     dataset_name = StringField('Name of dataset: ')
     email = StringField('E-mail address: ', validators=[Email("Please enter a valid email address")])
     count_matrix = FileField('Gene expression matrix: ',
-                             validators=[FileRequired(), FileAllowed(tables, 'csv or txt files only!')]
-                             )
-    spatial_coors = FileField('Spatial coordinates: ',
-                              validators=[FileAllowed(tables, 'csv or txt files only!')]
-                              )
+                             validators=[FileRequired(), FileAllowed(tables, 'csv or txt files only!')])
+    visium_10x_matrix = FileField('Vision 10x matrix: ', validators=[FileAllowed(matrix, 'mtx.gz files only!')])
+    visium_10x_features = FileField('Vision 10x features: ',
+                                    validators=[FileAllowed(barcodes_features, 'tsv.gz files only!')])
+    visium_10x_barcodes = FileField('Vision 10x barcodes: ',
+                                    validators=[FileAllowed(barcodes_features, 'tsv.gz files only!')])
+    spatial_coors = FileField('Spatial coordinates: ', validators=[FileAllowed(tables, 'csv or txt files only!')])
     species = SelectField('Species: ', choices=[("ARABIDOPSIS_THALIANA", 'Arabidopsis thaliana'),
                                                 ("SACCHAROMYCES_CEREVISIAE", 'Saccharomyces cerevisiae'),
                                                 ("CAENORHABDITIS_ELEGANS", 'Caenorhabditis elegans'),
@@ -88,9 +98,7 @@ class LoadData(FlaskForm):
                             choices=[("samples", 'samples'), ("cells", 'cells'), ("spots", 'spots')],
                             validators=[DataRequired()], default="samples")
     labels_checkbox = BooleanField(Markup('My data set does <strong>not</strong> have labels. '))
-    submit_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    submit = SubmitField('Submit', render_kw=submit_style)
+    submit = SubmitField('Submit')
 
 
 class CheckData(FlaskForm):
@@ -151,9 +159,7 @@ class vln_plot_form(FlaskForm):
                                  validators=[DataRequired(), MoreThan('min_nFeatures')])
     max_mtpercent = IntegerField('Maximal percent of mitochondrial gene expression: ', default=100,
                                  validators=[NumberRange(1, 100)])
-    submit_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    submit = SubmitField('Submit', render_kw=submit_style)
+    submit = SubmitField('Submit')
 
 
 class alg_params_form(FlaskForm):
@@ -165,9 +171,7 @@ class alg_params_form(FlaskForm):
     mu = SelectMultipleField('Density parameter \u03bc: ', choices=[('0.9', '0.9'), ('0.95', '0.95')])
     path_len = SelectField('Path length L: ', choices=[('3', '3')])
     num_iter = SelectField('Number of iterations T: ', choices=[('10000', '10000')])
-    submit_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    submit = SubmitField('Submit', render_kw=submit_style)
+    submit = SubmitField('Submit')
 
 
 def flash_errors(form):
@@ -214,7 +218,10 @@ def load_data_form():
     print('load_data_form!!!')
     form = LoadData(request.form)
 
-    if request.method == 'POST' and 'count_matrix' in request.files and not form.email.errors:
+    if request.method == 'POST' and not form.email.errors and ('count_matrix' in request.files or all(
+            x in request.files for x in
+            ['visium_10x_matrix', 'visium_10x_features', 'visium_10x_barcodes'])):
+
         # create a folder for the new dataset
         data_n = dataset_number(ANALYSIS_FOLDER)
         data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
@@ -228,13 +235,6 @@ def load_data_form():
         # save e-mail
         with open(os.path.join(data_path, 'email.txt'), 'w') as text_file:
             text_file.write(form.email.data)
-
-        filename = tables.save(storage=request.files['count_matrix'], folder='data' + str(data_n), name='counts.')
-
-        # if 'spatial_coors' in request.files:
-        if request.files['spatial_coors'].filename:
-            filename = tables.save(storage=request.files['spatial_coors'], folder='data' + str(data_n),
-                                   name='spatial_coors.')
 
         # save species
         species = form.species.data
@@ -250,6 +250,48 @@ def load_data_form():
         labels_checkbox = form.labels_checkbox.data
         with open(os.path.join(data_path, 'labels_checkbox.txt'), 'w') as text_file:
             text_file.write(str(labels_checkbox))
+
+        if request.files['count_matrix'].filename:
+            tables.save(storage=request.files['count_matrix'], folder='data' + str(data_n), name='counts.')
+
+            # if 'spatial_coors' in request.files:
+            if request.files['spatial_coors'].filename:
+                tables.save(storage=request.files['spatial_coors'], folder='data' + str(data_n), name='spatial_coors.')
+        else:
+            matrix_dir = os.path.join('data' + str(data_n), 'temp')
+            data_path = os.path.join(ANALYSIS_FOLDER, matrix_dir)
+            os.mkdir(data_path)
+            matrix.save(storage=request.files['visium_10x_matrix'], name=matrix_dir + '/matrix.mtx.gz')
+            barcodes_features.save(storage=request.files['visium_10x_features'], name=matrix_dir + '/features.tsv.gz')
+            barcodes_features.save(storage=request.files['visium_10x_barcodes'], name=matrix_dir + '/barcodes.tsv.gz')
+
+            # read in MEX format matrix as table
+            mat_filtered = scipy.io.mmread(os.path.join(data_path, "matrix.mtx.gz"))
+
+            # list of transcript ids, e.g. 'ENSG00000187634'
+            features_path = os.path.join(data_path, "features.tsv.gz")
+            # list of gene names, e.g. 'SAMD11'
+            gene_names = [row[1] for row in csv.reader(gzip.open(features_path, mode="rt"), delimiter="\t")]
+            # list of barcodes, e.g. 'AAACATACAAAACG-1'
+            barcodes_path = os.path.join(data_path, "barcodes.tsv.gz")
+            barcodes = [row[0] for row in csv.reader(gzip.open(barcodes_path, mode="rt"), delimiter="\t")]
+            # transform table to pandas dataframe and label rows and columns
+            matrix_df = pd.DataFrame.sparse.from_spmatrix(mat_filtered)
+            matrix_df.columns = barcodes
+            matrix_df.insert(loc=0, column="gene", value=gene_names)
+
+            # save the table as a CSV (note the CSV will be a very large file)
+            matrix_df.to_csv(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), "counts.csv"), index=False)
+
+            # if 'spatial_coors' in request.files:
+            if request.files['spatial_coors'].filename:
+                # tables.save(storage=request.files['spatial_coors'], name=matrix_dir + '/spatial_coors.')
+                spatial_coors = pd.read_csv(request.files['spatial_coors'])
+                spatial_coors.drop(spatial_coors.iloc[:, 1:4], axis=1, inplace=True)
+                spatial_coors.to_csv(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), "spatial_coors.csv"),
+                                     index=False)
+
+            # os.remove(matrix_dir)
 
         return redirect(url_for('check_data_form', data_n=data_n, samp_name=samp_name, species=species))
 

@@ -124,7 +124,7 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
 
 
 ####################################################################################################################
-def compute_violin_plots(analysis_folder, data_n, static_path, species):
+def compute_violin_plots(analysis_folder, data_n, static_path, species, local_run):
     print('compute_violin_plots!')
     # Load data
     data_path = data_path_name(analysis_folder, data_n)
@@ -143,6 +143,23 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species):
     # save to file
     vln_plot_filename = vln_plot_filename_(static_path=static_path, data_n=data_n)
     plt.tight_layout()
+    if local_run:
+        print("Violin plot will open soon.")
+        print("Try to include most of your data and exclude the outliers in both ends.")
+        print("Explanation: Cells with very few expressed genes may be raptured cells, while cells with a lot of "
+              "expressed genes may be doublets")
+        plt.show()
+
+        # save max_nFeatures
+        max_nFeatures = input("Insert maximal number of expressed genes:")
+        with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
+            text_file.write(str(max_nFeatures))
+
+        # save min_nFeatures
+        min_nFeatures = input("Insert minimal number of expressed genes:")
+        with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
+            text_file.write(str(min_nFeatures))
+
     plt.savefig(vln_plot_filename)
     plt.close()
 
@@ -162,6 +179,18 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species):
         # save to file
         vln_plot_mt_filename = vln_plot_mt_filename_(static_path=static_path, data_n=data_n)
         plt.tight_layout()
+
+        if local_run:
+            print("Cells with large percentages of mitochondrial genes are likely to be cells that experienced cell "
+                  "stress, and you might want to exclude them from the analysis.")
+            plt.show()
+
+            # save max_mtpercent
+            max_mtpercent = input("Insert percent of mitochondrial gene expression:")
+            if max_mtpercent is not None:
+                with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
+                    text_file.write(str(max_mtpercent))
+
         plt.savefig(vln_plot_mt_filename)
         plt.close()
 
@@ -554,7 +583,8 @@ def filter_data(data_path, min_nFeatures, max_nFeatures, max_mtpercent, spatial,
     if max_nFeatures is None:
         max_nFeatures = int(open(os.path.join(data_path, 'max_nFeatures.txt'), "r").read())
 
-    with_mt = (open(with_mt_filename_(data_path), "r").read().lower() == 'true')
+    with_mt = (open(with_mt_filename_(data_path), "r").read().lower() == 'true') if os.path.isfile(
+        with_mt_filename_(data_path)) else False
 
     ##### Filter the data set ######################################################
     data = pd.read_csv(data_norm_loc, index_col=0, sep='\t')

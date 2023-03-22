@@ -1,11 +1,11 @@
-#alg_params_form{
+#alg_params_form {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-#fill_default_vals{
-    border: 2px solid #d7d5d5;
+#fill_default_vals {
+    border: 2px solid #EEEEEE;
     border-radius: 10px;
     padding: 10px 10px;
     text-align: center;
@@ -13,7 +13,47 @@
     width: fit-content;
 }
 
-#fill_default_vals:hover{
+#fill_default_vals:hover {
     cursor: pointer;
-    background: #d7d5d5;
+    background: #EEEEEE;
+}
+
+.tooltip {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 35%  10% auto;
+}
+
+.tooltip .tooltiptext {
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    color: #444444;
+    background: #EEEEEE;
+    font-size: small;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+
+    visibility: hidden;
+    z-index: 9999;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+select {
+    margin-left: 5px;
+    width: 100%;
+    padding: 5px 5px;
+}
+
+option {
+    width: fit-content;
+}
+
+.form-inline{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(246, 246, 246, 0.8);
 }
