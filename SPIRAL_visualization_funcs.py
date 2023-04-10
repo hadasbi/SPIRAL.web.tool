@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import normalize
 import matplotlib.pyplot as plt
-import pickle
+import pickle5 as pickle
 import networkx as nx
 from networkx.algorithms import bipartite
 import umap.umap_ as umap

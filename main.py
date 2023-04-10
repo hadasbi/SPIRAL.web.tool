@@ -1,11 +1,9 @@
-import os, io
-from time import sleep
-import re
+#!/home/yaellab/SPIRAL/bin/python3.9
+
 import urllib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from werkzeug.datastructures import FileStorage
 from wtforms import StringField, IntegerField, SubmitField, SelectField, SelectMultipleField, IntegerRangeField, \
     ValidationError, BooleanField
 from wtforms.validators import DataRequired, Email, NumberRange, EqualTo
@@ -16,20 +14,36 @@ from flask_mail import Mail, Message
 from SPIRAL_pipeline_funcs import *
 
 from threading import Thread
-
 import gzip
 
-app = Flask(__name__)
+import socket
 
-app.config['SERVER_NAME'] = '132.69.236.102:5000'
-# app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
+# get hostname.
+hostname = socket.gethostname()
+if hostname == 'bi-fiona':  # production (linux)
+    production = True
+else:
+    production = False  # development (Windows)
+
+if production:
+    app = Flask(__name__, static_folder='/home/yaellab/SPIRAL/static')
+    app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
+else:
+    app = Flask(__name__)
+    app.config['SERVER_NAME'] = '132.69.236.238:5000'
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'SPIRAL.web.tool@gmail.com'
-app.config['MAIL_PASSWORD'] = '123SPIRAL'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
+
+# This is a special password for gmail from this app, as explained here https://stackoverflow.com/questions/72478573/how-to-send-an-email-using-python-after-googles-policy-update-on-not-allowing-j
+if production:
+    app.config['MAIL_PASSWORD'] = open('/home/yaellab/SPIRAL/mail_password.txt', 'r').read()
+else:
+    app.config['MAIL_PASSWORD'] = open('./mail_password.txt', 'r').read()
+
 mail = Mail(app)
 
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
@@ -37,7 +51,11 @@ app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
 ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 
 # Flask-WTF requires an encryption key - the string can be anything
-app.config['SECRET_KEY'] = open('./Flask-WTF_encription_key.txt', 'r').read()
+if production:
+    app.config['SECRET_KEY'] = open('/home/yaellab/SPIRAL/Flask-WTF_encription_key.txt', 'r').read()
+else:
+    app.config['SECRET_KEY'] = open('./Flask-WTF_encription_key.txt', 'r').read()
+
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 app.config['UPLOADED_MATRIX_DEST'] = ANALYSIS_FOLDER
 app.config['UPLOADED_BARCODES_DEST'] = ANALYSIS_FOLDER
@@ -48,7 +66,6 @@ Bootstrap(app)
 tables = UploadSet(name='tables', extensions=('txt', 'csv'))
 matrix = UploadSet(name='matrix', extensions='mtx.gz')
 barcodes_features = UploadSet(name='barcodes', extensions='tsv.gz')
-
 configure_uploads(app, (tables, matrix, barcodes_features))
 
 patch_request_class(app, 1024 * 1024 * 1024)
@@ -198,6 +215,7 @@ def get_vln_route(filename):
 @app.route('/', methods=['POST', 'GET'])
 def home():
     print('home!!!')
+    print(app.instance_path)
     form = HomePage()
     Zhang2019_link = '/results/' + data_n_to_url(1)
     Wagner2018_link = '/results/' + data_n_to_url(3)
@@ -217,11 +235,9 @@ def home():
 def load_data_form():
     print('load_data_form!!!')
     form = LoadData(request.form)
-
     if request.method == 'POST' and not form.email.errors and ('count_matrix' in request.files or all(
             x in request.files for x in
             ['visium_10x_matrix', 'visium_10x_features', 'visium_10x_barcodes'])):
-
         # create a folder for the new dataset
         data_n = dataset_number(ANALYSIS_FOLDER)
         data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
@@ -253,7 +269,6 @@ def load_data_form():
 
         if request.files['count_matrix'].filename:
             tables.save(storage=request.files['count_matrix'], folder='data' + str(data_n), name='counts.')
-
             # if 'spatial_coors' in request.files:
             if request.files['spatial_coors'].filename:
                 tables.save(storage=request.files['spatial_coors'], folder='data' + str(data_n), name='spatial_coors.')
@@ -264,10 +279,8 @@ def load_data_form():
             matrix.save(storage=request.files['visium_10x_matrix'], name=matrix_dir + '/matrix.mtx.gz')
             barcodes_features.save(storage=request.files['visium_10x_features'], name=matrix_dir + '/features.tsv.gz')
             barcodes_features.save(storage=request.files['visium_10x_barcodes'], name=matrix_dir + '/barcodes.tsv.gz')
-
             # read in MEX format matrix as table
             mat_filtered = scipy.io.mmread(os.path.join(data_path, "matrix.mtx.gz"))
-
             # list of transcript ids, e.g. 'ENSG00000187634'
             features_path = os.path.join(data_path, "features.tsv.gz")
             # list of gene names, e.g. 'SAMD11'
@@ -279,10 +292,8 @@ def load_data_form():
             matrix_df = pd.DataFrame.sparse.from_spmatrix(mat_filtered)
             matrix_df.columns = barcodes
             matrix_df.insert(loc=0, column="gene", value=gene_names)
-
             # save the table as a CSV (note the CSV will be a very large file)
             matrix_df.to_csv(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), "counts.csv"), index=False)
-
             # if 'spatial_coors' in request.files:
             if request.files['spatial_coors'].filename:
                 # tables.save(storage=request.files['spatial_coors'], name=matrix_dir + '/spatial_coors.')
@@ -290,7 +301,6 @@ def load_data_form():
                 spatial_coors.drop(spatial_coors.iloc[:, 1:4], axis=1, inplace=True)
                 spatial_coors.to_csv(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n), "spatial_coors.csv"),
                                      index=False)
-
             # os.remove(matrix_dir)
 
         return redirect(url_for('check_data_form', data_n=data_n, samp_name=samp_name, species=species))
@@ -470,19 +480,28 @@ def alg_params():
 
 
 def run_SPIRAL(analysis_folder, data_n, num_stds_thresh_lst, mu_lst, num_iters_lst, path_len_lst):
-    outcome = run_SPIRAL_pipeline(analysis_folder=analysis_folder, data_n=data_n,
-                                  num_stds_thresh_lst=num_stds_thresh_lst, mu_lst=mu_lst,
-                                  num_iters_lst=num_iters_lst, path_len_lst=path_len_lst)
-    data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
-    with open(outcome_path(data_path), 'w') as text_file:
-        text_file.write(str(outcome))
-    with app.app_context():
-        email(data_n=data_n, outcome=outcome)
+    try:
+        outcome = run_SPIRAL_pipeline(analysis_folder=analysis_folder, data_n=data_n,
+                                      num_stds_thresh_lst=num_stds_thresh_lst, mu_lst=mu_lst,
+                                      num_iters_lst=num_iters_lst, path_len_lst=path_len_lst)
+        data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+        with open(outcome_path(data_path), 'w') as text_file:
+            text_file.write(str(outcome))
+        with app.app_context():
+            email(data_n=data_n, outcome=outcome)
+    except Exception as error:
+        print(error)
+        outcome = 'Error'
+        with open(outcome_path(data_path), 'w') as text_file:
+            text_file.write(str(outcome))
+        with app.app_context():
+            email(data_n=data_n, outcome=outcome, error=error)
 
 
 @app.route("/email")
-def email(data_n, outcome):
-    # send an email to user and a (bcc) copy to self
+def email(data_n, outcome, error=None):
+    # if outcome!='Error': send an email to user and a (bcc) copy to self
+    # if outcome=='Error': send an email to user and a (bcc) copy to self, also send an error notification to self
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     recipient_email = open(os.path.join(data_path, 'email.txt'), "r").read()
     if recipient_email:
@@ -500,9 +519,32 @@ def email(data_n, outcome):
                     dataset_name != '') * (
                                 ' ' + dataset_name) +
                         '. You might want to check again the format of the data you uploaded. Also, we encourage you to contact us with any questions.')
+        elif outcome == 'Error':
+            msg = Message('SPIRAL results', sender='SPIRAL.web.tool@gmail.com', recipients=[recipient_email],
+                          bcc=['SPIRAL.web.tool@gmail.com'])
+            msg.body = ("Hello, \nUnfortunately SPIRAL encountered an error while computing the structures for" + (
+                    dataset_name != '') * (
+                                ' ' + dataset_name) +
+                        '. We will look into this shortly. Also, you may reply this email with any questions.')
         mail.send(msg)
-        return "Message sent!"
-    return "no email address"
+
+    if outcome == 'Error':
+        email_to_inform = "spiral.web.tool@gmail.com"
+        msg = Message('SPIRAL: An error occurred when computing data ' + str(data_n),
+                      sender='SPIRAL.web.tool@gmail.com', recipients=[email_to_inform])
+        msg.body = 'An error occurred:' + str(error) + '.\ndata_n:' + str(data_n) + '.'
+        mail.send(msg)
+
+    if recipient_email:
+        if outcome != 'Error':
+            return "Message to user sent!"
+        else:
+            return "Message to user sent! Error notification to SPIRAL sent!"
+    else:
+        if outcome != 'Error':
+            return "No user email address"
+        else:
+            return "Error notification to SPIRAL sent!"
 
 
 #################### results panel ##########################################################################
@@ -559,7 +601,10 @@ def pic_names_and_GO_terms():
                 if spatial:
                     struct_pics.append('struct_' + struct + '_spatial.jpg')
 
-    struct_pics = ['/' + os.path.join(pic_path, file).replace('\\', '/') for file in struct_pics]
+    if production:
+        struct_pics = ['/static/analysis/data' + str(data_n) + '/structure_layouts/' + file for file in struct_pics]
+    else:
+        struct_pics = ['/' + os.path.join(pic_path, file).replace('\\', '/') for file in struct_pics]
 
     # get GO enrichment terms
     sigfile = final_sig_filename(data_path, impute_method)
@@ -572,8 +617,9 @@ def pic_names_and_GO_terms():
                 GO_terms.append('NO TERMS')
             else:
                 GO_terms.append([m.group(0) for m in
-                                 re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
-                                             sigtable.loc[int(struct), col])])
+                                 re.finditer(
+                                     r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9\- ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
+                                     sigtable.loc[int(struct), col])])
         '''        
         GO_terms = [
             [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
@@ -711,5 +757,4 @@ def results_panel(url):
 
 ############################################################################################################
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0', port=5000, debug=True)
     app.run(host='0.0.0.0', port=5000)

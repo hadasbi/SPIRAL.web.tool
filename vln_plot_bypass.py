@@ -1,3 +1,5 @@
+#!/home/yaellab/SPIRAL/bin/python3.8
+
 from SPIRAL_pipeline_funcs import *
 
 ANALYSIS_FOLDER = './static/analysis'

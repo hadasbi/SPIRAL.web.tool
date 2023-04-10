@@ -73,8 +73,12 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
         if spatial_coors.shape[0] != data.shape[1]:
             print(set(list(data)) - set(spatial_coors.index))
             print(set(spatial_coors.index) - set(list(data)))
-            raise ValueError(
-                'Number of rows in the spatial coordinates file do not fit the number of columns in the count matrix')
+            # check if there are coordinates for all samples in data (and more). If so, fix coordinates table.
+            if np.array([(samp in set(spatial_coors.index)) for samp in list(data)]).all():
+                spatial_coors = spatial_coors.loc[list(data), :]
+            else:
+                raise ValueError(
+                    'Number of rows in the spatial coordinates file do not fit the number of columns in the count matrix')
         else:
             # If not according to name, then according to order:
             if set(spatial_coors.index) != set(list(data)):
@@ -90,7 +94,7 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
     ############# Check for duplicated genes names #################################
     print(data.shape)
     data = data.groupby(level=0).sum()
-    data = data.T.groupby(level=0).sum().T
+    data = data.groupby(level=0, axis=1).sum()
     print(data.shape)
 
     ############# median count normalization #######################################
@@ -124,7 +128,7 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
 
 
 ####################################################################################################################
-def compute_violin_plots(analysis_folder, data_n, static_path, species, local_run):
+def compute_violin_plots(analysis_folder, data_n, static_path, species, local_run=False):
     print('compute_violin_plots!')
     # Load data
     data_path = data_path_name(analysis_folder, data_n)
@@ -239,8 +243,6 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     else:
         print('Seed error!')
 
-    min_cells_per_cluster = 10
-
     use_5000 = False
 
     data = None
@@ -277,6 +279,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         impute_method = 'no_imputation'
     else:
         impute_method = 'agg_wald'
+
+    min_cells_per_cluster = min(10, max(int(np.round(data.shape[1] / 100)), 1))
 
     with open(os.path.join(data_path, 'imputation_method.txt'), 'w') as text_file:
         text_file.write(impute_method)
@@ -471,9 +475,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         sigtable_merged = merge_sigtables(sigfile_merged=sigfile_merged, data_path=data_path,
                                           impute_method=impute_method, num_stds_thresh_lst=num_stds_thresh_lst,
                                           mu_lst=mu_lst, path_len_lst=path_len_lst, num_iters_lst=num_iters_lst)
-
-    if sigtable_merged.empty:
-        return 'No_structures'
+        if sigtable_merged.empty:
+            return 'No_structures'
 
     # check if a filtered significance table file already exists (if not, compute it)
     sigfile_filt = os.path.join(data_path, impute_method + '_sigtable_filt.xlsx')
@@ -484,9 +487,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                                   data_path=data_path, impute_method=impute_method,
                                                   real_samp_name=real_samp_name, struct_thr=0.8,
                                                   min_nstructs=3, max_nstructs=50)
-
-    if sigtable_filt is None:
-        return 'No_structures'
+        if sigtable_filt is None:
+            return 'No_structures'
 
     # check if a filtered significance table file with GO terms and visualizations already exists (if not, compute it)
     sigfile_GO = os.path.join(data_path, impute_method + '_sigtable_filt_GO.xlsx')
@@ -923,7 +925,7 @@ def find_structures(genes_in_sets_npz_file, structs_file, mu, num_iters=10000, p
 
     # start with a random path
     if use_mp_to_find_structs:
-        with mp.Pool(mp.cpu_count()) as pool:
+        with mp.Pool(mp.cpu_count() // 2) as pool:
             struct_list = pool.starmap(SPIRAL_mp_funcs.find_submat_around_random_path,
                                        [(mu, genes_in_sets, path_len, i) for i in range(num_iters)])
     else:
@@ -1117,6 +1119,9 @@ def filter_similar_structures(sigfile, significance_table, sigfile_filt, genetab
     if significance_table is None:
         print('Loading data')
         significance_table = pd.read_excel(sigfile, index_col=0, engine='openpyxl')
+        if significance_table.empty:
+            print('NO STRUCTURES FOUND!')
+            return None
 
     if impute_method == 'no_imputation':
         samp_name = real_samp_name
