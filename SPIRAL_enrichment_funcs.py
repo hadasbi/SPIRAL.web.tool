@@ -11,6 +11,9 @@ import mechanicalsoup
 import gseapy
 from gseapy.parser import Biomart
 from SPIRAL_basic_funcs import *
+import urllib.request
+import urllib.error
+import urllib.parse
 
 
 ####################################################################################################################
@@ -152,6 +155,20 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
                                                  'GOResultsCOMPONENT.html']):
             new_link3 = new_link2[:ind + 1] + ontology_html
             # print('new_link3', ontology_init, ':', new_link3)
+            """
+            # To save the links locally, please uncomment the following section. All links will be saved in the 'links' 
+            # directory within the same data path. You'll then need to manually move those files to the 
+            # 'templates/go/{datapath}/' directory."
+            if not os.path.exists(data_path + "/links/"):
+                os.makedirs(data_path + "/links/")
+            if not os.path.exists(data_path + "/links/" + str(i)):
+                os.makedirs(data_path + "/links/" + str(i))
+            save_to_file(url=new_link3, file_path=os.path.join(data_path, "links", str(i)), file_name=ontology_html, 
+            browser=browser)
+            new_link3 = 'https://spiral.technion.ac.il/results/{}/{}/{}'.format(data_n_to_url(data_n=data_path[-1]), 
+                                                                                str(i), 
+                                                                                ontology_html.replace('.html', ''))
+            """
             hyperlink_txt = '=hyperlink("' + new_link3 + '","link")'
             # print(hyperlink_txt)
             sigtable.loc[i, ontology_init + '_link'] = hyperlink_txt
@@ -190,3 +207,30 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
     return sigtable
 
 ####################################################################################################################
+
+
+def save_to_file(url, file_path, file_name, browser):
+    """
+    Saves a webpage and its images to a file on the local file system.
+
+    Parameters:
+    - url (str): URL of the webpage to be saved.
+    - file_path (str): directory path where the file will be saved.
+    - file_name (str): name of the file to be saved.
+    - browser (WebBrowser object): web browser object to fetch the webpage and its images.
+
+    """
+    browser.open(url)
+    for img in browser.page.find_all('img'):
+        imgSrc = img['src']
+        imgUrl = re.sub(r'[a-zA-Z]*.html$', imgSrc, url)
+        response = urllib.request.urlopen(imgUrl)
+        content = response.read()
+        with open(os.path.join(file_path, imgSrc), "wb") as f:
+            f.write(content)
+            f.close()
+    response = urllib.request.urlopen(url)
+    web_content = response.read().decode('UTF-8')
+    with open(os.path.join(file_path, file_name), "w") as f:
+        f.write(web_content)
+        f.close()
