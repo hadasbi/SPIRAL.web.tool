@@ -11,8 +11,8 @@ def dataset_number(path):
     return new_n
 
 
-ANALYSIS_FOLDER = '.\\static\\analysis'
-STATIC_FOLDER = '.\\static'
+ANALYSIS_FOLDER = './static/analysis'
+STATIC_FOLDER = './static'
 
 if __name__ == '__main__':
     print("#############################################################################")
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     os.mkdir(data_path)
 
     # save dataset name
-    print("What is you dataset name?")
+    print("What is your dataset name?")
 
     dataset_name = input()
     with open(os.path.join(data_path, 'dataset_name.txt'), 'w') as text_file:

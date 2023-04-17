@@ -147,11 +147,16 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
     # save to file
     vln_plot_filename = vln_plot_filename_(static_path=static_path, data_n=data_n)
     plt.tight_layout()
+    plt.savefig(vln_plot_filename)
+    plt.close()
     if local_run:
         print("Violin plot will open soon.")
         print("Try to include most of your data and exclude the outliers in both ends.")
         print("Explanation: Cells with very few expressed genes may be raptured cells, while cells with a lot of "
               "expressed genes may be doublets")
+        fig, axs = plt.subplots(1, 1, figsize=(5, 5))
+        axs.set_title("number of expressed genes")
+        sns.violinplot(y="number of expressed genes", data=summary, ax=axs)
         plt.show()
 
         # save max_nFeatures
@@ -163,9 +168,6 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
         min_nFeatures = input("Insert minimal number of expressed genes:")
         with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
             text_file.write(str(min_nFeatures))
-
-    plt.savefig(vln_plot_filename)
-    plt.close()
 
     # save violin plot of percent of mitochondrial genes
     MTgenes, error = get_MTgenes(data_path, list(data.index), species)
@@ -183,10 +185,15 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
         # save to file
         vln_plot_mt_filename = vln_plot_mt_filename_(static_path=static_path, data_n=data_n)
         plt.tight_layout()
+        plt.savefig(vln_plot_mt_filename)
+        plt.close()
 
         if local_run:
             print("Cells with large percentages of mitochondrial genes are likely to be cells that experienced cell "
                   "stress, and you might want to exclude them from the analysis.")
+            fig, axs = plt.subplots(1, 1, figsize=(5, 5))
+            axs.set_title("mitochondrial percent of reads")
+            sns.violinplot(y="mitochondrial percent of reads", data=summary, ax=axs)
             plt.show()
 
             # save max_mtpercent
@@ -194,9 +201,6 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
             if max_mtpercent is not None:
                 with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
                     text_file.write(str(max_mtpercent))
-
-        plt.savefig(vln_plot_mt_filename)
-        plt.close()
 
     return with_mt, error
 
