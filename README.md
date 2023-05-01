@@ -6,7 +6,7 @@ identifying the subset of genes involved and the subset of cells, spots or sampl
 SPIRAL is available as a web interface at https://spiral.technion.ac.il/ (currently only available in the Technion).
 You can also run SPIRAL locally by downloading the repository, and then run SPIRAL_local_run.py.
 
-## How to easy run the SPIRAL algorithm on your data locally
+## How to run the SPIRAL algorithm on your data locally
 To execute the SPIRAL algorithm on your data locally, bypassing the need to utilize the webtool, simply employ the SPIRAL_Local_run.py script. 
 This convenient tool facilitates running the algorithm directly on your local data.
 
