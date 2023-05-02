@@ -1,19 +1,15 @@
 #!/home/yaellab/SPIRAL/bin/python3.8
 
 import os.path
-import pandas as pd
-import numpy as np
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import normalize
-import matplotlib.pyplot as plt
 import pickle5 as pickle
 import networkx as nx
-from networkx.algorithms import bipartite
 import umap.umap_ as umap
 from numpy import savetxt, loadtxt
 from SPIRAL_basic_funcs import *
 import itertools
-
+import matplotlib.pyplot as plt
+import matplotlib
+import importlib
 
 ####################################################################################################################
 def visualize_repcell_partition(clustering_file_final,
@@ -664,12 +660,13 @@ def save_struct_layout(cell_table, picfile, cell_definitions_sorted_set, curr_co
                        num_arrows_per_cell=None, with_legend=False):
     # cell_table has the columns "levels" and "cell_definitions".
     # Its indices are the indices of the rows in coors that will be visualized.
-    plt.rc('xtick', labelsize=18)
-    plt.rc('ytick', labelsize=18)
+
+    matplotlib.pyplot.rc('xtick', labelsize=18)
+    matplotlib.pyplot.rc('ytick', labelsize=18)
 
     marker_size = get_marker_size(num_points=coor.shape[0], numerical_shapes=numerical_shapes)
 
-    fig, ax = plt.subplots(figsize=(15, 15))
+    fig, ax = matplotlib.pyplot.subplots(figsize=(15, 15))
     hs = []
     labels = []
     for level, color in zip(sorted(set(cell_table['levels'])), curr_colors):
@@ -712,9 +709,9 @@ def save_struct_layout(cell_table, picfile, cell_definitions_sorted_set, curr_co
     if with_legend:
         ax.legend(hs, labels, prop={'size': 22})
 
-    plt.tight_layout()
-    plt.savefig(picfile)
-    plt.close()
+    matplotlib.pyplot.tight_layout()
+    matplotlib.pyplot.savefig(picfile)
+    matplotlib.pyplot.close()
 
 
 ####################################################################################################################
@@ -922,6 +919,11 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
         curr_data = repcells_data
 
     for i in sigtable.index:
+        # reloading matplotlib once in a while solves the following issue in Windows:
+        # after several iterations the error "failed to allocate bitmap" appears
+        importlib.reload(matplotlib)
+        matplotlib.use('Agg')
+
         # For every structure, save a figure and a link to the figure
         print('structure ' + str(i))
         sets_in_struct = sigtable.loc[i, samp_name + '_pairs']

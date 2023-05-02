@@ -3,7 +3,6 @@
 import sys
 import os.path
 import seaborn as sns
-from scipy.stats import pearsonr, norm
 from scipy import sparse
 from time import time
 import pickle5 as pickle
@@ -13,7 +12,7 @@ import multiprocessing as mp
 import SPIRAL_mp_funcs
 from shutil import copyfile
 from requests.exceptions import ConnectionError
-import csv
+import matplotlib.pyplot as plt
 from zipfile import ZipFile
 
 from SPIRAL_basic_funcs import *
@@ -474,10 +473,9 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                                     path_len=path_len, num_iters=num_iters)
 
                     if not os.path.exists(structs_file):
-                        if use_mp_to_find_structs:
-                            structs = find_structures(genes_in_sets_npz_file=genes_in_sets_csr_file, mu=mu,
-                                                      structs_file=structs_file, num_iters=num_iters, path_len=path_len,
-                                                      use_mp_to_find_structs=use_mp_to_find_structs)
+                        structs = find_structures(genes_in_sets_npz_file=genes_in_sets_csr_file, mu=mu,
+                                                  structs_file=structs_file, num_iters=num_iters, path_len=path_len,
+                                                  use_mp_to_find_structs=use_mp_to_find_structs)
 
                     # check if a significance table file already exists (if not, compute it)
                     sigfile = sig_filename(data_path=data_path, impute_method=impute_method,
@@ -832,8 +830,10 @@ def create_imputed_file(clustering_file_final, repcells_data_loc,
 
 ####################################################################################################################
 def compute_sets_on_standardized_genes(genetable_file,
-                                       genes_in_sets_coo_file, genes_in_sets_csc_file, genes_in_sets_csr_file,
-                                       genes_in_sets_row_file, genes_in_sets_col_file,
+                                       genes_in_sets_row_file=None, genes_in_sets_col_file=None,
+                                       save_genes_in_sets_row_col_files=False,
+                                       genes_in_sets_coo_file=None, genes_in_sets_csc_file=None, genes_in_sets_csr_file=None,
+                                       save_csr=True, save_coo=False, save_csc=False,
                                        counts=None, counts_file=None, num_stds_thresh=1):
     print('compute_sets_on_standardized_genes!')
 
@@ -907,29 +907,47 @@ def compute_sets_on_standardized_genes(genetable_file,
     genes_in_sets_row = genes_in_sets_row[:iter_ind]
     genes_in_sets_col = genes_in_sets_col[:iter_ind]
 
-    # save the row and col indices
-    json.dump(genes_in_sets_row.tolist(), codecs.open(genes_in_sets_row_file, 'w', encoding='utf-8'),
-              separators=(',', ':'), sort_keys=True, indent=4)
-    json.dump(genes_in_sets_col.tolist(), codecs.open(genes_in_sets_col_file, 'w', encoding='utf-8'),
-              separators=(',', ':'), sort_keys=True, indent=4)
+    if save_genes_in_sets_row_col_files:
+        # save the row and col indices
+        if genes_in_sets_row_file is not None:
+            json.dump(genes_in_sets_row.tolist(), codecs.open(genes_in_sets_row_file, 'w', encoding='utf-8'),
+                      separators=(',', ':'), sort_keys=True, indent=4)
+        else:
+            print('No genes_in_sets_row_file')
+        if genes_in_sets_col_file is not None:
+            json.dump(genes_in_sets_col.tolist(), codecs.open(genes_in_sets_col_file, 'w', encoding='utf-8'),
+                      separators=(',', ':'), sort_keys=True, indent=4)
+        else:
+            print('No genes_in_sets_col_file')
 
     genes_in_sets = sparse.coo_matrix((np.ones_like(genes_in_sets_row), (genes_in_sets_row, genes_in_sets_col)),
                                       shape=(num_genes, num_samples * num_samples))
 
-    # save coo_mat to file
-    sparse.save_npz(genes_in_sets_coo_file, genes_in_sets)
+    if save_coo:
+        if genes_in_sets_coo_file is not None:
+            # save coo_mat to file
+            sparse.save_npz(genes_in_sets_coo_file, genes_in_sets)
+        else:
+            print('No coo file name')
 
-    # save csc_mat to file
-    sparse.save_npz(genes_in_sets_csc_file, genes_in_sets.tocsc())
+    if save_csc:
+        if genes_in_sets_csc_file is not None:
+            # save csc_mat to file
+            sparse.save_npz(genes_in_sets_csc_file, genes_in_sets.tocsc())
+        else:
+            print('No csc file name')
 
-    # save csr_mat to file
-    sparse.save_npz(genes_in_sets_csr_file, genes_in_sets.tocsr())
+    if save_csr:
+        if genes_in_sets_csr_file is not None:
+            # save csr_mat to file
+            sparse.save_npz(genes_in_sets_csr_file, genes_in_sets.tocsr())
+        else:
+            print('No csr file name')
 
-    t = time() - start
-
-    num_sets = num_samples * (num_samples - 1)
-
-    avg_num_of_genes_per_set = np.absolute(genes_in_sets).sum() / num_sets
+    #t = time() - start
+    #num_sets = num_samples * (num_samples - 1)
+    #avg_num_of_genes_per_set = np.absolute(genes_in_sets).sum() / num_sets
+    return None
 
 
 ####################################################################################################################
