@@ -6,7 +6,7 @@ import numpy as np
 from scipy.stats import kendalltau, spearmanr, pearsonr, norm
 from time import time, sleep
 from datetime import datetime
-import pickle
+import pickle5 as pickle
 import mechanicalsoup
 import gseapy
 from gseapy.parser import Biomart
