@@ -54,7 +54,7 @@ if __name__ == '__main__':
         print("choose a species for the following options:")
         for index, val in enumerate(list(species.values())):
             print("{} for {}".format(index + 1, val))
-        chosen_index = int(input())
+        chosen_index = int(input()) - 1
         if 1 <= chosen_index <= len(species):
             chosen_species = list(species)[chosen_index]
 
