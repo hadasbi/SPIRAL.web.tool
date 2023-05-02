@@ -129,7 +129,7 @@ if __name__ == '__main__':
     run_SPIRAL_pipeline(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, species=species,
                         min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
                         numerical_shapes=False,
-                        num_stds_thresh_lst=[0.5, 0.75, 1.0], mu_lst=[0.95], num_iters_lst=[10000],
+                        num_stds_thresh_lst=[0.5, 0.75, 1.0], mu_lst=[0.9, 0.95], num_iters_lst=[10000],
                         path_len_lst=[3])
 
     print("Results are available in this folder:{}".format(data_path))

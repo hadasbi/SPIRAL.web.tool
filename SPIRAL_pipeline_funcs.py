@@ -154,20 +154,38 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
         print("Try to include most of your data and exclude the outliers in both ends.")
         print("Explanation: Cells with very few expressed genes may be raptured cells, while cells with a lot of "
               "expressed genes may be doublets")
+        print('Decide on the minimal and maximal numbers of expressed genes, and press enter to close the figure and '
+              'proceed. The figure is also saved at ./static/vln_data' + str(data_n) + '.jpg')
+
         fig, axs = plt.subplots(1, 1, figsize=(5, 5))
         axs.set_title("number of expressed genes")
         sns.violinplot(y="number of expressed genes", data=summary, ax=axs)
-        plt.show()
+        plt.show(block=False)
+        plt.pause(1)
+        input()
+        plt.close()
+
+        # save min_nFeatures
+        min_nFeatures = input("Insert minimal number of expressed genes:")
+        with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
+            text_file.write(str(min_nFeatures))
 
         # save max_nFeatures
         max_nFeatures = input("Insert maximal number of expressed genes:")
         with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
             text_file.write(str(max_nFeatures))
 
-        # save min_nFeatures
-        min_nFeatures = input("Insert minimal number of expressed genes:")
-        with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
-            text_file.write(str(min_nFeatures))
+        while max_nFeatures <= min_nFeatures:
+            print('The minimal number of expressed genes has to be lower than the maximal number of expressed genes!')
+            # save min_nFeatures
+            min_nFeatures = input("Insert minimal number of expressed genes:")
+            with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
+                text_file.write(str(min_nFeatures))
+
+            # save max_nFeatures
+            max_nFeatures = input("Insert maximal number of expressed genes:")
+            with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
+                text_file.write(str(max_nFeatures))
 
     # save violin plot of percent of mitochondrial genes
     MTgenes, error = get_MTgenes(data_path, list(data.index), species)
@@ -191,10 +209,16 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
         if local_run:
             print("Cells with large percentages of mitochondrial genes are likely to be cells that experienced cell "
                   "stress, and you might want to exclude them from the analysis.")
+            print(
+                'Decide on the maximal mitochondrial percent, and press enter to close the figure and proceed.'
+                ' The figure is also saved at ./static/vln_mt_data' + str(data_n) + '.jpg')
             fig, axs = plt.subplots(1, 1, figsize=(5, 5))
             axs.set_title("mitochondrial percent of reads")
             sns.violinplot(y="mitochondrial percent of reads", data=summary, ax=axs)
-            plt.show()
+            plt.show(block=False)
+            plt.pause(1)
+            input()
+            plt.close()
 
             # save max_mtpercent
             max_mtpercent = input("Insert percent of mitochondrial gene expression:")
