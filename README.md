@@ -64,4 +64,4 @@ Step-by-step explanation (for Windows and linux):
     deactivate
     ```
 
-Please contact us by [email](hadas.biran@campus.technion.ac.il) if you have any questions.
+Please contact us by [email](mailto:hadas.biran@campus.technion.ac.il) if you have any questions.
