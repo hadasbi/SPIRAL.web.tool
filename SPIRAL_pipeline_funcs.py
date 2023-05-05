@@ -5,7 +5,7 @@ import os.path
 import seaborn as sns
 from scipy import sparse
 from time import time
-import pickle5 as pickle
+import pickle
 import json
 import codecs
 import multiprocessing as mp

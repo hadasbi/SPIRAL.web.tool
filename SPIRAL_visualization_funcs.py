@@ -1,7 +1,7 @@
 #!/home/yaellab/SPIRAL/bin/python3.8
 
 import os.path
-import pickle5 as pickle
+import pickle
 import networkx as nx
 import umap.umap_ as umap
 from numpy import savetxt, loadtxt
