@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
     # labels checkbox
     print("Does your data set has labels?")
-    labels_checkbox = input('press 1 if it has labels, anything else otherwise.') != 1
+    labels_checkbox = input('press 1 if it has labels, anything else otherwise.') != '1'
     with open(os.path.join(data_path, 'labels_checkbox.txt'), 'w') as text_file:
         text_file.write(str(labels_checkbox))
 
