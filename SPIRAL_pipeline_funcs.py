@@ -174,7 +174,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
         with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
             text_file.write(str(max_nFeatures))
 
-        while max_nFeatures <= min_nFeatures:
+        while int(max_nFeatures) <= int(min_nFeatures):
             print('The minimal number of expressed genes has to be lower than the maximal number of expressed genes!')
             # save min_nFeatures
             min_nFeatures = input("Insert minimal number of expressed genes:")
@@ -444,7 +444,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         genes_in_sets_col_file = os.path.join(data_path,
                                               impute_method + '_std_' + str(num_stds_thresh) + '_genes_in_sets_col.npz')
 
-        if not os.path.exists(genes_in_sets_coo_file):
+        if not os.path.exists(genes_in_sets_csr_file):
             if impute_method != 'no_imputation':
                 compute_sets_on_standardized_genes(genetable_file=genetable_file,
                                                    genes_in_sets_coo_file=genes_in_sets_coo_file,
