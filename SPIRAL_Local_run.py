@@ -55,7 +55,7 @@ if __name__ == '__main__':
         for index, val in enumerate(list(species.values())):
             print("{} for {}".format(index + 1, val))
         chosen_index = int(input()) - 1
-        if 1 <= chosen_index <= len(species):
+        if 0 <= chosen_index < len(species):
             chosen_species = list(species)[chosen_index]
 
     with open(os.path.join(data_path, 'species.txt'), 'w') as text_file:
@@ -69,7 +69,7 @@ if __name__ == '__main__':
         for index, val in enumerate(samples_names):
             print("{} for {}".format(index + 1, val))
         chosen_index = int(input()) - 1
-        if 1 <= chosen_index <= len(samples_names):
+        if 0 <= chosen_index < len(samples_names):
             chosen_samples_names = samples_names[chosen_index]
 
     with open(os.path.join(data_path, 'samp_name.txt'), 'w') as text_file:

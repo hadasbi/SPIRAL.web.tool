@@ -231,7 +231,8 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
 ####################################################################################################################
 def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                         min_nFeatures=None, max_nFeatures=None, max_mtpercent=None, numerical_shapes=None,
-                        num_stds_thresh_lst=[0.5, 1], mu_lst=[0.95], num_iters_lst=[10000], path_len_lst=[3]):
+                        num_stds_thresh_lst=[0.5, 1], mu_lst=[0.95], num_iters_lst=[10000], path_len_lst=[3],
+                        save_layers_to_excel=False):
     # impute_method options: 'agg_wald', 'IaconoClus_dim50', 'IaconoClus', 'agg_wald_opt'
 
     print('run_SPIRAL_pipeline!')
@@ -588,7 +589,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                             save_GPCAs_repcells=(impute_method != 'no_imputation'),
                                             save_spatial=spatial, save_Gspatial=spatial,
                                             with_legend=True, real_samp_name=real_samp_name,
-                                            numerical_shapes=numerical_shapes)
+                                            numerical_shapes=numerical_shapes,
+                                            save_layers_to_excel=save_layers_to_excel)
 
     # design excel file
     if os.path.exists(sigfile_vis):

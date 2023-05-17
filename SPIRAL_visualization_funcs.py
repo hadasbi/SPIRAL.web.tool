@@ -733,7 +733,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                          with_legend=True,
                          color_by_log_expression=False,
                          with_links_in_sigtable=False,
-                         real_samp_name='sample'):
+                         real_samp_name='sample',
+                         save_layers_to_excel=False):
     print('visualize_structures!')
 
     if sigtable is None and sigtable_file is None:
@@ -1042,6 +1043,9 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
             # print('G.nodes:', G.nodes)
 
             pos = compute_pos_for_network_layout()
+
+            if save_layers_to_excel:
+                sigtable.loc[i, 'layers'] = str([s for s in list_of_nodes_in_levels if len(s) != 0])
 
             if save_network_layouts:
                 fig, ax = plt.subplots(figsize=(15, 15))
