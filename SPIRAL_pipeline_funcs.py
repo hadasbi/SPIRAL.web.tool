@@ -232,7 +232,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
 def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                         min_nFeatures=None, max_nFeatures=None, max_mtpercent=None, numerical_shapes=None,
                         num_stds_thresh_lst=[0.5, 1], mu_lst=[0.95], num_iters_lst=[10000], path_len_lst=[3],
-                        save_layers_to_excel=False):
+                        save_layers_to_excel=False, max_nrepcells=100):
     # impute_method options: 'agg_wald', 'IaconoClus_dim50', 'IaconoClus', 'agg_wald_opt'
 
     print('run_SPIRAL_pipeline!')
@@ -303,12 +303,12 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         data = pd.read_csv(data_norm_filt_loc, index_col=0, sep='\t')
 
     # decide on an imputation method
-    if data.shape[1] < 200:
+    if data.shape[1] <= max_nrepcells:
         impute_method = 'no_imputation'
     else:
         impute_method = 'agg_wald'
 
-    min_cells_per_cluster = min(10, max(int(np.round(data.shape[1] / 100)), 1))
+    min_cells_per_cluster = min(10, max(int(np.round(data.shape[1] / max_nrepcells / 2)), 1))
 
     with open(os.path.join(data_path, 'imputation_method.txt'), 'w') as text_file:
         text_file.write(impute_method)
@@ -346,6 +346,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     if impute_method != 'no_imputation' and not os.path.exists(clustering_file_final):
         compute_repcells(data=data, impute_method=impute_method,
                          min_cells_per_cluster=min_cells_per_cluster,
+                         max_nrepcells=max_nrepcells,
                          data_norm_filt_loc=data_norm_filt_loc,
                          clustering_file_initial=clustering_file_initial,
                          clustering_file_final=clustering_file_final)
@@ -716,7 +717,7 @@ def find_opt_n_clusters(orig_scRNA_data, min_cells_per_cluster, max_lost_percent
 
 ####################################################################################################################
 def compute_repcells(clustering_file_initial, clustering_file_final, data=None, impute_method='agg_wald',
-                     min_cells_per_cluster=10, data_norm_filt_loc=None):
+                     min_cells_per_cluster=10, max_nrepcells=100, data_norm_filt_loc=None):
     # impute_method: 'agg_wald' OR 'agg_wald_opt' OR 'no_imputation'
     # not maintained: 'IaconoClus' OR 'IaconoClus_median' OR 'IaconoClus_dim50' OR 'IaconoClus_dim50_median'
     print('\ncompute_repcells!\n')
@@ -739,11 +740,13 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
         if impute_method == 'agg_wald_opt':
             n_clusters = find_opt_n_clusters(data, min_cells_per_cluster)
         elif impute_method == 'agg_wald':
-            if num_cells >= 1000:
-                n_clusters = min(100, int(np.round(num_cells / 30)))
-            else:
-                n_clusters = int(np.round(num_cells / 20))
-                min_cells_per_cluster = 5
+            n_clusters = max_nrepcells
+            # former version:
+            #if num_cells >= 1000:
+            #    n_clusters = min(100, int(np.round(num_cells / 30)))
+            #else:
+            #    n_clusters = int(np.round(num_cells / 20))
+            #    min_cells_per_cluster = 5
         print('aiming for', n_clusters, 'clusters')
         print('averagely', np.round(num_cells / n_clusters, 1), 'cells per cluster')
 
