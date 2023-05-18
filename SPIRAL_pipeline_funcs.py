@@ -308,7 +308,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     else:
         impute_method = 'agg_wald'
 
-    min_cells_per_cluster = min(10, max(int(np.round(data.shape[1] / max_nrepcells / 2)), 1))
+    min_cells_per_cluster = min(10, max(int(np.floor(data.shape[1] / max_nrepcells / 2)), 1))
 
     with open(os.path.join(data_path, 'imputation_method.txt'), 'w') as text_file:
         text_file.write(impute_method)
