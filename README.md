@@ -32,6 +32,10 @@ Step-by-step explanation (for Windows and linux):
     ```
 4. Create a virtual environment:
     ```sh 
+    python -m venv spiral_venv
+    ```
+    or:
+    ```sh 
     python3 -m venv spiral_venv
     ```
 5. Activate the virtual environment.
