@@ -20,7 +20,8 @@ import urllib.parse
 def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species,
                  sigtable=None, sigtable_file=None,
                  impute_method='agg_wald', start_from_scratch=False,
-                 pvals=[0.000001, 0.0000001], real_samp_name='sample'
+                 pvals=[0.000001, 0.0000001], real_samp_name='sample',
+                 save_GO_htmls=False
                  # log10_pavg_of_genes_thr=-10
                  ):
     print('add_GO_terms!')
@@ -155,22 +156,33 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
                                                  'GOResultsCOMPONENT.html']):
             new_link3 = new_link2[:ind + 1] + ontology_html
             # print('new_link3', ontology_init, ':', new_link3)
-            """
-            # To save the links locally, please uncomment the following section. All links will be saved in the 'links' 
-            # directory within the same data path. You'll then need to manually move those files to the 
-            # 'templates/go/{datapath}/' directory."
-            if not os.path.exists(data_path + "/links/"):
-                os.makedirs(data_path + "/links/")
-            if not os.path.exists(data_path + "/links/" + str(i)):
-                os.makedirs(data_path + "/links/" + str(i))
-            save_to_file(url=new_link3, file_path=os.path.join(data_path, "links", str(i)), file_name=ontology_html, 
-            browser=browser)
-            new_link3 = 'https://spiral.technion.ac.il/results/{}/{}/{}'.format(data_n_to_url(data_n=data_path[-1]), 
-                                                                                str(i), 
-                                                                                ontology_html.replace('.html', ''))
-            """
-            hyperlink_txt = '=hyperlink("' + new_link3 + '","link")'
-            # print(hyperlink_txt)
+
+            if save_GO_htmls:
+                # htmls will be saved in '{data_path}/templates_go/data{data_n}'. You'll then need to manually move the
+                # folder 'data{data_n}' to 'templates/go/data{data_n}/'
+                # images will be saved at '{data_path}/go/' and this is their final location.
+                if not os.path.exists(data_path + "/go/"):
+                    os.makedirs(data_path + "/go/")
+                if not os.path.exists(data_path + "/go/" + str(i)):
+                    os.makedirs(data_path + "/go/" + str(i))
+                if not os.path.exists(data_path + "/templates_go/"):
+                    os.makedirs(data_path + "/templates_go/")
+                fold = os.path.basename(os.path.normpath(data_path))
+                if not os.path.exists(data_path + "/templates_go/" + fold + "/"):
+                    os.makedirs(data_path + "/templates_go/" + fold + "/")
+                if not os.path.exists(data_path + "/templates_go/" + fold + "/" + str(i)):
+                    os.makedirs(data_path + "/templates_go/" + fold + "/" + str(i))
+                save_to_file(url=new_link3, html_file_path=os.path.join(data_path, "templates_go", fold, str(i)),
+                             images_file_path=os.path.join(data_path, "go", str(i)),
+                             file_name=ontology_html, browser=browser)
+                saved_GO_link = 'https://spiral.technion.ac.il/results/{}/{}/{}'.format(
+                    data_n_to_url(data_n=data_path[data_path.find("data") + 4:]), str(i),
+                    ontology_html.replace('.html', ''))
+                hyperlink_txt = '=hyperlink("' + saved_GO_link + '","link")'
+            else:
+                hyperlink_txt = '=hyperlink("' + new_link3 + '","link")'
+                # print(hyperlink_txt)
+
             sigtable.loc[i, ontology_init + '_link'] = hyperlink_txt
 
             try:
@@ -209,7 +221,7 @@ def add_GO_terms(sigfile_GO, sigfile_GO_temp, genetable_file, data_path, species
 ####################################################################################################################
 
 
-def save_to_file(url, file_path, file_name, browser):
+def save_to_file(url, html_file_path, images_file_path, file_name, browser):
     """
     Saves a webpage and its images to a file on the local file system.
 
@@ -226,11 +238,11 @@ def save_to_file(url, file_path, file_name, browser):
         imgUrl = re.sub(r'[a-zA-Z]*.html$', imgSrc, url)
         response = urllib.request.urlopen(imgUrl)
         content = response.read()
-        with open(os.path.join(file_path, imgSrc), "wb") as f:
+        with open(os.path.join(images_file_path, imgSrc), "wb") as f:
             f.write(content)
             f.close()
     response = urllib.request.urlopen(url)
     web_content = response.read().decode('UTF-8')
-    with open(os.path.join(file_path, file_name), "w") as f:
+    with open(os.path.join(html_file_path, file_name), "w") as f:
         f.write(web_content)
         f.close()

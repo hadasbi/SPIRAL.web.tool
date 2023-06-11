@@ -196,8 +196,12 @@ def sig_filename(data_path, impute_method, num_stds_thresh, mu, path_len, num_it
 
 
 ####################################################################################################################
-def final_sig_filename(data_path, impute_method):
-    return os.path.join(data_path, impute_method + '_sigtable_filt_GO_vis.xlsx')
+def final_sig_filename(data_path):
+    dataset_name = open(os.path.join(data_path, 'dataset_name.txt'), "r").read()
+    d = ''.join(e for e in dataset_name if e.isalnum() or e == " ")
+    d = d.replace(' ', '_')
+    d = d[:100]
+    return os.path.join(data_path, "SPIRAL_" + d + '.xlsx')
 
 
 ####################################################################################################################

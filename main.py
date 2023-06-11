@@ -607,7 +607,7 @@ def pic_names_and_GO_terms():
         struct_pics = ['/' + os.path.join(pic_path, file).replace('\\', '/') for file in struct_pics]
 
     # get GO enrichment terms
-    sigfile = final_sig_filename(data_path, impute_method)
+    sigfile = final_sig_filename(data_path)
     sigtable = load_excel_with_openpyxl_and_convert_to_pd_DataFrame(sigfile)
     if ('proc_GOterms_below_1e-06' in list(sigtable)) and ('func_GOterms_below_1e-06' in list(sigtable)) and (
             'comp_GOterms_below_1e-06' in list(sigtable)):
@@ -640,8 +640,7 @@ def pic_names_and_GO_terms():
 @app.route('/results/result_table_<data_n>', methods=['GET', 'POST'])
 def download_sigfile(data_n):
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
-    impute_method = open(os.path.join(data_path, 'imputation_method.txt'), "r").read()
-    sigfile = os.path.basename(final_sig_filename(data_path, impute_method))
+    sigfile = os.path.basename(final_sig_filename(data_path))
     return send_from_directory(data_path, sigfile)
 
 

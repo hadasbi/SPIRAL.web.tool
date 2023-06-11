@@ -232,7 +232,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
 def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                         min_nFeatures=None, max_nFeatures=None, max_mtpercent=None, numerical_shapes=None,
                         num_stds_thresh_lst=[0.5, 1], mu_lst=[0.95], num_iters_lst=[10000], path_len_lst=[3],
-                        save_layers_to_excel=False, max_nrepcells=100):
+                        save_layers_to_excel=False, max_nrepcells=100, save_GO_htmls=False):
     # impute_method options: 'agg_wald', 'IaconoClus_dim50', 'IaconoClus', 'agg_wald_opt'
 
     print('run_SPIRAL_pipeline!')
@@ -535,7 +535,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                            genetable_file=genetable_file, data_path=data_path,
                                            species=species,
                                            impute_method=impute_method, start_from_scratch=False,
-                                           pvals=[0.000001], real_samp_name=real_samp_name)
+                                           pvals=[0.001], real_samp_name=real_samp_name,
+                                           save_GO_htmls=save_GO_htmls)
             else:
                 copyfile(sigfile_filt, sigfile_GO)
                 sigtable_GO = sigtable_filt
@@ -558,7 +559,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         text_file.write(str(GO_flag))
 
     # visualize structures
-    sigfile_vis = final_sig_filename(data_path, impute_method)
+    sigfile_vis = final_sig_filename(data_path)
     picfolder = pic_folder(data_path)
 
     if os.path.exists(sigfile_GO) and (not os.path.exists(sigfile_vis)):
