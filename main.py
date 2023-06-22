@@ -1,4 +1,4 @@
-#!/var/www/html/SPIRAL/spiral_venv/bin/python3.9
+#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
 
 import urllib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup

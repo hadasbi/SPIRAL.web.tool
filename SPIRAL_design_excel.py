@@ -1,4 +1,4 @@
-#!/var/www/html/SPIRAL/spiral_venv/bin/python3.9
+#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
 
 from openpyxl.styles import Color, PatternFill, Font, Border
 from openpyxl.formatting.rule import ColorScaleRule, CellIsRule, FormulaRule
