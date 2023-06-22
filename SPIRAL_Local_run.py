@@ -1,5 +1,6 @@
-from SPIRAL_pipeline_funcs import *
+#!/var/www/html/SPIRAL/spiral_venv/bin/python3.9
 
+from SPIRAL_pipeline_funcs import *
 
 def dataset_number(path):
     existing_folders = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]

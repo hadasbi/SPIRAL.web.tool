@@ -1,4 +1,4 @@
-#!/home/yaellab/SPIRAL/bin/python3.8
+#!/var/www/html/SPIRAL/spiral_venv/bin/python3.9
 
 from SPIRAL_pipeline_funcs import *
 

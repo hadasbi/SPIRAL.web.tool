@@ -1,9 +1,8 @@
-#!/home/yaellab/SPIRAL/bin/python3.8
+#!/var/www/html/SPIRAL/spiral_venv/bin/python3.9
 
 import os.path
 import pandas as pd
 import numpy as np
-from scipy.stats import kendalltau, spearmanr, pearsonr, norm
 from time import time, sleep
 from datetime import datetime
 import pickle

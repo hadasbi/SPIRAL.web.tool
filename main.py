@@ -1,4 +1,4 @@
-#!/home/yaellab/SPIRAL/bin/python3.9
+#!/var/www/html/SPIRAL/spiral_venv/bin/python3.9
 
 import urllib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup
@@ -20,7 +20,7 @@ import socket
 
 # get hostname.
 hostname = socket.gethostname()
-if hostname == 'bi-fiona':  # production (linux)
+if hostname in ['bi-fiona', 'Kion']:  # production (linux)
     production = True
 else:
     production = False  # development (Windows)

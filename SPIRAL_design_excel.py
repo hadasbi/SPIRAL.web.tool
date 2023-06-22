@@ -1,6 +1,5 @@
-#!/home/yaellab/SPIRAL/bin/python3.8
+#!/var/www/html/SPIRAL/spiral_venv/bin/python3.9
 
-import numpy as np
 from openpyxl.styles import Color, PatternFill, Font, Border
 from openpyxl.formatting.rule import ColorScaleRule, CellIsRule, FormulaRule
 import string
