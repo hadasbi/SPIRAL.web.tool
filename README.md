@@ -12,7 +12,7 @@ This convenient tool facilitates running the algorithm directly on your local da
 
 Step-by-step explanation (for Windows and linux):
 
-1. SPIRAL requires Python>=3.9, so verify you version of Python:
+1. SPIRAL requires Python>=3.9, so verify your version of Python:
     ```sh 
     python --version
     ```
