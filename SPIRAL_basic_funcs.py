@@ -16,7 +16,7 @@ import tables as tb
 import re
 import os
 import openpyxl
-from gseapy.parser import Biomart
+from gseapy import Biomart
 import glob
 from time import sleep, time
 import base64

@@ -1,14 +1,9 @@
 #!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
 
 import os.path
-import pandas as pd
-import numpy as np
-from time import time, sleep
 from datetime import datetime
 import pickle
 import mechanicalsoup
-import gseapy
-from gseapy.parser import Biomart
 from SPIRAL_basic_funcs import *
 import urllib.request
 import urllib.error

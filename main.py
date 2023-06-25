@@ -8,7 +8,7 @@ from wtforms import StringField, IntegerField, SubmitField, SelectField, SelectM
     ValidationError, BooleanField
 from wtforms.validators import DataRequired, Email, NumberRange, EqualTo
 from flask_wtf.file import FileField, FileRequired, FileAllowed
-from flask_uploads import UploadSet, configure_uploads, patch_request_class, IMAGES
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 from flask_mail import Mail, Message
 
 from SPIRAL_pipeline_funcs import *
@@ -26,7 +26,10 @@ else:
     production = False  # development (Windows)
 
 if production:
-    app = Flask(__name__, static_folder='/home/yaellab/SPIRAL/static')
+    if hostname == 'bi-fiona':
+        app = Flask(__name__, static_folder='/home/yaellab/SPIRAL/static')
+    else:
+        app = Flask(__name__, static_folder='/var/www/html/SPIRAL.web.tool/static')
     app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
 else:
     app = Flask(__name__)
@@ -40,7 +43,10 @@ app.config['MAIL_USE_SSL'] = True
 
 # This is a special password for gmail from this app, as explained here https://stackoverflow.com/questions/72478573/how-to-send-an-email-using-python-after-googles-policy-update-on-not-allowing-j
 if production:
-    app.config['MAIL_PASSWORD'] = open('/home/yaellab/SPIRAL/mail_password.txt', 'r').read()
+    if hostname == 'bi-fiona':
+        app.config['MAIL_PASSWORD'] = open('/home/yaellab/SPIRAL/mail_password.txt', 'r').read()
+    else:
+        app.config['MAIL_PASSWORD'] = open('/var/www/html/SPIRAL.web.tool/mail_password.txt', 'r').read()
 else:
     app.config['MAIL_PASSWORD'] = open('./mail_password.txt', 'r').read()
 
@@ -52,7 +58,10 @@ ANALYSIS_FOLDER = os.path.join(app._static_folder, 'analysis')
 
 # Flask-WTF requires an encryption key - the string can be anything
 if production:
-    app.config['SECRET_KEY'] = open('/home/yaellab/SPIRAL/Flask-WTF_encription_key.txt', 'r').read()
+    if hostname == 'bi-fiona':
+        app.config['SECRET_KEY'] = open('/home/yaellab/SPIRAL/Flask-WTF_encription_key.txt', 'r').read()
+    else:
+        app.config['SECRET_KEY'] = open('/var/www/html/SPIRAL.web.tool/Flask-WTF_encription_key.txt', 'r').read()
 else:
     app.config['SECRET_KEY'] = open('./Flask-WTF_encription_key.txt', 'r').read()
 
@@ -68,8 +77,8 @@ matrix = UploadSet(name='matrix', extensions='mtx.gz')
 barcodes_features = UploadSet(name='barcodes', extensions='tsv.gz')
 configure_uploads(app, (tables, matrix, barcodes_features))
 
-patch_request_class(app, 1024 * 1024 * 1024)
-
+#patch_request_class(app, 1024 * 1024 * 1024)
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
 
 #############################   forms   ################################################
 def dataset_number(path):
