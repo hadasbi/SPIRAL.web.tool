@@ -17,8 +17,8 @@ if __name__ == '__main__':
             species = open(os.path.join(data_path, 'species.txt'), "r").read()
             load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
                                  with_log=False)
-            compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path='./static',
-                                 species=species)
+            #compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path='./static',
+            #                     species=species)
             outcome = run_SPIRAL_pipeline(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, species=None,
                                           min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
                                           numerical_shapes=numerical_shapes,
