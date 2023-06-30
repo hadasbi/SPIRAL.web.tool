@@ -14,6 +14,7 @@ from shutil import copyfile
 from requests.exceptions import ConnectionError
 import matplotlib.pyplot as plt
 from zipfile import ZipFile
+from scipy.stats import norm
 
 from SPIRAL_basic_funcs import *
 from SPIRAL_visualization_funcs import *
