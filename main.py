@@ -618,10 +618,15 @@ def pic_names_and_GO_terms():
     # get GO enrichment terms
     sigfile = final_sig_filename(data_path)
     sigtable = load_excel_with_openpyxl_and_convert_to_pd_DataFrame(sigfile)
-    if ('proc_GOterms_below_1e-06' in list(sigtable)) and ('func_GOterms_below_1e-06' in list(sigtable)) and (
-            'comp_GOterms_below_1e-06' in list(sigtable)):
+    proc_cols = [col for col in list(sigtable) if 'proc_GOterms_below' in col]
+    func_cols = [col for col in list(sigtable) if 'func_GOterms_below' in col]
+    comp_cols = [col for col in list(sigtable) if 'comp_GOterms_below' in col]
+    if len(proc_cols) >= 1 and len(func_cols) >= 1 and len(comp_cols) >= 1:
+        proc_col = proc_cols[0]
+        func_col = func_cols[0]
+        comp_col = comp_cols[0]
         GO_terms = []
-        for col in ['proc_GOterms_below_1e-06', 'func_GOterms_below_1e-06', 'comp_GOterms_below_1e-06']:
+        for col in [proc_col, func_col, comp_col]:
             if sigtable.loc[int(struct), col] == 'NO TERMS':
                 GO_terms.append('NO TERMS')
             else:
