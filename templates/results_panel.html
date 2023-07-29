@@ -18,7 +18,7 @@
       }, function(data) {
          $("#structure_layouts").empty();
         for (let i = 0; i < data.struct_pics.length; i++){
-               $("#structure_layouts").append("<img src=" + data.struct_pics[i] + " width=33%>");
+               $("#structure_layouts").append("<img src=" + data.struct_pics[i] + ' width=33% alt="visualization of structure">');
             }
 
         document.getElementById("gene_section").style.display = "block";
@@ -134,9 +134,14 @@
 
 {% extends 'base.html' %}
 
+{% block head %}
+<title>Result panel | SPIRAL</title>
+{% endblock %}
+
 {% block content %}
 <h1>SPIRAL results panel</h1>
-<h2>Data set: {{ dataset_name }}</h2>
+<p style="font-size:1.3vw">Data set: {{ dataset_name }}</p>
+<h2>Structure selection</h2>
 <div id="form_section" style="float:left; width: 45%;">
     <p style="display:inline-block;">Structure number: <select id="SelectStruct" name="SelectStruct">
         {% for item in struct_lst %}
@@ -161,7 +166,7 @@
 <div id="filter_structs_section"
      style="float:left; width: 50%; height: 190px; display: none; border:thin solid #A9A9A9; padding-left: 20px;
      padding-right: 20px; box-shadow: 0 0 0 10px #f3f5f6 inset; box-sizing: border-box;">
-    <h4>Structure filter panel: adjust the Jaccard index threshold of gene lists</h4>
+    <h2 style="font-size:1vw">Structure filter panel: adjust the Jaccard index threshold of gene lists</h2>
     <p>Lower threshold &#x2192; fewer structures, each more unique.
         <br>Higher threshold &#x2192; more structures (including somewhat overlapping), offer a complete overview of
         the
@@ -177,7 +182,7 @@
 <br>
 
 <div id="layouts_title" style="display: none; clear: left; margin-top: 20px">
-    <h3>Layouts:</h3>
+    <h2>Layouts:</h2>
 </div>
 <section id="structure_layouts" class="hidden">
     <ul class="results-img" alt="placeholder">
@@ -185,27 +190,27 @@
 
 <div id="gene_section" style="display: none; padding-buttom: 5px">
     <div style="float:left; width: 30%; height: 650px">
-        <h3>Genes (
+        <h2>Genes (
             <text id="num_genes_in_struct"></text>
             ):
-        </h3>
+        </h2>
         <div id="gene_list" style="overflow: scroll; width: 90%; height: 589px">
         </div>
     </div>
 
     {% if GO_flag %}
     <div style="float:left; width: 70%; height: 650px">
-        <h3>Enriched GO terms:</h3>
+        <h2>Enriched GO terms:</h2>
 
-        <p><u>GO biological process:</u></p>
+        <p>GO biological process:</p>
         <div id="enriched_GO_terms_process" style="overflow: scroll; width: 99%; height: 150px;">
         </div>
 
-        <p><u>GO molecular function:</u></p>
+        <p>GO molecular function:</p>
         <div id="enriched_GO_terms_function" style="overflow: scroll; width: 99%; height: 150px;">
         </div>
 
-        <p><u>GO cellular component:</u></p>
+        <p>GO cellular component:</p>
         <div id="enriched_GO_terms_component" style="overflow: scroll; width: 99%; height: 150px;">
         </div>
 

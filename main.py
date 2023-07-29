@@ -20,7 +20,7 @@ import socket
 
 # get hostname.
 hostname = socket.gethostname()
-if hostname in ['bi-fiona', 'Kion']:  # production (linux)
+if hostname in ['bi-fiona', 'Spin']:  # production (linux)
     production = True
 else:
     production = False  # development (Windows)
@@ -93,7 +93,7 @@ def dataset_number(path):
 
 class HomePage(FlaskForm):
     style = {
-        'style': 'background-color: #008B8B; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+        'style': 'background-color: #005959; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
     submit = SubmitField('Run SPIRAL on my data set', render_kw=style)
 
 
@@ -129,7 +129,7 @@ class LoadData(FlaskForm):
 
 class CheckData(FlaskForm):
     keep_going_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+        'style': 'background-color: #2a7d4f; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
     keep_going = SubmitField("Sounds about right, let's proceed", render_kw=keep_going_style)
     go_back_style = {
         'style': 'background-color: #800000; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
@@ -138,7 +138,7 @@ class CheckData(FlaskForm):
 
 class CheckFilteringParams(FlaskForm):
     keep_going_style = {
-        'style': 'background-color: #3CB371; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+        'style': 'background-color: #2a7d4f; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
     keep_going = SubmitField("Sounds good, next step please", render_kw=keep_going_style)
     go_back_style = {
         'style': 'background-color: #800000; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
@@ -146,16 +146,6 @@ class CheckFilteringParams(FlaskForm):
 
 
 class MoreThan(object):
-    """
-    Compares the values of two fields.
-
-    :param fieldname:
-        The name of the other field to compare to.
-    :param message:
-        Error message to raise in case of a validation error. Can be
-        interpolated with `%(other_label)s` and `%(other_name)s` to provide a
-        more helpful error.
-    """
 
     def __init__(self, fieldname, message=None):
         self.fieldname = fieldname
@@ -332,7 +322,7 @@ def download_spatial_coors(data_n):
     return send_from_directory(data_path, spatial_coors_file)
 
 
-@app.route('/run_SPIRAL_step1.5', methods=['POST', 'GET'])
+@app.route('/run_SPIRAL_step2', methods=['POST', 'GET'])
 def check_data_form():
     print('check_data_form!!!')
     data_n = request.args['data_n']
@@ -355,7 +345,7 @@ def check_data_form():
                            samp_name=samp_name)
 
 
-@app.route('/run_SPIRAL_step2', methods=['POST', 'GET'])
+@app.route('/run_SPIRAL_step3', methods=['POST', 'GET'])
 def violin_plots():
     print('violin_plots!!!')
     data_n = request.args['data_n']
@@ -414,7 +404,7 @@ def violin_plots():
                            with_mt=with_mt, mt_error=mt_error)
 
 
-@app.route('/run_SPIRAL_step2.5', methods=['POST', 'GET'])
+@app.route('/run_SPIRAL_step4', methods=['POST', 'GET'])
 def check_data_filtering_params():
     print('check_data_filtering_params!!!')
     data_n = request.args['data_n']
@@ -467,7 +457,7 @@ def check_data_filtering_params():
                            num_cells=num_cells, num_genes=num_genes, samp_name=samp_name)
 
 
-@app.route('/run_SPIRAL_step3', methods=['POST', 'GET'])
+@app.route('/run_SPIRAL_step5', methods=['POST', 'GET'])
 def alg_params():
     print('alg_params!!!')
     data_n = request.args['data_n']
