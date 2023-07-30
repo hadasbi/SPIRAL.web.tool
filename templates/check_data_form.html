@@ -12,10 +12,14 @@
 
 {% extends 'base.html' %}
 
+{% block head %}
+<title>Step 2 | SPIRAL</title>
+{% endblock %}
+
 {% block content %}
 <center><h1>Run SPIRAL!</h1></center>
 <div class="formdesign">
-    <h2>Concluding step 1/3: data loading...</h2>
+    <h2>Step 2/5: verify that the data was uploaded correctly</h2>
     <p>The count matrix was uploaded successfully. We found: </p>
     <p>{{ num_cells_orig }} {{ samp_name }} and {{ num_genes_orig }} genes.</p>
     <p>Then we removed {{ samp_name }} and genes with zero reads, and summed up repeating gene names, and were left

@@ -12,7 +12,7 @@ This convenient tool facilitates running the algorithm directly on your local da
 
 Step-by-step explanation (for Windows and linux):
 
-1. SPIRAL requires Python>=3.9, so verify your version of Python:
+1. SPIRAL requires Python>=3.10, so verify your version of Python:
     ```sh 
     python --version
     ```
@@ -20,7 +20,7 @@ Step-by-step explanation (for Windows and linux):
     ```sh 
     python3 --version
     ```
-    If your version of Python is lower than 3.9, follow the instructions at [https://www.python.org/downloads/](https://www.python.org/downloads/) to upgrade it.
+    If your version of Python is lower than 3.10, follow the instructions at [https://www.python.org/downloads/](https://www.python.org/downloads/) to upgrade it.
 
 2. In the terminal, navigate to where you want the repository to be saved and clone it:
     ```sh 

@@ -237,6 +237,10 @@ def save_to_file(url, html_file_path, images_file_path, file_name, browser):
             f.close()
     response = urllib.request.urlopen(url)
     web_content = response.read().decode('UTF-8')
+
+    # change location of image
+    img_tag = web_content.find("img", attrs={'src': imgSrc})
+    img_tag['src'] = "/" + images_file_path[images_file_path.find('static'):] + '/' + imgSrc
     with open(os.path.join(html_file_path, file_name), "w") as f:
         f.write(web_content)
         f.close()
