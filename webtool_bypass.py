@@ -1,10 +1,10 @@
-#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
+#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.10
 
 from SPIRAL_pipeline_funcs import *
 
 ANALYSIS_FOLDER = './static/analysis'
 if __name__ == '__main__':
-    for data_n in [7001]:
+    for data_n in [5001]:
         if os.path.isdir(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))):
             #try:
             print('\n\n\n\n\n\n\n', data_n)

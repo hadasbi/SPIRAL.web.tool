@@ -1,4 +1,4 @@
-#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
+#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.10
 
 import urllib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup
@@ -20,7 +20,7 @@ import socket
 
 # get hostname.
 hostname = socket.gethostname()
-if hostname in ['bi-fiona', 'Kion']:  # production (linux)
+if hostname in ['bi-fiona', 'Spin']:  # production (linux)
     production = True
 else:
     production = False  # development (Windows)
@@ -30,7 +30,9 @@ if production:
         app = Flask(__name__, static_folder='/home/yaellab/SPIRAL/static')
     else:
         app = Flask(__name__, static_folder='/var/www/html/SPIRAL.web.tool/static')
-    app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
+    #app.config['SERVER_NAME'] = 'spiral.technion.ac.il'
+    #app.config['SERVER_NAME'] = '4.227.224.198:5000'
+    app.config['SERVER_NAME'] = '4.227.224.198'
 else:
     app = Flask(__name__)
     app.config['SERVER_NAME'] = '132.69.236.238:5000'
@@ -770,4 +772,4 @@ def results_panel(url):
 
 ############################################################################################################
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', debug=True)
