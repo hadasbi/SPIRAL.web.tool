@@ -1,10 +1,15 @@
 #!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
 
+from numba.core.errors import NumbaDeprecationWarning, NumbaPendingDeprecationWarning
+import warnings
+warnings.simplefilter('ignore', category=NumbaDeprecationWarning)
+warnings.simplefilter('ignore', category=NumbaPendingDeprecationWarning)
+
 from SPIRAL_pipeline_funcs import *
 
 ANALYSIS_FOLDER = './static/analysis'
 if __name__ == '__main__':
-    for data_n in [7001]:
+    for data_n in [7002]:
         if os.path.isdir(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))):
             #try:
             print('\n\n\n\n\n\n\n', data_n)
@@ -15,8 +20,8 @@ if __name__ == '__main__':
             analysis_folder = ANALYSIS_FOLDER
             data_path = data_path_name(analysis_folder, data_n)
             species = open(os.path.join(data_path, 'species.txt'), "r").read()
-            load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
-                                 with_log=False)
+            #load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
+            #                     with_log=False)
             #compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path='./static',
             #                     species=species)
             outcome = run_SPIRAL_pipeline(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, species=None,

@@ -1,5 +1,10 @@
 #!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
 
+from numba.core.errors import NumbaDeprecationWarning, NumbaPendingDeprecationWarning
+import warnings
+warnings.simplefilter('ignore', category=NumbaDeprecationWarning)
+warnings.simplefilter('ignore', category=NumbaPendingDeprecationWarning)
+
 import urllib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, jsonify, Markup
 from flask_bootstrap import Bootstrap
