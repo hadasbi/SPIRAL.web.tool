@@ -1,4 +1,4 @@
-#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.9
+#!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.10
 
 from numba.core.errors import NumbaDeprecationWarning, NumbaPendingDeprecationWarning
 import warnings
