@@ -78,7 +78,7 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
                 spatial_coors = spatial_coors.loc[list(data), :]
             else:
                 raise ValueError(
-                    'Number of rows in the spatial coordinates file do not fit the number of columns in the count matrix')
+                    'Number of rows in the spatial coordinates file does not fit the number of columns in the count matrix')
         else:
             # If not according to name, then according to order:
             if set(spatial_coors.index) != set(list(data)):
