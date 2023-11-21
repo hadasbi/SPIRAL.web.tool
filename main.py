@@ -102,6 +102,12 @@ class HomePage(FlaskForm):
     submit = SubmitField('Run SPIRAL on my data set', render_kw=style)
 
 
+class DataError(FlaskForm):
+    style = {
+        'style': 'background-color: #005959; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    submit = SubmitField('Go back and reload data', render_kw=style)
+
+
 class LoadData(FlaskForm):
     dataset_name = StringField('Name of dataset: ')
     email = StringField('E-mail address: ', validators=[Email("Please enter a valid email address")])
@@ -327,14 +333,24 @@ def download_spatial_coors(data_n):
     return send_from_directory(data_path, spatial_coors_file)
 
 
+@app.route('/data_error', methods=['POST', 'GET'])
+def bad_data_file():
+    print('bad_data_file!!!')
+    form = DataError()
+    return render_template('bad_data_file.html', form=form)
+
+
 @app.route('/run_SPIRAL_step2', methods=['POST', 'GET'])
 def check_data_form():
     print('check_data_form!!!')
     data_n = request.args['data_n']
     samp_name = request.args['samp_name']
     species = request.args['species']
-    spatial, num_cells_orig, num_genes_orig, num_cells, num_genes, label_set, nlabels = load_data_first_time(
-        analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True, with_log=False)
+    try:
+        spatial, num_cells_orig, num_genes_orig, num_cells, num_genes, label_set, nlabels = load_data_first_time(
+            analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True, with_log=False)
+    except:
+        return redirect(url_for('bad_data_file'))
 
     form = CheckData(request.form)
     if form.validate_on_submit():
