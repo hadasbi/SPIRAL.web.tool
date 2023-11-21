@@ -645,15 +645,6 @@ def pic_names_and_GO_terms():
                                  re.finditer(
                                      r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9\- ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
                                      sigtable.loc[int(struct), col])])
-        '''        
-        GO_terms = [
-            [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
-                                             sigtable.loc[int(struct), 'proc_GOterms_below_1e-06'])],
-            [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
-                                             sigtable.loc[int(struct), 'func_GOterms_below_1e-06'])],
-            [m.group(0) for m in re.finditer(r"(GO:){1}[0-9]{7}(:){1}[A-Za-z0-9 ]+( \(){1}(qval){1}[0-9E\-\.]+(\)){1}",
-                                             sigtable.loc[int(struct), 'comp_GOterms_below_1e-06'])]]
-        '''
     else:
         GO_terms = [['Not available'], ['Not available'], ['Not available']]
 
