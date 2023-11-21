@@ -28,7 +28,7 @@ def get_MTgenes(data_path, genelist, species):
     # returns a sublist of mitochondrial genes
     print('get_MTgenes!')
 
-    error = None
+    error = 'None'
 
     if os.path.exists(MT_list_path(data_path)):
         file = open(MT_list_path(data_path), "r")

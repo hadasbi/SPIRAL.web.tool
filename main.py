@@ -388,7 +388,7 @@ def violin_plots():
         with open(with_mt_filename, 'w') as text_file:
             text_file.write(str(with_mt))
         with open(mt_error_filename, 'w') as text_file:
-            text_file.write(str(mt_error))
+            text_file.write(mt_error)
     else:
         with_mt = (open(with_mt_filename, "r").read().lower() == 'true')
         mt_error = open(mt_error_filename, "r").read()
