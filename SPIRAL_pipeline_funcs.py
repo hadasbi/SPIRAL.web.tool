@@ -128,7 +128,9 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
 
 
 ####################################################################################################################
-def compute_violin_plots(analysis_folder, data_n, static_path, species, local_run=False):
+def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_folder=None, local_run=False):
+    # local_run=True - for running SPIRAL locally or on a user's server (not through the webtool)
+
     print('compute_violin_plots!')
     # Load data
     data_path = data_path_name(analysis_folder, data_n)
@@ -188,7 +190,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
                 text_file.write(str(max_nFeatures))
 
     # save violin plot of percent of mitochondrial genes
-    MTgenes, error = get_MTgenes(data_path, list(data.index), species)
+    MTgenes, error = get_MTgenes(data_path, list(data.index), species, ensembl_folder)
     with_mt = False
     if MTgenes:
         with_mt = True
@@ -233,7 +235,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, local_ru
 def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                         min_nFeatures=None, max_nFeatures=None, max_mtpercent=None, numerical_shapes=None,
                         num_stds_thresh_lst=[0.5, 1], mu_lst=[0.95], num_iters_lst=[10000], path_len_lst=[3],
-                        save_layers_to_excel=False, max_nrepcells=100, save_GO_htmls=False):
+                        save_layers_to_excel=False, max_nrepcells=100, save_GO_htmls=False, ensembl_folder=None):
     # impute_method options: 'agg_wald', 'IaconoClus_dim50', 'IaconoClus', 'agg_wald_opt'
 
     print('run_SPIRAL_pipeline!')
@@ -299,7 +301,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                            data_norm_loc=data_norm_loc,
                            spatial_norm_loc=spatial_norm_loc,
                            data_norm_filt_loc=data_norm_filt_loc,
-                           spatial_norm_filt_loc=spatial_norm_filt_loc)
+                           spatial_norm_filt_loc=spatial_norm_filt_loc,
+                           ensembl_folder=ensembl_folder)
     else:
         data = pd.read_csv(data_norm_filt_loc, index_col=0, sep='\t')
 
@@ -607,7 +610,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
 
 ####################################################################################################################
 def filter_data(data_path, min_nFeatures, max_nFeatures, max_mtpercent, spatial, species,
-                data_norm_loc, spatial_norm_loc, data_norm_filt_loc, spatial_norm_filt_loc):
+                data_norm_loc, spatial_norm_loc, data_norm_filt_loc, spatial_norm_filt_loc, ensembl_folder):
     print('filter_data!')
 
     ##### Load filtering parameters if they were not received as arguments  ######
@@ -624,7 +627,7 @@ def filter_data(data_path, min_nFeatures, max_nFeatures, max_mtpercent, spatial,
     data = data.loc[:, (data.astype(bool).sum() >= min_nFeatures) & (data.astype(bool).sum() <= max_nFeatures)]
     if with_mt:
         max_mtpercent = int(open(os.path.join(data_path, 'max_mtpercent.txt'), "r").read())
-        MTgenes, mt_error = get_MTgenes(data_path, list(data.index), species)
+        MTgenes, mt_error = get_MTgenes(data_path, list(data.index), species, ensembl_folder)
         mtpercent = np.divide(data.loc[MTgenes, :].sum(), data.sum()) * 100
         data = data.loc[:, mtpercent <= max_mtpercent]
 

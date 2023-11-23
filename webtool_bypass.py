@@ -20,10 +20,11 @@ if __name__ == '__main__':
             analysis_folder = ANALYSIS_FOLDER
             data_path = data_path_name(analysis_folder, data_n)
             species = open(os.path.join(data_path, 'species.txt'), "r").read()
+            ensembl_folder = ensembl_loc(production=False, hostname=None)
             #load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
             #                     with_log=False)
             #compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path='./static',
-            #                     species=species)
+            #                     species=species, ensembl_folder=ensembl_folder)
             outcome = run_SPIRAL_pipeline(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, species=None,
                                           min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
                                           numerical_shapes=numerical_shapes,
@@ -31,7 +32,7 @@ if __name__ == '__main__':
                                           num_iters_lst=[10000],
                                           path_len_lst=[3],
                                           save_layers_to_excel=True, max_nrepcells=300,
-                                          save_GO_htmls=True)
+                                          save_GO_htmls=True, ensembl_folder=ensembl_folder)
             with open(outcome_path(data_path), 'w') as text_file:
                 text_file.write(str(outcome))
             #except Exception as error:

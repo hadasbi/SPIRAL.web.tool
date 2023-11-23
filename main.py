@@ -85,6 +85,8 @@ configure_uploads(app, (tables, matrix, barcodes_features))
 #patch_request_class(app, 1024 * 1024 * 1024)
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
 
+ensembl_folder = ensembl_loc(production, hostname)
+
 #############################   forms   ################################################
 def dataset_number(path):
     existing_folders = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
@@ -383,7 +385,7 @@ def violin_plots():
     mt_error_filename = os.path.join(data_path, 'mt_error.txt')
     if not os.path.exists(vln_plot_filename) or not os.path.exists(with_mt_filename):
         with_mt, mt_error = compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n,
-                                                 static_path=app._static_folder,
+                                                 static_path=app._static_folder, ensembl_folder=ensembl_folder,
                                                  species=species)
         with open(with_mt_filename, 'w') as text_file:
             text_file.write(str(with_mt))
@@ -453,7 +455,8 @@ def check_data_filtering_params():
         data = filter_data(data_path=data_path, min_nFeatures=min_nFeatures, max_nFeatures=max_nFeatures,
                            max_mtpercent=max_mtpercent, spatial=spatial, species=species,
                            data_norm_loc=data_norm_loc, spatial_norm_loc=spatial_norm_loc,
-                           data_norm_filt_loc=data_norm_filt_loc, spatial_norm_filt_loc=spatial_norm_filt_loc)
+                           data_norm_filt_loc=data_norm_filt_loc, spatial_norm_filt_loc=spatial_norm_filt_loc,
+                           ensembl_folder=ensembl_folder)
         num_genes, num_cells = data.shape[0], data.shape[1]
         with open(num_genes_filename, 'w') as text_file:
             text_file.write(str(num_genes))
@@ -503,7 +506,8 @@ def run_SPIRAL(analysis_folder, data_n, num_stds_thresh_lst, mu_lst, num_iters_l
     try:
         outcome = run_SPIRAL_pipeline(analysis_folder=analysis_folder, data_n=data_n,
                                       num_stds_thresh_lst=num_stds_thresh_lst, mu_lst=mu_lst,
-                                      num_iters_lst=num_iters_lst, path_len_lst=path_len_lst)
+                                      num_iters_lst=num_iters_lst, path_len_lst=path_len_lst,
+                                      ensembl_folder=ensembl_folder)
         data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
         with open(outcome_path(data_path), 'w') as text_file:
             text_file.write(str(outcome))

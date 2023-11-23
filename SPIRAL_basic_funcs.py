@@ -24,56 +24,89 @@ import base64
 
 #### Data loading and pre-processing #################################################################################
 
-def get_MTgenes(data_path, genelist, species):
+def get_MTgenes(data_path, genelist, species, ensembl_folder=None, use_local_ENS=True):
     # returns a sublist of mitochondrial genes
-    print('get_MTgenes!')
+    #
+    # ENSEMBL gene names need to be converted to symbols in order to identify mitochondrial genes.
+    # If use_local_ENS=True: the conversion is done using a table that was predownloaded (ENSEMBL version 110).
+    # If use_local_ENS=False: the function will try to connect to Biomart to get the information.
 
+    print('get_MTgenes!')
     error = 'None'
 
     if os.path.exists(MT_list_path(data_path)):
         file = open(MT_list_path(data_path), "r")
         return file.read().split("\n"), error
 
-    if species in ['synthetic', 'other']:
+    if species in ['synthetic', 'other', "ARABIDOPSIS_THALIANA"]:
         return [], error
 
+    # load ensemble-symbol table
+    if species == "SACCHAROMYCES_CEREVISIAE":
+        ENSG_symbols_table = pd.read_csv(os.path.join(ensembl_folder, "saccharomyces_cerevisiae_gene_annotation.tsv"),
+                                         sep='\t', index_col=0)
+    elif species == "CAENORHABDITIS_ELEGANS":
+        ENSG_symbols_table = pd.read_csv(os.path.join(ensembl_folder, "caenorhabditis_elegans_gene_annotation.tsv"),
+                                         sep='\t', index_col=0)
+    elif species == "DROSOPHILA_MELANOGASTER":
+        ENSG_symbols_table = pd.read_csv(os.path.join(ensembl_folder, "drosophila_melanogaster_gene_annotation.tsv"),
+                                         sep='\t', index_col=0)
+    elif species == "DANIO_RERIO":
+        ENSG_symbols_table = pd.read_csv(os.path.join(ensembl_folder, "danio_rerio_gene_annotation.tsv"),
+                                         sep='\t', index_col=0)
+    elif species == "HOMO_SAPIENS":
+        ENSG_symbols_table = pd.read_csv(os.path.join(ensembl_folder, "homo_sapiens_gene_annotation.tsv"),
+                                         sep='\t', index_col=0)
+    elif species == "MUS_MUSCULUS":
+        ENSG_symbols_table = pd.read_csv(os.path.join(ensembl_folder, "mus_musculus_gene_annotation.tsv"),
+                                         sep='\t', index_col=0)
+    elif species == "RATTUS_NORVEGICUS":
+        ENSG_symbols_table = pd.read_csv(os.path.join(ensembl_folder, "rattus_norvegicus_gene_annotation.tsv"),
+                                         sep='\t', index_col=0)
+
     # gene symbols
-    if 'ACTB' in genelist or 'GAPDH' in genelist or 'PGK1' in genelist:
+    if len(set(genelist).intersection(set(ENSG_symbols_table['HGNC_symbol']))) >= 10:
         print('Found gene symbols')
-        mt_list = [gene for gene in genelist if gene[:3] == 'MT-']
+        mt_list = [gene for gene in genelist if (gene[:3] == 'MT-' or gene[:3] == "mt-")]
         with open(MT_list_path(data_path), "w") as file:
             file.write("\n".join(mt_list))
         return mt_list, error
-    else:
-        try:
-            if species == "ARABIDOPSIS_THALIANA":
-                bm = Biomart(host="plants.ensembl.org")
-                dataset = "athaliana_eg_gene"
-            elif species == "SACCHAROMYCES_CEREVISIAE":
-                bm = Biomart()
-                dataset = 'scerevisiae_gene_ensembl'
-            elif species == "CAENORHABDITIS_ELEGANS":
-                bm = Biomart()
-                dataset = 'celegans_gene_ensembl'
-            elif species == "DROSOPHILA_MELANOGASTER":
-                bm = Biomart()
-                dataset = 'dmelanogaster_gene_ensembl'
-            elif species == "DANIO_RERIO":
-                bm = Biomart()
-                dataset = 'drerio_gene_ensembl'
-            elif species == "HOMO_SAPIENS":
-                bm = Biomart()
-                dataset = 'hsapiens_gene_ensembl'
-            elif species == "MUS_MUSCULUS":
-                bm = Biomart()
-                dataset = 'mmusculus_gene_ensembl'
-            elif species == "RATTUS_NORVEGICUS":
-                bm = Biomart()
-                dataset = 'rnorvegicus_gene_ensembl'
 
-            # ENSEMBL IDs
-            if genelist[0][:3] == 'ENS' and genelist[1][:3] == 'ENS':
-                print('Found ENSEMBL IDs')
+    # ENSEMBL IDs
+    if len(set(genelist).intersection(set(ENSG_symbols_table.index))) >= 10:
+        print('Found ENSEMBL IDs')
+        if use_local_ENS:   # use local ENSEMBL table
+            mt_list = [i for i in ENSG_symbols_table.index if i in genelist and
+                       (ENSG_symbols_table.loc[i, "HGNC_symbol"][:3] == "MT-" or
+                        ENSG_symbols_table.loc[i, "HGNC_symbol"][:3] == "mt-")]
+
+        else:    # connect to Biomart
+            try:
+                if species == "ARABIDOPSIS_THALIANA":
+                    bm = Biomart(host="plants.ensembl.org")
+                    dataset = "athaliana_eg_gene"
+                elif species == "SACCHAROMYCES_CEREVISIAE":
+                    bm = Biomart()
+                    dataset = 'scerevisiae_gene_ensembl'
+                elif species == "CAENORHABDITIS_ELEGANS":
+                    bm = Biomart()
+                    dataset = 'celegans_gene_ensembl'
+                elif species == "DROSOPHILA_MELANOGASTER":
+                    bm = Biomart()
+                    dataset = 'dmelanogaster_gene_ensembl'
+                elif species == "DANIO_RERIO":
+                    bm = Biomart()
+                    dataset = 'drerio_gene_ensembl'
+                elif species == "HOMO_SAPIENS":
+                    bm = Biomart()
+                    dataset = 'hsapiens_gene_ensembl'
+                elif species == "MUS_MUSCULUS":
+                    bm = Biomart()
+                    dataset = 'mmusculus_gene_ensembl'
+                elif species == "RATTUS_NORVEGICUS":
+                    bm = Biomart()
+                    dataset = 'rnorvegicus_gene_ensembl'
+
                 ENSG_symbols_table = None
                 count = 0
                 while ENSG_symbols_table is None and count < 2:
@@ -91,55 +124,97 @@ def get_MTgenes(data_path, genelist, species):
                     [i for i in ENSG_symbols_table.index if ENSG_symbols_table.loc[i, 'ensembl_gene_id'] in genelist]
                 ]
                 ENSG_symbols_table_MT = ENSG_symbols_table.loc[
-                    [i for i in ENSG_symbols_table.index if 'MT-' in ENSG_symbols_table.loc[i, 'external_gene_name']]]
+                    [i for i in ENSG_symbols_table.index if
+                     (ENSG_symbols_table.loc[i, 'external_gene_name'][:3] == 'MT-' or
+                      ENSG_symbols_table.loc[i, 'external_gene_name'][:3] == 'mt-')]]
                 mt_list = list(set(ENSG_symbols_table_MT.loc[:, 'ensembl_gene_id']))
-                with open(MT_list_path(data_path), "w") as file:
-                    file.write("\n".join(mt_list))
-                return mt_list, error
+            except:
+                error = "Due to a connection error with Biomart, SPIRAL could not get a list of mitochondrial genes."
+                print(error)
+                return [], error
 
-            # unknownk gene ids
-            else:
-                ENSG_symbols_table = None
-                count = 0
-                while ENSG_symbols_table is None and count < 2:
-                    ENSG_symbols_table = bm.query(dataset=dataset,
-                                                  attributes=['ensembl_gene_id', 'hgnc_id', 'uniprot_gn_id',
-                                                              'entrezgene_id', 'external_gene_name'])
-                    sleep(10)
-                    count += 1
-                if ENSG_symbols_table is None:
-                    error = "Due to a connection error with Biomart, SPIRAL could not get a list of mitochondrial genes."
-                    print(error)
-                    return [], error
-                ENSG_symbols_table = ENSG_symbols_table.dropna()
-                s = int(np.ceil(len(genelist) / 2))
-                correct_col = None
-                for col in ['ensembl_gene_id', 'hgnc_id', 'uniprot_gn_id', 'entrezgene_id']:
-                    new_s = len(set(ENSG_symbols_table.loc[:, col]).intersection(set(genelist)))
-                    if new_s > s:
-                        s = new_s
-                        correct_col = col
-                if correct_col is not None:
-                    print('Found ', correct_col)
-                    ENSG_symbols_table = ENSG_symbols_table.loc[
-                        [i for i in ENSG_symbols_table.index if ENSG_symbols_table.loc[i, correct_col] in genelist]
-                    ]
-                    ENSG_symbols_table_MT = ENSG_symbols_table.loc[
-                        [i for i in ENSG_symbols_table.index if
-                         'MT-' in ENSG_symbols_table.loc[i, 'external_gene_name']]]
-                    mt_list = list(set(ENSG_symbols_table_MT.loc[:, correct_col]))
-                    with open(MT_list_path(data_path), "w") as file:
-                        file.write("\n".join(mt_list))
-                    return mt_list, error
-        except:
+        with open(MT_list_path(data_path), "w") as file:
+            file.write("\n".join(mt_list))
+        return mt_list, error
+
+    # unknown gene ids
+    # connect to biomart
+    try:
+        if species == "ARABIDOPSIS_THALIANA":
+            bm = Biomart(host="plants.ensembl.org")
+            dataset = "athaliana_eg_gene"
+        elif species == "SACCHAROMYCES_CEREVISIAE":
+            bm = Biomart()
+            dataset = 'scerevisiae_gene_ensembl'
+        elif species == "CAENORHABDITIS_ELEGANS":
+            bm = Biomart()
+            dataset = 'celegans_gene_ensembl'
+        elif species == "DROSOPHILA_MELANOGASTER":
+            bm = Biomart()
+            dataset = 'dmelanogaster_gene_ensembl'
+        elif species == "DANIO_RERIO":
+            bm = Biomart()
+            dataset = 'drerio_gene_ensembl'
+        elif species == "HOMO_SAPIENS":
+            bm = Biomart()
+            dataset = 'hsapiens_gene_ensembl'
+        elif species == "MUS_MUSCULUS":
+            bm = Biomart()
+            dataset = 'mmusculus_gene_ensembl'
+        elif species == "RATTUS_NORVEGICUS":
+            bm = Biomart()
+            dataset = 'rnorvegicus_gene_ensembl'
+        ENSG_symbols_table = None
+        count = 0
+        while ENSG_symbols_table is None and count < 2:
+            ENSG_symbols_table = bm.query(dataset=dataset,
+                                          attributes=['ensembl_gene_id', 'hgnc_id', 'uniprot_gn_id',
+                                                      'entrezgene_id', 'external_gene_name'])
+            sleep(10)
+            count += 1
+        if ENSG_symbols_table is None:
             error = "Due to a connection error with Biomart, SPIRAL could not get a list of mitochondrial genes."
             print(error)
             return [], error
+        ENSG_symbols_table = ENSG_symbols_table.dropna()
+        s = int(np.ceil(len(genelist) / 2))
+        correct_col = None
+        for col in ['ensembl_gene_id', 'hgnc_id', 'uniprot_gn_id', 'entrezgene_id']:
+            new_s = len(set(ENSG_symbols_table.loc[:, col]).intersection(set(genelist)))
+            if new_s > s:
+                s = new_s
+                correct_col = col
+        if correct_col is not None:
+            print('Found ', correct_col)
+            ENSG_symbols_table = ENSG_symbols_table.loc[
+                [i for i in ENSG_symbols_table.index if ENSG_symbols_table.loc[i, correct_col] in genelist]
+            ]
+            ENSG_symbols_table_MT = ENSG_symbols_table.loc[
+                [i for i in ENSG_symbols_table.index if
+                 (ENSG_symbols_table.loc[i, 'external_gene_name'][:3] == 'MT-' or
+                  ENSG_symbols_table.loc[i, 'external_gene_name'][:3] == "mt-")]]
+            mt_list = list(set(ENSG_symbols_table_MT.loc[:, correct_col]))
+            with open(MT_list_path(data_path), "w") as file:
+                file.write("\n".join(mt_list))
+            return mt_list, error
+        error = 'Gene type was not identified.'
+        print(error)
+        return [], error
+    except:
+        error = "Due to a connection error with Biomart, SPIRAL could not get a list of mitochondrial genes."
+        print(error)
+        return [], error
 
-    error = 'Gene type was not identified.'
-    print(error)
-    return [], error
 
+def ensembl_loc(production, hostname):
+    if production:
+        if hostname == 'bi-fiona':
+            ensembl_folder = '/home/yaellab/SPIRAL/ensembl/'
+        else:
+            ensembl_folder = '/var/www/html/SPIRAL.web.tool/ensembl/'
+    else:
+        ensembl_folder = './ensembl/'
+    return ensembl_folder
 
 ####################################################################################################################
 def with_mt_filename_(data_path):

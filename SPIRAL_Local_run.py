@@ -123,15 +123,17 @@ if __name__ == '__main__':
     print("         Third column: Y coordinates.")
     input('when done press enter')
 
+    ensembl_folder = ensembl_loc(production=False, hostname=None)
+
     load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
                          with_log=False)
     compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path=STATIC_FOLDER, species=species,
-                         local_run=True)
+                         local_run=True, ensembl_folder=ensembl_folder)
     run_SPIRAL_pipeline(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, species=species,
                         min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
                         numerical_shapes=False,
                         num_stds_thresh_lst=[0.5, 0.75, 1.0], mu_lst=[0.9, 0.95], num_iters_lst=[10000],
-                        path_len_lst=[3])
+                        path_len_lst=[3], ensembl_folder=ensembl_folder)
 
     print("Results are available in this folder:{}".format(data_path))
     exit()
