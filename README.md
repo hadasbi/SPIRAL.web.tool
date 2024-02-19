@@ -1,5 +1,5 @@
-THIS REPO CONTAINS CODE TO A WEBSITE THAT ENABLES DATA UPLOAD BY THE USER, THEN RUNS SPIRAL ON OUT SERVER AND DISPLAYS THE RESULTS PANEL. WE ULTMATELY CAME TO THE CONCLUSION THAT THIS IS NOT THE RIGHT SOLUTION. INSTEAD, WE DEVELOPED A SPIRAL SOFTWARE THAT THE USER CAN DOWNLOAD AND RUN ON ANY SERVER. THE RESULT.ZIP FILE CAN THEN BE UPLOADED TO OUT WEBSITE TO VIEW THE RESULTS PANEL. 
-FULL DETAILS ARE AVAILABLE AT: https://spiral.technion.ac.il/
+This repo contains code to a website that enables data upload by the user, then runs spiral on out server and displays the results panel. We ultmately came to the conclusion that this is not the right solution. Instead, we developed a spiral software that the user can download and run on any server. The result.zip file can then be uploaded to out website to view the results panel. 
+Full details are available at: https://spiral.technion.ac.il/
 
 # SPIRAL
 SPIRAL is an algorithm that relies on a Gaussian statistical model to produce a comprehensive overview of significant
