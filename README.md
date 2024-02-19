@@ -1,9 +1,12 @@
+THIS REPO CONTAINS CODE TO A WEBSITE THAT ENABLES DATA UPLOAD BY THE USER, THEN RUNS SPIRAL ON OUT SERVER AND DISPLAYS THE RESULTS PANEL. WE ULTMATELY CAME TO THE CONCLUSION THAT THIS IS NOT THE RIGHT SOLUTION. INSTEAD, WE DEVELOPED A SPIRAL SOFTWARE THAT THE USER CAN DOWNLOAD AND RUN ON ANY SERVER. THE RESULT.ZIP FILE CAN THEN BE UPLOADED TO OUT WEBSITE TO VIEW THE RESULTS PANEL. 
+FULL DETAILS ARE AVAILABLE AT: https://spiral.technion.ac.il/
+
 # SPIRAL
 SPIRAL is an algorithm that relies on a Gaussian statistical model to produce a comprehensive overview of significant
 processes in single cell RNA-seq, spatial transcriptomics or bulk RNA-seq. SPIRAL detects biological processes by
 identifying the subset of genes involved and the subset of cells, spots or samples.
 
-SPIRAL is available as a web interface at https://spiral.technion.ac.il/ (currently only available in the Technion).
+SPIRAL is available as a web interface at https://spiral.technion.ac.il/.
 You can also run SPIRAL locally by downloading the repository, and then run SPIRAL_local_run.py.
 
 ## How to run the SPIRAL algorithm on your data locally
