@@ -1,5 +1,5 @@
 # Important note:
-This repo contains code to a website that enables data upload by the user, then runs SPIRAL on out server and displays the results panel. We ultimately came to the conclusion that this is not the right solution. Instead, we developed a SPIRAL software that the user can download and run on any server. The result.zip file can then be uploaded to out website to view the results panel. 
+This repo contains code to a website that enables data upload by the user, then runs SPIRAL on out server and displays the results panel. We ultimately came to the conclusion that this is not the right solution. Instead, we developed a SPIRAL software that the user can download and run on any server. The result.zip file can then be uploaded to our website to view the results panel. 
 
 Full details are available at: https://spiral.technion.ac.il/
 
