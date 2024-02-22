@@ -1,21 +1,13 @@
 #!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.10
 
-import sys
-import os.path
-import seaborn as sns
-from scipy import sparse
-from time import time
-import pickle
-import json
-import codecs
-import multiprocessing as mp
-import SPIRAL_mp_funcs
-from shutil import copyfile
-from requests.exceptions import ConnectionError
-import matplotlib.pyplot as plt
 from zipfile import ZipFile
+from requests.exceptions import ConnectionError
+from shutil import copyfile
+import multiprocessing as mp
+import seaborn as sns
 from scipy.stats import norm
 
+import SPIRAL_mp_funcs
 from SPIRAL_basic_funcs import *
 from SPIRAL_visualization_funcs import *
 from SPIRAL_enrichment_funcs import *
@@ -152,12 +144,14 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_
     plt.savefig(vln_plot_filename)
     plt.close()
     if local_run:
-        print("Violin plot will open soon.")
-        print("Try to include most of your data and exclude the outliers in both ends.")
-        print("Explanation: Cells with very few expressed genes may be raptured cells, while cells with a lot of "
-              "expressed genes may be doublets")
-        print('Decide on the minimal and maximal numbers of expressed genes, and press enter to close the figure and '
-              'proceed. The figure is also saved at ./static/vln_data' + str(data_n) + '.jpg')
+        print(color.BLUE + "Filtering the data: determine the minimal and maximal number of features." + color.END)
+        print(
+            "A violin plot of your data will pop up soon. If you are working on a remote server and cannot see the pop "
+            "up window, this figure is also saved as ./static/vln_data" + str(data_n) + ".jpg")
+        print("Decide on the minimal and maximal numbers of expressed genes, and press enter to close the figure and "
+              "proceed.")
+        print("Try to include most of your data and exclude the outliers in both ends. Cells with very few expressed "
+              "genes may be raptured cells, while cells with a lot of expressed genes may be doublets.")
 
         fig, axs = plt.subplots(1, 1, figsize=(5, 5))
         axs.set_title("number of expressed genes")
@@ -209,11 +203,15 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_
         plt.close()
 
         if local_run:
-            print("Cells with large percentages of mitochondrial genes are likely to be cells that experienced cell "
-                  "stress, and you might want to exclude them from the analysis.")
+            print(color.BLUE + "Filtering the data: determine the maximal percent of mitochondrial reads." + color.END)
             print(
-                'Decide on the maximal mitochondrial percent, and press enter to close the figure and proceed.'
-                ' The figure is also saved at ./static/vln_mt_data' + str(data_n) + '.jpg')
+                "A violin plot will pop up soon. If you are working on a remote server and cannot see the pop "
+                "up window, this figure is also saved as ./static/vln_mt_data" + str(data_n) + ".jpg")
+            print(
+                "Decide on the maximal mitochondrial percent, and press enter to close the figure and "
+                "proceed.")
+            print("Cells with large percentages of mitochondrial reads are likely to be cells that experienced cell "
+                  "stress, and you might want to exclude them from the analysis.")
             fig, axs = plt.subplots(1, 1, figsize=(5, 5))
             axs.set_title("mitochondrial percent of reads")
             sns.violinplot(y="mitochondrial percent of reads", data=summary, ax=axs)
@@ -1031,16 +1029,16 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
 
     if impute_method == 'no_imputation':
         samp_name = real_samp_name
-        cols = ['num_genes', 'num_' + samp_name + 's',
+        cols = ['num_genes', 'num_' + samp_name + 's', 'num_' + samp_name + '_pairs',
                 'num_genes_in_struct', 'num_' + samp_name + 's_in_struct',
-                'num_' + samp_name + '_pairs', 'num_' + samp_name + '_pairs_in_struct',
+                'num_' + samp_name + '_pairs_in_struct',
                 'log10_corrected_pval', 'structure_average_std', 'genes', samp_name + '_pairs']
 
     else:
         samp_name = 'repcell'
-        cols = ['num_genes', 'num_' + real_samp_name + 's', 'num_' + samp_name + 's',
+        cols = ['num_genes', 'num_' + real_samp_name + 's', 'num_' + samp_name + 's', 'num_' + samp_name + '_pairs',
                 'num_genes_in_struct', 'num_' + real_samp_name + 's_in_struct', 'num_' + samp_name + 's_in_struct',
-                'num_' + samp_name + '_pairs', 'num_' + samp_name + '_pairs_in_struct',
+                'num_' + samp_name + '_pairs_in_struct',
                 'log10_corrected_pval', 'structure_average_std', 'genes', samp_name + '_pairs']
         cells_to_repcells = pd.read_csv(clustering_file_final, index_col=0, sep=' ')
 
@@ -1088,7 +1086,7 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
         # compute structure_average_std
         avg_vec = (1 / len(sample_pairs)) * np.ones((len(sample_pairs)))
         average_diff_of_gene_std = np.sqrt(np.dot(np.dot(avg_vec.transpose(), cov_mat), avg_vec))
-        significance_table.loc[i, 'structure_average_std'] = average_diff_of_gene_std
+        significance_table.loc[i, 'structure_average_std'] = np.round(average_diff_of_gene_std, 3)
 
         # average the differences for each gene
         average_diff_of_genes = np.dot(avg_vec.transpose(), curr_S)
@@ -1105,7 +1103,7 @@ def evaluate_significance_of_structs(sigfile, genetable_file, impute_method='agg
                                                    len(sample_pairs))
         # print('Multiple testing correction: 1e', multestcorr)
 
-        significance_table.loc[i, 'log10_corrected_pval'] = log10pval + multestcorr
+        significance_table.loc[i, 'log10_corrected_pval'] = int(np.ceil(log10pval + multestcorr))
         # print('final probability: 1e', log10pval+multestcorr)
 
     significance_table = significance_table.sort_values(by='log10_corrected_pval')

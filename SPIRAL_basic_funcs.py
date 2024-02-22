@@ -1,5 +1,10 @@
 #!/var/www/html/SPIRAL.web.tool/spiral_venv/bin/python3.10
 
+import os
+import sys
+import pickle
+import json
+import codecs
 import pandas as pd
 import numpy as np
 from sklearn.cluster import AgglomerativeClustering
@@ -9,12 +14,11 @@ from sklearn.preprocessing import normalize
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 import scipy.io
-from scipy import special
+from scipy import special,sparse
 import csv
 import scipy.sparse as sp_sparse
 import tables as tb
 import re
-import os
 import openpyxl
 from gseapy.parser import Biomart
 import glob
@@ -601,3 +605,16 @@ def print_full(x):
     print(x)
     pd.reset_option('display.max_rows')
     return np.nan
+
+
+class color:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
