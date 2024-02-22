@@ -395,7 +395,7 @@ def save_layout_of_imputed(repcells_data, impute_method, repcells_data_loc,
         shapes = ["$\mathsf{" + str(i) + "}$" for i in repcell_definitions_sorted_set]
         with_legend = False
     else:
-        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
+        shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4', 'p', 'd', 'v', '>', '<', 'o', 'H', 'h', '|', '_', '.']
 
     deff_to_shape_dict = dict(zip(repcell_definitions_sorted_set, shapes[:len(set(repcell_definitions))]))
     # print('deff_to_shape_dict:', deff_to_shape_dict)
@@ -471,7 +471,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
 
     ############################################# cell_definitions_sorted #################################
     cell_definitions_orig_sorted_set = sort_labels(set(cell_definitions_orig))
-    print('cell_definitions_orig_sorted_set:', cell_definitions_orig_sorted_set)
+    #print('cell_definitions_orig_sorted_set:', cell_definitions_orig_sorted_set)
 
     # shapes
     if numerical_shapes:
@@ -481,7 +481,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
         shapes = ['8', 's', "^", '*', 'X', 'D', 'P', '1', '2', '3', '4']
 
     deff_to_shape_dict = dict(zip(cell_definitions_orig_sorted_set, shapes[:len(set(cell_definitions_orig))]))
-    print('deff_to_shape_dict:', deff_to_shape_dict)
+    #print('deff_to_shape_dict:', deff_to_shape_dict)
 
     ########################################################################################################
     if with_steps:
