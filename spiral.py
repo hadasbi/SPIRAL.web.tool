@@ -5,8 +5,11 @@ import warnings
 warnings.simplefilter('ignore', category=NumbaDeprecationWarning)
 warnings.simplefilter('ignore', category=NumbaPendingDeprecationWarning)
 
-from SPIRAL_pipeline_funcs import *
+import matplotlib
+matplotlib.use('TkAgg')
 
+import shutil
+from SPIRAL_pipeline_funcs import *
 
 def dataset_number(path):
     existing_folders = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
@@ -17,11 +20,13 @@ def dataset_number(path):
         new_n = 1
     return new_n
 
-
 ANALYSIS_FOLDER = './static/analysis'
 STATIC_FOLDER = './static'
 
 if __name__ == '__main__':
+    # On Windows calling this function is necessary.
+    mp.freeze_support()
+
     print("#############################################################################")
     print("########                                                             ########")
     print("########                           SPIRAL                            ########")
@@ -33,6 +38,10 @@ if __name__ == '__main__':
         os.mkdir(STATIC_FOLDER)
     if not os.path.exists(ANALYSIS_FOLDER):
         os.mkdir(ANALYSIS_FOLDER)
+
+    # move the ensembl folder if needed
+    if not os.path.exists('./ensembl') and os.path.exists('./_internal/ensembl'):
+        shutil.move('./_internal/ensembl', './ensembl')
 
     # create a folder for the new dataset
     data_n = dataset_number(ANALYSIS_FOLDER)
