@@ -601,8 +601,9 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         design_excel(sigfile_vis)
 
     # create a zip file of all structure layouts
-    layouts_zipfile = os.path.join(data_path, 'structure_layouts.zip')
-    zip_all_files_in_folder(zipfile=layouts_zipfile, folder=picfolder)
+    # no need- the users runs SPIRAL on their server so they have all the layouts
+    #layouts_zipfile = os.path.join(data_path, 'structure_layouts.zip')
+    #zip_all_files_in_folder(zipfile=layouts_zipfile, folder=picfolder)
     return 'Success'
 
 

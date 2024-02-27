@@ -73,6 +73,7 @@ else:
 app.config['UPLOADED_TABLES_DEST'] = ANALYSIS_FOLDER
 app.config['UPLOADED_MATRIX_DEST'] = ANALYSIS_FOLDER
 app.config['UPLOADED_BARCODES_DEST'] = ANALYSIS_FOLDER
+app.config['UPLOADED_ZIPFILES_DEST'] = ANALYSIS_FOLDER
 
 # Flask-Bootstrap requires this line
 Bootstrap(app)
@@ -80,7 +81,8 @@ Bootstrap(app)
 tables = UploadSet(name='tables', extensions=('txt', 'csv'))
 matrix = UploadSet(name='matrix', extensions='mtx.gz')
 barcodes_features = UploadSet(name='barcodes', extensions='tsv.gz')
-configure_uploads(app, (tables, matrix, barcodes_features))
+zipfiles = UploadSet(name='zipfiles', extensions='zip')
+configure_uploads(app, (tables, matrix, barcodes_features, zipfiles))
 
 #patch_request_class(app, 1024 * 1024 * 1024)
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
@@ -212,6 +214,20 @@ def flash_errors(form):
                 error
             ), 'error')
 
+class RunOrView(FlaskForm):
+    run_style = {
+        'style': 'background-color: #5499C7; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    run = SubmitField("How to run SPIRAL on my gene expression data set?", render_kw=run_style)
+    view_style = {
+        'style': 'background-color: #BB8FCE; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
+    view = SubmitField("How to view SPIRAL results?", render_kw=view_style)
+
+
+class LoadSpiralResults(FlaskForm):
+    spiral_results = FileField('Spiral results zip file: ',
+                             validators=[FileRequired(), FileAllowed(['zip'])])
+    submit = SubmitField('Submit')
+
 
 ########################################################################################
 # @app.route('/static/vln_plots/<filename>')
@@ -235,12 +251,46 @@ def home():
     normal_prostate_link = '/results/' + data_n_to_url(5)
     yaellab_differentiation_link = '/results/' + data_n_to_url(4)
     bulk_mouse_Bcells_link = '/results/' + data_n_to_url(6)
+    '''
+    # The "Run SPIRAL" button is no longer necessary because users do not run SPIRAL on their data through the website.
     if form.validate_on_submit():
         return redirect(url_for('load_data_form'))
+    '''
+    form = RunOrView(request.form)
+    if form.validate_on_submit():
+        if form.run.data:
+            return redirect(url_for('how_to_run'))
+        elif form.view.data:
+            return redirect(url_for('how_to_view'))
     return render_template('index.html', form=form, Zhang2019_link=Zhang2019_link, Wagner2018_link=Wagner2018_link,
                            MouseSP2_link=MouseSP2_link, normal_prostate_link=normal_prostate_link,
                            yaellab_differentiation_link=yaellab_differentiation_link,
                            bulk_mouse_Bcells_link=bulk_mouse_Bcells_link)
+
+
+@app.route('/how_to_run', methods=['POST', 'GET'])
+def how_to_run():
+    return render_template('how_to_run.html')
+
+@app.route('/how_to_view', methods=['POST', 'GET'])
+def how_to_view():
+    form = LoadSpiralResults(request.form)
+    if request.method == 'POST' and 'spiral_results' in request.files:
+        # create a folder for the new dataset
+        data_n = dataset_number(ANALYSIS_FOLDER)
+        data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
+        os.mkdir(data_path)
+
+        # save spiral_results file
+        zipfiles.save(storage=request.files['spiral_results'], folder='data' + str(data_n), name='spiral_results.')
+
+        # unzip spiral_results.zip
+        with ZipFile(os.path.join(data_path, "spiral_results.zip"), 'r') as zip_ref:
+            zip_ref.extractall(data_path)
+
+        return redirect(url_for('results_panel', url=data_n_to_url(data_n)))
+
+    return render_template('how_to_view.html', form=form)
 
 
 @app.route('/run_SPIRAL_step1', methods=['POST', 'GET'])
@@ -333,6 +383,14 @@ def download_spatial_coors(data_n):
     data_path = os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))
     spatial_coors_file = 'spatial_coors.csv'
     return send_from_directory(data_path, spatial_coors_file)
+
+
+@app.route('/download_spiral_zip_<sys>', methods=['GET', 'POST'])
+def download_spiral_zip(sys):
+    data_path = os.path.join(app._static_folder, 'exe_files', sys)
+    print(data_path)
+    spiral_zip_file = 'spiral.zip'
+    return send_from_directory(data_path, spiral_zip_file)
 
 
 @app.route('/data_error', methods=['POST', 'GET'])
@@ -653,7 +711,19 @@ def pic_names_and_GO_terms():
         GO_terms = [['Not available'], ['Not available'], ['Not available']]
 
     # get gene list
-    gene_list = read_gene_list(sigtable.loc[int(struct), 'genes'])
+    if len(sigtable.loc[int(struct), 'genes']) == 32767:  # The genelist was too long to be written in one excel cell
+        genetable_file = genetable_file_name(data_path, impute_method)
+        with open(genetable_file, 'rb') as fp:
+            genes_table = pickle.load(fp)
+        structs_file = structs_filename(data_path=data_path, impute_method=impute_method,
+                                        num_stds_thresh=sigtable.loc[int(struct), 'num_stds_thresh'],
+                                        mu=sigtable.loc[int(struct), 'mu'],
+                                        path_len=sigtable.loc[int(struct), 'path_len'],
+                                        num_iters=sigtable.loc[int(struct), 'num_iters'])
+        structs = read_struct_list_from_file(structs_file)
+        gene_list = list(genes_table[structs[sigtable.loc[int(struct), 'old_struct_num']][0]].index)
+    else:  # read the gene list from the excel file
+        gene_list = read_gene_list(sigtable.loc[int(struct), 'genes'])
     return jsonify(struct_pics=struct_pics, gene_list=gene_list, GO_terms=GO_terms)
 
 

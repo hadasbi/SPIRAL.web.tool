@@ -1,0 +1,43 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/load_data_form.js"></script>
+
+{% extends 'base.html' %}
+
+{% block head %}
+<title>How to view SPIRAL results?</title>
+{% endblock %}
+
+{% block content %}
+<center><h1>How to view SPIRAL results?</h1></center>
+<div id="loading"></div>
+<div id="content">
+After running SPIRAL on your data set as explained <a target="_blank" href="{{ url_for('how_to_run') }}">here</a>,
+    you will have a "spiral_results.zip" file in your results folder. You can upload it, and then view your results
+    in the SPIRAL results panel.
+    <div class="formdesign">
+        <form method="POST" action="" enctype="multipart/form-data" onsubmit="loading();">
+            {{ form.hidden_tag() }}
+            <div class="form-horizontal">
+                <div class="form-group col-md-6">
+                    {{ form.csrf_token() }}
+                    <label for=""> {{ form.spiral_results.label }}</label>
+                    {{ form.spiral_results }}
+                    {% if form.spiral_results.errors %}
+                    <ul class="errors">
+                        {% for error in form.spiral_results.errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.csrf_token() }}
+                    {{ form.submit(class="submitbutton")}}
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
