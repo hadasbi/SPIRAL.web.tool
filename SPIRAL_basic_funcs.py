@@ -300,6 +300,10 @@ def outcome_path(data_path):
 
 
 ####################################################################################################################
+def genetable_file_name(data_path, impute_method):
+    return os.path.join(data_path, impute_method + '_genetable.p')
+
+####################################################################################################################
 def data_n_to_url(data_n):
     sample_string = str(1000000 + int(data_n))
     sample_string_bytes = sample_string.encode("ascii")

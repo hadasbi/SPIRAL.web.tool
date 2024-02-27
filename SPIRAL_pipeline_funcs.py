@@ -63,8 +63,8 @@ def load_data_first_time(analysis_folder, data_n, median_count_normalization_fla
 
         # Check that the sample names in spatial_coors fit the sample names in data
         if spatial_coors.shape[0] != data.shape[1]:
-            print(set(list(data)) - set(spatial_coors.index))
-            print(set(spatial_coors.index) - set(list(data)))
+            #print(set(list(data)) - set(spatial_coors.index))
+            #print(set(spatial_coors.index) - set(list(data)))
             # check if there are coordinates for all samples in data (and more). If so, fix coordinates table.
             if np.array([(samp in set(spatial_coors.index)) for samp in list(data)]).all():
                 spatial_coors = spatial_coors.loc[list(data), :]
@@ -429,7 +429,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
             zip_all_files_in_folder(zipfile=repcell_partition_zipfile, folder=repcell_part_folder)
 
     # check if a gene table was already saved, if not- save it
-    genetable_file = os.path.join(data_path, impute_method + '_genetable.p')
+    genetable_file = genetable_file_name(data_path, impute_method)
     if not os.path.exists(genetable_file):
         if impute_method != 'no_imputation':
             save_genetable_to_file(data=repcells_data, genetable_file=genetable_file)
@@ -477,6 +477,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                                                     path_len=path_len, num_iters=num_iters)
 
                     if not os.path.exists(structs_file):
+                        print("num_stds_thresh:", num_stds_thresh, "; mu:", mu, "; path_len:", path_len,
+                              "; num_iters:", num_iters)
                         structs = find_structures(genes_in_sets_npz_file=genes_in_sets_csr_file, mu=mu,
                                                   structs_file=structs_file, num_iters=num_iters, path_len=path_len,
                                                   use_mp_to_find_structs=use_mp_to_find_structs)
