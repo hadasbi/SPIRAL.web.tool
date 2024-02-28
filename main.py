@@ -217,10 +217,10 @@ def flash_errors(form):
 class RunOrView(FlaskForm):
     run_style = {
         'style': 'background-color: #5499C7; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    run = SubmitField("How to run SPIRAL on my gene expression data set?", render_kw=run_style)
+    run = SubmitField("Run SPIRAL on my gene expression data set", render_kw=run_style)
     view_style = {
         'style': 'background-color: #BB8FCE; color: white; padding: 15px 32px; text-align: center; font-size: 16px;'}
-    view = SubmitField("How to view SPIRAL results?", render_kw=view_style)
+    view = SubmitField("View SPIRAL results", render_kw=view_style)
 
 
 class LoadSpiralResults(FlaskForm):
@@ -244,28 +244,68 @@ def get_vln_route(filename):
 def home():
     print('home!!!')
     print(app.instance_path)
-    form = HomePage()
+
+    # Link to the results page for every example data set
     Zhang2019_link = '/results/' + data_n_to_url(1)
     Wagner2018_link = '/results/' + data_n_to_url(3)
     MouseSP2_link = '/results/' + data_n_to_url(2)
     normal_prostate_link = '/results/' + data_n_to_url(5)
     yaellab_differentiation_link = '/results/' + data_n_to_url(4)
     bulk_mouse_Bcells_link = '/results/' + data_n_to_url(6)
+    st_mouse_brain_Alzheimer_66_link = '/results/' + data_n_to_url(66)
+    post_xenium_mouse_brain_link = '/results/' + data_n_to_url(40)
+
+    # Chosen picture to display for every example data set
+    if production:
+        Zhang2019_pic = '/static/analysis/data1/structure_layouts/img_for_example.jpg'
+        Wagner2018_pic = '/static/analysis/data3/structure_layouts/img_for_example.jpg'
+        MouseSP2_pic = '/static/analysis/data2/structure_layouts/img_for_example.jpg'
+        normal_prostate_pic = '/static/analysis/data5/structure_layouts/img_for_example.jpg'
+        yaellab_differentiation_pic = '/static/analysis/data4/structure_layouts/img_for_example.jpg'
+        bulk_mouse_Bcells_pic = '/static/analysis/data6/structure_layouts/img_for_example.jpg'
+        st_mouse_brain_Alzheimer_66_pic = '/static/analysis/data66/structure_layouts/img_for_example.jpg'
+        post_xenium_mouse_brain_pic = '/static/analysis/data40/structure_layouts/img_for_example.jpg'
+    else:
+        Zhang2019_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data1')),
+                                           'img_for_example.jpg').replace('\\', '/')
+        Wagner2018_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data3')),
+                                            'img_for_example.jpg').replace('\\', '/')
+        MouseSP2_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data2')),
+                                          'img_for_example.jpg').replace('\\', '/')
+        normal_prostate_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data5')),
+                                                 'img_for_example.jpg').replace('\\', '/')
+        yaellab_differentiation_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data4')),
+                                                         'img_for_example.jpg').replace('\\', '/')
+        bulk_mouse_Bcells_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data6')),
+                                                   'img_for_example.jpg').replace('\\', '/')
+        st_mouse_brain_Alzheimer_66_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data66')),
+                                                             'img_for_example.jpg').replace('\\', '/')
+        post_xenium_mouse_brain_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data40')),
+                                                         'img_for_example.jpg').replace('\\', '/')
+
     '''
     # The "Run SPIRAL" button is no longer necessary because users do not run SPIRAL on their data through the website.
+    form = HomePage()
     if form.validate_on_submit():
         return redirect(url_for('load_data_form'))
     '''
+
+    # Buttons to run SPIRAL, or view SPIRAL results
     form = RunOrView(request.form)
     if form.validate_on_submit():
         if form.run.data:
             return redirect(url_for('how_to_run'))
         elif form.view.data:
             return redirect(url_for('how_to_view'))
-    return render_template('index.html', form=form, Zhang2019_link=Zhang2019_link, Wagner2018_link=Wagner2018_link,
-                           MouseSP2_link=MouseSP2_link, normal_prostate_link=normal_prostate_link,
-                           yaellab_differentiation_link=yaellab_differentiation_link,
-                           bulk_mouse_Bcells_link=bulk_mouse_Bcells_link)
+    return render_template('index.html', form=form,
+                           Zhang2019_link=Zhang2019_link, Zhang2019_pic=Zhang2019_pic,
+                           Wagner2018_link=Wagner2018_link, Wagner2018_pic=Wagner2018_pic,
+                           MouseSP2_link=MouseSP2_link, MouseSP2_pic=MouseSP2_pic,
+                           normal_prostate_link=normal_prostate_link, normal_prostate_pic=normal_prostate_pic,
+                           yaellab_differentiation_link=yaellab_differentiation_link, yaellab_differentiation_pic=yaellab_differentiation_pic,
+                           bulk_mouse_Bcells_link=bulk_mouse_Bcells_link, bulk_mouse_Bcells_pic=bulk_mouse_Bcells_pic,
+                           st_mouse_brain_Alzheimer_66_link=st_mouse_brain_Alzheimer_66_link, st_mouse_brain_Alzheimer_66_pic=st_mouse_brain_Alzheimer_66_pic,
+                           post_xenium_mouse_brain_link=post_xenium_mouse_brain_link, post_xenium_mouse_brain_pic=post_xenium_mouse_brain_pic)
 
 
 @app.route('/how_to_run', methods=['POST', 'GET'])

@@ -5,55 +5,104 @@
 {% endblock %}
 
 {% block content %}
-<center><h1>Welcome to SPIRAL</h1></center>
-<br>
+<center><h1 style="font-family:georgia">Welcome to SPIRAL</h1></center>
 <p>SPIRAL is an algorithm that relies on a Gaussian statistical model to produce a comprehensive overview of significant
     processes in single cell RNA-seq, spatial transcriptomics or bulk RNA-seq. SPIRAL detects biological processes by
     identifying the subset of genes involved and the subset of cells, spots or samples. </p>
 
-<h2 style="font-size:1.6vw">SPIRAL output for different data sets:</h2>
-<ul>
-    <li>Single cell RNA-seq data set of lymphoblastoid cells (<a target="_blank"
-                                                                 href="https://www.sciencedirect.com/science/article/pii/S1097276518308803?via%3Dihub">Zhang
-        et al. 2019</a>) - <a
-            href={{ Zhang2019_link }}>SPIRAL results</a>
-    </li>
+<br><hr><br>
+<u><h2 style="font-size:1.6vw; font-family:georgia">SPIRAL output for different data sets</h2></u>
 
-    <li>Single cell RNA-seq data set of Zebrafish differentiation at 7 time points (<a target="_blank"
-                                                                                       href="https://www.science.org/doi/full/10.1126/science.aar4362">Wagner
-        et al. 2018</a>) - <a
-            href={{ Wagner2018_link }}>SPIRAL results</a>
-    </li>
+<div class="posts">
+    <article>
+        <a href="#" class="image"><img src={{ Wagner2018_pic }} alt="" width="200"
+     height="200"/></a>
+        <h3>Single cell RNA-seq data set of Zebrafish differentiation at 7 time points</h3>
+        <p><a target="_blank"
+              href="https://www.science.org/doi/full/10.1126/science.aar4362">link to paper</a></p>
+        <div class="container">
+          <div class="horizontal-center">
+            <button class="button button1" onclick="window.location.href='{{ Wagner2018_link }}';">SPIRAL results panel</button>
+          </div>
+        </div>
+    </article>
+    <article>
+        <a href="#" class="image"><img src={{ MouseSP2_pic }} alt="" width="200"
+     height="200"/></a>
+        <h3>Spatial transcriptomics data of a sagittal-posterior section of a mouse brain</h3>
+        <p><a target="_blank"
+              href="https://www.10xgenomics.com/resources/datasets/mouse-brain-serial-section-2-sagittal-posterior-1-standard-1-1-0">link to data</a></p>
+        <div class="container">
+          <div class="horizontal-center">
+            <button class="button button1" onclick="window.location.href='{{ MouseSP2_link }}';">SPIRAL results panel</button>
+          </div>
+        </div>
+    </article>
+    <article>
+        <a href="#" class="image"><img src={{ post_xenium_mouse_brain_pic }} alt="" width="200"
+     height="200"/></a>
+        <h3>Spatial gene expression data set of a mouse brain</h3>
+        <p>Visium CytAssist Gene Expression Libraries of Post-Xenium Mouse Brain (FF)</p>
+        <p><a target="_blank"
+              href="https://www.10xgenomics.com/datasets/visium-cytassist-gene-expression-libraries-of-post-xenium-mouse-brain-ff-using-the-mouse-whole-transcriptome-probe-set-2-standard">link to data</a></p>
+        <div class="container">
+          <div class="horizontal-center">
+            <button class="button button1" onclick="window.location.href='{{ post_xenium_mouse_brain_link }}';">SPIRAL results panel</button>
+          </div>
+        </div>
+    </article>
+    <article>
+        <a href="#" class="image"><img src={{ yaellab_differentiation_pic }} alt="" width="200"
+     height="200"/></a>
+        <h3>Bulk RNA-seq data of human differentiation</h3>
+        <p>Samples were taken at days 0 and 7−21</p>
+        <p><a target="_blank"
+              href="https://zenodo.org/records/8009633">link to data</a></p>
+        <div class="container">
+          <div class="horizontal-center">
+            <button class="button button1" onclick="window.location.href='{{ yaellab_differentiation_link }}';">SPIRAL results panel</button>
+          </div>
+        </div>
+    </article>
+    <article>
+        <a href="#" class="image"><img src={{ Zhang2019_pic }} alt="" width="200"
+     height="200"/></a>
+        <h3>Single cell RNA-seq data set of lymphoblastoid cells</h3>
+        <p><a target="_blank"
+              href="https://www.sciencedirect.com/science/article/pii/S1097276518308803?via%3Dihub">link to paper</a></p>
+        <div class="container">
+          <div class="horizontal-center">
+            <button class="button button1" onclick="window.location.href='{{ Zhang2019_link }}';">SPIRAL results panel</button>
+          </div>
+        </div>
+    </article>
+    <article>
+        <a href="#" class="image"><img src={{ normal_prostate_pic }} alt="" width="200"
+     height="200"/></a>
+        <h3>Spatial transcriptomics data of a normal human prostate</h3>
+        <p><a target="_blank"
+              href="https://www.10xgenomics.com/datasets/normal-human-prostate-ffpe-1-standard-1-3-0">link to data</a></p>
+        <div class="container">
+          <div class="horizontal-center">
+            <button class="button button1" onclick="window.location.href='{{ normal_prostate_link }}';">SPIRAL results panel</button>
+          </div>
+        </div>
+    </article>
+    <article>
+        <a href="#" class="image"><img src={{ bulk_mouse_Bcells_pic }} alt="" width="200"
+     height="200"/></a>
+        <h3>Bulk RNA-seq data of mouse B-cells that were treated with anti-IgM mAb</h3>
+        <p>25 time points in the 6 hours post stimulation</p>
+        <p><a target="_blank"
+              href="https://febs.onlinelibrary.wiley.com/doi/full/10.1002/1873-3468.13757">link to paper</a></p>
+        <div class="container">
+          <div class="horizontal-center">
+            <button class="button button1" onclick="window.location.href='{{ bulk_mouse_Bcells_link }}';">SPIRAL results panel</button>
+          </div>
+        </div>
+    </article>
+</div>
 
-    <li>Spatial transcriptomics data of a sagittal-posterior section of a mouse brain (<a target="_blank"
-                                                                                          href="https://www.10xgenomics.com/resources/datasets/
-mouse-brain-serial-section-2-sagittal-posterior-1-standard-1-1-0">10x Genomics</a>) - <a
-            href={{ MouseSP2_link }}>SPIRAL results</a>
-    </li>
-
-    <li>Spatial transcriptomics data of a normal human prostate (<a target="_blank"
-                                                                    href="https://www.10xgenomics.com/resources/datasets/normal- humanprostate-
-ffpe-1-standard-1-3-0">10x Genomics</a>) - <a
-            href={{ normal_prostate_link }}>SPIRAL results</a>
-    </li>
-
-    <li>Bulk RNA-seq data of human differentiation- samples were taken at days 0 and 7−21 (Mandel-Gutfreund lab,
-        available at <a target="_blank"
-                        href="https://zenodo.org/records/8009633">Zenodo</a>) - <a
-                href={{ yaellab_differentiation_link }}>SPIRAL results</a>
-    </li>
-
-    <li>Bulk RNA-seq data of mouse B-cells that were treated with anti-IgM mAb- 25 time points in the 6 hours post
-        stimulation (<a target="_blank"
-                        href="https://febs.onlinelibrary.wiley.com/doi/full/10.1002/1873-3468.13757">Chiang et al.
-            2020</a>) -
-        <a
-                href={{ bulk_mouse_Bcells_link }}>SPIRAL results</a>
-    </li>
-</ul>
-
-<br>
-<br>
 
 <! –– The "Run SPIRAL" button is no longer necessary because users do not run SPIRAL on their data through the website  ––>
 {#
@@ -68,9 +117,11 @@ ffpe-1-standard-1-3-0">10x Genomics</a>) - <a
 </div>
 #}
 
+<br><hr><br>
+<u><h2 style="font-size:1.6vw; font-family:georgia">How to use SPIRAL?</h2></u>
 <div class="formdesign">
     <div class="container">
-        <div class="row">
+        <div class="column">
             <div class="col-xs-11 col-sm-5 col-lg-5 center-block">
                 <form method="POST" action="" onsubmit="loading();">
                     {{ form.hidden_tag() }}
@@ -90,10 +141,10 @@ ffpe-1-standard-1-3-0">10x Genomics</a>) - <a
 </div>
 
 
-<br>
-<br>
-
-<h2 style="font-size:1.2vw">How to cite?</h2>
+<br><hr><br>
+<u><h2 style="font-size:1.6vw; font-family:georgia">How to cite?</h2></u>
 <p style="font-size:15px">Biran, H., Hashimshony, T., Mandel-Gutfreund, Y., & Yakhini, Z. (2022). SPIRAL: Significant Process InfeRence ALgorithm for single cell RNA-sequencing and spatial transcriptomics. bioRxiv, 2022-05.</p>
 <div style="text-align: right;"><img src="/static/Technion_logo.jpg" width="100" height="40" alt="Technion logo"></div>
+
+<p style="font-size:11px">Some elements in this website were designed by <a href="https://html5up.net">HTML5 UP</a>.</p>
 {% endblock %}
