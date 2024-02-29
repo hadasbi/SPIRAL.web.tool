@@ -35,9 +35,6 @@ if __name__ == '__main__':
     print("########                                                             ########")
     print("#############################################################################")
 
-    yes_ans = ["yes", "Yes", "YES", "Y", "y"]
-    no_ans = ["no", "No", "NO", "N", "n"]
-
     # create static and analysis folders if they do not exist
     if not os.path.exists(STATIC_FOLDER):
         os.mkdir(STATIC_FOLDER)
@@ -151,8 +148,8 @@ if __name__ == '__main__':
         while labels_checkbox is None:
             print(color.BLUE + "Does your data set has labels? Type yes/no" + color.END)
             labels_ans = input()
-            if labels_ans in yes_ans or labels_ans in no_ans:
-                labels_checkbox = labels_ans not in yes_ans
+            if labels_ans.lower() in ['yes', 'no']:
+                labels_checkbox = labels_ans.lower() == 'no'
                 with open(os.path.join(data_path, 'labels_checkbox.txt'), 'w') as text_file:
                     text_file.write(str(labels_checkbox))
 
@@ -161,8 +158,8 @@ if __name__ == '__main__':
         while spatial_flag is None:
             print(color.BLUE + "Do you have a spatial coordinates file (for spatial datasets)? Type yes/no" + color.END)
             spatial_ans = input()
-            if spatial_ans in yes_ans or spatial_ans in no_ans:
-                spatial_flag = spatial_ans in yes_ans
+            if spatial_ans.lower() in ['yes', 'no']:
+                spatial_flag = spatial_ans.lower() == 'yes'
 
         if spatial_flag:
             print(color.BLUE + "Please upload the spatial coordinates file to this folder: {}, and name the file 'spatial_coors'"
@@ -232,8 +229,8 @@ if __name__ == '__main__':
         while spatial_flag is None:
             print(color.BLUE + "Do you have a spatial coordinates file (for spatial datasets)? Type yes/no" + color.END)
             spatial_ans = input()
-            if spatial_ans in yes_ans or spatial_ans in no_ans:
-                spatial_flag = spatial_ans in yes_ans
+            if spatial_ans.lower() in ["yes", "no"]:
+                spatial_flag = spatial_ans.lower() == "yes"
 
         if spatial_flag:
             spatial_types = ["Visium: columns are 'barcode', 'in_tissue', 'array_row', 'array_col', "
@@ -303,19 +300,125 @@ if __name__ == '__main__':
                         "Folder name should be: {}. The file name should be 'spatial_coors.csv' or 'spatial_coors.txt'.".format(data_path))
                     input('when done press enter')
 
-    ensembl_folder = ensembl_loc(production=False, hostname=None)
+    # offer the user to use non-default parameters
+    num_stds_thresh_lst_default = [0.5, 0.75, 1.0]
+    num_stds_thresh_lst = num_stds_thresh_lst_default
+    mu_lst_default = [0.9, 0.95]
+    mu_lst = mu_lst_default
+    print(color.BLUE + "We normally run SPIRAL with different sets of parameters to achieve maximal performance. "
+                       "The recommended sets of parameters are:" + color.END)
+    print('\N{GREEK SMALL LETTER ALPHA}', ': ', num_stds_thresh_lst_default)
+    print('\N{GREEK SMALL LETTER MU}', ': ', mu_lst_default)
+    change_params_flag = None
+    while change_params_flag is None:
+        print(color.BLUE + "Would you like to change these default parameters? Type yes/no" + color.END)
+        change_params_ans = input()
+        if change_params_ans.lower() in ["yes", "no"]:
+            change_params_flag = change_params_ans.lower() == "yes"
 
+    if change_params_flag:
+        # change alpha
+        change_alpha_flag = None
+        while change_alpha_flag is None:
+            print(color.BLUE + "Would you like to change the values of " + '\N{GREEK SMALL LETTER ALPHA}' + "? Type yes/no"
+                  + color.END)
+            change_alpha_ans = input()
+            if change_alpha_ans.lower() in ["yes", "no"]:
+                change_alpha_flag = change_alpha_ans.lower() == "yes"
+
+        if change_alpha_flag:
+            print(color.BLUE + "Type decimal numbers between 0 and 5 to be used as " + '\N{GREEK SMALL LETTER ALPHA}'
+                  + ". After every number press enter. When done type 'done'."
+                  + color.END)
+            print("Note that every additional " + '\N{GREEK SMALL LETTER ALPHA}' + " extends the running time.")
+            done = False
+            num_stds_thresh_lst = []
+            while not done:
+                inp = input()
+                try:
+                    if inp.lower() == "done":
+                        done = True
+                    else:
+                        inp = float(inp)
+                        if inp >= 0 and inp <= 5:
+                            if inp not in num_stds_thresh_lst:
+                                num_stds_thresh_lst += [inp]
+                        else:
+                            print("Please type a decimal number between 0 and 5. When done type 'done'.")
+                except:
+                    print("We could not read the last number. Please type a decimal number between 0 and 5. "
+                          "When done type 'done'.")
+
+            if not num_stds_thresh_lst: # if the list is empty
+                print(color.BLUE + "We could not capture any legal values for " + '\N{GREEK SMALL LETTER ALPHA}'
+                      + ". SPIRAL will run with the default values."
+                      + color.END)
+                num_stds_thresh_lst = num_stds_thresh_lst_default
+            else:
+                print(color.BLUE + "SPIRAL will run with the following set of values for "
+                      + '\N{GREEK SMALL LETTER ALPHA}' + ":"
+                      + color.END)
+                num_stds_thresh_lst.sort()
+                print('\N{GREEK SMALL LETTER ALPHA}', ': ', num_stds_thresh_lst)
+
+        # change mu
+        change_mu_flag = None
+        while change_mu_flag is None:
+            print(
+                color.BLUE + "Would you like to change the values of " + '\N{GREEK SMALL LETTER MU}' + "? Type yes/no"
+                + color.END)
+            change_mu_flag = input()
+            if change_mu_flag.lower() in ["yes", "no"]:
+                change_mu_flag = change_mu_flag.lower() == "yes"
+
+        if change_mu_flag:
+            print(color.BLUE + "Type decimal numbers between 0 and 1 to be used as " + '\N{GREEK SMALL LETTER MU}'
+                  + ". After every number press enter. When done type 'done'."
+                  + color.END)
+            print("Note that every additional " + '\N{GREEK SMALL LETTER MU}' + " extends the running time.")
+            done = False
+            mu_lst = []
+            while not done:
+                inp = input()
+                try:
+                    if inp.lower() == "done":
+                        done = True
+                    else:
+                        inp = float(inp)
+                        if inp >= 0 and inp <= 1:
+                            if inp not in mu_lst:
+                                mu_lst += [inp]
+                        else:
+                            print("Please type a decimal number between 0 and 1. When done type 'done'.")
+                except:
+                    print("We could not read the last number. Please type a decimal number between 0 and 1. "
+                          "When done type 'done'.")
+
+            if not mu_lst: # if the list is empty
+                print(color.BLUE + "We could not capture any legal values for " + '\N{GREEK SMALL LETTER MU}'
+                      + ". SPIRAL will run with the default values."
+                      + color.END)
+                mu_lst = mu_lst_default
+            else:
+                print(color.BLUE + "SPIRAL will run with the following set of values for "
+                      + '\N{GREEK SMALL LETTER MU}' + ":"
+                      + color.END)
+                mu_lst.sort()
+                print('\N{GREEK SMALL LETTER MU}', ': ', mu_lst)
+
+    # offer the user to use non-default max_nrepcells
+
+
+    ensembl_folder = ensembl_loc(production=False, hostname=None)
     load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
                          with_log=False)
     compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path=STATIC_FOLDER, species=species,
                          local_run=True, ensembl_folder=ensembl_folder)
-    print(color.BLUE + "SPIRAL is now runnning. This might take up to a few hours, depending on the computer power and "
-                       "your data. When done, the results would appear in this folder: {}".format(data_path) + color.END)
     outcome = run_SPIRAL_pipeline(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, species=species,
-                                min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
-                                numerical_shapes=None,
-                                num_stds_thresh_lst=[0.5, 0.75, 1.0], mu_lst=[0.9, 0.95], num_iters_lst=[10000],
-                                path_len_lst=[3], ensembl_folder=ensembl_folder)
+                                  min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
+                                  numerical_shapes=None, local_run=True,
+                                  num_stds_thresh_lst=num_stds_thresh_lst, mu_lst=mu_lst,
+                                  num_iters_lst=[10000], path_len_lst=[3], ensembl_folder=ensembl_folder)
     with open(outcome_path(data_path), 'w') as text_file:
         text_file.write(str(outcome))
 

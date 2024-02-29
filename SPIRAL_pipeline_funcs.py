@@ -233,7 +233,8 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_
 def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                         min_nFeatures=None, max_nFeatures=None, max_mtpercent=None, numerical_shapes=None,
                         num_stds_thresh_lst=[0.5, 1], mu_lst=[0.95], num_iters_lst=[10000], path_len_lst=[3],
-                        save_layers_to_excel=False, max_nrepcells=100, save_GO_htmls=False, ensembl_folder=None):
+                        save_layers_to_excel=False, max_nrepcells=100, save_GO_htmls=False, ensembl_folder=None,
+                        local_run=False):
     # impute_method options: 'agg_wald', 'IaconoClus_dim50', 'IaconoClus', 'agg_wald_opt'
 
     print('run_SPIRAL_pipeline!')
@@ -292,6 +293,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     data_norm_filt_loc = data_norm_filt_loc_name(data_path)
     spatial_norm_filt_loc = spatial_norm_filt_loc_name(data_path)
     if not os.path.exists(data_norm_filt_loc) or (spatial and (not os.path.exists(spatial_norm_filt_loc))):
+        if local_run:
+            print(color.BLUE + "Filtering data set..." + color.END)
         data = filter_data(data_path=data_path,
                            min_nFeatures=min_nFeatures, max_nFeatures=max_nFeatures,
                            max_mtpercent=max_mtpercent, spatial=spatial,
@@ -303,6 +306,49 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                            ensembl_folder=ensembl_folder)
     else:
         data = pd.read_csv(data_norm_filt_loc, index_col=0, sep='\t')
+
+    if local_run:
+        max_nrepcells = 100
+        print("Number of " + real_samp_name + "s:", data.shape[1])
+        print("Number of genes:", data.shape[0])
+        if data.shape[1] > 30:
+            # change max_nrepcells (Nc)
+            change_max_nrepcells_flag = None
+            while change_max_nrepcells_flag is None:
+                print(
+                    color.BLUE + "Nc is the number of repcells SPIRAL will aim for. All the results in the paper were "
+                                 "produced with Nc=100 and this is the default value. \nWould you like to change this "
+                                 "value? (Type yes/no)"
+                    + color.END)
+                print("Explanation: \n"
+                      "First, note that if the number of " + real_samp_name + "s is lower than Nc, then SPIRAL will "
+                                                                              "not use repcells"
+                      " at all, but instead run on the " + real_samp_name + "s themselves.\n"
+                      "If your server is memory-optimized (RAM>100GB), you can enlarge the value of Nc "
+                      "to ~200, which may improve accuracy. \n"
+                      "If your server has low memory (for example: a laptop with only 16GB RAM), "
+                      "you can reduce this value to ~50 and probably still get informative structures.")
+                change_max_nrepcells_ans = input()
+                if change_max_nrepcells_ans.lower() in ["yes", "no"]:
+                    change_max_nrepcells_flag = change_max_nrepcells_ans.lower() == "yes"
+
+            if change_max_nrepcells_flag:
+                print(color.BLUE + "Type an integer between 20 and 300 to be used as Nc" + color.END)
+                max_nrepcells = None
+                while max_nrepcells is None:
+                    try:
+                        max_nrepcells = int(input())
+                        if max_nrepcells < 20 or max_nrepcells > 300:
+                            print("Please type an integer between 20 and 300.")
+                            max_nrepcells = None
+                    except:
+                        print("We could not capture the number you entered. Please type an integer between 20 "
+                              "and 300.")
+                print(color.BLUE + "SPIRAL will run with Nc=" + str(max_nrepcells) + "." + color.END)
+
+        print("\n" + color.BLUE + "SPIRAL is now running. This might take up to a few hours, depending on the "
+                                  "computer power and your data. When done, the results would appear in this folder:"
+                                  " {}".format(data_path) + color.END + "\n")
 
     # decide on an imputation method
     if data.shape[1] <= max_nrepcells:
