@@ -25,7 +25,7 @@ import socket
 
 # get hostname.
 hostname = socket.gethostname()
-if hostname in ['bi-fiona', 'Spin']:  # production (linux)
+if hostname in ['bi-fiona', 'Spin', 'Hulk']:  # production (linux)
     production = True
 else:
     production = False  # development (Windows)
