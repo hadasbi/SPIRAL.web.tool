@@ -1,0 +1,1728 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='960,117,1040,165' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='953,238,1047,301' HREF='#0065008' ALT=''>
+<AREA SHAPE='RECT' COORDS='477,238,571,301' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='2685,1060,2805,1108' HREF='#0033693' ALT=''>
+<AREA SHAPE='RECT' COORDS='1855,787,1967,850' HREF='#0015672' ALT=''>
+<AREA SHAPE='RECT' COORDS='1869,923,1963,971' HREF='#0006813' ALT=''>
+<AREA SHAPE='RECT' COORDS='1757,923,1845,971' HREF='#0006814' ALT=''>
+<AREA SHAPE='RECT' COORDS='4407,787,4516,850' HREF='#0043648' ALT=''>
+<AREA SHAPE='RECT' COORDS='4408,1190,4491,1253' HREF='#0006536' ALT=''>
+<AREA SHAPE='RECT' COORDS='4317,915,4424,978' HREF='#0043649' ALT=''>
+<AREA SHAPE='RECT' COORDS='2525,641,2624,721' HREF='#0045104' ALT=''>
+<AREA SHAPE='RECT' COORDS='2645,787,2741,850' HREF='#0045109' ALT=''>
+<AREA SHAPE='RECT' COORDS='2520,787,2621,850' HREF='#0060052' ALT=''>
+<AREA SHAPE='RECT' COORDS='1149,513,1248,575' HREF='#0045185' ALT=''>
+<AREA SHAPE='RECT' COORDS='1148,641,1247,721' HREF='#0032507' ALT=''>
+<AREA SHAPE='RECT' COORDS='592,520,739,568' HREF='#0010646' ALT=''>
+<AREA SHAPE='RECT' COORDS='657,650,780,713' HREF='#0099177' ALT=''>
+<AREA SHAPE='RECT' COORDS='2085,1053,2179,1115' HREF='#0071804' ALT=''>
+<AREA SHAPE='RECT' COORDS='2064,1190,2200,1253' HREF='#0071805' ALT=''>
+<AREA SHAPE='RECT' COORDS='3997,238,4128,301' HREF='#0071704' ALT=''>
+<AREA SHAPE='RECT' COORDS='4829,375,4960,438' HREF='#1901576' ALT=''>
+<AREA SHAPE='RECT' COORDS='4403,375,4499,438' HREF='#0006082' ALT=''>
+<AREA SHAPE='RECT' COORDS='3915,641,4016,721' HREF='#1901135' ALT=''>
+<AREA SHAPE='RECT' COORDS='3963,367,4072,447' HREF='#1901564' ALT=''>
+<AREA SHAPE='RECT' COORDS='4248,375,4379,438' HREF='#1901575' ALT=''>
+<AREA SHAPE='RECT' COORDS='3629,367,3736,447' HREF='#1901360' ALT=''>
+<AREA SHAPE='RECT' COORDS='3533,650,3659,713' HREF='#0019637' ALT=''>
+<AREA SHAPE='RECT' COORDS='4709,513,4805,575' HREF='#0016053' ALT=''>
+<AREA SHAPE='RECT' COORDS='3944,1044,4069,1124' HREF='#0009126' ALT=''>
+<AREA SHAPE='RECT' COORDS='3788,1181,3935,1261' HREF='#0009167' ALT=''>
+<AREA SHAPE='RECT' COORDS='3408,238,3491,301' HREF='#0044237' ALT=''>
+<AREA SHAPE='RECT' COORDS='3403,375,3496,438' HREF='#0046483' ALT=''>
+<AREA SHAPE='RECT' COORDS='4709,375,4805,438' HREF='#0044249' ALT=''>
+<AREA SHAPE='RECT' COORDS='4147,375,4224,438' HREF='#0044248' ALT=''>
+<AREA SHAPE='RECT' COORDS='3197,1197,3307,1245' HREF='#0017144' ALT=''>
+<AREA SHAPE='RECT' COORDS='3520,358,3605,455' HREF='#0034641' ALT=''>
+<AREA SHAPE='RECT' COORDS='3341,513,3435,575' HREF='#0006793' ALT=''>
+<AREA SHAPE='RECT' COORDS='3293,358,3379,455' HREF='#0006725' ALT=''>
+<AREA SHAPE='RECT' COORDS='2917,367,3011,447' HREF='#0006091' ALT=''>
+<AREA SHAPE='RECT' COORDS='3459,504,3581,584' HREF='#0072521' ALT=''>
+<AREA SHAPE='RECT' COORDS='3525,1053,3648,1115' HREF='#0006163' ALT=''>
+<AREA SHAPE='RECT' COORDS='2576,101,2675,181' HREF='#0071840' ALT=''>
+<AREA SHAPE='RECT' COORDS='2637,238,2728,301' HREF='#0016043' ALT=''>
+<AREA SHAPE='RECT' COORDS='561,915,644,978' HREF='#1903850' ALT=''>
+<AREA SHAPE='RECT' COORDS='499,1044,581,1124' HREF='#1903852' ALT=''>
+<AREA SHAPE='RECT' COORDS='371,504,453,584' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='424,633,515,730' HREF='#0051130' ALT=''>
+<AREA SHAPE='RECT' COORDS='428,779,519,859' HREF='#0010638' ALT=''>
+<AREA SHAPE='RECT' COORDS='859,657,992,705' HREF='#0032252' ALT=''>
+<AREA SHAPE='RECT' COORDS='879,795,1012,843' HREF='#0032253' ALT=''>
+<AREA SHAPE='RECT' COORDS='1321,650,1484,713' HREF='#0030705' ALT=''>
+<AREA SHAPE='RECT' COORDS='1351,795,1473,843' HREF='#0010970' ALT=''>
+<AREA SHAPE='RECT' COORDS='1159,1060,1297,1108' HREF='#0099518' ALT=''>
+<AREA SHAPE='RECT' COORDS='1331,923,1429,971' HREF='#0008088' ALT=''>
+<AREA SHAPE='RECT' COORDS='1323,1060,1437,1108' HREF='#0098930' ALT=''>
+<AREA SHAPE='RECT' COORDS='4329,1318,4412,1381' HREF='#0006538' ALT=''>
+<AREA SHAPE='RECT' COORDS='4609,915,4732,978' HREF='#0072330' ALT=''>
+<AREA SHAPE='RECT' COORDS='2685,915,2805,978' HREF='#0045110' ALT=''>
+<AREA SHAPE='RECT' COORDS='4408,650,4517,713' HREF='#0019752' ALT=''>
+<AREA SHAPE='RECT' COORDS='4681,787,4804,850' HREF='#0046394' ALT=''>
+<AREA SHAPE='RECT' COORDS='4540,787,4657,850' HREF='#0032787' ALT=''>
+<AREA SHAPE='RECT' COORDS='4275,787,4381,850' HREF='#0046395' ALT=''>
+<AREA SHAPE='RECT' COORDS='4083,779,4171,859' HREF='#0006520' ALT=''>
+<AREA SHAPE='RECT' COORDS='136,657,243,705' HREF='#0043269' ALT=''>
+<AREA SHAPE='RECT' COORDS='255,787,404,850' HREF='#0034765' ALT=''>
+<AREA SHAPE='RECT' COORDS='137,787,231,850' HREF='#0010959' ALT=''>
+<AREA SHAPE='RECT' COORDS='3360,641,3509,721' HREF='#0006796' ALT=''>
+<AREA SHAPE='RECT' COORDS='3663,787,3788,850' HREF='#0019693' ALT=''>
+<AREA SHAPE='RECT' COORDS='3099,1325,3211,1373' HREF='#0016310' ALT=''>
+<AREA SHAPE='RECT' COORDS='3551,779,3639,859' HREF='#0006753' ALT=''>
+<AREA SHAPE='RECT' COORDS='3803,907,3920,987' HREF='#0009123' ALT=''>
+<AREA SHAPE='RECT' COORDS='3803,1044,3920,1124' HREF='#0009161' ALT=''>
+<AREA SHAPE='RECT' COORDS='1861,657,1973,705' HREF='#0006812' ALT=''>
+<AREA SHAPE='RECT' COORDS='1753,795,1831,843' HREF='#0030001' ALT=''>
+<AREA SHAPE='RECT' COORDS='1991,795,2145,843' HREF='#0098655' ALT=''>
+<AREA SHAPE='RECT' COORDS='2401,650,2500,713' HREF='#0000226' ALT=''>
+<AREA SHAPE='RECT' COORDS='3359,1325,3468,1373' HREF='#0046034' ALT=''>
+<AREA SHAPE='RECT' COORDS='3099,1453,3211,1501' HREF='#0006119' ALT=''>
+<AREA SHAPE='RECT' COORDS='661,383,747,431' HREF='#0023051' ALT=''>
+<AREA SHAPE='RECT' COORDS='4227,1053,4333,1115' HREF='#1901606' ALT=''>
+<AREA SHAPE='RECT' COORDS='4227,1181,4333,1261' HREF='#0009065' ALT=''>
+<AREA SHAPE='RECT' COORDS='4523,375,4635,438' HREF='#0044282' ALT=''>
+<AREA SHAPE='RECT' COORDS='4280,513,4376,575' HREF='#0016054' ALT=''>
+<AREA SHAPE='RECT' COORDS='1017,650,1124,713' HREF='#0051650' ALT=''>
+<AREA SHAPE='RECT' COORDS='1039,923,1156,971' HREF='#1901950' ALT=''>
+<AREA SHAPE='RECT' COORDS='2169,787,2305,850' HREF='#0098660' ALT=''>
+<AREA SHAPE='RECT' COORDS='2203,907,2312,987' HREF='#0099587' ALT=''>
+<AREA SHAPE='RECT' COORDS='1991,915,2145,978' HREF='#0098662' ALT=''>
+<AREA SHAPE='RECT' COORDS='2619,520,2752,568' HREF='#0016050' ALT=''>
+<AREA SHAPE='RECT' COORDS='1509,520,1629,568' HREF='#0006836' ALT=''>
+<AREA SHAPE='RECT' COORDS='2765,787,2856,850' HREF='#0022607' ALT=''>
+<AREA SHAPE='RECT' COORDS='4147,504,4256,584' HREF='#1901565' ALT=''>
+<AREA SHAPE='RECT' COORDS='4205,907,4293,987' HREF='#0009063' ALT=''>
+<AREA SHAPE='RECT' COORDS='3552,915,3637,978' HREF='#0009117' ALT=''>
+<AREA SHAPE='RECT' COORDS='3672,1053,3779,1115' HREF='#0009259' ALT=''>
+<AREA SHAPE='RECT' COORDS='1084,1190,1225,1253' HREF='#0099519' ALT=''>
+<AREA SHAPE='RECT' COORDS='1249,1309,1364,1389' HREF='#1990049' ALT=''>
+<AREA SHAPE='RECT' COORDS='1392,1309,1507,1389' HREF='#1990048' ALT=''>
+<AREA SHAPE='RECT' COORDS='4400,520,4531,568' HREF='#0043436' ALT=''>
+<AREA SHAPE='RECT' COORDS='3605,504,3760,584' HREF='#0006139' ALT=''>
+<AREA SHAPE='RECT' COORDS='1272,513,1371,575' HREF='#0051651' ALT=''>
+<AREA SHAPE='RECT' COORDS='1804,1053,1919,1115' HREF='#0035725' ALT=''>
+<AREA SHAPE='RECT' COORDS='1739,1190,1867,1253' HREF='#0036376' ALT=''>
+<AREA SHAPE='RECT' COORDS='2445,520,2544,568' HREF='#0007010' ALT=''>
+<AREA SHAPE='RECT' COORDS='2459,5,2346,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='2423,117,2495,165' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='1275,117,1360,165' HREF='#0051179' ALT=''>
+<AREA SHAPE='RECT' COORDS='3851,117,3933,165' HREF='#0008152' ALT=''>
+<AREA SHAPE='RECT' COORDS='143,915,236,978' HREF='#0002028' ALT=''>
+<AREA SHAPE='RECT' COORDS='188,1044,324,1124' HREF='#1902305' ALT=''>
+<AREA SHAPE='RECT' COORDS='1309,375,1416,438' HREF='#0051649' ALT=''>
+<AREA SHAPE='RECT' COORDS='1395,520,1485,568' HREF='#0046907' ALT=''>
+<AREA SHAPE='RECT' COORDS='1388,1197,1511,1245' HREF='#0047496' ALT=''>
+<AREA SHAPE='RECT' COORDS='365,367,459,447' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='3247,907,3343,987' HREF='#0009141' ALT=''>
+<AREA SHAPE='RECT' COORDS='3376,1044,3501,1124' HREF='#0009144' ALT=''>
+<AREA SHAPE='RECT' COORDS='3243,1044,3352,1124' HREF='#0009199' ALT=''>
+<AREA SHAPE='RECT' COORDS='417,907,537,987' HREF='#0010822' ALT=''>
+<AREA SHAPE='RECT' COORDS='1249,1197,1364,1245' HREF='#0008090' ALT=''>
+<AREA SHAPE='RECT' COORDS='2501,238,2611,301' HREF='#0045103' ALT=''>
+<AREA SHAPE='RECT' COORDS='2665,657,2785,705' HREF='#0097435' ALT=''>
+<AREA SHAPE='RECT' COORDS='3040,504,3163,584' HREF='#0015980' ALT=''>
+<AREA SHAPE='RECT' COORDS='3061,657,3144,705' HREF='#0045333' ALT=''>
+<AREA SHAPE='RECT' COORDS='2112,1325,2197,1373' HREF='#0010107' ALT=''>
+<AREA SHAPE='RECT' COORDS='2179,229,2267,309' HREF='#0006928' ALT=''>
+<AREA SHAPE='RECT' COORDS='2157,383,2288,431' HREF='#0007018' ALT=''>
+<AREA SHAPE='RECT' COORDS='2637,383,2728,431' HREF='#0006996' ALT=''>
+<AREA SHAPE='RECT' COORDS='1755,383,1827,431' HREF='#0006810' ALT=''>
+<AREA SHAPE='RECT' COORDS='1653,520,1776,568' HREF='#0016192' ALT=''>
+<AREA SHAPE='RECT' COORDS='2211,520,2296,568' HREF='#0098657' ALT=''>
+<AREA SHAPE='RECT' COORDS='1955,520,2048,568' HREF='#0006811' ALT=''>
+<AREA SHAPE='RECT' COORDS='1800,520,1931,568' HREF='#0099111' ALT=''>
+<AREA SHAPE='RECT' COORDS='2072,520,2187,568' HREF='#0055085' ALT=''>
+<AREA SHAPE='RECT' COORDS='2189,657,2317,705' HREF='#0098739' ALT=''>
+<AREA SHAPE='RECT' COORDS='1309,245,1416,293' HREF='#0051234' ALT=''>
+<AREA SHAPE='RECT' COORDS='968,513,1075,575' HREF='#0051656' ALT=''>
+<AREA SHAPE='RECT' COORDS='2203,1044,2312,1124' HREF='#0098659' ALT=''>
+<AREA SHAPE='RECT' COORDS='2163,1437,2272,1517' HREF='#1990573' ALT=''>
+<AREA SHAPE='RECT' COORDS='483,375,565,438' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='477,504,568,584' HREF='#0051128' ALT=''>
+<AREA SHAPE='RECT' COORDS='2291,245,2421,293' HREF='#0007017' ALT=''>
+<AREA SHAPE='RECT' COORDS='3040,795,3168,843' HREF='#0009060' ALT=''>
+<AREA SHAPE='RECT' COORDS='4523,238,4635,301' HREF='#0044281' ALT=''>
+<AREA SHAPE='RECT' COORDS='4984,375,5096,438' HREF='#0044283' ALT=''>
+<AREA SHAPE='RECT' COORDS='3683,641,3837,721' HREF='#0055086' ALT=''>
+<AREA SHAPE='RECT' COORDS='1559,650,1681,713' HREF='#0099003' ALT=''>
+<AREA SHAPE='RECT' COORDS='267,650,397,713' HREF='#0034762' ALT=''>
+<AREA SHAPE='RECT' COORDS='3760,383,3888,431' HREF='#0044238' ALT=''>
+<AREA SHAPE='RECT' COORDS='4072,915,4181,978' HREF='#1901605' ALT=''>
+<AREA SHAPE='RECT' COORDS='1136,383,1235,431' HREF='#0051235' ALT=''>
+<AREA SHAPE='RECT' COORDS='871,375,972,438' HREF='#0042391' ALT=''>
+<AREA SHAPE='RECT' COORDS='1453,915,1576,978' HREF='#0072384' ALT=''>
+<AREA SHAPE='RECT' COORDS='3769,229,3855,309' HREF='#0006807' ALT=''>
+<AREA SHAPE='RECT' COORDS='3340,1181,3487,1261' HREF='#0009205' ALT=''>
+<AREA SHAPE='RECT' COORDS='264,907,379,987' HREF='#1904062' ALT=''>
+<AREA SHAPE='RECT' COORDS='4211,245,4288,293' HREF='#0009056' ALT=''>
+<AREA SHAPE='RECT' COORDS='2931,779,3016,859' HREF='#0022904' ALT=''>
+<AREA SHAPE='RECT' COORDS='2965,915,3083,978' HREF='#0019646' ALT=''>
+<AREA SHAPE='RECT' COORDS='2019,657,2155,705' HREF='#0034220' ALT=''>
+<AREA SHAPE='RECT' COORDS='27,513,112,575' HREF='#0060341' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,650,112,713' HREF='#0032386' ALT=''>
+<AREA SHAPE='RECT' COORDS='3515,1190,3659,1253' HREF='#0009150' ALT=''>
+<AREA SHAPE='RECT' COORDS='147,520,232,568' HREF='#0051049' ALT=''>
+<AREA SHAPE='RECT' COORDS='2973,1035,3075,1133' HREF='#0006123' ALT=''>
+<AREA SHAPE='RECT' COORDS='1149,245,1235,293' HREF='#0051641' ALT=''>
+<AREA SHAPE='RECT' COORDS='996,383,1081,431' HREF='#0051640' ALT=''>
+<AREA SHAPE='RECT' COORDS='1652,1060,1780,1108' HREF='#0140115' ALT=''>
+<AREA SHAPE='RECT' COORDS='1111,795,1188,843' HREF='#0016482' ALT=''>
+<AREA SHAPE='RECT' COORDS='1535,1197,1649,1245' HREF='#0008089' ALT=''>
+<AREA SHAPE='RECT' COORDS='3035,383,3168,431' HREF='#0055114' ALT=''>
+<AREA SHAPE='RECT' COORDS='2935,513,3012,575' HREF='#0022900' ALT=''>
+<AREA SHAPE='RECT' COORDS='4777,245,4873,293' HREF='#0009058' ALT=''>
+<AREA SHAPE='RECT' COORDS='539,650,629,713' HREF='#0033043' ALT=''>
+<AREA SHAPE='RECT' COORDS='543,787,663,850' HREF='#0010821' ALT=''>
+<AREA SHAPE='RECT' COORDS='813,520,944,568' HREF='#0051648' ALT=''>
+<AREA SHAPE='RECT' COORDS='4093,1044,4203,1124' HREF='#0009064' ALT=''>
+<AREA SHAPE='RECT' COORDS='139,383,240,431' HREF='#0032879' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="/static/analysis/data66/go/13/GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006091&amp;view=details' target="_blank">GO:0006091</a><a name=0006091></a></td>
+<td>generation of precursor metabolites and energy</td>
+<td  align=center>2.17E-9</td>
+<td  align=center>3.36E-5</td>
+<td  align=center>7.37 (20161,228,180,15)</td>
+<td>
+<a id="ctrl_elements_GO:0006091" href="javascript:toggle('elements_GO:0006091')">[+] Show genes</a><br>
+<div id="elements_GO:0006091" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Mt3  -  metallothionein 3<br>
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Aldoc  -  aldolase c, fructose-bisphosphate<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Pink1  -  pten induced putative kinase 1<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Pgk1  -  phosphoglycerate kinase 1<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022904&amp;view=details' target="_blank">GO:0022904</a><a name=0022904></a></td>
+<td>respiratory electron transport chain</td>
+<td  align=center>6.45E-7</td>
+<td  align=center>4.99E-3</td>
+<td  align=center>14.00 (20161,56,180,7)</td>
+<td>
+<a id="ctrl_elements_GO:0022904" href="javascript:toggle('elements_GO:0022904')">[+] Show genes</a><br>
+<div id="elements_GO:0022904" style="display:none"> <font size=1>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Pink1  -  pten induced putative kinase 1<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022900&amp;view=details' target="_blank">GO:0022900</a><a name=0022900></a></td>
+<td>electron transport chain</td>
+<td  align=center>1.04E-6</td>
+<td  align=center>5.37E-3</td>
+<td  align=center>13.07 (20161,60,180,7)</td>
+<td>
+<a id="ctrl_elements_GO:0022900" href="javascript:toggle('elements_GO:0022900')">[+] Show genes</a><br>
+<div id="elements_GO:0022900" style="display:none"> <font size=1>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Pink1  -  pten induced putative kinase 1<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098660&amp;view=details' target="_blank">GO:0098660</a><a name=0098660></a></td>
+<td>inorganic ion transmembrane transport</td>
+<td  align=center>1.63E-5</td>
+<td  align=center>6.3E-2</td>
+<td  align=center>3.67 (20161,458,180,15)</td>
+<td>
+<a id="ctrl_elements_GO:0098660" href="javascript:toggle('elements_GO:0098660')">[+] Show genes</a><br>
+<div id="elements_GO:0098660" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Tmem163  -  transmembrane protein 163<br>
+Gabra6  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 6<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051179&amp;view=details' target="_blank">GO:0051179</a><a name=0051179></a></td>
+<td>localization</td>
+<td  align=center>3.55E-5</td>
+<td  align=center>1.1E-1</td>
+<td  align=center>1.66 (20161,3847,180,57)</td>
+<td>
+<a id="ctrl_elements_GO:0051179" href="javascript:toggle('elements_GO:0051179')">[+] Show genes</a><br>
+<div id="elements_GO:0051179" style="display:none"> <font size=1>
+Scn4b  -  sodium channel, type iv, beta<br>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tmem163  -  transmembrane protein 163<br>
+Fabp5  -  fatty acid binding protein 5, epidermal<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Bard1  -  brca1 associated ring domain 1<br>
+Sncb  -  synuclein, beta<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Polr2m  -  polymerase (rna) ii (dna directed) polypeptide m<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Zc3h3  -  zinc finger ccch type containing 3<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Cep290  -  centrosomal protein 290<br>
+Cplx1  -  complexin 1<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Camk2g  -  calcium/calmodulin-dependent protein kinase ii gamma<br>
+Gabra6  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 6<br>
+Pink1  -  pten induced putative kinase 1<br>
+Nacc2  -  nucleus accumbens associated 2, ben and btb (poz) domain containing<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Eif5a2  -  eukaryotic translation initiation factor 5a2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Stx1b  -  syntaxin 1b<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Zfp385a  -  zinc finger protein 385a<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Trappc3  -  trafficking protein particle complex 3<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Dnm3  -  dynamin 3<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Ktn1  -  kinectin 1<br>
+Rit2  -  ras-like without caax 2<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Mt3  -  metallothionein 3<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Slc10a5  -  solute carrier family 10 (sodium/bile acid cotransporter family), member 5<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Epb4.1l3  -  erythrocyte protein band 4.1-like 3<br>
+Map4  -  microtubule-associated protein 4<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Kif1b  -  kinesin family member 1b<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Slc32a1  -  solute carrier family 32 (gaba vesicular transporter), member 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015980&amp;view=details' target="_blank">GO:0015980</a><a name=0015980></a></td>
+<td>energy derivation by oxidation of organic compounds</td>
+<td  align=center>3.64E-5</td>
+<td  align=center>9.37E-2</td>
+<td  align=center>7.69 (20161,102,180,7)</td>
+<td>
+<a id="ctrl_elements_GO:0015980" href="javascript:toggle('elements_GO:0015980')">[+] Show genes</a><br>
+<div id="elements_GO:0015980" style="display:none"> <font size=1>
+Mt3  -  metallothionein 3<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015672&amp;view=details' target="_blank">GO:0015672</a><a name=0015672></a></td>
+<td>monovalent inorganic cation transport</td>
+<td  align=center>3.73E-5</td>
+<td  align=center>8.23E-2</td>
+<td  align=center>4.14 (20161,325,180,12)</td>
+<td>
+<a id="ctrl_elements_GO:0015672" href="javascript:toggle('elements_GO:0015672')">[+] Show genes</a><br>
+<div id="elements_GO:0015672" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Slc10a5  -  solute carrier family 10 (sodium/bile acid cotransporter family), member 5<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008090&amp;view=details' target="_blank">GO:0008090</a><a name=0008090></a></td>
+<td>retrograde axonal transport</td>
+<td  align=center>3.96E-5</td>
+<td  align=center>7.66E-2</td>
+<td  align=center>20.36 (20161,22,180,4)</td>
+<td>
+<a id="ctrl_elements_GO:0008090" href="javascript:toggle('elements_GO:0008090')">[+] Show genes</a><br>
+<div id="elements_GO:0008090" style="display:none"> <font size=1>
+Kif1b  -  kinesin family member 1b<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042391&amp;view=details' target="_blank">GO:0042391</a><a name=0042391></a></td>
+<td>regulation of membrane potential</td>
+<td  align=center>4.99E-5</td>
+<td  align=center>8.56E-2</td>
+<td  align=center>3.52 (20161,446,180,14)</td>
+<td>
+<a id="ctrl_elements_GO:0042391" href="javascript:toggle('elements_GO:0042391')">[+] Show genes</a><br>
+<div id="elements_GO:0042391" style="display:none"> <font size=1>
+Scn4b  -  sodium channel, type iv, beta<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Pink1  -  pten induced putative kinase 1<br>
+Gabra6  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 6<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0055114&amp;view=details' target="_blank">GO:0055114</a><a name=0055114></a></td>
+<td>oxidation-reduction process</td>
+<td  align=center>5.31E-5</td>
+<td  align=center>8.2E-2</td>
+<td  align=center>4.32 (20161,285,180,11)</td>
+<td>
+<a id="ctrl_elements_GO:0055114" href="javascript:toggle('elements_GO:0055114')">[+] Show genes</a><br>
+<div id="elements_GO:0055114" style="display:none"> <font size=1>
+Mt3  -  metallothionein 3<br>
+Ndufb8  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex 8<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Prdx5  -  peroxiredoxin 5<br>
+Pink1  -  pten induced putative kinase 1<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0017144&amp;view=details' target="_blank">GO:0017144</a><a name=0017144></a></td>
+<td>drug metabolic process</td>
+<td  align=center>5.36E-5</td>
+<td  align=center>7.53E-2</td>
+<td  align=center>3.31 (20161,508,180,15)</td>
+<td>
+<a id="ctrl_elements_GO:0017144" href="javascript:toggle('elements_GO:0017144')">[+] Show genes</a><br>
+<div id="elements_GO:0017144" style="display:none"> <font size=1>
+Aldh1a1  -  aldehyde dehydrogenase family 1, subfamily a1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Qdpr  -  quinoid dihydropteridine reductase<br>
+Aldoc  -  aldolase c, fructose-bisphosphate<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Prdx1  -  peroxiredoxin 1<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Sncb  -  synuclein, beta<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Ethe1  -  ethylmalonic encephalopathy 1<br>
+Pgk1  -  phosphoglycerate kinase 1<br>
+Prdx5  -  peroxiredoxin 5<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Cyp2t4  -  cytochrome p450, family 2, subfamily t, polypeptide 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046394&amp;view=details' target="_blank">GO:0046394</a><a name=0046394></a></td>
+<td>carboxylic acid biosynthetic process</td>
+<td  align=center>5.48E-5</td>
+<td  align=center>7.05E-2</td>
+<td  align=center>4.31 (20161,286,180,11)</td>
+<td>
+<a id="ctrl_elements_GO:0046394" href="javascript:toggle('elements_GO:0046394')">[+] Show genes</a><br>
+<div id="elements_GO:0046394" style="display:none"> <font size=1>
+Aldh1a1  -  aldehyde dehydrogenase family 1, subfamily a1<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Aldoc  -  aldolase c, fructose-bisphosphate<br>
+Pgk1  -  phosphoglycerate kinase 1<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Acsbg1  -  acyl-coa synthetase bubblegum family member 1<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Glud1  -  glutamate dehydrogenase 1<br>
+Ldhb  -  lactate dehydrogenase b<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016053&amp;view=details' target="_blank">GO:0016053</a><a name=0016053></a></td>
+<td>organic acid biosynthetic process</td>
+<td  align=center>5.65E-5</td>
+<td  align=center>6.72E-2</td>
+<td  align=center>4.29 (20161,287,180,11)</td>
+<td>
+<a id="ctrl_elements_GO:0016053" href="javascript:toggle('elements_GO:0016053')">[+] Show genes</a><br>
+<div id="elements_GO:0016053" style="display:none"> <font size=1>
+Aldh1a1  -  aldehyde dehydrogenase family 1, subfamily a1<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Aldoc  -  aldolase c, fructose-bisphosphate<br>
+Pgk1  -  phosphoglycerate kinase 1<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Acsbg1  -  acyl-coa synthetase bubblegum family member 1<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Glud1  -  glutamate dehydrogenase 1<br>
+Ldhb  -  lactate dehydrogenase b<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051049&amp;view=details' target="_blank">GO:0051049</a><a name=0051049></a></td>
+<td>regulation of transport</td>
+<td  align=center>5.68E-5</td>
+<td  align=center>6.27E-2</td>
+<td  align=center>2.05 (20161,1806,180,33)</td>
+<td>
+<a id="ctrl_elements_GO:0051049" href="javascript:toggle('elements_GO:0051049')">[+] Show genes</a><br>
+<div id="elements_GO:0051049" style="display:none"> <font size=1>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Fabp5  -  fatty acid binding protein 5, epidermal<br>
+Bard1  -  brca1 associated ring domain 1<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Dnm3  -  dynamin 3<br>
+Cryab  -  crystallin, alpha b<br>
+Fgf11  -  fibroblast growth factor 11<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Plcb4  -  phospholipase c, beta 4<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Cep290  -  centrosomal protein 290<br>
+Rit2  -  ras-like without caax 2<br>
+Calm3  -  calmodulin 3<br>
+Cplx1  -  complexin 1<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Map1lc3b  -  microtubule-associated protein 1 light chain 3 beta<br>
+Pink1  -  pten induced putative kinase 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Glud1  -  glutamate dehydrogenase 1<br>
+Stx1b  -  syntaxin 1b<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006836&amp;view=details' target="_blank">GO:0006836</a><a name=0006836></a></td>
+<td>neurotransmitter transport</td>
+<td  align=center>5.9E-5</td>
+<td  align=center>6.08E-2</td>
+<td  align=center>6.01 (20161,149,180,8)</td>
+<td>
+<a id="ctrl_elements_GO:0006836" href="javascript:toggle('elements_GO:0006836')">[+] Show genes</a><br>
+<div id="elements_GO:0006836" style="display:none"> <font size=1>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Cplx1  -  complexin 1<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Stx1b  -  syntaxin 1b<br>
+Slc32a1  -  solute carrier family 32 (gaba vesicular transporter), member 1<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0065008&amp;view=details' target="_blank">GO:0065008</a><a name=0065008></a></td>
+<td>regulation of biological quality</td>
+<td  align=center>6.05E-5</td>
+<td  align=center>5.85E-2</td>
+<td  align=center>1.66 (20161,3639,180,54)</td>
+<td>
+<a id="ctrl_elements_GO:0065008" href="javascript:toggle('elements_GO:0065008')">[+] Show genes</a><br>
+<div id="elements_GO:0065008" style="display:none"> <font size=1>
+Scn4b  -  sodium channel, type iv, beta<br>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Prdx1  -  peroxiredoxin 1<br>
+Fabp5  -  fatty acid binding protein 5, epidermal<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Bard1  -  brca1 associated ring domain 1<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Polr2m  -  polymerase (rna) ii (dna directed) polypeptide m<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Esrrg  -  estrogen-related receptor gamma<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Aldh1a1  -  aldehyde dehydrogenase family 1, subfamily a1<br>
+Calm3  -  calmodulin 3<br>
+Cplx1  -  complexin 1<br>
+Rnd2  -  rho family gtpase 2<br>
+Map1lc3b  -  microtubule-associated protein 1 light chain 3 beta<br>
+Gabra6  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 6<br>
+Pink1  -  pten induced putative kinase 1<br>
+Usp8  -  ubiquitin specific peptidase 8<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Prdx5  -  peroxiredoxin 5<br>
+Rhog  -  ras homolog gene family, member g<br>
+Glud1  -  glutamate dehydrogenase 1<br>
+Stx1b  -  syntaxin 1b<br>
+Zfp385a  -  zinc finger protein 385a<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Csdc2  -  cold shock domain containing c2, rna binding<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Dnm3  -  dynamin 3<br>
+Cryab  -  crystallin, alpha b<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Anapc2  -  anaphase promoting complex subunit 2<br>
+Rit2  -  ras-like without caax 2<br>
+Mt3  -  metallothionein 3<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Epb4.1l3  -  erythrocyte protein band 4.1-like 3<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007017&amp;view=details' target="_blank">GO:0007017</a><a name=0007017></a></td>
+<td>microtubule-based process</td>
+<td  align=center>6.2E-5</td>
+<td  align=center>5.64E-2</td>
+<td  align=center>2.98 (20161,639,180,17)</td>
+<td>
+<a id="ctrl_elements_GO:0007017" href="javascript:toggle('elements_GO:0007017')">[+] Show genes</a><br>
+<div id="elements_GO:0007017" style="display:none"> <font size=1>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Map4  -  microtubule-associated protein 4<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Dynll2  -  dynein light chain lc8-type 2<br>
+Kif1a  -  kinesin family member 1a<br>
+Map7d2  -  map7 domain containing 2<br>
+Kif1b  -  kinesin family member 1b<br>
+Kif21a  -  kinesin family member 21a<br>
+Cryab  -  crystallin, alpha b<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Fgfr1op  -  fgfr1 oncogene partner<br>
+Eml2  -  echinoderm microtubule associated protein like 2<br>
+Cep290  -  centrosomal protein 290<br>
+Ktn1  -  kinectin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032879&amp;view=details' target="_blank">GO:0032879</a><a name=0032879></a></td>
+<td>regulation of localization</td>
+<td  align=center>7.13E-5</td>
+<td  align=center>6.12E-2</td>
+<td  align=center>1.79 (20161,2758,180,44)</td>
+<td>
+<a id="ctrl_elements_GO:0032879" href="javascript:toggle('elements_GO:0032879')">[+] Show genes</a><br>
+<div id="elements_GO:0032879" style="display:none"> <font size=1>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Fabp5  -  fatty acid binding protein 5, epidermal<br>
+Il33  -  interleukin 33<br>
+Bard1  -  brca1 associated ring domain 1<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Fgf1  -  fibroblast growth factor 1<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Dnm3  -  dynamin 3<br>
+Cryab  -  crystallin, alpha b<br>
+Fgf11  -  fibroblast growth factor 11<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Plcb4  -  phospholipase c, beta 4<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Fgfr1op  -  fgfr1 oncogene partner<br>
+Cep290  -  centrosomal protein 290<br>
+Rit2  -  ras-like without caax 2<br>
+Scrt1  -  scratch homolog 1, zinc finger protein (drosophila)<br>
+Calm3  -  calmodulin 3<br>
+Cplx1  -  complexin 1<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Map1lc3b  -  microtubule-associated protein 1 light chain 3 beta<br>
+Camk2g  -  calcium/calmodulin-dependent protein kinase ii gamma<br>
+Pink1  -  pten induced putative kinase 1<br>
+Usp8  -  ubiquitin specific peptidase 8<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Nexn  -  nexilin<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Rhog  -  ras homolog gene family, member g<br>
+Glud1  -  glutamate dehydrogenase 1<br>
+Stx1b  -  syntaxin 1b<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098662&amp;view=details' target="_blank">GO:0098662</a><a name=0098662></a></td>
+<td>inorganic cation transmembrane transport</td>
+<td  align=center>7.82E-5</td>
+<td  align=center>6.36E-2</td>
+<td  align=center>3.58 (20161,407,180,13)</td>
+<td>
+<a id="ctrl_elements_GO:0098662" href="javascript:toggle('elements_GO:0098662')">[+] Show genes</a><br>
+<div id="elements_GO:0098662" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Tmem163  -  transmembrane protein 163<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060052&amp;view=details' target="_blank">GO:0060052</a><a name=0060052></a></td>
+<td>neurofilament cytoskeleton organization</td>
+<td  align=center>8.02E-5</td>
+<td  align=center>6.2E-2</td>
+<td  align=center>33.60 (20161,10,180,3)</td>
+<td>
+<a id="ctrl_elements_GO:0060052" href="javascript:toggle('elements_GO:0060052')">[+] Show genes</a><br>
+<div id="elements_GO:0060052" style="display:none"> <font size=1>
+Ina  -  internexin neuronal intermediate filament protein, alpha<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Nefl  -  neurofilament, light polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006123&amp;view=details' target="_blank">GO:0006123</a><a name=0006123></a></td>
+<td>mitochondrial electron transport, cytochrome c to oxygen</td>
+<td  align=center>8.02E-5</td>
+<td  align=center>5.9E-2</td>
+<td  align=center>33.60 (20161,10,180,3)</td>
+<td>
+<a id="ctrl_elements_GO:0006123" href="javascript:toggle('elements_GO:0006123')">[+] Show genes</a><br>
+<div id="elements_GO:0006123" style="display:none"> <font size=1>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019646&amp;view=details' target="_blank">GO:0019646</a><a name=0019646></a></td>
+<td>aerobic electron transport chain</td>
+<td  align=center>8.02E-5</td>
+<td  align=center>5.63E-2</td>
+<td  align=center>33.60 (20161,10,180,3)</td>
+<td>
+<a id="ctrl_elements_GO:0019646" href="javascript:toggle('elements_GO:0019646')">[+] Show genes</a><br>
+<div id="elements_GO:0019646" style="display:none"> <font size=1>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006810&amp;view=details' target="_blank">GO:0006810</a><a name=0006810></a></td>
+<td>transport</td>
+<td  align=center>9.41E-5</td>
+<td  align=center>6.33E-2</td>
+<td  align=center>1.71 (20161,3148,180,48)</td>
+<td>
+<a id="ctrl_elements_GO:0006810" href="javascript:toggle('elements_GO:0006810')">[+] Show genes</a><br>
+<div id="elements_GO:0006810" style="display:none"> <font size=1>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Tmem163  -  transmembrane protein 163<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Fabp5  -  fatty acid binding protein 5, epidermal<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Sncb  -  synuclein, beta<br>
+Trappc3  -  trafficking protein particle complex 3<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Dnm3  -  dynamin 3<br>
+Zc3h3  -  zinc finger ccch type containing 3<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Ktn1  -  kinectin 1<br>
+Cep290  -  centrosomal protein 290<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Mt3  -  metallothionein 3<br>
+Cplx1  -  complexin 1<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Slc10a5  -  solute carrier family 10 (sodium/bile acid cotransporter family), member 5<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Camk2g  -  calcium/calmodulin-dependent protein kinase ii gamma<br>
+Gabra6  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 6<br>
+Pink1  -  pten induced putative kinase 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Kif1b  -  kinesin family member 1b<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Eif5a2  -  eukaryotic translation initiation factor 5a2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Stx1b  -  syntaxin 1b<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Slc32a1  -  solute carrier family 32 (gaba vesicular transporter), member 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051651&amp;view=details' target="_blank">GO:0051651</a><a name=0051651></a></td>
+<td>maintenance of location in cell</td>
+<td  align=center>1.06E-4</td>
+<td  align=center>6.85E-2</td>
+<td  align=center>8.00 (20161,84,180,6)</td>
+<td>
+<a id="ctrl_elements_GO:0051651" href="javascript:toggle('elements_GO:0051651')">[+] Show genes</a><br>
+<div id="elements_GO:0051651" style="display:none"> <font size=1>
+Polr2m  -  polymerase (rna) ii (dna directed) polypeptide m<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Bard1  -  brca1 associated ring domain 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+Rit2  -  ras-like without caax 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035725&amp;view=details' target="_blank">GO:0035725</a><a name=0035725></a></td>
+<td>sodium ion transmembrane transport</td>
+<td  align=center>1.29E-4</td>
+<td  align=center>7.99E-2</td>
+<td  align=center>7.72 (20161,87,180,6)</td>
+<td>
+<a id="ctrl_elements_GO:0035725" href="javascript:toggle('elements_GO:0035725')">[+] Show genes</a><br>
+<div id="elements_GO:0035725" style="display:none"> <font size=1>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0036376&amp;view=details' target="_blank">GO:0036376</a><a name=0036376></a></td>
+<td>sodium ion export across plasma membrane</td>
+<td  align=center>1.45E-4</td>
+<td  align=center>8.63E-2</td>
+<td  align=center>28.00 (20161,12,180,3)</td>
+<td>
+<a id="ctrl_elements_GO:0036376" href="javascript:toggle('elements_GO:0036376')">[+] Show genes</a><br>
+<div id="elements_GO:0036376" style="display:none"> <font size=1>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051234&amp;view=details' target="_blank">GO:0051234</a><a name=0051234></a></td>
+<td>establishment of localization</td>
+<td  align=center>1.59E-4</td>
+<td  align=center>9.09E-2</td>
+<td  align=center>1.66 (20161,3307,180,49)</td>
+<td>
+<a id="ctrl_elements_GO:0051234" href="javascript:toggle('elements_GO:0051234')">[+] Show genes</a><br>
+<div id="elements_GO:0051234" style="display:none"> <font size=1>
+Scn4b  -  sodium channel, type iv, beta<br>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Tmem163  -  transmembrane protein 163<br>
+Fabp5  -  fatty acid binding protein 5, epidermal<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Sncb  -  synuclein, beta<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Zc3h3  -  zinc finger ccch type containing 3<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Cep290  -  centrosomal protein 290<br>
+Cplx1  -  complexin 1<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Camk2g  -  calcium/calmodulin-dependent protein kinase ii gamma<br>
+Gabra6  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 6<br>
+Pink1  -  pten induced putative kinase 1<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Eif5a2  -  eukaryotic translation initiation factor 5a2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Stx1b  -  syntaxin 1b<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Trappc3  -  trafficking protein particle complex 3<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Dnm3  -  dynamin 3<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Ktn1  -  kinectin 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Mt3  -  metallothionein 3<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Slc10a5  -  solute carrier family 10 (sodium/bile acid cotransporter family), member 5<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Map4  -  microtubule-associated protein 4<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Kif1b  -  kinesin family member 1b<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Slc32a1  -  solute carrier family 32 (gaba vesicular transporter), member 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098655&amp;view=details' target="_blank">GO:0098655</a><a name=0098655></a></td>
+<td>cation transmembrane transport</td>
+<td  align=center>1.73E-4</td>
+<td  align=center>9.56E-2</td>
+<td  align=center>3.30 (20161,441,180,13)</td>
+<td>
+<a id="ctrl_elements_GO:0098655" href="javascript:toggle('elements_GO:0098655')">[+] Show genes</a><br>
+<div id="elements_GO:0098655" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Tmem163  -  transmembrane protein 163<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006812&amp;view=details' target="_blank">GO:0006812</a><a name=0006812></a></td>
+<td>cation transport</td>
+<td  align=center>1.86E-4</td>
+<td  align=center>9.89E-2</td>
+<td  align=center>2.72 (20161,700,180,17)</td>
+<td>
+<a id="ctrl_elements_GO:0006812" href="javascript:toggle('elements_GO:0006812')">[+] Show genes</a><br>
+<div id="elements_GO:0006812" style="display:none"> <font size=1>
+Mt3  -  metallothionein 3<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Slc10a5  -  solute carrier family 10 (sodium/bile acid cotransporter family), member 5<br>
+Tmem163  -  transmembrane protein 163<br>
+Camk2g  -  calcium/calmodulin-dependent protein kinase ii gamma<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Slc32a1  -  solute carrier family 32 (gaba vesicular transporter), member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0002028&amp;view=details' target="_blank">GO:0002028</a><a name=0002028></a></td>
+<td>regulation of sodium ion transport</td>
+<td  align=center>1.87E-4</td>
+<td  align=center>9.62E-2</td>
+<td  align=center>7.23 (20161,93,180,6)</td>
+<td>
+<a id="ctrl_elements_GO:0002028" href="javascript:toggle('elements_GO:0002028')">[+] Show genes</a><br>
+<div id="elements_GO:0002028" style="display:none"> <font size=1>
+Scn4b  -  sodium channel, type iv, beta<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Fgf11  -  fibroblast growth factor 11<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032386&amp;view=details' target="_blank">GO:0032386</a><a name=0032386></a></td>
+<td>regulation of intracellular transport</td>
+<td  align=center>1.93E-4</td>
+<td  align=center>9.64E-2</td>
+<td  align=center>3.26 (20161,446,180,13)</td>
+<td>
+<a id="ctrl_elements_GO:0032386" href="javascript:toggle('elements_GO:0032386')">[+] Show genes</a><br>
+<div id="elements_GO:0032386" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Ank3  -  ankyrin 3, epithelial<br>
+Pink1  -  pten induced putative kinase 1<br>
+Bard1  -  brca1 associated ring domain 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Cryab  -  crystallin, alpha b<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Stx1b  -  syntaxin 1b<br>
+Cep290  -  centrosomal protein 290<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044283&amp;view=details' target="_blank">GO:0044283</a><a name=0044283></a></td>
+<td>small molecule biosynthetic process</td>
+<td  align=center>2.04E-4</td>
+<td  align=center>9.85E-2</td>
+<td  align=center>3.07 (20161,510,180,14)</td>
+<td>
+<a id="ctrl_elements_GO:0044283" href="javascript:toggle('elements_GO:0044283')">[+] Show genes</a><br>
+<div id="elements_GO:0044283" style="display:none"> <font size=1>
+Aldh1a1  -  aldehyde dehydrogenase family 1, subfamily a1<br>
+Enpp5  -  ectonucleotide pyrophosphatase/phosphodiesterase 5<br>
+Qdpr  -  quinoid dihydropteridine reductase<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Aldoc  -  aldolase c, fructose-bisphosphate<br>
+Acsbg1  -  acyl-coa synthetase bubblegum family member 1<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Ldhb  -  lactate dehydrogenase b<br>
+Gatm  -  glycine amidinotransferase (l-arginine:glycine amidinotransferase)<br>
+Ppip5k1  -  diphosphoinositol pentakisphosphate kinase 1<br>
+Pgk1  -  phosphoglycerate kinase 1<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Glud1  -  glutamate dehydrogenase 1<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903852&amp;view=details' target="_blank">GO:1903852</a><a name=1903852></a></td>
+<td>positive regulation of cristae formation</td>
+<td  align=center>2.36E-4</td>
+<td  align=center>1.11E-1</td>
+<td  align=center>74.67 (20161,3,180,2)</td>
+<td>
+<a id="ctrl_elements_GO:1903852" href="javascript:toggle('elements_GO:1903852')">[+] Show genes</a><br>
+<div id="elements_GO:1903852" style="display:none"> <font size=1>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Pink1  -  pten induced putative kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033693&amp;view=details' target="_blank">GO:0033693</a><a name=0033693></a></td>
+<td>neurofilament bundle assembly</td>
+<td  align=center>2.36E-4</td>
+<td  align=center>1.07E-1</td>
+<td  align=center>74.67 (20161,3,180,2)</td>
+<td>
+<a id="ctrl_elements_GO:0033693" href="javascript:toggle('elements_GO:0033693')">[+] Show genes</a><br>
+<div id="elements_GO:0033693" style="display:none"> <font size=1>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Nefl  -  neurofilament, light polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032252&amp;view=details' target="_blank">GO:0032252</a><a name=0032252></a></td>
+<td>secretory granule localization</td>
+<td  align=center>2.37E-4</td>
+<td  align=center>1.05E-1</td>
+<td  align=center>24.00 (20161,14,180,3)</td>
+<td>
+<a id="ctrl_elements_GO:0032252" href="javascript:toggle('elements_GO:0032252')">[+] Show genes</a><br>
+<div id="elements_GO:0032252" style="display:none"> <font size=1>
+Kif1b  -  kinesin family member 1b<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000226&amp;view=details' target="_blank">GO:0000226</a><a name=0000226></a></td>
+<td>microtubule cytoskeleton organization</td>
+<td  align=center>2.51E-4</td>
+<td  align=center>1.08E-1</td>
+<td  align=center>3.38 (20161,398,180,12)</td>
+<td>
+<a id="ctrl_elements_GO:0000226" href="javascript:toggle('elements_GO:0000226')">[+] Show genes</a><br>
+<div id="elements_GO:0000226" style="display:none"> <font size=1>
+Map7d2  -  map7 domain containing 2<br>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Cryab  -  crystallin, alpha b<br>
+Map4  -  microtubule-associated protein 4<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Fgfr1op  -  fgfr1 oncogene partner<br>
+Eml2  -  echinoderm microtubule associated protein like 2<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Cep290  -  centrosomal protein 290<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902305&amp;view=details' target="_blank">GO:1902305</a><a name=1902305></a></td>
+<td>regulation of sodium ion transmembrane transport</td>
+<td  align=center>2.67E-4</td>
+<td  align=center>1.12E-1</td>
+<td  align=center>8.75 (20161,64,180,5)</td>
+<td>
+<a id="ctrl_elements_GO:1902305" href="javascript:toggle('elements_GO:1902305')">[+] Show genes</a><br>
+<div id="elements_GO:1902305" style="display:none"> <font size=1>
+Scn4b  -  sodium channel, type iv, beta<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Fgf11  -  fibroblast growth factor 11<br>
+Ank3  -  ankyrin 3, epithelial<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032507&amp;view=details' target="_blank">GO:0032507</a><a name=0032507></a></td>
+<td>maintenance of protein location in cell</td>
+<td  align=center>3.31E-4</td>
+<td  align=center>1.35E-1</td>
+<td  align=center>8.36 (20161,67,180,5)</td>
+<td>
+<a id="ctrl_elements_GO:0032507" href="javascript:toggle('elements_GO:0032507')">[+] Show genes</a><br>
+<div id="elements_GO:0032507" style="display:none"> <font size=1>
+Ank3  -  ankyrin 3, epithelial<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Bard1  -  brca1 associated ring domain 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+Rit2  -  ras-like without caax 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034220&amp;view=details' target="_blank">GO:0034220</a><a name=0034220></a></td>
+<td>ion transmembrane transport</td>
+<td  align=center>3.36E-4</td>
+<td  align=center>1.33E-1</td>
+<td  align=center>2.80 (20161,601,180,15)</td>
+<td>
+<a id="ctrl_elements_GO:0034220" href="javascript:toggle('elements_GO:0034220')">[+] Show genes</a><br>
+<div id="elements_GO:0034220" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Tmem163  -  transmembrane protein 163<br>
+Gabra6  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 6<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072330&amp;view=details' target="_blank">GO:0072330</a><a name=0072330></a></td>
+<td>monocarboxylic acid biosynthetic process</td>
+<td  align=center>3.51E-4</td>
+<td  align=center>1.35E-1</td>
+<td  align=center>4.64 (20161,193,180,8)</td>
+<td>
+<a id="ctrl_elements_GO:0072330" href="javascript:toggle('elements_GO:0072330')">[+] Show genes</a><br>
+<div id="elements_GO:0072330" style="display:none"> <font size=1>
+Aldh1a1  -  aldehyde dehydrogenase family 1, subfamily a1<br>
+Aldoc  -  aldolase c, fructose-bisphosphate<br>
+Pgk1  -  phosphoglycerate kinase 1<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Acsbg1  -  acyl-coa synthetase bubblegum family member 1<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Ldhb  -  lactate dehydrogenase b<br>
+Scd2  -  stearoyl-coenzyme a desaturase 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030001&amp;view=details' target="_blank">GO:0030001</a><a name=0030001></a></td>
+<td>metal ion transport</td>
+<td  align=center>4.14E-4</td>
+<td  align=center>1.56E-1</td>
+<td  align=center>2.87 (20161,547,180,14)</td>
+<td>
+<a id="ctrl_elements_GO:0030001" href="javascript:toggle('elements_GO:0030001')">[+] Show genes</a><br>
+<div id="elements_GO:0030001" style="display:none"> <font size=1>
+Mt3  -  metallothionein 3<br>
+Kcnc1  -  potassium voltage gated channel, shaw-related subfamily, member 1<br>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Slc10a5  -  solute carrier family 10 (sodium/bile acid cotransporter family), member 5<br>
+Tmem163  -  transmembrane protein 163<br>
+Camk2g  -  calcium/calmodulin-dependent protein kinase ii gamma<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006119&amp;view=details' target="_blank">GO:0006119</a><a name=0006119></a></td>
+<td>oxidative phosphorylation</td>
+<td  align=center>4.34E-4</td>
+<td  align=center>1.6E-1</td>
+<td  align=center>19.77 (20161,17,180,3)</td>
+<td>
+<a id="ctrl_elements_GO:0006119" href="javascript:toggle('elements_GO:0006119')">[+] Show genes</a><br>
+<div id="elements_GO:0006119" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0140115&amp;view=details' target="_blank">GO:0140115</a><a name=0140115></a></td>
+<td>export across plasma membrane</td>
+<td  align=center>4.37E-4</td>
+<td  align=center>1.57E-1</td>
+<td  align=center>11.20 (20161,40,180,4)</td>
+<td>
+<a id="ctrl_elements_GO:0140115" href="javascript:toggle('elements_GO:0140115')">[+] Show genes</a><br>
+<div id="elements_GO:0140115" style="display:none"> <font size=1>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099177&amp;view=details' target="_blank">GO:0099177</a><a name=0099177></a></td>
+<td>regulation of trans-synaptic signaling</td>
+<td  align=center>4.45E-4</td>
+<td  align=center>1.56E-1</td>
+<td  align=center>2.85 (20161,551,180,14)</td>
+<td>
+<a id="ctrl_elements_GO:0099177" href="javascript:toggle('elements_GO:0099177')">[+] Show genes</a><br>
+<div id="elements_GO:0099177" style="display:none"> <font size=1>
+Map1a  -  microtubule-associated protein 1 a<br>
+Cplx1  -  complexin 1<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Fabp5  -  fatty acid binding protein 5, epidermal<br>
+Pink1  -  pten induced putative kinase 1<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+Abat  -  4-aminobutyrate aminotransferase<br>
+Usp8  -  ubiquitin specific peptidase 8<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Plcb4  -  phospholipase c, beta 4<br>
+Stx1b  -  syntaxin 1b<br>
+Anapc2  -  anaphase promoting complex subunit 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903850&amp;view=details' target="_blank">GO:1903850</a><a name=1903850></a></td>
+<td>regulation of cristae formation</td>
+<td  align=center>4.7E-4</td>
+<td  align=center>1.61E-1</td>
+<td  align=center>56.00 (20161,4,180,2)</td>
+<td>
+<a id="ctrl_elements_GO:1903850" href="javascript:toggle('elements_GO:1903850')">[+] Show genes</a><br>
+<div id="elements_GO:1903850" style="display:none"> <font size=1>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Pink1  -  pten induced putative kinase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990048&amp;view=details' target="_blank">GO:1990048</a><a name=1990048></a></td>
+<td>anterograde neuronal dense core vesicle transport</td>
+<td  align=center>4.7E-4</td>
+<td  align=center>1.58E-1</td>
+<td  align=center>56.00 (20161,4,180,2)</td>
+<td>
+<a id="ctrl_elements_GO:1990048" href="javascript:toggle('elements_GO:1990048')">[+] Show genes</a><br>
+<div id="elements_GO:1990048" style="display:none"> <font size=1>
+Kif1b  -  kinesin family member 1b<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006996&amp;view=details' target="_blank">GO:0006996</a><a name=0006996></a></td>
+<td>organelle organization</td>
+<td  align=center>5.01E-4</td>
+<td  align=center>1.65E-1</td>
+<td  align=center>1.80 (20161,2116,180,34)</td>
+<td>
+<a id="ctrl_elements_GO:0006996" href="javascript:toggle('elements_GO:0006996')">[+] Show genes</a><br>
+<div id="elements_GO:0006996" style="display:none"> <font size=1>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Micalcl  -  mical c-terminal like<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Thsd7a  -  thrombospondin, type i, domain containing 7a<br>
+Dnm3  -  dynamin 3<br>
+Cryab  -  crystallin, alpha b<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Fgfr1op  -  fgfr1 oncogene partner<br>
+Eml2  -  echinoderm microtubule associated protein like 2<br>
+Cep290  -  centrosomal protein 290<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Epb4.1l3  -  erythrocyte protein band 4.1-like 3<br>
+Map4  -  microtubule-associated protein 4<br>
+Rnd2  -  rho family gtpase 2<br>
+Map1lc3b  -  microtubule-associated protein 1 light chain 3 beta<br>
+Pink1  -  pten induced putative kinase 1<br>
+Usp8  -  ubiquitin specific peptidase 8<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Atxn10  -  ataxin 10<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Dynll2  -  dynein light chain lc8-type 2<br>
+Map7d2  -  map7 domain containing 2<br>
+Ina  -  internexin neuronal intermediate filament protein, alpha<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Rhog  -  ras homolog gene family, member g<br>
+Stx1b  -  syntaxin 1b<br>
+Zfp385a  -  zinc finger protein 385a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990573&amp;view=details' target="_blank">GO:1990573</a><a name=1990573></a></td>
+<td>potassium ion import across plasma membrane</td>
+<td  align=center>5.28E-4</td>
+<td  align=center>1.7E-1</td>
+<td  align=center>10.67 (20161,42,180,4)</td>
+<td>
+<a id="ctrl_elements_GO:1990573" href="javascript:toggle('elements_GO:1990573')">[+] Show genes</a><br>
+<div id="elements_GO:1990573" style="display:none"> <font size=1>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010107&amp;view=details' target="_blank">GO:0010107</a><a name=0010107></a></td>
+<td>potassium ion import</td>
+<td  align=center>5.28E-4</td>
+<td  align=center>1.66E-1</td>
+<td  align=center>10.67 (20161,42,180,4)</td>
+<td>
+<a id="ctrl_elements_GO:0010107" href="javascript:toggle('elements_GO:0010107')">[+] Show genes</a><br>
+<div id="elements_GO:0010107" style="display:none"> <font size=1>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006814&amp;view=details' target="_blank">GO:0006814</a><a name=0006814></a></td>
+<td>sodium ion transport</td>
+<td  align=center>5.53E-4</td>
+<td  align=center>1.71E-1</td>
+<td  align=center>4.96 (20161,158,180,7)</td>
+<td>
+<a id="ctrl_elements_GO:0006814" href="javascript:toggle('elements_GO:0006814')">[+] Show genes</a><br>
+<div id="elements_GO:0006814" style="display:none"> <font size=1>
+Slc6a11  -  solute carrier family 6 (neurotransmitter transporter, gaba), member 11<br>
+Scn4b  -  sodium channel, type iv, beta<br>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Slc10a5  -  solute carrier family 10 (sodium/bile acid cotransporter family), member 5<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Slc4a4  -  solute carrier family 4 (anion exchanger), member 4<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045333&amp;view=details' target="_blank">GO:0045333</a><a name=0045333></a></td>
+<td>cellular respiration</td>
+<td  align=center>5.78E-4</td>
+<td  align=center>1.75E-1</td>
+<td  align=center>10.42 (20161,43,180,4)</td>
+<td>
+<a id="ctrl_elements_GO:0045333" href="javascript:toggle('elements_GO:0045333')">[+] Show genes</a><br>
+<div id="elements_GO:0045333" style="display:none"> <font size=1>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Ndufs4  -  nadh dehydrogenase (ubiquinone) fe-s protein 4<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046034&amp;view=details' target="_blank">GO:0046034</a><a name=0046034></a></td>
+<td>ATP metabolic process</td>
+<td  align=center>5.87E-4</td>
+<td  align=center>1.74E-1</td>
+<td  align=center>5.84 (20161,115,180,6)</td>
+<td>
+<a id="ctrl_elements_GO:0046034" href="javascript:toggle('elements_GO:0046034')">[+] Show genes</a><br>
+<div id="elements_GO:0046034" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Aldoc  -  aldolase c, fructose-bisphosphate<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Pgk1  -  phosphoglycerate kinase 1<br>
+Atp5b  -  atp synthase, h+ transporting mitochondrial f1 complex, beta subunit<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0007010&amp;view=details' target="_blank">GO:0007010</a><a name=0007010></a></td>
+<td>cytoskeleton organization</td>
+<td  align=center>6.74E-4</td>
+<td  align=center>1.97E-1</td>
+<td  align=center>2.36 (20161,856,180,18)</td>
+<td>
+<a id="ctrl_elements_GO:0007010" href="javascript:toggle('elements_GO:0007010')">[+] Show genes</a><br>
+<div id="elements_GO:0007010" style="display:none"> <font size=1>
+Tnks  -  tankyrase, trf1-interacting ankyrin-related adp-ribose polymerase<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Micalcl  -  mical c-terminal like<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Epb4.1l3  -  erythrocyte protein band 4.1-like 3<br>
+Map4  -  microtubule-associated protein 4<br>
+Rnd2  -  rho family gtpase 2<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Map7d2  -  map7 domain containing 2<br>
+Ina  -  internexin neuronal intermediate filament protein, alpha<br>
+Thsd7a  -  thrombospondin, type i, domain containing 7a<br>
+Cryab  -  crystallin, alpha b<br>
+Nefh  -  neurofilament, heavy polypeptide<br>
+Tubb4a  -  tubulin, beta 4a class iva<br>
+Rhog  -  ras homolog gene family, member g<br>
+Fgfr1op  -  fgfr1 oncogene partner<br>
+Eml2  -  echinoderm microtubule associated protein like 2<br>
+Cep290  -  centrosomal protein 290<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008089&amp;view=details' target="_blank">GO:0008089</a><a name=0008089></a></td>
+<td>anterograde axonal transport</td>
+<td  align=center>7.48E-4</td>
+<td  align=center>2.14E-1</td>
+<td  align=center>9.74 (20161,46,180,4)</td>
+<td>
+<a id="ctrl_elements_GO:0008089" href="javascript:toggle('elements_GO:0008089')">[+] Show genes</a><br>
+<div id="elements_GO:0008089" style="display:none"> <font size=1>
+Kif1b  -  kinesin family member 1b<br>
+Map1a  -  microtubule-associated protein 1 a<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006538&amp;view=details' target="_blank">GO:0006538</a><a name=0006538></a></td>
+<td>glutamate catabolic process</td>
+<td  align=center>7.79E-4</td>
+<td  align=center>2.19E-1</td>
+<td  align=center>44.80 (20161,5,180,2)</td>
+<td>
+<a id="ctrl_elements_GO:0006538" href="javascript:toggle('elements_GO:0006538')">[+] Show genes</a><br>
+<div id="elements_GO:0006538" style="display:none"> <font size=1>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Glud1  -  glutamate dehydrogenase 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990049&amp;view=details' target="_blank">GO:1990049</a><a name=1990049></a></td>
+<td>retrograde neuronal dense core vesicle transport</td>
+<td  align=center>7.79E-4</td>
+<td  align=center>2.15E-1</td>
+<td  align=center>44.80 (20161,5,180,2)</td>
+<td>
+<a id="ctrl_elements_GO:1990049" href="javascript:toggle('elements_GO:1990049')">[+] Show genes</a><br>
+<div id="elements_GO:1990049" style="display:none"> <font size=1>
+Kif1b  -  kinesin family member 1b<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016050&amp;view=details' target="_blank">GO:0016050</a><a name=0016050></a></td>
+<td>vesicle organization</td>
+<td  align=center>8.07E-4</td>
+<td  align=center>2.19E-1</td>
+<td  align=center>4.09 (20161,219,180,8)</td>
+<td>
+<a id="ctrl_elements_GO:0016050" href="javascript:toggle('elements_GO:0016050')">[+] Show genes</a><br>
+<div id="elements_GO:0016050" style="display:none"> <font size=1>
+Dnm3  -  dynamin 3<br>
+Vamp1  -  vesicle-associated membrane protein 1<br>
+Serpine2  -  serine (or cysteine) peptidase inhibitor, clade e, member 2<br>
+Pip4k2a  -  phosphatidylinositol-5-phosphate 4-kinase, type ii, alpha<br>
+Usp8  -  ubiquitin specific peptidase 8<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Zfp385a  -  zinc finger protein 385a<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051640&amp;view=details' target="_blank">GO:0051640</a><a name=0051640></a></td>
+<td>organelle localization</td>
+<td  align=center>8.25E-4</td>
+<td  align=center>2.2E-1</td>
+<td  align=center>2.95 (20161,455,180,12)</td>
+<td>
+<a id="ctrl_elements_GO:0051640" href="javascript:toggle('elements_GO:0051640')">[+] Show genes</a><br>
+<div id="elements_GO:0051640" style="display:none"> <font size=1>
+Kif1b  -  kinesin family member 1b<br>
+Polr2m  -  polymerase (rna) ii (dna directed) polypeptide m<br>
+Cplx1  -  complexin 1<br>
+Map4  -  microtubule-associated protein 4<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Tcf7l2  -  transcription factor 7 like 2, t cell specific, hmg box<br>
+Stx1b  -  syntaxin 1b<br>
+Rab3c  -  rab3c, member ras oncogene family<br>
+Nefl  -  neurofilament, light polypeptide<br>
+Cep290  -  centrosomal protein 290<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099003&amp;view=details' target="_blank">GO:0099003</a><a name=0099003></a></td>
+<td>vesicle-mediated transport in synapse</td>
+<td  align=center>9.09E-4</td>
+<td  align=center>2.38E-1</td>
+<td  align=center>5.38 (20161,125,180,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099003" href="javascript:toggle('elements_GO:0099003')">[+] Show genes</a><br>
+<div id="elements_GO:0099003" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Dnm3  -  dynamin 3<br>
+Sncb  -  synuclein, beta<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Stx1b  -  syntaxin 1b<br>
+Prkaca  -  protein kinase, camp dependent, catalytic, alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099587&amp;view=details' target="_blank">GO:0099587</a><a name=0099587></a></td>
+<td>inorganic ion import across plasma membrane</td>
+<td  align=center>9.37E-4</td>
+<td  align=center>2.41E-1</td>
+<td  align=center>6.67 (20161,84,180,5)</td>
+<td>
+<a id="ctrl_elements_GO:0099587" href="javascript:toggle('elements_GO:0099587')">[+] Show genes</a><br>
+<div id="elements_GO:0099587" style="display:none"> <font size=1>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098659&amp;view=details' target="_blank">GO:0098659</a><a name=0098659></a></td>
+<td>inorganic cation import across plasma membrane</td>
+<td  align=center>9.37E-4</td>
+<td  align=center>2.37E-1</td>
+<td  align=center>6.67 (20161,84,180,5)</td>
+<td>
+<a id="ctrl_elements_GO:0098659" href="javascript:toggle('elements_GO:0098659')">[+] Show genes</a><br>
+<div id="elements_GO:0098659" style="display:none"> <font size=1>
+Atp1b2  -  atpase, na+/k+ transporting, beta 2 polypeptide<br>
+Atp1a2  -  atpase, na+/k+ transporting, alpha 2 polypeptide<br>
+Steap2  -  six transmembrane epithelial antigen of prostate 2<br>
+Hcn2  -  hyperpolarization-activated, cyclic nucleotide-gated k+ 2<br>
+Kcnj10  -  potassium inwardly-rectifying channel, subfamily j, member 10<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 27357 genes out of 37782 gene terms entered by the user.<br> 27357 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>227 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 27130 genes.<br>Only 20161 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Apr 2, 2024
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 15454 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

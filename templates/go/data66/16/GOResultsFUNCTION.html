@@ -1,0 +1,1403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='145,763,300,843' HREF='#0022890' ALT=''>
+<AREA SHAPE='RECT' COORDS='324,916,433,964' HREF='#0005261' ALT=''>
+<AREA SHAPE='RECT' COORDS='7,900,121,980' HREF='#0046873' ALT=''>
+<AREA SHAPE='RECT' COORDS='145,891,300,989' HREF='#0015077' ALT=''>
+<AREA SHAPE='RECT' COORDS='2691,488,2829,568' HREF='#0016773' ALT=''>
+<AREA SHAPE='RECT' COORDS='2707,641,2813,689' HREF='#0004672' ALT=''>
+<AREA SHAPE='RECT' COORDS='467,779,576,827' HREF='#0022839' ALT=''>
+<AREA SHAPE='RECT' COORDS='473,909,569,971' HREF='#0015276' ALT=''>
+<AREA SHAPE='RECT' COORDS='376,222,491,285' HREF='#0022857' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,617,157,714' HREF='#0015318' ALT=''>
+<AREA SHAPE='RECT' COORDS='411,359,573,422' HREF='#0022803' ALT=''>
+<AREA SHAPE='RECT' COORDS='305,497,441,559' HREF='#0015075' ALT=''>
+<AREA SHAPE='RECT' COORDS='463,1312,580,1392' HREF='#0005234' ALT=''>
+<AREA SHAPE='RECT' COORDS='1845,367,1952,415' HREF='#0042802' ALT=''>
+<AREA SHAPE='RECT' COORDS='1984,359,2061,422' HREF='#0005102' ALT=''>
+<AREA SHAPE='RECT' COORDS='1991,497,2073,559' HREF='#0035254' ALT=''>
+<AREA SHAPE='RECT' COORDS='2097,504,2209,552' HREF='#0046875' ALT=''>
+<AREA SHAPE='RECT' COORDS='1839,497,1967,559' HREF='#0001664' ALT=''>
+<AREA SHAPE='RECT' COORDS='1573,641,1680,689' HREF='#0019901' ALT=''>
+<AREA SHAPE='RECT' COORDS='613,641,720,689' HREF='#0022836' ALT=''>
+<AREA SHAPE='RECT' COORDS='608,779,717,827' HREF='#0022834' ALT=''>
+<AREA SHAPE='RECT' COORDS='1903,625,2031,705' HREF='#0035256' ALT=''>
+<AREA SHAPE='RECT' COORDS='1439,504,1551,552' HREF='#0008179' ALT=''>
+<AREA SHAPE='RECT' COORDS='839,109,927,157' HREF='#0005215' ALT=''>
+<AREA SHAPE='RECT' COORDS='461,641,589,689' HREF='#0022838' ALT=''>
+<AREA SHAPE='RECT' COORDS='333,779,424,827' HREF='#0005216' ALT=''>
+<AREA SHAPE='RECT' COORDS='2680,779,2840,827' HREF='#0004674' ALT=''>
+<AREA SHAPE='RECT' COORDS='473,1037,569,1117' HREF='#0005230' ALT=''>
+<AREA SHAPE='RECT' COORDS='473,1166,569,1263' HREF='#0005231' ALT=''>
+<AREA SHAPE='RECT' COORDS='1896,763,2037,843' HREF='#0031800' ALT=''>
+<AREA SHAPE='RECT' COORDS='2507,359,2616,422' HREF='#0099186' ALT=''>
+<AREA SHAPE='RECT' COORDS='2853,504,2957,552' HREF='#0016301' ALT=''>
+<AREA SHAPE='RECT' COORDS='2719,229,2809,277' HREF='#0016740' ALT=''>
+<AREA SHAPE='RECT' COORDS='2691,342,2845,439' HREF='#0016772' ALT=''>
+<AREA SHAPE='RECT' COORDS='2684,909,2836,971' HREF='#0004683' ALT=''>
+<AREA SHAPE='RECT' COORDS='597,367,688,415' HREF='#0044325' ALT=''>
+<AREA SHAPE='RECT' COORDS='712,367,827,415' HREF='#0051219' ALT=''>
+<AREA SHAPE='RECT' COORDS='672,497,829,559' HREF='#0045309' ALT=''>
+<AREA SHAPE='RECT' COORDS='851,367,989,415' HREF='#0046983' ALT=''>
+<AREA SHAPE='RECT' COORDS='853,504,1027,552' HREF='#0046982' ALT=''>
+<AREA SHAPE='RECT' COORDS='1013,359,1123,422' HREF='#0019904' ALT=''>
+<AREA SHAPE='RECT' COORDS='75,1037,211,1117' HREF='#0015079' ALT=''>
+<AREA SHAPE='RECT' COORDS='471,504,580,552' HREF='#0015267' ALT=''>
+<AREA SHAPE='RECT' COORDS='1381,229,1488,277' HREF='#0005515' ALT=''>
+<AREA SHAPE='RECT' COORDS='1147,359,1285,422' HREF='#0043548' ALT=''>
+<AREA SHAPE='RECT' COORDS='1309,367,1416,415' HREF='#0008092' ALT=''>
+<AREA SHAPE='RECT' COORDS='1440,367,1573,415' HREF='#0048306' ALT=''>
+<AREA SHAPE='RECT' COORDS='1597,367,1685,415' HREF='#0005516' ALT=''>
+<AREA SHAPE='RECT' COORDS='1709,367,1821,415' HREF='#0019899' ALT=''>
+<AREA SHAPE='RECT' COORDS='2363,367,2483,415' HREF='#0016248' ALT=''>
+<AREA SHAPE='RECT' COORDS='2377,497,2468,559' HREF='#0008200' ALT=''>
+<AREA SHAPE='RECT' COORDS='1792,109,1864,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='1316,504,1409,552' HREF='#0003779' ALT=''>
+<AREA SHAPE='RECT' COORDS='1307,641,1419,689' HREF='#0003785' ALT=''>
+<AREA SHAPE='RECT' COORDS='2323,5,2209,29' HREF='#0003674' ALT=''>
+<AREA SHAPE='RECT' COORDS='2281,102,2364,165' HREF='#0098772' ALT=''>
+<AREA SHAPE='RECT' COORDS='2417,102,2497,165' HREF='#0005198' ALT=''>
+<AREA SHAPE='RECT' COORDS='2616,109,2691,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='2260,229,2385,277' HREF='#0016247' ALT=''>
+<AREA SHAPE='RECT' COORDS='2297,634,2417,697' HREF='#0019855' ALT=''>
+<AREA SHAPE='RECT' COORDS='2440,222,2531,285' HREF='#0098918' ALT=''>
+<AREA SHAPE='RECT' COORDS='2615,213,2692,293' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='1575,504,1679,552' HREF='#0019900' ALT=''>
+<AREA SHAPE='RECT' COORDS='1703,504,1815,552' HREF='#0051117' ALT=''>
+<AREA SHAPE='RECT' COORDS='2248,359,2339,422' HREF='#0099106' ALT=''>
+<AREA SHAPE='RECT' COORDS='2233,497,2353,559' HREF='#0005246' ALT=''>
+<AREA SHAPE='RECT' COORDS='181,634,336,697' HREF='#0008324' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="/static/analysis/data66/go/16/GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005515&amp;view=details' target="_blank">GO:0005515</a><a name=0005515></a></td>
+<td>protein binding</td>
+<td  align=center>4.88E-11</td>
+<td  align=center>2.24E-7</td>
+<td  align=center>1.64 (20161,8812,134,96)</td>
+<td>
+<a id="ctrl_elements_GO:0005515" href="javascript:toggle('elements_GO:0005515')">[+] Show genes</a><br>
+<div id="elements_GO:0005515" style="display:none"> <font size=1>
+Ano3  -  anoctamin 3<br>
+Wasf1  -  was protein family, member 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Syt1  -  synaptotagmin i<br>
+Nedd4l  -  neural precursor cell expressed, developmentally down-regulated gene 4-like<br>
+Ncald  -  neurocalcin delta<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Celf1  -  cugbp, elav-like family member 1<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Sst  -  somatostatin<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Calm1  -  calmodulin 1<br>
+Adcy1  -  adenylate cyclase 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Olfm1  -  olfactomedin 1<br>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Syt16  -  synaptotagmin xvi<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Nrn1  -  neuritin 1<br>
+Cplx2  -  complexin 2<br>
+Kalrn  -  kalirin, rhogef kinase<br>
+Mkl1  -  mkl (megakaryoblastic leukemia)/myocardin-like 1<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Actr3  -  arp3 actin-related protein 3<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Camk4  -  calcium/calmodulin-dependent protein kinase iv<br>
+Ldha  -  lactate dehydrogenase a<br>
+Cadm2  -  cell adhesion molecule 2<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Egr1  -  early growth response 1<br>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Sorbs2  -  sorbin and sh3 domain containing 2<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Prkce  -  protein kinase c, epsilon<br>
+Kctd6  -  potassium channel tetramerisation domain containing 6<br>
+Taf9  -  taf9 rna polymerase ii, tata box binding protein (tbp)-associated factor<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+Bcl11a  -  b cell cll/lymphoma 11a (zinc finger protein)<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Basp1  -  brain abundant, membrane attached signal protein 1<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Neurod6  -  neurogenic differentiation 6<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Atl1  -  atlastin gtpase 1<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+Actn1  -  actinin, alpha 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Ier5  -  immediate early response 5<br>
+Sec23a  -  sec23a (s. cerevisiae)<br>
+Faah  -  fatty acid amide hydrolase<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Fam212b  -  family with sequence similarity 212, member b<br>
+Satb2  -  special at-rich sequence binding protein 2<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Per1  -  period circadian clock 1<br>
+Cnksr2  -  connector enhancer of kinase suppressor of ras 2<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Fbxw7  -  f-box and wd-40 domain protein 7<br>
+Gda  -  guanine deaminase<br>
+Arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+Eml5  -  echinoderm microtubule associated protein like 5<br>
+Dbn1  -  drebrin 1<br>
+Sfpq  -  splicing factor proline/glutamine rich (polypyrimidine tract binding protein associated)<br>
+Epha4  -  eph receptor a4<br>
+Dnajb5  -  dnaj (hsp40) homolog, subfamily b, member 5<br>
+Btbd10  -  btb (poz) domain containing 10<br>
+Tspan13  -  tetraspanin 13<br>
+Neurod2  -  neurogenic differentiation 2<br>
+Rnf112  -  ring finger protein 112<br>
+Foxg1  -  forkhead box g1<br>
+Dkk3  -  dickkopf homolog 3 (xenopus laevis)<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019899&amp;view=details' target="_blank">GO:0019899</a><a name=0019899></a></td>
+<td>enzyme binding</td>
+<td  align=center>1.29E-8</td>
+<td  align=center>2.96E-5</td>
+<td  align=center>2.59 (20161,2263,134,39)</td>
+<td>
+<a id="ctrl_elements_GO:0019899" href="javascript:toggle('elements_GO:0019899')">[+] Show genes</a><br>
+<div id="elements_GO:0019899" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Wasf1  -  was protein family, member 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Fam212b  -  family with sequence similarity 212, member b<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Satb2  -  special at-rich sequence binding protein 2<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Per1  -  period circadian clock 1<br>
+Kalrn  -  kalirin, rhogef kinase<br>
+Cnksr2  -  connector enhancer of kinase suppressor of ras 2<br>
+Actr3  -  arp3 actin-related protein 3<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Fbxw7  -  f-box and wd-40 domain protein 7<br>
+Arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+Sfpq  -  splicing factor proline/glutamine rich (polypyrimidine tract binding protein associated)<br>
+Egr1  -  early growth response 1<br>
+Epha4  -  eph receptor a4<br>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Prkce  -  protein kinase c, epsilon<br>
+Taf9  -  taf9 rna polymerase ii, tata box binding protein (tbp)-associated factor<br>
+Bcl11a  -  b cell cll/lymphoma 11a (zinc finger protein)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005516&amp;view=details' target="_blank">GO:0005516</a><a name=0005516></a></td>
+<td>calmodulin binding</td>
+<td  align=center>4.21E-8</td>
+<td  align=center>6.43E-5</td>
+<td  align=center>8.99 (20161,184,134,11)</td>
+<td>
+<a id="ctrl_elements_GO:0005516" href="javascript:toggle('elements_GO:0005516')">[+] Show genes</a><br>
+<div id="elements_GO:0005516" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Nrgn  -  neurogranin<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Syt1  -  synaptotagmin i<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Camk4  -  calcium/calmodulin-dependent protein kinase iv<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019904&amp;view=details' target="_blank">GO:0019904</a><a name=0019904></a></td>
+<td>protein domain specific binding</td>
+<td  align=center>2.91E-7</td>
+<td  align=center>3.33E-4</td>
+<td  align=center>3.79 (20161,793,134,20)</td>
+<td>
+<a id="ctrl_elements_GO:0019904" href="javascript:toggle('elements_GO:0019904')">[+] Show genes</a><br>
+<div id="elements_GO:0019904" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Mkl1  -  mkl (megakaryoblastic leukemia)/myocardin-like 1<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Actn1  -  actinin, alpha 1<br>
+Epha4  -  eph receptor a4<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Sorbs2  -  sorbin and sh3 domain containing 2<br>
+Prkce  -  protein kinase c, epsilon<br>
+Taf9  -  taf9 rna polymerase ii, tata box binding protein (tbp)-associated factor<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Basp1  -  brain abundant, membrane attached signal protein 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004683&amp;view=details' target="_blank">GO:0004683</a><a name=0004683></a></td>
+<td>calmodulin-dependent protein kinase activity</td>
+<td  align=center>4.62E-7</td>
+<td  align=center>4.23E-4</td>
+<td  align=center>31.34 (20161,24,134,5)</td>
+<td>
+<a id="ctrl_elements_GO:0004683" href="javascript:toggle('elements_GO:0004683')">[+] Show genes</a><br>
+<div id="elements_GO:0004683" style="display:none"> <font size=1>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Camk4  -  calcium/calmodulin-dependent protein kinase iv<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044325&amp;view=details' target="_blank">GO:0044325</a><a name=0044325></a></td>
+<td>ion channel binding</td>
+<td  align=center>3.76E-6</td>
+<td  align=center>2.87E-3</td>
+<td  align=center>8.79 (20161,137,134,8)</td>
+<td>
+<a id="ctrl_elements_GO:0044325" href="javascript:toggle('elements_GO:0044325')">[+] Show genes</a><br>
+<div id="elements_GO:0044325" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Nedd4l  -  neural precursor cell expressed, developmentally down-regulated gene 4-like<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Actn1  -  actinin, alpha 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035254&amp;view=details' target="_blank">GO:0035254</a><a name=0035254></a></td>
+<td>glutamate receptor binding</td>
+<td  align=center>5.05E-6</td>
+<td  align=center>3.3E-3</td>
+<td  align=center>13.68 (20161,66,134,6)</td>
+<td>
+<a id="ctrl_elements_GO:0035254" href="javascript:toggle('elements_GO:0035254')">[+] Show genes</a><br>
+<div id="elements_GO:0035254" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005488&amp;view=details' target="_blank">GO:0005488</a><a name=0005488></a></td>
+<td>binding</td>
+<td  align=center>6.67E-6</td>
+<td  align=center>3.82E-3</td>
+<td  align=center>1.28 (20161,12860,134,109)</td>
+<td>
+<a id="ctrl_elements_GO:0005488" href="javascript:toggle('elements_GO:0005488')">[+] Show genes</a><br>
+<div id="elements_GO:0005488" style="display:none"> <font size=1>
+Ano3  -  anoctamin 3<br>
+Wasf1  -  was protein family, member 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Ncald  -  neurocalcin delta<br>
+Nedd4l  -  neural precursor cell expressed, developmentally down-regulated gene 4-like<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Celf1  -  cugbp, elav-like family member 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Calm1  -  calmodulin 1<br>
+Adcy1  -  adenylate cyclase 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Syt16  -  synaptotagmin xvi<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Kalrn  -  kalirin, rhogef kinase<br>
+Mkl1  -  mkl (megakaryoblastic leukemia)/myocardin-like 1<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Camk4  -  calcium/calmodulin-dependent protein kinase iv<br>
+Ldha  -  lactate dehydrogenase a<br>
+Celf2  -  cugbp, elav-like family member 2<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Prkce  -  protein kinase c, epsilon<br>
+Kctd6  -  potassium channel tetramerisation domain containing 6<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+Bcl11a  -  b cell cll/lymphoma 11a (zinc finger protein)<br>
+Osbp2  -  oxysterol binding protein 2<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Celf5  -  cugbp, elav-like family member 5<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Gmeb2  -  glucocorticoid modulatory element binding protein 2<br>
+Neurod6  -  neurogenic differentiation 6<br>
+Atl1  -  atlastin gtpase 1<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+Actn1  -  actinin, alpha 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Faah  -  fatty acid amide hydrolase<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Satb2  -  special at-rich sequence binding protein 2<br>
+Mtpn  -  myotrophin<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Gda  -  guanine deaminase<br>
+Eml5  -  echinoderm microtubule associated protein like 5<br>
+Sfpq  -  splicing factor proline/glutamine rich (polypyrimidine tract binding protein associated)<br>
+Btbd10  -  btb (poz) domain containing 10<br>
+Tspan13  -  tetraspanin 13<br>
+Neurod2  -  neurogenic differentiation 2<br>
+Rnf112  -  ring finger protein 112<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Zfp365  -  zinc finger protein 365<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Satb1  -  special at-rich sequence binding protein 1<br>
+Syt1  -  synaptotagmin i<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Sst  -  somatostatin<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Nrn1  -  neuritin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Cplx2  -  complexin 2<br>
+Actr3  -  arp3 actin-related protein 3<br>
+Zbtb18  -  zinc finger and btb domain containing 18<br>
+Cadm2  -  cell adhesion molecule 2<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Egr1  -  early growth response 1<br>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Sorbs2  -  sorbin and sh3 domain containing 2<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Taf9  -  taf9 rna polymerase ii, tata box binding protein (tbp)-associated factor<br>
+Basp1  -  brain abundant, membrane attached signal protein 1<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Gpr22  -  g protein-coupled receptor 22<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Nptx1  -  neuronal pentraxin 1<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Ier5  -  immediate early response 5<br>
+Sec23a  -  sec23a (s. cerevisiae)<br>
+Fam212b  -  family with sequence similarity 212, member b<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Trhde  -  trh-degrading enzyme<br>
+Per1  -  period circadian clock 1<br>
+Matn2  -  matrilin 2<br>
+Cnksr2  -  connector enhancer of kinase suppressor of ras 2<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Fbxw7  -  f-box and wd-40 domain protein 7<br>
+Arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+Dbn1  -  drebrin 1<br>
+Epha4  -  eph receptor a4<br>
+Dnajb5  -  dnaj (hsp40) homolog, subfamily b, member 5<br>
+Foxg1  -  forkhead box g1<br>
+Dkk3  -  dickkopf homolog 3 (xenopus laevis)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019900&amp;view=details' target="_blank">GO:0019900</a><a name=0019900></a></td>
+<td>kinase binding</td>
+<td  align=center>8.53E-6</td>
+<td  align=center>4.34E-3</td>
+<td  align=center>3.30 (20161,821,134,18)</td>
+<td>
+<a id="ctrl_elements_GO:0019900" href="javascript:toggle('elements_GO:0019900')">[+] Show genes</a><br>
+<div id="elements_GO:0019900" style="display:none"> <font size=1>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Per1  -  period circadian clock 1<br>
+Cnksr2  -  connector enhancer of kinase suppressor of ras 2<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+Epha4  -  eph receptor a4<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Prkce  -  protein kinase c, epsilon<br>
+Bcl11a  -  b cell cll/lymphoma 11a (zinc finger protein)<br>
+Fam212b  -  family with sequence similarity 212, member b<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046873&amp;view=details' target="_blank">GO:0046873</a><a name=0046873></a></td>
+<td>metal ion transmembrane transporter activity</td>
+<td  align=center>2.33E-5</td>
+<td  align=center>1.07E-2</td>
+<td  align=center>4.32 (20161,418,134,12)</td>
+<td>
+<a id="ctrl_elements_GO:0046873" href="javascript:toggle('elements_GO:0046873')">[+] Show genes</a><br>
+<div id="elements_GO:0046873" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019901&amp;view=details' target="_blank">GO:0019901</a><a name=0019901></a></td>
+<td>protein kinase binding</td>
+<td  align=center>3.17E-5</td>
+<td  align=center>1.32E-2</td>
+<td  align=center>3.27 (20161,737,134,16)</td>
+<td>
+<a id="ctrl_elements_GO:0019901" href="javascript:toggle('elements_GO:0019901')">[+] Show genes</a><br>
+<div id="elements_GO:0019901" style="display:none"> <font size=1>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Cnksr2  -  connector enhancer of kinase suppressor of ras 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+Epha4  -  eph receptor a4<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Prkce  -  protein kinase c, epsilon<br>
+Bcl11a  -  b cell cll/lymphoma 11a (zinc finger protein)<br>
+Fam212b  -  family with sequence similarity 212, member b<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045309&amp;view=details' target="_blank">GO:0045309</a><a name=0045309></a></td>
+<td>protein phosphorylated amino acid binding</td>
+<td  align=center>3.82E-5</td>
+<td  align=center>1.46E-2</td>
+<td  align=center>13.20 (20161,57,134,5)</td>
+<td>
+<a id="ctrl_elements_GO:0045309" href="javascript:toggle('elements_GO:0045309')">[+] Show genes</a><br>
+<div id="elements_GO:0045309" style="display:none"> <font size=1>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Fbxw7  -  f-box and wd-40 domain protein 7<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005216&amp;view=details' target="_blank">GO:0005216</a><a name=0005216></a></td>
+<td>ion channel activity</td>
+<td  align=center>5.64E-5</td>
+<td  align=center>1.99E-2</td>
+<td  align=center>4.28 (20161,387,134,11)</td>
+<td>
+<a id="ctrl_elements_GO:0005216" href="javascript:toggle('elements_GO:0005216')">[+] Show genes</a><br>
+<div id="elements_GO:0005216" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046875&amp;view=details' target="_blank">GO:0046875</a><a name=0046875></a></td>
+<td>ephrin receptor binding</td>
+<td  align=center>5.81E-5</td>
+<td  align=center>1.9E-2</td>
+<td  align=center>18.81 (20161,32,134,4)</td>
+<td>
+<a id="ctrl_elements_GO:0046875" href="javascript:toggle('elements_GO:0046875')">[+] Show genes</a><br>
+<div id="elements_GO:0046875" style="display:none"> <font size=1>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Epha4  -  eph receptor a4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008092&amp;view=details' target="_blank">GO:0008092</a><a name=0008092></a></td>
+<td>cytoskeletal protein binding</td>
+<td  align=center>6.99E-5</td>
+<td  align=center>2.14E-2</td>
+<td  align=center>2.81 (20161,963,134,18)</td>
+<td>
+<a id="ctrl_elements_GO:0008092" href="javascript:toggle('elements_GO:0008092')">[+] Show genes</a><br>
+<div id="elements_GO:0008092" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Mkl1  -  mkl (megakaryoblastic leukemia)/myocardin-like 1<br>
+Actr3  -  arp3 actin-related protein 3<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+Eml5  -  echinoderm microtubule associated protein like 5<br>
+Dbn1  -  drebrin 1<br>
+Wasf1  -  was protein family, member 1<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+Actn1  -  actinin, alpha 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ncald  -  neurocalcin delta<br>
+Kctd6  -  potassium channel tetramerisation domain containing 6<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099106&amp;view=details' target="_blank">GO:0099106</a><a name=0099106></a></td>
+<td>ion channel regulator activity</td>
+<td  align=center>7.23E-5</td>
+<td  align=center>2.07E-2</td>
+<td  align=center>8.60 (20161,105,134,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099106" href="javascript:toggle('elements_GO:0099106')">[+] Show genes</a><br>
+<div id="elements_GO:0099106" style="display:none"> <font size=1>
+Tspan13  -  tetraspanin 13<br>
+Nedd4l  -  neural precursor cell expressed, developmentally down-regulated gene 4-like<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022838&amp;view=details' target="_blank">GO:0022838</a><a name=0022838></a></td>
+<td>substrate-specific channel activity</td>
+<td  align=center>7.25E-5</td>
+<td  align=center>1.95E-2</td>
+<td  align=center>4.16 (20161,398,134,11)</td>
+<td>
+<a id="ctrl_elements_GO:0022838" href="javascript:toggle('elements_GO:0022838')">[+] Show genes</a><br>
+<div id="elements_GO:0022838" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035256&amp;view=details' target="_blank">GO:0035256</a><a name=0035256></a></td>
+<td>G protein-coupled glutamate receptor binding</td>
+<td  align=center>7.82E-5</td>
+<td  align=center>1.99E-2</td>
+<td  align=center>34.72 (20161,13,134,3)</td>
+<td>
+<a id="ctrl_elements_GO:0035256" href="javascript:toggle('elements_GO:0035256')">[+] Show genes</a><br>
+<div id="elements_GO:0035256" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046982&amp;view=details' target="_blank">GO:0046982</a><a name=0046982></a></td>
+<td>protein heterodimerization activity</td>
+<td  align=center>1.06E-4</td>
+<td  align=center>2.55E-2</td>
+<td  align=center>4.85 (20161,279,134,9)</td>
+<td>
+<a id="ctrl_elements_GO:0046982" href="javascript:toggle('elements_GO:0046982')">[+] Show genes</a><br>
+<div id="elements_GO:0046982" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt5  -  synaptotagmin v<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Syt1  -  synaptotagmin i<br>
+Neurod2  -  neurogenic differentiation 2<br>
+Bcl11a  -  b cell cll/lymphoma 11a (zinc finger protein)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004674&amp;view=details' target="_blank">GO:0004674</a><a name=0004674></a></td>
+<td>protein serine/threonine kinase activity</td>
+<td  align=center>1.12E-4</td>
+<td  align=center>2.56E-2</td>
+<td  align=center>3.96 (20161,418,134,11)</td>
+<td>
+<a id="ctrl_elements_GO:0004674" href="javascript:toggle('elements_GO:0004674')">[+] Show genes</a><br>
+<div id="elements_GO:0004674" style="display:none"> <font size=1>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Prkce  -  protein kinase c, epsilon<br>
+Kalrn  -  kalirin, rhogef kinase<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Camk4  -  calcium/calmodulin-dependent protein kinase iv<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042802&amp;view=details' target="_blank">GO:0042802</a><a name=0042802></a></td>
+<td>identical protein binding</td>
+<td  align=center>1.14E-4</td>
+<td  align=center>2.49E-2</td>
+<td  align=center>2.06 (20161,2113,134,29)</td>
+<td>
+<a id="ctrl_elements_GO:0042802" href="javascript:toggle('elements_GO:0042802')">[+] Show genes</a><br>
+<div id="elements_GO:0042802" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Atl1  -  atlastin gtpase 1<br>
+Actn1  -  actinin, alpha 1<br>
+Syt1  -  synaptotagmin i<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Ier5  -  immediate early response 5<br>
+Faah  -  fatty acid amide hydrolase<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Olfm1  -  olfactomedin 1<br>
+Syt16  -  synaptotagmin xvi<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Nrn1  -  neuritin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Cnksr2  -  connector enhancer of kinase suppressor of ras 2<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Fbxw7  -  f-box and wd-40 domain protein 7<br>
+Ldha  -  lactate dehydrogenase a<br>
+Sfpq  -  splicing factor proline/glutamine rich (polypyrimidine tract binding protein associated)<br>
+Epha4  -  eph receptor a4<br>
+Sorbs2  -  sorbin and sh3 domain containing 2<br>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Kctd6  -  potassium channel tetramerisation domain containing 6<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003779&amp;view=details' target="_blank">GO:0003779</a><a name=0003779></a></td>
+<td>actin binding</td>
+<td  align=center>1.46E-4</td>
+<td  align=center>3.05E-2</td>
+<td  align=center>3.84 (20161,431,134,11)</td>
+<td>
+<a id="ctrl_elements_GO:0003779" href="javascript:toggle('elements_GO:0003779')">[+] Show genes</a><br>
+<div id="elements_GO:0003779" style="display:none"> <font size=1>
+Prkce  -  protein kinase c, epsilon<br>
+Ncald  -  neurocalcin delta<br>
+Mkl1  -  mkl (megakaryoblastic leukemia)/myocardin-like 1<br>
+Actr3  -  arp3 actin-related protein 3<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Arpc4  -  actin related protein 2/3 complex, subunit 4<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Dbn1  -  drebrin 1<br>
+Wasf1  -  was protein family, member 1<br>
+Actn1  -  actinin, alpha 1<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046983&amp;view=details' target="_blank">GO:0046983</a><a name=0046983></a></td>
+<td>protein dimerization activity</td>
+<td  align=center>1.48E-4</td>
+<td  align=center>2.94E-2</td>
+<td  align=center>2.75 (20161,930,134,17)</td>
+<td>
+<a id="ctrl_elements_GO:0046983" href="javascript:toggle('elements_GO:0046983')">[+] Show genes</a><br>
+<div id="elements_GO:0046983" style="display:none"> <font size=1>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ano3  -  anoctamin 3<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Neurod6  -  neurogenic differentiation 6<br>
+Sfpq  -  splicing factor proline/glutamine rich (polypyrimidine tract binding protein associated)<br>
+Actn1  -  actinin, alpha 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Syt5  -  synaptotagmin v<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Syt1  -  synaptotagmin i<br>
+Neurod2  -  neurogenic differentiation 2<br>
+Bcl11a  -  b cell cll/lymphoma 11a (zinc finger protein)<br>
+Zfp365  -  zinc finger protein 365<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008179&amp;view=details' target="_blank">GO:0008179</a><a name=0008179></a></td>
+<td>adenylate cyclase binding</td>
+<td  align=center>1.51E-4</td>
+<td  align=center>2.88E-2</td>
+<td  align=center>28.21 (20161,16,134,3)</td>
+<td>
+<a id="ctrl_elements_GO:0008179" href="javascript:toggle('elements_GO:0008179')">[+] Show genes</a><br>
+<div id="elements_GO:0008179" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043548&amp;view=details' target="_blank">GO:0043548</a><a name=0043548></a></td>
+<td>phosphatidylinositol 3-kinase binding</td>
+<td  align=center>1.72E-4</td>
+<td  align=center>3.15E-2</td>
+<td  align=center>14.33 (20161,42,134,4)</td>
+<td>
+<a id="ctrl_elements_GO:0043548" href="javascript:toggle('elements_GO:0043548')">[+] Show genes</a><br>
+<div id="elements_GO:0043548" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015267&amp;view=details' target="_blank">GO:0015267</a><a name=0015267></a></td>
+<td>channel activity</td>
+<td  align=center>1.75E-4</td>
+<td  align=center>3.08E-2</td>
+<td  align=center>3.76 (20161,440,134,11)</td>
+<td>
+<a id="ctrl_elements_GO:0015267" href="javascript:toggle('elements_GO:0015267')">[+] Show genes</a><br>
+<div id="elements_GO:0015267" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022803&amp;view=details' target="_blank">GO:0022803</a><a name=0022803></a></td>
+<td>passive transmembrane transporter activity</td>
+<td  align=center>1.75E-4</td>
+<td  align=center>2.97E-2</td>
+<td  align=center>3.76 (20161,440,134,11)</td>
+<td>
+<a id="ctrl_elements_GO:0022803" href="javascript:toggle('elements_GO:0022803')">[+] Show genes</a><br>
+<div id="elements_GO:0022803" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015318&amp;view=details' target="_blank">GO:0015318</a><a name=0015318></a></td>
+<td>inorganic molecular entity transmembrane transporter activity</td>
+<td  align=center>1.83E-4</td>
+<td  align=center>2.99E-2</td>
+<td  align=center>2.94 (20161,768,134,15)</td>
+<td>
+<a id="ctrl_elements_GO:0015318" href="javascript:toggle('elements_GO:0015318')">[+] Show genes</a><br>
+<div id="elements_GO:0015318" style="display:none"> <font size=1>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022839&amp;view=details' target="_blank">GO:0022839</a><a name=0022839></a></td>
+<td>ion gated channel activity</td>
+<td  align=center>1.96E-4</td>
+<td  align=center>3.1E-2</td>
+<td  align=center>4.47 (20161,303,134,9)</td>
+<td>
+<a id="ctrl_elements_GO:0022839" href="javascript:toggle('elements_GO:0022839')">[+] Show genes</a><br>
+<div id="elements_GO:0022839" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005261&amp;view=details' target="_blank">GO:0005261</a><a name=0005261></a></td>
+<td>cation channel activity</td>
+<td  align=center>2.11E-4</td>
+<td  align=center>3.23E-2</td>
+<td  align=center>4.43 (20161,306,134,9)</td>
+<td>
+<a id="ctrl_elements_GO:0005261" href="javascript:toggle('elements_GO:0005261')">[+] Show genes</a><br>
+<div id="elements_GO:0005261" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048306&amp;view=details' target="_blank">GO:0048306</a><a name=0048306></a></td>
+<td>calcium-dependent protein binding</td>
+<td  align=center>2.44E-4</td>
+<td  align=center>3.61E-2</td>
+<td  align=center>8.96 (20161,84,134,5)</td>
+<td>
+<a id="ctrl_elements_GO:0048306" href="javascript:toggle('elements_GO:0048306')">[+] Show genes</a><br>
+<div id="elements_GO:0048306" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt1  -  synaptotagmin i<br>
+Cplx2  -  complexin 2<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031800&amp;view=details' target="_blank">GO:0031800</a><a name=0031800></a></td>
+<td>type 3 metabotropic glutamate receptor binding</td>
+<td  align=center>2.61E-4</td>
+<td  align=center>3.73E-2</td>
+<td  align=center>75.23 (20161,4,134,2)</td>
+<td>
+<a id="ctrl_elements_GO:0031800" href="javascript:toggle('elements_GO:0031800')">[+] Show genes</a><br>
+<div id="elements_GO:0031800" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022836&amp;view=details' target="_blank">GO:0022836</a><a name=0022836></a></td>
+<td>gated channel activity</td>
+<td  align=center>2.62E-4</td>
+<td  align=center>3.63E-2</td>
+<td  align=center>4.30 (20161,315,134,9)</td>
+<td>
+<a id="ctrl_elements_GO:0022836" href="javascript:toggle('elements_GO:0022836')">[+] Show genes</a><br>
+<div id="elements_GO:0022836" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099186&amp;view=details' target="_blank">GO:0099186</a><a name=0099186></a></td>
+<td>structural constituent of postsynapse</td>
+<td  align=center>3.01E-4</td>
+<td  align=center>4.06E-2</td>
+<td  align=center>22.57 (20161,20,134,3)</td>
+<td>
+<a id="ctrl_elements_GO:0099186" href="javascript:toggle('elements_GO:0099186')">[+] Show genes</a><br>
+<div id="elements_GO:0099186" style="display:none"> <font size=1>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Actn1  -  actinin, alpha 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022890&amp;view=details' target="_blank">GO:0022890</a><a name=0022890></a></td>
+<td>inorganic cation transmembrane transporter activity</td>
+<td  align=center>3.1E-4</td>
+<td  align=center>4.06E-2</td>
+<td  align=center>3.28 (20161,550,134,12)</td>
+<td>
+<a id="ctrl_elements_GO:0022890" href="javascript:toggle('elements_GO:0022890')">[+] Show genes</a><br>
+<div id="elements_GO:0022890" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004672&amp;view=details' target="_blank">GO:0004672</a><a name=0004672></a></td>
+<td>protein kinase activity</td>
+<td  align=center>3.21E-4</td>
+<td  align=center>4.08E-2</td>
+<td  align=center>3.27 (20161,552,134,12)</td>
+<td>
+<a id="ctrl_elements_GO:0004672" href="javascript:toggle('elements_GO:0004672')">[+] Show genes</a><br>
+<div id="elements_GO:0004672" style="display:none"> <font size=1>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Prkce  -  protein kinase c, epsilon<br>
+Kalrn  -  kalirin, rhogef kinase<br>
+Camk2a  -  calcium/calmodulin-dependent protein kinase ii alpha<br>
+Camk2b  -  calcium/calmodulin-dependent protein kinase ii, beta<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Camk4  -  calcium/calmodulin-dependent protein kinase iv<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Nek6  -  nima (never in mitosis gene a)-related expressed kinase 6<br>
+Epha4  -  eph receptor a4<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016247&amp;view=details' target="_blank">GO:0016247</a><a name=0016247></a></td>
+<td>channel regulator activity</td>
+<td  align=center>3.23E-4</td>
+<td  align=center>4E-2</td>
+<td  align=center>6.54 (20161,138,134,6)</td>
+<td>
+<a id="ctrl_elements_GO:0016247" href="javascript:toggle('elements_GO:0016247')">[+] Show genes</a><br>
+<div id="elements_GO:0016247" style="display:none"> <font size=1>
+Tspan13  -  tetraspanin 13<br>
+Nedd4l  -  neural precursor cell expressed, developmentally down-regulated gene 4-like<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015075&amp;view=details' target="_blank">GO:0015075</a><a name=0015075></a></td>
+<td>ion transmembrane transporter activity</td>
+<td  align=center>3.68E-4</td>
+<td  align=center>4.43E-2</td>
+<td  align=center>2.75 (20161,820,134,15)</td>
+<td>
+<a id="ctrl_elements_GO:0015075" href="javascript:toggle('elements_GO:0015075')">[+] Show genes</a><br>
+<div id="elements_GO:0015075" style="display:none"> <font size=1>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051117&amp;view=details' target="_blank">GO:0051117</a><a name=0051117></a></td>
+<td>ATPase binding</td>
+<td  align=center>4.11E-4</td>
+<td  align=center>4.83E-2</td>
+<td  align=center>8.00 (20161,94,134,5)</td>
+<td>
+<a id="ctrl_elements_GO:0051117" href="javascript:toggle('elements_GO:0051117')">[+] Show genes</a><br>
+<div id="elements_GO:0051117" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Taf9  -  taf9 rna polymerase ii, tata box binding protein (tbp)-associated factor<br>
+Actr3  -  arp3 actin-related protein 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015079&amp;view=details' target="_blank">GO:0015079</a><a name=0015079></a></td>
+<td>potassium ion transmembrane transporter activity</td>
+<td  align=center>5.99E-4</td>
+<td  align=center>6.86E-2</td>
+<td  align=center>5.82 (20161,155,134,6)</td>
+<td>
+<a id="ctrl_elements_GO:0015079" href="javascript:toggle('elements_GO:0015079')">[+] Show genes</a><br>
+<div id="elements_GO:0015079" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098772&amp;view=details' target="_blank">GO:0098772</a><a name=0098772></a></td>
+<td>molecular function regulator</td>
+<td  align=center>6.42E-4</td>
+<td  align=center>7.18E-2</td>
+<td  align=center>2.07 (20161,1673,134,23)</td>
+<td>
+<a id="ctrl_elements_GO:0098772" href="javascript:toggle('elements_GO:0098772')">[+] Show genes</a><br>
+<div id="elements_GO:0098772" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Prkag2  -  protein kinase, amp-activated, gamma 2 non-catalytic subunit<br>
+Kalrn  -  kalirin, rhogef kinase<br>
+Stx1a  -  syntaxin 1a (brain)<br>
+Fbxw7  -  f-box and wd-40 domain protein 7<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Sirpa  -  signal-regulatory protein alpha<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Tspan13  -  tetraspanin 13<br>
+Prkce  -  protein kinase c, epsilon<br>
+Nedd4l  -  neural precursor cell expressed, developmentally down-regulated gene 4-like<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Sec23a  -  sec23a (s. cerevisiae)<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Fam212b  -  family with sequence similarity 212, member b<br>
+Sst  -  somatostatin<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Dkk3  -  dickkopf homolog 3 (xenopus laevis)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005234&amp;view=details' target="_blank">GO:0005234</a><a name=0005234></a></td>
+<td>extracellularly glutamate-gated ion channel activity</td>
+<td  align=center>6.46E-4</td>
+<td  align=center>7.05E-2</td>
+<td  align=center>50.15 (20161,6,134,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005234" href="javascript:toggle('elements_GO:0005234')">[+] Show genes</a><br>
+<div id="elements_GO:0005234" style="display:none"> <font size=1>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051219&amp;view=details' target="_blank">GO:0051219</a><a name=0051219></a></td>
+<td>phosphoprotein binding</td>
+<td  align=center>6.54E-4</td>
+<td  align=center>6.96E-2</td>
+<td  align=center>7.23 (20161,104,134,5)</td>
+<td>
+<a id="ctrl_elements_GO:0051219" href="javascript:toggle('elements_GO:0051219')">[+] Show genes</a><br>
+<div id="elements_GO:0051219" style="display:none"> <font size=1>
+Sirpa  -  signal-regulatory protein alpha<br>
+Mapk1  -  mitogen-activated protein kinase 1<br>
+Pik3r2  -  phosphatidylinositol 3-kinase, regulatory subunit, polypeptide 2 (p85 beta)<br>
+Fbxw7  -  f-box and wd-40 domain protein 7<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008324&amp;view=details' target="_blank">GO:0008324</a><a name=0008324></a></td>
+<td>cation transmembrane transporter activity</td>
+<td  align=center>6.73E-4</td>
+<td  align=center>7E-2</td>
+<td  align=center>3.01 (20161,600,134,12)</td>
+<td>
+<a id="ctrl_elements_GO:0008324" href="javascript:toggle('elements_GO:0008324')">[+] Show genes</a><br>
+<div id="elements_GO:0008324" style="display:none"> <font size=1>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003785&amp;view=details' target="_blank">GO:0003785</a><a name=0003785></a></td>
+<td>actin monomer binding</td>
+<td  align=center>7.47E-4</td>
+<td  align=center>7.61E-2</td>
+<td  align=center>16.72 (20161,27,134,3)</td>
+<td>
+<a id="ctrl_elements_GO:0003785" href="javascript:toggle('elements_GO:0003785')">[+] Show genes</a><br>
+<div id="elements_GO:0003785" style="display:none"> <font size=1>
+Prkce  -  protein kinase c, epsilon<br>
+Mkl1  -  mkl (megakaryoblastic leukemia)/myocardin-like 1<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005215&amp;view=details' target="_blank">GO:0005215</a><a name=0005215></a></td>
+<td>transporter activity</td>
+<td  align=center>8.31E-4</td>
+<td  align=center>8.28E-2</td>
+<td  align=center>2.37 (20161,1081,134,17)</td>
+<td>
+<a id="ctrl_elements_GO:0005215" href="javascript:toggle('elements_GO:0005215')">[+] Show genes</a><br>
+<div id="elements_GO:0005215" style="display:none"> <font size=1>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Osbp2  -  oxysterol binding protein 2<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019855&amp;view=details' target="_blank">GO:0019855</a><a name=0019855></a></td>
+<td>calcium channel inhibitor activity</td>
+<td  align=center>9.01E-4</td>
+<td  align=center>8.78E-2</td>
+<td  align=center>42.99 (20161,7,134,2)</td>
+<td>
+<a id="ctrl_elements_GO:0019855" href="javascript:toggle('elements_GO:0019855')">[+] Show genes</a><br>
+<div id="elements_GO:0019855" style="display:none"> <font size=1>
+Stx1a  -  syntaxin 1a (brain)<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022857&amp;view=details' target="_blank">GO:0022857</a><a name=0022857></a></td>
+<td>transmembrane transporter activity</td>
+<td  align=center>9.43E-4</td>
+<td  align=center>9E-2</td>
+<td  align=center>2.42 (20161,995,134,16)</td>
+<td>
+<a id="ctrl_elements_GO:0022857" href="javascript:toggle('elements_GO:0022857')">[+] Show genes</a><br>
+<div id="elements_GO:0022857" style="display:none"> <font size=1>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Ano3  -  anoctamin 3<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnf1  -  potassium voltage-gated channel, subfamily f, member 1<br>
+Scn2a1  -  sodium channel, voltage-gated, type ii, alpha 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Kcnv1  -  potassium channel, subfamily v, member 1<br>
+Tusc3  -  tumor suppressor candidate 3<br>
+Gpm6a  -  glycoprotein m6a<br>
+Itpr1  -  inositol 1,4,5-trisphosphate receptor 1<br>
+Kcnab1  -  potassium voltage-gated channel, shaker-related subfamily, beta member 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 27289 genes out of 37697 gene terms entered by the user.<br> 27289 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>159 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 27130 genes.<br>Only 20161 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Apr 2, 2024
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 4581 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

@@ -1,0 +1,2168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='2328,1165,2424,1227' HREF='#0009165' ALT=''>
+<AREA SHAPE='RECT' COORDS='2328,1293,2424,1373' HREF='#0019363' ALT=''>
+<AREA SHAPE='RECT' COORDS='1861,1302,1984,1365' HREF='#0006164' ALT=''>
+<AREA SHAPE='RECT' COORDS='2197,1302,2304,1365' HREF='#0009260' ALT=''>
+<AREA SHAPE='RECT' COORDS='3336,1293,3461,1373' HREF='#0009145' ALT=''>
+<AREA SHAPE='RECT' COORDS='3089,1421,3236,1501' HREF='#0009206' ALT=''>
+<AREA SHAPE='RECT' COORDS='1840,1165,1963,1227' HREF='#0006163' ALT=''>
+<AREA SHAPE='RECT' COORDS='2029,1302,2173,1365' HREF='#0009150' ALT=''>
+<AREA SHAPE='RECT' COORDS='2712,1293,2837,1373' HREF='#0009127' ALT=''>
+<AREA SHAPE='RECT' COORDS='2705,1421,2852,1501' HREF='#0009168' ALT=''>
+<AREA SHAPE='RECT' COORDS='683,634,779,697' HREF='#0016053' ALT=''>
+<AREA SHAPE='RECT' COORDS='385,899,508,962' HREF='#0046394' ALT=''>
+<AREA SHAPE='RECT' COORDS='2597,771,2723,834' HREF='#0046434' ALT=''>
+<AREA SHAPE='RECT' COORDS='2100,1019,2188,1099' HREF='#1901292' ALT=''>
+<AREA SHAPE='RECT' COORDS='2040,634,2136,697' HREF='#0018130' ALT=''>
+<AREA SHAPE='RECT' COORDS='1880,763,2003,843' HREF='#0072522' ALT=''>
+<AREA SHAPE='RECT' COORDS='2027,763,2181,843' HREF='#0034654' ALT=''>
+<AREA SHAPE='RECT' COORDS='1723,763,1856,843' HREF='#0072525' ALT=''>
+<AREA SHAPE='RECT' COORDS='528,641,659,689' HREF='#0043436' ALT=''>
+<AREA SHAPE='RECT' COORDS='300,771,409,834' HREF='#0019752' ALT=''>
+<AREA SHAPE='RECT' COORDS='6961,1165,7103,1227' HREF='#0050848' ALT=''>
+<AREA SHAPE='RECT' COORDS='7301,1293,7451,1373' HREF='#0060314' ALT=''>
+<AREA SHAPE='RECT' COORDS='7551,634,7647,697' HREF='#0098693' ALT=''>
+<AREA SHAPE='RECT' COORDS='1413,625,1520,705' HREF='#1901362' ALT=''>
+<AREA SHAPE='RECT' COORDS='4192,1027,4283,1090' HREF='#0097120' ALT=''>
+<AREA SHAPE='RECT' COORDS='5484,1713,5604,1810' HREF='#0098969' ALT=''>
+<AREA SHAPE='RECT' COORDS='2880,1437,2989,1485' HREF='#0046034' ALT=''>
+<AREA SHAPE='RECT' COORDS='2793,1583,2919,1631' HREF='#0006754' ALT=''>
+<AREA SHAPE='RECT' COORDS='6239,634,6332,697' HREF='#0065008' ALT=''>
+<AREA SHAPE='RECT' COORDS='6205,779,6301,827' HREF='#0042592' ALT=''>
+<AREA SHAPE='RECT' COORDS='6907,763,7021,843' HREF='#0051282' ALT=''>
+<AREA SHAPE='RECT' COORDS='7681,1019,7780,1099' HREF='#0010522' ALT=''>
+<AREA SHAPE='RECT' COORDS='6477,899,6565,962' HREF='#0048167' ALT=''>
+<AREA SHAPE='RECT' COORDS='6749,771,6883,834' HREF='#0001505' ALT=''>
+<AREA SHAPE='RECT' COORDS='5547,771,5637,834' HREF='#0010817' ALT=''>
+<AREA SHAPE='RECT' COORDS='5961,1549,6081,1664' HREF='#0099072' ALT=''>
+<AREA SHAPE='RECT' COORDS='4469,907,4600,955' HREF='#0097479' ALT=''>
+<AREA SHAPE='RECT' COORDS='4867,1035,4981,1083' HREF='#0048489' ALT=''>
+<AREA SHAPE='RECT' COORDS='1581,470,1667,567' HREF='#0034641' ALT=''>
+<AREA SHAPE='RECT' COORDS='1741,617,1837,714' HREF='#0044271' ALT=''>
+<AREA SHAPE='RECT' COORDS='1112,634,1232,697' HREF='#0043603' ALT=''>
+<AREA SHAPE='RECT' COORDS='1861,625,2016,705' HREF='#0006139' ALT=''>
+<AREA SHAPE='RECT' COORDS='2331,617,2416,714' HREF='#0044270' ALT=''>
+<AREA SHAPE='RECT' COORDS='1256,625,1389,705' HREF='#0072524' ALT=''>
+<AREA SHAPE='RECT' COORDS='1595,625,1717,705' HREF='#0072521' ALT=''>
+<AREA SHAPE='RECT' COORDS='4489,495,4575,543' HREF='#0051640' ALT=''>
+<AREA SHAPE='RECT' COORDS='4423,641,4553,689' HREF='#0051648' ALT=''>
+<AREA SHAPE='RECT' COORDS='4577,634,4684,697' HREF='#0051656' ALT=''>
+<AREA SHAPE='RECT' COORDS='5025,634,5148,697' HREF='#0099003' ALT=''>
+<AREA SHAPE='RECT' COORDS='5121,779,5215,827' HREF='#0140238' ALT=''>
+<AREA SHAPE='RECT' COORDS='5291,779,5381,827' HREF='#0046907' ALT=''>
+<AREA SHAPE='RECT' COORDS='5329,1035,5444,1083' HREF='#0006886' ALT=''>
+<AREA SHAPE='RECT' COORDS='1168,479,1277,559' HREF='#1901564' ALT=''>
+<AREA SHAPE='RECT' COORDS='277,641,403,689' HREF='#0019538' ALT=''>
+<AREA SHAPE='RECT' COORDS='853,625,963,705' HREF='#1901566' ALT=''>
+<AREA SHAPE='RECT' COORDS='752,779,880,827' HREF='#0006518' ALT=''>
+<AREA SHAPE='RECT' COORDS='4859,899,4989,962' HREF='#0097480' ALT=''>
+<AREA SHAPE='RECT' COORDS='2088,1165,2173,1227' HREF='#0009166' ALT=''>
+<AREA SHAPE='RECT' COORDS='3725,487,3816,550' HREF='#0022607' ALT=''>
+<AREA SHAPE='RECT' COORDS='3837,641,3968,689' HREF='#0065003' ALT=''>
+<AREA SHAPE='RECT' COORDS='5661,771,5768,834' HREF='#0045184' ALT=''>
+<AREA SHAPE='RECT' COORDS='5424,907,5539,955' HREF='#0015031' ALT=''>
+<AREA SHAPE='RECT' COORDS='5548,1019,5655,1099' HREF='#0090150' ALT=''>
+<AREA SHAPE='RECT' COORDS='4569,771,4676,834' HREF='#0051650' ALT=''>
+<AREA SHAPE='RECT' COORDS='4911,779,5041,827' HREF='#0006898' ALT=''>
+<AREA SHAPE='RECT' COORDS='4344,907,4445,955' HREF='#0031623' ALT=''>
+<AREA SHAPE='RECT' COORDS='6085,907,6181,955' HREF='#0019725' ALT=''>
+<AREA SHAPE='RECT' COORDS='6205,907,6301,955' HREF='#0048878' ALT=''>
+<AREA SHAPE='RECT' COORDS='465,1035,588,1083' HREF='#0016486' ALT=''>
+<AREA SHAPE='RECT' COORDS='483,1172,571,1220' HREF='#0034230' ALT=''>
+<AREA SHAPE='RECT' COORDS='192,1172,317,1220' HREF='#0030070' ALT=''>
+<AREA SHAPE='RECT' COORDS='4260,1165,4380,1227' HREF='#0032594' ALT=''>
+<AREA SHAPE='RECT' COORDS='3040,1156,3149,1236' HREF='#0009199' ALT=''>
+<AREA SHAPE='RECT' COORDS='3165,1293,3312,1373' HREF='#0009205' ALT=''>
+<AREA SHAPE='RECT' COORDS='3032,1293,3141,1373' HREF='#0009201' ALT=''>
+<AREA SHAPE='RECT' COORDS='7487,1147,7596,1245' HREF='#0051279' ALT=''>
+<AREA SHAPE='RECT' COORDS='5191,495,5276,543' HREF='#0098657' ALT=''>
+<AREA SHAPE='RECT' COORDS='4911,641,5001,689' HREF='#0006897' ALT=''>
+<AREA SHAPE='RECT' COORDS='3837,771,3968,834' HREF='#0034622' ALT=''>
+<AREA SHAPE='RECT' COORDS='3840,907,3963,955' HREF='#0035493' ALT=''>
+<AREA SHAPE='RECT' COORDS='41,779,167,827' HREF='#0051604' ALT=''>
+<AREA SHAPE='RECT' COORDS='100,907,228,955' HREF='#0016485' ALT=''>
+<AREA SHAPE='RECT' COORDS='2144,1430,2288,1493' HREF='#0009152' ALT=''>
+<AREA SHAPE='RECT' COORDS='987,625,1088,705' HREF='#1901137' ALT=''>
+<AREA SHAPE='RECT' COORDS='1980,899,2105,962' HREF='#0046390' ALT=''>
+<AREA SHAPE='RECT' COORDS='2848,634,2973,697' HREF='#0019637' ALT=''>
+<AREA SHAPE='RECT' COORDS='2651,891,2739,971' HREF='#0006753' ALT=''>
+<AREA SHAPE='RECT' COORDS='2448,771,2573,834' HREF='#0090407' ALT=''>
+<AREA SHAPE='RECT' COORDS='2747,771,2872,834' HREF='#0019693' ALT=''>
+<AREA SHAPE='RECT' COORDS='2448,1156,2533,1236' HREF='#0019362' ALT=''>
+<AREA SHAPE='RECT' COORDS='2448,1293,2547,1373' HREF='#0046496' ALT=''>
+<AREA SHAPE='RECT' COORDS='4200,907,4320,955' HREF='#0051668' ALT=''>
+<AREA SHAPE='RECT' COORDS='4357,1027,4477,1090' HREF='#0099590' ALT=''>
+<AREA SHAPE='RECT' COORDS='1353,357,1449,405' HREF='#0009058' ALT=''>
+<AREA SHAPE='RECT' COORDS='675,487,787,550' HREF='#0044283' ALT=''>
+<AREA SHAPE='RECT' COORDS='2077,487,2173,550' HREF='#0044249' ALT=''>
+<AREA SHAPE='RECT' COORDS='1301,487,1432,550' HREF='#1901576' ALT=''>
+<AREA SHAPE='RECT' COORDS='6867,350,6949,413' HREF='#0050794' ALT=''>
+<AREA SHAPE='RECT' COORDS='7045,771,7139,834' HREF='#1903530' ALT=''>
+<AREA SHAPE='RECT' COORDS='6833,479,6916,559' HREF='#0048522' ALT=''>
+<AREA SHAPE='RECT' COORDS='6612,495,6759,543' HREF='#0010646' ALT=''>
+<AREA SHAPE='RECT' COORDS='2861,1293,3008,1373' HREF='#0009167' ALT=''>
+<AREA SHAPE='RECT' COORDS='4260,1302,4380,1365' HREF='#0099632' ALT=''>
+<AREA SHAPE='RECT' COORDS='4260,1430,4380,1493' HREF='#0099637' ALT=''>
+<AREA SHAPE='RECT' COORDS='6672,1437,6768,1485' HREF='#0055074' ALT=''>
+<AREA SHAPE='RECT' COORDS='6552,1575,6648,1638' HREF='#0006874' ALT=''>
+<AREA SHAPE='RECT' COORDS='1749,891,1904,971' HREF='#0034404' ALT=''>
+<AREA SHAPE='RECT' COORDS='2447,1019,2543,1099' HREF='#1901293' ALT=''>
+<AREA SHAPE='RECT' COORDS='1544,763,1699,843' HREF='#0055086' ALT=''>
+<AREA SHAPE='RECT' COORDS='811,487,907,550' HREF='#0006082' ALT=''>
+<AREA SHAPE='RECT' COORDS='2424,487,2555,550' HREF='#1901575' ALT=''>
+<AREA SHAPE='RECT' COORDS='2440,625,2547,705' HREF='#1901361' ALT=''>
+<AREA SHAPE='RECT' COORDS='4733,1172,4861,1220' HREF='#0016079' ALT=''>
+<AREA SHAPE='RECT' COORDS='6395,1421,6528,1501' HREF='#0072503' ALT=''>
+<AREA SHAPE='RECT' COORDS='5171,1421,5293,1501' HREF='#0098876' ALT=''>
+<AREA SHAPE='RECT' COORDS='5423,1558,5543,1655' HREF='#0098877' ALT=''>
+<AREA SHAPE='RECT' COORDS='2269,763,2424,843' HREF='#0034655' ALT=''>
+<AREA SHAPE='RECT' COORDS='3579,891,3664,971' HREF='#0022904' ALT=''>
+<AREA SHAPE='RECT' COORDS='3628,1027,3745,1090' HREF='#0019646' ALT=''>
+<AREA SHAPE='RECT' COORDS='4077,1035,4168,1083' HREF='#0061024' ALT=''>
+<AREA SHAPE='RECT' COORDS='3568,495,3701,543' HREF='#0055114' ALT=''>
+<AREA SHAPE='RECT' COORDS='3589,634,3667,697' HREF='#0022900' ALT=''>
+<AREA SHAPE='RECT' COORDS='3691,625,3813,705' HREF='#0015980' ALT=''>
+<AREA SHAPE='RECT' COORDS='2571,634,2664,697' HREF='#0046700' ALT=''>
+<AREA SHAPE='RECT' COORDS='6453,1035,6571,1083' HREF='#0050801' ALT=''>
+<AREA SHAPE='RECT' COORDS='6379,1172,6496,1220' HREF='#0006873' ALT=''>
+<AREA SHAPE='RECT' COORDS='6677,1172,6795,1220' HREF='#0098771' ALT=''>
+<AREA SHAPE='RECT' COORDS='6520,1172,6653,1220' HREF='#0055080' ALT=''>
+<AREA SHAPE='RECT' COORDS='3840,487,3968,550' HREF='#0043933' ALT=''>
+<AREA SHAPE='RECT' COORDS='325,495,453,543' HREF='#0044238' ALT=''>
+<AREA SHAPE='RECT' COORDS='2451,357,2528,405' HREF='#0009056' ALT=''>
+<AREA SHAPE='RECT' COORDS='2579,487,2656,550' HREF='#0044248' ALT=''>
+<AREA SHAPE='RECT' COORDS='6589,891,6693,971' HREF='#0051966' ALT=''>
+<AREA SHAPE='RECT' COORDS='3173,1156,3269,1236' HREF='#0009142' ALT=''>
+<AREA SHAPE='RECT' COORDS='6533,1302,6667,1365' HREF='#0072507' ALT=''>
+<AREA SHAPE='RECT' COORDS='1608,237,1691,285' HREF='#0008152' ALT=''>
+<AREA SHAPE='RECT' COORDS='2576,350,2659,413' HREF='#0044237' ALT=''>
+<AREA SHAPE='RECT' COORDS='1540,341,1625,421' HREF='#0006807' ALT=''>
+<AREA SHAPE='RECT' COORDS='532,907,668,955' HREF='#0042445' ALT=''>
+<AREA SHAPE='RECT' COORDS='739,350,851,413' HREF='#0044281' ALT=''>
+<AREA SHAPE='RECT' COORDS='1649,350,1780,413' HREF='#0071704' ALT=''>
+<AREA SHAPE='RECT' COORDS='3049,1019,3145,1099' HREF='#0009141' ALT=''>
+<AREA SHAPE='RECT' COORDS='3293,1156,3419,1236' HREF='#0009144' ALT=''>
+<AREA SHAPE='RECT' COORDS='4621,1035,4728,1083' HREF='#0099643' ALT=''>
+<AREA SHAPE='RECT' COORDS='3451,479,3544,559' HREF='#0006091' ALT=''>
+<AREA SHAPE='RECT' COORDS='2864,487,2957,550' HREF='#0006793' ALT=''>
+<AREA SHAPE='RECT' COORDS='3221,625,3336,705' HREF='#0044260' ALT=''>
+<AREA SHAPE='RECT' COORDS='1960,487,2053,550' HREF='#0046483' ALT=''>
+<AREA SHAPE='RECT' COORDS='3485,1309,3595,1357' HREF='#0017144' ALT=''>
+<AREA SHAPE='RECT' COORDS='2197,470,2283,567' HREF='#0006725' ALT=''>
+<AREA SHAPE='RECT' COORDS='3344,487,3427,550' HREF='#0051186' ALT=''>
+<AREA SHAPE='RECT' COORDS='2688,625,2773,705' HREF='#0019439' ALT=''>
+<AREA SHAPE='RECT' COORDS='191,779,276,827' HREF='#0006508' ALT=''>
+<AREA SHAPE='RECT' COORDS='2997,625,3147,705' HREF='#0006796' ALT=''>
+<AREA SHAPE='RECT' COORDS='7492,891,7607,971' HREF='#1904062' ALT=''>
+<AREA SHAPE='RECT' COORDS='7495,1019,7631,1099' HREF='#1903169' ALT=''>
+<AREA SHAPE='RECT' COORDS='7361,1027,7471,1090' HREF='#2001257' ALT=''>
+<AREA SHAPE='RECT' COORDS='39,1035,161,1083' HREF='#1901142' ALT=''>
+<AREA SHAPE='RECT' COORDS='2197,1165,2304,1227' HREF='#0009259' ALT=''>
+<AREA SHAPE='RECT' COORDS='2891,1156,3016,1236' HREF='#0009126' ALT=''>
+<AREA SHAPE='RECT' COORDS='6503,495,6588,543' HREF='#0023051' ALT=''>
+<AREA SHAPE='RECT' COORDS='6524,634,6647,697' HREF='#0099177' ALT=''>
+<AREA SHAPE='RECT' COORDS='6671,634,6756,697' HREF='#0023056' ALT=''>
+<AREA SHAPE='RECT' COORDS='6407,634,6500,697' HREF='#0009966' ALT=''>
+<AREA SHAPE='RECT' COORDS='2363,1421,2461,1501' HREF='#0019359' ALT=''>
+<AREA SHAPE='RECT' COORDS='6780,634,6927,697' HREF='#0010647' ALT=''>
+<AREA SHAPE='RECT' COORDS='6717,891,6813,971' HREF='#0050806' ALT=''>
+<AREA SHAPE='RECT' COORDS='6669,1027,6800,1090' HREF='#1902531' ALT=''>
+<AREA SHAPE='RECT' COORDS='252,899,361,962' HREF='#0043648' ALT=''>
+<AREA SHAPE='RECT' COORDS='281,1027,404,1090' HREF='#0043650' ALT=''>
+<AREA SHAPE='RECT' COORDS='5712,1027,5845,1090' HREF='#1903539' ALT=''>
+<AREA SHAPE='RECT' COORDS='5571,1147,5685,1245' HREF='#1903540' ALT=''>
+<AREA SHAPE='RECT' COORDS='6205,1027,6301,1090' HREF='#0055082' ALT=''>
+<AREA SHAPE='RECT' COORDS='7265,634,7396,697' HREF='#0034762' ALT=''>
+<AREA SHAPE='RECT' COORDS='7320,763,7451,843' HREF='#0022898' ALT=''>
+<AREA SHAPE='RECT' COORDS='7475,771,7624,834' HREF='#0034765' ALT=''>
+<AREA SHAPE='RECT' COORDS='6552,1430,6648,1493' HREF='#0006875' ALT=''>
+<AREA SHAPE='RECT' COORDS='3221,771,3304,834' HREF='#0043112' ALT=''>
+<AREA SHAPE='RECT' COORDS='6528,763,6624,843' HREF='#0050804' ALT=''>
+<AREA SHAPE='RECT' COORDS='7025,899,7159,962' HREF='#0046928' ALT=''>
+<AREA SHAPE='RECT' COORDS='6973,357,7075,405' HREF='#0032879' ALT=''>
+<AREA SHAPE='RECT' COORDS='7599,487,7684,550' HREF='#0060341' ALT=''>
+<AREA SHAPE='RECT' COORDS='7237,495,7323,543' HREF='#0051049' ALT=''>
+<AREA SHAPE='RECT' COORDS='5405,641,5517,689' HREF='#0042886' ALT=''>
+<AREA SHAPE='RECT' COORDS='5405,779,5523,827' HREF='#0015833' ALT=''>
+<AREA SHAPE='RECT' COORDS='6376,1309,6509,1357' HREF='#0030003' ALT=''>
+<AREA SHAPE='RECT' COORDS='4749,907,4835,955' HREF='#0045055' ALT=''>
+<AREA SHAPE='RECT' COORDS='4752,1027,4843,1090' HREF='#0017156' ALT=''>
+<AREA SHAPE='RECT' COORDS='7315,891,7464,971' HREF='#0032412' ALT=''>
+<AREA SHAPE='RECT' COORDS='7256,1147,7392,1245' HREF='#1901019' ALT=''>
+<AREA SHAPE='RECT' COORDS='6508,350,6601,413' HREF='#0048583' ALT=''>
+<AREA SHAPE='RECT' COORDS='3360,634,3456,697' HREF='#0051188' ALT=''>
+<AREA SHAPE='RECT' COORDS='3379,771,3475,834' HREF='#0009108' ALT=''>
+<AREA SHAPE='RECT' COORDS='4537,5,4425,29' HREF='#0008150' ALT=''>
+<AREA SHAPE='RECT' COORDS='6345,117,6417,165' HREF='#0023052' ALT=''>
+<AREA SHAPE='RECT' COORDS='4139,101,4237,181' HREF='#0071840' ALT=''>
+<AREA SHAPE='RECT' COORDS='6241,117,6321,165' HREF='#0065007' ALT=''>
+<AREA SHAPE='RECT' COORDS='4225,237,4297,285' HREF='#0009987' ALT=''>
+<AREA SHAPE='RECT' COORDS='4580,117,4665,165' HREF='#0051179' ALT=''>
+<AREA SHAPE='RECT' COORDS='2333,1027,2419,1090' HREF='#0009117' ALT=''>
+<AREA SHAPE='RECT' COORDS='2751,1019,2868,1099' HREF='#0009123' ALT=''>
+<AREA SHAPE='RECT' COORDS='6687,230,6780,293' HREF='#0050789' ALT=''>
+<AREA SHAPE='RECT' COORDS='6749,341,6843,421' HREF='#0048518' ALT=''>
+<AREA SHAPE='RECT' COORDS='3711,779,3793,827' HREF='#0045333' ALT=''>
+<AREA SHAPE='RECT' COORDS='4580,357,4665,405' HREF='#0051641' ALT=''>
+<AREA SHAPE='RECT' COORDS='5716,634,5831,697' HREF='#0070727' ALT=''>
+<AREA SHAPE='RECT' COORDS='5180,237,5287,285' HREF='#0051234' ALT=''>
+<AREA SHAPE='RECT' COORDS='5197,357,5269,405' HREF='#0006810' ALT=''>
+<AREA SHAPE='RECT' COORDS='5172,634,5279,697' HREF='#0051649' ALT=''>
+<AREA SHAPE='RECT' COORDS='1829,479,1936,559' HREF='#1901360' ALT=''>
+<AREA SHAPE='RECT' COORDS='5511,495,5641,543' HREF='#0071702' ALT=''>
+<AREA SHAPE='RECT' COORDS='3960,350,4051,413' HREF='#0016043' ALT=''>
+<AREA SHAPE='RECT' COORDS='4624,907,4725,955' HREF='#0023061' ALT=''>
+<AREA SHAPE='RECT' COORDS='3688,907,3816,955' HREF='#0009060' ALT=''>
+<AREA SHAPE='RECT' COORDS='5928,907,6061,955' HREF='#0035418' ALT=''>
+<AREA SHAPE='RECT' COORDS='2608,1156,2725,1236' HREF='#0009124' ALT=''>
+<AREA SHAPE='RECT' COORDS='2571,1293,2688,1373' HREF='#0009156' ALT=''>
+<AREA SHAPE='RECT' COORDS='5716,495,5831,543' HREF='#0033036' ALT=''>
+<AREA SHAPE='RECT' COORDS='5855,641,5985,689' HREF='#0008104' ALT=''>
+<AREA SHAPE='RECT' COORDS='2160,625,2256,705' HREF='#0019438' ALT=''>
+<AREA SHAPE='RECT' COORDS='4900,495,5020,543' HREF='#0006836' ALT=''>
+<AREA SHAPE='RECT' COORDS='6691,1309,6787,1357' HREF='#0055065' ALT=''>
+<AREA SHAPE='RECT' COORDS='5792,779,5923,827' HREF='#0034613' ALT=''>
+<AREA SHAPE='RECT' COORDS='5771,907,5904,955' HREF='#0072657' ALT=''>
+<AREA SHAPE='RECT' COORDS='5613,907,5747,955' HREF='#1990778' ALT=''>
+<AREA SHAPE='RECT' COORDS='4708,641,4785,689' HREF='#0032940' ALT=''>
+<AREA SHAPE='RECT' COORDS='4751,779,4836,827' HREF='#0006887' ALT=''>
+<AREA SHAPE='RECT' COORDS='7699,771,7792,834' HREF='#0010959' ALT=''>
+<AREA SHAPE='RECT' COORDS='7684,899,7777,962' HREF='#0051924' ALT=''>
+<AREA SHAPE='RECT' COORDS='7420,641,7527,689' HREF='#0043269' ALT=''>
+<AREA SHAPE='RECT' COORDS='5115,907,5248,955' HREF='#0048488' ALT=''>
+<AREA SHAPE='RECT' COORDS='2749,1156,2867,1236' HREF='#0009161' ALT=''>
+<AREA SHAPE='RECT' COORDS='2567,1019,2676,1099' HREF='#0006733' ALT=''>
+<AREA SHAPE='RECT' COORDS='5351,487,5436,550' HREF='#0071705' ALT=''>
+<AREA SHAPE='RECT' COORDS='3480,634,3565,697' HREF='#0006732' ALT=''>
+<AREA SHAPE='RECT' COORDS='6320,230,6416,293' HREF='#0065009' ALT=''>
+<AREA SHAPE='RECT' COORDS='6319,350,6420,413' HREF='#0032409' ALT=''>
+<AREA SHAPE='RECT' COORDS='4801,495,4876,543' HREF='#0046903' ALT=''>
+<AREA SHAPE='RECT' COORDS='7103,641,7191,689' HREF='#0051046' ALT=''>
+<AREA SHAPE='RECT' COORDS='5044,495,5167,543' HREF='#0016192' ALT=''>
+<AREA SHAPE='RECT' COORDS='1691,487,1805,550' HREF='#0043170' ALT=''>
+<AREA SHAPE='RECT' COORDS='3636,1147,3737,1245' HREF='#0006123' ALT=''>
+<AREA SHAPE='RECT' COORDS='4037,907,4176,955' HREF='#0031503' ALT=''>
+<AREA SHAPE='RECT' COORDS='7163,771,7296,834' HREF='#0051588' ALT=''>
+<AREA SHAPE='RECT' COORDS='1456,479,1557,559' HREF='#1901135' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="/static/analysis/data66/go/18/GOPROCESS.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099003&amp;view=details' target="_blank">GO:0099003</a><a name=0099003></a></td>
+<td>vesicle-mediated transport in synapse</td>
+<td  align=center>5.11E-9</td>
+<td  align=center>7.89E-5</td>
+<td  align=center>9.53 (20161,125,203,12)</td>
+<td>
+<a id="ctrl_elements_GO:0099003" href="javascript:toggle('elements_GO:0099003')">[+] Show genes</a><br>
+<div id="elements_GO:0099003" style="display:none"> <font size=1>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Dnm1  -  dynamin 1<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+Sncb  -  synuclein, beta<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099072&amp;view=details' target="_blank">GO:0099072</a><a name=0099072></a></td>
+<td>regulation of postsynaptic membrane neurotransmitter receptor levels</td>
+<td  align=center>1.32E-8</td>
+<td  align=center>1.02E-4</td>
+<td  align=center>14.19 (20161,63,203,9)</td>
+<td>
+<a id="ctrl_elements_GO:0099072" href="javascript:toggle('elements_GO:0099072')">[+] Show genes</a><br>
+<div id="elements_GO:0099072" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050804&amp;view=details' target="_blank">GO:0050804</a><a name=0050804></a></td>
+<td>modulation of chemical synaptic transmission</td>
+<td  align=center>4.13E-8</td>
+<td  align=center>2.13E-4</td>
+<td  align=center>3.97 (20161,550,203,22)</td>
+<td>
+<a id="ctrl_elements_GO:0050804" href="javascript:toggle('elements_GO:0050804')">[+] Show genes</a><br>
+<div id="elements_GO:0050804" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Cplx1  -  complexin 1<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Ncdn  -  neurochondrin<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Dlgap3  -  discs, large (drosophila) homolog-associated protein 3<br>
+Plk2  -  polo-like kinase 2<br>
+Tprgl  -  transformation related protein 63 regulated like<br>
+Prnp  -  prion protein<br>
+Syngr1  -  synaptogyrin 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Prkcb  -  protein kinase c, beta<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099177&amp;view=details' target="_blank">GO:0099177</a><a name=0099177></a></td>
+<td>regulation of trans-synaptic signaling</td>
+<td  align=center>4.26E-8</td>
+<td  align=center>1.65E-4</td>
+<td  align=center>3.97 (20161,551,203,22)</td>
+<td>
+<a id="ctrl_elements_GO:0099177" href="javascript:toggle('elements_GO:0099177')">[+] Show genes</a><br>
+<div id="elements_GO:0099177" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Cplx1  -  complexin 1<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Ncdn  -  neurochondrin<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Dlgap3  -  discs, large (drosophila) homolog-associated protein 3<br>
+Plk2  -  polo-like kinase 2<br>
+Tprgl  -  transformation related protein 63 regulated like<br>
+Prnp  -  prion protein<br>
+Syngr1  -  synaptogyrin 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Prkcb  -  protein kinase c, beta<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048167&amp;view=details' target="_blank">GO:0048167</a><a name=0048167></a></td>
+<td>regulation of synaptic plasticity</td>
+<td  align=center>8.5E-6</td>
+<td  align=center>2.63E-2</td>
+<td  align=center>4.81 (20161,248,203,12)</td>
+<td>
+<a id="ctrl_elements_GO:0048167" href="javascript:toggle('elements_GO:0048167')">[+] Show genes</a><br>
+<div id="elements_GO:0048167" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Ncdn  -  neurochondrin<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Snca  -  synuclein, alpha<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Plk2  -  polo-like kinase 2<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+Prnp  -  prion protein<br>
+Syngr1  -  synaptogyrin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016192&amp;view=details' target="_blank">GO:0016192</a><a name=0016192></a></td>
+<td>vesicle-mediated transport</td>
+<td  align=center>1.07E-5</td>
+<td  align=center>2.77E-2</td>
+<td  align=center>2.56 (20161,1010,203,26)</td>
+<td>
+<a id="ctrl_elements_GO:0016192" href="javascript:toggle('elements_GO:0016192')">[+] Show genes</a><br>
+<div id="elements_GO:0016192" style="display:none"> <font size=1>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Sncb  -  synuclein, beta<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Syn2  -  synapsin ii<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Syngr1  -  synaptogyrin 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Arf3  -  adp-ribosylation factor 3<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Rtn3  -  reticulon 3<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Rab6b  -  rab6b, member ras oncogene family<br>
+Epn1  -  epsin 1<br>
+Reps2  -  ralbp1 associated eps domain containing protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903539&amp;view=details' target="_blank">GO:1903539</a><a name=1903539></a></td>
+<td>protein localization to postsynaptic membrane</td>
+<td  align=center>1.35E-5</td>
+<td  align=center>2.99E-2</td>
+<td  align=center>16.02 (20161,31,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:1903539" href="javascript:toggle('elements_GO:1903539')">[+] Show genes</a><br>
+<div id="elements_GO:1903539" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051668&amp;view=details' target="_blank">GO:0051668</a><a name=0051668></a></td>
+<td>localization within membrane</td>
+<td  align=center>1.48E-5</td>
+<td  align=center>2.87E-2</td>
+<td  align=center>6.25 (20161,143,203,9)</td>
+<td>
+<a id="ctrl_elements_GO:0051668" href="javascript:toggle('elements_GO:0051668')">[+] Show genes</a><br>
+<div id="elements_GO:0051668" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016486&amp;view=details' target="_blank">GO:0016486</a><a name=0016486></a></td>
+<td>peptide hormone processing</td>
+<td  align=center>1.65E-5</td>
+<td  align=center>2.84E-2</td>
+<td  align=center>24.83 (20161,16,203,4)</td>
+<td>
+<a id="ctrl_elements_GO:0016486" href="javascript:toggle('elements_GO:0016486')">[+] Show genes</a><br>
+<div id="elements_GO:0016486" style="display:none"> <font size=1>
+Cpe  -  carboxypeptidase e<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Scg5  -  secretogranin v<br>
+Pcsk2  -  proprotein convertase subtilisin/kexin type 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0017156&amp;view=details' target="_blank">GO:0017156</a><a name=0017156></a></td>
+<td>calcium ion regulated exocytosis</td>
+<td  align=center>1.67E-5</td>
+<td  align=center>2.58E-2</td>
+<td  align=center>11.04 (20161,54,203,6)</td>
+<td>
+<a id="ctrl_elements_GO:0017156" href="javascript:toggle('elements_GO:0017156')">[+] Show genes</a><br>
+<div id="elements_GO:0017156" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+Syn2  -  synapsin ii<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031503&amp;view=details' target="_blank">GO:0031503</a><a name=0031503></a></td>
+<td>protein-containing complex localization</td>
+<td  align=center>1.85E-5</td>
+<td  align=center>2.6E-2</td>
+<td  align=center>6.08 (20161,147,203,9)</td>
+<td>
+<a id="ctrl_elements_GO:0031503" href="javascript:toggle('elements_GO:0031503')">[+] Show genes</a><br>
+<div id="elements_GO:0031503" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Clstn1  -  calsyntenin 1<br>
+Rps15  -  ribosomal protein s15<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0065008&amp;view=details' target="_blank">GO:0065008</a><a name=0065008></a></td>
+<td>regulation of biological quality</td>
+<td  align=center>1.98E-5</td>
+<td  align=center>2.56E-2</td>
+<td  align=center>1.66 (20161,3639,203,61)</td>
+<td>
+<a id="ctrl_elements_GO:0065008" href="javascript:toggle('elements_GO:0065008')">[+] Show genes</a><br>
+<div id="elements_GO:0065008" style="display:none"> <font size=1>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Scg5  -  secretogranin v<br>
+Syn2  -  synapsin ii<br>
+Ubb  -  ubiquitin b<br>
+Syngr1  -  synaptogyrin 1<br>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Sh3bgrl3  -  sh3 domain binding glutamic acid-rich protein-like 3<br>
+Rbfox2  -  rna binding protein, fox-1 homolog (c. elegans) 2<br>
+Nckap1  -  nck-associated protein 1<br>
+Cpe  -  carboxypeptidase e<br>
+Adcy1  -  adenylate cyclase 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Calm3  -  calmodulin 3<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snca  -  synuclein, alpha<br>
+Map1lc3b  -  microtubule-associated protein 1 light chain 3 beta<br>
+Clstn1  -  calsyntenin 1<br>
+Plk2  -  polo-like kinase 2<br>
+Pcsk2  -  proprotein convertase subtilisin/kexin type 2<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Prkcb  -  protein kinase c, beta<br>
+Insig1  -  insulin induced gene 1<br>
+Gls  -  glutaminase<br>
+Hnf4a  -  hepatic nuclear factor 4, alpha<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+Rap1gap2  -  rap1 gtpase activating protein 2<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Cyp7a1  -  cytochrome p450, family 7, subfamily a, polypeptide 1<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Tmem9  -  transmembrane protein 9<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+Mtpn  -  myotrophin<br>
+Slc1a2  -  solute carrier family 1 (glial high affinity glutamate transporter), member 2<br>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Ncdn  -  neurochondrin<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ano1  -  anoctamin 1, calcium activated chloride channel<br>
+Prnp  -  prion protein<br>
+Cck  -  cholecystokinin<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+B2m  -  beta-2 microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035418&amp;view=details' target="_blank">GO:0035418</a><a name=0035418></a></td>
+<td>protein localization to synapse</td>
+<td  align=center>2.53E-5</td>
+<td  align=center>3.01E-2</td>
+<td  align=center>10.27 (20161,58,203,6)</td>
+<td>
+<a id="ctrl_elements_GO:0035418" href="javascript:toggle('elements_GO:0035418')">[+] Show genes</a><br>
+<div id="elements_GO:0035418" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Klc1  -  kinesin light chain 1<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099590&amp;view=details' target="_blank">GO:0099590</a><a name=0099590></a></td>
+<td>neurotransmitter receptor internalization</td>
+<td  align=center>2.73E-5</td>
+<td  align=center>3.02E-2</td>
+<td  align=center>22.07 (20161,18,203,4)</td>
+<td>
+<a id="ctrl_elements_GO:0099590" href="javascript:toggle('elements_GO:0099590')">[+] Show genes</a><br>
+<div id="elements_GO:0099590" style="display:none"> <font size=1>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050801&amp;view=details' target="_blank">GO:0050801</a><a name=0050801></a></td>
+<td>ion homeostasis</td>
+<td  align=center>3.65E-5</td>
+<td  align=center>3.76E-2</td>
+<td  align=center>2.70 (20161,772,203,21)</td>
+<td>
+<a id="ctrl_elements_GO:0050801" href="javascript:toggle('elements_GO:0050801')">[+] Show genes</a><br>
+<div id="elements_GO:0050801" style="display:none"> <font size=1>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Cck  -  cholecystokinin<br>
+Tmem9  -  transmembrane protein 9<br>
+Hnf4a  -  hepatic nuclear factor 4, alpha<br>
+Gls  -  glutaminase<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+B2m  -  beta-2 microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051649&amp;view=details' target="_blank">GO:0051649</a><a name=0051649></a></td>
+<td>establishment of localization in cell</td>
+<td  align=center>4.18E-5</td>
+<td  align=center>4.03E-2</td>
+<td  align=center>2.15 (20161,1429,203,31)</td>
+<td>
+<a id="ctrl_elements_GO:0051649" href="javascript:toggle('elements_GO:0051649')">[+] Show genes</a><br>
+<div id="elements_GO:0051649" style="display:none"> <font size=1>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Klc1  -  kinesin light chain 1<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Sncb  -  synuclein, beta<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Scg5  -  secretogranin v<br>
+Syn2  -  synapsin ii<br>
+Rps15  -  ribosomal protein s15<br>
+Ubb  -  ubiquitin b<br>
+Syngr1  -  synaptogyrin 1<br>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Arf3  -  adp-ribosylation factor 3<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Slc1a2  -  solute carrier family 1 (glial high affinity glutamate transporter), member 2<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Rab6b  -  rab6b, member ras oncogene family<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+Reps2  -  ralbp1 associated eps domain containing protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099632&amp;view=details' target="_blank">GO:0099632</a><a name=0099632></a></td>
+<td>protein transport within plasma membrane</td>
+<td  align=center>4.26E-5</td>
+<td  align=center>3.87E-2</td>
+<td  align=center>19.86 (20161,20,203,4)</td>
+<td>
+<a id="ctrl_elements_GO:0099632" href="javascript:toggle('elements_GO:0099632')">[+] Show genes</a><br>
+<div id="elements_GO:0099632" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099637&amp;view=details' target="_blank">GO:0099637</a><a name=0099637></a></td>
+<td>neurotransmitter receptor transport</td>
+<td  align=center>4.26E-5</td>
+<td  align=center>3.66E-2</td>
+<td  align=center>19.86 (20161,20,203,4)</td>
+<td>
+<a id="ctrl_elements_GO:0099637" href="javascript:toggle('elements_GO:0099637')">[+] Show genes</a><br>
+<div id="elements_GO:0099637" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099643&amp;view=details' target="_blank">GO:0099643</a><a name=0099643></a></td>
+<td>signal release from synapse</td>
+<td  align=center>4.46E-5</td>
+<td  align=center>3.63E-2</td>
+<td  align=center>9.31 (20161,64,203,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099643" href="javascript:toggle('elements_GO:0099643')">[+] Show genes</a><br>
+<div id="elements_GO:0099643" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+Syn2  -  synapsin ii<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045055&amp;view=details' target="_blank">GO:0045055</a><a name=0045055></a></td>
+<td>regulated exocytosis</td>
+<td  align=center>4.62E-5</td>
+<td  align=center>3.57E-2</td>
+<td  align=center>7.40 (20161,94,203,7)</td>
+<td>
+<a id="ctrl_elements_GO:0045055" href="javascript:toggle('elements_GO:0045055')">[+] Show genes</a><br>
+<div id="elements_GO:0045055" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+Syn2  -  synapsin ii<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Syngr1  -  synaptogyrin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006887&amp;view=details' target="_blank">GO:0006887</a><a name=0006887></a></td>
+<td>exocytosis</td>
+<td  align=center>7.6E-5</td>
+<td  align=center>5.59E-2</td>
+<td  align=center>5.08 (20161,176,203,9)</td>
+<td>
+<a id="ctrl_elements_GO:0006887" href="javascript:toggle('elements_GO:0006887')">[+] Show genes</a><br>
+<div id="elements_GO:0006887" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Syn2  -  synapsin ii<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Syngr1  -  synaptogyrin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097120&amp;view=details' target="_blank">GO:0097120</a><a name=0097120></a></td>
+<td>receptor localization to synapse</td>
+<td  align=center>7.78E-5</td>
+<td  align=center>5.46E-2</td>
+<td  align=center>11.29 (20161,44,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0097120" href="javascript:toggle('elements_GO:0097120')">[+] Show genes</a><br>
+<div id="elements_GO:0097120" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034230&amp;view=details' target="_blank">GO:0034230</a><a name=0034230></a></td>
+<td>enkephalin processing</td>
+<td  align=center>1.01E-4</td>
+<td  align=center>6.78E-2</td>
+<td  align=center>99.32 (20161,2,203,2)</td>
+<td>
+<a id="ctrl_elements_GO:0034230" href="javascript:toggle('elements_GO:0034230')">[+] Show genes</a><br>
+<div id="elements_GO:0034230" style="display:none"> <font size=1>
+Cpe  -  carboxypeptidase e<br>
+Pcsk2  -  proprotein convertase subtilisin/kexin type 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006091&amp;view=details' target="_blank">GO:0006091</a><a name=0006091></a></td>
+<td>generation of precursor metabolites and energy</td>
+<td  align=center>1.1E-4</td>
+<td  align=center>7.08E-2</td>
+<td  align=center>4.36 (20161,228,203,10)</td>
+<td>
+<a id="ctrl_elements_GO:0006091" href="javascript:toggle('elements_GO:0006091')">[+] Show genes</a><br>
+<div id="elements_GO:0006091" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+Snca  -  synuclein, alpha<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006123&amp;view=details' target="_blank">GO:0006123</a><a name=0006123></a></td>
+<td>mitochondrial electron transport, cytochrome c to oxygen</td>
+<td  align=center>1.15E-4</td>
+<td  align=center>7.08E-2</td>
+<td  align=center>29.79 (20161,10,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:0006123" href="javascript:toggle('elements_GO:0006123')">[+] Show genes</a><br>
+<div id="elements_GO:0006123" style="display:none"> <font size=1>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019646&amp;view=details' target="_blank">GO:0019646</a><a name=0019646></a></td>
+<td>aerobic electron transport chain</td>
+<td  align=center>1.15E-4</td>
+<td  align=center>6.81E-2</td>
+<td  align=center>29.79 (20161,10,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:0019646" href="javascript:toggle('elements_GO:0019646')">[+] Show genes</a><br>
+<div id="elements_GO:0019646" style="display:none"> <font size=1>
+Cox5b  -  cytochrome c oxidase subunit vb<br>
+Cox6a1  -  cytochrome c oxidase subunit via polypeptide 1<br>
+Cox7c  -  cytochrome c oxidase subunit viic<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048488&amp;view=details' target="_blank">GO:0048488</a><a name=0048488></a></td>
+<td>synaptic vesicle endocytosis</td>
+<td  align=center>1.19E-4</td>
+<td  align=center>6.79E-2</td>
+<td  align=center>10.35 (20161,48,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0048488" href="javascript:toggle('elements_GO:0048488')">[+] Show genes</a><br>
+<div id="elements_GO:0048488" style="display:none"> <font size=1>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Dnm1  -  dynamin 1<br>
+Snca  -  synuclein, alpha<br>
+Sncb  -  synuclein, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0140238&amp;view=details' target="_blank">GO:0140238</a><a name=0140238></a></td>
+<td>presynaptic endocytosis</td>
+<td  align=center>1.19E-4</td>
+<td  align=center>6.55E-2</td>
+<td  align=center>10.35 (20161,48,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0140238" href="javascript:toggle('elements_GO:0140238')">[+] Show genes</a><br>
+<div id="elements_GO:0140238" style="display:none"> <font size=1>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Dnm1  -  dynamin 1<br>
+Snca  -  synuclein, alpha<br>
+Sncb  -  synuclein, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0023061&amp;view=details' target="_blank">GO:0023061</a><a name=0023061></a></td>
+<td>signal release</td>
+<td  align=center>1.36E-4</td>
+<td  align=center>7.26E-2</td>
+<td  align=center>5.33 (20161,149,203,8)</td>
+<td>
+<a id="ctrl_elements_GO:0023061" href="javascript:toggle('elements_GO:0023061')">[+] Show genes</a><br>
+<div id="elements_GO:0023061" style="display:none"> <font size=1>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Cpe  -  carboxypeptidase e<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Syn2  -  synapsin ii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051966&amp;view=details' target="_blank">GO:0051966</a><a name=0051966></a></td>
+<td>regulation of synaptic transmission, glutamatergic</td>
+<td  align=center>1.46E-4</td>
+<td  align=center>7.52E-2</td>
+<td  align=center>7.54 (20161,79,203,6)</td>
+<td>
+<a id="ctrl_elements_GO:0051966" href="javascript:toggle('elements_GO:0051966')">[+] Show genes</a><br>
+<div id="elements_GO:0051966" style="display:none"> <font size=1>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Tprgl  -  transformation related protein 63 regulated like<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006810&amp;view=details' target="_blank">GO:0006810</a><a name=0006810></a></td>
+<td>transport</td>
+<td  align=center>1.51E-4</td>
+<td  align=center>7.54E-2</td>
+<td  align=center>1.64 (20161,3148,203,52)</td>
+<td>
+<a id="ctrl_elements_GO:0006810" href="javascript:toggle('elements_GO:0006810')">[+] Show genes</a><br>
+<div id="elements_GO:0006810" style="display:none"> <font size=1>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Klc1  -  kinesin light chain 1<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Scg5  -  secretogranin v<br>
+Sncb  -  synuclein, beta<br>
+Syn2  -  synapsin ii<br>
+Cct6b  -  chaperonin containing tcp1, subunit 6b (zeta)<br>
+Slc6a17  -  solute carrier family 6 (neurotransmitter transporter), member 17<br>
+Ubb  -  ubiquitin b<br>
+Syngr1  -  synaptogyrin 1<br>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Arf3  -  adp-ribosylation factor 3<br>
+Svopl  -  sv2 related protein homolog (rat)-like<br>
+Cpe  -  carboxypeptidase e<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Prkcb  -  protein kinase c, beta<br>
+Arhgap33  -  rho gtpase activating protein 33<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Rps15  -  ribosomal protein s15<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Tmem9  -  transmembrane protein 9<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+Slc1a2  -  solute carrier family 1 (glial high affinity glutamate transporter), member 2<br>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Catsper3  -  cation channel, sperm associated 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rtn3  -  reticulon 3<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ano1  -  anoctamin 1, calcium activated chloride channel<br>
+Mb  -  myoglobin<br>
+Rab6b  -  rab6b, member ras oncogene family<br>
+Epn1  -  epsin 1<br>
+B2m  -  beta-2 microglobulin<br>
+Reps2  -  ralbp1 associated eps domain containing protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098969&amp;view=details' target="_blank">GO:0098969</a><a name=0098969></a></td>
+<td>neurotransmitter receptor transport to postsynaptic membrane</td>
+<td  align=center>1.56E-4</td>
+<td  align=center>7.55E-2</td>
+<td  align=center>27.09 (20161,11,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:0098969" href="javascript:toggle('elements_GO:0098969')">[+] Show genes</a><br>
+<div id="elements_GO:0098969" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006873&amp;view=details' target="_blank">GO:0006873</a><a name=0006873></a></td>
+<td>cellular ion homeostasis</td>
+<td  align=center>1.96E-4</td>
+<td  align=center>9.16E-2</td>
+<td  align=center>2.71 (20161,622,203,17)</td>
+<td>
+<a id="ctrl_elements_GO:0006873" href="javascript:toggle('elements_GO:0006873')">[+] Show genes</a><br>
+<div id="elements_GO:0006873" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Tmem9  -  transmembrane protein 9<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043650&amp;view=details' target="_blank">GO:0043650</a><a name=0043650></a></td>
+<td>dicarboxylic acid biosynthetic process</td>
+<td  align=center>2.07E-4</td>
+<td  align=center>9.41E-2</td>
+<td  align=center>24.83 (20161,12,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:0043650" href="javascript:toggle('elements_GO:0043650')">[+] Show genes</a><br>
+<div id="elements_GO:0043650" style="display:none"> <font size=1>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Gls  -  glutaminase<br>
+Kynu  -  kynureninase (l-kynurenine hydrolase)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1903540&amp;view=details' target="_blank">GO:1903540</a><a name=1903540></a></td>
+<td>establishment of protein localization to postsynaptic membrane</td>
+<td  align=center>2.07E-4</td>
+<td  align=center>9.14E-2</td>
+<td  align=center>24.83 (20161,12,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:1903540" href="javascript:toggle('elements_GO:1903540')">[+] Show genes</a><br>
+<div id="elements_GO:1903540" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035493&amp;view=details' target="_blank">GO:0035493</a><a name=0035493></a></td>
+<td>SNARE complex assembly</td>
+<td  align=center>2.07E-4</td>
+<td  align=center>8.88E-2</td>
+<td  align=center>24.83 (20161,12,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:0035493" href="javascript:toggle('elements_GO:0035493')">[+] Show genes</a><br>
+<div id="elements_GO:0035493" style="display:none"> <font size=1>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snca  -  synuclein, alpha<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032594&amp;view=details' target="_blank">GO:0032594</a><a name=0032594></a></td>
+<td>protein transport within lipid bilayer</td>
+<td  align=center>2.23E-4</td>
+<td  align=center>9.3E-2</td>
+<td  align=center>13.24 (20161,30,203,4)</td>
+<td>
+<a id="ctrl_elements_GO:0032594" href="javascript:toggle('elements_GO:0032594')">[+] Show genes</a><br>
+<div id="elements_GO:0032594" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019725&amp;view=details' target="_blank">GO:0019725</a><a name=0019725></a></td>
+<td>cellular homeostasis</td>
+<td  align=center>2.25E-4</td>
+<td  align=center>9.14E-2</td>
+<td  align=center>2.44 (20161,815,203,20)</td>
+<td>
+<a id="ctrl_elements_GO:0019725" href="javascript:toggle('elements_GO:0019725')">[+] Show genes</a><br>
+<div id="elements_GO:0019725" style="display:none"> <font size=1>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Cyp7a1  -  cytochrome p450, family 7, subfamily a, polypeptide 1<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Sh3bgrl3  -  sh3 domain binding glutamic acid-rich protein-like 3<br>
+Tmem9  -  transmembrane protein 9<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098771&amp;view=details' target="_blank">GO:0098771</a><a name=0098771></a></td>
+<td>inorganic ion homeostasis</td>
+<td  align=center>2.54E-4</td>
+<td  align=center>1E-1</td>
+<td  align=center>2.56 (20161,697,203,18)</td>
+<td>
+<a id="ctrl_elements_GO:0098771" href="javascript:toggle('elements_GO:0098771')">[+] Show genes</a><br>
+<div id="elements_GO:0098771" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Tmem9  -  transmembrane protein 9<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+B2m  -  beta-2 microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098877&amp;view=details' target="_blank">GO:0098877</a><a name=0098877></a></td>
+<td>neurotransmitter receptor transport to plasma membrane</td>
+<td  align=center>2.67E-4</td>
+<td  align=center>1.03E-1</td>
+<td  align=center>22.92 (20161,13,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:0098877" href="javascript:toggle('elements_GO:0098877')">[+] Show genes</a><br>
+<div id="elements_GO:0098877" style="display:none"> <font size=1>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0055082&amp;view=details' target="_blank">GO:0055082</a><a name=0055082></a></td>
+<td>cellular chemical homeostasis</td>
+<td  align=center>2.72E-4</td>
+<td  align=center>1.02E-1</td>
+<td  align=center>2.55 (20161,701,203,18)</td>
+<td>
+<a id="ctrl_elements_GO:0055082" href="javascript:toggle('elements_GO:0055082')">[+] Show genes</a><br>
+<div id="elements_GO:0055082" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Cyp7a1  -  cytochrome p450, family 7, subfamily a, polypeptide 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Tmem9  -  transmembrane protein 9<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030070&amp;view=details' target="_blank">GO:0030070</a><a name=0030070></a></td>
+<td>insulin processing</td>
+<td  align=center>3.01E-4</td>
+<td  align=center>1.11E-1</td>
+<td  align=center>66.21 (20161,3,203,2)</td>
+<td>
+<a id="ctrl_elements_GO:0030070" href="javascript:toggle('elements_GO:0030070')">[+] Show genes</a><br>
+<div id="elements_GO:0030070" style="display:none"> <font size=1>
+Cpe  -  carboxypeptidase e<br>
+Pcsk2  -  proprotein convertase subtilisin/kexin type 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0050806&amp;view=details' target="_blank">GO:0050806</a><a name=0050806></a></td>
+<td>positive regulation of synaptic transmission</td>
+<td  align=center>3.3E-4</td>
+<td  align=center>1.19E-1</td>
+<td  align=center>4.18 (20161,214,203,9)</td>
+<td>
+<a id="ctrl_elements_GO:0050806" href="javascript:toggle('elements_GO:0050806')">[+] Show genes</a><br>
+<div id="elements_GO:0050806" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Plk2  -  polo-like kinase 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060341&amp;view=details' target="_blank">GO:0060341</a><a name=0060341></a></td>
+<td>regulation of cellular localization</td>
+<td  align=center>3.35E-4</td>
+<td  align=center>1.18E-1</td>
+<td  align=center>2.25 (20161,972,203,22)</td>
+<td>
+<a id="ctrl_elements_GO:0060341" href="javascript:toggle('elements_GO:0060341')">[+] Show genes</a><br>
+<div id="elements_GO:0060341" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Calm3  -  calmodulin 3<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Snca  -  synuclein, alpha<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ano1  -  anoctamin 1, calcium activated chloride channel<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Prnp  -  prion protein<br>
+Stac2  -  sh3 and cysteine rich domain 2<br>
+Prkcb  -  protein kinase c, beta<br>
+Insig1  -  insulin induced gene 1<br>
+Hnf4a  -  hepatic nuclear factor 4, alpha<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019359&amp;view=details' target="_blank">GO:0019359</a><a name=0019359></a></td>
+<td>nicotinamide nucleotide biosynthetic process</td>
+<td  align=center>3.43E-4</td>
+<td  align=center>1.18E-1</td>
+<td  align=center>8.28 (20161,60,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0019359" href="javascript:toggle('elements_GO:0019359')">[+] Show genes</a><br>
+<div id="elements_GO:0019359" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Kynu  -  kynureninase (l-kynurenine hydrolase)<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0061024&amp;view=details' target="_blank">GO:0061024</a><a name=0061024></a></td>
+<td>membrane organization</td>
+<td  align=center>3.48E-4</td>
+<td  align=center>1.17E-1</td>
+<td  align=center>2.68 (20161,593,203,16)</td>
+<td>
+<a id="ctrl_elements_GO:0061024" href="javascript:toggle('elements_GO:0061024')">[+] Show genes</a><br>
+<div id="elements_GO:0061024" style="display:none"> <font size=1>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Syngr1  -  synaptogyrin 1<br>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Mtfp1  -  mitochondrial fission process 1<br>
+Epn1  -  epsin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016079&amp;view=details' target="_blank">GO:0016079</a><a name=0016079></a></td>
+<td>synaptic vesicle exocytosis</td>
+<td  align=center>3.65E-4</td>
+<td  align=center>1.2E-1</td>
+<td  align=center>11.68 (20161,34,203,4)</td>
+<td>
+<a id="ctrl_elements_GO:0016079" href="javascript:toggle('elements_GO:0016079')">[+] Show genes</a><br>
+<div id="elements_GO:0016079" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0022898&amp;view=details' target="_blank">GO:0022898</a><a name=0022898></a></td>
+<td>regulation of transmembrane transporter activity</td>
+<td  align=center>3.8E-4</td>
+<td  align=center>1.22E-1</td>
+<td  align=center>3.73 (20161,266,203,10)</td>
+<td>
+<a id="ctrl_elements_GO:0022898" href="javascript:toggle('elements_GO:0022898')">[+] Show genes</a><br>
+<div id="elements_GO:0022898" style="display:none"> <font size=1>
+Stac2  -  sh3 and cysteine rich domain 2<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Snca  -  synuclein, alpha<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+Prnp  -  prion protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046928&amp;view=details' target="_blank">GO:0046928</a><a name=0046928></a></td>
+<td>regulation of neurotransmitter secretion</td>
+<td  align=center>4.04E-4</td>
+<td  align=center>1.27E-1</td>
+<td  align=center>5.23 (20161,133,203,7)</td>
+<td>
+<a id="ctrl_elements_GO:0046928" href="javascript:toggle('elements_GO:0046928')">[+] Show genes</a><br>
+<div id="elements_GO:0046928" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Prkcb  -  protein kinase c, beta<br>
+Cplx1  -  complexin 1<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Snca  -  synuclein, alpha<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019363&amp;view=details' target="_blank">GO:0019363</a><a name=0019363></a></td>
+<td>pyridine nucleotide biosynthetic process</td>
+<td  align=center>4.31E-4</td>
+<td  align=center>1.33E-1</td>
+<td  align=center>7.88 (20161,63,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0019363" href="javascript:toggle('elements_GO:0019363')">[+] Show genes</a><br>
+<div id="elements_GO:0019363" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Kynu  -  kynureninase (l-kynurenine hydrolase)<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030003&amp;view=details' target="_blank">GO:0030003</a><a name=0030003></a></td>
+<td>cellular cation homeostasis</td>
+<td  align=center>4.49E-4</td>
+<td  align=center>1.36E-1</td>
+<td  align=center>2.62 (20161,607,203,16)</td>
+<td>
+<a id="ctrl_elements_GO:0030003" href="javascript:toggle('elements_GO:0030003')">[+] Show genes</a><br>
+<div id="elements_GO:0030003" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Tmem9  -  transmembrane protein 9<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006874&amp;view=details' target="_blank">GO:0006874</a><a name=0006874></a></td>
+<td>cellular calcium ion homeostasis</td>
+<td  align=center>5.09E-4</td>
+<td  align=center>1.51E-1</td>
+<td  align=center>2.95 (20161,437,203,13)</td>
+<td>
+<a id="ctrl_elements_GO:0006874" href="javascript:toggle('elements_GO:0006874')">[+] Show genes</a><br>
+<div id="elements_GO:0006874" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Calm3  -  calmodulin 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051234&amp;view=details' target="_blank">GO:0051234</a><a name=0051234></a></td>
+<td>establishment of localization</td>
+<td  align=center>5.13E-4</td>
+<td  align=center>1.5E-1</td>
+<td  align=center>1.56 (20161,3307,203,52)</td>
+<td>
+<a id="ctrl_elements_GO:0051234" href="javascript:toggle('elements_GO:0051234')">[+] Show genes</a><br>
+<div id="elements_GO:0051234" style="display:none"> <font size=1>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Klc1  -  kinesin light chain 1<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Scg5  -  secretogranin v<br>
+Sncb  -  synuclein, beta<br>
+Syn2  -  synapsin ii<br>
+Cct6b  -  chaperonin containing tcp1, subunit 6b (zeta)<br>
+Slc6a17  -  solute carrier family 6 (neurotransmitter transporter), member 17<br>
+Ubb  -  ubiquitin b<br>
+Syngr1  -  synaptogyrin 1<br>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Arf3  -  adp-ribosylation factor 3<br>
+Svopl  -  sv2 related protein homolog (rat)-like<br>
+Cpe  -  carboxypeptidase e<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Prkcb  -  protein kinase c, beta<br>
+Arhgap33  -  rho gtpase activating protein 33<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Rps15  -  ribosomal protein s15<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Tmem9  -  transmembrane protein 9<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+Slc1a2  -  solute carrier family 1 (glial high affinity glutamate transporter), member 2<br>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Catsper3  -  cation channel, sperm associated 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rtn3  -  reticulon 3<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ano1  -  anoctamin 1, calcium activated chloride channel<br>
+Mb  -  myoglobin<br>
+Rab6b  -  rab6b, member ras oncogene family<br>
+Epn1  -  epsin 1<br>
+B2m  -  beta-2 microglobulin<br>
+Reps2  -  ralbp1 associated eps domain containing protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032409&amp;view=details' target="_blank">GO:0032409</a><a name=0032409></a></td>
+<td>regulation of transporter activity</td>
+<td  align=center>5.22E-4</td>
+<td  align=center>1.49E-1</td>
+<td  align=center>3.59 (20161,277,203,10)</td>
+<td>
+<a id="ctrl_elements_GO:0032409" href="javascript:toggle('elements_GO:0032409')">[+] Show genes</a><br>
+<div id="elements_GO:0032409" style="display:none"> <font size=1>
+Stac2  -  sh3 and cysteine rich domain 2<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Snca  -  synuclein, alpha<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+Prnp  -  prion protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072525&amp;view=details' target="_blank">GO:0072525</a><a name=0072525></a></td>
+<td>pyridine-containing compound biosynthetic process</td>
+<td  align=center>5.35E-4</td>
+<td  align=center>1.5E-1</td>
+<td  align=center>7.52 (20161,66,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0072525" href="javascript:toggle('elements_GO:0072525')">[+] Show genes</a><br>
+<div id="elements_GO:0072525" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Kynu  -  kynureninase (l-kynurenine hydrolase)<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031623&amp;view=details' target="_blank">GO:0031623</a><a name=0031623></a></td>
+<td>receptor internalization</td>
+<td  align=center>5.73E-4</td>
+<td  align=center>1.58E-1</td>
+<td  align=center>7.41 (20161,67,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0031623" href="javascript:toggle('elements_GO:0031623')">[+] Show genes</a><br>
+<div id="elements_GO:0031623" style="display:none"> <font size=1>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snca  -  synuclein, alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0051049&amp;view=details' target="_blank">GO:0051049</a><a name=0051049></a></td>
+<td>regulation of transport</td>
+<td  align=center>5.76E-4</td>
+<td  align=center>1.56E-1</td>
+<td  align=center>1.81 (20161,1806,203,33)</td>
+<td>
+<a id="ctrl_elements_GO:0051049" href="javascript:toggle('elements_GO:0051049')">[+] Show genes</a><br>
+<div id="elements_GO:0051049" style="display:none"> <font size=1>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Scg5  -  secretogranin v<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Stac2  -  sh3 and cysteine rich domain 2<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Adcy1  -  adenylate cyclase 1<br>
+Slc1a2  -  solute carrier family 1 (glial high affinity glutamate transporter), member 2<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Calm3  -  calmodulin 3<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Catsper3  -  cation channel, sperm associated 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Snca  -  synuclein, alpha<br>
+Map1lc3b  -  microtubule-associated protein 1 light chain 3 beta<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ano1  -  anoctamin 1, calcium activated chloride channel<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Prnp  -  prion protein<br>
+Prkcb  -  protein kinase c, beta<br>
+Cck  -  cholecystokinin<br>
+Insig1  -  insulin induced gene 1<br>
+Hnf4a  -  hepatic nuclear factor 4, alpha<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+B2m  -  beta-2 microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0055080&amp;view=details' target="_blank">GO:0055080</a><a name=0055080></a></td>
+<td>cation homeostasis</td>
+<td  align=center>5.82E-4</td>
+<td  align=center>1.55E-1</td>
+<td  align=center>2.47 (20161,684,203,17)</td>
+<td>
+<a id="ctrl_elements_GO:0055080" href="javascript:toggle('elements_GO:0055080')">[+] Show genes</a><br>
+<div id="elements_GO:0055080" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Tmem9  -  transmembrane protein 9<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+B2m  -  beta-2 microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048878&amp;view=details' target="_blank">GO:0048878</a><a name=0048878></a></td>
+<td>chemical homeostasis</td>
+<td  align=center>5.88E-4</td>
+<td  align=center>1.54E-1</td>
+<td  align=center>2.11 (20161,1082,203,23)</td>
+<td>
+<a id="ctrl_elements_GO:0048878" href="javascript:toggle('elements_GO:0048878')">[+] Show genes</a><br>
+<div id="elements_GO:0048878" style="display:none"> <font size=1>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Atp6v0d2  -  atpase, h+ transporting, lysosomal v0 subunit d2<br>
+Calm3  -  calmodulin 3<br>
+Wnk4  -  wnk lysine deficient protein kinase 4<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Prnp  -  prion protein<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Cyp7a1  -  cytochrome p450, family 7, subfamily a, polypeptide 1<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Cck  -  cholecystokinin<br>
+Tmem9  -  transmembrane protein 9<br>
+Insig1  -  insulin induced gene 1<br>
+Hnf4a  -  hepatic nuclear factor 4, alpha<br>
+Gls  -  glutaminase<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+B2m  -  beta-2 microglobulin<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060314&amp;view=details' target="_blank">GO:0060314</a><a name=0060314></a></td>
+<td>regulation of ryanodine-sensitive calcium-release channel activity</td>
+<td  align=center>6.16E-4</td>
+<td  align=center>1.59E-1</td>
+<td  align=center>17.53 (20161,17,203,3)</td>
+<td>
+<a id="ctrl_elements_GO:0060314" href="javascript:toggle('elements_GO:0060314')">[+] Show genes</a><br>
+<div id="elements_GO:0060314" style="display:none"> <font size=1>
+Calm2  -  calmodulin 2<br>
+Calm3  -  calmodulin 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006897&amp;view=details' target="_blank">GO:0006897</a><a name=0006897></a></td>
+<td>endocytosis</td>
+<td  align=center>6.5E-4</td>
+<td  align=center>1.65E-1</td>
+<td  align=center>3.04 (20161,392,203,12)</td>
+<td>
+<a id="ctrl_elements_GO:0006897" href="javascript:toggle('elements_GO:0006897')">[+] Show genes</a><br>
+<div id="elements_GO:0006897" style="display:none"> <font size=1>
+Sh3gl2  -  sh3-domain grb2-like 2<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Snca  -  synuclein, alpha<br>
+Sncb  -  synuclein, beta<br>
+Epn1  -  epsin 1<br>
+Reps2  -  ralbp1 associated eps domain containing protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0023052&amp;view=details' target="_blank">GO:0023052</a><a name=0023052></a></td>
+<td>signaling</td>
+<td  align=center>6.69E-4</td>
+<td  align=center>1.67E-1</td>
+<td  align=center>2.87 (20161,450,203,13)</td>
+<td>
+<a id="ctrl_elements_GO:0023052" href="javascript:toggle('elements_GO:0023052')">[+] Show genes</a><br>
+<div id="elements_GO:0023052" style="display:none"> <font size=1>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Dnm1  -  dynamin 1<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Snca  -  synuclein, alpha<br>
+Sncb  -  synuclein, beta<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Dlgap3  -  discs, large (drosophila) homolog-associated protein 3<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Rbfox2  -  rna binding protein, fox-1 homolog (c. elegans) 2<br>
+Gls  -  glutaminase<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098693&amp;view=details' target="_blank">GO:0098693</a><a name=0098693></a></td>
+<td>regulation of synaptic vesicle cycle</td>
+<td  align=center>6.77E-4</td>
+<td  align=center>1.66E-1</td>
+<td  align=center>4.79 (20161,145,203,7)</td>
+<td>
+<a id="ctrl_elements_GO:0098693" href="javascript:toggle('elements_GO:0098693')">[+] Show genes</a><br>
+<div id="elements_GO:0098693" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Prkcb  -  protein kinase c, beta<br>
+Dnm1  -  dynamin 1<br>
+Cplx1  -  complexin 1<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0055074&amp;view=details' target="_blank">GO:0055074</a><a name=0055074></a></td>
+<td>calcium ion homeostasis</td>
+<td  align=center>7.11E-4</td>
+<td  align=center>1.72E-1</td>
+<td  align=center>2.85 (20161,453,203,13)</td>
+<td>
+<a id="ctrl_elements_GO:0055074" href="javascript:toggle('elements_GO:0055074')">[+] Show genes</a><br>
+<div id="elements_GO:0055074" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Calm3  -  calmodulin 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032940&amp;view=details' target="_blank">GO:0032940</a><a name=0032940></a></td>
+<td>secretion by cell</td>
+<td  align=center>7.26E-4</td>
+<td  align=center>1.73E-1</td>
+<td  align=center>3.19 (20161,342,203,11)</td>
+<td>
+<a id="ctrl_elements_GO:0032940" href="javascript:toggle('elements_GO:0032940')">[+] Show genes</a><br>
+<div id="elements_GO:0032940" style="display:none"> <font size=1>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Cpe  -  carboxypeptidase e<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Snca  -  synuclein, alpha<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Syn2  -  synapsin ii<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Syngr1  -  synaptogyrin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009167&amp;view=details' target="_blank">GO:0009167</a><a name=0009167></a></td>
+<td>purine ribonucleoside monophosphate metabolic process</td>
+<td  align=center>7.64E-4</td>
+<td  align=center>1.79E-1</td>
+<td  align=center>4.70 (20161,148,203,7)</td>
+<td>
+<a id="ctrl_elements_GO:0009167" href="javascript:toggle('elements_GO:0009167')">[+] Show genes</a><br>
+<div id="elements_GO:0009167" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Gda  -  guanine deaminase<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006836&amp;view=details' target="_blank">GO:0006836</a><a name=0006836></a></td>
+<td>neurotransmitter transport</td>
+<td  align=center>7.95E-4</td>
+<td  align=center>1.83E-1</td>
+<td  align=center>4.67 (20161,149,203,7)</td>
+<td>
+<a id="ctrl_elements_GO:0006836" href="javascript:toggle('elements_GO:0006836')">[+] Show genes</a><br>
+<div id="elements_GO:0006836" style="display:none"> <font size=1>
+Slc1a2  -  solute carrier family 1 (glial high affinity glutamate transporter), member 2<br>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Syn2  -  synapsin ii<br>
+Slc6a17  -  solute carrier family 6 (neurotransmitter transporter), member 17<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009126&amp;view=details' target="_blank">GO:0009126</a><a name=0009126></a></td>
+<td>purine nucleoside monophosphate metabolic process</td>
+<td  align=center>7.95E-4</td>
+<td  align=center>1.81E-1</td>
+<td  align=center>4.67 (20161,149,203,7)</td>
+<td>
+<a id="ctrl_elements_GO:0009126" href="javascript:toggle('elements_GO:0009126')">[+] Show genes</a><br>
+<div id="elements_GO:0009126" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Gda  -  guanine deaminase<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006754&amp;view=details' target="_blank">GO:0006754</a><a name=0006754></a></td>
+<td>ATP biosynthetic process</td>
+<td  align=center>7.98E-4</td>
+<td  align=center>1.79E-1</td>
+<td  align=center>6.90 (20161,72,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0006754" href="javascript:toggle('elements_GO:0006754')">[+] Show genes</a><br>
+<div id="elements_GO:0006754" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097479&amp;view=details' target="_blank">GO:0097479</a><a name=0097479></a></td>
+<td>synaptic vesicle localization</td>
+<td  align=center>7.98E-4</td>
+<td  align=center>1.76E-1</td>
+<td  align=center>6.90 (20161,72,203,5)</td>
+<td>
+<a id="ctrl_elements_GO:0097479" href="javascript:toggle('elements_GO:0097479')">[+] Show genes</a><br>
+<div id="elements_GO:0097479" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Snca  -  synuclein, alpha<br>
+Syn2  -  synapsin ii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0072503&amp;view=details' target="_blank">GO:0072503</a><a name=0072503></a></td>
+<td>cellular divalent inorganic cation homeostasis</td>
+<td  align=center>8.19E-4</td>
+<td  align=center>1.78E-1</td>
+<td  align=center>2.81 (20161,460,203,13)</td>
+<td>
+<a id="ctrl_elements_GO:0072503" href="javascript:toggle('elements_GO:0072503')">[+] Show genes</a><br>
+<div id="elements_GO:0072503" style="display:none"> <font size=1>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Calm3  -  calmodulin 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Prkcb  -  protein kinase c, beta<br>
+Gng3  -  guanine nucleotide binding protein (g protein), gamma 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0006886&amp;view=details' target="_blank">GO:0006886</a><a name=0006886></a></td>
+<td>intracellular protein transport</td>
+<td  align=center>8.46E-4</td>
+<td  align=center>1.82E-1</td>
+<td  align=center>2.47 (20161,644,203,16)</td>
+<td>
+<a id="ctrl_elements_GO:0006886" href="javascript:toggle('elements_GO:0006886')">[+] Show genes</a><br>
+<div id="elements_GO:0006886" style="display:none"> <font size=1>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Klc1  -  kinesin light chain 1<br>
+Scg5  -  secretogranin v<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Rps15  -  ribosomal protein s15<br>
+Syngr1  -  synaptogyrin 1<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Rab6b  -  rab6b, member ras oncogene family<br>
+Arf3  -  adp-ribosylation factor 3<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046907&amp;view=details' target="_blank">GO:0046907</a><a name=0046907></a></td>
+<td>intracellular transport</td>
+<td  align=center>8.47E-4</td>
+<td  align=center>1.79E-1</td>
+<td  align=center>2.02 (20161,1182,203,24)</td>
+<td>
+<a id="ctrl_elements_GO:0046907" href="javascript:toggle('elements_GO:0046907')">[+] Show genes</a><br>
+<div id="elements_GO:0046907" style="display:none"> <font size=1>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Ap2m1  -  adaptor-related protein complex 2, mu 1 subunit<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Cplx1  -  complexin 1<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Dlg2  -  discs, large homolog 2 (drosophila)<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Klc1  -  kinesin light chain 1<br>
+Snca  -  synuclein, alpha<br>
+Sptbn2  -  spectrin beta, non-erythrocytic 2<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Scg5  -  secretogranin v<br>
+Clstn1  -  calsyntenin 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Rps15  -  ribosomal protein s15<br>
+Ubb  -  ubiquitin b<br>
+Syngr1  -  synaptogyrin 1<br>
+Mapk10  -  mitogen-activated protein kinase 10<br>
+Rab6b  -  rab6b, member ras oncogene family<br>
+Arf3  -  adp-ribosylation factor 3<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+Reps2  -  ralbp1 associated eps domain containing protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0010646&amp;view=details' target="_blank">GO:0010646</a><a name=0010646></a></td>
+<td>regulation of cell communication</td>
+<td  align=center>9.12E-4</td>
+<td  align=center>1.9E-1</td>
+<td  align=center>1.54 (20161,3221,203,50)</td>
+<td>
+<a id="ctrl_elements_GO:0010646" href="javascript:toggle('elements_GO:0010646')">[+] Show genes</a><br>
+<div id="elements_GO:0010646" style="display:none"> <font size=1>
+Rasgef1a  -  rasgef domain family, member 1a<br>
+Sptbn1  -  spectrin beta, non-erythrocytic 1<br>
+Tyrobp  -  tyro protein tyrosine kinase binding protein<br>
+Scg5  -  secretogranin v<br>
+Ubb  -  ubiquitin b<br>
+Syngr1  -  synaptogyrin 1<br>
+Psd  -  pleckstrin and sec7 domain containing<br>
+Adcy1  -  adenylate cyclase 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Calm3  -  calmodulin 3<br>
+Cplx1  -  complexin 1<br>
+Dnm1  -  dynamin 1<br>
+Shkbp1  -  sh3kbp1 binding protein 1<br>
+Stmn3  -  stathmin-like 3<br>
+Grik3  -  glutamate receptor, ionotropic, kainate 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snca  -  synuclein, alpha<br>
+Lefty2  -  left-right determination factor 2<br>
+Clstn1  -  calsyntenin 1<br>
+Dlgap3  -  discs, large (drosophila) homolog-associated protein 3<br>
+Plk2  -  polo-like kinase 2<br>
+Tprgl  -  transformation related protein 63 regulated like<br>
+Gsk3a  -  glycogen synthase kinase 3 alpha<br>
+Tnfsf15  -  tumor necrosis factor (ligand) superfamily, member 15<br>
+Prkcb  -  protein kinase c, beta<br>
+Pja2  -  praja 2, ring-h2 motif containing<br>
+Insig1  -  insulin induced gene 1<br>
+Hnf4a  -  hepatic nuclear factor 4, alpha<br>
+Psd3  -  pleckstrin and sec7 domain containing 3<br>
+Fkbp1a  -  fk506 binding protein 1a<br>
+Rap1gap2  -  rap1 gtpase activating protein 2<br>
+Foxm1  -  forkhead box m1<br>
+Tssc1  -  tumor suppressing subtransferable candidate 1<br>
+Zgpat  -  zinc finger, ccch-type with g patch domain<br>
+Ccr1  -  chemokine (c-c motif) receptor 1<br>
+Ccr2  -  chemokine (c-c motif) receptor 2<br>
+Tmem9  -  transmembrane protein 9<br>
+Ywhag  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, gamma polypeptide<br>
+Ywhaz  -  tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, zeta polypeptide<br>
+Cacng3  -  calcium channel, voltage-dependent, gamma subunit 3<br>
+Adra1a  -  adrenergic receptor, alpha 1a<br>
+Got1  -  glutamate oxaloacetate transaminase 1, soluble<br>
+Ncdn  -  neurochondrin<br>
+Rab11a  -  rab11a, member ras oncogene family<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ano1  -  anoctamin 1, calcium activated chloride channel<br>
+Prnp  -  prion protein<br>
+Cyfip2  -  cytoplasmic fmr1 interacting protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009166&amp;view=details' target="_blank">GO:0009166</a><a name=0009166></a></td>
+<td>nucleotide catabolic process</td>
+<td  align=center>9.12E-4</td>
+<td  align=center>1.88E-1</td>
+<td  align=center>5.37 (20161,111,203,6)</td>
+<td>
+<a id="ctrl_elements_GO:0009166" href="javascript:toggle('elements_GO:0009166')">[+] Show genes</a><br>
+<div id="elements_GO:0009166" style="display:none"> <font size=1>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Enpp5  -  ectonucleotide pyrophosphatase/phosphodiesterase 5<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Gda  -  guanine deaminase<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0009150&amp;view=details' target="_blank">GO:0009150</a><a name=0009150></a></td>
+<td>purine ribonucleotide metabolic process</td>
+<td  align=center>9.15E-4</td>
+<td  align=center>1.86E-1</td>
+<td  align=center>3.33 (20161,298,203,10)</td>
+<td>
+<a id="ctrl_elements_GO:0009150" href="javascript:toggle('elements_GO:0009150')">[+] Show genes</a><br>
+<div id="elements_GO:0009150" style="display:none"> <font size=1>
+Adcy1  -  adenylate cyclase 1<br>
+Gm15294  -  glyceraldehyde-3-phosphate dehydrogenase pseudogene<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Aldoa  -  aldolase a, fructose-bisphosphate<br>
+Hnf4a  -  hepatic nuclear factor 4, alpha<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Gda  -  guanine deaminase<br>
+Eno2  -  enolase 2, gamma neuronal<br>
+Kynu  -  kynureninase (l-kynurenine hydrolase)<br>
+Pfkp  -  phosphofructokinase, platelet<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 27414 genes out of 37904 gene terms entered by the user.<br> 27414 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>284 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 27130 genes.<br>Only 20161 of these genes are associated with a GO term.<br></p>
+<br><a href='GOPROCESS.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Apr 2, 2024
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 15454 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

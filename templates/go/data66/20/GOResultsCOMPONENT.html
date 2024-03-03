@@ -1,0 +1,2279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='901,705,981,753' HREF='#0099503' ALT=''>
+<AREA SHAPE='RECT' COORDS='801,860,876,908' HREF='#0070382' ALT=''>
+<AREA SHAPE='RECT' COORDS='2189,559,2344,607' HREF='#0030964' ALT=''>
+<AREA SHAPE='RECT' COORDS='2268,698,2377,761' HREF='#0045271' ALT=''>
+<AREA SHAPE='RECT' COORDS='1829,844,1939,924' HREF='#0005750' ALT=''>
+<AREA SHAPE='RECT' COORDS='1315,309,1411,357' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='1139,559,1259,607' HREF='#0031201' ALT=''>
+<AREA SHAPE='RECT' COORDS='893,559,989,607' HREF='#0031410' ALT=''>
+<AREA SHAPE='RECT' COORDS='1013,559,1115,607' HREF='#0005739' ALT=''>
+<AREA SHAPE='RECT' COORDS='1861,429,1963,477' HREF='#0044429' ALT=''>
+<AREA SHAPE='RECT' COORDS='2268,844,2377,924' HREF='#0005747' ALT=''>
+<AREA SHAPE='RECT' COORDS='1085,698,1309,761' HREF='#0070032' ALT=''>
+<AREA SHAPE='RECT' COORDS='1969,197,2052,245' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='2037,309,2152,357' HREF='#0019866' ALT=''>
+<AREA SHAPE='RECT' COORDS='2525,302,2613,365' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='2013,559,2115,607' HREF='#0031966' ALT=''>
+<AREA SHAPE='RECT' COORDS='1541,551,1675,614' HREF='#0016469' ALT=''>
+<AREA SHAPE='RECT' COORDS='1541,698,1675,761' HREF='#0045259' ALT=''>
+<AREA SHAPE='RECT' COORDS='1120,422,1259,485' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='1747,197,1832,245' HREF='#0070469' ALT=''>
+<AREA SHAPE='RECT' COORDS='232,309,328,357' HREF='#0044456' ALT=''>
+<AREA SHAPE='RECT' COORDS='293,429,381,477' HREF='#0098793' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,429,101,477' HREF='#0098794' ALT=''>
+<AREA SHAPE='RECT' COORDS='176,422,269,485' HREF='#0098833' ALT=''>
+<AREA SHAPE='RECT' COORDS='629,989,704,1037' HREF='#0008021' ALT=''>
+<AREA SHAPE='RECT' COORDS='899,429,981,477' HREF='#0097060' ALT=''>
+<AREA SHAPE='RECT' COORDS='2460,197,2580,245' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='2651,429,2765,477' HREF='#0031968' ALT=''>
+<AREA SHAPE='RECT' COORDS='1072,197,1173,245' HREF='#0043209' ALT=''>
+<AREA SHAPE='RECT' COORDS='800,705,877,753' HREF='#0030133' ALT=''>
+<AREA SHAPE='RECT' COORDS='416,559,520,607' HREF='#0043679' ALT=''>
+<AREA SHAPE='RECT' COORDS='1747,101,1832,149' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='1323,197,1456,245' HREF='#0044459' ALT=''>
+<AREA SHAPE='RECT' COORDS='1749,551,1851,614' HREF='#0044455' ALT=''>
+<AREA SHAPE='RECT' COORDS='1653,429,1768,477' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='1733,698,1867,761' HREF='#0098800' ALT=''>
+<AREA SHAPE='RECT' COORDS='1444,827,1577,941' HREF='#0000275' ALT=''>
+<AREA SHAPE='RECT' COORDS='1649,844,1783,924' HREF='#0005753' ALT=''>
+<AREA SHAPE='RECT' COORDS='1531,197,1621,245' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='1333,681,1467,778' HREF='#0045261' ALT=''>
+<AREA SHAPE='RECT' COORDS='2457,698,2567,761' HREF='#0045275' ALT=''>
+<AREA SHAPE='RECT' COORDS='1872,302,1963,365' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='1200,309,1291,357' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='1005,429,1096,477' HREF='#0097708' ALT=''>
+<AREA SHAPE='RECT' COORDS='2189,429,2280,477' HREF='#0044428' ALT=''>
+<AREA SHAPE='RECT' COORDS='2549,559,2651,607' HREF='#0005681' ALT=''>
+<AREA SHAPE='RECT' COORDS='1875,559,1989,607' HREF='#0098798' ALT=''>
+<AREA SHAPE='RECT' COORDS='579,197,685,245' HREF='#0044463' ALT=''>
+<AREA SHAPE='RECT' COORDS='467,293,600,373' HREF='#0120038' ALT=''>
+<AREA SHAPE='RECT' COORDS='405,429,531,477' HREF='#0044306' ALT=''>
+<AREA SHAPE='RECT' COORDS='555,429,629,477' HREF='#0033267' ALT=''>
+<AREA SHAPE='RECT' COORDS='1197,197,1299,245' HREF='#0042995' ALT=''>
+<AREA SHAPE='RECT' COORDS='739,302,872,365' HREF='#0120025' ALT=''>
+<AREA SHAPE='RECT' COORDS='2051,705,2165,753' HREF='#0005743' ALT=''>
+<AREA SHAPE='RECT' COORDS='2368,559,2475,607' HREF='#0098803' ALT=''>
+<AREA SHAPE='RECT' COORDS='1333,534,1467,631' HREF='#0033178' ALT=''>
+<AREA SHAPE='RECT' COORDS='624,309,709,357' HREF='#0097458' ALT=''>
+<AREA SHAPE='RECT' COORDS='743,551,836,614' HREF='#0048787' ALT=''>
+<AREA SHAPE='RECT' COORDS='755,429,875,477' HREF='#0043005' ALT=''>
+<AREA SHAPE='RECT' COORDS='2403,429,2525,477' HREF='#1990904' ALT=''>
+<AREA SHAPE='RECT' COORDS='896,309,968,357' HREF='#0031982' ALT=''>
+<AREA SHAPE='RECT' COORDS='1043,309,1176,357' HREF='#0098590' ALT=''>
+<AREA SHAPE='RECT' COORDS='1875,101,1952,149' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='1212,101,1284,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='2792,559,2907,607' HREF='#1990204' ALT=''>
+<AREA SHAPE='RECT' COORDS='997,101,1072,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='859,197,997,245' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='2304,429,2379,477' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='1976,101,2059,149' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='2076,197,2191,245' HREF='#0019867' ALT=''>
+<AREA SHAPE='RECT' COORDS='2265,101,2337,149' HREF='#0045202' ALT=''>
+<AREA SHAPE='RECT' COORDS='2227,309,2355,357' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='2675,559,2768,607' HREF='#0070069' ALT=''>
+<AREA SHAPE='RECT' COORDS='1851,5,1733,29' HREF='#0005575' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="/static/analysis/data66/go/20/GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044455&amp;view=details' target="_blank">GO:0044455</a><a name=0044455></a></td>
+<td>mitochondrial membrane part</td>
+<td  align=center>2.75E-15</td>
+<td  align=center>5.37E-12</td>
+<td  align=center>14.43 (20161,212,112,17)</td>
+<td>
+<a id="ctrl_elements_GO:0044455" href="javascript:toggle('elements_GO:0044455')">[+] Show genes</a><br>
+<div id="elements_GO:0044455" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Pink1  -  pten induced putative kinase 1<br>
+Mff  -  mitochondrial fission factor<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098800&amp;view=details' target="_blank">GO:0098800</a><a name=0098800></a></td>
+<td>inner mitochondrial membrane protein complex</td>
+<td  align=center>7.15E-14</td>
+<td  align=center>6.99E-11</td>
+<td  align=center>20.35 (20161,115,112,13)</td>
+<td>
+<a id="ctrl_elements_GO:0098800" href="javascript:toggle('elements_GO:0098800')">[+] Show genes</a><br>
+<div id="elements_GO:0098800" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043209&amp;view=details' target="_blank">GO:0043209</a><a name=0043209></a></td>
+<td>myelin sheath</td>
+<td  align=center>1.54E-13</td>
+<td  align=center>1E-10</td>
+<td  align=center>14.29 (20161,189,112,15)</td>
+<td>
+<a id="ctrl_elements_GO:0043209" href="javascript:toggle('elements_GO:0043209')">[+] Show genes</a><br>
+<div id="elements_GO:0043209" style="display:none"> <font size=1>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Hspa8  -  heat shock protein 8<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044444&amp;view=details' target="_blank">GO:0044444</a><a name=0044444></a></td>
+<td>cytoplasmic part</td>
+<td  align=center>4.16E-11</td>
+<td  align=center>2.03E-8</td>
+<td  align=center>1.74 (20161,8392,112,81)</td>
+<td>
+<a id="ctrl_elements_GO:0044444" href="javascript:toggle('elements_GO:0044444')">[+] Show genes</a><br>
+<div id="elements_GO:0044444" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Sptb  -  spectrin beta, erythrocytic<br>
+Rnf187  -  ring finger protein 187<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+Sncb  -  synuclein, beta<br>
+Oaz1  -  ornithine decarboxylase antizyme 1<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Mprip  -  myosin phosphatase rho interacting protein<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Glrx  -  glutaredoxin<br>
+Scly  -  selenocysteine lyase<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Cplx1  -  complexin 1<br>
+Stmn3  -  stathmin-like 3<br>
+Vsnl1  -  visinin-like 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Evl  -  ena-vasodilator stimulated phosphoprotein<br>
+Stx1b  -  syntaxin 1b<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Farsb  -  phenylalanyl-trna synthetase, beta subunit<br>
+Ociad1  -  ocia domain containing 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Map7d1  -  map7 domain containing 1<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031966&amp;view=details' target="_blank">GO:0031966</a><a name=0031966></a></td>
+<td>mitochondrial membrane</td>
+<td  align=center>2.77E-10</td>
+<td  align=center>1.08E-7</td>
+<td  align=center>6.07 (20161,563,112,19)</td>
+<td>
+<a id="ctrl_elements_GO:0031966" href="javascript:toggle('elements_GO:0031966')">[+] Show genes</a><br>
+<div id="elements_GO:0031966" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Pink1  -  pten induced putative kinase 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Mff  -  mitochondrial fission factor<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Letmd1  -  letm1 domain containing 1<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043226&amp;view=details' target="_blank">GO:0043226</a><a name=0043226></a></td>
+<td>organelle</td>
+<td  align=center>4.62E-10</td>
+<td  align=center>1.5E-7</td>
+<td  align=center>1.50 (20161,11152,112,93)</td>
+<td>
+<a id="ctrl_elements_GO:0043226" href="javascript:toggle('elements_GO:0043226')">[+] Show genes</a><br>
+<div id="elements_GO:0043226" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Sptb  -  spectrin beta, erythrocytic<br>
+Rnf187  -  ring finger protein 187<br>
+Tcf25  -  transcription factor 25 (basic helix-loop-helix)<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+Sncb  -  synuclein, beta<br>
+Oaz1  -  ornithine decarboxylase antizyme 1<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Fbxo38  -  f-box protein 38<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Mprip  -  myosin phosphatase rho interacting protein<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Glrx  -  glutaredoxin<br>
+Scly  -  selenocysteine lyase<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Stmn3  -  stathmin-like 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Evl  -  ena-vasodilator stimulated phosphoprotein<br>
+Stx1b  -  syntaxin 1b<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Lrrc41  -  leucine rich repeat containing 41<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ociad1  -  ocia domain containing 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Map7d1  -  map7 domain containing 1<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044429&amp;view=details' target="_blank">GO:0044429</a><a name=0044429></a></td>
+<td>mitochondrial part</td>
+<td  align=center>8.13E-10</td>
+<td  align=center>2.27E-7</td>
+<td  align=center>4.79 (20161,826,112,22)</td>
+<td>
+<a id="ctrl_elements_GO:0044429" href="javascript:toggle('elements_GO:0044429')">[+] Show genes</a><br>
+<div id="elements_GO:0044429" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Pink1  -  pten induced putative kinase 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Mff  -  mitochondrial fission factor<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Letmd1  -  letm1 domain containing 1<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Glrx  -  glutaredoxin<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005739&amp;view=details' target="_blank">GO:0005739</a><a name=0005739></a></td>
+<td>mitochondrion</td>
+<td  align=center>1.17E-9</td>
+<td  align=center>2.85E-7</td>
+<td  align=center>3.35 (20161,1667,112,31)</td>
+<td>
+<a id="ctrl_elements_GO:0005739" href="javascript:toggle('elements_GO:0005739')">[+] Show genes</a><br>
+<div id="elements_GO:0005739" style="display:none"> <font size=1>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Sncb  -  synuclein, beta<br>
+Mff  -  mitochondrial fission factor<br>
+Letmd1  -  letm1 domain containing 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Glrx  -  glutaredoxin<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pink1  -  pten induced putative kinase 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ociad1  -  ocia domain containing 1<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098798&amp;view=details' target="_blank">GO:0098798</a><a name=0098798></a></td>
+<td>mitochondrial protein complex</td>
+<td  align=center>1.25E-9</td>
+<td  align=center>2.7E-7</td>
+<td  align=center>9.44 (20161,248,112,13)</td>
+<td>
+<a id="ctrl_elements_GO:0098798" href="javascript:toggle('elements_GO:0098798')">[+] Show genes</a><br>
+<div id="elements_GO:0098798" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043229&amp;view=details' target="_blank">GO:0043229</a><a name=0043229></a></td>
+<td>intracellular organelle</td>
+<td  align=center>1.56E-9</td>
+<td  align=center>3.04E-7</td>
+<td  align=center>1.50 (20161,10916,112,91)</td>
+<td>
+<a id="ctrl_elements_GO:0043229" href="javascript:toggle('elements_GO:0043229')">[+] Show genes</a><br>
+<div id="elements_GO:0043229" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Sptb  -  spectrin beta, erythrocytic<br>
+Rnf187  -  ring finger protein 187<br>
+Tcf25  -  transcription factor 25 (basic helix-loop-helix)<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+Sncb  -  synuclein, beta<br>
+Oaz1  -  ornithine decarboxylase antizyme 1<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Fbxo38  -  f-box protein 38<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Mprip  -  myosin phosphatase rho interacting protein<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Glrx  -  glutaredoxin<br>
+Scly  -  selenocysteine lyase<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Stmn3  -  stathmin-like 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Evl  -  ena-vasodilator stimulated phosphoprotein<br>
+Stx1b  -  syntaxin 1b<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Lrrc41  -  leucine rich repeat containing 41<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ociad1  -  ocia domain containing 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Map7d1  -  map7 domain containing 1<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019866&amp;view=details' target="_blank">GO:0019866</a><a name=0019866></a></td>
+<td>organelle inner membrane</td>
+<td  align=center>1.61E-9</td>
+<td  align=center>2.86E-7</td>
+<td  align=center>6.81 (20161,423,112,16)</td>
+<td>
+<a id="ctrl_elements_GO:0019866" href="javascript:toggle('elements_GO:0019866')">[+] Show genes</a><br>
+<div id="elements_GO:0019866" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Pink1  -  pten induced putative kinase 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031090&amp;view=details' target="_blank">GO:0031090</a><a name=0031090></a></td>
+<td>organelle membrane</td>
+<td  align=center>3.56E-9</td>
+<td  align=center>5.79E-7</td>
+<td  align=center>3.39 (20161,1541,112,29)</td>
+<td>
+<a id="ctrl_elements_GO:0031090" href="javascript:toggle('elements_GO:0031090')">[+] Show genes</a><br>
+<div id="elements_GO:0031090" style="display:none"> <font size=1>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Hspa8  -  heat shock protein 8<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Repin1  -  replication initiator 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Mff  -  mitochondrial fission factor<br>
+Letmd1  -  letm1 domain containing 1<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005743&amp;view=details' target="_blank">GO:0005743</a><a name=0005743></a></td>
+<td>mitochondrial inner membrane</td>
+<td  align=center>4.49E-9</td>
+<td  align=center>6.75E-7</td>
+<td  align=center>6.91 (20161,391,112,15)</td>
+<td>
+<a id="ctrl_elements_GO:0005743" href="javascript:toggle('elements_GO:0005743')">[+] Show genes</a><br>
+<div id="elements_GO:0005743" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Pink1  -  pten induced putative kinase 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044424&amp;view=details' target="_blank">GO:0044424</a><a name=0044424></a></td>
+<td>intracellular part</td>
+<td  align=center>8.16E-9</td>
+<td  align=center>1.14E-6</td>
+<td  align=center>1.36 (20161,13250,112,100)</td>
+<td>
+<a id="ctrl_elements_GO:0044424" href="javascript:toggle('elements_GO:0044424')">[+] Show genes</a><br>
+<div id="elements_GO:0044424" style="display:none"> <font size=1>
+Sptb  -  spectrin beta, erythrocytic<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+Oaz1  -  ornithine decarboxylase antizyme 1<br>
+Letmd1  -  letm1 domain containing 1<br>
+AU040320  -  expressed sequence au040320<br>
+Fbxo38  -  f-box protein 38<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Mprip  -  myosin phosphatase rho interacting protein<br>
+Scly  -  selenocysteine lyase<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Glrx  -  glutaredoxin<br>
+Fbxo44  -  f-box protein 44<br>
+Vsnl1  -  visinin-like 1<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Evl  -  ena-vasodilator stimulated phosphoprotein<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Surf1  -  surfeit gene 1<br>
+Zfand5  -  zinc finger, an1-type domain 5<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Tcf25  -  transcription factor 25 (basic helix-loop-helix)<br>
+Rnf187  -  ring finger protein 187<br>
+Sncb  -  synuclein, beta<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Cplx1  -  complexin 1<br>
+Stmn3  -  stathmin-like 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pink1  -  pten induced putative kinase 1<br>
+Plek  -  pleckstrin<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Stx1b  -  syntaxin 1b<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Rgs16  -  regulator of g-protein signaling 16<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Lrrc41  -  leucine rich repeat containing 41<br>
+Farsb  -  phenylalanyl-trna synthetase, beta subunit<br>
+Ociad1  -  ocia domain containing 1<br>
+Map7d1  -  map7 domain containing 1<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Klhdc3  -  kelch domain containing 3<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045259&amp;view=details' target="_blank">GO:0045259</a><a name=0045259></a></td>
+<td>proton-transporting ATP synthase complex</td>
+<td  align=center>1.39E-8</td>
+<td  align=center>1.81E-6</td>
+<td  align=center>60.00 (20161,15,112,5)</td>
+<td>
+<a id="ctrl_elements_GO:0045259" href="javascript:toggle('elements_GO:0045259')">[+] Show genes</a><br>
+<div id="elements_GO:0045259" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005753&amp;view=details' target="_blank">GO:0005753</a><a name=0005753></a></td>
+<td>mitochondrial proton-transporting ATP synthase complex</td>
+<td  align=center>1.39E-8</td>
+<td  align=center>1.7E-6</td>
+<td  align=center>60.00 (20161,15,112,5)</td>
+<td>
+<a id="ctrl_elements_GO:0005753" href="javascript:toggle('elements_GO:0005753')">[+] Show genes</a><br>
+<div id="elements_GO:0005753" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043227&amp;view=details' target="_blank">GO:0043227</a><a name=0043227></a></td>
+<td>membrane-bounded organelle</td>
+<td  align=center>1.7E-8</td>
+<td  align=center>1.95E-6</td>
+<td  align=center>1.52 (20161,10086,112,85)</td>
+<td>
+<a id="ctrl_elements_GO:0043227" href="javascript:toggle('elements_GO:0043227')">[+] Show genes</a><br>
+<div id="elements_GO:0043227" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Rnf187  -  ring finger protein 187<br>
+Tcf25  -  transcription factor 25 (basic helix-loop-helix)<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+Sncb  -  synuclein, beta<br>
+Oaz1  -  ornithine decarboxylase antizyme 1<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Fbxo38  -  f-box protein 38<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Glrx  -  glutaredoxin<br>
+Scly  -  selenocysteine lyase<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Stmn3  -  stathmin-like 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Evl  -  ena-vasodilator stimulated phosphoprotein<br>
+Stx1b  -  syntaxin 1b<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Lrrc41  -  leucine rich repeat containing 41<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ociad1  -  ocia domain containing 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044422&amp;view=details' target="_blank">GO:0044422</a><a name=0044422></a></td>
+<td>organelle part</td>
+<td  align=center>2.39E-8</td>
+<td  align=center>2.59E-6</td>
+<td  align=center>1.68 (20161,7737,112,72)</td>
+<td>
+<a id="ctrl_elements_GO:0044422" href="javascript:toggle('elements_GO:0044422')">[+] Show genes</a><br>
+<div id="elements_GO:0044422" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Sptb  -  spectrin beta, erythrocytic<br>
+Rnf187  -  ring finger protein 187<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Mprip  -  myosin phosphatase rho interacting protein<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Glrx  -  glutaredoxin<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Stx1b  -  syntaxin 1b<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Klhdc3  -  kelch domain containing 3<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044446&amp;view=details' target="_blank">GO:0044446</a><a name=0044446></a></td>
+<td>intracellular organelle part</td>
+<td  align=center>6.24E-8</td>
+<td  align=center>6.42E-6</td>
+<td  align=center>1.68 (20161,7377,112,69)</td>
+<td>
+<a id="ctrl_elements_GO:0044446" href="javascript:toggle('elements_GO:0044446')">[+] Show genes</a><br>
+<div id="elements_GO:0044446" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Sptb  -  spectrin beta, erythrocytic<br>
+Rnf187  -  ring finger protein 187<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Mprip  -  myosin phosphatase rho interacting protein<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Glrx  -  glutaredoxin<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Stx1b  -  syntaxin 1b<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Klhdc3  -  kelch domain containing 3<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098803&amp;view=details' target="_blank">GO:0098803</a><a name=0098803></a></td>
+<td>respiratory chain complex</td>
+<td  align=center>9.91E-8</td>
+<td  align=center>9.68E-6</td>
+<td  align=center>18.53 (20161,68,112,7)</td>
+<td>
+<a id="ctrl_elements_GO:0098803" href="javascript:toggle('elements_GO:0098803')">[+] Show genes</a><br>
+<div id="elements_GO:0098803" style="display:none"> <font size=1>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098796&amp;view=details' target="_blank">GO:0098796</a><a name=0098796></a></td>
+<td>membrane protein complex</td>
+<td  align=center>2.08E-7</td>
+<td  align=center>1.93E-5</td>
+<td  align=center>3.52 (20161,1125,112,22)</td>
+<td>
+<a id="ctrl_elements_GO:0098796" href="javascript:toggle('elements_GO:0098796')">[+] Show genes</a><br>
+<div id="elements_GO:0098796" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Cplx1  -  complexin 1<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Lrrc8a  -  leucine rich repeat containing 8a<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098793&amp;view=details' target="_blank">GO:0098793</a><a name=0098793></a></td>
+<td>presynapse</td>
+<td  align=center>4.96E-7</td>
+<td  align=center>4.41E-5</td>
+<td  align=center>7.02 (20161,282,112,11)</td>
+<td>
+<a id="ctrl_elements_GO:0098793" href="javascript:toggle('elements_GO:0098793')">[+] Show genes</a><br>
+<div id="elements_GO:0098793" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Cplx1  -  complexin 1<br>
+Sept6  -  septin 6<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Sncb  -  synuclein, beta<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Stx1b  -  syntaxin 1b<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070469&amp;view=details' target="_blank">GO:0070469</a><a name=0070469></a></td>
+<td>respiratory chain</td>
+<td  align=center>5.34E-7</td>
+<td  align=center>4.54E-5</td>
+<td  align=center>20.00 (20161,54,112,6)</td>
+<td>
+<a id="ctrl_elements_GO:0070469" href="javascript:toggle('elements_GO:0070469')">[+] Show genes</a><br>
+<div id="elements_GO:0070469" style="display:none"> <font size=1>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016469&amp;view=details' target="_blank">GO:0016469</a><a name=0016469></a></td>
+<td>proton-transporting two-sector ATPase complex</td>
+<td  align=center>1.18E-6</td>
+<td  align=center>9.63E-5</td>
+<td  align=center>26.47 (20161,34,112,5)</td>
+<td>
+<a id="ctrl_elements_GO:0016469" href="javascript:toggle('elements_GO:0016469')">[+] Show genes</a><br>
+<div id="elements_GO:0016469" style="display:none"> <font size=1>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043231&amp;view=details' target="_blank">GO:0043231</a><a name=0043231></a></td>
+<td>intracellular membrane-bounded organelle</td>
+<td  align=center>1.66E-6</td>
+<td  align=center>1.3E-4</td>
+<td  align=center>1.48 (20161,9390,112,77)</td>
+<td>
+<a id="ctrl_elements_GO:0043231" href="javascript:toggle('elements_GO:0043231')">[+] Show genes</a><br>
+<div id="elements_GO:0043231" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Rnf187  -  ring finger protein 187<br>
+Tcf25  -  transcription factor 25 (basic helix-loop-helix)<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+Sncb  -  synuclein, beta<br>
+Oaz1  -  ornithine decarboxylase antizyme 1<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Fbxo38  -  f-box protein 38<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Glrx  -  glutaredoxin<br>
+Scly  -  selenocysteine lyase<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Stmn3  -  stathmin-like 3<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pink1  -  pten induced putative kinase 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Stx1b  -  syntaxin 1b<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Lrrc41  -  leucine rich repeat containing 41<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ociad1  -  ocia domain containing 1<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048787&amp;view=details' target="_blank">GO:0048787</a><a name=0048787></a></td>
+<td>presynaptic active zone membrane</td>
+<td  align=center>2.03E-6</td>
+<td  align=center>1.53E-4</td>
+<td  align=center>42.36 (20161,17,112,4)</td>
+<td>
+<a id="ctrl_elements_GO:0048787" href="javascript:toggle('elements_GO:0048787')">[+] Show genes</a><br>
+<div id="elements_GO:0048787" style="display:none"> <font size=1>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008021&amp;view=details' target="_blank">GO:0008021</a><a name=0008021></a></td>
+<td>synaptic vesicle</td>
+<td  align=center>5.81E-6</td>
+<td  align=center>4.2E-4</td>
+<td  align=center>8.28 (20161,174,112,8)</td>
+<td>
+<a id="ctrl_elements_GO:0008021" href="javascript:toggle('elements_GO:0008021')">[+] Show genes</a><br>
+<div id="elements_GO:0008021" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Sept6  -  septin 6<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Mff  -  mitochondrial fission factor<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Stx1b  -  syntaxin 1b<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044464&amp;view=details' target="_blank">GO:0044464</a><a name=0044464></a></td>
+<td>cell part</td>
+<td  align=center>6.44E-6</td>
+<td  align=center>4.5E-4</td>
+<td  align=center>1.22 (20161,15235,112,103)</td>
+<td>
+<a id="ctrl_elements_GO:0044464" href="javascript:toggle('elements_GO:0044464')">[+] Show genes</a><br>
+<div id="elements_GO:0044464" style="display:none"> <font size=1>
+Sptb  -  spectrin beta, erythrocytic<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+Oaz1  -  ornithine decarboxylase antizyme 1<br>
+Letmd1  -  letm1 domain containing 1<br>
+AU040320  -  expressed sequence au040320<br>
+Fbxo38  -  f-box protein 38<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Mprip  -  myosin phosphatase rho interacting protein<br>
+Scly  -  selenocysteine lyase<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Glrx  -  glutaredoxin<br>
+Fbxo44  -  f-box protein 44<br>
+Vsnl1  -  visinin-like 1<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Aldh7a1  -  aldehyde dehydrogenase family 7, member a1<br>
+Lrrc8a  -  leucine rich repeat containing 8a<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Evl  -  ena-vasodilator stimulated phosphoprotein<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Zwint  -  zw10 interactor<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Limk2  -  lim motif-containing protein kinase 2<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Fam155a  -  family with sequence similarity 155, member a<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Tuba1b  -  tubulin, alpha 1b<br>
+Mdh1  -  malate dehydrogenase 1, nad (soluble)<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Surf1  -  surfeit gene 1<br>
+Zfand5  -  zinc finger, an1-type domain 5<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Klf11  -  kruppel-like factor 11<br>
+Tcf25  -  transcription factor 25 (basic helix-loop-helix)<br>
+Rnf187  -  ring finger protein 187<br>
+Sncb  -  synuclein, beta<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Rap1gds1  -  rap1, gtp-gdp dissociation stimulator 1<br>
+Cplx1  -  complexin 1<br>
+Stmn3  -  stathmin-like 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pink1  -  pten induced putative kinase 1<br>
+Plek  -  pleckstrin<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Stx1b  -  syntaxin 1b<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Rgs16  -  regulator of g-protein signaling 16<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Dclre1b  -  dna cross-link repair 1b, pso2 homolog (s. cerevisiae)<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Lrrc41  -  leucine rich repeat containing 41<br>
+Farsb  -  phenylalanyl-trna synthetase, beta subunit<br>
+Ociad1  -  ocia domain containing 1<br>
+Map7d1  -  map7 domain containing 1<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Klhdc3  -  kelch domain containing 3<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070069&amp;view=details' target="_blank">GO:0070069</a><a name=0070069></a></td>
+<td>cytochrome complex</td>
+<td  align=center>1.04E-5</td>
+<td  align=center>7.03E-4</td>
+<td  align=center>28.80 (20161,25,112,4)</td>
+<td>
+<a id="ctrl_elements_GO:0070069" href="javascript:toggle('elements_GO:0070069')">[+] Show genes</a><br>
+<div id="elements_GO:0070069" style="display:none"> <font size=1>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099503&amp;view=details' target="_blank">GO:0099503</a><a name=0099503></a></td>
+<td>secretory vesicle</td>
+<td  align=center>1.33E-5</td>
+<td  align=center>8.69E-4</td>
+<td  align=center>4.55 (20161,475,112,12)</td>
+<td>
+<a id="ctrl_elements_GO:0099503" href="javascript:toggle('elements_GO:0099503')">[+] Show genes</a><br>
+<div id="elements_GO:0099503" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sept6  -  septin 6<br>
+Pcsk1n  -  proprotein convertase subtilisin/kexin type 1 inhibitor<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Mff  -  mitochondrial fission factor<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Stx1b  -  syntaxin 1b<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097060&amp;view=details' target="_blank">GO:0097060</a><a name=0097060></a></td>
+<td>synaptic membrane</td>
+<td  align=center>1.56E-5</td>
+<td  align=center>9.82E-4</td>
+<td  align=center>5.45 (20161,330,112,10)</td>
+<td>
+<a id="ctrl_elements_GO:0097060" href="javascript:toggle('elements_GO:0097060')">[+] Show genes</a><br>
+<div id="elements_GO:0097060" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Stx1b  -  syntaxin 1b<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990204&amp;view=details' target="_blank">GO:1990204</a><a name=1990204></a></td>
+<td>oxidoreductase complex</td>
+<td  align=center>1.59E-5</td>
+<td  align=center>9.69E-4</td>
+<td  align=center>11.25 (20161,96,112,6)</td>
+<td>
+<a id="ctrl_elements_GO:1990204" href="javascript:toggle('elements_GO:1990204')">[+] Show genes</a><br>
+<div id="elements_GO:1990204" style="display:none"> <font size=1>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070382&amp;view=details' target="_blank">GO:0070382</a><a name=0070382></a></td>
+<td>exocytic vesicle</td>
+<td  align=center>1.66E-5</td>
+<td  align=center>9.85E-4</td>
+<td  align=center>7.16 (20161,201,112,8)</td>
+<td>
+<a id="ctrl_elements_GO:0070382" href="javascript:toggle('elements_GO:0070382')">[+] Show genes</a><br>
+<div id="elements_GO:0070382" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sept6  -  septin 6<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Mff  -  mitochondrial fission factor<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Stx1b  -  syntaxin 1b<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044456&amp;view=details' target="_blank">GO:0044456</a><a name=0044456></a></td>
+<td>synapse part</td>
+<td  align=center>3E-5</td>
+<td  align=center>1.73E-3</td>
+<td  align=center>2.98 (20161,1088,112,18)</td>
+<td>
+<a id="ctrl_elements_GO:0044456" href="javascript:toggle('elements_GO:0044456')">[+] Show genes</a><br>
+<div id="elements_GO:0044456" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Cplx1  -  complexin 1<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Sncb  -  synuclein, beta<br>
+Mff  -  mitochondrial fission factor<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Kif1a  -  kinesin family member 1a<br>
+Sept6  -  septin 6<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043679&amp;view=details' target="_blank">GO:0043679</a><a name=0043679></a></td>
+<td>axon terminus</td>
+<td  align=center>6.44E-5</td>
+<td  align=center>3.6E-3</td>
+<td  align=center>8.78 (20161,123,112,6)</td>
+<td>
+<a id="ctrl_elements_GO:0043679" href="javascript:toggle('elements_GO:0043679')">[+] Show genes</a><br>
+<div id="elements_GO:0043679" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Sept6  -  septin 6<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Sncb  -  synuclein, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030133&amp;view=details' target="_blank">GO:0030133</a><a name=0030133></a></td>
+<td>transport vesicle</td>
+<td  align=center>8.51E-5</td>
+<td  align=center>4.62E-3</td>
+<td  align=center>5.69 (20161,253,112,8)</td>
+<td>
+<a id="ctrl_elements_GO:0030133" href="javascript:toggle('elements_GO:0030133')">[+] Show genes</a><br>
+<div id="elements_GO:0030133" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sept6  -  septin 6<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Mff  -  mitochondrial fission factor<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Stx1b  -  syntaxin 1b<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045271&amp;view=details' target="_blank">GO:0045271</a><a name=0045271></a></td>
+<td>respiratory chain complex I</td>
+<td  align=center>8.58E-5</td>
+<td  align=center>4.53E-3</td>
+<td  align=center>17.14 (20161,42,112,4)</td>
+<td>
+<a id="ctrl_elements_GO:0045271" href="javascript:toggle('elements_GO:0045271')">[+] Show genes</a><br>
+<div id="elements_GO:0045271" style="display:none"> <font size=1>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005747&amp;view=details' target="_blank">GO:0005747</a><a name=0005747></a></td>
+<td>mitochondrial respiratory chain complex I</td>
+<td  align=center>8.58E-5</td>
+<td  align=center>4.41E-3</td>
+<td  align=center>17.14 (20161,42,112,4)</td>
+<td>
+<a id="ctrl_elements_GO:0005747" href="javascript:toggle('elements_GO:0005747')">[+] Show genes</a><br>
+<div id="elements_GO:0005747" style="display:none"> <font size=1>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030964&amp;view=details' target="_blank">GO:0030964</a><a name=0030964></a></td>
+<td>NADH dehydrogenase complex</td>
+<td  align=center>8.58E-5</td>
+<td  align=center>4.3E-3</td>
+<td  align=center>17.14 (20161,42,112,4)</td>
+<td>
+<a id="ctrl_elements_GO:0030964" href="javascript:toggle('elements_GO:0030964')">[+] Show genes</a><br>
+<div id="elements_GO:0030964" style="display:none"> <font size=1>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
+<td>membrane</td>
+<td  align=center>1.14E-4</td>
+<td  align=center>5.57E-3</td>
+<td  align=center>1.47 (20161,7446,112,61)</td>
+<td>
+<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
+<div id="elements_GO:0016020" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Sptb  -  spectrin beta, erythrocytic<br>
+Repin1  -  replication initiator 1<br>
+Mff  -  mitochondrial fission factor<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Edem2  -  er degradation enhancer, mannosidase alpha-like 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Bcorl1  -  bcl6 co-repressor-like 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Vsnl1  -  visinin-like 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+Plek  -  pleckstrin<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Lrrc8a  -  leucine rich repeat containing 8a<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Stx1b  -  syntaxin 1b<br>
+Gabarapl2  -  gamma-aminobutyric acid (gaba) a receptor-associated protein-like 2<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Rgs16  -  regulator of g-protein signaling 16<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Fam155a  -  family with sequence similarity 155, member a<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044306&amp;view=details' target="_blank">GO:0044306</a><a name=0044306></a></td>
+<td>neuron projection terminus</td>
+<td  align=center>1.66E-4</td>
+<td  align=center>7.9E-3</td>
+<td  align=center>7.40 (20161,146,112,6)</td>
+<td>
+<a id="ctrl_elements_GO:0044306" href="javascript:toggle('elements_GO:0044306')">[+] Show genes</a><br>
+<div id="elements_GO:0044306" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Sept6  -  septin 6<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Sncb  -  synuclein, beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032991&amp;view=details' target="_blank">GO:0032991</a><a name=0032991></a></td>
+<td>protein-containing complex</td>
+<td  align=center>1.78E-4</td>
+<td  align=center>8.3E-3</td>
+<td  align=center>1.61 (20161,5256,112,47)</td>
+<td>
+<a id="ctrl_elements_GO:0032991" href="javascript:toggle('elements_GO:0032991')">[+] Show genes</a><br>
+<div id="elements_GO:0032991" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Hspa8  -  heat shock protein 8<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Tcf25  -  transcription factor 25 (basic helix-loop-helix)<br>
+Sptb  -  spectrin beta, erythrocytic<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Repin1  -  replication initiator 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Zwint  -  zw10 interactor<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Scly  -  selenocysteine lyase<br>
+Fbxo44  -  f-box protein 44<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Cplx1  -  complexin 1<br>
+Asna1  -  arsa arsenite transporter, atp-binding, homolog 1 (bacterial)<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+Farsb  -  phenylalanyl-trna synthetase, beta subunit<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Kif1a  -  kinesin family member 1a<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Lrrc8a  -  leucine rich repeat containing 8a<br>
+Sept6  -  septin 6<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Sarnp  -  sap domain containing ribonucleoprotein<br>
+Stx1b  -  syntaxin 1b<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070032&amp;view=details' target="_blank">GO:0070032</a><a name=0070032></a></td>
+<td>synaptobrevin 2-SNAP-25-syntaxin-1a-complexin I complex</td>
+<td  align=center>1.82E-4</td>
+<td  align=center>8.28E-3</td>
+<td  align=center>90.00 (20161,4,112,2)</td>
+<td>
+<a id="ctrl_elements_GO:0070032" href="javascript:toggle('elements_GO:0070032')">[+] Show genes</a><br>
+<div id="elements_GO:0070032" style="display:none"> <font size=1>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044425&amp;view=details' target="_blank">GO:0044425</a><a name=0044425></a></td>
+<td>membrane part</td>
+<td  align=center>2.94E-4</td>
+<td  align=center>1.31E-2</td>
+<td  align=center>1.48 (20161,6823,112,56)</td>
+<td>
+<a id="ctrl_elements_GO:0044425" href="javascript:toggle('elements_GO:0044425')">[+] Show genes</a><br>
+<div id="elements_GO:0044425" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Mff  -  mitochondrial fission factor<br>
+AU040320  -  expressed sequence au040320<br>
+Letmd1  -  letm1 domain containing 1<br>
+Ahcyl1  -  s-adenosylhomocysteine hydrolase-like 1<br>
+Cox5a  -  cytochrome c oxidase subunit va<br>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+2010107E04Rik  -  riken cdna 2010107e04 gene<br>
+Uba1  -  ubiquitin-like modifier activating enzyme 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Grina  -  glutamate receptor, ionotropic, n-methyl d-aspartate-associated protein 1 (glutamate binding)<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Pitpna  -  phosphatidylinositol transfer protein, alpha<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Pink1  -  pten induced putative kinase 1<br>
+Plek  -  pleckstrin<br>
+St3gal1  -  st3 beta-galactoside alpha-2,3-sialyltransferase 1<br>
+St3gal4  -  st3 beta-galactoside alpha-2,3-sialyltransferase 4<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Fam57b  -  family with sequence similarity 57, member b<br>
+St8sia1  -  st8 alpha-n-acetyl-neuraminide alpha-2,8-sialyltransferase 1<br>
+Lrrc8a  -  leucine rich repeat containing 8a<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Tecr  -  trans-2,3-enoyl-coa reductase<br>
+Stx1b  -  syntaxin 1b<br>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5h  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit d<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Chchd10  -  coiled-coil-helix-coiled-coil-helix domain containing 10<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Ube2j1  -  ubiquitin-conjugating enzyme e2j 1<br>
+Slc25a5  -  solute carrier family 25 (mitochondrial carrier, adenine nucleotide translocator), member 5<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Rgs16  -  regulator of g-protein signaling 16<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+Fam155a  -  family with sequence similarity 155, member a<br>
+Atp5j2  -  atp synthase, h+ transporting, mitochondrial f0 complex, subunit f2<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Rtn3  -  reticulon 3<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+Mgst3  -  microsomal glutathione s-transferase 3<br>
+Sept6  -  septin 6<br>
+Aplp1  -  amyloid beta (a4) precursor-like protein 1<br>
+Surf1  -  surfeit gene 1<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Slc25a3  -  solute carrier family 25 (mitochondrial carrier, phosphate carrier), member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902494&amp;view=details' target="_blank">GO:1902494</a><a name=1902494></a></td>
+<td>catalytic complex</td>
+<td  align=center>2.94E-4</td>
+<td  align=center>1.28E-2</td>
+<td  align=center>2.49 (20161,1303,112,18)</td>
+<td>
+<a id="ctrl_elements_GO:1902494" href="javascript:toggle('elements_GO:1902494')">[+] Show genes</a><br>
+<div id="elements_GO:1902494" style="display:none"> <font size=1>
+Fbxo44  -  f-box protein 44<br>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Ndufa4  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 4<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+Polr2j  -  polymerase (rna) ii (dna directed) polypeptide j<br>
+Ndufa3  -  nadh dehydrogenase (ubiquinone) 1 alpha subcomplex, 3<br>
+Farsb  -  phenylalanyl-trna synthetase, beta subunit<br>
+Psma6  -  proteasome (prosome, macropain) subunit, alpha type 6<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Psmb2  -  proteasome (prosome, macropain) subunit, beta type 2<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Ndufb11  -  nadh dehydrogenase (ubiquinone) 1 beta subcomplex, 11<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Dynlrb1  -  dynein light chain roadblock-type 1<br>
+Scly  -  selenocysteine lyase<br>
+Sin3a  -  transcriptional regulator, sin3a (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098833&amp;view=details' target="_blank">GO:0098833</a><a name=0098833></a></td>
+<td>presynaptic endocytic zone</td>
+<td  align=center>3.03E-4</td>
+<td  align=center>1.29E-2</td>
+<td  align=center>72.00 (20161,5,112,2)</td>
+<td>
+<a id="ctrl_elements_GO:0098833" href="javascript:toggle('elements_GO:0098833')">[+] Show genes</a><br>
+<div id="elements_GO:0098833" style="display:none"> <font size=1>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000275&amp;view=details' target="_blank">GO:0000275</a><a name=0000275></a></td>
+<td>mitochondrial proton-transporting ATP synthase complex, catalytic core F(1)</td>
+<td  align=center>3.03E-4</td>
+<td  align=center>1.26E-2</td>
+<td  align=center>72.00 (20161,5,112,2)</td>
+<td>
+<a id="ctrl_elements_GO:0000275" href="javascript:toggle('elements_GO:0000275')">[+] Show genes</a><br>
+<div id="elements_GO:0000275" style="display:none"> <font size=1>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045202&amp;view=details' target="_blank">GO:0045202</a><a name=0045202></a></td>
+<td>synapse</td>
+<td  align=center>3.72E-4</td>
+<td  align=center>1.52E-2</td>
+<td  align=center>2.62 (20161,1099,112,16)</td>
+<td>
+<a id="ctrl_elements_GO:0045202" href="javascript:toggle('elements_GO:0045202')">[+] Show genes</a><br>
+<div id="elements_GO:0045202" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Cplx1  -  complexin 1<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Rtn3  -  reticulon 3<br>
+Sncb  -  synuclein, beta<br>
+Mff  -  mitochondrial fission factor<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Faim2  -  fas apoptotic inhibitory molecule 2<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097458&amp;view=details' target="_blank">GO:0097458</a><a name=0097458></a></td>
+<td>neuron part</td>
+<td  align=center>4.38E-4</td>
+<td  align=center>1.75E-2</td>
+<td  align=center>2.11 (20161,1965,112,23)</td>
+<td>
+<a id="ctrl_elements_GO:0097458" href="javascript:toggle('elements_GO:0097458')">[+] Show genes</a><br>
+<div id="elements_GO:0097458" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Cplx1  -  complexin 1<br>
+Hspa8  -  heat shock protein 8<br>
+Clta  -  clathrin, light polypeptide (lca)<br>
+Stmn3  -  stathmin-like 3<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Ckmt1  -  creatine kinase, mitochondrial 1, ubiquitous<br>
+Sncb  -  synuclein, beta<br>
+Pink1  -  pten induced putative kinase 1<br>
+Mff  -  mitochondrial fission factor<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Zwint  -  zw10 interactor<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Kif1a  -  kinesin family member 1a<br>
+Sept6  -  septin 6<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Rab11b  -  rab11b, member ras oncogene family<br>
+Glrx  -  glutaredoxin<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045261&amp;view=details' target="_blank">GO:0045261</a><a name=0045261></a></td>
+<td>proton-transporting ATP synthase complex, catalytic core F(1)</td>
+<td  align=center>4.52E-4</td>
+<td  align=center>1.77E-2</td>
+<td  align=center>60.00 (20161,6,112,2)</td>
+<td>
+<a id="ctrl_elements_GO:0045261" href="javascript:toggle('elements_GO:0045261')">[+] Show genes</a><br>
+<div id="elements_GO:0045261" style="display:none"> <font size=1>
+Atp5d  -  atp synthase, h+ transporting, mitochondrial f1 complex, delta subunit<br>
+Atp5a1  -  atp synthase, h+ transporting, mitochondrial f1 complex, alpha subunit 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031968&amp;view=details' target="_blank">GO:0031968</a><a name=0031968></a></td>
+<td>organelle outer membrane</td>
+<td  align=center>5.4E-4</td>
+<td  align=center>2.07E-2</td>
+<td  align=center>5.93 (20161,182,112,6)</td>
+<td>
+<a id="ctrl_elements_GO:0031968" href="javascript:toggle('elements_GO:0031968')">[+] Show genes</a><br>
+<div id="elements_GO:0031968" style="display:none"> <font size=1>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Mff  -  mitochondrial fission factor<br>
+Pink1  -  pten induced putative kinase 1<br>
+Letmd1  -  letm1 domain containing 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019867&amp;view=details' target="_blank">GO:0019867</a><a name=0019867></a></td>
+<td>outer membrane</td>
+<td  align=center>5.4E-4</td>
+<td  align=center>2.03E-2</td>
+<td  align=center>5.93 (20161,182,112,6)</td>
+<td>
+<a id="ctrl_elements_GO:0019867" href="javascript:toggle('elements_GO:0019867')">[+] Show genes</a><br>
+<div id="elements_GO:0019867" style="display:none"> <font size=1>
+Ghrhr  -  growth hormone releasing hormone receptor<br>
+Rab11fip5  -  rab11 family interacting protein 5 (class i)<br>
+Mff  -  mitochondrial fission factor<br>
+Pink1  -  pten induced putative kinase 1<br>
+Letmd1  -  letm1 domain containing 1<br>
+Armcx1  -  armadillo repeat containing, x-linked 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043005&amp;view=details' target="_blank">GO:0043005</a><a name=0043005></a></td>
+<td>neuron projection</td>
+<td  align=center>5.42E-4</td>
+<td  align=center>2E-2</td>
+<td  align=center>2.44 (20161,1253,112,17)</td>
+<td>
+<a id="ctrl_elements_GO:0043005" href="javascript:toggle('elements_GO:0043005')">[+] Show genes</a><br>
+<div id="elements_GO:0043005" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Cplx1  -  complexin 1<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Stmn3  -  stathmin-like 3<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pink1  -  pten induced putative kinase 1<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Zwint  -  zw10 interactor<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Kif1a  -  kinesin family member 1a<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Glrx  -  glutaredoxin<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005681&amp;view=details' target="_blank">GO:0005681</a><a name=0005681></a></td>
+<td>spliceosomal complex</td>
+<td  align=center>6.77E-4</td>
+<td  align=center>2.45E-2</td>
+<td  align=center>5.68 (20161,190,112,6)</td>
+<td>
+<a id="ctrl_elements_GO:0005681" href="javascript:toggle('elements_GO:0005681')">[+] Show genes</a><br>
+<div id="elements_GO:0005681" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Naa38  -  n(alpha)-acetyltransferase 38, natc auxiliary subunit<br>
+Snrpn  -  small nuclear ribonucleoprotein n<br>
+Srrm2  -  serine/arginine repetitive matrix 2<br>
+Sf3a2  -  splicing factor 3a, subunit 2<br>
+Plrg1  -  pleiotropic regulator 1, prl1 homolog (arabidopsis)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045275&amp;view=details' target="_blank">GO:0045275</a><a name=0045275></a></td>
+<td>respiratory chain complex III</td>
+<td  align=center>8.38E-4</td>
+<td  align=center>2.98E-2</td>
+<td  align=center>45.00 (20161,8,112,2)</td>
+<td>
+<a id="ctrl_elements_GO:0045275" href="javascript:toggle('elements_GO:0045275')">[+] Show genes</a><br>
+<div id="elements_GO:0045275" style="display:none"> <font size=1>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005750&amp;view=details' target="_blank">GO:0005750</a><a name=0005750></a></td>
+<td>mitochondrial respiratory chain complex III</td>
+<td  align=center>8.38E-4</td>
+<td  align=center>2.92E-2</td>
+<td  align=center>45.00 (20161,8,112,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005750" href="javascript:toggle('elements_GO:0005750')">[+] Show genes</a><br>
+<div id="elements_GO:0005750" style="display:none"> <font size=1>
+Uqcrq  -  ubiquinol-cytochrome c reductase, complex iii subunit vii<br>
+Uqcrc1  -  ubiquinol-cytochrome c reductase core protein 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098794&amp;view=details' target="_blank">GO:0098794</a><a name=0098794></a></td>
+<td>postsynapse</td>
+<td  align=center>8.72E-4</td>
+<td  align=center>2.99E-2</td>
+<td  align=center>4.58 (20161,275,112,7)</td>
+<td>
+<a id="ctrl_elements_GO:0098794" href="javascript:toggle('elements_GO:0098794')">[+] Show genes</a><br>
+<div id="elements_GO:0098794" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Hspa8  -  heat shock protein 8<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Kif1a  -  kinesin family member 1a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033267&amp;view=details' target="_blank">GO:0033267</a><a name=0033267></a></td>
+<td>axon part</td>
+<td  align=center>9.46E-4</td>
+<td  align=center>3.19E-2</td>
+<td  align=center>3.58 (20161,452,112,9)</td>
+<td>
+<a id="ctrl_elements_GO:0033267" href="javascript:toggle('elements_GO:0033267')">[+] Show genes</a><br>
+<div id="elements_GO:0033267" style="display:none"> <font size=1>
+Hspa8  -  heat shock protein 8<br>
+Cplx1  -  complexin 1<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Sept6  -  septin 6<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Sncb  -  synuclein, beta<br>
+Pink1  -  pten induced putative kinase 1<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120025&amp;view=details' target="_blank">GO:0120025</a><a name=0120025></a></td>
+<td>plasma membrane bounded cell projection</td>
+<td  align=center>9.87E-4</td>
+<td  align=center>3.27E-2</td>
+<td  align=center>2.07 (20161,1822,112,21)</td>
+<td>
+<a id="ctrl_elements_GO:0120025" href="javascript:toggle('elements_GO:0120025')">[+] Show genes</a><br>
+<div id="elements_GO:0120025" style="display:none"> <font size=1>
+Kcnd3  -  potassium voltage-gated channel, shal-related family, member 3<br>
+Cplx1  -  complexin 1<br>
+Hspa8  -  heat shock protein 8<br>
+Stmn3  -  stathmin-like 3<br>
+Uhmk1  -  u2af homology motif (uhm) kinase 1<br>
+Ttll7  -  tubulin tyrosine ligase-like family, member 7<br>
+Snap25  -  synaptosomal-associated protein 25<br>
+Snap91  -  synaptosomal-associated protein 91<br>
+Pink1  -  pten induced putative kinase 1<br>
+Pacsin1  -  protein kinase c and casein kinase substrate in neurons 1<br>
+Cyp46a1  -  cytochrome p450, family 46, subfamily a, polypeptide 1<br>
+Stxbp1  -  syntaxin binding protein 1<br>
+Zwint  -  zw10 interactor<br>
+Ndufs7  -  nadh dehydrogenase (ubiquinone) fe-s protein 7<br>
+Kif1a  -  kinesin family member 1a<br>
+Atp1b1  -  atpase, na+/k+ transporting, beta 1 polypeptide<br>
+Sept6  -  septin 6<br>
+Kcna2  -  potassium voltage-gated channel, shaker-related subfamily, member 2<br>
+Evl  -  ena-vasodilator stimulated phosphoprotein<br>
+Glrx  -  glutaredoxin<br>
+Stx1b  -  syntaxin 1b<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 27284 genes out of 37693 gene terms entered by the user.<br> 27284 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>154 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 27130 genes.<br>Only 20161 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Apr 2, 2024
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1954 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

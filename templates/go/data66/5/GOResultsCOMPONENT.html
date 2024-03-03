@@ -1,0 +1,2591 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='272,205,355,253' HREF='#0060076' ALT=''>
+<AREA SHAPE='RECT' COORDS='256,318,371,381' HREF='#0098688' ALT=''>
+<AREA SHAPE='RECT' COORDS='1796,318,1887,381' HREF='#0044446' ALT=''>
+<AREA SHAPE='RECT' COORDS='1289,453,1385,501' HREF='#0044433' ALT=''>
+<AREA SHAPE='RECT' COORDS='1841,453,1913,501' HREF='#0044437' ALT=''>
+<AREA SHAPE='RECT' COORDS='1216,309,1307,389' HREF='#0031300' ALT=''>
+<AREA SHAPE='RECT' COORDS='908,437,999,517' HREF='#0031301' ALT=''>
+<AREA SHAPE='RECT' COORDS='973,565,1099,645' HREF='#0098563' ALT=''>
+<AREA SHAPE='RECT' COORDS='333,101,405,149' HREF='#0045202' ALT=''>
+<AREA SHAPE='RECT' COORDS='379,205,472,253' HREF='#0098982' ALT=''>
+<AREA SHAPE='RECT' COORDS='496,198,603,261' HREF='#0098685' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,205,109,253' HREF='#0098978' ALT=''>
+<AREA SHAPE='RECT' COORDS='133,205,248,253' HREF='#0098984' ALT=''>
+<AREA SHAPE='RECT' COORDS='1753,719,1839,767' HREF='#0043202' ALT=''>
+<AREA SHAPE='RECT' COORDS='2395,581,2469,629' HREF='#0033267' ALT=''>
+<AREA SHAPE='RECT' COORDS='2936,719,3027,767' HREF='#0030426' ALT=''>
+<AREA SHAPE='RECT' COORDS='1409,437,1500,517' HREF='#0099240' ALT=''>
+<AREA SHAPE='RECT' COORDS='1123,565,1213,645' HREF='#0099699' ALT=''>
+<AREA SHAPE='RECT' COORDS='1288,565,1403,645' HREF='#0098936' ALT=''>
+<AREA SHAPE='RECT' COORDS='1427,565,1533,645' HREF='#0098889' ALT=''>
+<AREA SHAPE='RECT' COORDS='1737,101,1879,149' HREF='#0031974' ALT=''>
+<AREA SHAPE='RECT' COORDS='1695,325,1772,373' HREF='#0043233' ALT=''>
+<AREA SHAPE='RECT' COORDS='3644,581,3753,629' HREF='#0034703' ALT=''>
+<AREA SHAPE='RECT' COORDS='3639,719,3759,767' HREF='#0034705' ALT=''>
+<AREA SHAPE='RECT' COORDS='3772,858,3897,921' HREF='#0032281' ALT=''>
+<AREA SHAPE='RECT' COORDS='3755,205,3843,253' HREF='#1990351' ALT=''>
+<AREA SHAPE='RECT' COORDS='3743,318,3857,381' HREF='#1902495' ALT=''>
+<AREA SHAPE='RECT' COORDS='399,325,527,373' HREF='#0005886' ALT=''>
+<AREA SHAPE='RECT' COORDS='948,703,1073,783' HREF='#0030285' ALT=''>
+<AREA SHAPE='RECT' COORDS='1513,694,1628,791' HREF='#0098948' ALT=''>
+<AREA SHAPE='RECT' COORDS='1361,841,1476,938' HREF='#0099060' ALT=''>
+<AREA SHAPE='RECT' COORDS='1500,849,1628,929' HREF='#0099146' ALT=''>
+<AREA SHAPE='RECT' COORDS='1383,703,1489,783' HREF='#0099056' ALT=''>
+<AREA SHAPE='RECT' COORDS='1244,703,1359,783' HREF='#0099055' ALT=''>
+<AREA SHAPE='RECT' COORDS='3216,719,3293,767' HREF='#0030133' ALT=''>
+<AREA SHAPE='RECT' COORDS='3217,865,3292,913' HREF='#0070382' ALT=''>
+<AREA SHAPE='RECT' COORDS='3317,719,3397,767' HREF='#0099503' ALT=''>
+<AREA SHAPE='RECT' COORDS='677,205,760,253' HREF='#0016020' ALT=''>
+<AREA SHAPE='RECT' COORDS='780,325,913,373' HREF='#0098590' ALT=''>
+<AREA SHAPE='RECT' COORDS='344,581,464,629' HREF='#0098805' ALT=''>
+<AREA SHAPE='RECT' COORDS='673,325,756,373' HREF='#0031090' ALT=''>
+<AREA SHAPE='RECT' COORDS='823,1003,948,1051' HREF='#0030672' ALT=''>
+<AREA SHAPE='RECT' COORDS='801,453,884,501' HREF='#0097060' ALT=''>
+<AREA SHAPE='RECT' COORDS='600,581,699,629' HREF='#0045211' ALT=''>
+<AREA SHAPE='RECT' COORDS='2643,581,2741,629' HREF='#0014069' ALT=''>
+<AREA SHAPE='RECT' COORDS='1071,318,1167,381' HREF='#0016021' ALT=''>
+<AREA SHAPE='RECT' COORDS='1073,437,1164,517' HREF='#0005887' ALT=''>
+<AREA SHAPE='RECT' COORDS='1903,101,1988,149' HREF='#0044425' ALT=''>
+<AREA SHAPE='RECT' COORDS='3519,205,3633,253' HREF='#0098796' ALT=''>
+<AREA SHAPE='RECT' COORDS='1879,205,2012,253' HREF='#0044459' ALT=''>
+<AREA SHAPE='RECT' COORDS='1323,198,1419,261' HREF='#0031224' ALT=''>
+<AREA SHAPE='RECT' COORDS='2135,453,2231,501' HREF='#0098794' ALT=''>
+<AREA SHAPE='RECT' COORDS='2741,865,2816,913' HREF='#0043197' ALT=''>
+<AREA SHAPE='RECT' COORDS='3584,858,3704,921' HREF='#0008076' ALT=''>
+<AREA SHAPE='RECT' COORDS='1383,309,1473,389' HREF='#0031226' ALT=''>
+<AREA SHAPE='RECT' COORDS='2928,865,3035,913' HREF='#0044295' ALT=''>
+<AREA SHAPE='RECT' COORDS='3535,325,3668,373' HREF='#0098797' ALT=''>
+<AREA SHAPE='RECT' COORDS='3833,703,3916,783' HREF='#0008328' ALT=''>
+<AREA SHAPE='RECT' COORDS='2464,101,2536,149' HREF='#0044464' ALT=''>
+<AREA SHAPE='RECT' COORDS='3076,446,3236,509' HREF='#0008287' ALT=''>
+<AREA SHAPE='RECT' COORDS='3057,205,3175,253' HREF='#0030427' ALT=''>
+<AREA SHAPE='RECT' COORDS='2257,205,2348,253' HREF='#0044424' ALT=''>
+<AREA SHAPE='RECT' COORDS='2375,453,2460,501' HREF='#0097458' ALT=''>
+<AREA SHAPE='RECT' COORDS='2731,205,2832,253' HREF='#0042995' ALT=''>
+<AREA SHAPE='RECT' COORDS='2880,325,2955,373' HREF='#0044297' ALT=''>
+<AREA SHAPE='RECT' COORDS='2529,205,2636,253' HREF='#0044463' ALT=''>
+<AREA SHAPE='RECT' COORDS='2641,453,2743,501' HREF='#0099572' ALT=''>
+<AREA SHAPE='RECT' COORDS='1876,5,1759,29' HREF='#0005575' ALT=''>
+<AREA SHAPE='RECT' COORDS='3104,101,3179,149' HREF='#0043226' ALT=''>
+<AREA SHAPE='RECT' COORDS='1660,205,1737,253' HREF='#0044422' ALT=''>
+<AREA SHAPE='RECT' COORDS='3493,101,3584,149' HREF='#0030054' ALT=''>
+<AREA SHAPE='RECT' COORDS='3341,101,3469,149' HREF='#0032991' ALT=''>
+<AREA SHAPE='RECT' COORDS='1575,325,1671,373' HREF='#0044456' ALT=''>
+<AREA SHAPE='RECT' COORDS='2816,719,2912,767' HREF='#0044309' ALT=''>
+<AREA SHAPE='RECT' COORDS='723,581,848,629' HREF='#0030659' ALT=''>
+<AREA SHAPE='RECT' COORDS='532,719,657,767' HREF='#0030658' ALT=''>
+<AREA SHAPE='RECT' COORDS='596,865,721,913' HREF='#0099501' ALT=''>
+<AREA SHAPE='RECT' COORDS='1727,446,1817,509' HREF='#0070013' ALT=''>
+<AREA SHAPE='RECT' COORDS='1760,581,1832,629' HREF='#0005775' ALT=''>
+<AREA SHAPE='RECT' COORDS='1911,325,1983,373' HREF='#0030315' ALT=''>
+<AREA SHAPE='RECT' COORDS='3639,446,3772,509' HREF='#0098802' ALT=''>
+<AREA SHAPE='RECT' COORDS='3777,574,3897,637' HREF='#0098878' ALT=''>
+<AREA SHAPE='RECT' COORDS='2296,581,2371,629' HREF='#0043198' ALT=''>
+<AREA SHAPE='RECT' COORDS='3273,325,3364,373' HREF='#0043229' ALT=''>
+<AREA SHAPE='RECT' COORDS='3355,205,3493,253' HREF='#0043227' ALT=''>
+<AREA SHAPE='RECT' COORDS='1427,987,1555,1067' HREF='#0099061' ALT=''>
+<AREA SHAPE='RECT' COORDS='2221,1003,2296,1051' HREF='#0008021' ALT=''>
+<AREA SHAPE='RECT' COORDS='3796,453,3887,501' HREF='#0034702' ALT=''>
+<AREA SHAPE='RECT' COORDS='488,574,576,637' HREF='#0098588' ALT=''>
+<AREA SHAPE='RECT' COORDS='3096,581,3184,629' HREF='#0005955' ALT=''>
+<AREA SHAPE='RECT' COORDS='3203,205,3277,253' HREF='#1902494' ALT=''>
+<AREA SHAPE='RECT' COORDS='3659,205,3731,253' HREF='#0043235' ALT=''>
+<AREA SHAPE='RECT' COORDS='1985,719,2079,767' HREF='#0099523' ALT=''>
+<AREA SHAPE='RECT' COORDS='1863,719,1961,767' HREF='#0099524' ALT=''>
+<AREA SHAPE='RECT' COORDS='2981,581,3056,629' HREF='#0043025' ALT=''>
+<AREA SHAPE='RECT' COORDS='3425,446,3564,509' HREF='#0043231' ALT=''>
+<AREA SHAPE='RECT' COORDS='3311,453,3401,501' HREF='#0097708' ALT=''>
+<AREA SHAPE='RECT' COORDS='2057,325,2153,373' HREF='#0044444' ALT=''>
+<AREA SHAPE='RECT' COORDS='1937,453,2015,501' HREF='#0044445' ALT=''>
+<AREA SHAPE='RECT' COORDS='2039,453,2111,501' HREF='#0005829' ALT=''>
+<AREA SHAPE='RECT' COORDS='3309,581,3405,629' HREF='#0031410' ALT=''>
+<AREA SHAPE='RECT' COORDS='2255,453,2351,501' HREF='#0099568' ALT=''>
+<AREA SHAPE='RECT' COORDS='1953,581,2028,629' HREF='#0099522' ALT=''>
+<AREA SHAPE='RECT' COORDS='652,453,777,501' HREF='#0012506' ALT=''>
+<AREA SHAPE='RECT' COORDS='2817,446,2951,509' HREF='#0120025' ALT=''>
+<AREA SHAPE='RECT' COORDS='2820,581,2940,629' HREF='#0043005' ALT=''>
+<AREA SHAPE='RECT' COORDS='3051,719,3123,767' HREF='#0030424' ALT=''>
+<AREA SHAPE='RECT' COORDS='2261,325,2344,373' HREF='#0005737' ALT=''>
+<AREA SHAPE='RECT' COORDS='2484,437,2617,517' HREF='#0120038' ALT=''>
+<AREA SHAPE='RECT' COORDS='2493,581,2619,629' HREF='#0044306' ALT=''>
+<AREA SHAPE='RECT' COORDS='3100,325,3199,373' HREF='#1903293' ALT=''>
+<AREA SHAPE='RECT' COORDS='3388,325,3460,373' HREF='#0031982' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="/static/analysis/data66/go/5/GOCOMPONENT.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044456&amp;view=details' target="_blank">GO:0044456</a><a name=0044456></a></td>
+<td>synapse part</td>
+<td  align=center>1.21E-22</td>
+<td  align=center>2.36E-19</td>
+<td  align=center>6.97 (20161,1088,101,38)</td>
+<td>
+<a id="ctrl_elements_GO:0044456" href="javascript:toggle('elements_GO:0044456')">[+] Show genes</a><br>
+<div id="elements_GO:0044456" style="display:none"> <font size=1>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt1  -  synaptotagmin i<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Prkcb  -  protein kinase c, beta<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Rnf112  -  ring finger protein 112<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045202&amp;view=details' target="_blank">GO:0045202</a><a name=0045202></a></td>
+<td>synapse</td>
+<td  align=center>1.72E-22</td>
+<td  align=center>1.68E-19</td>
+<td  align=center>6.90 (20161,1099,101,38)</td>
+<td>
+<a id="ctrl_elements_GO:0045202" href="javascript:toggle('elements_GO:0045202')">[+] Show genes</a><br>
+<div id="elements_GO:0045202" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Frrs1l  -  ferric-chelate reductase 1 like<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Syt1  -  synaptotagmin i<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Rnf112  -  ring finger protein 112<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098978&amp;view=details' target="_blank">GO:0098978</a><a name=0098978></a></td>
+<td>glutamatergic synapse</td>
+<td  align=center>7.17E-22</td>
+<td  align=center>4.67E-19</td>
+<td  align=center>11.16 (20161,501,101,28)</td>
+<td>
+<a id="ctrl_elements_GO:0098978" href="javascript:toggle('elements_GO:0098978')">[+] Show genes</a><br>
+<div id="elements_GO:0098978" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Syt1  -  synaptotagmin i<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Olfm1  -  olfactomedin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Nrn1  -  neuritin 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nrgn  -  neurogranin<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097458&amp;view=details' target="_blank">GO:0097458</a><a name=0097458></a></td>
+<td>neuron part</td>
+<td  align=center>4.93E-18</td>
+<td  align=center>2.41E-15</td>
+<td  align=center>4.37 (20161,1965,101,43)</td>
+<td>
+<a id="ctrl_elements_GO:0097458" href="javascript:toggle('elements_GO:0097458')">[+] Show genes</a><br>
+<div id="elements_GO:0097458" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt1  -  synaptotagmin i<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Syt13  -  synaptotagmin xiii<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Clstn1  -  calsyntenin 1<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Plk2  -  polo-like kinase 2<br>
+Dbn1  -  drebrin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Prkcb  -  protein kinase c, beta<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Rnf112  -  ring finger protein 112<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0014069&amp;view=details' target="_blank">GO:0014069</a><a name=0014069></a></td>
+<td>postsynaptic density</td>
+<td  align=center>4.7E-13</td>
+<td  align=center>1.84E-10</td>
+<td  align=center>10.51 (20161,323,101,17)</td>
+<td>
+<a id="ctrl_elements_GO:0014069" href="javascript:toggle('elements_GO:0014069')">[+] Show genes</a><br>
+<div id="elements_GO:0014069" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Clstn1  -  calsyntenin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Nrgn  -  neurogranin<br>
+Rnf112  -  ring finger protein 112<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099572&amp;view=details' target="_blank">GO:0099572</a><a name=0099572></a></td>
+<td>postsynaptic specialization</td>
+<td  align=center>6.33E-13</td>
+<td  align=center>2.06E-10</td>
+<td  align=center>10.31 (20161,329,101,17)</td>
+<td>
+<a id="ctrl_elements_GO:0099572" href="javascript:toggle('elements_GO:0099572')">[+] Show genes</a><br>
+<div id="elements_GO:0099572" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Clstn1  -  calsyntenin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Nrgn  -  neurogranin<br>
+Rnf112  -  ring finger protein 112<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042995&amp;view=details' target="_blank">GO:0042995</a><a name=0042995></a></td>
+<td>cell projection</td>
+<td  align=center>1.12E-10</td>
+<td  align=center>3.13E-8</td>
+<td  align=center>3.24 (20161,2157,101,35)</td>
+<td>
+<a id="ctrl_elements_GO:0042995" href="javascript:toggle('elements_GO:0042995')">[+] Show genes</a><br>
+<div id="elements_GO:0042995" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Syt13  -  synaptotagmin xiii<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Clstn1  -  calsyntenin 1<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Plk2  -  polo-like kinase 2<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Gpm6a  -  glycoprotein m6a<br>
+Rnf112  -  ring finger protein 112<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030658&amp;view=details' target="_blank">GO:0030658</a><a name=0030658></a></td>
+<td>transport vesicle membrane</td>
+<td  align=center>1.49E-10</td>
+<td  align=center>3.64E-8</td>
+<td  align=center>23.64 (20161,76,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030658" href="javascript:toggle('elements_GO:0030658')">[+] Show genes</a><br>
+<div id="elements_GO:0030658" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Syt1  -  synaptotagmin i<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043005&amp;view=details' target="_blank">GO:0043005</a><a name=0043005></a></td>
+<td>neuron projection</td>
+<td  align=center>3.4E-10</td>
+<td  align=center>7.37E-8</td>
+<td  align=center>4.14 (20161,1253,101,26)</td>
+<td>
+<a id="ctrl_elements_GO:0043005" href="javascript:toggle('elements_GO:0043005')">[+] Show genes</a><br>
+<div id="elements_GO:0043005" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Syt1  -  synaptotagmin i<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Plk2  -  polo-like kinase 2<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030054&amp;view=details' target="_blank">GO:0030054</a><a name=0030054></a></td>
+<td>cell junction</td>
+<td  align=center>5.23E-10</td>
+<td  align=center>1.02E-7</td>
+<td  align=center>4.23 (20161,1180,101,25)</td>
+<td>
+<a id="ctrl_elements_GO:0030054" href="javascript:toggle('elements_GO:0030054')">[+] Show genes</a><br>
+<div id="elements_GO:0030054" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Frrs1l  -  ferric-chelate reductase 1 like<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt1  -  synaptotagmin i<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Gpm6a  -  glycoprotein m6a<br>
+Rnf112  -  ring finger protein 112<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120025&amp;view=details' target="_blank">GO:0120025</a><a name=0120025></a></td>
+<td>plasma membrane bounded cell projection</td>
+<td  align=center>6.06E-10</td>
+<td  align=center>1.08E-7</td>
+<td  align=center>3.40 (20161,1822,101,31)</td>
+<td>
+<a id="ctrl_elements_GO:0120025" href="javascript:toggle('elements_GO:0120025')">[+] Show genes</a><br>
+<div id="elements_GO:0120025" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Syt13  -  synaptotagmin xiii<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Plk2  -  polo-like kinase 2<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099501&amp;view=details' target="_blank">GO:0099501</a><a name=0099501></a></td>
+<td>exocytic vesicle membrane</td>
+<td  align=center>1.05E-9</td>
+<td  align=center>1.71E-7</td>
+<td  align=center>24.95 (20161,64,101,8)</td>
+<td>
+<a id="ctrl_elements_GO:0099501" href="javascript:toggle('elements_GO:0099501')">[+] Show genes</a><br>
+<div id="elements_GO:0099501" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030672&amp;view=details' target="_blank">GO:0030672</a><a name=0030672></a></td>
+<td>synaptic vesicle membrane</td>
+<td  align=center>1.05E-9</td>
+<td  align=center>1.58E-7</td>
+<td  align=center>24.95 (20161,64,101,8)</td>
+<td>
+<a id="ctrl_elements_GO:0030672" href="javascript:toggle('elements_GO:0030672')">[+] Show genes</a><br>
+<div id="elements_GO:0030672" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0120038&amp;view=details' target="_blank">GO:0120038</a><a name=0120038></a></td>
+<td>plasma membrane bounded cell projection part</td>
+<td  align=center>7.92E-9</td>
+<td  align=center>1.11E-6</td>
+<td  align=center>3.45 (20161,1564,101,27)</td>
+<td>
+<a id="ctrl_elements_GO:0120038" href="javascript:toggle('elements_GO:0120038')">[+] Show genes</a><br>
+<div id="elements_GO:0120038" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Syt1  -  synaptotagmin i<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Clstn1  -  calsyntenin 1<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Ldha  -  lactate dehydrogenase a<br>
+Plk2  -  polo-like kinase 2<br>
+Dbn1  -  drebrin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044463&amp;view=details' target="_blank">GO:0044463</a><a name=0044463></a></td>
+<td>cell projection part</td>
+<td  align=center>7.92E-9</td>
+<td  align=center>1.03E-6</td>
+<td  align=center>3.45 (20161,1564,101,27)</td>
+<td>
+<a id="ctrl_elements_GO:0044463" href="javascript:toggle('elements_GO:0044463')">[+] Show genes</a><br>
+<div id="elements_GO:0044463" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Syt1  -  synaptotagmin i<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Clstn1  -  calsyntenin 1<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Ldha  -  lactate dehydrogenase a<br>
+Plk2  -  polo-like kinase 2<br>
+Dbn1  -  drebrin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005886&amp;view=details' target="_blank">GO:0005886</a><a name=0005886></a></td>
+<td>plasma membrane</td>
+<td  align=center>8.5E-9</td>
+<td  align=center>1.04E-6</td>
+<td  align=center>2.25 (20161,4083,101,46)</td>
+<td>
+<a id="ctrl_elements_GO:0005886" href="javascript:toggle('elements_GO:0005886')">[+] Show genes</a><br>
+<div id="elements_GO:0005886" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Frrs1l  -  ferric-chelate reductase 1 like<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Rundc3a  -  run domain containing 3a<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt1  -  synaptotagmin i<br>
+Paqr9  -  progestin and adipoq receptor family member ix<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Nrn1  -  neuritin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Syt5  -  synaptotagmin v<br>
+Prkcb  -  protein kinase c, beta<br>
+Tspan13  -  tetraspanin 13<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+3110035E14Rik  -  riken cdna 3110035e14 gene<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016020&amp;view=details' target="_blank">GO:0016020</a><a name=0016020></a></td>
+<td>membrane</td>
+<td  align=center>1.95E-8</td>
+<td  align=center>2.24E-6</td>
+<td  align=center>1.74 (20161,7446,101,65)</td>
+<td>
+<a id="ctrl_elements_GO:0016020" href="javascript:toggle('elements_GO:0016020')">[+] Show genes</a><br>
+<div id="elements_GO:0016020" style="display:none"> <font size=1>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Paqr9  -  progestin and adipoq receptor family member ix<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+B4galt6  -  udp-gal:betaglcnac beta 1,4-galactosyltransferase, polypeptide 6<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Nrn1  -  neuritin 1<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Clstn1  -  calsyntenin 1<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+3110035E14Rik  -  riken cdna 3110035e14 gene<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Frrs1l  -  ferric-chelate reductase 1 like<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Rundc3a  -  run domain containing 3a<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Npdc1  -  neural proliferation, differentiation and control 1<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Pld3  -  phospholipase d family, member 3<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Tspan13  -  tetraspanin 13<br>
+Rnf112  -  ring finger protein 112<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1902495&amp;view=details' target="_blank">GO:1902495</a><a name=1902495></a></td>
+<td>transmembrane transporter complex</td>
+<td  align=center>4.46E-8</td>
+<td  align=center>4.85E-6</td>
+<td  align=center>7.80 (20161,307,101,12)</td>
+<td>
+<a id="ctrl_elements_GO:1902495" href="javascript:toggle('elements_GO:1902495')">[+] Show genes</a><br>
+<div id="elements_GO:1902495" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099522&amp;view=details' target="_blank">GO:0099522</a><a name=0099522></a></td>
+<td>region of cytosol</td>
+<td  align=center>4.55E-8</td>
+<td  align=center>4.68E-6</td>
+<td  align=center>29.94 (20161,40,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099522" href="javascript:toggle('elements_GO:0099522')">[+] Show genes</a><br>
+<div id="elements_GO:0099522" style="display:none"> <font size=1>
+Prkcb  -  protein kinase c, beta<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Prkce  -  protein kinase c, epsilon<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Dbn1  -  drebrin 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0012506&amp;view=details' target="_blank">GO:0012506</a><a name=0012506></a></td>
+<td>vesicle membrane</td>
+<td  align=center>7.01E-8</td>
+<td  align=center>6.85E-6</td>
+<td  align=center>8.51 (20161,258,101,11)</td>
+<td>
+<a id="ctrl_elements_GO:0012506" href="javascript:toggle('elements_GO:0012506')">[+] Show genes</a><br>
+<div id="elements_GO:0012506" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:1990351&amp;view=details' target="_blank">GO:1990351</a><a name=1990351></a></td>
+<td>transporter complex</td>
+<td  align=center>7.02E-8</td>
+<td  align=center>6.53E-6</td>
+<td  align=center>7.49 (20161,320,101,12)</td>
+<td>
+<a id="ctrl_elements_GO:1990351" href="javascript:toggle('elements_GO:1990351')">[+] Show genes</a><br>
+<div id="elements_GO:1990351" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098685&amp;view=details' target="_blank">GO:0098685</a><a name=0098685></a></td>
+<td>Schaffer collateral - CA1 synapse</td>
+<td  align=center>9.94E-8</td>
+<td  align=center>8.83E-6</td>
+<td  align=center>14.13 (20161,113,101,8)</td>
+<td>
+<a id="ctrl_elements_GO:0098685" href="javascript:toggle('elements_GO:0098685')">[+] Show genes</a><br>
+<div id="elements_GO:0098685" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0060076&amp;view=details' target="_blank">GO:0060076</a><a name=0060076></a></td>
+<td>excitatory synapse</td>
+<td  align=center>1.16E-7</td>
+<td  align=center>9.84E-6</td>
+<td  align=center>18.15 (20161,77,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0060076" href="javascript:toggle('elements_GO:0060076')">[+] Show genes</a><br>
+<div id="elements_GO:0060076" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Dbn1  -  drebrin 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098794&amp;view=details' target="_blank">GO:0098794</a><a name=0098794></a></td>
+<td>postsynapse</td>
+<td  align=center>1.34E-7</td>
+<td  align=center>1.09E-5</td>
+<td  align=center>7.98 (20161,275,101,11)</td>
+<td>
+<a id="ctrl_elements_GO:0098794" href="javascript:toggle('elements_GO:0098794')">[+] Show genes</a><br>
+<div id="elements_GO:0098794" style="display:none"> <font size=1>
+Nrgn  -  neurogranin<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Dbn1  -  drebrin 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099699&amp;view=details' target="_blank">GO:0099699</a><a name=0099699></a></td>
+<td>integral component of synaptic membrane</td>
+<td  align=center>1.51E-7</td>
+<td  align=center>1.18E-5</td>
+<td  align=center>9.11 (20161,219,101,10)</td>
+<td>
+<a id="ctrl_elements_GO:0099699" href="javascript:toggle('elements_GO:0099699')">[+] Show genes</a><br>
+<div id="elements_GO:0099699" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044433&amp;view=details' target="_blank">GO:0044433</a><a name=0044433></a></td>
+<td>cytoplasmic vesicle part</td>
+<td  align=center>1.7E-7</td>
+<td  align=center>1.28E-5</td>
+<td  align=center>5.22 (20161,574,101,15)</td>
+<td>
+<a id="ctrl_elements_GO:0044433" href="javascript:toggle('elements_GO:0044433')">[+] Show genes</a><br>
+<div id="elements_GO:0044433" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Calm2  -  calmodulin 2<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Snca  -  synuclein, alpha<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Pld3  -  phospholipase d family, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034702&amp;view=details' target="_blank">GO:0034702</a><a name=0034702></a></td>
+<td>ion channel complex</td>
+<td  align=center>2.36E-7</td>
+<td  align=center>1.71E-5</td>
+<td  align=center>7.55 (20161,291,101,11)</td>
+<td>
+<a id="ctrl_elements_GO:0034702" href="javascript:toggle('elements_GO:0034702')">[+] Show genes</a><br>
+<div id="elements_GO:0034702" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030659&amp;view=details' target="_blank">GO:0030659</a><a name=0030659></a></td>
+<td>cytoplasmic vesicle membrane</td>
+<td  align=center>2.48E-7</td>
+<td  align=center>1.73E-5</td>
+<td  align=center>8.64 (20161,231,101,10)</td>
+<td>
+<a id="ctrl_elements_GO:0030659" href="javascript:toggle('elements_GO:0030659')">[+] Show genes</a><br>
+<div id="elements_GO:0030659" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008328&amp;view=details' target="_blank">GO:0008328</a><a name=0008328></a></td>
+<td>ionotropic glutamate receptor complex</td>
+<td  align=center>2.58E-7</td>
+<td  align=center>1.74E-5</td>
+<td  align=center>22.60 (20161,53,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0008328" href="javascript:toggle('elements_GO:0008328')">[+] Show genes</a><br>
+<div id="elements_GO:0008328" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043197&amp;view=details' target="_blank">GO:0043197</a><a name=0043197></a></td>
+<td>dendritic spine</td>
+<td  align=center>3.19E-7</td>
+<td  align=center>2.08E-5</td>
+<td  align=center>9.93 (20161,181,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0043197" href="javascript:toggle('elements_GO:0043197')">[+] Show genes</a><br>
+<div id="elements_GO:0043197" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Dbn1  -  drebrin 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099240&amp;view=details' target="_blank">GO:0099240</a><a name=0099240></a></td>
+<td>intrinsic component of synaptic membrane</td>
+<td  align=center>3.27E-7</td>
+<td  align=center>2.06E-5</td>
+<td  align=center>8.39 (20161,238,101,10)</td>
+<td>
+<a id="ctrl_elements_GO:0099240" href="javascript:toggle('elements_GO:0099240')">[+] Show genes</a><br>
+<div id="elements_GO:0099240" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033267&amp;view=details' target="_blank">GO:0033267</a><a name=0033267></a></td>
+<td>axon part</td>
+<td  align=center>4.14E-7</td>
+<td  align=center>2.53E-5</td>
+<td  align=center>5.74 (20161,452,101,13)</td>
+<td>
+<a id="ctrl_elements_GO:0033267" href="javascript:toggle('elements_GO:0033267')">[+] Show genes</a><br>
+<div id="elements_GO:0033267" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Olfm1  -  olfactomedin 1<br>
+Calm2  -  calmodulin 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Dbn1  -  drebrin 1<br>
+Prkcb  -  protein kinase c, beta<br>
+Gpm6a  -  glycoprotein m6a<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044309&amp;view=details' target="_blank">GO:0044309</a><a name=0044309></a></td>
+<td>neuron spine</td>
+<td  align=center>4.2E-7</td>
+<td  align=center>2.49E-5</td>
+<td  align=center>9.61 (20161,187,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0044309" href="javascript:toggle('elements_GO:0044309')">[+] Show genes</a><br>
+<div id="elements_GO:0044309" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Dbn1  -  drebrin 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098878&amp;view=details' target="_blank">GO:0098878</a><a name=0098878></a></td>
+<td>neurotransmitter receptor complex</td>
+<td  align=center>4.94E-7</td>
+<td  align=center>2.84E-5</td>
+<td  align=center>20.30 (20161,59,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0098878" href="javascript:toggle('elements_GO:0098878')">[+] Show genes</a><br>
+<div id="elements_GO:0098878" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030426&amp;view=details' target="_blank">GO:0030426</a><a name=0030426></a></td>
+<td>growth cone</td>
+<td  align=center>5.72E-7</td>
+<td  align=center>3.19E-5</td>
+<td  align=center>9.26 (20161,194,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030426" href="javascript:toggle('elements_GO:0030426')">[+] Show genes</a><br>
+<div id="elements_GO:0030426" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Snca  -  synuclein, alpha<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Dbn1  -  drebrin 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0070382&amp;view=details' target="_blank">GO:0070382</a><a name=0070382></a></td>
+<td>exocytic vesicle</td>
+<td  align=center>7.7E-7</td>
+<td  align=center>4.18E-5</td>
+<td  align=center>8.94 (20161,201,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0070382" href="javascript:toggle('elements_GO:0070382')">[+] Show genes</a><br>
+<div id="elements_GO:0070382" style="display:none"> <font size=1>
+Syt5  -  synaptotagmin v<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rnf112  -  ring finger protein 112<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030427&amp;view=details' target="_blank">GO:0030427</a><a name=0030427></a></td>
+<td>site of polarized growth</td>
+<td  align=center>7.7E-7</td>
+<td  align=center>4.07E-5</td>
+<td  align=center>8.94 (20161,201,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030427" href="javascript:toggle('elements_GO:0030427')">[+] Show genes</a><br>
+<div id="elements_GO:0030427" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Snca  -  synuclein, alpha<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Dbn1  -  drebrin 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099060&amp;view=details' target="_blank">GO:0099060</a><a name=0099060></a></td>
+<td>integral component of postsynaptic specialization membrane</td>
+<td  align=center>8.03E-7</td>
+<td  align=center>4.13E-5</td>
+<td  align=center>13.70 (20161,102,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0099060" href="javascript:toggle('elements_GO:0099060')">[+] Show genes</a><br>
+<div id="elements_GO:0099060" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098948&amp;view=details' target="_blank">GO:0098948</a><a name=0098948></a></td>
+<td>intrinsic component of postsynaptic specialization membrane</td>
+<td  align=center>1.18E-6</td>
+<td  align=center>5.93E-5</td>
+<td  align=center>12.94 (20161,108,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0098948" href="javascript:toggle('elements_GO:0098948')">[+] Show genes</a><br>
+<div id="elements_GO:0098948" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005955&amp;view=details' target="_blank">GO:0005955</a><a name=0005955></a></td>
+<td>calcineurin complex</td>
+<td  align=center>1.21E-6</td>
+<td  align=center>5.92E-5</td>
+<td  align=center>119.77 (20161,5,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0005955" href="javascript:toggle('elements_GO:0005955')">[+] Show genes</a><br>
+<div id="elements_GO:0005955" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099061&amp;view=details' target="_blank">GO:0099061</a><a name=0099061></a></td>
+<td>integral component of postsynaptic density membrane</td>
+<td  align=center>1.26E-6</td>
+<td  align=center>6.02E-5</td>
+<td  align=center>17.36 (20161,69,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099061" href="javascript:toggle('elements_GO:0099061')">[+] Show genes</a><br>
+<div id="elements_GO:0099061" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0034703&amp;view=details' target="_blank">GO:0034703</a><a name=0034703></a></td>
+<td>cation channel complex</td>
+<td  align=center>1.46E-6</td>
+<td  align=center>6.77E-5</td>
+<td  align=center>8.28 (20161,217,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0034703" href="javascript:toggle('elements_GO:0034703')">[+] Show genes</a><br>
+<div id="elements_GO:0034703" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099146&amp;view=details' target="_blank">GO:0099146</a><a name=0099146></a></td>
+<td>intrinsic component of postsynaptic density membrane</td>
+<td  align=center>2.07E-6</td>
+<td  align=center>9.41E-5</td>
+<td  align=center>15.97 (20161,75,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099146" href="javascript:toggle('elements_GO:0099146')">[+] Show genes</a><br>
+<div id="elements_GO:0099146" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044459&amp;view=details' target="_blank">GO:0044459</a><a name=0044459></a></td>
+<td>plasma membrane part</td>
+<td  align=center>2.1E-6</td>
+<td  align=center>9.32E-5</td>
+<td  align=center>2.34 (20161,2733,101,32)</td>
+<td>
+<a id="ctrl_elements_GO:0044459" href="javascript:toggle('elements_GO:0044459')">[+] Show genes</a><br>
+<div id="elements_GO:0044459" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt1  -  synaptotagmin i<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Syt13  -  synaptotagmin xiii<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Nrn1  -  neuritin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Tspan13  -  tetraspanin 13<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030133&amp;view=details' target="_blank">GO:0030133</a><a name=0030133></a></td>
+<td>transport vesicle</td>
+<td  align=center>5.12E-6</td>
+<td  align=center>2.22E-4</td>
+<td  align=center>7.10 (20161,253,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030133" href="javascript:toggle('elements_GO:0030133')">[+] Show genes</a><br>
+<div id="elements_GO:0030133" style="display:none"> <font size=1>
+Syt5  -  synaptotagmin v<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rnf112  -  ring finger protein 112<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099523&amp;view=details' target="_blank">GO:0099523</a><a name=0099523></a></td>
+<td>presynaptic cytosol</td>
+<td  align=center>5.84E-6</td>
+<td  align=center>2.48E-4</td>
+<td  align=center>33.27 (20161,24,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0099523" href="javascript:toggle('elements_GO:0099523')">[+] Show genes</a><br>
+<div id="elements_GO:0099523" style="display:none"> <font size=1>
+Prkcb  -  protein kinase c, beta<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Prkce  -  protein kinase c, epsilon<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097060&amp;view=details' target="_blank">GO:0097060</a><a name=0097060></a></td>
+<td>synaptic membrane</td>
+<td  align=center>6.2E-6</td>
+<td  align=center>2.58E-4</td>
+<td  align=center>6.05 (20161,330,101,10)</td>
+<td>
+<a id="ctrl_elements_GO:0097060" href="javascript:toggle('elements_GO:0097060')">[+] Show genes</a><br>
+<div id="elements_GO:0097060" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Nrgn  -  neurogranin<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Syt1  -  synaptotagmin i<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043025&amp;view=details' target="_blank">GO:0043025</a><a name=0043025></a></td>
+<td>neuronal cell body</td>
+<td  align=center>1.11E-5</td>
+<td  align=center>4.54E-4</td>
+<td  align=center>4.25 (20161,610,101,13)</td>
+<td>
+<a id="ctrl_elements_GO:0043025" href="javascript:toggle('elements_GO:0043025')">[+] Show genes</a><br>
+<div id="elements_GO:0043025" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Snca  -  synuclein, alpha<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Dbn1  -  drebrin 1<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Gpm6a  -  glycoprotein m6a<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044297&amp;view=details' target="_blank">GO:0044297</a><a name=0044297></a></td>
+<td>cell body</td>
+<td  align=center>1.14E-5</td>
+<td  align=center>4.56E-4</td>
+<td  align=center>3.95 (20161,707,101,14)</td>
+<td>
+<a id="ctrl_elements_GO:0044297" href="javascript:toggle('elements_GO:0044297')">[+] Show genes</a><br>
+<div id="elements_GO:0044297" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Snca  -  synuclein, alpha<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Dbn1  -  drebrin 1<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Gpm6a  -  glycoprotein m6a<br>
+Rnf112  -  ring finger protein 112<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044464&amp;view=details' target="_blank">GO:0044464</a><a name=0044464></a></td>
+<td>cell part</td>
+<td  align=center>1.6E-5</td>
+<td  align=center>6.25E-4</td>
+<td  align=center>1.22 (20161,15235,101,93)</td>
+<td>
+<a id="ctrl_elements_GO:0044464" href="javascript:toggle('elements_GO:0044464')">[+] Show genes</a><br>
+<div id="elements_GO:0044464" style="display:none"> <font size=1>
+Numbl  -  numb-like<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Ncald  -  neurocalcin delta<br>
+Paqr9  -  progestin and adipoq receptor family member ix<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+B4galt6  -  udp-gal:betaglcnac beta 1,4-galactosyltransferase, polypeptide 6<br>
+Pgbd5  -  piggybac transposable element derived 5<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Nrn1  -  neuritin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Dusp14  -  dual specificity phosphatase 14<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Zbtb18  -  zinc finger and btb domain containing 18<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Ldha  -  lactate dehydrogenase a<br>
+Clstn1  -  calsyntenin 1<br>
+Plk2  -  polo-like kinase 2<br>
+Egr1  -  early growth response 1<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Gpm6a  -  glycoprotein m6a<br>
+Prkce  -  protein kinase c, epsilon<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+3110035E14Rik  -  riken cdna 3110035e14 gene<br>
+Gls  -  glutaminase<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Celf5  -  cugbp, elav-like family member 5<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Frrs1l  -  ferric-chelate reductase 1 like<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Rundc3a  -  run domain containing 3a<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Sub1  -  sub1 homolog (s. cerevisiae)<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Neurod6  -  neurogenic differentiation 6<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Mical2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Pld3  -  phospholipase d family, member 3<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Gda  -  guanine deaminase<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Galnt9  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 9<br>
+Tspan13  -  tetraspanin 13<br>
+Rnf112  -  ring finger protein 112<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099055&amp;view=details' target="_blank">GO:0099055</a><a name=0099055></a></td>
+<td>integral component of postsynaptic membrane</td>
+<td  align=center>1.88E-5</td>
+<td  align=center>7.19E-4</td>
+<td  align=center>8.52 (20161,164,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0099055" href="javascript:toggle('elements_GO:0099055')">[+] Show genes</a><br>
+<div id="elements_GO:0099055" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044444&amp;view=details' target="_blank">GO:0044444</a><a name=0044444></a></td>
+<td>cytoplasmic part</td>
+<td  align=center>2.02E-5</td>
+<td  align=center>7.59E-4</td>
+<td  align=center>1.50 (20161,8392,101,63)</td>
+<td>
+<a id="ctrl_elements_GO:0044444" href="javascript:toggle('elements_GO:0044444')">[+] Show genes</a><br>
+<div id="elements_GO:0044444" style="display:none"> <font size=1>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Ncald  -  neurocalcin delta<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+B4galt6  -  udp-gal:betaglcnac beta 1,4-galactosyltransferase, polypeptide 6<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Olfm1  -  olfactomedin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Ldha  -  lactate dehydrogenase a<br>
+Clstn1  -  calsyntenin 1<br>
+Plk2  -  polo-like kinase 2<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Gls  -  glutaminase<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Rundc3a  -  run domain containing 3a<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Pld3  -  phospholipase d family, member 3<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Gda  -  guanine deaminase<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Galnt9  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 9<br>
+Rnf112  -  ring finger protein 112<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043198&amp;view=details' target="_blank">GO:0043198</a><a name=0043198></a></td>
+<td>dendritic shaft</td>
+<td  align=center>2.32E-5</td>
+<td  align=center>8.55E-4</td>
+<td  align=center>14.68 (20161,68,101,5)</td>
+<td>
+<a id="ctrl_elements_GO:0043198" href="javascript:toggle('elements_GO:0043198')">[+] Show genes</a><br>
+<div id="elements_GO:0043198" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099056&amp;view=details' target="_blank">GO:0099056</a><a name=0099056></a></td>
+<td>integral component of presynaptic membrane</td>
+<td  align=center>2.34E-5</td>
+<td  align=center>8.48E-4</td>
+<td  align=center>10.51 (20161,114,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099056" href="javascript:toggle('elements_GO:0099056')">[+] Show genes</a><br>
+<div id="elements_GO:0099056" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098936&amp;view=details' target="_blank">GO:0098936</a><a name=0098936></a></td>
+<td>intrinsic component of postsynaptic membrane</td>
+<td  align=center>2.65E-5</td>
+<td  align=center>9.41E-4</td>
+<td  align=center>8.08 (20161,173,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0098936" href="javascript:toggle('elements_GO:0098936')">[+] Show genes</a><br>
+<div id="elements_GO:0098936" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008021&amp;view=details' target="_blank">GO:0008021</a><a name=0008021></a></td>
+<td>synaptic vesicle</td>
+<td  align=center>2.75E-5</td>
+<td  align=center>9.59E-4</td>
+<td  align=center>8.03 (20161,174,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0008021" href="javascript:toggle('elements_GO:0008021')">[+] Show genes</a><br>
+<div id="elements_GO:0008021" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Rnf112  -  ring finger protein 112<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098889&amp;view=details' target="_blank">GO:0098889</a><a name=0098889></a></td>
+<td>intrinsic component of presynaptic membrane</td>
+<td  align=center>4.13E-5</td>
+<td  align=center>1.41E-3</td>
+<td  align=center>9.51 (20161,126,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0098889" href="javascript:toggle('elements_GO:0098889')">[+] Show genes</a><br>
+<div id="elements_GO:0098889" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030285&amp;view=details' target="_blank">GO:0030285</a><a name=0030285></a></td>
+<td>integral component of synaptic vesicle membrane</td>
+<td  align=center>7.55E-5</td>
+<td  align=center>2.54E-3</td>
+<td  align=center>17.74 (20161,45,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0030285" href="javascript:toggle('elements_GO:0030285')">[+] Show genes</a><br>
+<div id="elements_GO:0030285" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044295&amp;view=details' target="_blank">GO:0044295</a><a name=0044295></a></td>
+<td>axonal growth cone</td>
+<td  align=center>7.55E-5</td>
+<td  align=center>2.5E-3</td>
+<td  align=center>17.74 (20161,45,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0044295" href="javascript:toggle('elements_GO:0044295')">[+] Show genes</a><br>
+<div id="elements_GO:0044295" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Gpm6a  -  glycoprotein m6a<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Dbn1  -  drebrin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098797&amp;view=details' target="_blank">GO:0098797</a><a name=0098797></a></td>
+<td>plasma membrane protein complex</td>
+<td  align=center>1.04E-4</td>
+<td  align=center>3.39E-3</td>
+<td  align=center>3.96 (20161,554,101,11)</td>
+<td>
+<a id="ctrl_elements_GO:0098797" href="javascript:toggle('elements_GO:0098797')">[+] Show genes</a><br>
+<div id="elements_GO:0098797" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Calm1  -  calmodulin 1<br>
+Olfm1  -  olfactomedin 1<br>
+Calm2  -  calmodulin 2<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099503&amp;view=details' target="_blank">GO:0099503</a><a name=0099503></a></td>
+<td>secretory vesicle</td>
+<td  align=center>1.36E-4</td>
+<td  align=center>4.35E-3</td>
+<td  align=center>4.20 (20161,475,101,10)</td>
+<td>
+<a id="ctrl_elements_GO:0099503" href="javascript:toggle('elements_GO:0099503')">[+] Show genes</a><br>
+<div id="elements_GO:0099503" style="display:none"> <font size=1>
+Syt5  -  synaptotagmin v<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rnf112  -  ring finger protein 112<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098805&amp;view=details' target="_blank">GO:0098805</a><a name=0098805></a></td>
+<td>whole membrane</td>
+<td  align=center>1.43E-4</td>
+<td  align=center>4.5E-3</td>
+<td  align=center>3.54 (20161,676,101,12)</td>
+<td>
+<a id="ctrl_elements_GO:0098805" href="javascript:toggle('elements_GO:0098805')">[+] Show genes</a><br>
+<div id="elements_GO:0098805" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Nrgn  -  neurogranin<br>
+Calm2  -  calmodulin 2<br>
+Syt5  -  synaptotagmin v<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Pld3  -  phospholipase d family, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098982&amp;view=details' target="_blank">GO:0098982</a><a name=0098982></a></td>
+<td>GABA-ergic synapse</td>
+<td  align=center>1.85E-4</td>
+<td  align=center>5.75E-3</td>
+<td  align=center>9.51 (20161,105,101,5)</td>
+<td>
+<a id="ctrl_elements_GO:0098982" href="javascript:toggle('elements_GO:0098982')">[+] Show genes</a><br>
+<div id="elements_GO:0098982" style="display:none"> <font size=1>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030315&amp;view=details' target="_blank">GO:0030315</a><a name=0030315></a></td>
+<td>T-tubule</td>
+<td  align=center>2.65E-4</td>
+<td  align=center>8.09E-3</td>
+<td  align=center>12.88 (20161,62,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0030315" href="javascript:toggle('elements_GO:0030315')">[+] Show genes</a><br>
+<div id="elements_GO:0030315" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Prkce  -  protein kinase c, epsilon<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044445&amp;view=details' target="_blank">GO:0044445</a><a name=0044445></a></td>
+<td>cytosolic part</td>
+<td  align=center>2.92E-4</td>
+<td  align=center>8.76E-3</td>
+<td  align=center>5.50 (20161,254,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0044445" href="javascript:toggle('elements_GO:0044445')">[+] Show genes</a><br>
+<div id="elements_GO:0044445" style="display:none"> <font size=1>
+Prkcb  -  protein kinase c, beta<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Prkce  -  protein kinase c, epsilon<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Dbn1  -  drebrin 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099524&amp;view=details' target="_blank">GO:0099524</a><a name=0099524></a></td>
+<td>postsynaptic cytosol</td>
+<td  align=center>2.92E-4</td>
+<td  align=center>8.64E-3</td>
+<td  align=center>23.03 (20161,26,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0099524" href="javascript:toggle('elements_GO:0099524')">[+] Show genes</a><br>
+<div id="elements_GO:0099524" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Dbn1  -  drebrin 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098563&amp;view=details' target="_blank">GO:0098563</a><a name=0098563></a></td>
+<td>intrinsic component of synaptic vesicle membrane</td>
+<td  align=center>2.99E-4</td>
+<td  align=center>8.73E-3</td>
+<td  align=center>12.48 (20161,64,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0098563" href="javascript:toggle('elements_GO:0098563')">[+] Show genes</a><br>
+<div id="elements_GO:0098563" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Syt1  -  synaptotagmin i<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0032281&amp;view=details' target="_blank">GO:0032281</a><a name=0032281></a></td>
+<td>AMPA glutamate receptor complex</td>
+<td  align=center>3.65E-4</td>
+<td  align=center>1.05E-2</td>
+<td  align=center>21.39 (20161,28,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0032281" href="javascript:toggle('elements_GO:0032281')">[+] Show genes</a><br>
+<div id="elements_GO:0032281" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043202&amp;view=details' target="_blank">GO:0043202</a><a name=0043202></a></td>
+<td>lysosomal lumen</td>
+<td  align=center>3.68E-4</td>
+<td  align=center>1.04E-2</td>
+<td  align=center>66.54 (20161,6,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0043202" href="javascript:toggle('elements_GO:0043202')">[+] Show genes</a><br>
+<div id="elements_GO:0043202" style="display:none"> <font size=1>
+Nsg2  -  neuron specific gene family member 2<br>
+Pld3  -  phospholipase d family, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005737&amp;view=details' target="_blank">GO:0005737</a><a name=0005737></a></td>
+<td>cytoplasm</td>
+<td  align=center>3.68E-4</td>
+<td  align=center>1.03E-2</td>
+<td  align=center>1.51 (20161,6620,101,50)</td>
+<td>
+<a id="ctrl_elements_GO:0005737" href="javascript:toggle('elements_GO:0005737')">[+] Show genes</a><br>
+<div id="elements_GO:0005737" style="display:none"> <font size=1>
+Numbl  -  numb-like<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Syt1  -  synaptotagmin i<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Dusp14  -  dual specificity phosphatase 14<br>
+Snca  -  synuclein, alpha<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Ldha  -  lactate dehydrogenase a<br>
+Plk2  -  polo-like kinase 2<br>
+Egr1  -  early growth response 1<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Gls  -  glutaminase<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Celf5  -  cugbp, elav-like family member 5<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Rnf112  -  ring finger protein 112<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098802&amp;view=details' target="_blank">GO:0098802</a><a name=0098802></a></td>
+<td>plasma membrane receptor complex</td>
+<td  align=center>3.69E-4</td>
+<td  align=center>1.02E-2</td>
+<td  align=center>6.37 (20161,188,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0098802" href="javascript:toggle('elements_GO:0098802')">[+] Show genes</a><br>
+<div id="elements_GO:0098802" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030424&amp;view=details' target="_blank">GO:0030424</a><a name=0030424></a></td>
+<td>axon</td>
+<td  align=center>3.73E-4</td>
+<td  align=center>1.01E-2</td>
+<td  align=center>4.07 (20161,441,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0030424" href="javascript:toggle('elements_GO:0030424')">[+] Show genes</a><br>
+<div id="elements_GO:0030424" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Snca  -  synuclein, alpha<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Syt13  -  synaptotagmin xiii<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005829&amp;view=details' target="_blank">GO:0005829</a><a name=0005829></a></td>
+<td>cytosol</td>
+<td  align=center>4.19E-4</td>
+<td  align=center>1.12E-2</td>
+<td  align=center>1.82 (20161,3396,101,31)</td>
+<td>
+<a id="ctrl_elements_GO:0005829" href="javascript:toggle('elements_GO:0005829')">[+] Show genes</a><br>
+<div id="elements_GO:0005829" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Rundc3a  -  run domain containing 3a<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Ncald  -  neurocalcin delta<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Calm1  -  calmodulin 1<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Snca  -  synuclein, alpha<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Gda  -  guanine deaminase<br>
+Ldha  -  lactate dehydrogenase a<br>
+Dbn1  -  drebrin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098984&amp;view=details' target="_blank">GO:0098984</a><a name=0098984></a></td>
+<td>neuron to neuron synapse</td>
+<td  align=center>4.46E-4</td>
+<td  align=center>1.18E-2</td>
+<td  align=center>11.25 (20161,71,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0098984" href="javascript:toggle('elements_GO:0098984')">[+] Show genes</a><br>
+<div id="elements_GO:0098984" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Dbn1  -  drebrin 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098796&amp;view=details' target="_blank">GO:0098796</a><a name=0098796></a></td>
+<td>membrane protein complex</td>
+<td  align=center>4.7E-4</td>
+<td  align=center>1.22E-2</td>
+<td  align=center>2.66 (20161,1125,101,15)</td>
+<td>
+<a id="ctrl_elements_GO:0098796" href="javascript:toggle('elements_GO:0098796')">[+] Show genes</a><br>
+<div id="elements_GO:0098796" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Olfm1  -  olfactomedin 1<br>
+Nrn1  -  neuritin 1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0099568&amp;view=details' target="_blank">GO:0099568</a><a name=0099568></a></td>
+<td>cytoplasmic region</td>
+<td  align=center>5.55E-4</td>
+<td  align=center>1.43E-2</td>
+<td  align=center>5.90 (20161,203,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0099568" href="javascript:toggle('elements_GO:0099568')">[+] Show genes</a><br>
+<div id="elements_GO:0099568" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Snca  -  synuclein, alpha<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098688&amp;view=details' target="_blank">GO:0098688</a><a name=0098688></a></td>
+<td>parallel fiber to Purkinje cell synapse</td>
+<td  align=center>5.97E-4</td>
+<td  align=center>1.51E-2</td>
+<td  align=center>18.15 (20161,33,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0098688" href="javascript:toggle('elements_GO:0098688')">[+] Show genes</a><br>
+<div id="elements_GO:0098688" style="display:none"> <font size=1>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098588&amp;view=details' target="_blank">GO:0098588</a><a name=0098588></a></td>
+<td>bounding membrane of organelle</td>
+<td  align=center>6.18E-4</td>
+<td  align=center>1.55E-2</td>
+<td  align=center>2.85 (20161,911,101,13)</td>
+<td>
+<a id="ctrl_elements_GO:0098588" href="javascript:toggle('elements_GO:0098588')">[+] Show genes</a><br>
+<div id="elements_GO:0098588" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Nrgn  -  neurogranin<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Prkce  -  protein kinase c, epsilon<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Pld3  -  phospholipase d family, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008076&amp;view=details' target="_blank">GO:0008076</a><a name=0008076></a></td>
+<td>voltage-gated potassium channel complex</td>
+<td  align=center>6.37E-4</td>
+<td  align=center>1.58E-2</td>
+<td  align=center>10.24 (20161,78,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0008076" href="javascript:toggle('elements_GO:0008076')">[+] Show genes</a><br>
+<div id="elements_GO:0008076" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0045211&amp;view=details' target="_blank">GO:0045211</a><a name=0045211></a></td>
+<td>postsynaptic membrane</td>
+<td  align=center>6.96E-4</td>
+<td  align=center>1.7E-2</td>
+<td  align=center>5.65 (20161,212,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0045211" href="javascript:toggle('elements_GO:0045211')">[+] Show genes</a><br>
+<div id="elements_GO:0045211" style="display:none"> <font size=1>
+Nrgn  -  neurogranin<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031301&amp;view=details' target="_blank">GO:0031301</a><a name=0031301></a></td>
+<td>integral component of organelle membrane</td>
+<td  align=center>7.67E-4</td>
+<td  align=center>1.85E-2</td>
+<td  align=center>5.54 (20161,216,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0031301" href="javascript:toggle('elements_GO:0031301')">[+] Show genes</a><br>
+<div id="elements_GO:0031301" style="display:none"> <font size=1>
+Syt5  -  synaptotagmin v<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Clstn1  -  calsyntenin 1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031226&amp;view=details' target="_blank">GO:0031226</a><a name=0031226></a></td>
+<td>intrinsic component of plasma membrane</td>
+<td  align=center>8.11E-4</td>
+<td  align=center>1.93E-2</td>
+<td  align=center>2.43 (20161,1315,101,16)</td>
+<td>
+<a id="ctrl_elements_GO:0031226" href="javascript:toggle('elements_GO:0031226')">[+] Show genes</a><br>
+<div id="elements_GO:0031226" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Nrn1  -  neuritin 1<br>
+Slc39a10  -  solute carrier family 39 (zinc transporter), member 10<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Slitrk1  -  slit and ntrk-like family, member 1<br>
+Kcnj3  -  potassium inwardly-rectifying channel, subfamily j, member 3<br>
+Tspan13  -  tetraspanin 13<br>
+Gpm6a  -  glycoprotein m6a<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0044306&amp;view=details' target="_blank">GO:0044306</a><a name=0044306></a></td>
+<td>neuron projection terminus</td>
+<td  align=center>8.43E-4</td>
+<td  align=center>1.99E-2</td>
+<td  align=center>6.84 (20161,146,101,5)</td>
+<td>
+<a id="ctrl_elements_GO:0044306" href="javascript:toggle('elements_GO:0044306')">[+] Show genes</a><br>
+<div id="elements_GO:0044306" style="display:none"> <font size=1>
+Prkcb  -  protein kinase c, beta<br>
+Syt1  -  synaptotagmin i<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005775&amp;view=details' target="_blank">GO:0005775</a><a name=0005775></a></td>
+<td>vacuolar lumen</td>
+<td  align=center>8.74E-4</td>
+<td  align=center>2.03E-2</td>
+<td  align=center>44.36 (20161,9,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005775" href="javascript:toggle('elements_GO:0005775')">[+] Show genes</a><br>
+<div id="elements_GO:0005775" style="display:none"> <font size=1>
+Nsg2  -  neuron specific gene family member 2<br>
+Pld3  -  phospholipase d family, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031410&amp;view=details' target="_blank">GO:0031410</a><a name=0031410></a></td>
+<td>cytoplasmic vesicle</td>
+<td  align=center>9.45E-4</td>
+<td  align=center>2.17E-2</td>
+<td  align=center>2.18 (20161,1741,101,19)</td>
+<td>
+<a id="ctrl_elements_GO:0031410" href="javascript:toggle('elements_GO:0031410')">[+] Show genes</a><br>
+<div id="elements_GO:0031410" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Clstn1  -  calsyntenin 1<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Rnf112  -  ring finger protein 112<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Pld3  -  phospholipase d family, member 3<br>
+Syt13  -  synaptotagmin xiii<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043231&amp;view=details' target="_blank">GO:0043231</a><a name=0043231></a></td>
+<td>intracellular membrane-bounded organelle</td>
+<td  align=center>9.88E-4</td>
+<td  align=center>2.24E-2</td>
+<td  align=center>1.34 (20161,9390,101,63)</td>
+<td>
+<a id="ctrl_elements_GO:0043231" href="javascript:toggle('elements_GO:0043231')">[+] Show genes</a><br>
+<div id="elements_GO:0043231" style="display:none"> <font size=1>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+B4galt6  -  udp-gal:betaglcnac beta 1,4-galactosyltransferase, polypeptide 6<br>
+Pgbd5  -  piggybac transposable element derived 5<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Dusp14  -  dual specificity phosphatase 14<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Zbtb18  -  zinc finger and btb domain containing 18<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Ldha  -  lactate dehydrogenase a<br>
+Clstn1  -  calsyntenin 1<br>
+Plk2  -  polo-like kinase 2<br>
+Egr1  -  early growth response 1<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+3110035E14Rik  -  riken cdna 3110035e14 gene<br>
+Gls  -  glutaminase<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Celf5  -  cugbp, elav-like family member 5<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Rundc3a  -  run domain containing 3a<br>
+Sub1  -  sub1 homolog (s. cerevisiae)<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Neurod6  -  neurogenic differentiation 6<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Mical2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Slc25a22  -  solute carrier family 25 (mitochondrial carrier, glutamate), member 22<br>
+Pld3  -  phospholipase d family, member 3<br>
+Gpr88  -  g-protein coupled receptor 88<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Galnt9  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 9<br>
+Rnf112  -  ring finger protein 112<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097708&amp;view=details' target="_blank">GO:0097708</a><a name=0097708></a></td>
+<td>intracellular vesicle</td>
+<td  align=center>9.92E-4</td>
+<td  align=center>2.23E-2</td>
+<td  align=center>2.17 (20161,1748,101,19)</td>
+<td>
+<a id="ctrl_elements_GO:0097708" href="javascript:toggle('elements_GO:0097708')">[+] Show genes</a><br>
+<div id="elements_GO:0097708" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Sv2b  -  synaptic vesicle glycoprotein 2 b<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Clstn1  -  calsyntenin 1<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Rnf112  -  ring finger protein 112<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Pld3  -  phospholipase d family, member 3<br>
+Syt13  -  synaptotagmin xiii<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0098590&amp;view=details' target="_blank">GO:0098590</a><a name=0098590></a></td>
+<td>plasma membrane region</td>
+<td  align=center>9.95E-4</td>
+<td  align=center>2.21E-2</td>
+<td  align=center>2.58 (20161,1083,101,14)</td>
+<td>
+<a id="ctrl_elements_GO:0098590" href="javascript:toggle('elements_GO:0098590')">[+] Show genes</a><br>
+<div id="elements_GO:0098590" style="display:none"> <font size=1>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gabra4  -  gamma-aminobutyric acid (gaba) a receptor, subunit alpha 4<br>
+Clstn1  -  calsyntenin 1<br>
+Dbn1  -  drebrin 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Syt1  -  synaptotagmin i<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 27256 genes out of 37665 gene terms entered by the user.<br> 27256 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>126 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 27130 genes.<br>Only 20161 of these genes are associated with a GO term.<br></p>
+<br><a href='GOCOMPONENT.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Apr 2, 2024
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 1954 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>

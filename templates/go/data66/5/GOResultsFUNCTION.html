@@ -1,0 +1,932 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>
+Results
+</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<script type='text/javascript'>
+function toggle(item) {
+obj=document.getElementById(item);
+visible=(obj.style.display!="none")
+key=document.getElementById("ctrl_" + item);
+if (visible) {
+    obj.style.display="none";
+key.innerHTML="[+] Show genes";
+}
+else {
+obj.style.display="block";
+key.innerHTML="[-] Hide genes";
+}
+}
+</script>
+</head>
+<body>
+<p><center><b>
+
+</b></center></p>
+<table border="1" width="80%" id="tab:pval_legend" align=center>
+<CAPTION><EM>P-value color scale</EM></CAPTION>
+<tr>
+	<td  width=140 align=center> > 10<sup>-3</sup></td>
+	<td  width=140 align=center bgcolor='#FFFFCC'> 10<sup>-3</sup> to 10<sup>-5</sup></td>
+	<td  width=140 align=center bgcolor='#FFCC66'> 10<sup>-5</sup> to 10<sup>-7</sup></td>
+	<td  width=140 align=center bgcolor='#FF9900'> 10<sup>-7</sup> to 10<sup>-9</sup></td>
+	<td  width=140 align=center bgcolor='#FF3300'> < 10<sup>-9</sup></td>
+</tr >
+</table>
+<MAP NAME='goPathImage'>
+<AREA SHAPE='RECT' COORDS='504,907,656,970' HREF='#0022804' ALT=''>
+<AREA SHAPE='RECT' COORDS='525,1019,640,1099' HREF='#0015399' ALT=''>
+<AREA SHAPE='RECT' COORDS='387,1019,501,1099' HREF='#0022853' ALT=''>
+<AREA SHAPE='RECT' COORDS='679,1035,799,1083' HREF='#0042623' ALT=''>
+<AREA SHAPE='RECT' COORDS='684,1147,804,1227' HREF='#0043492' ALT=''>
+<AREA SHAPE='RECT' COORDS='481,1147,660,1227' HREF='#0015405' ALT=''>
+<AREA SHAPE='RECT' COORDS='511,1275,631,1373' HREF='#0042626' ALT=''>
+<AREA SHAPE='RECT' COORDS='2105,769,2247,849' HREF='#0031800' ALT=''>
+<AREA SHAPE='RECT' COORDS='257,785,367,833' HREF='#0015267' ALT=''>
+<AREA SHAPE='RECT' COORDS='11,915,117,963' HREF='#0022836' ALT=''>
+<AREA SHAPE='RECT' COORDS='301,915,429,963' HREF='#0022838' ALT=''>
+<AREA SHAPE='RECT' COORDS='5,1035,115,1083' HREF='#0022834' ALT=''>
+<AREA SHAPE='RECT' COORDS='145,1155,241,1218' HREF='#0015276' ALT=''>
+<AREA SHAPE='RECT' COORDS='1468,503,1561,551' HREF='#0003779' ALT=''>
+<AREA SHAPE='RECT' COORDS='1459,648,1571,696' HREF='#0003785' ALT=''>
+<AREA SHAPE='RECT' COORDS='2200,495,2283,558' HREF='#0035254' ALT=''>
+<AREA SHAPE='RECT' COORDS='2112,632,2240,712' HREF='#0035256' ALT=''>
+<AREA SHAPE='RECT' COORDS='969,102,1052,165' HREF='#0098772' ALT=''>
+<AREA SHAPE='RECT' COORDS='959,229,1084,277' HREF='#0030234' ALT=''>
+<AREA SHAPE='RECT' COORDS='391,761,543,858' HREF='#0015318' ALT=''>
+<AREA SHAPE='RECT' COORDS='272,1035,363,1083' HREF='#0005216' ALT=''>
+<AREA SHAPE='RECT' COORDS='680,915,792,963' HREF='#0016887' ALT=''>
+<AREA SHAPE='RECT' COORDS='439,1431,575,1511' HREF='#0042625' ALT=''>
+<AREA SHAPE='RECT' COORDS='1747,503,1821,551' HREF='#0019905' ALT=''>
+<AREA SHAPE='RECT' COORDS='1741,648,1827,696' HREF='#0017075' ALT=''>
+<AREA SHAPE='RECT' COORDS='857,213,935,293' HREF='#0140096' ALT=''>
+<AREA SHAPE='RECT' COORDS='847,778,961,841' HREF='#0004721' ALT=''>
+<AREA SHAPE='RECT' COORDS='139,1035,248,1083' HREF='#0022839' ALT=''>
+<AREA SHAPE='RECT' COORDS='616,109,704,157' HREF='#0005215' ALT=''>
+<AREA SHAPE='RECT' COORDS='409,495,524,558' HREF='#0022857' ALT=''>
+<AREA SHAPE='RECT' COORDS='145,1422,241,1519' HREF='#0005231' ALT=''>
+<AREA SHAPE='RECT' COORDS='135,1585,252,1665' HREF='#0005234' ALT=''>
+<AREA SHAPE='RECT' COORDS='824,907,984,970' HREF='#0004722' ALT=''>
+<AREA SHAPE='RECT' COORDS='1663,229,1769,277' HREF='#0005515' ALT=''>
+<AREA SHAPE='RECT' COORDS='1365,357,1437,405' HREF='#0030276' ALT=''>
+<AREA SHAPE='RECT' COORDS='1461,357,1568,405' HREF='#0008092' ALT=''>
+<AREA SHAPE='RECT' COORDS='1592,357,1704,405' HREF='#0019899' ALT=''>
+<AREA SHAPE='RECT' COORDS='1728,357,1840,405' HREF='#0000149' ALT=''>
+<AREA SHAPE='RECT' COORDS='1864,357,1971,405' HREF='#0097110' ALT=''>
+<AREA SHAPE='RECT' COORDS='1995,357,2128,405' HREF='#0048306' ALT=''>
+<AREA SHAPE='RECT' COORDS='2152,357,2240,405' HREF='#0005516' ALT=''>
+<AREA SHAPE='RECT' COORDS='2264,350,2341,413' HREF='#0005102' ALT=''>
+<AREA SHAPE='RECT' COORDS='1077,350,1187,413' HREF='#0019904' ALT=''>
+<AREA SHAPE='RECT' COORDS='1211,357,1341,405' HREF='#0008022' ALT=''>
+<AREA SHAPE='RECT' COORDS='560,469,731,584' HREF='#0016818' ALT=''>
+<AREA SHAPE='RECT' COORDS='620,648,745,696' HREF='#0016462' ALT=''>
+<AREA SHAPE='RECT' COORDS='828,1155,980,1218' HREF='#0033192' ALT=''>
+<AREA SHAPE='RECT' COORDS='965,341,1053,421' HREF='#0030235' ALT=''>
+<AREA SHAPE='RECT' COORDS='1592,503,1704,551' HREF='#0008179' ALT=''>
+<AREA SHAPE='RECT' COORDS='260,641,423,703' HREF='#0022803' ALT=''>
+<AREA SHAPE='RECT' COORDS='145,1284,241,1364' HREF='#0005230' ALT=''>
+<AREA SHAPE='RECT' COORDS='2133,229,2216,277' HREF='#0043167' ALT=''>
+<AREA SHAPE='RECT' COORDS='2397,357,2499,405' HREF='#0043169' ALT=''>
+<AREA SHAPE='RECT' COORDS='633,785,809,833' HREF='#0017111' ALT=''>
+<AREA SHAPE='RECT' COORDS='2443,503,2520,551' HREF='#0046872' ALT=''>
+<AREA SHAPE='RECT' COORDS='2436,648,2527,696' HREF='#0005509' ALT=''>
+<AREA SHAPE='RECT' COORDS='1680,109,1752,157' HREF='#0005488' ALT=''>
+<AREA SHAPE='RECT' COORDS='771,648,869,696' HREF='#0016791' ALT=''>
+<AREA SHAPE='RECT' COORDS='141,907,277,970' HREF='#0015075' ALT=''>
+<AREA SHAPE='RECT' COORDS='2307,503,2419,551' HREF='#0046875' ALT=''>
+<AREA SHAPE='RECT' COORDS='859,109,933,157' HREF='#0003824' ALT=''>
+<AREA SHAPE='RECT' COORDS='751,229,833,277' HREF='#0016787' ALT=''>
+<AREA SHAPE='RECT' COORDS='608,341,720,421' HREF='#0016817' ALT=''>
+<AREA SHAPE='RECT' COORDS='763,341,853,421' HREF='#0016788' ALT=''>
+<AREA SHAPE='RECT' COORDS='755,495,869,558' HREF='#0042578' ALT=''>
+<AREA SHAPE='RECT' COORDS='427,1568,587,1683' HREF='#0015662' ALT=''>
+<AREA SHAPE='RECT' COORDS='824,1019,984,1099' HREF='#0004723' ALT=''>
+<AREA SHAPE='RECT' COORDS='2048,495,2176,558' HREF='#0001664' ALT=''>
+<AREA SHAPE='RECT' COORDS='953,5,840,29' HREF='#0003674' ALT=''>
+</MAP>
+<p align="center"><img border="0" src="/static/analysis/data66/go/5/GOFUNCTION.png" usemap='#goPathImage' ALT=''></p>
+<p>&nbsp;</p>
+<table border='1' width='100%' id='table1'>
+	<tr>
+		<td Align=center ><b>GO term</b></td>
+		<td Align=center><b>Description</b></td>
+		<td width=120 Align=center><b><a href='#p_value_info'>P-value</a></b></td> 
+		<td width=120 Align=center><b><a href='#fdr_info'>FDR q-value</a></b></td> 
+		<td width=230 Align=center><b><a href='#enrich_info'> Enrichment (N, B, n, b) </a></b> </td>
+		<td Align=center><b><a href='#genes_info'> Genes </a></b></td>
+	</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005515&amp;view=details' target="_blank">GO:0005515</a><a name=0005515></a></td>
+<td>protein binding</td>
+<td  align=center>5.3E-9</td>
+<td  align=center>2.43E-5</td>
+<td  align=center>1.65 (20161,8812,101,73)</td>
+<td>
+<a id="ctrl_elements_GO:0005515" href="javascript:toggle('elements_GO:0005515')">[+] Show genes</a><br>
+<div id="elements_GO:0005515" style="display:none"> <font size=1>
+Rasgef1a  -  rasgef domain family, member 1a<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Ncald  -  neurocalcin delta<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Nrn1  -  neuritin 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Ldha  -  lactate dehydrogenase a<br>
+Clstn1  -  calsyntenin 1<br>
+Plk2  -  polo-like kinase 2<br>
+Egr1  -  early growth response 1<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+Gls  -  glutaminase<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Sub1  -  sub1 homolog (s. cerevisiae)<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Neurod6  -  neurogenic differentiation 6<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Mical2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Gda  -  guanine deaminase<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Tspan13  -  tetraspanin 13<br>
+Rnf112  -  ring finger protein 112<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Dkk3  -  dickkopf homolog 3 (xenopus laevis)<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005516&amp;view=details' target="_blank">GO:0005516</a><a name=0005516></a></td>
+<td>calmodulin binding</td>
+<td  align=center>3.66E-7</td>
+<td  align=center>8.39E-4</td>
+<td  align=center>9.76 (20161,184,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0005516" href="javascript:toggle('elements_GO:0005516')">[+] Show genes</a><br>
+<div id="elements_GO:0005516" style="display:none"> <font size=1>
+Nrgn  -  neurogranin<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Syt1  -  synaptotagmin i<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035254&amp;view=details' target="_blank">GO:0035254</a><a name=0035254></a></td>
+<td>glutamate receptor binding</td>
+<td  align=center>9.69E-7</td>
+<td  align=center>1.48E-3</td>
+<td  align=center>18.15 (20161,66,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0035254" href="javascript:toggle('elements_GO:0035254')">[+] Show genes</a><br>
+<div id="elements_GO:0035254" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0000149&amp;view=details' target="_blank">GO:0000149</a><a name=0000149></a></td>
+<td>SNARE binding</td>
+<td  align=center>2.27E-6</td>
+<td  align=center>2.6E-3</td>
+<td  align=center>11.74 (20161,119,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0000149" href="javascript:toggle('elements_GO:0000149')">[+] Show genes</a><br>
+<div id="elements_GO:0000149" style="display:none"> <font size=1>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Syt13  -  synaptotagmin xiii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030276&amp;view=details' target="_blank">GO:0030276</a><a name=0030276></a></td>
+<td>clathrin binding</td>
+<td  align=center>1.47E-5</td>
+<td  align=center>1.35E-2</td>
+<td  align=center>16.10 (20161,62,101,5)</td>
+<td>
+<a id="ctrl_elements_GO:0030276" href="javascript:toggle('elements_GO:0030276')">[+] Show genes</a><br>
+<div id="elements_GO:0030276" style="display:none"> <font size=1>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Ncald  -  neurocalcin delta<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Syt13  -  synaptotagmin xiii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0035256&amp;view=details' target="_blank">GO:0035256</a><a name=0035256></a></td>
+<td>G protein-coupled glutamate receptor binding</td>
+<td  align=center>3.37E-5</td>
+<td  align=center>2.57E-2</td>
+<td  align=center>46.06 (20161,13,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0035256" href="javascript:toggle('elements_GO:0035256')">[+] Show genes</a><br>
+<div id="elements_GO:0035256" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046872&amp;view=details' target="_blank">GO:0046872</a><a name=0046872></a></td>
+<td>metal ion binding</td>
+<td  align=center>3.58E-5</td>
+<td  align=center>2.34E-2</td>
+<td  align=center>1.98 (20161,3431,101,34)</td>
+<td>
+<a id="ctrl_elements_GO:0046872" href="javascript:toggle('elements_GO:0046872')">[+] Show genes</a><br>
+<div id="elements_GO:0046872" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Syt1  -  synaptotagmin i<br>
+Ncald  -  neurocalcin delta<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+B4galt6  -  udp-gal:betaglcnac beta 1,4-galactosyltransferase, polypeptide 6<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Zbtb18  -  zinc finger and btb domain containing 18<br>
+Gda  -  guanine deaminase<br>
+Clstn1  -  calsyntenin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Egr1  -  early growth response 1<br>
+Syt5  -  synaptotagmin v<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Rnf112  -  ring finger protein 112<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019899&amp;view=details' target="_blank">GO:0019899</a><a name=0019899></a></td>
+<td>enzyme binding</td>
+<td  align=center>3.63E-5</td>
+<td  align=center>2.08E-2</td>
+<td  align=center>2.29 (20161,2263,101,26)</td>
+<td>
+<a id="ctrl_elements_GO:0019899" href="javascript:toggle('elements_GO:0019899')">[+] Show genes</a><br>
+<div id="elements_GO:0019899" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Rasgef1a  -  rasgef domain family, member 1a<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Snca  -  synuclein, alpha<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Egr1  -  early growth response 1<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005509&amp;view=details' target="_blank">GO:0005509</a><a name=0005509></a></td>
+<td>calcium ion binding</td>
+<td  align=center>4.19E-5</td>
+<td  align=center>2.13E-2</td>
+<td  align=center>4.03 (20161,594,101,12)</td>
+<td>
+<a id="ctrl_elements_GO:0005509" href="javascript:toggle('elements_GO:0005509')">[+] Show genes</a><br>
+<div id="elements_GO:0005509" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ncald  -  neurocalcin delta<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Syt13  -  synaptotagmin xiii<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0042578&amp;view=details' target="_blank">GO:0042578</a><a name=0042578></a></td>
+<td>phosphoric ester hydrolase activity</td>
+<td  align=center>4.63E-5</td>
+<td  align=center>2.12E-2</td>
+<td  align=center>5.38 (20161,334,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0042578" href="javascript:toggle('elements_GO:0042578')">[+] Show genes</a><br>
+<div id="elements_GO:0042578" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Dusp14  -  dual specificity phosphatase 14<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Pld3  -  phospholipase d family, member 3<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0043169&amp;view=details' target="_blank">GO:0043169</a><a name=0043169></a></td>
+<td>cation binding</td>
+<td  align=center>6.04E-5</td>
+<td  align=center>2.51E-2</td>
+<td  align=center>1.93 (20161,3518,101,34)</td>
+<td>
+<a id="ctrl_elements_GO:0043169" href="javascript:toggle('elements_GO:0043169')">[+] Show genes</a><br>
+<div id="elements_GO:0043169" style="display:none"> <font size=1>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Syt1  -  synaptotagmin i<br>
+Ncald  -  neurocalcin delta<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+B4galt6  -  udp-gal:betaglcnac beta 1,4-galactosyltransferase, polypeptide 6<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Zbtb18  -  zinc finger and btb domain containing 18<br>
+Gda  -  guanine deaminase<br>
+Clstn1  -  calsyntenin 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Egr1  -  early growth response 1<br>
+Syt5  -  synaptotagmin v<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Rnf112  -  ring finger protein 112<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008179&amp;view=details' target="_blank">GO:0008179</a><a name=0008179></a></td>
+<td>adenylate cyclase binding</td>
+<td  align=center>6.52E-5</td>
+<td  align=center>2.49E-2</td>
+<td  align=center>37.43 (20161,16,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0008179" href="javascript:toggle('elements_GO:0008179')">[+] Show genes</a><br>
+<div id="elements_GO:0008179" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005102&amp;view=details' target="_blank">GO:0005102</a><a name=0005102></a></td>
+<td>signaling receptor binding</td>
+<td  align=center>1.33E-4</td>
+<td  align=center>4.69E-2</td>
+<td  align=center>2.47 (20161,1618,101,20)</td>
+<td>
+<a id="ctrl_elements_GO:0005102" href="javascript:toggle('elements_GO:0005102')">[+] Show genes</a><br>
+<div id="elements_GO:0005102" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Prkcb  -  protein kinase c, beta<br>
+Syt1  -  synaptotagmin i<br>
+Prkce  -  protein kinase c, epsilon<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Dkk3  -  dickkopf homolog 3 (xenopus laevis)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0031800&amp;view=details' target="_blank">GO:0031800</a><a name=0031800></a></td>
+<td>type 3 metabotropic glutamate receptor binding</td>
+<td  align=center>1.48E-4</td>
+<td  align=center>4.85E-2</td>
+<td  align=center>99.81 (20161,4,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0031800" href="javascript:toggle('elements_GO:0031800')">[+] Show genes</a><br>
+<div id="elements_GO:0031800" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019904&amp;view=details' target="_blank">GO:0019904</a><a name=0019904></a></td>
+<td>protein domain specific binding</td>
+<td  align=center>1.64E-4</td>
+<td  align=center>5E-2</td>
+<td  align=center>3.27 (20161,793,101,13)</td>
+<td>
+<a id="ctrl_elements_GO:0019904" href="javascript:toggle('elements_GO:0019904')">[+] Show genes</a><br>
+<div id="elements_GO:0019904" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Snca  -  synuclein, alpha<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Prkce  -  protein kinase c, epsilon<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008022&amp;view=details' target="_blank">GO:0008022</a><a name=0008022></a></td>
+<td>protein C-terminus binding</td>
+<td  align=center>1.68E-4</td>
+<td  align=center>4.8E-2</td>
+<td  align=center>6.02 (20161,232,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0008022" href="javascript:toggle('elements_GO:0008022')">[+] Show genes</a><br>
+<div id="elements_GO:0008022" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004721&amp;view=details' target="_blank">GO:0004721</a><a name=0004721></a></td>
+<td>phosphoprotein phosphatase activity</td>
+<td  align=center>2.08E-4</td>
+<td  align=center>5.62E-2</td>
+<td  align=center>7.09 (20161,169,101,6)</td>
+<td>
+<a id="ctrl_elements_GO:0004721" href="javascript:toggle('elements_GO:0004721')">[+] Show genes</a><br>
+<div id="elements_GO:0004721" style="display:none"> <font size=1>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Dusp14  -  dual specificity phosphatase 14<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0033192&amp;view=details' target="_blank">GO:0033192</a><a name=0033192></a></td>
+<td>calmodulin-dependent protein phosphatase activity</td>
+<td  align=center>2.46E-4</td>
+<td  align=center>6.26E-2</td>
+<td  align=center>79.85 (20161,5,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0033192" href="javascript:toggle('elements_GO:0033192')">[+] Show genes</a><br>
+<div id="elements_GO:0033192" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0016791&amp;view=details' target="_blank">GO:0016791</a><a name=0016791></a></td>
+<td>phosphatase activity</td>
+<td  align=center>2.58E-4</td>
+<td  align=center>6.23E-2</td>
+<td  align=center>5.61 (20161,249,101,7)</td>
+<td>
+<a id="ctrl_elements_GO:0016791" href="javascript:toggle('elements_GO:0016791')">[+] Show genes</a><br>
+<div id="elements_GO:0016791" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Dusp14  -  dual specificity phosphatase 14<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0008092&amp;view=details' target="_blank">GO:0008092</a><a name=0008092></a></td>
+<td>cytoskeletal protein binding</td>
+<td  align=center>3.12E-4</td>
+<td  align=center>7.15E-2</td>
+<td  align=center>2.90 (20161,963,101,14)</td>
+<td>
+<a id="ctrl_elements_GO:0008092" href="javascript:toggle('elements_GO:0008092')">[+] Show genes</a><br>
+<div id="elements_GO:0008092" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Snca  -  synuclein, alpha<br>
+Clstn1  -  calsyntenin 1<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Dbn1  -  drebrin 1<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Mical2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ncald  -  neurocalcin delta<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003779&amp;view=details' target="_blank">GO:0003779</a><a name=0003779></a></td>
+<td>actin binding</td>
+<td  align=center>3.16E-4</td>
+<td  align=center>6.89E-2</td>
+<td  align=center>4.17 (20161,431,101,9)</td>
+<td>
+<a id="ctrl_elements_GO:0003779" href="javascript:toggle('elements_GO:0003779')">[+] Show genes</a><br>
+<div id="elements_GO:0003779" style="display:none"> <font size=1>
+Mical2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+Prkce  -  protein kinase c, epsilon<br>
+Ncald  -  neurocalcin delta<br>
+Snca  -  synuclein, alpha<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Dbn1  -  drebrin 1<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0017075&amp;view=details' target="_blank">GO:0017075</a><a name=0017075></a></td>
+<td>syntaxin-1 binding</td>
+<td  align=center>3.27E-4</td>
+<td  align=center>6.81E-2</td>
+<td  align=center>22.18 (20161,27,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0017075" href="javascript:toggle('elements_GO:0017075')">[+] Show genes</a><br>
+<div id="elements_GO:0017075" style="display:none"> <font size=1>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0003785&amp;view=details' target="_blank">GO:0003785</a><a name=0003785></a></td>
+<td>actin monomer binding</td>
+<td  align=center>3.27E-4</td>
+<td  align=center>6.51E-2</td>
+<td  align=center>22.18 (20161,27,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0003785" href="javascript:toggle('elements_GO:0003785')">[+] Show genes</a><br>
+<div id="elements_GO:0003785" style="display:none"> <font size=1>
+Prkce  -  protein kinase c, epsilon<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005234&amp;view=details' target="_blank">GO:0005234</a><a name=0005234></a></td>
+<td>extracellularly glutamate-gated ion channel activity</td>
+<td  align=center>3.68E-4</td>
+<td  align=center>7.02E-2</td>
+<td  align=center>66.54 (20161,6,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0005234" href="javascript:toggle('elements_GO:0005234')">[+] Show genes</a><br>
+<div id="elements_GO:0005234" style="display:none"> <font size=1>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0015662&amp;view=details' target="_blank">GO:0015662</a><a name=0015662></a></td>
+<td>ATPase activity, coupled to transmembrane movement of ions, phosphorylative mechanism</td>
+<td  align=center>4.95E-4</td>
+<td  align=center>9.08E-2</td>
+<td  align=center>19.32 (20161,31,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0015662" href="javascript:toggle('elements_GO:0015662')">[+] Show genes</a><br>
+<div id="elements_GO:0015662" style="display:none"> <font size=1>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0097110&amp;view=details' target="_blank">GO:0097110</a><a name=0097110></a></td>
+<td>scaffold protein binding</td>
+<td  align=center>4.95E-4</td>
+<td  align=center>8.73E-2</td>
+<td  align=center>10.94 (20161,73,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0097110" href="javascript:toggle('elements_GO:0097110')">[+] Show genes</a><br>
+<div id="elements_GO:0097110" style="display:none"> <font size=1>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0004723&amp;view=details' target="_blank">GO:0004723</a><a name=0004723></a></td>
+<td>calcium-dependent protein serine/threonine phosphatase activity</td>
+<td  align=center>5.13E-4</td>
+<td  align=center>8.71E-2</td>
+<td  align=center>57.03 (20161,7,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0004723" href="javascript:toggle('elements_GO:0004723')">[+] Show genes</a><br>
+<div id="elements_GO:0004723" style="display:none"> <font size=1>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0046875&amp;view=details' target="_blank">GO:0046875</a><a name=0046875></a></td>
+<td>ephrin receptor binding</td>
+<td  align=center>5.45E-4</td>
+<td  align=center>8.91E-2</td>
+<td  align=center>18.71 (20161,32,101,3)</td>
+<td>
+<a id="ctrl_elements_GO:0046875" href="javascript:toggle('elements_GO:0046875')">[+] Show genes</a><br>
+<div id="elements_GO:0046875" style="display:none"> <font size=1>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0005488&amp;view=details' target="_blank">GO:0005488</a><a name=0005488></a></td>
+<td>binding</td>
+<td  align=center>5.81E-4</td>
+<td  align=center>9.17E-2</td>
+<td  align=center>1.24 (20161,12860,101,80)</td>
+<td>
+<a id="ctrl_elements_GO:0005488" href="javascript:toggle('elements_GO:0005488')">[+] Show genes</a><br>
+<div id="elements_GO:0005488" style="display:none"> <font size=1>
+Rasgef1a  -  rasgef domain family, member 1a<br>
+Lztr1  -  leucine-zipper-like transcriptional regulator, 1<br>
+Itpka  -  inositol 1,4,5-trisphosphate 3-kinase a<br>
+Ngef  -  neuronal guanine nucleotide exchange factor<br>
+Chn1  -  chimerin (chimaerin) 1<br>
+Fam49b  -  family with sequence similarity 49, member b<br>
+Syt1  -  synaptotagmin i<br>
+Ncald  -  neurocalcin delta<br>
+Paqr9  -  progestin and adipoq receptor family member ix<br>
+Nptx2  -  neuronal pentraxin 2<br>
+Rock2  -  rho-associated coiled-coil containing protein kinase 2<br>
+B4galt6  -  udp-gal:betaglcnac beta 1,4-galactosyltransferase, polypeptide 6<br>
+Arpp21  -  cyclic amp-regulated phosphoprotein, 21<br>
+Cap2  -  cap, adenylate cyclase-associated protein, 2 (yeast)<br>
+Gria2  -  glutamate receptor, ionotropic, ampa2 (alpha 2)<br>
+Mef2a  -  myocyte enhancer factor 2a<br>
+Syt13  -  synaptotagmin xiii<br>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Mef2c  -  myocyte enhancer factor 2c<br>
+Olfm1  -  olfactomedin 1<br>
+Atp2b1  -  atpase, ca++ transporting, plasma membrane 1<br>
+Khdrbs3  -  kh domain containing, rna binding, signal transduction associated 3<br>
+Nrn1  -  neuritin 1<br>
+Baiap2  -  brain-specific angiogenesis inhibitor 1-associated protein 2<br>
+Grin2a  -  glutamate receptor, ionotropic, nmda2a (epsilon 1)<br>
+Snca  -  synuclein, alpha<br>
+Zbtb18  -  zinc finger and btb domain containing 18<br>
+Chmp2b  -  charged multivesicular body protein 2b<br>
+Ldha  -  lactate dehydrogenase a<br>
+Clstn1  -  calsyntenin 1<br>
+Plk2  -  polo-like kinase 2<br>
+Egr1  -  early growth response 1<br>
+Nr4a1  -  nuclear receptor subfamily 4, group a, member 1<br>
+Syt5  -  synaptotagmin v<br>
+Nrgn  -  neurogranin<br>
+Prkcb  -  protein kinase c, beta<br>
+Prkce  -  protein kinase c, epsilon<br>
+Lingo1  -  leucine rich repeat and ig domain containing 1<br>
+Gls  -  glutaminase<br>
+Arpp19  -  camp-regulated phosphoprotein 19<br>
+Ptk2b  -  ptk2 protein tyrosine kinase 2 beta<br>
+Celf5  -  cugbp, elav-like family member 5<br>
+Tmsb4x  -  thymosin, beta 4, x chromosome<br>
+Gucy1b3  -  guanylate cyclase 1, soluble, beta 3<br>
+Rasgrp1  -  ras guanyl releasing protein 1<br>
+Dnaja2  -  dnaj (hsp40) homolog, subfamily a, member 2<br>
+Ppp3ca  -  protein phosphatase 3, catalytic subunit, alpha isoform<br>
+Ppp3cb  -  protein phosphatase 3, catalytic subunit, beta isoform<br>
+Ppp3r1  -  protein phosphatase 3, regulatory subunit b, alpha isoform (calcineurin b, type i)<br>
+Sub1  -  sub1 homolog (s. cerevisiae)<br>
+Rbfox1  -  rna binding protein, fox-1 homolog (c. elegans) 1<br>
+Anks1b  -  ankyrin repeat and sterile alpha motif domain containing 1b<br>
+Neurod6  -  neurogenic differentiation 6<br>
+Icam5  -  intercellular adhesion molecule 5, telencephalin<br>
+Cx3cl1  -  chemokine (c-x3-c motif) ligand 1<br>
+Ppm1e  -  protein phosphatase 1e (pp2c domain containing)<br>
+Atp1a1  -  atpase, na+/k+ transporting, alpha 1 polypeptide<br>
+Mical2  -  microtubule associated monooxygenase, calponin and lim domain containing 2<br>
+Plcb1  -  phospholipase c, beta 1<br>
+Enc1  -  ectodermal-neural cortex 1<br>
+Nck2  -  non-catalytic region of tyrosine kinase adaptor protein 2<br>
+Dgkz  -  diacylglycerol kinase zeta<br>
+Ap1s1  -  adaptor protein complex ap-1, sigma 1<br>
+Homer1  -  homer homolog 1 (drosophila)<br>
+Ptprs  -  protein tyrosine phosphatase, receptor type, s<br>
+Atp6v1e1  -  atpase, h+ transporting, lysosomal v1 subunit e1<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Rbbp7  -  retinoblastoma binding protein 7<br>
+Cobl  -  cordon-bleu wh2 repeat<br>
+Gda  -  guanine deaminase<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+Dbn1  -  drebrin 1<br>
+Nsg2  -  neuron specific gene family member 2<br>
+Tspan13  -  tetraspanin 13<br>
+Rnf112  -  ring finger protein 112<br>
+Galnt18  -  udp-n-acetyl-alpha-d-galactosamine:polypeptide n-acetylgalactosaminyltransferase 18<br>
+Lrrc7  -  leucine rich repeat containing 7<br>
+Dkk3  -  dickkopf homolog 3 (xenopus laevis)<br>
+Zfp365  -  zinc finger protein 365<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0030235&amp;view=details' target="_blank">GO:0030235</a><a name=0030235></a></td>
+<td>nitric-oxide synthase regulator activity</td>
+<td  align=center>6.82E-4</td>
+<td  align=center>1.04E-1</td>
+<td  align=center>49.90 (20161,8,101,2)</td>
+<td>
+<a id="ctrl_elements_GO:0030235" href="javascript:toggle('elements_GO:0030235')">[+] Show genes</a><br>
+<div id="elements_GO:0030235" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0019905&amp;view=details' target="_blank">GO:0019905</a><a name=0019905></a></td>
+<td>syntaxin binding</td>
+<td  align=center>7.01E-4</td>
+<td  align=center>1.04E-1</td>
+<td  align=center>9.98 (20161,80,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0019905" href="javascript:toggle('elements_GO:0019905')">[+] Show genes</a><br>
+<div id="elements_GO:0019905" style="display:none"> <font size=1>
+Syt5  -  synaptotagmin v<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+Nsf  -  n-ethylmaleimide sensitive fusion protein<br>
+</FONT></div>
+</td>
+</tr>
+<tr>
+<td><a href='http://www.godatabase.org/cgi-bin/amigo/go.cgi?query=GO:0048306&amp;view=details' target="_blank">GO:0048306</a><a name=0048306></a></td>
+<td>calcium-dependent protein binding</td>
+<td  align=center>8.42E-4</td>
+<td  align=center>1.21E-1</td>
+<td  align=center>9.51 (20161,84,101,4)</td>
+<td>
+<a id="ctrl_elements_GO:0048306" href="javascript:toggle('elements_GO:0048306')">[+] Show genes</a><br>
+<div id="elements_GO:0048306" style="display:none"> <font size=1>
+Calm1  -  calmodulin 1<br>
+Calm2  -  calmodulin 2<br>
+Syt1  -  synaptotagmin i<br>
+Vamp2  -  vesicle-associated membrane protein 2<br>
+</FONT></div>
+</td>
+</tr>
+</table>
+<p>Species used: Mus musculus</p><p>The system has recognized 27256 genes out of 37665 gene terms entered by the user.<br> 27256 genes were recognized by gene symbol and 0 genes by other gene IDs .<br>126 duplicate genes were removed (keeping the highest ranking instance of each gene) leaving  a total of 27130 genes.<br>Only 20161 of these genes are associated with a GO term.<br></p>
+<br><a href='GOFUNCTION.xls'> Output in Microsoft Excel format</a><br>
+<p> The GOrilla database is periodically updated using the <a href='http://www.geneontology.org/'>GO database</a> and other sources.<br>
+The GOrilla database was last updated on Mar 6, 2021</p>
+<p>This results page will be available on this site for one month from now (until 
+Apr 2, 2024
+). You can bookmark this page and come back to it later.
+</p>
+<a name='p_value_info'></a><br><b>'P-value'</b> is the enrichment p-value computed according to the mHG or HG model. This p-value is not corrected for multiple testing of 4581 GO terms.<br>
+<a name='fdr_info'></a><br><b>'FDR q-value'</b> is the correction of the above p-value for multiple testing using the Benjamini and Hochberg (1995) method. <br>Namely, for the i<sup>th</sup> term (ranked according to p-value) the FDR q-value is (p-value * number of GO terms) / i. <br>
+<a name='enrich_info'></a><br><b>Enrichment (N, B, n, b)</b> is defined as follows:<br>N - is the total number of genes<br>B - is the total number of genes associated with a specific GO term<br>n - is the number of genes in the top of the user's input list or in the target set when appropriate<br>b - is the number of genes in the intersection<br>Enrichment = (b/n) / (B/N)<br>
+<a name='genes_info'></a><br><b>Genes:</b> For each GO term you can see the list of associated genes that appear in the optimal top of the list.<br>Each gene name is specified by gene symbol followed by a short description of the gene <br>
+<p>
+<a href='http://cbl-gorilla.cs.technion.ac.il/'> Back to the GOrilla main page </a>
+</p>
+</body>
+</html>
