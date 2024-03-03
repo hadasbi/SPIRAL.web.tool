@@ -9,7 +9,7 @@ from SPIRAL_pipeline_funcs import *
 
 ANALYSIS_FOLDER = './static/analysis'
 if __name__ == '__main__':
-    for data_n in [7002]:
+    for data_n in [66]:
         if os.path.isdir(os.path.join(ANALYSIS_FOLDER, 'data' + str(data_n))):
             #try:
             print('\n\n\n\n\n\n\n', data_n)
@@ -31,7 +31,7 @@ if __name__ == '__main__':
                                           num_stds_thresh_lst=[0.5, 0.75, 1.0], mu_lst=[0.9, 0.95],
                                           num_iters_lst=[10000],
                                           path_len_lst=[3],
-                                          save_layers_to_excel=True, max_nrepcells=300,
+                                          save_layers_to_excel=True, max_nrepcells=100,
                                           save_GO_htmls=True, ensembl_folder=ensembl_folder)
             with open(outcome_path(data_path), 'w') as text_file:
                 text_file.write(str(outcome))

@@ -406,9 +406,6 @@ if __name__ == '__main__':
                 mu_lst.sort()
                 print('\N{GREEK SMALL LETTER MU}', ': ', mu_lst)
 
-    # offer the user to use non-default max_nrepcells
-
-
     ensembl_folder = ensembl_loc(production=False, hostname=None)
     load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
                          with_log=False)

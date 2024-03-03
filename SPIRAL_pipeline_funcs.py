@@ -570,7 +570,6 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
 
     # check if a filtered significance table file with GO terms and visualizations already exists (if not, compute it)
     sigfile_GO = os.path.join(data_path, impute_method + '_sigtable_filt_GO.xlsx')
-
     sigfile_GO_temp = sigfile_GO[:-5] + '_temp.xlsx'
     stopflag = False
     start_from_scratch = False
