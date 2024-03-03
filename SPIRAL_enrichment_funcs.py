@@ -239,8 +239,19 @@ def save_to_file(url, html_file_path, images_file_path, file_name, browser):
     web_content = response.read().decode('UTF-8')
 
     # change location of image
-    img_tag = web_content.find("img", attrs={'src': imgSrc})
-    img_tag['src'] = "/" + images_file_path[images_file_path.find('static'):] + '/' + imgSrc
+    # print(type(web_content))
+    # For some reason, web_content is a string, so Python calls the string find sunction instead of the Beautifulsoup
+    # find function. We will just have to work with that...
+    img_ind = web_content.find("img")
+    src_ind = img_ind + web_content[img_ind:img_ind+100].find("src")
+    web_content = (web_content[:src_ind + 5] + "/"
+                   + images_file_path[images_file_path.find('static'):].replace("\\", '/') + '/'
+                   + web_content[src_ind + 5:])
+
+    # The original code:
+    #img_tag = web_content.find("img", attrs={'src': imgSrc})
+    #img_tag['src'] = "/" + images_file_path[images_file_path.find('static'):] + '/' + imgSrc
+
     with open(os.path.join(html_file_path, file_name), "w") as f:
         f.write(web_content)
         f.close()
