@@ -89,6 +89,26 @@ app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
 
 ensembl_folder = ensembl_loc(production, hostname)
 
+'''
+############## Schedule to delete files uploaded by the user after 2 days ############
+from flask_apscheduler import APScheduler
+
+# set configuration values
+class Config:
+    SCHEDULER_API_ENABLED = production
+
+# initialize scheduler
+scheduler = APScheduler()
+
+@scheduler.task('interval', id='delete_old_files', seconds=86400)
+def delete_old_files():
+    """
+    Every day, this job will test for data that was uploaded by users and older than 48 hours, and delete it.
+    WRITE THIS FUNCTION WHEN WE DECIDE THIS FEATURE IS NECESSARY
+    """
+    print('This job is executed every 24 hours.')    
+'''
+
 #############################   forms   ################################################
 def dataset_number(path):
     existing_folders = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
@@ -886,5 +906,10 @@ def results_panel(url):
 
 ############################################################################################################
 if __name__ == '__main__':
+    '''
+    scheduler.init_app(app)
+    scheduler.start()
+    '''
+
     #app.run(host='0.0.0.0', port=5000)
     app.run(host='0.0.0.0')
