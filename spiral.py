@@ -5,8 +5,10 @@ import warnings
 warnings.simplefilter('ignore', category=NumbaDeprecationWarning)
 warnings.simplefilter('ignore', category=NumbaPendingDeprecationWarning)
 
+import platform
 import matplotlib
-matplotlib.use('TkAgg')
+if platform.system() == 'Windows':
+    matplotlib.use('TkAgg')
 
 import shutil
 import pathlib
