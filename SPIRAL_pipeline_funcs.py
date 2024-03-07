@@ -315,7 +315,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
             # change max_nrepcells (Nc)
             change_max_nrepcells_flag = None
             while change_max_nrepcells_flag is None:
-                print(
+                print("\n" +
                     color.BLUE + "Nc is the number of repcells SPIRAL will aim for. All the results in the paper were "
                                  "produced with Nc=100 and this is the default value. \nWould you like to change this "
                                  "value? (Type yes/no)"
