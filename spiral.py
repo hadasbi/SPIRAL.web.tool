@@ -53,14 +53,14 @@ if __name__ == '__main__':
     os.mkdir(data_path)
 
     # save dataset name
-    print(color.BLUE + "Please provide a name for your data set:" + color.END)
+    print("\n" + color.BLUE + "Please provide a name for your data set:" + color.END)
 
     dataset_name = input()
     with open(os.path.join(data_path, 'dataset_name.txt'), 'w') as text_file:
         text_file.write(dataset_name)
 
     # save species
-    print(color.BLUE + "Please select a species:" + color.END)
+    print("\n" + color.BLUE + "Please select a species:" + color.END)
 
     species_dict = {
         "ARABIDOPSIS_THALIANA": "Arabidopsis thaliana",
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     samples_names = ["samples", "cells", "spots"]
     chosen_samples_names = None
     while chosen_samples_names is None:
-        print(color.BLUE + "How are your samples called?" + color.END)
+        print("\n" + color.BLUE + "How are your samples called?" + color.END)
         for index, val in enumerate(samples_names):
             print("{} for {}".format(index + 1, val))
         try:
@@ -112,7 +112,7 @@ if __name__ == '__main__':
     data_types = ["csv or txt file", "feature-barcode matrix (as downloaded from the Visium website)"]
     chosen_data_type = None
     while chosen_data_type is None:
-        print(color.BLUE + "What is the file type of your gene expression data set?" + color.END)
+        print("\n" + color.BLUE + "What is the file type of your gene expression data set?" + color.END)
         for index, val in enumerate(data_types):
             print("{} for {}".format(index + 1, val))
         try:
@@ -125,7 +125,7 @@ if __name__ == '__main__':
 
     # save counts
     if chosen_data_type == "csv or txt file":
-        print(color.BLUE + "Please upload the count matrix file to this folder: {}, and name the file 'counts'".format(data_path) + color.END)
+        print("\n" + color.BLUE + "Please upload the count matrix file to this folder: {}, and name the file 'counts'".format(data_path) + color.END)
         print("The file type should be either csv or txt.")
         print("Gene names should appear in the first column. To be compatible with GOrilla (for the enrichment step), "
               "the supported formats are: gene symbol (preferred), gene and protein RefSeq, Uniprot, Unigene and Ensembl.")
@@ -148,7 +148,7 @@ if __name__ == '__main__':
         # labels checkbox
         labels_checkbox = None
         while labels_checkbox is None:
-            print(color.BLUE + "Does your data set has labels? Type yes/no" + color.END)
+            print("\n" + color.BLUE + "Does your data set has labels? Type yes/no" + color.END)
             labels_ans = input()
             if labels_ans.lower() in ['yes', 'no']:
                 labels_checkbox = labels_ans.lower() == 'no'
@@ -158,13 +158,13 @@ if __name__ == '__main__':
         # spatial coordinates
         spatial_flag = None
         while spatial_flag is None:
-            print(color.BLUE + "Do you have a spatial coordinates file (for spatial datasets)? Type yes/no" + color.END)
+            print("\n" + color.BLUE + "Do you have a spatial coordinates file (for spatial datasets)? Type yes/no" + color.END)
             spatial_ans = input()
             if spatial_ans.lower() in ['yes', 'no']:
                 spatial_flag = spatial_ans.lower() == 'yes'
 
         if spatial_flag:
-            print(color.BLUE + "Please upload the spatial coordinates file to this folder: {}, and name the file 'spatial_coors'"
+            print("\n" + color.BLUE + "Please upload the spatial coordinates file to this folder: {}, and name the file 'spatial_coors'"
                   .format(data_path) + color.END)
             print("The file type should be either csv or txt.")
             print("The number of rows should be the same as the number of columns in the count matrix (a row for every "
@@ -190,7 +190,7 @@ if __name__ == '__main__':
                 input('when done press enter')
 
     elif chosen_data_type == "feature-barcode matrix (as downloaded from the Visium website)":
-        print(color.BLUE + "Please upload three files to this folder: {}: 'matrix.mtx.gz', "
+        print("\n" + color.BLUE + "Please upload three files to this folder: {}: 'matrix.mtx.gz', "
                            "'features.tsv.gz' and 'barcodes.tsv.gz'".format(data_path) + color.END)
         input('when done press enter')
         print("processing... This might take a few minutes")
@@ -229,7 +229,7 @@ if __name__ == '__main__':
         # spatial coordinates
         spatial_flag = None
         while spatial_flag is None:
-            print(color.BLUE + "Do you have a spatial coordinates file (for spatial datasets)? Type yes/no" + color.END)
+            print("\n" + color.BLUE + "Do you have a spatial coordinates file (for spatial datasets)? Type yes/no" + color.END)
             spatial_ans = input()
             if spatial_ans.lower() in ["yes", "no"]:
                 spatial_flag = spatial_ans.lower() == "yes"
@@ -253,7 +253,7 @@ if __name__ == '__main__':
                     pass
 
             if chosen_spatial_type == "Visium":
-                print(
+                print("\n" +
                     color.BLUE + "Please upload Visium's 'tissue_positions.csv' file to this folder: {}"
                     .format(data_path) + color.END)
                 print("This file is usually located inside the 'Spatial imaging data' folder, that can be downloaded "
@@ -273,7 +273,7 @@ if __name__ == '__main__':
                 spatial_coors.to_csv(os.path.join(data_path, "spatial_coors.csv"), index=False)
 
             elif chosen_spatial_type == "other format":
-                print(
+                print("\n" +
                     color.BLUE + "Please upload the spatial coordinates file to this folder: {}, and name the file 'spatial_coors'"
                     .format(data_path) + color.END)
                 print("The file type should be either csv or txt.")
@@ -307,7 +307,7 @@ if __name__ == '__main__':
     num_stds_thresh_lst = num_stds_thresh_lst_default
     mu_lst_default = [0.9, 0.95]
     mu_lst = mu_lst_default
-    print(color.BLUE + "We normally run SPIRAL with different sets of parameters to achieve maximal performance. "
+    print("\n" + color.BLUE + "We normally run SPIRAL with different sets of parameters to achieve maximal performance. "
                        "The recommended sets of parameters are:" + color.END)
     print('\N{GREEK SMALL LETTER ALPHA}', ': ', num_stds_thresh_lst_default)
     print('\N{GREEK SMALL LETTER MU}', ': ', mu_lst_default)
@@ -322,14 +322,14 @@ if __name__ == '__main__':
         # change alpha
         change_alpha_flag = None
         while change_alpha_flag is None:
-            print(color.BLUE + "Would you like to change the values of " + '\N{GREEK SMALL LETTER ALPHA}' + "? Type yes/no"
+            print("\n" + color.BLUE + "Would you like to change the values of " + '\N{GREEK SMALL LETTER ALPHA}' + "? Type yes/no"
                   + color.END)
             change_alpha_ans = input()
             if change_alpha_ans.lower() in ["yes", "no"]:
                 change_alpha_flag = change_alpha_ans.lower() == "yes"
 
         if change_alpha_flag:
-            print(color.BLUE + "Type decimal numbers between 0 and 5 to be used as " + '\N{GREEK SMALL LETTER ALPHA}'
+            print("\n" + color.BLUE + "Type decimal numbers between 0 and 5 to be used as " + '\N{GREEK SMALL LETTER ALPHA}'
                   + ". After every number press enter. When done type 'done'."
                   + color.END)
             print("Note that every additional " + '\N{GREEK SMALL LETTER ALPHA}' + " extends the running time.")
@@ -352,12 +352,12 @@ if __name__ == '__main__':
                           "When done type 'done'.")
 
             if not num_stds_thresh_lst: # if the list is empty
-                print(color.BLUE + "We could not capture any legal values for " + '\N{GREEK SMALL LETTER ALPHA}'
+                print("\n" + color.BLUE + "We could not capture any legal values for " + '\N{GREEK SMALL LETTER ALPHA}'
                       + ". SPIRAL will run with the default values."
                       + color.END)
                 num_stds_thresh_lst = num_stds_thresh_lst_default
             else:
-                print(color.BLUE + "SPIRAL will run with the following set of values for "
+                print("\n" + color.BLUE + "SPIRAL will run with the following set of values for "
                       + '\N{GREEK SMALL LETTER ALPHA}' + ":"
                       + color.END)
                 num_stds_thresh_lst.sort()
@@ -366,7 +366,7 @@ if __name__ == '__main__':
         # change mu
         change_mu_flag = None
         while change_mu_flag is None:
-            print(
+            print("\n" +
                 color.BLUE + "Would you like to change the values of " + '\N{GREEK SMALL LETTER MU}' + "? Type yes/no"
                 + color.END)
             change_mu_flag = input()
@@ -374,7 +374,7 @@ if __name__ == '__main__':
                 change_mu_flag = change_mu_flag.lower() == "yes"
 
         if change_mu_flag:
-            print(color.BLUE + "Type decimal numbers between 0 and 1 to be used as " + '\N{GREEK SMALL LETTER MU}'
+            print("\n" + color.BLUE + "Type decimal numbers between 0 and 1 to be used as " + '\N{GREEK SMALL LETTER MU}'
                   + ". After every number press enter. When done type 'done'."
                   + color.END)
             print("Note that every additional " + '\N{GREEK SMALL LETTER MU}' + " extends the running time.")
@@ -397,12 +397,12 @@ if __name__ == '__main__':
                           "When done type 'done'.")
 
             if not mu_lst: # if the list is empty
-                print(color.BLUE + "We could not capture any legal values for " + '\N{GREEK SMALL LETTER MU}'
+                print("\n" + color.BLUE + "We could not capture any legal values for " + '\N{GREEK SMALL LETTER MU}'
                       + ". SPIRAL will run with the default values."
                       + color.END)
                 mu_lst = mu_lst_default
             else:
-                print(color.BLUE + "SPIRAL will run with the following set of values for "
+                print("\n" + color.BLUE + "SPIRAL will run with the following set of values for "
                       + '\N{GREEK SMALL LETTER MU}' + ":"
                       + color.END)
                 mu_lst.sort()
