@@ -144,7 +144,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_
     plt.savefig(vln_plot_filename)
     plt.close()
     if local_run:
-        print(color.BLUE + "Filtering the data: determine the minimal and maximal number of features." + color.END)
+        print("\n" + color.BLUE + "Filtering the data: determine the minimal and maximal number of features." + color.END)
         print(
             "A violin plot of your data will pop up soon. If you are working on a remote server and cannot see the pop "
             "up window, this figure is also saved as ./static/vln_data" + str(data_n) + ".jpg")
@@ -203,7 +203,7 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_
         plt.close()
 
         if local_run:
-            print(color.BLUE + "Filtering the data: determine the maximal percent of mitochondrial reads." + color.END)
+            print("\n" + color.BLUE + "Filtering the data: determine the maximal percent of mitochondrial reads." + color.END)
             print(
                 "A violin plot will pop up soon. If you are working on a remote server and cannot see the pop "
                 "up window, this figure is also saved as ./static/vln_mt_data" + str(data_n) + ".jpg")
@@ -294,7 +294,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     spatial_norm_filt_loc = spatial_norm_filt_loc_name(data_path)
     if not os.path.exists(data_norm_filt_loc) or (spatial and (not os.path.exists(spatial_norm_filt_loc))):
         if local_run:
-            print(color.BLUE + "Filtering data set..." + color.END)
+            print("\n" +color.BLUE + "Filtering data set..." + color.END)
         data = filter_data(data_path=data_path,
                            min_nFeatures=min_nFeatures, max_nFeatures=max_nFeatures,
                            max_mtpercent=max_mtpercent, spatial=spatial,
