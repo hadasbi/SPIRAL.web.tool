@@ -447,7 +447,7 @@ def download_spatial_coors(data_n):
 
 @app.route('/download_spiral_zip_<sys>', methods=['GET', 'POST'])
 def download_spiral_zip(sys):
-    data_path = os.path.join(app._static_folder, 'exe_files', sys)
+    data_path = os.path.join(app._static_folder, 'spiral_packaged', sys)
     print(data_path)
     spiral_zip_file = 'spiral.zip'
     return send_from_directory(data_path, spiral_zip_file)

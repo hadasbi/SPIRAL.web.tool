@@ -125,13 +125,16 @@ mouse-brain-serial-section-2-sagittal-posterior-1-standard-1-1-0">10x Genomics</
             </small></ul>
         </li>
         <br><br>
-        <li>A local computer or a server to run SPIRAL on. It is best to choose a high memory machine.
+        <li>A local computer or a server to run SPIRAL on, with operating system Windows or Linux 64-bit. <br>
+            If possible, it is best to choose a high memory
+            machine. However, SPIRAL can also run on low-memory machines, assuming you use a smaller Nc
+            (the number of repcells). You will be asked if you want to change this parameter during the running process.
         </li>
     </ol>
 
     <br><br>
     <h2 style="font-size:1.6vw">What should you do?</h2>
-    In short: download spiral.zip, unzip it and run SPIRAL with spiral.exe.
+    In short: download spiral.zip, unzip it and run SPIRAL with "spiral.exe" (in Windows) or "spiral" (in Linux).
     You can do this manually or programmatically:
     <ul>
         <li>Manually:
@@ -140,12 +143,12 @@ mouse-brain-serial-section-2-sagittal-posterior-1-standard-1-1-0">10x Genomics</
                     <ul>
                         <li>Windows: <td><a href="{{ url_for('download_spiral_zip', sys='windows') }}">spiral.zip</a></td>
                         </li>
-                        <li>Linux: <td><a href="{{ url_for('download_spiral_zip', sys='linux') }}">spiral.zip</a></td>
+                        <li>Linux 64-bit: <td><a href="{{ url_for('download_spiral_zip', sys='linux_64') }}">spiral.zip</a></td>
                         </li>
                     </ul>
                 </li>
                 <li>Right-click spiral.zip and choose "unzip/extract here".</li>
-                <li>Inside the new "spiral" folder, double-click spiral.exe.</li>
+                <li>Inside the new "spiral" folder, double-click "spiral.exe" (in Windows) or "spiral" (in Linux).</li>
                 <li>Follow the instructions.</li>
             </ul>
         </li>
@@ -156,20 +159,20 @@ mouse-brain-serial-section-2-sagittal-posterior-1-standard-1-1-0">10x Genomics</
                     <ul>
                         <li>Open the cmd (locally) or connect to a remote server.</li>
                         <li>Navigate to the folder where spiral.zip is saved.</li>
-                        <li>Unzip spiral.zip: !!!!</li>
-                        <li>Enter the new "spiral" folder: cd spiral</li>
-                        <li>run spiral.exe: spiral.exe</li>
-                        <li>Follow the instructions.</li>
+                        <li>Unzip spiral.zip: <code>tar -xf spiral.zip</code></li>
+                        <li>Enter the new "spiral" folder: <code>cd spiral</code></li>
+                        <li>run "spiral.exe": <code>spiral.exe</code></li>
+                        <li>Follow the instructions in the cmd.</li>
                     </ul>
                 </li>
                 <li>Linux:
                     <ul>
                         <li>Open the terminal (locally) or connect to a remote server.</li>
                         <li>Navigate to the folder where spiral.zip is saved.</li>
-                        <li>Unzip spiral.zip: !!!!</li>
-                        <li>Enter the new "spiral" folder: cd spiral</li>
-                        <li>run spiral.exe: spiral.exe</li>
-                        <li>Follow the instructions.</li>
+                        <li>Unzip spiral.zip: <code>unzip spiral.zip</code></li>
+                        <li>Enter the new "spiral" folder: <code>cd spiral</code></li>
+                        <li>run "spiral": <code>./spiral</code></li>
+                        <li>Follow the instructions in the terminal.</li>
                     </ul>
                 </li>
             </ul>
