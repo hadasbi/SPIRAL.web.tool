@@ -162,26 +162,58 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_
         plt.close()
 
         # save min_nFeatures
-        min_nFeatures = input("Insert minimal number of expressed genes:")
-        with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
-            text_file.write(str(min_nFeatures))
+        min_nFeatures_flag = None
+        while min_nFeatures_flag is None:
+            min_nFeatures = input("Insert minimal number of expressed genes:")
+            if len(min_nFeatures) > 0:
+                try:
+                    min_nFeatures = int(min_nFeatures)
+                    with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
+                        text_file.write(str(min_nFeatures))
+                    min_nFeatures_flag = True
+                except:
+                    pass
 
         # save max_nFeatures
-        max_nFeatures = input("Insert maximal number of expressed genes:")
-        with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
-            text_file.write(str(max_nFeatures))
+        max_nFeatures_flag = None
+        while max_nFeatures_flag is None:
+            max_nFeatures = input("Insert maximal number of expressed genes:")
+            if len(max_nFeatures) > 0:
+                try:
+                    max_nFeatures = int(max_nFeatures)
+                    with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
+                        text_file.write(str(max_nFeatures))
+                    max_nFeatures_flag = True
+                except:
+                    pass
 
         while int(max_nFeatures) <= int(min_nFeatures):
             print('The minimal number of expressed genes has to be lower than the maximal number of expressed genes!')
             # save min_nFeatures
-            min_nFeatures = input("Insert minimal number of expressed genes:")
-            with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
-                text_file.write(str(min_nFeatures))
+            min_nFeatures_flag = None
+            while min_nFeatures_flag is None:
+                min_nFeatures = input("Insert minimal number of expressed genes:")
+                if len(min_nFeatures) > 0:
+                    try:
+                        min_nFeatures = int(min_nFeatures)
+                        with open(os.path.join(data_path, 'min_nFeatures.txt'), 'w') as text_file:
+                            text_file.write(str(min_nFeatures))
+                        min_nFeatures_flag = True
+                    except:
+                        pass
 
             # save max_nFeatures
-            max_nFeatures = input("Insert maximal number of expressed genes:")
-            with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
-                text_file.write(str(max_nFeatures))
+            max_nFeatures_flag = None
+            while max_nFeatures_flag is None:
+                max_nFeatures = input("Insert maximal number of expressed genes:")
+                if len(max_nFeatures) > 0:
+                    try:
+                        max_nFeatures = int(max_nFeatures)
+                        with open(os.path.join(data_path, 'max_nFeatures.txt'), 'w') as text_file:
+                            text_file.write(str(max_nFeatures))
+                        max_nFeatures_flag = True
+                    except:
+                        pass
 
     # save violin plot of percent of mitochondrial genes
     MTgenes, error = get_MTgenes(data_path, list(data.index), species, ensembl_folder)
@@ -221,10 +253,33 @@ def compute_violin_plots(analysis_folder, data_n, static_path, species, ensembl_
             plt.close()
 
             # save max_mtpercent
-            max_mtpercent = input("Insert percent of mitochondrial gene expression:")
-            if max_mtpercent is not None:
-                with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
-                    text_file.write(str(max_mtpercent))
+            max_mtpercent_flag = None
+            while max_mtpercent_flag is None:
+                max_mtpercent = input("Insert percent of mitochondrial reads:")
+                if len(max_mtpercent) > 0:
+                    try:
+                        max_mtpercent = int(max_mtpercent)
+                        with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
+                            text_file.write(str(max_mtpercent))
+                        max_mtpercent_flag = True
+                    except:
+                        pass
+
+            while max_mtpercent <= 0 or max_mtpercent > 100:
+                print(
+                    'The maximal percent of mitochondrial reads has to be an integer between 0 and 100.')
+                # save max_mtpercent
+                max_mtpercent_flag = None
+                while max_mtpercent_flag is None:
+                    max_mtpercent = input("Insert percent of mitochondrial reads:")
+                    if len(max_mtpercent) > 0:
+                        try:
+                            max_mtpercent = int(max_mtpercent)
+                            with open(os.path.join(data_path, 'max_mtpercent.txt'), 'w') as text_file:
+                                text_file.write(str(max_mtpercent))
+                            max_mtpercent_flag = True
+                        except:
+                            pass
 
     return with_mt, error
 
