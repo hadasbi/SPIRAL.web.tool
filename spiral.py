@@ -489,4 +489,4 @@ if __name__ == '__main__':
         os.remove(os.path.join(data_path, f))
 
     print(color.BLUE + "SPIRAL results are available in this folder: {}".format(data_path) + color.END)
-    exit()
+    sys.exit()
