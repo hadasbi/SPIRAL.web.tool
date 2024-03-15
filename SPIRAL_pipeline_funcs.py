@@ -381,8 +381,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                       "to ~200, which may improve accuracy. \n"
                       "If your server has low memory (for example: a laptop with only 16GB RAM), "
                       "you can reduce this value to ~50 and probably still get informative structures.")
-                print("\n" +
-                      color.BLUE + "All the results in the paper were produced with Nc=100 and this is the default "
+                print(color.BLUE + "All the results in the paper were produced with Nc=100 and this is the default "
                                    "value. \nWould you like to change the value of Nc? (Type yes/no)"
                       + color.END)
                 change_max_nrepcells_ans = input()

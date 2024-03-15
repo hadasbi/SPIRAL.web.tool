@@ -274,6 +274,7 @@ def home():
     bulk_mouse_Bcells_link = '/results/' + data_n_to_url(6)
     st_mouse_brain_Alzheimer_66_link = '/results/' + data_n_to_url(66)
     post_xenium_mouse_brain_link = '/results/' + data_n_to_url(40)
+    visium_human_colon_cancer_link = '/results/' + data_n_to_url(99)
 
     # Chosen picture to display for every example data set
     if production:
@@ -285,6 +286,7 @@ def home():
         bulk_mouse_Bcells_pic = '/static/analysis/data6/structure_layouts/img_for_example.jpg'
         st_mouse_brain_Alzheimer_66_pic = '/static/analysis/data66/structure_layouts/img_for_example.jpg'
         post_xenium_mouse_brain_pic = '/static/analysis/data40/structure_layouts/img_for_example.jpg'
+        visium_human_colon_cancer_pic = '/static/analysis/data99/structure_layouts/img_for_example.jpg'
     else:
         Zhang2019_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data1')),
                                            'img_for_example.jpg').replace('\\', '/')
@@ -301,6 +303,8 @@ def home():
         st_mouse_brain_Alzheimer_66_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data66')),
                                                              'img_for_example.jpg').replace('\\', '/')
         post_xenium_mouse_brain_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data40')),
+                                                         'img_for_example.jpg').replace('\\', '/')
+        visium_human_colon_cancer_pic = '/' + os.path.join(pic_folder(os.path.join(ANALYSIS_FOLDER, 'data99')),
                                                          'img_for_example.jpg').replace('\\', '/')
 
     '''
@@ -325,7 +329,8 @@ def home():
                            yaellab_differentiation_link=yaellab_differentiation_link, yaellab_differentiation_pic=yaellab_differentiation_pic,
                            bulk_mouse_Bcells_link=bulk_mouse_Bcells_link, bulk_mouse_Bcells_pic=bulk_mouse_Bcells_pic,
                            st_mouse_brain_Alzheimer_66_link=st_mouse_brain_Alzheimer_66_link, st_mouse_brain_Alzheimer_66_pic=st_mouse_brain_Alzheimer_66_pic,
-                           post_xenium_mouse_brain_link=post_xenium_mouse_brain_link, post_xenium_mouse_brain_pic=post_xenium_mouse_brain_pic)
+                           post_xenium_mouse_brain_link=post_xenium_mouse_brain_link, post_xenium_mouse_brain_pic=post_xenium_mouse_brain_pic,
+                           visium_human_colon_cancer_link=visium_human_colon_cancer_link, visium_human_colon_cancer_pic=visium_human_colon_cancer_pic)
 
 
 @app.route('/how_to_run', methods=['POST', 'GET'])
