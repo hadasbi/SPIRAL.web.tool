@@ -371,9 +371,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
             change_max_nrepcells_flag = None
             while change_max_nrepcells_flag is None:
                 print("\n" +
-                    color.BLUE + "Nc is the number of repcells SPIRAL will aim for. All the results in the paper were "
-                                 "produced with Nc=100 and this is the default value. \nWould you like to change this "
-                                 "value? (Type yes/no)"
+                    color.BLUE + "Nc is the number of repcells SPIRAL will aim for."
                     + color.END)
                 print("Explanation: \n"
                       "First, note that if the number of " + real_samp_name + "s is lower than Nc, then SPIRAL will "
@@ -383,6 +381,10 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                       "to ~200, which may improve accuracy. \n"
                       "If your server has low memory (for example: a laptop with only 16GB RAM), "
                       "you can reduce this value to ~50 and probably still get informative structures.")
+                print("\n" +
+                      color.BLUE + "All the results in the paper were produced with Nc=100 and this is the default "
+                                   "value. \nWould you like to change the value of Nc? (Type yes/no)"
+                      + color.END)
                 change_max_nrepcells_ans = input()
                 if change_max_nrepcells_ans.lower() in ["yes", "no"]:
                     change_max_nrepcells_flag = change_max_nrepcells_ans.lower() == "yes"
@@ -401,9 +403,9 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
                               "and 300.")
                 print(color.BLUE + "SPIRAL will run with Nc=" + str(max_nrepcells) + "." + color.END)
 
-        print("\n" + color.BLUE + "SPIRAL is now running. This might take up to a few hours, depending on the "
-                                  "computer power and your data. When done, the results would appear in this folder:"
-                                  " {}".format(data_path) + color.END + "\n")
+        print("\n" + color.BOLD + color.BLUE + "SPIRAL is now running. This might take up to a few hours, depending on the "
+                                  "computer power and your data. When done, the results will appear in this folder:"
+                                  " {}".format(data_path) + color.END + color.END + "\n")
 
     # decide on an imputation method
     if data.shape[1] <= max_nrepcells:
@@ -424,7 +426,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
 
     # Decide whether to use regular markers or numerical markers in the structures' layouts
     if numerical_shapes is None:
-        numerical_shapes = decide_on_numerical_shapes(origdeffsfile)
+        numerical_shapes = decide_on_numerical_shapes(origdeffsfile=origdeffsfile,
+                                                      data_path=data_path)
 
     # check if layouts of data already exist (if not, compute them)
     norm_filt_pca_coor_file = os.path.join(data_path, 'norm_filt_PCA_coor' + ('5000' * use_5000) + '.csv')
@@ -448,6 +451,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     clustering_file_final = os.path.join(data_path, impute_method + '_clustering_final.txt')
     if impute_method != 'no_imputation' and not os.path.exists(clustering_file_final):
         compute_repcells(data=data, impute_method=impute_method,
+                         data_path=data_path,
                          min_cells_per_cluster=min_cells_per_cluster,
                          max_nrepcells=max_nrepcells,
                          data_norm_filt_loc=data_norm_filt_loc,
@@ -458,7 +462,7 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
     repcells_data_loc = os.path.join(data_path, impute_method + '_repcells_counts.txt')
     if impute_method != 'no_imputation':
         if not os.path.exists(repcells_data_loc):
-            repcells_data, num_repcells, num_genes = create_imputed_file(data=data,
+            repcells_data, num_repcells, num_genes = create_imputed_file(data=data, data_path=data_path,
                                                                          impute_method=impute_method,
                                                                          data_norm_filt_loc=data_norm_filt_loc,
                                                                          clustering_file_final=clustering_file_final,
@@ -511,7 +515,8 @@ def run_SPIRAL_pipeline(analysis_folder, data_n, species=None,
         if (not os.path.exists(repcell_partition_UMAP)) or (not os.path.exists(repcell_partition_PCA)) or (
                 spatial and (not os.path.exists(repcell_partition_spatial))
         ):
-            visualize_repcell_partition(clustering_file_final=clustering_file_final,
+            visualize_repcell_partition(data_path=data_path,
+                                        clustering_file_final=clustering_file_final,
                                         norm_filt_umap_coor_file=norm_filt_umap_coor_file,
                                         norm_filt_pca_coor_file=norm_filt_pca_coor_file,
                                         spatial_norm_filt_loc=spatial_norm_filt_loc,
@@ -822,11 +827,13 @@ def find_opt_n_clusters(orig_scRNA_data, min_cells_per_cluster, max_lost_percent
 
 
 ####################################################################################################################
-def compute_repcells(clustering_file_initial, clustering_file_final, data=None, impute_method='agg_wald',
+def compute_repcells(clustering_file_initial, clustering_file_final, data_path, data=None, impute_method='agg_wald',
                      min_cells_per_cluster=10, max_nrepcells=100, data_norm_filt_loc=None):
     # impute_method: 'agg_wald' OR 'agg_wald_opt' OR 'no_imputation'
     # not maintained: 'IaconoClus' OR 'IaconoClus_median' OR 'IaconoClus_dim50' OR 'IaconoClus_dim50_median'
     print('\ncompute_repcells!\n')
+
+    real_samp_name = open(os.path.join(data_path, 'samp_name.txt'), "r").read()[:-1]
 
     if impute_method == 'no_imputation':
         return None
@@ -854,7 +861,7 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
             #    n_clusters = int(np.round(num_cells / 20))
             #    min_cells_per_cluster = 5
         print('aiming for', n_clusters, 'clusters')
-        print('averagely', np.round(num_cells / n_clusters, 1), 'cells per cluster')
+        print('averagely', np.round(num_cells / n_clusters, 1), real_samp_name + 's per cluster')
 
         clustering = AgglomerativeClustering(linkage='ward', n_clusters=n_clusters).fit(data.transpose())
         labels = renumber_clusters(list(clustering.labels_), min_cells_per_cluster)
@@ -871,7 +878,7 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
         print('got', len(final_cluster_list), 'clusters')
         print('averagely', np.round(
             len([i for i in clusters.index if clusters.loc[i, 'x'] in final_cluster_list]) / len(final_cluster_list),
-            2), 'cells per cluster')
+            2), real_samp_name + 's per cluster')
 
         clusters.to_csv(clustering_file_final, sep=' ')
 
@@ -903,9 +910,11 @@ def compute_repcells(clustering_file_initial, clustering_file_final, data=None, 
 
 
 ####################################################################################################################
-def create_imputed_file(clustering_file_final, repcells_data_loc,
+def create_imputed_file(clustering_file_final, repcells_data_loc, data_path,
                         data=None, impute_method='agg_wald', data_norm_filt_loc=None):
     print('create_imputed_file!')
+
+    real_samp_name = open(os.path.join(data_path, 'samp_name.txt'), "r").read()[:-1]
 
     if data is None and data_norm_filt_loc is None:
         print('No data path and no data argument.')
@@ -924,7 +933,7 @@ def create_imputed_file(clustering_file_final, repcells_data_loc,
         repcells_data = pd.DataFrame(data=np.zeros((len(data), len(final_cluster_list))),
                                      index=data.index, columns=np.array(range(len(final_cluster_list))))
         for c in final_cluster_list:
-            print('cluster', c, '-', len([i for i in clusters.index if clusters.loc[i, 'x'] == c]), 'cells')
+            print('cluster', c, '-', len([i for i in clusters.index if clusters.loc[i, 'x'] == c]), real_samp_name + 's')
             repcells_data.loc[:, c] = data.iloc[:, [i for i in clusters.index if clusters.loc[i, 'x'] == c]].mean(
                 axis=1)
 

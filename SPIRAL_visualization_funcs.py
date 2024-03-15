@@ -12,7 +12,7 @@ import matplotlib
 import importlib
 
 ####################################################################################################################
-def visualize_repcell_partition(clustering_file_final,
+def visualize_repcell_partition(clustering_file_final, data_path,
                                 norm_filt_umap_coor_file, norm_filt_pca_coor_file,
                                 use_5000,
                                 origdeffsfile,
@@ -25,6 +25,8 @@ def visualize_repcell_partition(clustering_file_final,
                                 with_deffs=False, numerical_shapes=False,
                                 ):
     print('visualize_repcell_partition!')
+
+    real_samp_name = open(os.path.join(data_path, 'samp_name.txt'), "r").read()[:-1]
 
     if data is None and data_norm_filt_loc is None:
         print('No data path and no data argument.')
@@ -42,7 +44,7 @@ def visualize_repcell_partition(clustering_file_final,
     cell_definitions_sorted_set = None
     shapes = None
     if with_deffs:
-        print('loading cell labels and cell definitions from file...')
+        print('loading ' + real_samp_name + ' labels and ' + real_samp_name + ' definitions from file...')
         cell_definitions_orig = []
         with open(origdeffsfile, "r") as f:
             for line in f:
@@ -171,9 +173,11 @@ def save_orig_deffs_to_file(data, data_path, data_norm_filt_loc, origdeffsfile):
 
 
 ##################################################################################################################
-def decide_on_numerical_shapes(origdeffsfile):
+def decide_on_numerical_shapes(origdeffsfile, data_path):
     # Decide whether to use regular markers or numerical markers in the structures' layouts
-    print('loading cell definitions from file...')
+    real_samp_name = open(os.path.join(data_path, 'samp_name.txt'), "r").read()[:-1]
+
+    print('loading ' + real_samp_name + ' definitions from file...')
     cell_definitions_orig = []
     with open(origdeffsfile, "r") as f:
         for line in f:
@@ -447,6 +451,9 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
                         with_steps=False, stepsfile=None,
                         load_coor_from_file=True, with_legend=True, with_title=True):
     print('save_layout_of_orig!')
+
+    real_samp_name = open(os.path.join(data_path, 'samp_name.txt'), "r").read()[:-1]
+
     if data is None and data_norm_filt_loc is None:
         print('No data path and no data argument.')
 
@@ -463,7 +470,7 @@ def save_layout_of_orig(norm_filt_pca_coor_file, norm_filt_umap_coor_file,
         save_orig_deffs_to_file(data=data, data_path=data_path, data_norm_filt_loc=data_norm_filt_loc,
                                 origdeffsfile=origdeffsfile)
 
-    print('loading cell labels and cell definitions from file...')
+    print('loading ' + real_samp_name + ' labels and ' + real_samp_name + ' definitions from file...')
     cell_definitions_orig = []
     with open(origdeffsfile, "r") as f:
         for line in f:
@@ -737,6 +744,8 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                          save_layers_to_excel=False):
     print('visualize_structures!')
 
+    real_samp_name = open(os.path.join(data_path, 'samp_name.txt'), "r").read()[:-1]
+
     if sigtable is None and sigtable_file is None:
         print('No significance_table path and no significance_table argument.')
 
@@ -870,7 +879,7 @@ def visualize_structures(sigfile_vis, genetable_file, repcellsumapcoorfile, repc
                                   repcells_data_loc=repcells_data_loc, data_norm_filt_loc=data_norm_filt_loc,
                                   data_path=data_path)
 
-    print('loading cell definitions from file...')
+    print('loading ' + real_samp_name + ' definitions from file...')
 
     if save_UMAPs_orig or save_PCAs_orig or save_spatial or save_Gspatial or save_GUMAPs_orig or save_GPCAs_orig:
         cell_definitions_orig = []
