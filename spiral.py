@@ -193,7 +193,7 @@ if __name__ == '__main__':
         print("\n" + color.BLUE + "Please upload three files to this folder: {}: 'matrix.mtx.gz', "
                            "'features.tsv.gz' and 'barcodes.tsv.gz'".format(data_path) + color.END)
         input('when done press enter')
-        print("processing... This might take a few minutes")
+        print("Processing... This might take some time")
 
         while not (os.path.isfile(os.path.join(data_path, 'matrix.mtx.gz')) and os.path.isfile(
                 os.path.join(data_path, 'features.tsv.gz')) and os.path.isfile(
@@ -203,7 +203,7 @@ if __name__ == '__main__':
             print("Folder name should be: {}. The file names should be 'matrix.mtx.gz', "
                   "'features.tsv.gz' and 'barcodes.tsv.gz'".format(data_path))
             input('when done press enter')
-            print("processing... This might take a few minutes")
+            print("Processing... This might take some time")
 
         # transform into "counts.csv"
         # read in MEX format matrix as table
@@ -301,6 +301,13 @@ if __name__ == '__main__':
                     print(
                         "Folder name should be: {}. The file name should be 'spatial_coors.csv' or 'spatial_coors.txt'.".format(data_path))
                     input('when done press enter')
+
+    print("\n" + color.BLUE + "Processing... Please wait" + color.END)
+    ensembl_folder = ensembl_loc(production=False, hostname=None)
+    load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
+                         with_log=False)
+    compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path=STATIC_FOLDER, species=species,
+                         local_run=True, ensembl_folder=ensembl_folder)
 
     # offer the user to use non-default parameters
     num_stds_thresh_lst_default = [0.5, 0.75, 1.0]
@@ -408,11 +415,6 @@ if __name__ == '__main__':
                 mu_lst.sort()
                 print('\N{GREEK SMALL LETTER MU}', ': ', mu_lst)
 
-    ensembl_folder = ensembl_loc(production=False, hostname=None)
-    load_data_first_time(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, median_count_normalization_flag=True,
-                         with_log=False)
-    compute_violin_plots(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, static_path=STATIC_FOLDER, species=species,
-                         local_run=True, ensembl_folder=ensembl_folder)
     outcome = run_SPIRAL_pipeline(analysis_folder=ANALYSIS_FOLDER, data_n=data_n, species=species,
                                   min_nFeatures=None, max_nFeatures=None, max_mtpercent=None,
                                   numerical_shapes=None, local_run=True,
