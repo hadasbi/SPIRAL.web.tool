@@ -7,6 +7,8 @@ Full details are available at: https://spiral.technion.ac.il/
 
 # How can you run SPIRAL on your data?
 
+Choose one of the options below to run SPIRAL on your data. When done, you can upload the "spiral_results.zip" file to the website to view your results in the SPIRAL results panel, as explained at https://spiral.technion.ac.il/how_to_view.
+
 ## Option 1: download the packaged software 
 
 A detailed explanation on this can be found at: https://spiral.technion.ac.il/how_to_run
