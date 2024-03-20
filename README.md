@@ -1,5 +1,5 @@
 
-This repo contains the code to the SPIRAL website and software, as described in:
+This repository contains the code to the SPIRAL website and software, as described in:
 
 SPIRAL: Significant Process InfeRence ALgorithm for single cell RNA-sequencing and spatial transcriptomics\ Hadas Biran, Tamar Hashimshony, Tamar Lahav, Or Efrat, Yael Mandel-Gutfreund and Zohar Yakhini.
 
