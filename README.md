@@ -1,21 +1,17 @@
-# Important note:
-This repo contains code to a website that enables data upload by the user, then runs SPIRAL on out server and displays the results panel. We ultimately came to the conclusion that this is not the right solution. Instead, we developed a SPIRAL software that the user can download and run on any server. The result.zip file can then be uploaded to our website to view the results panel. 
+
+This repo contains the code to the SPIRAL website and software, as described in:
+
+SPIRAL: Significant Process InfeRence ALgorithm for single cell RNA-sequencing and spatial transcriptomics\ Hadas Biran, Tamar Hashimshony, Tamar Lahav, Or Efrat, Yael Mandel-Gutfreund and Zohar Yakhini.
 
 Full details are available at: https://spiral.technion.ac.il/
 
-________________________________________________________________________________________________________________________________________
+# How can you run SPIRAL on your data?
 
-# SPIRAL
-SPIRAL is an algorithm that relies on a Gaussian statistical model to produce a comprehensive overview of significant
-processes in single cell RNA-seq, spatial transcriptomics or bulk RNA-seq. SPIRAL detects biological processes by
-identifying the subset of genes involved and the subset of cells, spots or samples.
+## Option 1: download the packaged software 
 
-SPIRAL is available as a web interface at https://spiral.technion.ac.il/.
-You can also run SPIRAL locally by downloading the repository, and then run SPIRAL_local_run.py.
+A detailed explanation on this can be found at: https://spiral.technion.ac.il/how_to_run
 
-## How to run the SPIRAL algorithm on your data locally
-To execute the SPIRAL algorithm on your data locally, bypassing the need to utilize the webtool, simply employ the SPIRAL_Local_run.py script. 
-This convenient tool facilitates running the algorithm directly on your local data.
+## Option2: clone the repository
 
 Step-by-step explanation (for Windows and linux):
 
@@ -67,12 +63,13 @@ Step-by-step explanation (for Windows and linux):
     ```
 8. Run the script:
     ```sh 
-    python SPIRAL_Local_run.py
+    python SPIRAL.py
     ```
 9. Follow the prompts to input necessary parameters and data.
+
 10. When done, deactivate the virtual environment:
     ```sh 
     deactivate
     ```
-
+_______________________________________________________________________________________________________________________________________
 Please contact us by [email](mailto:spiral.web.tool@gmail.com) if you have any questions.
