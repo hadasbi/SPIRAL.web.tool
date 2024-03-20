@@ -5,7 +5,7 @@ SPIRAL: Significant Process InfeRence ALgorithm for single cell RNA-sequencing a
 
 Full details are available at: https://spiral.technion.ac.il/
 
-# How can you run SPIRAL on your data?
+# How to run SPIRAL on your data?
 
 Choose one of the options below to run SPIRAL on your data. When done, you can upload the "spiral_results.zip" file to the website to view your results in the SPIRAL results panel, as explained at https://spiral.technion.ac.il/how_to_view.
 
