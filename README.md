@@ -11,7 +11,7 @@ Full details are available at: https://spiral.technion.ac.il/
 
 A detailed explanation on this can be found at: https://spiral.technion.ac.il/how_to_run
 
-## Option2: clone the repository
+## Option 2: clone the repository
 
 Step-by-step explanation (for Windows and linux):
 
