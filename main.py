@@ -20,7 +20,7 @@ from SPIRAL_pipeline_funcs import *
 
 from threading import Thread
 import gzip
-
+import shutil
 import socket
 
 # get hostname.
@@ -363,12 +363,26 @@ def how_to_view():
         # save spiral_results file
         zipfiles.save(storage=request.files['spiral_results'], folder='data' + str(data_n), name='spiral_results.')
 
-        # unzip spiral_results.zip
-        with ZipFile(os.path.join(data_path, "spiral_results.zip"), 'r') as zip_ref:
-            zip_ref.extractall(data_path)
-
-        return redirect(url_for('results_panel', url=data_n_to_url(data_n)))
-
+        if os.path.exists(os.path.join(data_path, "spiral_results.zip")):
+            # Make sure the file is legit
+            with ZipFile(os.path.join(data_path, "spiral_results.zip"), 'r') as f:
+                names = f.namelist()
+            
+            if "imputation_method.txt" in names and "Jaccard_mat_genes.npy" in names and "Jaccard_thr_genes.txt" in names and "dataset_name.txt" in names:
+                # unzip spiral_results.zip
+                with ZipFile(os.path.join(data_path, "spiral_results.zip"), 'r') as zip_ref:
+                    zip_ref.extractall(data_path)
+        
+                return redirect(url_for('results_panel', url=data_n_to_url(data_n)))
+            
+            else:
+                shutil.rmtree(data_path, ignore_errors=True)
+                return render_template('how_to_view.html', form=form)
+                
+        else:
+            shutil.rmtree(data_path, ignore_errors=True)
+            return render_template('how_to_view.html', form=form)
+            
     return render_template('how_to_view.html', form=form)
 
 
