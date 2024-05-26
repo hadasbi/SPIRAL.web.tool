@@ -245,7 +245,7 @@ class RunOrView(FlaskForm):
 
 class LoadSpiralResults(FlaskForm):
     spiral_results = FileField('Spiral results zip file: ',
-                             validators=[FileRequired(), FileAllowed(['zip'])])
+                             validators=[FileRequired(), FileAllowed(zipfiles, u'Zip files only!')])
     submit = SubmitField('Submit')
 
 
