@@ -22,6 +22,7 @@ from threading import Thread
 import gzip
 import shutil
 import socket
+import datetime
 
 # get hostname.
 hostname = socket.gethostname()
@@ -113,6 +114,17 @@ def delete_old_files():
 def dataset_number(path):
     existing_folders = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
     existing_folders = [d for d in existing_folders if d[:4] == 'data' and len(d) > 4]
+    
+    # remove empty folders that were created over 12 hours ago
+    removed_folders = []
+    for d in existing_folders:
+        if not os.listdir(os.path.join(path, d)):
+            if datetime.datetime.fromtimestamp(os.path.getmtime(os.path.join(path, d))) < datetime.datetime.now()-datetime.timedelta(hours=12):
+                os.rmdir(os.path.join(path, d))
+                removed_folders.append(d)
+    existing_folders = list(set(existing_folders)-set(removed_folders))
+
+    # get the new dataset number
     if existing_folders:
         new_n = max([int(d[4:]) for d in existing_folders]) + 1
     else:
